@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 
 export default function DBBossCalculator() {
-  const [mode, setMode] = useState<"SP" | "DP" | null>("SP");
+  const [mode, setMode] = useState<"SP" | "DP" | "TP" | null>("SP");
   const [selectedSuttas, setSelectedSuttas] = useState<number[]>([]);
   const [additionalInput1, setAdditionalInput1] = useState("");
   const [additionalInput2, setAdditionalInput2] = useState("");
@@ -18,30 +18,34 @@ export default function DBBossCalculator() {
     const res = [];
     if (!mode) return [];
 
-    for (let i = 100; i <= 990; i++) {
-      const str = i.toString();
-      if (str.length !== 3) continue;
+    // In Satta Matka, digits are sorted in ascending order where 0 is treated as 10 (highest)
+    const orderedDigits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-      const d1 = parseInt(str[0]);
-      const d2 = parseInt(str[1]);
-      const d3 = parseInt(str[2]);
+    for (let i = 0; i < 10; i++) {
+      for (let j = i; j < 10; j++) {
+        for (let k = j; k < 10; k++) {
+          const d1 = orderedDigits[i];
+          const d2 = orderedDigits[j];
+          const d3 = orderedDigits[k];
 
-      let sameCount = 0;
-      if (d1 === d2) sameCount++;
-      if (d2 === d3) sameCount++;
-      if (d1 === d3) sameCount++;
+          let sameCount = 0;
+          if (d1 === d2) sameCount++;
+          if (d2 === d3) sameCount++;
+          if (d1 === d3) sameCount++;
 
-      // sameCount: 0 -> SP, 1 -> DP, 3 -> Excluded
-      if (sameCount === 3) continue; 
-      if (mode === "SP" && sameCount !== 0) continue;
-      if (mode === "DP" && sameCount !== 1) continue;
+          // sameCount: 0 -> SP (120), 1 -> DP (90), 3 -> TP (10)
+          if (mode === "SP" && sameCount !== 0) continue;
+          if (mode === "DP" && sameCount !== 1) continue;
+          if (mode === "TP" && sameCount !== 3) continue;
 
-      const sum = (d1 + d2 + d3) % 10;
-      if (selectedSuttas.length > 0 && !selectedSuttas.includes(sum)) {
-        continue;
+          const sum = (d1 + d2 + d3) % 10;
+          if (selectedSuttas.length > 0 && !selectedSuttas.includes(sum)) {
+            continue;
+          }
+
+          res.push(`${d1}${d2}${d3}`);
+        }
       }
-
-      res.push(str);
     }
     return res;
   }, [mode, selectedSuttas]);
@@ -54,18 +58,24 @@ export default function DBBossCalculator() {
 
       <div className="glass-panel">
         <h2 className="text-lg font-semibold mb-4">Select Mode</h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-3">
           <button 
-            className={`glass-button ${mode === "SP" ? "active" : ""}`}
+            className={`glass-button !px-2 ${mode === "SP" ? "active" : ""}`}
             onClick={() => setMode("SP")}
           >
-            SP Mode
+            SP
           </button>
           <button 
-            className={`glass-button ${mode === "DP" ? "active" : ""}`}
+            className={`glass-button !px-2 ${mode === "DP" ? "active" : ""}`}
             onClick={() => setMode("DP")}
           >
-            DP Mode
+            DP
+          </button>
+          <button 
+            className={`glass-button !px-2 ${mode === "TP" ? "active" : ""}`}
+            onClick={() => setMode("TP")}
+          >
+            TP
           </button>
         </div>
       </div>
