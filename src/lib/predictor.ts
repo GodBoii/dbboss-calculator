@@ -21,23 +21,41 @@ import type { PanelRecord } from './db'
 
 // ─── Market Config ────────────────────────────────────────────────────────────
 
+// ── DAY SESSION (chronological order: morning → evening) ─────────────────────
+// ── NIGHT SESSION (chronological order: early night → late night) ────────────
 export const HIGH_VOLUME_MARKETS = [
-  'Kalyan',
+  // Day markets
+  'Sridevi',
+  'Time Bazar',
+  'Madhur Day',
   'Milan Day',
-  'Main Bombay',
+  'Rajdhani Day',
+  'Kalyan',
+  // Night markets
+  'Sridevi Night',
+  'Madhur Night',
   'Milan Night',
-  'Kalyan Morning',
+  'Rajdhani Night',
+  'Main Bombay',
 ]
 
-// Per analysis.md §4: previous market results spill into the next market
+// Per analysis.md §4: previous market results spill into the next market.
+// Map: Target market → Source market (the one that precedes it chronologically).
 const LIQUIDITY_FLOW_MAP: Record<string, string> = {
-  Kalyan: 'Milan Day',
-  'Main Bombay': 'Kalyan',
-  'Milan Night': 'Rajdhani Day',
-  'Rajdhani Night': 'Milan Day',
-  'Time Bazar': 'Kalyan Morning',
-  'Madhur Day': 'Madhur Morning',
+  // Day chain
+  'Time Bazar':    'Sridevi',
+  'Madhur Day':    'Time Bazar',
+  'Milan Day':     'Madhur Day',
+  'Rajdhani Day':  'Milan Day',
+  'Kalyan':        'Rajdhani Day',
+  // Night chain
+  'Sridevi Night': 'Kalyan',
+  'Madhur Night':  'Sridevi Night',
+  'Milan Night':   'Madhur Night',
+  'Rajdhani Night':'Milan Night',
+  'Main Bombay':   'Rajdhani Night',
 }
+
 
 // Per analysis.md §2: volume tier multiplier for penalty weight
 const VOL_MULTIPLIER: Record<string, number> = {
@@ -47,7 +65,10 @@ const VOL_MULTIPLIER: Record<string, number> = {
 }
 
 const HIGH_VOL_SET = new Set(HIGH_VOLUME_MARKETS)
-const MEDIUM_VOL_SET = new Set(['Rajdhani Day', 'Rajdhani Night', 'Time Bazar', 'Madhur Day', 'Madhur Morning'])
+const MEDIUM_VOL_SET = new Set([
+  'Time Bazar', 'Madhur Day', 'Rajdhani Day',
+  'Sridevi Night', 'Madhur Night', 'Kalyan Night', 'Rajdhani Night',
+])
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 

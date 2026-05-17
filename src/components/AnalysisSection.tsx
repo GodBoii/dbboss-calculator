@@ -14,15 +14,28 @@ import {
   type PanelRecord,
 } from "@/lib/db"
 
-// ─── Market URL Config ────────────────────────────────────────────────────────
-// Only High Volume markets — per analysis.md §2, focus only on deep liquidity markets.
+// ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
-  Kalyan: "https://dpbosss.net.in/kalyan-panel-chart.php",
-  "Milan Day": "https://dpbosss.net.in/milan-day-panel.php",
-  "Main Bombay": "https://dpbosss.net.in/main-bombay-panel-chart.php",
-  "Milan Night": "https://dpbosss.net.in/milan-night-panel.php",
-  "Kalyan Morning": "https://dpbosss.net.in/kalyan-morning-panel-chart.php",
+  // Day session
+  'Sridevi':       'https://dpbosss.net.in/sridevi-penal-chart-record.php',
+  'Time Bazar':    'https://dpbosss.net.in/time-bazar-panel.php',
+  'Madhur Day':    'https://dpbosss.net.in/madhur-day-panel-chart.php',
+  'Milan Day':     'https://dpbosss.net.in/milan-day-panel.php',
+  'Rajdhani Day':  'https://dpbosss.net.in/rajdhani-day-panel-chart.php',
+  'Kalyan':        'https://dpbosss.net.in/kalyan-panel-chart.php',
+  // Night session
+  'Sridevi Night': 'https://dpbosss.net.in/sridevi-night-panel-chart.php',
+  'Madhur Night':  'https://dpbosss.net.in/madhuri-night-panel-chart.php',  // note: "madhuri"
+  'Milan Night':   'https://dpbosss.net.in/milan-night-panel.php',
+  'Rajdhani Night':'https://dpbosss.net.in/rajdhani-night-panel.php',
+  'Main Bombay':   'https://dpbosss.net.in/main-bombay-panel-chart.php',    // late-night anchor
+  'Main Bazar':    'https://dpbosss.net.in/main-bombay-panel-chart.php',
 }
+
+const DAY_MARKETS   = ['Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan']
+const NIGHT_MARKETS = ['Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bombay']
+
+
 
 type LoadingState = "idle" | "fetching" | "analyzing" | "done" | "error"
 
@@ -157,22 +170,44 @@ export default function AnalysisSection() {
 
   return (
     <section className="analysis-section">
-      {/* ── Market Selector ──────────────────────────────────────────────── */}
+      {/* ── Market Selector ─────────────────────────────────────────── */}
       <div className="glass-panel">
         <div className="section-header">
           <span className="section-icon">🎯</span>
           <div>
-            <h2 className="section-title">High Volume Markets</h2>
-            <p className="section-subtitle">Focus on deep liquidity markets only</p>
+            <h2 className="section-title">Select Market</h2>
+            <p className="section-subtitle">Tap a market to load &amp; analyze it</p>
           </div>
         </div>
 
+        {/* ☀️ Day Session */}
+        <div className="market-session-label">☀️ Day Session</div>
         <div className="market-grid">
-          {HIGH_VOLUME_MARKETS.map((market) => (
+          {DAY_MARKETS.map((market) => (
             <button
               key={market}
               id={`market-${market.replace(/\s+/g, "-").toLowerCase()}`}
               className={`market-btn ${selectedMarket === market ? "active" : ""}`}
+              onClick={() => {
+                setSelectedMarket(market)
+                setResult(null)
+                setLoadingState("idle")
+                setCachedCount(null)
+              }}
+            >
+              {market}
+            </button>
+          ))}
+        </div>
+
+        {/* 🌙 Night Session */}
+        <div className="market-session-label" style={{ marginTop: "14px" }}>🌙 Night Session</div>
+        <div className="market-grid">
+          {NIGHT_MARKETS.map((market) => (
+            <button
+              key={market}
+              id={`market-${market.replace(/\s+/g, "-").toLowerCase()}`}
+              className={`market-btn market-btn-night ${selectedMarket === market ? "active" : ""}`}
               onClick={() => {
                 setSelectedMarket(market)
                 setResult(null)

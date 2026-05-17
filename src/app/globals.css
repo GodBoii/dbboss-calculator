@@ -257,6 +257,27 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(0.98);
 }
 
+.market-session-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
+
+.market-btn-night {
+  border-color: rgba(147, 197, 253, 0.15);
+  background: rgba(99, 102, 241, 0.04);
+}
+
+.market-btn-night.active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(147, 197, 253, 0.5);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+}
+
 /* ─── Action Row ───────────────────────────────────────────────────────────── */
 .action-row {
   display: flex;
