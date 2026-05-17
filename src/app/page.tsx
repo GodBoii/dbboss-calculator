@@ -112,7 +112,7 @@ export default function DBBossCalculator() {
           {selectedSuttas.length > 0 && (
             <button 
               onClick={() => setSelectedSuttas([])}
-              className="text-xs bg-white/10 hover:bg-white/20 px-2 py-1 rounded text-white/80 transition-colors"
+              className="glass-button !text-xs !py-1.5 !px-3 !bg-white/5 hover:!bg-white/10 !border-white/20"
             >
               Clear
             </button>
@@ -138,7 +138,7 @@ export default function DBBossCalculator() {
           {(additionalInput1 || additionalInput2) && (
             <button 
               onClick={() => { setAdditionalInput1(""); setAdditionalInput2(""); }}
-              className="text-xs bg-white/10 hover:bg-white/20 px-2 py-1 rounded text-white/80 transition-colors"
+              className="glass-button !text-xs !py-1.5 !px-3 !bg-white/5 hover:!bg-white/10 !border-white/20"
             >
               Clear All
             </button>
@@ -148,21 +148,21 @@ export default function DBBossCalculator() {
           <div>
             <label className="text-sm text-white/80">Common 1</label>
             <input 
-              type="text"
+              type="tel"
               className="glass-input"
               placeholder="Enter digits to filter..."
               value={additionalInput1}
-              onChange={(e) => setAdditionalInput1(e.target.value)}
+              onChange={(e) => setAdditionalInput1(e.target.value.replace(/\D/g, ""))}
             />
           </div>
           <div>
             <label className="text-sm text-white/80">Common 2</label>
             <input 
-              type="text"
+              type="tel"
               className="glass-input"
-              placeholder="Enter more numbers..."
+              placeholder="Enter more digits..."
               value={additionalInput2}
-              onChange={(e) => setAdditionalInput2(e.target.value)}
+              onChange={(e) => setAdditionalInput2(e.target.value.replace(/\D/g, ""))}
             />
           </div>
         </div>
