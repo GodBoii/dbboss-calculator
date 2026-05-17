@@ -15,7 +15,7 @@ export default function DBBossCalculator() {
   };
 
   const results = useMemo(() => {
-    const res = [];
+    let res: string[] = [];
     if (!mode) return [];
 
     // In Satta Matka, digits are sorted in ascending order where 0 is treated as 10 (highest)
@@ -47,8 +47,25 @@ export default function DBBossCalculator() {
         }
       }
     }
+
+    // Apply Common 1 filter (Result must contain at least one of these digits)
+    if (additionalInput1.trim().length > 0) {
+      const filterDigits = additionalInput1.match(/\d/g);
+      if (filterDigits) {
+        res = res.filter(patti => filterDigits.some(d => patti.includes(d)));
+      }
+    }
+
+    // Apply Common 2 filter (Narrow down further from Common 1 result)
+    if (additionalInput2.trim().length > 0) {
+      const filterDigits = additionalInput2.match(/\d/g);
+      if (filterDigits) {
+        res = res.filter(patti => filterDigits.some(d => patti.includes(d)));
+      }
+    }
+
     return res;
-  }, [mode, selectedSuttas]);
+  }, [mode, selectedSuttas, additionalInput1, additionalInput2]);
 
   return (
     <main className="w-full max-w-[480px] mx-auto flex flex-col items-center animate-fade-in-up" style={{animationDelay: "100ms"}}>
@@ -97,20 +114,20 @@ export default function DBBossCalculator() {
       </div>
 
       <div className="glass-panel" style={{animationDelay: "300ms"}}>
-        <h2 className="text-lg font-semibold mb-4">Additional Inputs</h2>
+        <h2 className="text-lg font-semibold mb-4">Common Inputs</h2>
         <div className="flex flex-col gap-4">
           <div>
-            <label className="text-sm text-white/80">Input 1</label>
+            <label className="text-sm text-white/80">Common 1</label>
             <input 
               type="text"
               className="glass-input"
-              placeholder="Enter numbers..."
+              placeholder="Enter digits to filter..."
               value={additionalInput1}
               onChange={(e) => setAdditionalInput1(e.target.value)}
             />
           </div>
           <div>
-            <label className="text-sm text-white/80">Input 2</label>
+            <label className="text-sm text-white/80">Common 2</label>
             <input 
               type="text"
               className="glass-input"
