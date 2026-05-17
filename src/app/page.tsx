@@ -177,7 +177,7 @@ export default function DBBossCalculator() {
           {results.length > 0 && (
             <button 
               onClick={handleCopy}
-              className="text-xs bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded text-white transition-colors flex items-center gap-1 font-medium"
+              className={`glass-button !text-xs !py-1.5 !px-3 flex items-center gap-1 ${isCopied ? 'active' : '!bg-white/5 hover:!bg-white/10 !border-white/20'}`}
             >
               {isCopied ? "✓ Copied" : "📋 Copy"}
             </button>
