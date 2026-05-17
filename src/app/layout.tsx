@@ -21,6 +21,7 @@ export const viewport: Viewport = {
 };
 
 import InstallPrompt from "../components/InstallPrompt";
+import UpdateButton from "../components/UpdateButton";
 
 export default function RootLayout({
   children,
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body>
         {children}
         <InstallPrompt />
+        <UpdateButton />
       </body>
     </html>
   );
