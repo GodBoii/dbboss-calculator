@@ -1,8 +1,65 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import dynamic from "next/dynamic";
 
-export default function DBBossCalculator() {
+// Lazy-load AnalysisSection so the calculator loads instantly
+const AnalysisSection = dynamic(() => import("@/components/AnalysisSection"), {
+  ssr: false,
+  loading: () => (
+    <div className="glass-panel" style={{ textAlign: "center", padding: "40px 24px", color: "rgba(255,255,255,0.4)" }}>
+      Loading Analysis Engine…
+    </div>
+  ),
+});
+
+type Tab = "calculator" | "analysis";
+
+export default function DBBossApp() {
+  const [activeTab, setActiveTab] = useState<Tab>("calculator");
+
+  return (
+    <main
+      className="w-full max-w-[480px] mx-auto flex flex-col items-center animate-fade-in-up"
+      style={{ animationDelay: "100ms" }}
+    >
+      {/* ── App Header ──────────────────────────────────────────────────── */}
+      <h1
+        className="text-3xl font-bold mb-2 mt-4 text-center"
+        style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
+      >
+        DBboss
+      </h1>
+
+      {/* ── Tab Navigation ──────────────────────────────────────────────── */}
+      <div className="top-tab-nav">
+        <button
+          id="tab-calculator"
+          className={`top-tab-btn ${activeTab === "calculator" ? "active" : ""}`}
+          onClick={() => setActiveTab("calculator")}
+        >
+          🧮 Calculator
+        </button>
+        <button
+          id="tab-analysis"
+          className={`top-tab-btn ${activeTab === "analysis" ? "active" : ""}`}
+          onClick={() => setActiveTab("analysis")}
+        >
+          🔮 Analysis
+        </button>
+      </div>
+
+      {/* ── Calculator Tab ──────────────────────────────────────────────── */}
+      {activeTab === "calculator" && <CalculatorSection />}
+
+      {/* ── Analysis Tab ────────────────────────────────────────────────── */}
+      {activeTab === "analysis" && <AnalysisSection />}
+    </main>
+  );
+}
+
+// ─── Calculator (original logic, unchanged) ───────────────────────────────────
+function CalculatorSection() {
   const [mode, setMode] = useState<"SP" | "DP" | "TP" | null>("SP");
   const [selectedSuttas, setSelectedSuttas] = useState<number[]>([]);
   const [additionalInput1, setAdditionalInput1] = useState("");
@@ -10,8 +67,8 @@ export default function DBBossCalculator() {
   const [isCopied, setIsCopied] = useState(false);
 
   const toggleSutta = (s: number) => {
-    setSelectedSuttas(prev => 
-      prev.includes(s) ? prev.filter(x => x !== s) : [...prev, s]
+    setSelectedSuttas((prev) =>
+      prev.includes(s) ? prev.filter((x) => x !== s) : [...prev, s]
     );
   };
 
@@ -19,7 +76,6 @@ export default function DBBossCalculator() {
     let res: string[] = [];
     if (!mode) return [];
 
-    // In Satta Matka, digits are sorted in ascending order where 0 is treated as 10 (highest)
     const orderedDigits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
     for (let i = 0; i < 10; i++) {
@@ -34,7 +90,6 @@ export default function DBBossCalculator() {
           if (d2 === d3) sameCount++;
           if (d1 === d3) sameCount++;
 
-          // sameCount: 0 -> SP (120), 1 -> DP (90), 3 -> TP (10)
           if (mode === "SP" && sameCount !== 0) continue;
           if (mode === "DP" && sameCount !== 1) continue;
           if (mode === "TP" && sameCount !== 3) continue;
@@ -49,19 +104,17 @@ export default function DBBossCalculator() {
       }
     }
 
-    // Apply Common 1 filter (Result must contain at least one of these digits)
     if (additionalInput1.trim().length > 0) {
       const filterDigits = additionalInput1.match(/\d/g);
       if (filterDigits) {
-        res = res.filter(patti => filterDigits.some(d => patti.includes(d)));
+        res = res.filter((patti) => filterDigits.some((d) => patti.includes(d)));
       }
     }
 
-    // Apply Common 2 filter (Narrow down further from Common 1 result)
     if (additionalInput2.trim().length > 0) {
       const filterDigits = additionalInput2.match(/\d/g);
       if (filterDigits) {
-        res = res.filter(patti => filterDigits.some(d => patti.includes(d)));
+        res = res.filter((patti) => filterDigits.some((d) => patti.includes(d)));
       }
     }
 
@@ -77,27 +130,23 @@ export default function DBBossCalculator() {
   };
 
   return (
-    <main className="w-full max-w-[480px] mx-auto flex flex-col items-center animate-fade-in-up" style={{animationDelay: "100ms"}}>
-      <h1 className="text-3xl font-bold mb-6 mt-4 text-center" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
-        DBboss Calculator
-      </h1>
-
+    <>
       <div className="glass-panel">
         <h2 className="text-lg font-semibold mb-4">Select Mode</h2>
         <div className="grid grid-cols-3 gap-3">
-          <button 
+          <button
             className={`glass-button !px-2 ${mode === "SP" ? "active" : ""}`}
             onClick={() => setMode("SP")}
           >
             SP
           </button>
-          <button 
+          <button
             className={`glass-button !px-2 ${mode === "DP" ? "active" : ""}`}
             onClick={() => setMode("DP")}
           >
             DP
           </button>
-          <button 
+          <button
             className={`glass-button !px-2 ${mode === "TP" ? "active" : ""}`}
             onClick={() => setMode("TP")}
           >
@@ -106,11 +155,11 @@ export default function DBBossCalculator() {
         </div>
       </div>
 
-      <div className="glass-panel" style={{animationDelay: "200ms"}}>
+      <div className="glass-panel" style={{ animationDelay: "200ms" }}>
         <div className="flex justify-between items-center mb-2">
           <h2 className="text-lg font-semibold">Sutta</h2>
           {selectedSuttas.length > 0 && (
-            <button 
+            <button
               onClick={() => setSelectedSuttas([])}
               className="glass-button !text-xs !py-1.5 !px-3 !bg-white/5 hover:!bg-white/10 !border-white/20"
             >
@@ -120,10 +169,12 @@ export default function DBBossCalculator() {
         </div>
         <p className="text-sm text-white/60 mb-4">Select values (0-9)</p>
         <div className="grid grid-cols-5 gap-3">
-          {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
+          {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
             <button
               key={num}
-              className={`glass-button !p-2 !rounded-lg text-lg ${selectedSuttas.includes(num) ? "active" : ""}`}
+              className={`glass-button !p-2 !rounded-lg text-lg ${
+                selectedSuttas.includes(num) ? "active" : ""
+              }`}
               onClick={() => toggleSutta(num)}
             >
               {num}
@@ -132,12 +183,15 @@ export default function DBBossCalculator() {
         </div>
       </div>
 
-      <div className="glass-panel" style={{animationDelay: "300ms"}}>
+      <div className="glass-panel" style={{ animationDelay: "300ms" }}>
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Common Inputs</h2>
           {(additionalInput1 || additionalInput2) && (
-            <button 
-              onClick={() => { setAdditionalInput1(""); setAdditionalInput2(""); }}
+            <button
+              onClick={() => {
+                setAdditionalInput1("");
+                setAdditionalInput2("");
+              }}
               className="glass-button !text-xs !py-1.5 !px-3 !bg-white/5 hover:!bg-white/10 !border-white/20"
             >
               Clear All
@@ -147,47 +201,63 @@ export default function DBBossCalculator() {
         <div className="flex flex-col gap-4">
           <div>
             <label className="text-sm text-white/80">Common 1</label>
-            <input 
+            <input
               type="tel"
               className="glass-input"
               placeholder="Enter digits to filter..."
               value={additionalInput1}
-              onChange={(e) => setAdditionalInput1(e.target.value.replace(/\D/g, ""))}
+              onChange={(e) =>
+                setAdditionalInput1(e.target.value.replace(/\D/g, ""))
+              }
             />
           </div>
           <div>
             <label className="text-sm text-white/80">Common 2</label>
-            <input 
+            <input
               type="tel"
               className="glass-input"
               placeholder="Enter more digits..."
               value={additionalInput2}
-              onChange={(e) => setAdditionalInput2(e.target.value.replace(/\D/g, ""))}
+              onChange={(e) =>
+                setAdditionalInput2(e.target.value.replace(/\D/g, ""))
+              }
             />
           </div>
         </div>
       </div>
 
-      <div className="glass-panel" style={{animationDelay: "400ms", marginBottom: "40px"}}>
+      <div
+        className="glass-panel"
+        style={{ animationDelay: "400ms", marginBottom: "40px" }}
+      >
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold flex items-center gap-2">
-            Results 
-            <span className="text-sm bg-white/10 px-3 py-1 rounded-full">{results.length}</span>
+            Results
+            <span className="text-sm bg-white/10 px-3 py-1 rounded-full">
+              {results.length}
+            </span>
           </h2>
           {results.length > 0 && (
-            <button 
+            <button
               onClick={handleCopy}
-              className={`glass-button !text-xs !py-1.5 !px-3 flex items-center gap-1 ${isCopied ? 'active' : '!bg-white/5 hover:!bg-white/10 !border-white/20'}`}
+              className={`glass-button !text-xs !py-1.5 !px-3 flex items-center gap-1 ${
+                isCopied
+                  ? "active"
+                  : "!bg-white/5 hover:!bg-white/10 !border-white/20"
+              }`}
             >
               {isCopied ? "✓ Copied" : "📋 Copy"}
             </button>
           )}
         </div>
-        
+
         {results.length > 0 ? (
           <div className="flex flex-wrap gap-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-            {results.map(res => (
-              <span key={res} className="bg-white/10 border border-white/20 px-3 py-1.5 rounded-md font-medium text-sm text-center min-w-[48px]">
+            {results.map((res) => (
+              <span
+                key={res}
+                className="bg-white/10 border border-white/20 px-3 py-1.5 rounded-md font-medium text-sm text-center min-w-[48px]"
+              >
                 {res}
               </span>
             ))}
@@ -198,6 +268,6 @@ export default function DBBossCalculator() {
           </div>
         )}
       </div>
-    </main>
+    </>
   );
 }
