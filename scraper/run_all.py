@@ -40,14 +40,29 @@ def main():
         import traceback
         traceback.print_exc()
     
-    # Step 3: Summary
+    # Step 3: Run Prediction Engine
+    print_header("STEP 3: RUNNING ADVANCED PREDICTION ENGINE")
+    print("Generating Game-Theory predictions...\n")
+    
+    try:
+        from advanced_predictor import AdvancedPredictor
+        predictor = AdvancedPredictor()
+        predictor.generate_all_predictions()
+    except Exception as e:
+        print(f"❌ Error during predictions: {e}")
+        import traceback
+        traceback.print_exc()
+        
+    # Step 4: Summary
     print_header("COMPLETED")
     print("✅ Scraping completed")
     print("✅ Analysis completed")
+    print("✅ Predictions generated")
     print(f"\n📁 Check the 'data/' directory for:")
     print("   - panel_data_*.csv (scraped data)")
     print("   - panel_data_*.json (JSON format)")
     print("   - analysis_report_*.txt (analysis reports)")
+    print("   - advanced_predictions_*.json (AI predictions)")
     print(f"\n🎉 All done! Finished at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
 if __name__ == "__main__":
