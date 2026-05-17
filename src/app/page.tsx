@@ -7,6 +7,7 @@ export default function DBBossCalculator() {
   const [selectedSuttas, setSelectedSuttas] = useState<number[]>([]);
   const [additionalInput1, setAdditionalInput1] = useState("");
   const [additionalInput2, setAdditionalInput2] = useState("");
+  const [isCopied, setIsCopied] = useState(false);
 
   const toggleSutta = (s: number) => {
     setSelectedSuttas(prev => 
@@ -67,6 +68,14 @@ export default function DBBossCalculator() {
     return res;
   }, [mode, selectedSuttas, additionalInput1, additionalInput2]);
 
+  const handleCopy = async () => {
+    if (results.length === 0) return;
+    const textToCopy = results.join("-");
+    await navigator.clipboard.writeText(textToCopy);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
+
   return (
     <main className="w-full max-w-[480px] mx-auto flex flex-col items-center animate-fade-in-up" style={{animationDelay: "100ms"}}>
       <h1 className="text-3xl font-bold mb-6 mt-4 text-center" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
@@ -98,7 +107,17 @@ export default function DBBossCalculator() {
       </div>
 
       <div className="glass-panel" style={{animationDelay: "200ms"}}>
-        <h2 className="text-lg font-semibold mb-2">Sutta</h2>
+        <div className="flex justify-between items-center mb-2">
+          <h2 className="text-lg font-semibold">Sutta</h2>
+          {selectedSuttas.length > 0 && (
+            <button 
+              onClick={() => setSelectedSuttas([])}
+              className="text-xs bg-white/10 hover:bg-white/20 px-2 py-1 rounded text-white/80 transition-colors"
+            >
+              Clear
+            </button>
+          )}
+        </div>
         <p className="text-sm text-white/60 mb-4">Select values (0-9)</p>
         <div className="grid grid-cols-5 gap-3">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
@@ -114,7 +133,17 @@ export default function DBBossCalculator() {
       </div>
 
       <div className="glass-panel" style={{animationDelay: "300ms"}}>
-        <h2 className="text-lg font-semibold mb-4">Common Inputs</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-lg font-semibold">Common Inputs</h2>
+          {(additionalInput1 || additionalInput2) && (
+            <button 
+              onClick={() => { setAdditionalInput1(""); setAdditionalInput2(""); }}
+              className="text-xs bg-white/10 hover:bg-white/20 px-2 py-1 rounded text-white/80 transition-colors"
+            >
+              Clear All
+            </button>
+          )}
+        </div>
         <div className="flex flex-col gap-4">
           <div>
             <label className="text-sm text-white/80">Common 1</label>
@@ -140,10 +169,20 @@ export default function DBBossCalculator() {
       </div>
 
       <div className="glass-panel" style={{animationDelay: "400ms", marginBottom: "40px"}}>
-        <h2 className="text-lg font-semibold mb-4 flex justify-between items-center">
-          Results 
-          <span className="text-sm bg-black/30 px-3 py-1 rounded-full">{results.length}</span>
-        </h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-lg font-semibold flex items-center gap-2">
+            Results 
+            <span className="text-sm bg-white/10 px-3 py-1 rounded-full">{results.length}</span>
+          </h2>
+          {results.length > 0 && (
+            <button 
+              onClick={handleCopy}
+              className="text-xs bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded text-white transition-colors flex items-center gap-1 font-medium"
+            >
+              {isCopied ? "✓ Copied" : "📋 Copy"}
+            </button>
+          )}
+        </div>
         
         {results.length > 0 ? (
           <div className="flex flex-wrap gap-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
