@@ -64,7 +64,7 @@ export default function InstallPrompt() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 p-4 z-50 animate-fade-in-up">
-      <div className="glass-panel !mb-0 border !border-[#00E1FF]/40 !p-5 relative overflow-hidden bg-[#2C0E4B]/80 backdrop-blur-xl">
+      <div className="glass-panel !mb-0 border !border-[#00E1FF]/50 !p-5 relative overflow-hidden !bg-[#120A2B]/95 !backdrop-blur-2xl shadow-[0_15px_40px_rgba(0,0,0,0.8)]">
         {/* Shine effect */}
         <div className="absolute top-0 left-0 w-[200%] h-full bg-gradient-to-tr from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-[-100%] animate-[shine_3s_infinite]" />
         
