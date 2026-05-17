@@ -90,19 +90,19 @@ export default function AnalysisSection() {
             dateRangeStart: string
             dateRangeEnd: string
             day: string
-            panel: string
-            sutta: number
-            d1: number
-            d2: number
-            d3: number
+            openPanel: string
+            openSutta: number
+            jodi: string
+            closePanel: string
+            closeSutta: number
           }>
 
           if (!freshPanels || freshPanels.length === 0) {
-            throw new Error("No panels parsed from site. Site may be down or structure changed.")
+            throw new Error("No draws parsed from site. Site may be down or structure changed.")
           }
 
           // ── Step 3: Save to IndexedDB ──────────────────────────────────
-          setLoadingMessage(`Saving ${freshPanels.length} records to local storage…`)
+          setLoadingMessage(`Saving ${freshPanels.length} draws to local storage…`)
           const now = Date.now()
           const toSave: PanelRecord[] = freshPanels.map((p) => ({
             id: `${p.market}|${p.dateRangeStart}|${p.day}`,
@@ -286,8 +286,8 @@ export default function AnalysisSection() {
           {/* ── Status Bar ───────────────────────────────────────────────── */}
           <div className="status-bar glass-panel">
             <div className="status-item">
-              <span className="status-label">Records</span>
-              <span className="status-value">{result.totalRecordsAnalysed.toLocaleString()}</span>
+              <span className="status-label">Draws</span>
+              <span className="status-value">{result.totalDraws.toLocaleString()}</span>
             </div>
             <div className="status-divider" />
             <div className="status-item">
@@ -521,8 +521,8 @@ export default function AnalysisSection() {
             {activeTab === "stats" && (
               <div className="stats-section">
                 <div className="stat-row">
-                  <span className="stat-label">Total Records</span>
-                  <span className="stat-value">{result.stats.totalRecords.toLocaleString()}</span>
+                  <span className="stat-label">Total Draws</span>
+                  <span className="stat-value">{result.stats.totalDraws.toLocaleString()}</span>
                 </div>
                 <div className="stat-row">
                   <span className="stat-label">Sequences (actual)</span>
@@ -542,15 +542,41 @@ export default function AnalysisSection() {
                 </div>
 
                 <div className="stat-divider" />
-                <h4 className="stat-section-title">Top 10 Most Frequent Panels</h4>
+                <h4 className="stat-section-title">Top Open Panels</h4>
                 <div className="freq-grid">
-                  {result.stats.topPanels.map(({ panel, count }) => (
+                  {result.stats.topOpenPanels.map(({ panel, count }) => (
                     <div key={panel} className="freq-item">
                       <span className="freq-panel">{panel}</span>
                       <span className="freq-count">{count}×</span>
                     </div>
                   ))}
                 </div>
+
+                <div className="stat-divider" />
+                <h4 className="stat-section-title">Top Close Panels</h4>
+                <div className="freq-grid">
+                  {result.stats.topClosePanels.map(({ panel, count }) => (
+                    <div key={panel} className="freq-item">
+                      <span className="freq-panel">{panel}</span>
+                      <span className="freq-count">{count}×</span>
+                    </div>
+                  ))}
+                </div>
+
+                {result.stats.topJodis.length > 0 && (
+                  <>
+                    <div className="stat-divider" />
+                    <h4 className="stat-section-title">Top 10 Jodis</h4>
+                    <div className="freq-grid">
+                      {result.stats.topJodis.map(({ jodi, count }) => (
+                        <div key={jodi} className="freq-item">
+                          <span className="freq-panel">{jodi}</span>
+                          <span className="freq-count">{count}×</span>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
 
                 <div className="stat-divider" />
                 <h4 className="stat-section-title">Sutta Distribution</h4>
@@ -592,11 +618,11 @@ export default function AnalysisSection() {
                     </div>
                     <div className="breakdown-bars">
                       <div className="breakdown-item">
-                        <span className="bd-label">Base Freq</span>
+                        <span className="bd-label">Recency</span>
                         <div className="bd-bar-bg">
-                          <div className="bd-bar-fill bd-green" style={{ width: `${pick.breakdown.baseFreqScore}%` }} />
+                          <div className="bd-bar-fill bd-green" style={{ width: `${pick.breakdown.recencyScore}%` }} />
                         </div>
-                        <span className="bd-val">+{pick.breakdown.baseFreqScore.toFixed(1)}</span>
+                        <span className="bd-val">+{pick.breakdown.recencyScore.toFixed(1)}</span>
                       </div>
                       {pick.breakdown.seqPenalty !== 0 && (
                         <div className="breakdown-item">
@@ -628,6 +654,24 @@ export default function AnalysisSection() {
                             <div className="bd-bar-fill bd-red" style={{ width: `${pick.breakdown.saturationPenalty}%` }} />
                           </div>
                           <span className="bd-val" style={{ color: "#f87171" }}>-{pick.breakdown.saturationPenalty}</span>
+                        </div>
+                      )}
+                      {pick.breakdown.cooldownPenalty > 0 && (
+                        <div className="breakdown-item">
+                          <span className="bd-label">Cooldown</span>
+                          <div className="bd-bar-bg">
+                            <div className="bd-bar-fill bd-red" style={{ width: `${pick.breakdown.cooldownPenalty}%` }} />
+                          </div>
+                          <span className="bd-val" style={{ color: "#f87171" }}>-{pick.breakdown.cooldownPenalty}</span>
+                        </div>
+                      )}
+                      {pick.breakdown.dayBoost > 0 && (
+                        <div className="breakdown-item">
+                          <span className="bd-label">Day Boost</span>
+                          <div className="bd-bar-bg">
+                            <div className="bd-bar-fill bd-green" style={{ width: `${pick.breakdown.dayBoost}%` }} />
+                          </div>
+                          <span className="bd-val" style={{ color: "#4ade80" }}>+{pick.breakdown.dayBoost.toFixed(1)}</span>
                         </div>
                       )}
                     </div>
