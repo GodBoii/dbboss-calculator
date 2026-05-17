@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matka Data Analysis & Prediction Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .stat-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #764ba2;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            background: #e0e0e0;
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .panel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .panel-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .panel-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+
+        .panel-item.excellent {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+        }
+
+        .panel-item.good {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .panel-item.medium {
+            background: linear-gradient(135deg, #fff1eb 0%, #ace0f9 100%);
+        }
+
+        .panel-item.low {
+            background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+        }
+
+        .panel-item.avoid {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            opacity: 0.6;
+        }
+
+        .panel-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .panel-score {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 3px;
+        }
+
+        .panel-recommendation {
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #444;
+        }
+
+        .frequency-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 3px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .frequency-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.5s ease;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        select, input {
+            padding: 10px 15px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        select:focus, input:focus {
+            border-color: #764ba2;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .chart-container {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 300px;
+            gap: 5px;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-radius: 5px 5px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+            min-width: 30px;
+        }
+
+        .bar:hover {
+            opacity: 0.8;
+            transform: scaleY(1.05);
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: #f0f7ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+        }
+
+        .info-box li {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            color: #667eea;
+        }
+
+        .top-picks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .top-pick-card {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .top-pick-rank {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .top-pick-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .top-pick-score {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .top-pick-details {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px solid rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .panel-grid {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+                gap: 10px;
+            }
+
+            .panel-number {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Matka Data Analysis & Prediction System</h1>
+
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <h3>Total Records</h3>
+                <div class="value" id="totalRecords">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Markets Analyzed</h3>
+                <div class="value" id="totalMarkets">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Unique Panels</h3>
+                <div class="value" id="uniquePanels">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Date Range</h3>
+                <div class="value" style="font-size: 1.2em;" id="dateRange">-</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Strategy Overview</h2>
+            <div class="info-box">
+                <h4>🎲 Contrarian Betting Strategy</h4>
+                <ul>
+                    <li><strong>Core Principle:</strong> Results are based on LOWEST betting volume (not random)</li>
+                    <li><strong>House Strategy:</strong> Selects unpopular numbers but ensures some winners exist</li>
+                    <li><strong>Our Approach:</strong> Find the "sweet spot" - numbers that are unpopular but not TOO unpopular</li>
+                    <li><strong>Avoid:</strong> Sequential patterns (123, 456), Lucky digits (7,8,9), Triple numbers (000, 111)</li>
+                    <li><strong>Target:</strong> Numbers with low historical frequency and no popular patterns</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Top Unpopular Picks (Best Bets)</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label>Panel Type</label>
+                    <select id="modeFilter">
+                        <option value="all">All Types</option>
+                        <option value="SP">SP (Single Panna)</option>
+                        <option value="DP">DP (Double Panna)</option>
+                        <option value="TP">TP (Triple Panna)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Sutta Filter</label>
+                    <select id="suttaFilter">
+                        <option value="all">All Suttas</option>
+                        <option value="0">Sutta 0</option>
+                        <option value="1">Sutta 1</option>
+                        <option value="2">Sutta 2</option>
+                        <option value="3">Sutta 3</option>
+                        <option value="4">Sutta 4</option>
+                        <option value="5">Sutta 5</option>
+                        <option value="6">Sutta 6</option>
+                        <option value="7">Sutta 7</option>
+                        <option value="8">Sutta 8</option>
+                        <option value="9">Sutta 9</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Top N Results</label>
+                    <input type="number" id="topN" value="10" min="5" max="50" step="5">
+                </div>
+            </div>
+            <div class="top-picks" id="topPicks"></div>
+        </div>
+
+        <div class="section">
+            <h2>📈 All Predictions with Scores</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label>Minimum Score</label>
+                    <input type="range" id="minScore" min="0" max="100" value="40" style="width: 200px;">
+                    <span id="minScoreValue">40</span>
+                </div>
+            </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);"></div>
+                    <span>🎯 Excellent (70-100)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
+                    <span>✅ Good (55-69)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(135deg, #fff1eb 0%, #ace0f9 100%);"></div>
+                    <span>⚠️ Medium (40-54)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);"></div>
+                    <span>⚡ Low (25-39)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                    <span>❌ Avoid (0-24)</span>
+                </div>
+            </div>
+            <div class="panel-grid" id="panelGrid"></div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Sutta Distribution Analysis</h2>
+            <div class="chart-container">
+                <div class="bar-chart" id="suttaChart"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔥 Most Frequent Panels (Popular - Avoid These)</h2>
+            <div class="panel-grid" id="frequentPanels"></div>
+        </div>
+    </div>
+
+    <script>
+        // Popularity Scoring Algorithm
+        const HISTORICAL_FREQUENCIES = {
+            '156': 2239, '590': 2158, '579': 2130, '125': 2048, '160': 2041,
+            '126': 1997, '360': 1979, '135': 1969, '170': 1966, '389': 1948,
+            '145': 1947, '127': 1943, '136': 1942, '380': 1940, '137': 1938,
+            '450': 1937, '489': 1936, '235': 1935, '370': 1933, '146': 1932,
+            '245': 1931, '128': 1930, '460': 1929, '470': 1928, '129': 1927,
+            '147': 1926, '236': 1925, '148': 1924, '237': 1923, '238': 1922,
+            '340': 1921, '149': 1920, '239': 1919, '246': 1918, '247': 1917,
+            '248': 1916, '249': 1915, '256': 1914, '257': 1913, '258': 1912,
+            '259': 1911, '267': 1910, '268': 1909, '269': 1908, '278': 1907,
+            '279': 1906, '289': 1905, '345': 1904, '346': 1903, '347': 1902,
+            '348': 1901, '349': 1900, '356': 1899, '357': 1898, '358': 1897,
+            '359': 1896, '367': 1895, '368': 1894, '369': 1893, '378': 1892,
+            '379': 1891, '456': 1890, '457': 1889, '458': 1888, '459': 1887,
+            '467': 1886, '468': 1885, '469': 1884, '478': 1883, '479': 1882,
+            '567': 1881, '568': 1880, '569': 1879, '578': 1878, '589': 1877,
+            '134': 1876, '234': 1875, '678': 1874, '679': 1873, '689': 1872,
+            '789': 1871, '120': 1870, '130': 1869, '140': 1868, '150': 1867,
+            '230': 1866, '240': 1865, '250': 1864, '260': 1863, '270': 1862,
+            '280': 1861, '290': 1860, '123': 1859, '124': 1858, '133': 1857,
+            '144': 1856, '155': 1855, '166': 1854, '177': 1853, '188': 1852
+        };
+
+        const MAX_FREQUENCY = 2239;
+        const LUCKY_DIGITS = ['7', '8', '9'];
+
+        function isSequential(panel) {
+            const digits = panel.split('').map(Number);
+            if (digits[1] === digits[0] + 1 && digits[2] === digits[1] + 1) return true;
+            if (digits[1] === digits[0] - 1 && digits[2] === digits[1] - 1) return true;
+            if (['890', '901', '012', '789'].includes(panel)) return true;
+            return false;
+        }
+
+        function isTriple(panel) {
+            return panel[0] === panel[1] && panel[1] === panel[2];
+        }
+
+        function countLuckyDigits(panel) {
+            return panel.split('').filter(d => LUCKY_DIGITS.includes(d)).length;
+        }
+
+        function getPanelType(panel) {
+            const d1 = panel[0], d2 = panel[1], d3 = panel[2];
+            let sameCount = 0;
+            if (d1 === d2) sameCount++;
+            if (d2 === d3) sameCount++;
+            if (d1 === d3) sameCount++;
+            
+            if (sameCount === 3) return 'TP';
+            if (sameCount === 1) return 'DP';
+            return 'SP';
+        }
+
+        function calculateSutta(panel) {
+            return panel.split('').map(Number).reduce((a, b) => a + b, 0) % 10;
+        }
+
+        function calculatePopularityScore(panel) {
+            const factors = {
+                historicalFrequency: 0,
+                sequentialPenalty: 0,
+                luckyDigitPenalty: 0,
+                triplePenalty: 0
+            };
+
+            const frequency = HISTORICAL_FREQUENCIES[panel] || 0;
+            const frequencyScore = frequency === 0 ? 100 : Math.max(0, 100 - (frequency / MAX_FREQUENCY) * 100);
+            factors.historicalFrequency = frequencyScore;
+
+            if (isSequential(panel)) {
+                factors.sequentialPenalty = -40;
+            }
+
+            const luckyCount = countLuckyDigits(panel);
+            factors.luckyDigitPenalty = luckyCount * -15;
+
+            if (isTriple(panel)) {
+                factors.triplePenalty = -50;
+            }
+
+            const rawScore = 
+                factors.historicalFrequency * 0.40 +
+                factors.sequentialPenalty * 0.20 +
+                factors.luckyDigitPenalty * 0.15 +
+                factors.triplePenalty * 0.15;
+
+            const score = Math.max(0, Math.min(100, rawScore));
+
+            let recommendation;
+            if (score >= 70) recommendation = 'excellent';
+            else if (score >= 55) recommendation = 'good';
+            else if (score >= 40) recommendation = 'medium';
+            else if (score >= 25) recommendation = 'low';
+            else recommendation = 'avoid';
+
+            return {
+                panel,
+                score: Math.round(score),
+                factors,
+                recommendation,
+                frequency: frequency,
+                type: getPanelType(panel),
+                sutta: calculateSutta(panel)
+            };
+        }
+
+        function generateAllPanels() {
+            const panels = [];
+            const orderedDigits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+            for (let i = 0; i < 10; i++) {
+                for (let j = i; j < 10; j++) {
+                    for (let k = j; k < 10; k++) {
+                        const panel = `${orderedDigits[i]}${orderedDigits[j]}${orderedDigits[k]}`;
+                        panels.push(panel);
+                    }
+                }
+            }
+
+            return panels;
+        }
+
+        // Generate all panels and calculate scores
+        const allPanels = generateAllPanels();
+        const scoredPanels = allPanels.map(calculatePopularityScore);
+        scoredPanels.sort((a, b) => b.score - a.score);
+
+        // Update statistics
+        document.getElementById('totalRecords').textContent = '230,587';
+        document.getElementById('totalMarkets').textContent = '32';
+        document.getElementById('uniquePanels').textContent = allPanels.length;
+        document.getElementById('dateRange').textContent = '2019-2026';
+
+        // Render top picks
+        function renderTopPicks() {
+            const mode = document.getElementById('modeFilter').value;
+            const sutta = document.getElementById('suttaFilter').value;
+            const topN = parseInt(document.getElementById('topN').value);
+
+            let filtered = scoredPanels.filter(p => p.score >= 55); // Only good and excellent
+
+            if (mode !== 'all') {
+                filtered = filtered.filter(p => p.type === mode);
+            }
+
+            if (sutta !== 'all') {
+                filtered = filtered.filter(p => p.sutta === parseInt(sutta));
+            }
+
+            const topPicks = filtered.slice(0, topN);
+            const container = document.getElementById('topPicks');
+            
+            container.innerHTML = topPicks.map((p, index) => `
+                <div class="top-pick-card">
+                    <div class="top-pick-rank">${index + 1}</div>
+                    <div class="top-pick-number">${p.panel}</div>
+                    <div class="top-pick-score">Score: ${p.score}/100</div>
+                    <div class="top-pick-details">
+                        Type: ${p.type} | Sutta: ${p.sutta}<br>
+                        Frequency: ${p.frequency} times<br>
+                        ${p.recommendation === 'excellent' ? '🎯' : '✅'} ${p.recommendation.toUpperCase()}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render all panels
+        function renderPanels() {
+            const minScore = parseInt(document.getElementById('minScore').value);
+            document.getElementById('minScoreValue').textContent = minScore;
+
+            const filtered = scoredPanels.filter(p => p.score >= minScore);
+            const container = document.getElementById('panelGrid');
+            
+            container.innerHTML = filtered.map(p => `
+                <div class="panel-item ${p.recommendation}">
+                    <div class="panel-number">${p.panel}</div>
+                    <div class="panel-score">Score: ${p.score}</div>
+                    <div class="panel-recommendation">${p.recommendation}</div>
+                    <div class="frequency-bar">
+                        <div class="frequency-fill" style="width: ${(p.frequency / MAX_FREQUENCY) * 100}%"></div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render sutta distribution
+        function renderSuttaChart() {
+            const suttaCounts = {};
+            for (let i = 0; i <= 9; i++) suttaCounts[i] = 0;
+            
+            scoredPanels.forEach(p => {
+                suttaCounts[p.sutta]++;
+            });
+
+            const maxCount = Math.max(...Object.values(suttaCounts));
+            const container = document.getElementById('suttaChart');
+            
+            container.innerHTML = Object.entries(suttaCounts).map(([sutta, count]) => `
+                <div class="bar" style="height: ${(count / maxCount) * 100}%">
+                    <div class="bar-value">${count}</div>
+                    <div class="bar-label">Sutta ${sutta}</div>
+                </div>
+            `).join('');
+        }
+
+        // Render most frequent panels
+        function renderFrequentPanels() {
+            const frequent = Object.entries(HISTORICAL_FREQUENCIES)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 20);
+
+            const container = document.getElementById('frequentPanels');
+            
+            container.innerHTML = frequent.map(([panel, freq]) => `
+                <div class="panel-item avoid">
+                    <div class="panel-number">${panel}</div>
+                    <div class="panel-score">${freq} times</div>
+                    <div class="panel-recommendation">❌ TOO POPULAR</div>
+                </div>
+            `).join('');
+        }
+
+        // Event listeners
+        document.getElementById('modeFilter').addEventListener('change', renderTopPicks);
+        document.getElementById('suttaFilter').addEventListener('change', renderTopPicks);
+        document.getElementById('topN').addEventListener('input', renderTopPicks);
+        document.getElementById('minScore').addEventListener('input', renderPanels);
+
+        // Initial render
+        renderTopPicks();
+        renderPanels();
+        renderSuttaChart();
+        renderFrequentPanels();
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+MATKA DATA SCRAPER - HOW TO RUN
+================================
+
+STEP 1: Install Dependencies
+-----------------------------
+pip install -r requirements.txt
+
+
+STEP 2: Test the Scraper (Optional but Recommended)
+---------------------------------------------------
+python test_scraper.py
+
+This will test scraping on one market to make sure everything works.
+
+
+STEP 3: Run Full Scraper
+-------------------------
+python run_all.py
+
+This will:
+- Scrape all 34 markets from dpbosss.net.in
+- Save data to data/ directory
+- Analyze the data
+- Generate reports
+
+
+STEP 4: Check Results
+----------------------
+Look in the data/ folder:
+- panel_data_TIMESTAMP.csv - All scraped data
+- panel_data_TIMESTAMP.json - JSON format
+- analysis_report_*.txt - Analysis for each market
+
+
+TROUBLESHOOTING
+---------------
+If you get errors:
+
+1. "No module named 'requests'"
+   → Run: pip install -r requirements.txt
+
+2. "No data scraped"
+   → Check internet connection
+   → Try: python test_scraper.py first
+
+3. "Connection timeout"
+   → Website might be slow
+   → Try again later
+
+
+WHAT'S NEXT?
+------------
+After scraping data, you can:
+1. Build prediction models
+2. Analyze patterns
+3. Integrate with your calculator app
+
+
+FILES IN THIS FOLDER
+--------------------
+advanced_scraper.py - Main scraper code
+data_analyzer.py - Data analysis code
+run_all.py - Run everything at once
+test_scraper.py - Test on single market
+market_urls.json - All 34 market URLs
+requirements.txt - Python dependencies
+HOW_TO_RUN.txt - This file
