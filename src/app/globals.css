@@ -144,6 +144,12 @@ h1, h2, h3, h4, h5, h6 {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-12deg); }
+  20% { transform: translateX(200%) skewX(-12deg); }
+  100% { transform: translateX(200%) skewX(-12deg); }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp var(--duration-slow) var(--ease-out-expo) forwards;
   opacity: 0;
