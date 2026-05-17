@@ -64,7 +64,7 @@ export default function InstallPrompt() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 p-4 z-50 animate-fade-in-up">
-      <div className="glass-panel !mb-0 border !border-[#00E1FF]/50 !p-5 relative overflow-hidden !bg-[#120A2B]/95 !backdrop-blur-2xl shadow-[0_15px_40px_rgba(0,0,0,0.8)]">
+      <div className="glass-panel !mb-0 border !border-white/20 !p-5 relative overflow-hidden !bg-black/95 !backdrop-blur-2xl shadow-[0_15px_40px_rgba(0,0,0,0.8)]">
         {/* Shine effect */}
         <div className="absolute top-0 left-0 w-[200%] h-full bg-gradient-to-tr from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-[-100%] animate-[shine_3s_infinite]" />
         
@@ -86,7 +86,7 @@ export default function InstallPrompt() {
         {!isIOS && (
           <button 
             onClick={handleInstallClick}
-            className="w-full glass-button !bg-[#00E1FF]/20 hover:!bg-[#00E1FF]/40 !border-[#00E1FF] !text-[#00E1FF] font-bold shadow-[0_0_15px_rgba(0,225,255,0.3)]"
+            className="w-full glass-button !bg-white/10 hover:!bg-white/20 !border-white/30 !text-white font-bold shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           >
             Install App Now
           </button>
