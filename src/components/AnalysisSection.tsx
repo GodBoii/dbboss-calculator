@@ -352,9 +352,9 @@ export default function AnalysisSection() {
               </div>
               <p className="intel-desc">
                 {result.temporalMode === "Payday" &&
-                  "Public has fresh salary. Operator baits them with popular 'honey-pot' sequences. Penalty multiplier: 1.2×"}
+                  "Public has fresh salary. Operator drops popular 'honey-pot' sequences as bait to hook new players. Penalties REDUCED. Multiplier: 0.7×"}
                 {result.temporalMode === "Month-End" &&
-                  "Public is broke. Operator extracts final chips with hard, unpopular numbers. Penalty multiplier: 0.7×"}
+                  "Public is broke. Operator squeezes remaining bettors with hard, unpopular numbers. Penalties INCREASED. Multiplier: 1.3×"}
                 {result.temporalMode === "Normal" &&
                   "Mid-month cycle. Standard liability-minimization mode. Multiplier: 1.0×"}
               </p>
