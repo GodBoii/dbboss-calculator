@@ -3,25 +3,23 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "DBboss Calculator",
-  description: "Mobile First Calculator App",
+  description: "Game-Theory based Satta Matka prediction engine",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default",
-    title: "DBboss Calculator"
-  }
+    statusBarStyle: "black-translucent",
+    title: "DBboss",
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#080808",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  viewportFit: "cover",
 };
-
-import InstallPrompt from "../components/InstallPrompt";
-import UpdateButton from "../components/UpdateButton";
 
 export default function RootLayout({
   children,
@@ -33,12 +31,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icon.svg" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
-      <body>
-        {children}
-        <InstallPrompt />
-        <UpdateButton />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

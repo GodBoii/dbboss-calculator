@@ -44,8 +44,19 @@ const NIGHT_MARKETS = ['Sridevi Night', 'Madhur Night', 'Milan Night', 'Kalyan N
 type LoadingState = "idle" | "fetching" | "analyzing" | "done" | "error"
 
 // ─── Component ────────────────────────────────────────────────────────────────
+type Session = "day" | "night"
+
 export default function AnalysisSection() {
-  const [selectedMarket, setSelectedMarket] = useState<string>("Kalyan")
+  // Auto-detect session: night if hour >= 18 (6pm IST)
+  const defaultSession: Session = (() => {
+    const h = new Date().getHours()
+    return h >= 18 || h < 6 ? "night" : "day"
+  })()
+
+  const [session, setSession] = useState<Session>(defaultSession)
+  const [selectedMarket, setSelectedMarket] = useState<string>(
+    defaultSession === "night" ? "Kalyan Night" : "Kalyan"
+  )
   const [loadingState, setLoadingState] = useState<LoadingState>("idle")
   const [loadingMessage, setLoadingMessage] = useState("")
   const [result, setResult] = useState<PredictionResult | null>(null)
@@ -202,6 +213,22 @@ export default function AnalysisSection() {
     return "#4ade80"                         // fresh = green
   }
 
+  const haptic = (ms = 8) => {
+    if (typeof navigator !== "undefined" && "vibrate" in navigator) navigator.vibrate(ms)
+  }
+
+  const switchSession = (s: Session) => {
+    haptic()
+    setSession(s)
+    setSelectedMarket(s === "day" ? "Kalyan" : "Kalyan Night")
+    setResult(null)
+    setLoadingState("idle")
+    setCachedCount(null)
+  }
+
+  const activeMarkets = session === "day" ? DAY_MARKETS : NIGHT_MARKETS
+  const isNight = session === "night"
+
   return (
     <section className="analysis-section">
       {/* ── Market Selector ─────────────────────────────────────────── */}
@@ -210,39 +237,35 @@ export default function AnalysisSection() {
           <span className="section-icon">🎯</span>
           <div>
             <h2 className="section-title">Select Market</h2>
-            <p className="section-subtitle">Tap a market to load &amp; analyze it</p>
+            <p className="section-subtitle">Choose session, then pick your market</p>
           </div>
         </div>
 
-        {/* ☀️ Day Session */}
-        <div className="market-session-label">☀️ Day Session</div>
-        <div className="market-grid">
-          {DAY_MARKETS.map((market) => (
-            <button
-              key={market}
-              id={`market-${market.replace(/\s+/g, "-").toLowerCase()}`}
-              className={`market-btn ${selectedMarket === market ? "active" : ""}`}
-              onClick={() => {
-                setSelectedMarket(market)
-                setResult(null)
-                setLoadingState("idle")
-                setCachedCount(null)
-              }}
-            >
-              {market}
-            </button>
-          ))}
+        {/* Session Toggle */}
+        <div className="session-toggle">
+          <button
+            className={`session-toggle-btn session-toggle-btn--day ${!isNight ? "session-toggle-btn--active" : ""}`}
+            onClick={() => switchSession("day")}
+          >
+            ☀️ Day
+          </button>
+          <button
+            className={`session-toggle-btn session-toggle-btn--night ${isNight ? "session-toggle-btn--active" : ""}`}
+            onClick={() => switchSession("night")}
+          >
+            🌙 Night
+          </button>
         </div>
 
-        {/* 🌙 Night Session */}
-        <div className="market-session-label" style={{ marginTop: "14px" }}>🌙 Night Session</div>
+        {/* Filtered Market List */}
         <div className="market-grid">
-          {NIGHT_MARKETS.map((market) => (
+          {activeMarkets.map((market) => (
             <button
               key={market}
               id={`market-${market.replace(/\s+/g, "-").toLowerCase()}`}
-              className={`market-btn market-btn-night ${selectedMarket === market ? "active" : ""}`}
+              className={`market-btn ${isNight ? "market-btn-night" : ""} ${selectedMarket === market ? "active" : ""}`}
               onClick={() => {
+                haptic()
                 setSelectedMarket(market)
                 setResult(null)
                 setLoadingState("idle")
@@ -254,6 +277,7 @@ export default function AnalysisSection() {
           ))}
         </div>
       </div>
+
 
       {/* ── Action Buttons ────────────────────────────────────────────────── */}
       <div className="action-row">
