@@ -80,7 +80,7 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
         {/* Panel Header */}
         <div className="profile-panel-header">
           <div className="profile-avatar">
-            <span style={{ fontSize: 20 }}>◈</span>
+            <img src="/logo.png" alt="DBboss Logo" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "11px" }} />
           </div>
           <div className="profile-header-info">
             <span className="profile-name">DBboss</span>
