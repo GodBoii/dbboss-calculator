@@ -59,6 +59,18 @@ export default function AnalysisSection() {
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
   const cachedRecordsRef = useRef<PanelRecord[]>([])
 
+  // ── Copy helpers ─────────────────────────────────────────────────────────
+  const [copyingKey, setCopyingKey] = useState<string | null>(null)
+
+  const handleCopy = useCallback((key: string, text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopyingKey(key)
+      setTimeout(() => setCopyingKey(null), 1800)
+    }).catch(() => {
+      /* silently fail on insecure contexts */
+    })
+  }, [])
+
   // ── Jodi Model: compute when user enters Open Sutta ──────────────────────
   const runJodiModel = useCallback((sutta: number, panelStr: string | null) => {
     if (!result) return
@@ -594,9 +606,21 @@ export default function AnalysisSection() {
                 {/* ── Open Picks ──────────────────────────────────────────── */}
                 {picksSubTab === "open" && (
                   <>
-                    <p className="picks-hint">
-                      Open panel predictions — scored against Open-position history only
-                    </p>
+                    <div className="picks-hint-row">
+                      <p className="picks-hint" style={{ margin: 0 }}>
+                        Open panel predictions — scored against Open-position history only
+                      </p>
+                      <CopyButton
+                        label="Copy Open"
+                        isCopied={copyingKey === "open"}
+                        onClick={() =>
+                          handleCopy(
+                            "open",
+                            formatPicksForCopy(result.openPicks, `${selectedMarket} — Open Picks`)
+                          )
+                        }
+                      />
+                    </div>
                     <PicksList picks={result.openPicks} getScoreColor={getScoreColor} />
                   </>
                 )}
@@ -604,9 +628,21 @@ export default function AnalysisSection() {
                 {/* ── Close Picks ─────────────────────────────────────────── */}
                 {picksSubTab === "close" && (
                   <>
-                    <p className="picks-hint">
-                      Close panel predictions — scored against Close-position history only
-                    </p>
+                    <div className="picks-hint-row">
+                      <p className="picks-hint" style={{ margin: 0 }}>
+                        Close panel predictions — scored against Close-position history only
+                      </p>
+                      <CopyButton
+                        label="Copy Close"
+                        isCopied={copyingKey === "close"}
+                        onClick={() =>
+                          handleCopy(
+                            "close",
+                            formatPicksForCopy(result.closePicks, `${selectedMarket} — Close Picks`)
+                          )
+                        }
+                      />
+                    </div>
                     <PicksList picks={result.closePicks} getScoreColor={getScoreColor} />
                   </>
                 )}
@@ -682,7 +718,22 @@ export default function AnalysisSection() {
                     </div>
 
                     {/* Adjusted picks */}
-                    <h4 className="stat-section-title">Jodi-Adjusted Close Panels</h4>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "10px" }}>
+                      <h4 className="stat-section-title" style={{ margin: 0 }}>Jodi-Adjusted Close Panels</h4>
+                      <CopyButton
+                        label="Copy Jodi"
+                        isCopied={copyingKey === "jodi"}
+                        onClick={() =>
+                          handleCopy(
+                            "jodi",
+                            formatPicksForCopy(
+                              jodiResult.adjustedClosePicks,
+                              `${selectedMarket} — Jodi Close (Open Sutta=${jodiResult.openSutta})`
+                            )
+                          )
+                        }
+                      />
+                    </div>
                     <PicksList picks={jodiResult.adjustedClosePicks} getScoreColor={getScoreColor} />
                   </>
                 )}
@@ -888,6 +939,24 @@ export default function AnalysisSection() {
         </div>
       )}
     </section>
+  )
+}
+
+// ─── Format picks as copyable text ──────────────────────────────────────────────
+function formatPicksForCopy(picks: PanelPick[], _header: string): string {
+  return picks.map((p) => p.panel).join("-")
+}
+
+// ─── CopyButton Component ────────────────────────────────────────────────────
+function CopyButton({ label, isCopied, onClick }: { label: string; isCopied: boolean; onClick: () => void }) {
+  return (
+    <button
+      className={`copy-btn ${isCopied ? "copy-btn-success" : ""}`}
+      onClick={onClick}
+      title={isCopied ? "Copied!" : "Copy results to clipboard"}
+    >
+      {isCopied ? "✅ Copied!" : `📋 ${label}`}
+    </button>
   )
 }
 
