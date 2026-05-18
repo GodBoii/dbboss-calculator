@@ -21,23 +21,23 @@ import {
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
   // Day session
-  'Sridevi':       'https://dpbosss.net.in/sridevi-penal-chart-record.php',
-  'Time Bazar':    'https://dpbosss.net.in/time-bazar-panel.php',
-  'Madhur Day':    'https://dpbosss.net.in/madhur-day-panel-chart.php',
-  'Milan Day':     'https://dpbosss.net.in/milan-day-panel.php',
-  'Rajdhani Day':  'https://dpbosss.net.in/rajdhani-day-panel-chart.php',
-  'Kalyan':        'https://dpbosss.net.in/kalyan-panel-chart.php',
+  'Sridevi':        'https://dpbosss.net.in/sridevi-penal-chart-record.php',
+  'Time Bazar':     'https://dpbosss.net.in/time-bazar-panel.php',
+  'Madhur Day':     'https://dpbosss.net.in/madhur-day-panel-chart.php',
+  'Milan Day':      'https://dpbosss.net.in/milan-day-panel.php',
+  'Rajdhani Day':   'https://dpbosss.net.in/rajdhani-day-panel-chart.php',
+  'Kalyan':         'https://dpbosss.net.in/kalyan-panel-chart.php',
   // Night session
-  'Sridevi Night': 'https://dpbosss.net.in/sridevi-night-panel-chart.php',
-  'Madhur Night':  'https://dpbosss.net.in/madhuri-night-panel-chart.php',  // note: "madhuri"
-  'Milan Night':   'https://dpbosss.net.in/milan-night-panel.php',
-  'Rajdhani Night':'https://dpbosss.net.in/rajdhani-night-panel.php',
-  'Main Bombay':   'https://dpbosss.net.in/main-bombay-panel-chart.php',    // late-night anchor
-  'Main Bazar':    'https://dpbosss.net.in/main-bombay-panel-chart.php',
+  'Sridevi Night':  'https://dpbosss.net.in/sridevi-night-panel-chart.php',
+  'Madhur Night':   'https://dpbosss.net.in/madhuri-night-panel-chart.php',  // note: "madhuri" in slug
+  'Milan Night':    'https://dpbosss.net.in/milan-night-panel.php',
+  'Kalyan Night':   'https://dpbosss.net.in/kalyan-night-penal.php',
+  'Rajdhani Night': 'https://dpbosss.net.in/rajdhani-night-panel.php',
+  'Main Bazar':     'https://dpbosss.net.in/main-bazar-panel-chart.php',
 }
 
 const DAY_MARKETS   = ['Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan']
-const NIGHT_MARKETS = ['Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bombay']
+const NIGHT_MARKETS = ['Sridevi Night', 'Madhur Night', 'Milan Night', 'Kalyan Night', 'Rajdhani Night', 'Main Bazar']
 
 
 

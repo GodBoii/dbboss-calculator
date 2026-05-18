@@ -18,20 +18,21 @@ import type { PanelRecord } from './db'
 
 export const HIGH_VOLUME_MARKETS = [
   'Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan',
-  'Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bombay',
+  'Sridevi Night', 'Madhur Night', 'Milan Night', 'Kalyan Night', 'Rajdhani Night', 'Main Bazar',
 ]
 
 const LIQUIDITY_FLOW_MAP: Record<string, string> = {
-  'Time Bazar':    'Sridevi',
-  'Madhur Day':    'Time Bazar',
-  'Milan Day':     'Madhur Day',
-  'Rajdhani Day':  'Milan Day',
-  'Kalyan':        'Rajdhani Day',
-  'Sridevi Night': 'Kalyan',
-  'Madhur Night':  'Sridevi Night',
-  'Milan Night':   'Madhur Night',
-  'Rajdhani Night':'Milan Night',
-  'Main Bombay':   'Rajdhani Night',
+  'Time Bazar':     'Sridevi',
+  'Madhur Day':     'Time Bazar',
+  'Milan Day':      'Madhur Day',
+  'Rajdhani Day':   'Milan Day',
+  'Kalyan':         'Rajdhani Day',
+  'Sridevi Night':  'Kalyan',
+  'Madhur Night':   'Sridevi Night',
+  'Milan Night':    'Madhur Night',
+  'Kalyan Night':   'Milan Night',
+  'Rajdhani Night': 'Kalyan Night',
+  'Main Bazar':     'Rajdhani Night',
 }
 
 const VOL_MULTIPLIER: Record<string, number> = {
@@ -43,7 +44,7 @@ const VOL_MULTIPLIER: Record<string, number> = {
 const HIGH_VOL_SET = new Set(HIGH_VOLUME_MARKETS)
 const MEDIUM_VOL_SET = new Set([
   'Time Bazar', 'Madhur Day', 'Rajdhani Day',
-  'Sridevi Night', 'Madhur Night', 'Kalyan Night', 'Rajdhani Night',
+  'Sridevi Night', 'Madhur Night', 'Rajdhani Night',
 ])
 
 // ─── Types ────────────────────────────────────────────────────────────────────
