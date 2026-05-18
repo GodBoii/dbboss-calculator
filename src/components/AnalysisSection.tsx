@@ -1,11 +1,15 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useRef } from "react"
 import {
   HIGH_VOLUME_MARKETS,
   analyzeMarket,
-  isSequential,
+  computeJodiAnalysis,
+  buildContextFromResult,
+  calculateSutta,
   type PredictionResult,
+  type JodiAnalysis,
+  type PanelPick,
 } from "@/lib/predictor"
 import {
   saveRecords,
@@ -49,12 +53,29 @@ export default function AnalysisSection() {
   const [cachedCount, setCachedCount] = useState<number | null>(null)
   const [showBreakdown, setShowBreakdown] = useState(false)
   const [activeTab, setActiveTab] = useState<"picks" | "stats" | "intel">("picks")
+  const [picksSubTab, setPicksSubTab] = useState<"open" | "close" | "jodi">("open")
+  const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
+  const [openPanelInput, setOpenPanelInput] = useState("")
+  const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
+  const cachedRecordsRef = useRef<PanelRecord[]>([])
+
+  // ── Jodi Model: compute when user enters Open Sutta ──────────────────────
+  const runJodiModel = useCallback((sutta: number, panelStr: string | null) => {
+    if (!result) return
+    const ctx = buildContextFromResult(result)
+    const analysis = computeJodiAnalysis(sutta, panelStr, cachedRecordsRef.current, ctx)
+    setJodiResult(analysis)
+    setPicksSubTab("jodi")
+  }, [result])
 
   const fetchAndAnalyze = useCallback(
     async (forceRefresh = false) => {
       setLoadingState("fetching")
       setErrorMsg("")
       setResult(null)
+      setJodiResult(null)
+      setOpenSuttaInput(null)
+      setOpenPanelInput("")
 
       try {
         let records: PanelRecord[]
@@ -134,6 +155,7 @@ export default function AnalysisSection() {
         }
 
         // ── Step 5: Run predictor ──────────────────────────────────────────
+        cachedRecordsRef.current = records
         const prediction = analyzeMarket(selectedMarket, records, allMarketsRecords)
         if (!prediction) throw new Error("Not enough data to generate predictions.")
 
@@ -452,6 +474,80 @@ export default function AnalysisSection() {
             </div>
           </div>
 
+          {/* ── Jodi Dependency Model Input ────────────────────────────────── */}
+          <div className="glass-panel">
+            <div className="section-header">
+              <span className="section-icon">🎯</span>
+              <div>
+                <h3 className="section-title">Jodi Model — Real-Time Close Prediction</h3>
+                <p className="section-subtitle">Enter today&apos;s Open result to unlock dynamic Close predictions</p>
+              </div>
+            </div>
+
+            <div style={{ marginBottom: "12px" }}>
+              <label className="text-sm" style={{ color: "rgba(255,255,255,0.6)", display: "block", marginBottom: "6px" }}>
+                Open Panel (3 digits) — auto-computes Sutta
+              </label>
+              <input
+                type="tel"
+                className="glass-input"
+                placeholder="e.g. 368"
+                maxLength={3}
+                value={openPanelInput}
+                onChange={(e) => {
+                  const val = e.target.value.replace(/\D/g, "").slice(0, 3)
+                  setOpenPanelInput(val)
+                  if (val.length === 3) {
+                    const sutta = calculateSutta(val)
+                    setOpenSuttaInput(sutta)
+                    runJodiModel(sutta, val)
+                  } else {
+                    setOpenSuttaInput(null)
+                    setJodiResult(null)
+                  }
+                }}
+              />
+            </div>
+
+            <label className="text-sm" style={{ color: "rgba(255,255,255,0.6)", display: "block", marginBottom: "6px" }}>
+              Or select Open Sutta directly
+            </label>
+            <div className="sutta-grid">
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => (
+                <button
+                  key={s}
+                  className={`sutta-cell ${openSuttaInput === s ? "sutta-saturated" : ""}`}
+                  style={{
+                    borderColor: openSuttaInput === s ? "#f59e0b" : "rgba(255,255,255,0.15)",
+                    cursor: "pointer",
+                    background: openSuttaInput === s ? "rgba(245,158,11,0.2)" : "transparent",
+                  }}
+                  onClick={() => {
+                    if (openSuttaInput === s) {
+                      setOpenSuttaInput(null)
+                      setJodiResult(null)
+                      setOpenPanelInput("")
+                    } else {
+                      setOpenSuttaInput(s)
+                      setOpenPanelInput("")
+                      runJodiModel(s, null)
+                    }
+                  }}
+                >
+                  <span className="sutta-number">{s}</span>
+                </button>
+              ))}
+            </div>
+
+            {openSuttaInput !== null && (
+              <p style={{ color: "#f59e0b", fontSize: "13px", marginTop: "10px", textAlign: "center" }}>
+                ✅ Open Sutta = <strong>{openSuttaInput}</strong>
+                {openPanelInput.length === 3 && <> (Panel: <strong>{openPanelInput}</strong>)</>}
+                {" "}— Jodi Close predictions active
+              </p>
+            )}
+          </div>
+
           {/* ── Tab Navigation ───────────────────────────────────────────── */}
           <div className="glass-panel tab-panel">
             <div className="tab-nav">
@@ -462,58 +558,141 @@ export default function AnalysisSection() {
                   className={`tab-btn ${activeTab === tab ? "active" : ""}`}
                   onClick={() => setActiveTab(tab)}
                 >
-                  {tab === "picks" && "🏆 Top Picks"}
+                  {tab === "picks" && "🏆 Predictions"}
                   {tab === "stats" && "📊 Stats"}
                   {tab === "intel" && "🧠 Breakdown"}
                 </button>
               ))}
             </div>
 
-            {/* ── TOP PICKS TAB ─────────────────────────────────────────── */}
+            {/* ── PREDICTIONS TAB ────────────────────────────────────────── */}
             {activeTab === "picks" && (
               <div className="picks-section">
-                <p className="picks-hint">
-                  Top-scored panels — higher score = lower operator liability = safer to play
-                </p>
-
-                {/* Top 3 Hero Picks */}
-                <div className="hero-picks">
-                  {result.topPicks.slice(0, 3).map((pick, i) => (
-                    <div key={pick.panel} className={`hero-pick hero-pick-${i + 1}`}>
-                      <span className="hero-rank">#{i + 1}</span>
-                      <span className="hero-panel">{pick.panel}</span>
-                      <span className="hero-sutta">S: {pick.sutta}</span>
-                      <span className="hero-score" style={{ color: getScoreColor(pick.score) }}>
-                        {pick.score.toFixed(1)}
-                      </span>
-                      {pick.isHoneyPotPick && <span className="honey-badge">🍯</span>}
-                    </div>
-                  ))}
+                {/* Sub-tab navigation: Open | Close | Jodi Close */}
+                <div className="tab-nav" style={{ marginBottom: "12px", gap: "4px" }}>
+                  <button
+                    className={`tab-btn ${picksSubTab === "open" ? "active" : ""}`}
+                    onClick={() => setPicksSubTab("open")}
+                    style={{ fontSize: "12px", padding: "6px 12px" }}
+                  >📈 Open</button>
+                  <button
+                    className={`tab-btn ${picksSubTab === "close" ? "active" : ""}`}
+                    onClick={() => setPicksSubTab("close")}
+                    style={{ fontSize: "12px", padding: "6px 12px" }}
+                  >📉 Close</button>
+                  <button
+                    className={`tab-btn ${picksSubTab === "jodi" ? "active" : ""}`}
+                    onClick={() => setPicksSubTab("jodi")}
+                    style={{
+                      fontSize: "12px", padding: "6px 12px",
+                      opacity: jodiResult ? 1 : 0.4,
+                    }}
+                    disabled={!jodiResult}
+                  >🎯 Jodi Close</button>
                 </div>
 
-                {/* Full Picks List */}
-                <div className="picks-list">
-                  {result.topPicks.slice(3).map((pick, i) => (
-                    <div key={pick.panel} className="pick-row">
-                      <span className="pick-rank text-muted">#{i + 4}</span>
-                      <span className="pick-panel">{pick.panel}</span>
-                      <span className="pick-sutta">S{pick.sutta}</span>
-                      <div className="pick-score-bar">
-                        <div
-                          className="pick-score-fill"
-                          style={{
-                            width: `${pick.score}%`,
-                            background: getScoreColor(pick.score),
-                          }}
-                        />
+                {/* ── Open Picks ──────────────────────────────────────────── */}
+                {picksSubTab === "open" && (
+                  <>
+                    <p className="picks-hint">
+                      Open panel predictions — scored against Open-position history only
+                    </p>
+                    <PicksList picks={result.openPicks} getScoreColor={getScoreColor} />
+                  </>
+                )}
+
+                {/* ── Close Picks ─────────────────────────────────────────── */}
+                {picksSubTab === "close" && (
+                  <>
+                    <p className="picks-hint">
+                      Close panel predictions — scored against Close-position history only
+                    </p>
+                    <PicksList picks={result.closePicks} getScoreColor={getScoreColor} />
+                  </>
+                )}
+
+                {/* ── Jodi-Adjusted Close Picks ──────────────────────────── */}
+                {picksSubTab === "jodi" && jodiResult && (
+                  <>
+                    <p className="picks-hint">
+                      Close predictions adjusted for Jodi liability with Open Sutta = <strong>{jodiResult.openSutta}</strong>
+                    </p>
+
+                    {/* Jodi frequency chart */}
+                    <div style={{ marginBottom: "16px" }}>
+                      <h4 className="stat-section-title">Jodi Liability Map</h4>
+                      <p className="picks-hint" style={{ marginBottom: "8px" }}>
+                        Shows how often each Jodi ({jodiResult.openSutta}X) appeared historically.
+                        Popular Jodis = high liability = operator will AVOID that Close Sutta.
+                      </p>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                        {jodiResult.jodiFrequencies.map((jf) => {
+                          const isBlack = jodiResult.blacklistedCloseSuttas.includes(jf.closeSutta)
+                          const isSafe = jodiResult.safeCloseSuttas.includes(jf.closeSutta)
+                          return (
+                            <div key={jf.jodi} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                              <span style={{
+                                width: "28px", textAlign: "center", fontWeight: 700, fontSize: "13px",
+                                color: isBlack ? "#f87171" : isSafe ? "#4ade80" : "rgba(255,255,255,0.7)",
+                              }}>{jf.jodi}</span>
+                              <div style={{ flex: 1, height: "16px", background: "rgba(255,255,255,0.06)", borderRadius: "4px", overflow: "hidden" }}>
+                                <div style={{
+                                  width: `${Math.min(100, jf.percentage * 5)}%`,
+                                  height: "100%",
+                                  borderRadius: "4px",
+                                  background: isBlack ? "linear-gradient(90deg, #ef4444, #f87171)" : isSafe ? "linear-gradient(90deg, #22c55e, #4ade80)" : "linear-gradient(90deg, #6b7280, #9ca3af)",
+                                }} />
+                              </div>
+                              <span style={{ width: "50px", textAlign: "right", fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>
+                                {jf.percentage}%
+                              </span>
+                              {isBlack && <span style={{ fontSize: "10px", color: "#f87171" }}>AVOID</span>}
+                              {isSafe && <span style={{ fontSize: "10px", color: "#4ade80" }}>SAFE</span>}
+                            </div>
+                          )
+                        })}
                       </div>
-                      <span className="pick-score-num" style={{ color: getScoreColor(pick.score) }}>
-                        {pick.score.toFixed(0)}
-                      </span>
-                      {pick.isHoneyPotPick && <span className="honey-mini">🍯</span>}
+                      <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "11px", marginTop: "6px" }}>
+                        Based on {jodiResult.totalMatchingDraws} historical draws with Open Sutta = {jodiResult.openSutta}
+                      </p>
                     </div>
-                  ))}
-                </div>
+
+                    {/* Blacklisted / Safe summary */}
+                    <div style={{ display: "flex", gap: "8px", marginBottom: "14px", flexWrap: "wrap" }}>
+                      {jodiResult.blacklistedCloseSuttas.length > 0 && (
+                        <div style={{ flex: 1, background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)", borderRadius: "8px", padding: "8px 12px" }}>
+                          <span style={{ fontSize: "11px", color: "#f87171", fontWeight: 600 }}>🚫 BLACKLISTED CLOSE SUTTAS</span>
+                          <div style={{ display: "flex", gap: "6px", marginTop: "4px" }}>
+                            {jodiResult.blacklistedCloseSuttas.map((s) => (
+                              <span key={s} style={{ background: "rgba(239,68,68,0.2)", padding: "2px 8px", borderRadius: "4px", fontWeight: 700, color: "#f87171" }}>{s}</span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      {jodiResult.safeCloseSuttas.length > 0 && (
+                        <div style={{ flex: 1, background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "8px", padding: "8px 12px" }}>
+                          <span style={{ fontSize: "11px", color: "#4ade80", fontWeight: 600 }}>✅ SAFE CLOSE SUTTAS</span>
+                          <div style={{ display: "flex", gap: "6px", marginTop: "4px" }}>
+                            {jodiResult.safeCloseSuttas.map((s) => (
+                              <span key={s} style={{ background: "rgba(34,197,94,0.2)", padding: "2px 8px", borderRadius: "4px", fontWeight: 700, color: "#4ade80" }}>{s}</span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Adjusted picks */}
+                    <h4 className="stat-section-title">Jodi-Adjusted Close Panels</h4>
+                    <PicksList picks={jodiResult.adjustedClosePicks} getScoreColor={getScoreColor} />
+                  </>
+                )}
+
+                {picksSubTab === "jodi" && !jodiResult && (
+                  <div style={{ textAlign: "center", padding: "30px 16px", color: "rgba(255,255,255,0.4)" }}>
+                    <p style={{ fontSize: "32px", marginBottom: "8px" }}>🎯</p>
+                    <p>Enter today&apos;s Open result above to unlock Jodi-adjusted Close predictions</p>
+                  </div>
+                )}
               </div>
             )}
 
@@ -709,5 +888,67 @@ export default function AnalysisSection() {
         </div>
       )}
     </section>
+  )
+}
+
+// ─── Reusable Picks List Component ─────────────────────────────────────────────
+function PicksList({ picks, getScoreColor }: { picks: PanelPick[]; getScoreColor: (s: number) => string }) {
+  if (!picks || picks.length === 0) {
+    return (
+      <div style={{ textAlign: "center", padding: "20px", color: "rgba(255,255,255,0.4)" }}>
+        No predictions available for this position.
+      </div>
+    )
+  }
+  return (
+    <>
+      {/* Top 3 Hero Picks */}
+      <div className="hero-picks">
+        {picks.slice(0, 3).map((pick, i) => (
+          <div key={pick.panel} className={`hero-pick hero-pick-${i + 1}`}>
+            <span className="hero-rank">#{i + 1}</span>
+            <span className="hero-panel">{pick.panel}</span>
+            <span className="hero-sutta">S: {pick.sutta}</span>
+            <span className="hero-score" style={{ color: getScoreColor(pick.score) }}>
+              {pick.score.toFixed(1)}
+            </span>
+            {pick.isHoneyPotPick && <span className="honey-badge">🍯</span>}
+          </div>
+        ))}
+      </div>
+
+      {/* Full Picks List */}
+      <div className="picks-list">
+        {picks.slice(3).map((pick, i) => (
+          <div key={pick.panel} className="pick-row">
+            <span className="pick-rank text-muted">#{i + 4}</span>
+            <span className="pick-panel">{pick.panel}</span>
+            <span className="pick-sutta">S{pick.sutta}</span>
+            <div className="pick-score-bar">
+              <div
+                className="pick-score-fill"
+                style={{
+                  width: `${pick.score}%`,
+                  background: getScoreColor(pick.score),
+                }}
+              />
+            </div>
+            <span className="pick-score-num" style={{ color: getScoreColor(pick.score) }}>
+              {pick.score.toFixed(0)}
+            </span>
+            {pick.isHoneyPotPick && <span className="honey-mini">🍯</span>}
+            {pick.breakdown.jodiPenalty !== 0 && (
+              <span style={{
+                fontSize: "10px",
+                color: pick.breakdown.jodiPenalty > 0 ? "#f87171" : "#4ade80",
+                marginLeft: "4px",
+              }}>
+                {pick.breakdown.jodiPenalty > 0 ? "⛔" : "✅"}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
