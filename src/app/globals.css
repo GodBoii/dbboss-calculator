@@ -673,6 +673,16 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
+.sutta-sat-label--snapback {
+  color: #60a5fa;
+  background: rgba(96,165,250,0.15);
+}
+
+.sutta-sat-label--danger {
+  color: #f87171;
+  background: rgba(248,113,113,0.15);
+}
+
 /* ─── Tab Panel (inner tabs for picks/stats/intel) ─────────────────────────── */
 .tab-panel {
   padding: 0 !important;

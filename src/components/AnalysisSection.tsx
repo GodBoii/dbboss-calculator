@@ -7,10 +7,12 @@ import {
   computeJodiAnalysis,
   buildContextFromResult,
   calculateSutta,
+  getSuttaSignal,
   type PredictionResult,
   type JodiAnalysis,
   type PanelPick,
 } from "@/lib/predictor"
+import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
 import {
   saveRecords,
   getRecordsByMarket,
@@ -68,6 +70,7 @@ export default function AnalysisSection() {
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
   const [openPanelInput, setOpenPanelInput] = useState("")
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
+  const [backtestReport, setBacktestReport] = useState<BacktestReport | null>(null)
   const cachedRecordsRef = useRef<PanelRecord[]>([])
 
   // ── Copy helpers ─────────────────────────────────────────────────────────
@@ -97,6 +100,7 @@ export default function AnalysisSection() {
       setErrorMsg("")
       setResult(null)
       setJodiResult(null)
+      setBacktestReport(null)
       setOpenSuttaInput(null)
       setOpenPanelInput("")
 
@@ -110,8 +114,10 @@ export default function AnalysisSection() {
         }
 
         const cached = await getRecordsByMarket(selectedMarket)
+        const newestCachedAt = cached.reduce((max, record) => Math.max(max, record.savedAt ?? 0), 0)
+        const cacheIsFresh = newestCachedAt > 0 && Date.now() - newestCachedAt < 6 * 60 * 60 * 1000
 
-        if (cached.length > 50 && !forceRefresh) {
+        if (cached.length > 50 && cacheIsFresh && !forceRefresh) {
           // We have enough cached data — skip scraping
           setLoadingMessage(`Using ${cached.length} cached records…`)
           records = cached
@@ -182,6 +188,7 @@ export default function AnalysisSection() {
         const prediction = analyzeMarket(selectedMarket, records, allMarketsRecords)
         if (!prediction) throw new Error("Not enough data to generate predictions.")
 
+        setBacktestReport(runMarketBacktest(selectedMarket, records, allMarketsRecords, { days: 30 }))
         setResult(prediction)
         setLoadingState("done")
       } catch (err) {
@@ -207,10 +214,12 @@ export default function AnalysisSection() {
   }
 
   const getSuttaColor = (drought: number) => {
-    if (drought === 1000) return "#6b7280"  // never seen = grey
-    if (drought > 8) return "#f87171"       // saturated = red (penalised)
-    if (drought > 4) return "#facc15"       // getting warm = yellow
-    return "#4ade80"                         // fresh = green
+    return getSuttaSignal(drought).color
+  }
+
+  const pct = (value: number, total: number) => {
+    if (!total) return "0.0%"
+    return `${((value / total) * 100).toFixed(1)}%`
   }
 
   const haptic = (ms = 8) => {
@@ -222,12 +231,18 @@ export default function AnalysisSection() {
     setSession(s)
     setSelectedMarket(s === "day" ? "Kalyan" : "Kalyan Night")
     setResult(null)
+    setBacktestReport(null)
     setLoadingState("idle")
     setCachedCount(null)
   }
 
   const activeMarkets = session === "day" ? DAY_MARKETS : NIGHT_MARKETS
   const isNight = session === "night"
+  const displayedSuttaDroughts = result
+    ? picksSubTab === "open"
+      ? result.openSuttaDroughts
+      : result.closeSuttaDroughts
+    : null
 
   return (
     <section className="analysis-section">
@@ -268,6 +283,7 @@ export default function AnalysisSection() {
                 haptic()
                 setSelectedMarket(market)
                 setResult(null)
+                setBacktestReport(null)
                 setLoadingState("idle")
                 setCachedCount(null)
               }}
@@ -483,27 +499,29 @@ export default function AnalysisSection() {
             <div className="section-header">
               <span className="section-icon">🎰</span>
               <div>
-                <h3 className="section-title">Sutta Drought Map</h3>
+                <h3 className="section-title">Sutta Signal Map</h3>
                 <p className="section-subtitle">
-                  Red = Saturated (public betting heavy → house will avoid) · Green = Fresh
+                  Red = danger, blue = extreme snapback, green = fresh
                 </p>
               </div>
             </div>
             <div className="sutta-grid">
               {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => {
-                const drought = result.suttaDroughts[String(s)] ?? 1000
-                const isSat = result.saturatedSuttas.includes(String(s))
+                const drought = displayedSuttaDroughts?.[String(s)] ?? 1000
+                const signal = getSuttaSignal(drought)
+                const isHot = signal.state === "danger" || signal.state === "snapback"
                 return (
                   <div
                     key={s}
-                    className={`sutta-cell ${isSat ? "sutta-saturated" : ""}`}
-                    style={{ borderColor: getSuttaColor(drought) }}
+                    className={`sutta-cell ${isHot ? "sutta-saturated" : ""}`}
+                    style={{ borderColor: signal.color }}
+                    title={signal.description}
                   >
                     <span className="sutta-number">{s}</span>
-                    <span className="sutta-drought" style={{ color: getSuttaColor(drought) }}>
+                    <span className="sutta-drought" style={{ color: signal.color }}>
                       {drought === 1000 ? "???" : `${drought}d`}
                     </span>
-                    {isSat && <span className="sutta-sat-label">SAT</span>}
+                    {isHot && <span className={`sutta-sat-label sutta-sat-label--${signal.state}`}>{signal.label}</span>}
                   </div>
                 )
               })}
@@ -675,20 +693,20 @@ export default function AnalysisSection() {
                 {picksSubTab === "jodi" && jodiResult && (
                   <>
                     <p className="picks-hint">
-                      Close predictions adjusted for Jodi liability with Open Sutta = <strong>{jodiResult.openSutta}</strong>
+                      Close predictions adjusted by empirical Open-to-Close history for Open Sutta = <strong>{jodiResult.openSutta}</strong>
                     </p>
 
                     {/* Jodi frequency chart */}
                     <div style={{ marginBottom: "16px" }}>
-                      <h4 className="stat-section-title">Jodi Liability Map</h4>
+                      <h4 className="stat-section-title">Jodi Edge Map</h4>
                       <p className="picks-hint" style={{ marginBottom: "8px" }}>
                         Shows how often each Jodi ({jodiResult.openSutta}X) appeared historically.
-                        Popular Jodis = high liability = operator will AVOID that Close Sutta.
+                        Frequent outcomes are boosted; weak outcomes are reduced.
                       </p>
                       <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                         {jodiResult.jodiFrequencies.map((jf) => {
-                          const isBlack = jodiResult.blacklistedCloseSuttas.includes(jf.closeSutta)
-                          const isSafe = jodiResult.safeCloseSuttas.includes(jf.closeSutta)
+                          const isBlack = jodiResult.avoidedCloseSuttas.includes(jf.closeSutta)
+                          const isSafe = jodiResult.favoredCloseSuttas.includes(jf.closeSutta)
                           return (
                             <div key={jf.jodi} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                               <span style={{
@@ -706,8 +724,8 @@ export default function AnalysisSection() {
                               <span style={{ width: "50px", textAlign: "right", fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>
                                 {jf.percentage}%
                               </span>
-                              {isBlack && <span style={{ fontSize: "10px", color: "#f87171" }}>AVOID</span>}
-                              {isSafe && <span style={{ fontSize: "10px", color: "#4ade80" }}>SAFE</span>}
+                              {isBlack && <span style={{ fontSize: "10px", color: "#f87171" }}>WEAK</span>}
+                              {isSafe && <span style={{ fontSize: "10px", color: "#4ade80" }}>EDGE</span>}
                             </div>
                           )
                         })}
@@ -719,21 +737,21 @@ export default function AnalysisSection() {
 
                     {/* Blacklisted / Safe summary */}
                     <div style={{ display: "flex", gap: "8px", marginBottom: "14px", flexWrap: "wrap" }}>
-                      {jodiResult.blacklistedCloseSuttas.length > 0 && (
+                      {jodiResult.avoidedCloseSuttas.length > 0 && (
                         <div style={{ flex: 1, background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)", borderRadius: "8px", padding: "8px 12px" }}>
-                          <span style={{ fontSize: "11px", color: "#f87171", fontWeight: 600 }}>🚫 BLACKLISTED CLOSE SUTTAS</span>
+                          <span style={{ fontSize: "11px", color: "#f87171", fontWeight: 600 }}>WEAK CLOSE SUTTAS</span>
                           <div style={{ display: "flex", gap: "6px", marginTop: "4px" }}>
-                            {jodiResult.blacklistedCloseSuttas.map((s) => (
+                            {jodiResult.avoidedCloseSuttas.map((s) => (
                               <span key={s} style={{ background: "rgba(239,68,68,0.2)", padding: "2px 8px", borderRadius: "4px", fontWeight: 700, color: "#f87171" }}>{s}</span>
                             ))}
                           </div>
                         </div>
                       )}
-                      {jodiResult.safeCloseSuttas.length > 0 && (
+                      {jodiResult.favoredCloseSuttas.length > 0 && (
                         <div style={{ flex: 1, background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "8px", padding: "8px 12px" }}>
-                          <span style={{ fontSize: "11px", color: "#4ade80", fontWeight: 600 }}>✅ SAFE CLOSE SUTTAS</span>
+                          <span style={{ fontSize: "11px", color: "#4ade80", fontWeight: 600 }}>FAVORED CLOSE SUTTAS</span>
                           <div style={{ display: "flex", gap: "6px", marginTop: "4px" }}>
-                            {jodiResult.safeCloseSuttas.map((s) => (
+                            {jodiResult.favoredCloseSuttas.map((s) => (
                               <span key={s} style={{ background: "rgba(34,197,94,0.2)", padding: "2px 8px", borderRadius: "4px", fontWeight: 700, color: "#4ade80" }}>{s}</span>
                             ))}
                           </div>
@@ -794,6 +812,50 @@ export default function AnalysisSection() {
                   <span className="stat-label">Triples (expected random)</span>
                   <span className="stat-value">~4.55%</span>
                 </div>
+
+                {backtestReport && (
+                  <>
+                    <div className="stat-divider" />
+                    <h4 className="stat-section-title">Last 30 Days Backtest</h4>
+                    <p className="picks-hint">
+                      {backtestReport.startDate} to {backtestReport.endDate} - {backtestReport.drawsTested} draws replayed with prior history only
+                    </p>
+                    <div className="stat-row">
+                      <span className="stat-label">Random panel@30 baseline</span>
+                      <span className="stat-value">{(backtestReport.randomTop30Baseline * 100).toFixed(1)}%</span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Open panel@30 / sutta@30</span>
+                      <span className="stat-value">
+                        {pct(backtestReport.open.panelTop30, backtestReport.open.n)} / {pct(backtestReport.open.suttaTop30, backtestReport.open.n)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Close panel@30 / sutta@30</span>
+                      <span className="stat-value">
+                        {pct(backtestReport.close.panelTop30, backtestReport.close.n)} / {pct(backtestReport.close.suttaTop30, backtestReport.close.n)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Jodi panel@30 / sutta@30</span>
+                      <span className="stat-value">
+                        {pct(backtestReport.jodi.panelTop30, backtestReport.jodi.n)} / {pct(backtestReport.jodi.suttaTop30, backtestReport.jodi.n)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Close actual danger / snapback</span>
+                      <span className="stat-value">
+                        {pct(backtestReport.close.actualDanger, backtestReport.close.n)} / {pct(backtestReport.close.actualSnapback, backtestReport.close.n)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Jodi rank movement</span>
+                      <span className="stat-value">
+                        up {backtestReport.jodiMovement.better} / down {backtestReport.jodiMovement.worse} / same {backtestReport.jodiMovement.same}
+                      </span>
+                    </div>
+                  </>
+                )}
 
                 <div className="stat-divider" />
                 <h4 className="stat-section-title">Top Open Panels</h4>
