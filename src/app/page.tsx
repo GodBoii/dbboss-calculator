@@ -137,9 +137,11 @@ export default function DBBossApp() {
 function CalculatorSection() {
   const [mode, setMode] = useState<CalcMode>("SP");
   const [selectedNumbers, setSelectedNumbers] = useState<number[]>([]);
+  const [selectedPanelDigits, setSelectedPanelDigits] = useState<number[]>([]);
   const [common1, setCommon1] = useState("");
   const [common2, setCommon2] = useState("");
   const [isCopied, setIsCopied] = useState(false);
+  const [isSkippedCopied, setIsSkippedCopied] = useState(false);
   const [filtersExpanded, setFiltersExpanded] = useState(false);
 
   const haptic = (ms = 8) => {
@@ -147,11 +149,17 @@ function CalculatorSection() {
   };
 
   const multiPanelMode = isMultiPanelMode(mode);
-  const selectorLabel = multiPanelMode ? "Numbers" : "Sutta";
 
   const toggleNumber = (n: number) => {
     haptic();
     setSelectedNumbers((prev) =>
+      prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n]
+    );
+  };
+
+  const togglePanelDigit = (n: number) => {
+    haptic();
+    setSelectedPanelDigits((prev) =>
       prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n]
     );
   };
@@ -163,15 +171,17 @@ function CalculatorSection() {
     const common2Digits = common2.match(/\d/g) ?? [];
 
     const matchesCriteria = (option: PanelOption) => {
+      if (selectedNumbers.length > 0 && !selectedNumbers.includes(option.sutta)) {
+        return false;
+      }
+
       if (multiPanelMode) {
         if (
-          selectedNumbers.length > 0 &&
-          !option.digits.every((digit) => selectedNumbers.includes(digit))
+          selectedPanelDigits.length > 0 &&
+          !option.digits.every((digit) => selectedPanelDigits.includes(digit))
         ) {
           return false;
         }
-      } else if (selectedNumbers.length > 0 && !selectedNumbers.includes(option.sutta)) {
-        return false;
       }
 
       if (common1Digits.length > 0 && !common1Digits.some((digit) => option.panel.includes(digit))) {
@@ -196,7 +206,7 @@ function CalculatorSection() {
     }
 
     return { results: matched, skippedResults: skipped };
-  }, [mode, multiPanelMode, selectedNumbers, common1, common2]);
+  }, [mode, multiPanelMode, selectedNumbers, selectedPanelDigits, common1, common2]);
 
   const handleCopy = async () => {
     if (!results.length) return;
@@ -204,6 +214,14 @@ function CalculatorSection() {
     await navigator.clipboard.writeText(results.join("-"));
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
+  };
+
+  const handleCopySkipped = async () => {
+    if (!skippedResults.length) return;
+    haptic(12);
+    await navigator.clipboard.writeText(skippedResults.join("-"));
+    setIsSkippedCopied(true);
+    setTimeout(() => setIsSkippedCopied(false), 2000);
   };
 
   return (
@@ -229,7 +247,7 @@ function CalculatorSection() {
 
         {/* Sutta grid */}
         <div className="calc-section-row">
-          <span className="calc-section-label" style={{ margin: 0 }}>{selectorLabel}</span>
+          <span className="calc-section-label" style={{ margin: 0 }}>Sutta</span>
           {selectedNumbers.length > 0 && (
             <button className="calc-clear-btn" onClick={() => { haptic(); setSelectedNumbers([]); }}>
               Clear
@@ -247,6 +265,32 @@ function CalculatorSection() {
             </button>
           ))}
         </div>
+
+        {multiPanelMode && (
+          <>
+            <div className="calc-divider" />
+
+            <div className="calc-section-row">
+              <span className="calc-section-label" style={{ margin: 0 }}>{mode}</span>
+              {selectedPanelDigits.length > 0 && (
+                <button className="calc-clear-btn" onClick={() => { haptic(); setSelectedPanelDigits([]); }}>
+                  Clear
+                </button>
+              )}
+            </div>
+            <div className="calc-sutta-grid">
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+                <button
+                  key={n}
+                  className={`calc-sutta-btn ${selectedPanelDigits.includes(n) ? "calc-sutta-btn--active" : ""}`}
+                  onClick={() => togglePanelDigit(n)}
+                >
+                  {n}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
 
         <div className="calc-divider" />
 
@@ -274,21 +318,23 @@ function CalculatorSection() {
             <div className="calc-input-group">
               <label className="calc-input-label">Common 1</label>
               <input
-                type="tel"
+                type="text"
+                inputMode="numeric"
                 className="calc-input"
                 placeholder="e.g. 1 3 7"
                 value={common1}
-                onChange={(e) => setCommon1(e.target.value.replace(/\D/g, ""))}
+                onChange={(e) => setCommon1(e.target.value.replace(/[^\d\s,-]/g, ""))}
               />
             </div>
             <div className="calc-input-group">
               <label className="calc-input-label">Common 2</label>
               <input
-                type="tel"
+                type="text"
+                inputMode="numeric"
                 className="calc-input"
                 placeholder="e.g. 2 5 9"
                 value={common2}
-                onChange={(e) => setCommon2(e.target.value.replace(/\D/g, ""))}
+                onChange={(e) => setCommon2(e.target.value.replace(/[^\d\s,-]/g, ""))}
               />
             </div>
             {(common1 || common2) && (
@@ -354,6 +400,23 @@ function CalculatorSection() {
               {skippedResults.length}
             </div>
           </div>
+          <button
+            className={`calc-copy-btn ${isSkippedCopied ? "calc-copy-btn--done" : ""} ${!skippedResults.length ? "calc-copy-btn--disabled" : ""}`}
+            onClick={handleCopySkipped}
+            disabled={!skippedResults.length}
+          >
+            {isSkippedCopied ? (
+              <>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#34D399" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                Copied!
+              </>
+            ) : (
+              <>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="1" width="9" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><path d="M1 4.5v7A1.5 1.5 0 002.5 13h7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                Copy All
+              </>
+            )}
+          </button>
         </div>
 
         {skippedResults.length > 0 ? (
