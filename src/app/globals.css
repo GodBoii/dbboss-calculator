@@ -1427,22 +1427,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .calc-mode-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
   gap: 8px;
 }
 .calc-mode-btn {
-  padding: 12px;
+  min-height: 44px;
+  padding: 10px 6px;
   border-radius: 13px;
   border: 1px solid rgba(255,255,255,0.1);
   background: rgba(255,255,255,0.04);
   color: rgba(255,255,255,0.5);
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.2s var(--ease-spring);
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  white-space: nowrap;
 }
 .calc-mode-btn--active {
   background: var(--gold-dim);
@@ -1567,6 +1569,11 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 36px;
   text-align: center;
 }
+.calc-results-count-badge--muted {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.45);
+}
 .calc-copy-btn {
   display: flex;
   align-items: center;
@@ -1607,6 +1614,17 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 9px;
   min-width: 46px;
   text-align: center;
+}
+.calc-skipped-card {
+  background: rgba(255,255,255,0.025);
+}
+.calc-results-grid--skipped {
+  max-height: 220px;
+}
+.calc-result-chip--skipped {
+  background: rgba(255,255,255,0.035);
+  border-color: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.45);
 }
 .calc-results-empty {
   display: flex;
@@ -1657,4 +1675,3 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--night-color);
   box-shadow: 0 0 20px rgba(129,140,248,0.1);
 }
-

@@ -15,6 +15,53 @@ const AnalysisSection = dynamic(() => import("@/components/AnalysisSection"), {
 });
 
 type Tab = "calculator" | "analysis";
+type CalcMode = "SP" | "DP" | "TP" | "MPSP" | "MPDP";
+type PanelKind = "SP" | "DP" | "TP";
+
+const CALC_MODES: CalcMode[] = ["SP", "DP", "TP", "MPSP", "MPDP"];
+const PANEL_DIGIT_ORDER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+interface PanelOption {
+  panel: string;
+  digits: number[];
+  sutta: number;
+  kind: PanelKind;
+}
+
+const getPanelKind = (digits: number[]): PanelKind => {
+  const uniqueCount = new Set(digits).size;
+  if (uniqueCount === 3) return "SP";
+  if (uniqueCount === 2) return "DP";
+  return "TP";
+};
+
+const ALL_PANEL_OPTIONS: PanelOption[] = (() => {
+  const panels: PanelOption[] = [];
+
+  for (let i = 0; i < 10; i++) {
+    for (let j = i; j < 10; j++) {
+      for (let k = j; k < 10; k++) {
+        const digits = [PANEL_DIGIT_ORDER[i], PANEL_DIGIT_ORDER[j], PANEL_DIGIT_ORDER[k]];
+        panels.push({
+          panel: digits.join(""),
+          digits,
+          sutta: digits.reduce((sum, digit) => sum + digit, 0) % 10,
+          kind: getPanelKind(digits),
+        });
+      }
+    }
+  }
+
+  return panels;
+})();
+
+const getBaseKindForMode = (mode: CalcMode): PanelKind => {
+  if (mode === "MPSP") return "SP";
+  if (mode === "MPDP") return "DP";
+  return mode;
+};
+
+const isMultiPanelMode = (mode: CalcMode) => mode === "MPSP" || mode === "MPDP";
 
 export default function DBBossApp() {
   const [activeTab, setActiveTab] = useState<Tab>("calculator");
@@ -88,8 +135,8 @@ export default function DBBossApp() {
 
 // ─── Calculator Section ───────────────────────────────────────────────────────
 function CalculatorSection() {
-  const [mode, setMode] = useState<"SP" | "DP" | "TP">("SP");
-  const [selectedSuttas, setSelectedSuttas] = useState<number[]>([]);
+  const [mode, setMode] = useState<CalcMode>("SP");
+  const [selectedNumbers, setSelectedNumbers] = useState<number[]>([]);
   const [common1, setCommon1] = useState("");
   const [common2, setCommon2] = useState("");
   const [isCopied, setIsCopied] = useState(false);
@@ -99,48 +146,57 @@ function CalculatorSection() {
     if (typeof navigator !== "undefined" && "vibrate" in navigator) navigator.vibrate(ms);
   };
 
-  const toggleSutta = (s: number) => {
+  const multiPanelMode = isMultiPanelMode(mode);
+  const selectorLabel = multiPanelMode ? "Numbers" : "Sutta";
+
+  const toggleNumber = (n: number) => {
     haptic();
-    setSelectedSuttas((prev) =>
-      prev.includes(s) ? prev.filter((x) => x !== s) : [...prev, s]
+    setSelectedNumbers((prev) =>
+      prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n]
     );
   };
 
-  const results = useMemo(() => {
-    let res: string[] = [];
-    const orderedDigits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  const { results, skippedResults } = useMemo(() => {
+    const baseKind = getBaseKindForMode(mode);
+    const basePanels = ALL_PANEL_OPTIONS.filter((option) => option.kind === baseKind);
+    const common1Digits = common1.match(/\d/g) ?? [];
+    const common2Digits = common2.match(/\d/g) ?? [];
 
-    for (let i = 0; i < 10; i++) {
-      for (let j = i; j < 10; j++) {
-        for (let k = j; k < 10; k++) {
-          const d1 = orderedDigits[i];
-          const d2 = orderedDigits[j];
-          const d3 = orderedDigits[k];
-          let sameCount = 0;
-          if (d1 === d2) sameCount++;
-          if (d2 === d3) sameCount++;
-          if (d1 === d3) sameCount++;
-          if (mode === "SP" && sameCount !== 0) continue;
-          if (mode === "DP" && sameCount !== 1) continue;
-          if (mode === "TP" && sameCount !== 3) continue;
-          const sum = (d1 + d2 + d3) % 10;
-          if (selectedSuttas.length > 0 && !selectedSuttas.includes(sum)) continue;
-          res.push(`${d1}${d2}${d3}`);
+    const matchesCriteria = (option: PanelOption) => {
+      if (multiPanelMode) {
+        if (
+          selectedNumbers.length > 0 &&
+          !option.digits.every((digit) => selectedNumbers.includes(digit))
+        ) {
+          return false;
         }
+      } else if (selectedNumbers.length > 0 && !selectedNumbers.includes(option.sutta)) {
+        return false;
+      }
+
+      if (common1Digits.length > 0 && !common1Digits.some((digit) => option.panel.includes(digit))) {
+        return false;
+      }
+      if (common2Digits.length > 0 && !common2Digits.some((digit) => option.panel.includes(digit))) {
+        return false;
+      }
+
+      return true;
+    };
+
+    const matched: string[] = [];
+    const skipped: string[] = [];
+
+    for (const option of basePanels) {
+      if (matchesCriteria(option)) {
+        matched.push(option.panel);
+      } else {
+        skipped.push(option.panel);
       }
     }
 
-    if (common1.trim()) {
-      const digits = common1.match(/\d/g);
-      if (digits) res = res.filter((p) => digits.some((d) => p.includes(d)));
-    }
-    if (common2.trim()) {
-      const digits = common2.match(/\d/g);
-      if (digits) res = res.filter((p) => digits.some((d) => p.includes(d)));
-    }
-
-    return res;
-  }, [mode, selectedSuttas, common1, common2]);
+    return { results: matched, skippedResults: skipped };
+  }, [mode, multiPanelMode, selectedNumbers, common1, common2]);
 
   const handleCopy = async () => {
     if (!results.length) return;
@@ -150,8 +206,6 @@ function CalculatorSection() {
     setTimeout(() => setIsCopied(false), 2000);
   };
 
-  const hasFilters = selectedSuttas.length > 0 || common1 || common2;
-
   return (
     <div className="calc-page">
       {/* ── Configure Card ───────────────────────────────────── */}
@@ -159,7 +213,7 @@ function CalculatorSection() {
         {/* Mode segment */}
         <div className="calc-section-label">Mode</div>
         <div className="calc-mode-strip">
-          {(["SP", "DP", "TP"] as const).map((m) => (
+          {CALC_MODES.map((m) => (
             <button
               key={m}
               id={`mode-${m.toLowerCase()}`}
@@ -175,9 +229,9 @@ function CalculatorSection() {
 
         {/* Sutta grid */}
         <div className="calc-section-row">
-          <span className="calc-section-label" style={{ margin: 0 }}>Sutta</span>
-          {selectedSuttas.length > 0 && (
-            <button className="calc-clear-btn" onClick={() => { haptic(); setSelectedSuttas([]); }}>
+          <span className="calc-section-label" style={{ margin: 0 }}>{selectorLabel}</span>
+          {selectedNumbers.length > 0 && (
+            <button className="calc-clear-btn" onClick={() => { haptic(); setSelectedNumbers([]); }}>
               Clear
             </button>
           )}
@@ -186,8 +240,8 @@ function CalculatorSection() {
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
             <button
               key={n}
-              className={`calc-sutta-btn ${selectedSuttas.includes(n) ? "calc-sutta-btn--active" : ""}`}
-              onClick={() => toggleSutta(n)}
+              className={`calc-sutta-btn ${selectedNumbers.includes(n) ? "calc-sutta-btn--active" : ""}`}
+              onClick={() => toggleNumber(n)}
             >
               {n}
             </button>
@@ -288,6 +342,30 @@ function CalculatorSection() {
           <div className="calc-results-empty">
             <span>∅</span>
             <p>No panels match the selected criteria</p>
+          </div>
+        )}
+      </div>
+
+      <div className="card calc-results-card calc-skipped-card">
+        <div className="calc-results-header">
+          <div className="calc-results-title-row">
+            <h2 className="calc-results-title">Skipped Results</h2>
+            <div className="calc-results-count-badge calc-results-count-badge--muted">
+              {skippedResults.length}
+            </div>
+          </div>
+        </div>
+
+        {skippedResults.length > 0 ? (
+          <div className="calc-results-grid calc-results-grid--skipped">
+            {skippedResults.map((r) => (
+              <span key={r} className="calc-result-chip calc-result-chip--skipped">{r}</span>
+            ))}
+          </div>
+        ) : (
+          <div className="calc-results-empty">
+            <span>0</span>
+            <p>No skipped panels for the current criteria</p>
           </div>
         )}
       </div>
