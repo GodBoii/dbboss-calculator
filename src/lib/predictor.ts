@@ -51,6 +51,8 @@ const MEDIUM_VOL_SET = new Set([
 
 export interface PredictionResult {
   market: string
+  analysisDateISO: string
+  analysisDayName: string
   volumeTier: 'High' | 'Medium' | 'Low'
   temporalMode: 'Payday' | 'Month-End' | 'Normal'
   temporalMultiplier: number
@@ -60,8 +62,12 @@ export interface PredictionResult {
   honeyPotAlert: boolean
   recordsSinceLastSequence: number
   averageDroughtLength: number
+  combinedSuttaDroughts: Record<string, number>
+  openSuttaDroughts: Record<string, number>
+  closeSuttaDroughts: Record<string, number>
   suttaDroughts: Record<string, number>
   saturatedSuttas: string[]
+  suttaSignalCounts: Record<SuttaSignalState, number>
   topPicks: PanelPick[]
   openPicks: PanelPick[]
   closePicks: PanelPick[]
@@ -92,12 +98,31 @@ export interface PanelPick {
 export interface JodiAnalysis {
   openSutta: number
   openPanel: string | null
-  jodiFrequencies: Array<{ jodi: string; closeSutta: number; count: number; percentage: number }>
+  jodiFrequencies: Array<{
+    jodi: string
+    closeSutta: number
+    count: number
+    percentage: number
+    ratio: number
+    edge: 'favored' | 'avoid' | 'neutral'
+  }>
+  favoredCloseSuttas: number[]
+  avoidedCloseSuttas: number[]
   blacklistedCloseSuttas: number[]
   safeCloseSuttas: number[]
   closeSuttaPenalties: Record<number, number>
   adjustedClosePicks: PanelPick[]
   totalMatchingDraws: number
+}
+
+export type SuttaSignalState = 'fresh' | 'warming' | 'danger' | 'cooling' | 'snapback' | 'unknown'
+
+export interface SuttaSignal {
+  state: SuttaSignalState
+  label: string
+  scorePenalty: number
+  color: string
+  description: string
 }
 
 export interface MarketStats {
@@ -141,6 +166,94 @@ export function calculateSutta(panel: string): number {
 
 function countLuckyDigits(panel: string): number {
   return panel.split('').filter((d) => ['7', '8', '9'].includes(d)).length
+}
+
+export function getSuttaSignal(drought: number): SuttaSignal {
+  if (drought >= 1000) {
+    return {
+      state: 'unknown',
+      label: 'Unknown',
+      scorePenalty: 0,
+      color: '#6b7280',
+      description: 'Not enough history for this sutta.',
+    }
+  }
+  if (drought > 20) {
+    return {
+      state: 'snapback',
+      label: 'Snapback',
+      scorePenalty: -25,
+      color: '#60a5fa',
+      description: 'Extreme drought. The model treats this separately from normal danger.',
+    }
+  }
+  if (drought > 15) {
+    return {
+      state: 'cooling',
+      label: 'Cooling',
+      scorePenalty: 10,
+      color: '#fb923c',
+      description: 'Pressure may be fading, but the signal is still cautious.',
+    }
+  }
+  if (drought > 8) {
+    return {
+      state: 'danger',
+      label: 'Danger',
+      scorePenalty: drought > 12 ? 35 : 30,
+      color: '#f87171',
+      description: 'Mid-range drought. Historically this was the risky zone.',
+    }
+  }
+  if (drought > 4) {
+    return {
+      state: 'warming',
+      label: 'Warming',
+      scorePenalty: 10,
+      color: '#facc15',
+      description: 'Early pressure is building.',
+    }
+  }
+  return {
+    state: 'fresh',
+    label: 'Fresh',
+    scorePenalty: 0,
+    color: '#4ade80',
+    description: 'Recently seen. No drought pressure penalty.',
+  }
+}
+
+function computeSuttaDroughts(entries: FlatEntry[]): Record<string, number> {
+  const suttaDroughts: Record<string, number> = {}
+  for (let s = 0; s <= 9; s++) suttaDroughts[String(s)] = 1000
+
+  for (let i = entries.length - 1; i >= 0; i--) {
+    const sKey = String(entries[i].sutta)
+    const drought = (entries.length - 1) - i
+    if (suttaDroughts[sKey] === 1000) {
+      suttaDroughts[sKey] = drought
+    }
+    if (Object.values(suttaDroughts).every((v) => v < 1000)) break
+  }
+
+  return suttaDroughts
+}
+
+function countSuttaSignals(droughts: Record<string, number>): Record<SuttaSignalState, number> {
+  const counts: Record<SuttaSignalState, number> = {
+    fresh: 0,
+    warming: 0,
+    danger: 0,
+    cooling: 0,
+    snapback: 0,
+    unknown: 0,
+  }
+
+  for (const drought of Object.values(droughts)) {
+    counts[getSuttaSignal(drought).state]++
+  }
+
+  return counts
 }
 
 /** Generate all 220 unique Matka panels */
@@ -262,14 +375,9 @@ function scorePanelsForPosition(
       ? 50 * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
       : 0
 
-    // --- F) Sutta saturation (RUBBER-BAND curve) ---
+    // --- F) Sutta pressure (position-specific rubber-band curve) ---
     const suttaDrought = ctx.suttaDroughts[String(panelSutta)] ?? 0
-    let saturationPenalty = 0
-    if (suttaDrought > 20) saturationPenalty = -25
-    else if (suttaDrought > 15) saturationPenalty = 10
-    else if (suttaDrought > 12) saturationPenalty = 35
-    else if (suttaDrought > 8) saturationPenalty = 30
-    else if (suttaDrought > 4) saturationPenalty = 10
+    const saturationPenalty = getSuttaSignal(suttaDrought).scorePenalty
 
     // --- G) Day-of-week boost ---
     let dayBoost = 0
@@ -384,7 +492,8 @@ export function computeStats(records: PanelRecord[]): MarketStats {
 export function analyzeMarket(
   marketName: string,
   records: PanelRecord[],
-  allMarketsRecords: Record<string, PanelRecord[]>
+  allMarketsRecords: Record<string, PanelRecord[]>,
+  analysisDate = new Date(),
 ): PredictionResult | null {
   if (records.length === 0) return null
 
@@ -402,7 +511,7 @@ export function analyzeMarket(
   const volMultiplier = VOL_MULTIPLIER[tier.toLowerCase()]
 
   // ── 2. Temporal Payday Cycle (FIXED DIRECTION) ────────────────────────────
-  const today = new Date().getDate()
+  const today = analysisDate.getDate()
   let temporalMode: 'Payday' | 'Month-End' | 'Normal'
   let temporalMultiplier: number
 
@@ -441,20 +550,12 @@ export function analyzeMarket(
   const honeyPotAlert = recordsSinceLastSequence > Math.max(30, averageDroughtLength * 1.4)
 
   // ── 4. Sutta Saturation ───────────────────────────────────────────────────
-  const suttaDroughts: Record<string, number> = {}
-  for (let s = 0; s <= 9; s++) suttaDroughts[String(s)] = 1000
+  const combinedSuttaDroughts = computeSuttaDroughts(allPanelEntries)
+  const openSuttaDroughts = computeSuttaDroughts(openEntries)
+  const closeSuttaDroughts = computeSuttaDroughts(closeEntries)
 
-  for (let i = allPanelEntries.length - 1; i >= 0; i--) {
-    const sKey = String(allPanelEntries[i].sutta)
-    const drought = (allPanelEntries.length - 1) - i
-    if (suttaDroughts[sKey] === 1000) {
-      suttaDroughts[sKey] = drought
-    }
-    if (Object.values(suttaDroughts).every((v) => v < 1000)) break
-  }
-
-  const saturatedSuttas = Object.entries(suttaDroughts)
-    .filter(([, d]) => d > 8)
+  const saturatedSuttas = Object.entries(closeSuttaDroughts)
+    .filter(([, d]) => getSuttaSignal(d).state === 'danger')
     .map(([s]) => s)
 
   // ── 5. Liquidity Flow Correlation ─────────────────────────────────────────
@@ -479,26 +580,27 @@ export function analyzeMarket(
   }
 
   // ── 6. Build scoring context ──────────────────────────────────────────────
-  const todayDayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()]
+  const todayDayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][analysisDate.getDay()]
 
-  const ctx: ScoringContext = {
+  const baseCtx = {
     honeyPotAlert,
     volMultiplier,
     temporalMultiplier,
     liquidityMultiplier,
-    suttaDroughts,
     todayDayName,
   }
 
   // ── 7. Score panels separately for Open and Close ─────────────────────────
-  const openPicks = scorePanelsForPosition(openEntries, ctx)
-  const closePicks = scorePanelsForPosition(closeEntries, ctx)
+  const openPicks = scorePanelsForPosition(openEntries, { ...baseCtx, suttaDroughts: openSuttaDroughts })
+  const closePicks = scorePanelsForPosition(closeEntries, { ...baseCtx, suttaDroughts: closeSuttaDroughts })
 
   // Combined picks (using all entries, for backward compat)
-  const topPicks = scorePanelsForPosition(allPanelEntries, ctx)
+  const topPicks = scorePanelsForPosition(allPanelEntries, { ...baseCtx, suttaDroughts: combinedSuttaDroughts })
 
   return {
     market: marketName,
+    analysisDateISO: analysisDate.toISOString(),
+    analysisDayName: todayDayName,
     volumeTier: tier,
     temporalMode,
     temporalMultiplier,
@@ -508,8 +610,12 @@ export function analyzeMarket(
     honeyPotAlert,
     recordsSinceLastSequence,
     averageDroughtLength: Math.round(averageDroughtLength * 10) / 10,
-    suttaDroughts,
+    combinedSuttaDroughts,
+    openSuttaDroughts,
+    closeSuttaDroughts,
+    suttaDroughts: closeSuttaDroughts,
     saturatedSuttas,
+    suttaSignalCounts: countSuttaSignals(closeSuttaDroughts),
     topPicks: topPicks.slice(0, 30),
     openPicks: openPicks.slice(0, 30),
     closePicks: closePicks.slice(0, 30),
@@ -554,6 +660,7 @@ export function computeJodiAnalysis(
 
   // 2. Build Jodi frequency table
   const avgCount = totalMatches > 0 ? totalMatches / 10 : 0
+  const sampleWeight = Math.min(1, totalMatches / 220)
   const jodiFrequencies: JodiAnalysis['jodiFrequencies'] = []
 
   for (let cs = 0; cs <= 9; cs++) {
@@ -563,6 +670,8 @@ export function computeJodiAnalysis(
       closeSutta: cs,
       count,
       percentage: totalMatches > 0 ? Math.round((count / totalMatches) * 1000) / 10 : 0,
+      ratio: avgCount > 0 ? Math.round((count / avgCount) * 100) / 100 : 1,
+      edge: 'neutral',
     })
   }
   jodiFrequencies.sort((a, b) => b.count - a.count)
@@ -578,22 +687,30 @@ export function computeJodiAnalysis(
 
     if (ratio > 1.5) {
       // Very popular Jodi — operator will strongly avoid this Close Sutta
-      closeSuttaPenalties[cs] = 40
-      blacklisted.push(cs)
+      closeSuttaPenalties[cs] = -24 * sampleWeight
+      safe.push(cs)
     } else if (ratio > 1.2) {
       // Moderately popular
-      closeSuttaPenalties[cs] = 25
-      blacklisted.push(cs)
+      closeSuttaPenalties[cs] = -12 * sampleWeight
+      safe.push(cs)
     } else if (ratio < 0.6) {
       // Unpopular Jodi — low liability, SAFER for operator to drop
-      closeSuttaPenalties[cs] = -20
-      safe.push(cs)
+      closeSuttaPenalties[cs] = 24 * sampleWeight
+      blacklisted.push(cs)
     } else if (ratio < 0.8) {
-      closeSuttaPenalties[cs] = -10
-      safe.push(cs)
+      closeSuttaPenalties[cs] = 12 * sampleWeight
+      blacklisted.push(cs)
     } else {
       closeSuttaPenalties[cs] = 0
     }
+  }
+
+  for (const frequency of jodiFrequencies) {
+    frequency.edge = safe.includes(frequency.closeSutta)
+      ? 'favored'
+      : blacklisted.includes(frequency.closeSutta)
+      ? 'avoid'
+      : 'neutral'
   }
 
   // 4. Get Close-only entries and re-score with Jodi penalties
@@ -617,6 +734,8 @@ export function computeJodiAnalysis(
     openSutta,
     openPanel,
     jodiFrequencies,
+    favoredCloseSuttas: safe,
+    avoidedCloseSuttas: blacklisted,
     blacklistedCloseSuttas: blacklisted,
     safeCloseSuttas: safe,
     closeSuttaPenalties,
@@ -636,7 +755,7 @@ export function buildContextFromResult(result: PredictionResult): ScoringContext
     volMultiplier: VOL_MULTIPLIER[tier] ?? 1.0,
     temporalMultiplier: result.temporalMultiplier,
     liquidityMultiplier: result.liquidityMultiplier,
-    suttaDroughts: result.suttaDroughts,
-    todayDayName: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()],
+    suttaDroughts: result.closeSuttaDroughts,
+    todayDayName: result.analysisDayName,
   }
 }
