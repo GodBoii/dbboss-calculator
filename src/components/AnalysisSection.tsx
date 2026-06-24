@@ -240,7 +240,7 @@ export default function AnalysisSection() {
   const isNight = session === "night"
   const displayedSuttaDroughts = result
     ? picksSubTab === "open"
-      ? result.openSuttaDroughts
+      ? result.combinedSuttaDroughts
       : result.closeSuttaDroughts
     : null
 
