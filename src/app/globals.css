@@ -462,6 +462,75 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255,255,255,0.1);
 }
 
+.confidence-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.confidence-badge {
+  min-width: 0;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.035);
+}
+
+.confidence-badge--strong {
+  border-color: rgba(74,222,128,0.28);
+  background: rgba(74,222,128,0.06);
+}
+
+.confidence-badge--fair {
+  border-color: rgba(250,204,21,0.24);
+  background: rgba(250,204,21,0.045);
+}
+
+.confidence-badge--weak {
+  border-color: rgba(248,113,113,0.24);
+  background: rgba(248,113,113,0.045);
+}
+
+.confidence-badge-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+
+.confidence-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.92);
+}
+
+.confidence-level {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.confidence-metrics,
+.confidence-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 10px;
+  line-height: 1.25;
+  color: rgba(255,255,255,0.48);
+}
+
+.confidence-foot {
+  margin-top: 4px;
+  color: rgba(255,255,255,0.36);
+}
+
 .volume-high { color: #4ade80; }
 .temporal-payday { color: #f87171; }
 .temporal-monthend { color: #4ade80; }
@@ -735,6 +804,18 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.picks-hint-row > .picks-hint:first-child {
+  flex: 1 1 100%;
+}
+
+.picks-hint-calibration {
+  flex: 1 1 auto;
+  margin: 0;
+  color: rgba(255,255,255,0.62);
+  font-weight: 600;
 }
 
 /* Copy button */
