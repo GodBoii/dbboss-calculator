@@ -591,7 +591,9 @@ export function analyzeMarket(
   }
 
   // ── 7. Score panels separately for Open and Close ─────────────────────────
-  const openPicks = scorePanelsForPosition(openEntries, { ...baseCtx, suttaDroughts: openSuttaDroughts })
+  // Open performed better in replay when it used the broader market pressure map.
+  // Keep open panel recency open-only, but score sutta pressure from combined history.
+  const openPicks = scorePanelsForPosition(openEntries, { ...baseCtx, suttaDroughts: combinedSuttaDroughts })
   const closePicks = scorePanelsForPosition(closeEntries, { ...baseCtx, suttaDroughts: closeSuttaDroughts })
 
   // Combined picks (using all entries, for backward compat)
