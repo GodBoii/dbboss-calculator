@@ -11,6 +11,8 @@ import {
   type PredictionResult,
   type JodiAnalysis,
   type PanelPick,
+  type ModelCalibration,
+  type JodiCalibration,
 } from "@/lib/predictor"
 import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
 import {
@@ -382,6 +384,12 @@ export default function AnalysisSection() {
             </div>
           </div>
 
+          <div className="confidence-strip glass-panel">
+            <ConfidenceBadge label="Open" model={result.calibration.open} />
+            <ConfidenceBadge label="Close" model={result.calibration.close} />
+            <ConfidenceBadge label="Jodi" model={result.calibration.jodi} />
+          </div>
+
           {/* ── HONEY-POT ALERT ──────────────────────────────────────────── */}
           {result.honeyPotAlert && (
             <div className="honeypot-alert glass-panel">
@@ -501,7 +509,7 @@ export default function AnalysisSection() {
               <div>
                 <h3 className="section-title">Sutta Signal Map</h3>
                 <p className="section-subtitle">
-                  Red = danger, blue = extreme snapback, green = fresh
+                  Red = heated risk, blue = extreme snapback, green = fresh
                 </p>
               </div>
             </div>
@@ -652,6 +660,9 @@ export default function AnalysisSection() {
                       <p className="picks-hint" style={{ margin: 0 }}>
                         Open panel predictions — scored against Open-position history only
                       </p>
+                      <p className="picks-hint picks-hint-calibration">
+                        Panel {result.calibration.open.panel30.toFixed(1)}% / Sutta {result.calibration.open.sutta30.toFixed(1)}%
+                      </p>
                       <CopyButton
                         label="Copy Open"
                         isCopied={copyingKey === "open"}
@@ -674,6 +685,9 @@ export default function AnalysisSection() {
                       <p className="picks-hint" style={{ margin: 0 }}>
                         Close panel predictions — scored against Close-position history only
                       </p>
+                      <p className="picks-hint picks-hint-calibration">
+                        Panel {result.calibration.close.panel30.toFixed(1)}% / Sutta {result.calibration.close.sutta30.toFixed(1)}%
+                      </p>
                       <CopyButton
                         label="Copy Close"
                         isCopied={copyingKey === "close"}
@@ -694,6 +708,9 @@ export default function AnalysisSection() {
                   <>
                     <p className="picks-hint">
                       Close predictions adjusted by empirical Open-to-Close history for Open Sutta = <strong>{jodiResult.openSutta}</strong>
+                    </p>
+                    <p className="picks-hint picks-hint-calibration">
+                      Panel {jodiResult.calibration.panel30.toFixed(1)}% / Sutta {jodiResult.calibration.sutta30.toFixed(1)}% / Strength {(jodiResult.jodiStrength * 100).toFixed(0)}%
                     </p>
 
                     {/* Jodi frequency chart */}
@@ -1031,6 +1048,31 @@ export default function AnalysisSection() {
 // ─── Format picks as copyable text ──────────────────────────────────────────────
 function formatPicksForCopy(picks: PanelPick[], _header: string): string {
   return picks.map((p) => p.panel).join("-")
+}
+
+function levelLabel(level: ModelCalibration["level"]) {
+  if (level === "strong") return "Strong"
+  if (level === "fair") return "Fair"
+  return "Weak"
+}
+
+function ConfidenceBadge({ label, model }: { label: string; model: ModelCalibration | JodiCalibration }) {
+  const jodiStrength = "strength" in model ? model.strength : null
+  return (
+    <div className={`confidence-badge confidence-badge--${model.level}`}>
+      <div className="confidence-badge-head">
+        <span className="confidence-label">{label}</span>
+        <span className="confidence-level">{levelLabel(model.level)}</span>
+      </div>
+      <div className="confidence-metrics">
+        <span>Panel {model.panel30.toFixed(1)}%</span>
+        <span>Sutta {model.sutta30.toFixed(1)}%</span>
+      </div>
+      {jodiStrength !== null && (
+        <div className="confidence-foot">Jodi strength {(jodiStrength * 100).toFixed(0)}%</div>
+      )}
+    </div>
+  )
 }
 
 // ─── CopyButton Component ────────────────────────────────────────────────────

@@ -53,6 +53,7 @@ export interface PredictionResult {
   market: string
   analysisDateISO: string
   analysisDayName: string
+  calibration: MarketCalibration
   volumeTier: 'High' | 'Medium' | 'Low'
   temporalMode: 'Payday' | 'Month-End' | 'Normal'
   temporalMultiplier: number
@@ -98,6 +99,8 @@ export interface PanelPick {
 export interface JodiAnalysis {
   openSutta: number
   openPanel: string | null
+  calibration: MarketCalibration['jodi']
+  jodiStrength: number
   jodiFrequencies: Array<{
     jodi: string
     closeSutta: number
@@ -137,6 +140,143 @@ export interface MarketStats {
   topClosePanels: Array<{ panel: string; count: number }>
   topJodis: Array<{ jodi: string; count: number }>
   suttaDistribution: Record<string, number>
+}
+
+export type CalibrationLevel = 'weak' | 'fair' | 'strong'
+
+export interface ModelCalibration {
+  panel30: number
+  sutta30: number
+  level: CalibrationLevel
+  suttaLevel: CalibrationLevel
+  scoreBias: number
+  recencyScale: number
+  suttaPressureScale: number
+  popularPenaltyScale: number
+}
+
+export interface JodiCalibration extends ModelCalibration {
+  strength: number
+}
+
+export interface MarketCalibration {
+  open: ModelCalibration
+  close: ModelCalibration
+  jodi: JodiCalibration
+}
+
+function levelFromPanel30(panel30: number): CalibrationLevel {
+  if (panel30 >= 18) return 'strong'
+  if (panel30 >= 14.5) return 'fair'
+  return 'weak'
+}
+
+function levelFromSutta30(sutta30: number): CalibrationLevel {
+  if (sutta30 >= 74) return 'strong'
+  if (sutta30 >= 68) return 'fair'
+  return 'weak'
+}
+
+function makeModelCalibration(
+  panel30: number,
+  sutta30: number,
+  overrides: Partial<Pick<ModelCalibration, 'scoreBias' | 'recencyScale' | 'suttaPressureScale' | 'popularPenaltyScale'>> = {},
+): ModelCalibration {
+  return {
+    panel30,
+    sutta30,
+    level: levelFromPanel30(panel30),
+    suttaLevel: levelFromSutta30(sutta30),
+    scoreBias: overrides.scoreBias ?? 0,
+    recencyScale: overrides.recencyScale ?? 1,
+    suttaPressureScale: overrides.suttaPressureScale ?? 1,
+    popularPenaltyScale: overrides.popularPenaltyScale ?? 1,
+  }
+}
+
+function makeJodiCalibration(
+  panel30: number,
+  sutta30: number,
+  strength: number,
+  overrides: Partial<Pick<ModelCalibration, 'scoreBias' | 'recencyScale' | 'suttaPressureScale' | 'popularPenaltyScale'>> = {},
+): JodiCalibration {
+  return {
+    ...makeModelCalibration(panel30, sutta30, overrides),
+    strength,
+  }
+}
+
+const DEFAULT_MARKET_CALIBRATION: MarketCalibration = {
+  open: makeModelCalibration(14.6, 71.5),
+  close: makeModelCalibration(15.0, 72.1),
+  jodi: makeJodiCalibration(16.1, 67.1, 0.8),
+}
+
+const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
+  Sridevi: {
+    open: makeModelCalibration(12.4, 69.5, { recencyScale: 0.96, suttaPressureScale: 0.95 }),
+    close: makeModelCalibration(12.4, 75.7, { recencyScale: 0.94, suttaPressureScale: 1.08 }),
+    jodi: makeJodiCalibration(14.1, 70.6, 0.55),
+  },
+  'Time Bazar': {
+    open: makeModelCalibration(16.6, 70.9, { recencyScale: 1.03 }),
+    close: makeModelCalibration(16.6, 66.9, { recencyScale: 1.04, suttaPressureScale: 0.92 }),
+    jodi: makeJodiCalibration(16.6, 66.2, 0.85),
+  },
+  'Madhur Day': {
+    open: makeModelCalibration(15.3, 75.7, { suttaPressureScale: 1.05 }),
+    close: makeModelCalibration(15.8, 75.7, { suttaPressureScale: 1.05 }),
+    jodi: makeJodiCalibration(18.1, 67.2, 1.0),
+  },
+  'Milan Day': {
+    open: makeModelCalibration(16.6, 63.6, { recencyScale: 1.04, suttaPressureScale: 0.86 }),
+    close: makeModelCalibration(13.9, 69.5, { recencyScale: 0.96, suttaPressureScale: 0.98 }),
+    jodi: makeJodiCalibration(14.6, 64.9, 0.7),
+  },
+  'Rajdhani Day': {
+    open: makeModelCalibration(17.2, 72.8, { recencyScale: 1.04 }),
+    close: makeModelCalibration(13.2, 70.9, { recencyScale: 0.94, suttaPressureScale: 1.02 }),
+    jodi: makeJodiCalibration(11.9, 70.9, 0.35),
+  },
+  Kalyan: {
+    open: makeModelCalibration(12.6, 66.2, { recencyScale: 0.96, suttaPressureScale: 0.92 }),
+    close: makeModelCalibration(14.6, 68.9),
+    jodi: makeJodiCalibration(14.6, 65.6, 0.65),
+  },
+  'Sridevi Night': {
+    open: makeModelCalibration(17.5, 72.9, { recencyScale: 1.04 }),
+    close: makeModelCalibration(15.8, 72.9),
+    jodi: makeJodiCalibration(15.8, 61.0, 0.55),
+  },
+  'Madhur Night': {
+    open: makeModelCalibration(9.9, 73.7, { recencyScale: 0.9, suttaPressureScale: 1.06 }),
+    close: makeModelCalibration(15.1, 80.9, { suttaPressureScale: 1.12 }),
+    jodi: makeJodiCalibration(17.1, 71.7, 1.05),
+  },
+  'Milan Night': {
+    open: makeModelCalibration(10.7, 76.0, { recencyScale: 0.9, suttaPressureScale: 1.12 }),
+    close: makeModelCalibration(22.7, 71.3, { recencyScale: 1.1 }),
+    jodi: makeJodiCalibration(23.3, 65.3, 1.15),
+  },
+  'Kalyan Night': {
+    open: makeModelCalibration(13.6, 72.8, { recencyScale: 0.98 }),
+    close: makeModelCalibration(9.6, 71.2, { recencyScale: 0.9, suttaPressureScale: 1.04 }),
+    jodi: makeJodiCalibration(12.0, 70.4, 0.45),
+  },
+  'Rajdhani Night': {
+    open: makeModelCalibration(17.6, 73.6, { recencyScale: 1.04 }),
+    close: makeModelCalibration(15.2, 69.6),
+    jodi: makeJodiCalibration(17.6, 69.6, 0.95),
+  },
+  'Main Bazar': {
+    open: makeModelCalibration(15.3, 69.4),
+    close: makeModelCalibration(14.5, 69.4),
+    jodi: makeJodiCalibration(17.7, 62.9, 0.85),
+  },
+}
+
+export function getMarketCalibration(marketName: string): MarketCalibration {
+  return MARKET_CALIBRATIONS[marketName] ?? DEFAULT_MARKET_CALIBRATION
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -304,6 +444,7 @@ interface ScoringContext {
   liquidityMultiplier: number
   suttaDroughts: Record<string, number>
   todayDayName: string
+  calibration: ModelCalibration
 }
 
 /**
@@ -416,7 +557,7 @@ function scorePanelsForPosition(
         seqPenalty: Math.round(seqPenalty * 100) / 100,
         luckyPenalty: Math.round(luckyPenalty * 100) / 100,
         triplePenalty: Math.round(triplePenalty * 100) / 100,
-        saturationPenalty,
+        saturationPenalty: Math.round(saturationPenalty * 100) / 100,
         cooldownPenalty,
         dayBoost: Math.round(dayBoost * 100) / 100,
         jodiPenalty: Math.round(jodiPenalty * 100) / 100,
@@ -498,6 +639,7 @@ export function analyzeMarket(
   if (records.length === 0) return null
 
   const stats = computeStats(records)
+  const calibration = getMarketCalibration(marketName)
   const allPanelEntries = flattenRecords(records)
   if (allPanelEntries.length === 0) return null
 
@@ -593,16 +735,29 @@ export function analyzeMarket(
   // ── 7. Score panels separately for Open and Close ─────────────────────────
   // Open performed better in replay when it used the broader market pressure map.
   // Keep open panel recency open-only, but score sutta pressure from combined history.
-  const openPicks = scorePanelsForPosition(openEntries, { ...baseCtx, suttaDroughts: combinedSuttaDroughts })
-  const closePicks = scorePanelsForPosition(closeEntries, { ...baseCtx, suttaDroughts: closeSuttaDroughts })
+  const openPicks = scorePanelsForPosition(openEntries, {
+    ...baseCtx,
+    suttaDroughts: combinedSuttaDroughts,
+    calibration: calibration.open,
+  })
+  const closePicks = scorePanelsForPosition(closeEntries, {
+    ...baseCtx,
+    suttaDroughts: closeSuttaDroughts,
+    calibration: calibration.close,
+  })
 
   // Combined picks (using all entries, for backward compat)
-  const topPicks = scorePanelsForPosition(allPanelEntries, { ...baseCtx, suttaDroughts: combinedSuttaDroughts })
+  const topPicks = scorePanelsForPosition(allPanelEntries, {
+    ...baseCtx,
+    suttaDroughts: combinedSuttaDroughts,
+    calibration: calibration.open,
+  })
 
   return {
     market: marketName,
     analysisDateISO: analysisDate.toISOString(),
     analysisDayName: todayDayName,
+    calibration,
     volumeTier: tier,
     temporalMode,
     temporalMultiplier,
@@ -633,14 +788,14 @@ export function analyzeMarket(
  * Real-time Close prediction based on known Open result.
  *
  * After the Open draw (e.g., 3:45 PM for Kalyan), the Open Sutta is known.
- * The operator now sees all Jodi bets and will select the Close panel to
- * AVOID the highest-liability Jodis.
+ * The close model can use empirical Open-to-Close follow-through after
+ * today's Open Sutta is known.
  *
  * This function:
  * 1. Finds historical Jodi distribution for the given Open Sutta
- * 2. Identifies which Close Suttas are most popular (= highest liability)
- * 3. Blacklists those Close Suttas (operator will avoid them)
- * 4. Re-scores Close panels with Jodi-awareness penalties
+ * 2. Identifies favored and weak Close Suttas for that Open Sutta
+ * 3. Scales the adjustment by market-level Jodi reliability
+ * 4. Re-scores Close panels with Jodi-aware adjustments
  */
 export function computeJodiAnalysis(
   openSutta: number,
@@ -648,6 +803,9 @@ export function computeJodiAnalysis(
   records: PanelRecord[],
   ctx: ScoringContext,
 ): JodiAnalysis {
+  const jodiCalibration = ctx.calibration as JodiCalibration
+  const jodiStrength = jodiCalibration.strength ?? 0.8
+
   // 1. Count Close Sutta distribution when Open Sutta matches
   const closeSuttaCounts: Record<number, number> = {}
   for (let s = 0; s <= 9; s++) closeSuttaCounts[s] = 0
@@ -678,8 +836,7 @@ export function computeJodiAnalysis(
   }
   jodiFrequencies.sort((a, b) => b.count - a.count)
 
-  // 3. Compute penalty for each Close Sutta based on Jodi liability
-  // Popular Jodis = high operator liability = operator will AVOID that Close Sutta
+  // 3. Compute each Close Sutta's empirical Open-to-Close adjustment.
   const closeSuttaPenalties: Record<number, number> = {}
   const blacklisted: number[] = []
   const safe: number[] = []
@@ -688,19 +845,19 @@ export function computeJodiAnalysis(
     const ratio = avgCount > 0 ? closeSuttaCounts[cs] / avgCount : 1
 
     if (ratio > 1.5) {
-      // Very popular Jodi — operator will strongly avoid this Close Sutta
-      closeSuttaPenalties[cs] = -24 * sampleWeight
+      // Strong historical follow-through for this Close Sutta.
+      closeSuttaPenalties[cs] = -24 * sampleWeight * jodiStrength
       safe.push(cs)
     } else if (ratio > 1.2) {
-      // Moderately popular
-      closeSuttaPenalties[cs] = -12 * sampleWeight
+      // Moderate historical follow-through for this Close Sutta.
+      closeSuttaPenalties[cs] = -12 * sampleWeight * jodiStrength
       safe.push(cs)
     } else if (ratio < 0.6) {
-      // Unpopular Jodi — low liability, SAFER for operator to drop
-      closeSuttaPenalties[cs] = 24 * sampleWeight
+      // Rare historical follow-through for this Close Sutta.
+      closeSuttaPenalties[cs] = 24 * sampleWeight * jodiStrength
       blacklisted.push(cs)
     } else if (ratio < 0.8) {
-      closeSuttaPenalties[cs] = 12 * sampleWeight
+      closeSuttaPenalties[cs] = 12 * sampleWeight * jodiStrength
       blacklisted.push(cs)
     } else {
       closeSuttaPenalties[cs] = 0
@@ -735,6 +892,8 @@ export function computeJodiAnalysis(
   return {
     openSutta,
     openPanel,
+    calibration: jodiCalibration,
+    jodiStrength,
     jodiFrequencies,
     favoredCloseSuttas: safe,
     avoidedCloseSuttas: blacklisted,
@@ -759,5 +918,6 @@ export function buildContextFromResult(result: PredictionResult): ScoringContext
     liquidityMultiplier: result.liquidityMultiplier,
     suttaDroughts: result.closeSuttaDroughts,
     todayDayName: result.analysisDayName,
+    calibration: result.calibration.jodi,
   }
 }
