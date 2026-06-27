@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 
 /**
  * Thin CORS-bypass proxy for Matka panel data.
- * The browser cannot directly fetch from dpbosss.net.in due to CORS.
+ * The browser cannot directly fetch from dpbossss.boston due to CORS.
  * This serverless function (free on Vercel Hobby tier) acts as a middleman.
  *
  * GET /api/scrape?url=<encoded_market_url>&market=<market_name>
@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
     return Response.json({ error: 'Missing url parameter' }, { status: 400 })
   }
 
-  // Security: Only allow fetching from dpbosss.net.in domain
+  // Security: Only allow fetching from the trusted panel-record host.
   let parsedUrl: URL
   try {
     parsedUrl = new URL(targetUrl)
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
     return Response.json({ error: 'Invalid URL' }, { status: 400 })
   }
 
-  if (!parsedUrl.hostname.includes('dpbosss.net.in')) {
+  if (parsedUrl.hostname !== 'dpbossss.boston') {
     return Response.json({ error: 'URL not allowed' }, { status: 403 })
   }
 
@@ -102,7 +102,7 @@ function extractJodi(text: string): string | null {
 }
 
 /**
- * Parse raw HTML from dpbosss.net.in panel chart pages.
+ * Parse raw HTML from dpbossss.boston panel chart pages.
  *
  * CRITICAL STRUCTURE (confirmed by live page inspection):
  * Each table row = one week. The cells are:

@@ -278,8 +278,8 @@ def main():
     except FileNotFoundError:
         print("❌ market_urls.json not found! Using default markets...")
         market_urls = {
-            "Kalyan Morning": {"panel": "https://dpbosss.net.in/kalyan-morning-panel-chart.php"},
-            "Time Bazar": {"panel": "https://dpbosss.net.in/time-bazar-panel.php"}
+            "Kalyan": {"panel": "https://dpbossss.boston/panel-chart-record/kalyan.php"},
+            "Time Bazar": {"panel": "https://dpbossss.boston/panel-chart-record/time-bazar.php"}
         }
     
     print("🚀 Starting Advanced Matka Data Scraper")
