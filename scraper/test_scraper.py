@@ -8,13 +8,13 @@ import json
 def test_single_market():
     """Test scraping a single market"""
     
-    print("🧪 Testing scraper on Kalyan Morning market...\n")
+    print("🧪 Testing scraper on Kalyan market...\n")
     
     scraper = AdvancedMatkaScaper()
     
     # Test single market
-    test_url = "https://dpbosss.net.in/kalyan-morning-panel-chart.php"
-    test_market = "Kalyan Morning"
+    test_url = "https://dpbossss.boston/panel-chart-record/kalyan.php"
+    test_market = "Kalyan"
     
     df = scraper.scrape_panel_chart_detailed(test_url, test_market)
     
