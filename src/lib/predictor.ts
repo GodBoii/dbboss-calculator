@@ -71,6 +71,8 @@ export interface PredictionResult {
   topPicks: PanelPick[]
   openPicks: PanelPick[]
   closePicks: PanelPick[]
+  openDpPicks: PanelPick[]
+  closeDpPicks: PanelPick[]
   totalRecordsAnalysed: number
   totalDraws: number
   stats: MarketStats
@@ -114,6 +116,7 @@ export interface JodiAnalysis {
   safeCloseSuttas: number[]
   closeSuttaPenalties: Record<number, number>
   adjustedClosePicks: PanelPick[]
+  adjustedCloseDpPicks: PanelPick[]
   totalMatchingDraws: number
 }
 
@@ -292,6 +295,10 @@ export function isSequential(panel: string): boolean {
 
 export function isTriple(panel: string): boolean {
   return panel.length === 3 && panel[0] === panel[1] && panel[1] === panel[2]
+}
+
+export function isDoublePanel(panel: string): boolean {
+  return panel.length === 3 && new Set(panel.split('')).size === 2
 }
 
 export function calculateSutta(panel: string): number {
@@ -772,6 +779,8 @@ export function analyzeMarket(
     topPicks: topPicks.slice(0, 30),
     openPicks: openPicks.slice(0, 30),
     closePicks: closePicks.slice(0, 30),
+    openDpPicks: openPicks.filter((pick) => isDoublePanel(pick.panel)).slice(0, 30),
+    closeDpPicks: closePicks.filter((pick) => isDoublePanel(pick.panel)).slice(0, 30),
     totalRecordsAnalysed: allPanelEntries.length,
     totalDraws: records.length,
     stats,
@@ -897,6 +906,7 @@ export function computeJodiAnalysis(
     safeCloseSuttas: safe,
     closeSuttaPenalties,
     adjustedClosePicks: adjustedPicks.slice(0, 30),
+    adjustedCloseDpPicks: adjustedPicks.filter((pick) => isDoublePanel(pick.panel)).slice(0, 30),
     totalMatchingDraws: totalMatches,
   }
 }

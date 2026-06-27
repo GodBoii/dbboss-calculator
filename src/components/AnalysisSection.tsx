@@ -674,6 +674,20 @@ export default function AnalysisSection() {
                       />
                     </div>
                     <PicksList picks={result.openPicks} getScoreColor={getScoreColor} />
+                    <DpFocusSection
+                      title="Open DP Focus"
+                      copyLabel="Copy Open DP"
+                      copyKey="open-dp"
+                      picks={result.openDpPicks}
+                      isCopied={copyingKey === "open-dp"}
+                      onCopy={() =>
+                        handleCopy(
+                          "open-dp",
+                          formatPicksForCopy(result.openDpPicks, `${selectedMarket} — Open DP Picks`)
+                        )
+                      }
+                      getScoreColor={getScoreColor}
+                    />
                   </>
                 )}
 
@@ -699,6 +713,20 @@ export default function AnalysisSection() {
                       />
                     </div>
                     <PicksList picks={result.closePicks} getScoreColor={getScoreColor} />
+                    <DpFocusSection
+                      title="Close DP Focus"
+                      copyLabel="Copy Close DP"
+                      copyKey="close-dp"
+                      picks={result.closeDpPicks}
+                      isCopied={copyingKey === "close-dp"}
+                      onCopy={() =>
+                        handleCopy(
+                          "close-dp",
+                          formatPicksForCopy(result.closeDpPicks, `${selectedMarket} — Close DP Picks`)
+                        )
+                      }
+                      getScoreColor={getScoreColor}
+                    />
                   </>
                 )}
 
@@ -793,6 +821,23 @@ export default function AnalysisSection() {
                       />
                     </div>
                     <PicksList picks={jodiResult.adjustedClosePicks} getScoreColor={getScoreColor} />
+                    <DpFocusSection
+                      title="Jodi Close DP Focus"
+                      copyLabel="Copy Jodi DP"
+                      copyKey="jodi-dp"
+                      picks={jodiResult.adjustedCloseDpPicks}
+                      isCopied={copyingKey === "jodi-dp"}
+                      onCopy={() =>
+                        handleCopy(
+                          "jodi-dp",
+                          formatPicksForCopy(
+                            jodiResult.adjustedCloseDpPicks,
+                            `${selectedMarket} — Jodi Close DP (Open Sutta=${jodiResult.openSutta})`
+                          )
+                        )
+                      }
+                      getScoreColor={getScoreColor}
+                    />
                   </>
                 )}
 
@@ -1088,6 +1133,40 @@ function CopyButton({ label, isCopied, onClick }: { label: string; isCopied: boo
 }
 
 // ─── Reusable Picks List Component ─────────────────────────────────────────────
+function DpFocusSection({
+  title,
+  copyLabel,
+  picks,
+  isCopied,
+  onCopy,
+  getScoreColor,
+}: {
+  title: string
+  copyLabel: string
+  copyKey: string
+  picks: PanelPick[]
+  isCopied: boolean
+  onCopy: () => void
+  getScoreColor: (s: number) => string
+}) {
+  if (!picks.length) return null
+
+  return (
+    <div style={{ marginTop: "18px" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "10px" }}>
+        <div>
+          <h4 className="stat-section-title" style={{ margin: 0 }}>{title}</h4>
+          <p className="picks-hint" style={{ margin: "4px 0 0" }}>
+            DP-only ranking from the same scoring model
+          </p>
+        </div>
+        <CopyButton label={copyLabel} isCopied={isCopied} onClick={onCopy} />
+      </div>
+      <PicksList picks={picks} getScoreColor={getScoreColor} />
+    </div>
+  )
+}
+
 function PicksList({ picks, getScoreColor }: { picks: PanelPick[]; getScoreColor: (s: number) => string }) {
   if (!picks || picks.length === 0) {
     return (
