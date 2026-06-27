@@ -25,23 +25,22 @@ import {
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
   // Day session
-  'Sridevi':        'https://dpbosss.net.in/sridevi-penal-chart-record.php',
-  'Time Bazar':     'https://dpbosss.net.in/time-bazar-panel.php',
-  'Madhur Day':     'https://dpbosss.net.in/madhur-day-panel-chart.php',
-  'Milan Day':      'https://dpbosss.net.in/milan-day-panel.php',
-  'Rajdhani Day':   'https://dpbosss.net.in/rajdhani-day-panel-chart.php',
-  'Kalyan':         'https://dpbosss.net.in/kalyan-panel-chart.php',
+  'Sridevi':        'https://dpbossss.boston/panel-chart-record/sridevi.php',
+  'Time Bazar':     'https://dpbossss.boston/panel-chart-record/time-bazar.php',
+  'Madhur Day':     'https://dpbossss.boston/panel-chart-record/madhur-day.php',
+  'Milan Day':      'https://dpbossss.boston/panel-chart-record/milan-day.php',
+  'Rajdhani Day':   'https://dpbossss.boston/panel-chart-record/rajdhani-day.php',
+  'Kalyan':         'https://dpbossss.boston/panel-chart-record/kalyan.php',
   // Night session
-  'Sridevi Night':  'https://dpbosss.net.in/sridevi-night-panel-chart.php',
-  'Madhur Night':   'https://dpbosss.net.in/madhuri-night-panel-chart.php',  // note: "madhuri" in slug
-  'Milan Night':    'https://dpbosss.net.in/milan-night-panel.php',
-  'Kalyan Night':   'https://dpbosss.net.in/kalyan-night-penal.php',
-  'Rajdhani Night': 'https://dpbosss.net.in/rajdhani-night-panel.php',
-  'Main Bazar':     'https://dpbosss.net.in/main-bazar-panel-chart.php',
+  'Sridevi Night':  'https://dpbossss.boston/panel-chart-record/sridevi-night.php',
+  'Madhur Night':   'https://dpbossss.boston/panel-chart-record/madhur-night.php',
+  'Milan Night':    'https://dpbossss.boston/panel-chart-record/milan-night.php',
+  'Rajdhani Night': 'https://dpbossss.boston/panel-chart-record/rajdhani-night.php',
+  'Main Bazar':     'https://dpbossss.boston/panel-chart-record/main-bazar.php',
 }
 
 const DAY_MARKETS   = ['Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan']
-const NIGHT_MARKETS = ['Sridevi Night', 'Madhur Night', 'Milan Night', 'Kalyan Night', 'Rajdhani Night', 'Main Bazar']
+const NIGHT_MARKETS = ['Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar']
 
 
 
@@ -59,7 +58,7 @@ export default function AnalysisSection() {
 
   const [session, setSession] = useState<Session>(defaultSession)
   const [selectedMarket, setSelectedMarket] = useState<string>(
-    defaultSession === "night" ? "Kalyan Night" : "Kalyan"
+    defaultSession === "night" ? "Main Bazar" : "Kalyan"
   )
   const [loadingState, setLoadingState] = useState<LoadingState>("idle")
   const [loadingMessage, setLoadingMessage] = useState("")
@@ -231,7 +230,7 @@ export default function AnalysisSection() {
   const switchSession = (s: Session) => {
     haptic()
     setSession(s)
-    setSelectedMarket(s === "day" ? "Kalyan" : "Kalyan Night")
+    setSelectedMarket(s === "day" ? "Kalyan" : "Main Bazar")
     setResult(null)
     setBacktestReport(null)
     setLoadingState("idle")

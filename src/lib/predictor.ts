@@ -18,7 +18,7 @@ import type { PanelRecord } from './db'
 
 export const HIGH_VOLUME_MARKETS = [
   'Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan',
-  'Sridevi Night', 'Madhur Night', 'Milan Night', 'Kalyan Night', 'Rajdhani Night', 'Main Bazar',
+  'Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar',
 ]
 
 const LIQUIDITY_FLOW_MAP: Record<string, string> = {
@@ -30,8 +30,7 @@ const LIQUIDITY_FLOW_MAP: Record<string, string> = {
   'Sridevi Night':  'Kalyan',
   'Madhur Night':   'Sridevi Night',
   'Milan Night':    'Madhur Night',
-  'Kalyan Night':   'Milan Night',
-  'Rajdhani Night': 'Kalyan Night',
+  'Rajdhani Night': 'Milan Night',
   'Main Bazar':     'Rajdhani Night',
 }
 
@@ -258,11 +257,6 @@ const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
     close: makeModelCalibration(22.7, 71.3, { recencyScale: 1.1 }),
     jodi: makeJodiCalibration(23.3, 65.3, 1.15),
   },
-  'Kalyan Night': {
-    open: makeModelCalibration(13.6, 72.8, { recencyScale: 0.98 }),
-    close: makeModelCalibration(9.6, 71.2, { recencyScale: 0.9, suttaPressureScale: 1.04 }),
-    jodi: makeJodiCalibration(12.0, 70.4, 0.45),
-  },
   'Rajdhani Night': {
     open: makeModelCalibration(17.6, 73.6, { recencyScale: 1.04 }),
     close: makeModelCalibration(15.2, 69.6),
@@ -307,6 +301,8 @@ export function calculateSutta(panel: string): number {
 function countLuckyDigits(panel: string): number {
   return panel.split('').filter((d) => ['7', '8', '9'].includes(d)).length
 }
+
+const LUCKY_DIGIT_PENALTY_POINTS = 0
 
 export function getSuttaSignal(drought: number): SuttaSignal {
   if (drought >= 1000) {
@@ -509,7 +505,7 @@ function scorePanelsForPosition(
     }
 
     // --- D) Lucky-digit penalty ---
-    const luckyPenalty = countLuckyDigits(panel) * 10 * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
+    const luckyPenalty = countLuckyDigits(panel) * LUCKY_DIGIT_PENALTY_POINTS * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
 
     // --- E) Triple penalty ---
     const triplePenalty = panelIsTriple
