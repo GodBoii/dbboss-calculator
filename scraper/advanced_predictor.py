@@ -11,19 +11,25 @@ class AdvancedPredictor:
         self.df = self.load_latest_data()
         
         # Categorize markets by assumed volume (Liquidity)
-        self.high_volume = ['Kalyan', 'Main Bombay', 'Milan Day', 'Milan Night', 'Kalyan Morning']
-        self.medium_volume = ['Rajdhani Day', 'Rajdhani Night', 'Time Bazar', 'Madhur Day', 'Madhur Morning']
+        self.high_volume = [
+            'Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan',
+            'Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar'
+        ]
+        self.medium_volume = ['Time Bazar', 'Madhur Day', 'Rajdhani Day', 'Sridevi Night', 'Madhur Night', 'Rajdhani Night']
         
         # Liquidity-Based Correlation (Chronological Flow)
         # Target Market (Where they chase) -> Source Market (Where they won/lost earlier)
         self.liquidity_flow_map = {
-            'Kalyan': 'Milan Day',           # Afternoon liquidity flows into Evening Anchor
-            'Main Bombay': 'Kalyan',         # Evening liquidity flows into Night Anchor
-            'Milan Night': 'Rajdhani Day',   # Day games flow into Night games
-            'Rajdhani Night': 'Milan Day', 
-            'Time Bazar': 'Kalyan Morning',
-            'Madhur Day': 'Madhur Morning',
-            'Supreme Night': 'Supreme Day'
+            'Time Bazar': 'Sridevi',
+            'Madhur Day': 'Time Bazar',
+            'Milan Day': 'Madhur Day',
+            'Rajdhani Day': 'Milan Day',
+            'Kalyan': 'Rajdhani Day',
+            'Sridevi Night': 'Kalyan',
+            'Madhur Night': 'Sridevi Night',
+            'Milan Night': 'Madhur Night',
+            'Rajdhani Night': 'Milan Night',
+            'Main Bazar': 'Rajdhani Night'
         }
         
         self.lucky_digits = ['7', '8', '9']

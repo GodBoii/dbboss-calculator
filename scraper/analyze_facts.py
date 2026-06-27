@@ -53,7 +53,10 @@ def main():
     df['date_parsed'] = pd.to_datetime(df['date_range_start'], format='%d/%m/%Y', errors='coerce')
 
     # Filter for high volume markets
-    high_vol = ['Kalyan', 'Main Bombay', 'Milan Day', 'Milan Night', 'Kalyan Morning']
+    high_vol = [
+        'Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan',
+        'Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar'
+    ]
     df_high = df[df['market'].isin(high_vol)].copy()
     
     # Drop rows without panels
