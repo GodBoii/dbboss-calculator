@@ -3,7 +3,9 @@ import {
   analyzeMarket,
   buildContextFromResult,
   computeJodiAnalysis,
+  getPanelKind,
   getSuttaSignal,
+  type PanelKindPrediction,
   type PanelPick,
 } from './predictor'
 
@@ -15,6 +17,10 @@ export interface BacktestBucket {
   suttaTop3: number
   suttaTop10: number
   suttaTop30: number
+  kindCorrect: number
+  actualDp: number
+  dpPredicted: number
+  dpCorrect: number
   actualDanger: number
   actualSnapback: number
   averageActualRank: number | null
@@ -60,6 +66,10 @@ function emptyBucket(): MutableBucket {
     suttaTop3: 0,
     suttaTop10: 0,
     suttaTop30: 0,
+    kindCorrect: 0,
+    actualDp: 0,
+    dpPredicted: 0,
+    dpCorrect: 0,
     actualDanger: 0,
     actualSnapback: 0,
     rankSum: 0,
@@ -76,6 +86,10 @@ function finalizeBucket(bucket: MutableBucket): BacktestBucket {
     suttaTop3: bucket.suttaTop3,
     suttaTop10: bucket.suttaTop10,
     suttaTop30: bucket.suttaTop30,
+    kindCorrect: bucket.kindCorrect,
+    actualDp: bucket.actualDp,
+    dpPredicted: bucket.dpPredicted,
+    dpCorrect: bucket.dpCorrect,
     actualDanger: bucket.actualDanger,
     actualSnapback: bucket.actualSnapback,
     averageActualRank: bucket.rankSeen > 0 ? bucket.rankSum / bucket.rankSeen : null,
@@ -113,10 +127,19 @@ function evaluatePickSet(
   actualPanel: string,
   actualSutta: number,
   actualDrought: number,
+  kindPrediction?: PanelKindPrediction,
 ) {
   if (!actualPanel || actualSutta < 0) return
 
   bucket.n++
+  const actualKind = getPanelKind(actualPanel)
+  if (actualKind === 'DP') bucket.actualDp++
+  if (kindPrediction?.predictedKind === 'DP') bucket.dpPredicted++
+  if (kindPrediction?.predictedKind === 'DP' && actualKind === 'DP') bucket.dpCorrect++
+  if (kindPrediction && kindPrediction.predictedKind === actualKind) {
+    bucket.kindCorrect++
+  }
+
   const rank = picks.findIndex((pick) => pick.panel === actualPanel) + 1
   if (rank > 0) {
     bucket.rankSum += rank
@@ -192,6 +215,7 @@ export function runMarketBacktest(
       record.openPanel,
       record.openSutta,
       prediction.combinedSuttaDroughts[String(record.openSutta)] ?? 1000,
+      prediction.openKindPrediction,
     )
     evaluatePickSet(
       close,
@@ -199,6 +223,7 @@ export function runMarketBacktest(
       record.closePanel,
       record.closeSutta,
       prediction.closeSuttaDroughts[String(record.closeSutta)] ?? 1000,
+      prediction.closeKindPrediction,
     )
 
     if (record.openSutta >= 0 && record.closePanel) {
@@ -214,6 +239,7 @@ export function runMarketBacktest(
         record.closePanel,
         record.closeSutta,
         prediction.closeSuttaDroughts[String(record.closeSutta)] ?? 1000,
+        jodiResult.kindPrediction,
       )
 
       const closeRank = prediction.closePicks.findIndex((pick) => pick.panel === record.closePanel) + 1

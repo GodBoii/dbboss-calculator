@@ -73,14 +73,26 @@ export interface PredictionResult {
   closePicks: PanelPick[]
   openDpPicks: PanelPick[]
   closeDpPicks: PanelPick[]
+  openKindPrediction: PanelKindPrediction
+  closeKindPrediction: PanelKindPrediction
   totalRecordsAnalysed: number
   totalDraws: number
   stats: MarketStats
 }
 
+export type PanelKind = 'SP' | 'DP'
+
+export interface PanelKindPrediction {
+  predictedKind: PanelKind
+  confidence: number
+  scores: Record<PanelKind, number>
+  top30Counts: Record<PanelKind, number>
+}
+
 export interface PanelPick {
   panel: string
   sutta: number
+  kind: PanelKind
   score: number
   isHoneyPotPick: boolean
   isSequential: boolean
@@ -117,6 +129,7 @@ export interface JodiAnalysis {
   closeSuttaPenalties: Record<number, number>
   adjustedClosePicks: PanelPick[]
   adjustedCloseDpPicks: PanelPick[]
+  kindPrediction: PanelKindPrediction
   totalMatchingDraws: number
 }
 
@@ -299,6 +312,12 @@ export function isTriple(panel: string): boolean {
 
 export function isDoublePanel(panel: string): boolean {
   return panel.length === 3 && new Set(panel.split('')).size === 2
+}
+
+export function getPanelKind(panel: string): PanelKind {
+  const uniqueCount = new Set(panel.split('')).size
+  if (uniqueCount === 2) return 'DP'
+  return 'SP'
 }
 
 export function calculateSutta(panel: string): number {
@@ -532,6 +551,32 @@ function getTunedSuttaPenalty(drought: number, tuning: ScoreTuning): number {
   return tuning.suttaPenalty[state] ?? 0
 }
 
+function buildKindPrediction(picks: PanelPick[]): PanelKindPrediction {
+  const topPicks = picks.slice(0, 30)
+  const scores: Record<PanelKind, number> = { SP: 0, DP: 0 }
+  const top30Counts: Record<PanelKind, number> = { SP: 0, DP: 0 }
+
+  topPicks.forEach((pick, index) => {
+    const rankWeight = topPicks.length - index
+    scores[pick.kind] += Math.max(1, pick.score) * rankWeight
+    top30Counts[pick.kind]++
+  })
+
+  const predictedKind = (Object.entries(scores) as Array<[PanelKind, number]>)
+    .sort((a, b) => b[1] - a[1])[0][0]
+  const totalScore = Object.values(scores).reduce((sum, score) => sum + score, 0)
+
+  return {
+    predictedKind,
+    confidence: totalScore > 0 ? Math.round((scores[predictedKind] / totalScore) * 1000) / 10 : 0,
+    scores: {
+      SP: Math.round(scores.SP * 10) / 10,
+      DP: Math.round(scores.DP * 10) / 10,
+    },
+    top30Counts,
+  }
+}
+
 /**
  * Score all 220 panels against a set of position-specific entries.
  * This is the core scoring function, called separately for Open and Close positions.
@@ -571,6 +616,7 @@ function scorePanelsForPosition(
     const panelSutta = calculateSutta(panel)
     const panelIsSeq = isSequential(panel)
     const panelIsTriple = isTriple(panel)
+    const panelKind = getPanelKind(panel)
 
     // --- A) Recency Score ---
     const recencyScore = getRecencyScore(lastSeen, tuning.recencyMode)
@@ -628,6 +674,7 @@ function scorePanelsForPosition(
     picks.push({
       panel,
       sutta: panelSutta,
+      kind: panelKind,
       score: Math.round(finalScore * 100) / 100,
       isHoneyPotPick: ctx.honeyPotAlert && panelIsSeq,
       isSequential: panelIsSeq,
@@ -858,6 +905,8 @@ export function analyzeMarket(
     closePicks: closePicks.slice(0, 30),
     openDpPicks: openPicks.filter((pick) => isDoublePanel(pick.panel)).slice(0, 30),
     closeDpPicks: closePicks.filter((pick) => isDoublePanel(pick.panel)).slice(0, 30),
+    openKindPrediction: buildKindPrediction(openPicks),
+    closeKindPrediction: buildKindPrediction(closePicks),
     totalRecordsAnalysed: allPanelEntries.length,
     totalDraws: records.length,
     stats,
@@ -984,6 +1033,7 @@ export function computeJodiAnalysis(
     closeSuttaPenalties,
     adjustedClosePicks: adjustedPicks.slice(0, 30),
     adjustedCloseDpPicks: adjustedPicks.filter((pick) => isDoublePanel(pick.panel)).slice(0, 30),
+    kindPrediction: buildKindPrediction(adjustedPicks),
     totalMatchingDraws: totalMatches,
   }
 }
