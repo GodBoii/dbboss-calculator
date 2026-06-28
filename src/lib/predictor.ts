@@ -433,6 +433,7 @@ function generateAllPanels(): string[] {
 }
 
 const ALL_PANELS = generateAllPanels()
+const DOUBLE_PANELS = ALL_PANELS.filter(isDoublePanel)
 
 /** Flatten records into a chronological list of individual panels (both Open & Close) */
 interface FlatEntry {
@@ -526,6 +527,7 @@ const CLOSE_SCORE_TUNING: ScoreTuning = {
 const JODI_SCORE_TUNING = CLOSE_SCORE_TUNING
 const JODI_SAMPLE_DENOMINATOR = 500
 const JODI_STRENGTH_SCALE = 0.5
+type DpScoreProfile = 'open' | 'close'
 
 function getRecencyScore(lastSeen: number, mode: RecencyMode): number {
   if (mode === 'older-heavy') {
@@ -545,10 +547,49 @@ function getRecencyScore(lastSeen: number, mode: RecencyMode): number {
   return 50
 }
 
+function getCloseDpRecencyScore(lastSeen: number): number {
+  if (lastSeen <= 3) return 0
+  if (lastSeen <= 8) return 20
+  if (lastSeen <= 20) return 50
+  if (lastSeen <= 50) return 85
+  if (lastSeen <= 100) return 90
+  return 80
+}
+
 function getTunedSuttaPenalty(drought: number, tuning: ScoreTuning): number {
   const state = getSuttaSignal(drought).state
   if (state === 'danger' && drought > 12) return tuning.suttaPenalty.dangerHigh
   return tuning.suttaPenalty[state] ?? 0
+}
+
+function getLastSeenGap(entries: FlatEntry[], predicate: (entry: FlatEntry) => boolean): number {
+  for (let i = entries.length - 1; i >= 0; i--) {
+    if (predicate(entries[i])) return (entries.length - 1) - i
+  }
+  return 1000
+}
+
+function getDoublePanelDigit(panel: string): string | null {
+  if (!isDoublePanel(panel)) return null
+  const counts: Record<string, number> = {}
+  for (const digit of panel) counts[digit] = (counts[digit] ?? 0) + 1
+  return Object.entries(counts).find(([, count]) => count === 2)?.[0] ?? null
+}
+
+function countDayDpSignals(entries: FlatEntry[], dayName: string) {
+  const repeatedDigitCounts: Record<string, number> = {}
+  const suttaCounts: Record<string, number> = {}
+  let total = 0
+
+  for (const entry of entries) {
+    if (entry.day !== dayName || !isDoublePanel(entry.panel)) continue
+    const digit = getDoublePanelDigit(entry.panel)
+    if (digit !== null) repeatedDigitCounts[digit] = (repeatedDigitCounts[digit] ?? 0) + 1
+    suttaCounts[String(entry.sutta)] = (suttaCounts[String(entry.sutta)] ?? 0) + 1
+    total++
+  }
+
+  return { repeatedDigitCounts, suttaCounts, total }
 }
 
 function buildKindPrediction(picks: PanelPick[]): PanelKindPrediction {
@@ -697,6 +738,92 @@ function scorePanelsForPosition(
 }
 
 // ─── Core Analysis ───────────────────────────────────────────────────────────
+
+function scoreDoublePanelsForPosition(
+  entries: FlatEntry[],
+  ctx: ScoringContext,
+  tuning: ScoreTuning,
+  profile: DpScoreProfile,
+): PanelPick[] {
+  if (entries.length === 0) return []
+
+  const daySignals = countDayDpSignals(entries, ctx.todayDayName)
+  const picks: PanelPick[] = []
+
+  for (const panel of DOUBLE_PANELS) {
+    const panelSutta = calculateSutta(panel)
+    const repeatedDigit = getDoublePanelDigit(panel)
+    const panelGap = getLastSeenGap(entries, (entry) => entry.panel === panel)
+    const digitGap = repeatedDigit === null
+      ? 1000
+      : getLastSeenGap(entries, (entry) => isDoublePanel(entry.panel) && getDoublePanelDigit(entry.panel) === repeatedDigit)
+    const suttaGap = getLastSeenGap(entries, (entry) => isDoublePanel(entry.panel) && entry.sutta === panelSutta)
+    const panelIsSeq = isSequential(panel)
+    const panelIsTriple = isTriple(panel)
+
+    const recencyScore = profile === 'close'
+      ? getCloseDpRecencyScore(panelGap)
+      : getRecencyScore(panelGap, tuning.recencyMode)
+    const cooldownPenalty = panelGap <= 3 ? tuning.cooldownShort : panelGap <= 5 ? tuning.cooldownMedium : 0
+
+    let seqPenalty = 0
+    if (panelIsSeq) {
+      seqPenalty = ctx.honeyPotAlert
+        ? -40
+        : tuning.seqPenaltyBase * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
+    }
+
+    const triplePenalty = panelIsTriple
+      ? tuning.triplePenaltyBase * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
+      : 0
+    const saturationPenalty = 0
+    const repeatedDigitScore = getRecencyScore(digitGap, 'current')
+    const dpSuttaScore = getRecencyScore(suttaGap, 'current')
+    const dayRepeatedBoost = daySignals.total > 20 && repeatedDigit !== null
+      ? (daySignals.repeatedDigitCounts[repeatedDigit] ?? 0) * (profile === 'open' ? 1.2 : 0.4)
+      : 0
+    const daySuttaBoost = daySignals.total > 20
+      ? (daySignals.suttaCounts[String(panelSutta)] ?? 0) * (profile === 'open' ? 0.8 : 0.3)
+      : 0
+    const dpDigitCooldown = digitGap <= 1 ? (profile === 'close' ? 8 : 15) : 0
+    const dpOverlay = profile === 'open'
+      ? dayRepeatedBoost + daySuttaBoost
+      : repeatedDigitScore * 0.25 + dpSuttaScore * 0.2 + dayRepeatedBoost + daySuttaBoost
+
+    const rawScore = recencyScore
+      + dpOverlay
+      - cooldownPenalty
+      - seqPenalty
+      - triplePenalty
+      - saturationPenalty
+      - dpDigitCooldown
+
+    const finalScore = Math.max(0, Math.min(100, rawScore))
+
+    picks.push({
+      panel,
+      sutta: panelSutta,
+      kind: 'DP',
+      score: Math.round(finalScore * 100) / 100,
+      isHoneyPotPick: ctx.honeyPotAlert && panelIsSeq,
+      isSequential: panelIsSeq,
+      isTriple: panelIsTriple,
+      breakdown: {
+        recencyScore: Math.round(recencyScore * 100) / 100,
+        seqPenalty: Math.round(seqPenalty * 100) / 100,
+        luckyPenalty: 0,
+        triplePenalty: Math.round(triplePenalty * 100) / 100,
+        saturationPenalty: Math.round(saturationPenalty * 100) / 100,
+        cooldownPenalty: cooldownPenalty + dpDigitCooldown,
+        dayBoost: Math.round((dayRepeatedBoost + daySuttaBoost) * 100) / 100,
+        jodiPenalty: 0,
+      },
+    })
+  }
+
+  picks.sort((a, b) => b.score - a.score)
+  return picks
+}
 
 export function computeStats(records: PanelRecord[]): MarketStats {
   const openCounts: Record<string, number> = {}
@@ -872,6 +999,16 @@ export function analyzeMarket(
     suttaDroughts: closeSuttaDroughts,
     calibration: calibration.close,
   }, undefined, CLOSE_SCORE_TUNING)
+  const openDpPicks = scoreDoublePanelsForPosition(openEntries, {
+    ...baseCtx,
+    suttaDroughts: combinedSuttaDroughts,
+    calibration: calibration.open,
+  }, CURRENT_SCORE_TUNING, 'open')
+  const closeDpPicks = scoreDoublePanelsForPosition(closeEntries, {
+    ...baseCtx,
+    suttaDroughts: closeSuttaDroughts,
+    calibration: calibration.close,
+  }, CLOSE_SCORE_TUNING, 'close')
 
   // Combined picks (using all entries, for backward compat)
   const topPicks = scorePanelsForPosition(allPanelEntries, {
@@ -903,8 +1040,8 @@ export function analyzeMarket(
     topPicks: topPicks.slice(0, 30),
     openPicks: openPicks.slice(0, 30),
     closePicks: closePicks.slice(0, 30),
-    openDpPicks: openPicks.filter((pick) => isDoublePanel(pick.panel)).slice(0, 30),
-    closeDpPicks: closePicks.filter((pick) => isDoublePanel(pick.panel)).slice(0, 30),
+    openDpPicks: openDpPicks.slice(0, 30),
+    closeDpPicks: closeDpPicks.slice(0, 30),
     openKindPrediction: buildKindPrediction(openPicks),
     closeKindPrediction: buildKindPrediction(closePicks),
     totalRecordsAnalysed: allPanelEntries.length,
