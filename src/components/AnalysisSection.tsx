@@ -11,6 +11,8 @@ import {
   type PredictionResult,
   type JodiAnalysis,
   type PanelPick,
+  type PanelKind,
+  type PanelKindPrediction,
   type ModelCalibration,
   type JodiCalibration,
 } from "@/lib/predictor"
@@ -222,6 +224,10 @@ export default function AnalysisSection() {
     if (!total) return "0.0%"
     return `${((value / total) * 100).toFixed(1)}%`
   }
+  const dpPrecision = (correct: number, predicted: number) => {
+    if (!predicted) return "No DP calls"
+    return `${pct(correct, predicted)} (${correct}/${predicted})`
+  }
 
   const haptic = (ms = 8) => {
     if (typeof navigator !== "undefined" && "vibrate" in navigator) navigator.vibrate(ms)
@@ -387,6 +393,12 @@ export default function AnalysisSection() {
             <ConfidenceBadge label="Open" model={result.calibration.open} />
             <ConfidenceBadge label="Close" model={result.calibration.close} />
             <ConfidenceBadge label="Jodi" model={result.calibration.jodi} />
+          </div>
+
+          <div className="confidence-strip glass-panel">
+            <KindForecastCard label="Open Kind" prediction={result.openKindPrediction} />
+            <KindForecastCard label="Close Kind" prediction={result.closeKindPrediction} />
+            {jodiResult && <KindForecastCard label="Jodi Close Kind" prediction={jodiResult.kindPrediction} />}
           </div>
 
           {/* ── HONEY-POT ALERT ──────────────────────────────────────────── */}
@@ -655,6 +667,7 @@ export default function AnalysisSection() {
                 {/* ── Open Picks ──────────────────────────────────────────── */}
                 {picksSubTab === "open" && (
                   <>
+                    <KindForecastCard label="Open Kind Forecast" prediction={result.openKindPrediction} />
                     <div className="picks-hint-row">
                       <p className="picks-hint" style={{ margin: 0 }}>
                         Open panel predictions — scored against Open-position history only
@@ -694,6 +707,7 @@ export default function AnalysisSection() {
                 {/* ── Close Picks ─────────────────────────────────────────── */}
                 {picksSubTab === "close" && (
                   <>
+                    <KindForecastCard label="Close Kind Forecast" prediction={result.closeKindPrediction} />
                     <div className="picks-hint-row">
                       <p className="picks-hint" style={{ margin: 0 }}>
                         Close panel predictions — scored against Close-position history only
@@ -733,6 +747,7 @@ export default function AnalysisSection() {
                 {/* ── Jodi-Adjusted Close Picks ──────────────────────────── */}
                 {picksSubTab === "jodi" && jodiResult && (
                   <>
+                    <KindForecastCard label="Jodi Close Kind Forecast" prediction={jodiResult.kindPrediction} />
                     <p className="picks-hint">
                       Close predictions adjusted by empirical Open-to-Close history for Open Sutta = <strong>{jodiResult.openSutta}</strong>
                     </p>
@@ -901,6 +916,36 @@ export default function AnalysisSection() {
                       <span className="stat-label">Jodi panel@30 / sutta@30</span>
                       <span className="stat-value">
                         {pct(backtestReport.jodi.panelTop30, backtestReport.jodi.n)} / {pct(backtestReport.jodi.suttaTop30, backtestReport.jodi.n)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Open / Close / Jodi kind hit</span>
+                      <span className="stat-value">
+                        {pct(backtestReport.open.kindCorrect, backtestReport.open.n)} / {pct(backtestReport.close.kindCorrect, backtestReport.close.n)} / {pct(backtestReport.jodi.kindCorrect, backtestReport.jodi.n)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Open DP precision</span>
+                      <span className="stat-value">
+                        {dpPrecision(backtestReport.open.dpCorrect, backtestReport.open.dpPredicted)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Close DP precision</span>
+                      <span className="stat-value">
+                        {dpPrecision(backtestReport.close.dpCorrect, backtestReport.close.dpPredicted)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Jodi DP precision</span>
+                      <span className="stat-value">
+                        {dpPrecision(backtestReport.jodi.dpCorrect, backtestReport.jodi.dpPredicted)}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Actual DP rate O/C/J</span>
+                      <span className="stat-value">
+                        {pct(backtestReport.open.actualDp, backtestReport.open.n)} / {pct(backtestReport.close.actualDp, backtestReport.close.n)} / {pct(backtestReport.jodi.actualDp, backtestReport.jodi.n)}
                       </span>
                     </div>
                     <div className="stat-row">
@@ -1120,6 +1165,34 @@ function ConfidenceBadge({ label, model }: { label: string; model: ModelCalibrat
 }
 
 // ─── CopyButton Component ────────────────────────────────────────────────────
+function kindColor(kind: PanelKind) {
+  if (kind === "DP") return "#60a5fa"
+  return "#4ade80"
+}
+
+function KindForecastCard({ label, prediction }: { label: string; prediction: PanelKindPrediction }) {
+  const kinds: PanelKind[] = ["SP", "DP"]
+  const confidenceLevel = prediction.confidence >= 45 ? "strong" : prediction.confidence >= 38 ? "fair" : "weak"
+
+  return (
+    <div className={`confidence-badge confidence-badge--${confidenceLevel}`}>
+      <div className="confidence-badge-head">
+        <span className="confidence-label">{label}</span>
+        <span className="confidence-level" style={{ color: kindColor(prediction.predictedKind) }}>
+          {prediction.predictedKind}
+        </span>
+      </div>
+      <div className="confidence-metrics">
+        <span>{prediction.confidence.toFixed(1)}%</span>
+        <span>Top30 {prediction.top30Counts[prediction.predictedKind]}</span>
+      </div>
+      <div className="confidence-foot">
+        {kinds.map((kind) => `${kind} ${prediction.top30Counts[kind]}`).join(" / ")}
+      </div>
+    </div>
+  )
+}
+
 function CopyButton({ label, isCopied, onClick }: { label: string; isCopied: boolean; onClick: () => void }) {
   return (
     <button
@@ -1183,6 +1256,7 @@ function PicksList({ picks, getScoreColor }: { picks: PanelPick[]; getScoreColor
           <div key={pick.panel} className={`hero-pick hero-pick-${i + 1}`}>
             <span className="hero-rank">#{i + 1}</span>
             <span className="hero-panel">{pick.panel}</span>
+            <span className="hero-sutta" style={{ color: kindColor(pick.kind) }}>{pick.kind}</span>
             <span className="hero-sutta">S: {pick.sutta}</span>
             <span className="hero-score" style={{ color: getScoreColor(pick.score) }}>
               {pick.score.toFixed(1)}
@@ -1198,6 +1272,7 @@ function PicksList({ picks, getScoreColor }: { picks: PanelPick[]; getScoreColor
           <div key={pick.panel} className="pick-row">
             <span className="pick-rank text-muted">#{i + 4}</span>
             <span className="pick-panel">{pick.panel}</span>
+            <span className="pick-sutta" style={{ color: kindColor(pick.kind) }}>{pick.kind}</span>
             <span className="pick-sutta">S{pick.sutta}</span>
             <div className="pick-score-bar">
               <div
