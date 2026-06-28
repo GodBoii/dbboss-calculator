@@ -88,12 +88,12 @@ function parseDate(dateStr: string): Date | null {
   if (parts.length !== 3 || parts.some((part) => Number.isNaN(part))) return null
   const [day, month, rawYear] = parts
   const year = rawYear < 100 ? rawYear + 2000 : rawYear
-  return new Date(year, month - 1, day)
+  return new Date(Date.UTC(year, month - 1, day))
 }
 
 function addDays(date: Date, days: number): Date {
   const next = new Date(date)
-  next.setDate(next.getDate() + days)
+  next.setUTCDate(next.getUTCDate() + days)
   return next
 }
 

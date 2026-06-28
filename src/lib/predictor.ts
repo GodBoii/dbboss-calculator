@@ -450,6 +450,88 @@ interface ScoringContext {
   calibration: ModelCalibration
 }
 
+type RecencyMode = 'current' | 'older-heavy'
+
+interface ScoreTuning {
+  recencyMode: RecencyMode
+  useDayBoost: boolean
+  cooldownShort: number
+  cooldownMedium: number
+  seqPenaltyBase: number
+  triplePenaltyBase: number
+  luckyDigitPenaltyBase: number
+  suttaPenalty: {
+    fresh: number
+    warming: number
+    danger: number
+    dangerHigh: number
+    cooling: number
+    snapback: number
+    unknown: number
+  }
+}
+
+const CURRENT_SCORE_TUNING: ScoreTuning = {
+  recencyMode: 'current',
+  useDayBoost: true,
+  cooldownShort: 40,
+  cooldownMedium: 20,
+  seqPenaltyBase: 35,
+  triplePenaltyBase: 50,
+  luckyDigitPenaltyBase: LUCKY_DIGIT_PENALTY_POINTS,
+  suttaPenalty: {
+    fresh: 0,
+    warming: 10,
+    danger: 30,
+    dangerHigh: 35,
+    cooling: 10,
+    snapback: -25,
+    unknown: 0,
+  },
+}
+
+const CLOSE_SCORE_TUNING: ScoreTuning = {
+  ...CURRENT_SCORE_TUNING,
+  useDayBoost: false,
+  suttaPenalty: {
+    fresh: 0,
+    warming: -5,
+    danger: -10,
+    dangerHigh: -10,
+    cooling: -15,
+    snapback: -25,
+    unknown: 0,
+  },
+}
+
+const JODI_SCORE_TUNING = CLOSE_SCORE_TUNING
+const JODI_SAMPLE_DENOMINATOR = 500
+const JODI_STRENGTH_SCALE = 0.5
+
+function getRecencyScore(lastSeen: number, mode: RecencyMode): number {
+  if (mode === 'older-heavy') {
+    if (lastSeen <= 3) return 0
+    if (lastSeen <= 8) return 20
+    if (lastSeen <= 20) return 50
+    if (lastSeen <= 50) return 75
+    if (lastSeen <= 100) return 90
+    return 80
+  }
+
+  if (lastSeen <= 3) return 5
+  if (lastSeen <= 8) return 30
+  if (lastSeen <= 20) return 60
+  if (lastSeen <= 50) return 85
+  if (lastSeen <= 100) return 70
+  return 50
+}
+
+function getTunedSuttaPenalty(drought: number, tuning: ScoreTuning): number {
+  const state = getSuttaSignal(drought).state
+  if (state === 'danger' && drought > 12) return tuning.suttaPenalty.dangerHigh
+  return tuning.suttaPenalty[state] ?? 0
+}
+
 /**
  * Score all 220 panels against a set of position-specific entries.
  * This is the core scoring function, called separately for Open and Close positions.
@@ -458,6 +540,7 @@ function scorePanelsForPosition(
   entries: FlatEntry[],
   ctx: ScoringContext,
   jodiSuttaPenalties?: Record<number, number>,
+  tuning: ScoreTuning = CURRENT_SCORE_TUNING,
 ): PanelPick[] {
   if (entries.length === 0) return []
 
@@ -490,16 +573,10 @@ function scorePanelsForPosition(
     const panelIsTriple = isTriple(panel)
 
     // --- A) Recency Score ---
-    let recencyScore: number
-    if (lastSeen <= 3) recencyScore = 5
-    else if (lastSeen <= 8) recencyScore = 30
-    else if (lastSeen <= 20) recencyScore = 60
-    else if (lastSeen <= 50) recencyScore = 85
-    else if (lastSeen <= 100) recencyScore = 70
-    else recencyScore = 50
+    const recencyScore = getRecencyScore(lastSeen, tuning.recencyMode)
 
     // --- B) Cooldown Penalty ---
-    const cooldownPenalty = lastSeen <= 3 ? 40 : lastSeen <= 5 ? 20 : 0
+    const cooldownPenalty = lastSeen <= 3 ? tuning.cooldownShort : lastSeen <= 5 ? tuning.cooldownMedium : 0
 
     // --- C) Sequential penalty (or BONUS during honey-pot) ---
     let seqPenalty = 0
@@ -507,25 +584,25 @@ function scorePanelsForPosition(
       if (ctx.honeyPotAlert) {
         seqPenalty = -40
       } else {
-        seqPenalty = 35 * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
+        seqPenalty = tuning.seqPenaltyBase * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
       }
     }
 
     // --- D) Lucky-digit penalty ---
-    const luckyPenalty = countLuckyDigits(panel) * LUCKY_DIGIT_PENALTY_POINTS * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
+    const luckyPenalty = countLuckyDigits(panel) * tuning.luckyDigitPenaltyBase * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
 
     // --- E) Triple penalty ---
     const triplePenalty = panelIsTriple
-      ? 50 * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
+      ? tuning.triplePenaltyBase * ctx.volMultiplier * ctx.temporalMultiplier * ctx.liquidityMultiplier
       : 0
 
     // --- F) Sutta pressure (position-specific rubber-band curve) ---
     const suttaDrought = ctx.suttaDroughts[String(panelSutta)] ?? 0
-    const saturationPenalty = getSuttaSignal(suttaDrought).scorePenalty
+    const saturationPenalty = getTunedSuttaPenalty(suttaDrought, tuning)
 
     // --- G) Day-of-week boost ---
     let dayBoost = 0
-    if (dayTotalCount > 20) {
+    if (tuning.useDayBoost && dayTotalCount > 20) {
       const suttaDayRate = (daySuttaCounts[String(panelSutta)] ?? 0) / dayTotalCount
       const expectedRate = 0.1
       if (suttaDayRate > expectedRate * 1.3) {
@@ -747,7 +824,7 @@ export function analyzeMarket(
     ...baseCtx,
     suttaDroughts: closeSuttaDroughts,
     calibration: calibration.close,
-  })
+  }, undefined, CLOSE_SCORE_TUNING)
 
   // Combined picks (using all entries, for backward compat)
   const topPicks = scorePanelsForPosition(allPanelEntries, {
@@ -809,7 +886,7 @@ export function computeJodiAnalysis(
   ctx: ScoringContext,
 ): JodiAnalysis {
   const jodiCalibration = ctx.calibration as JodiCalibration
-  const jodiStrength = jodiCalibration.strength ?? 0.8
+  const jodiStrength = (jodiCalibration.strength ?? 0.8) * JODI_STRENGTH_SCALE
 
   // 1. Count Close Sutta distribution when Open Sutta matches
   const closeSuttaCounts: Record<number, number> = {}
@@ -825,7 +902,7 @@ export function computeJodiAnalysis(
 
   // 2. Build Jodi frequency table
   const avgCount = totalMatches > 0 ? totalMatches / 10 : 0
-  const sampleWeight = Math.min(1, totalMatches / 220)
+  const sampleWeight = Math.min(1, totalMatches / JODI_SAMPLE_DENOMINATOR)
   const jodiFrequencies: JodiAnalysis['jodiFrequencies'] = []
 
   for (let cs = 0; cs <= 9; cs++) {
@@ -892,7 +969,7 @@ export function computeJodiAnalysis(
     }
   }
 
-  const adjustedPicks = scorePanelsForPosition(closeEntries, ctx, closeSuttaPenalties)
+  const adjustedPicks = scorePanelsForPosition(closeEntries, ctx, closeSuttaPenalties, JODI_SCORE_TUNING)
 
   return {
     openSutta,

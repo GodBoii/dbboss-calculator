@@ -59,8 +59,7 @@ export async function GET(request: NextRequest) {
       { market: marketName, panels, count: panels.length, scrapedAt: new Date().toISOString() },
       {
         headers: {
-          // Cache for 30 minutes on the CDN edge so repeated user fetches are instant
-          'Cache-Control': 'public, s-maxage=1800, stale-while-revalidate=3600',
+          'Cache-Control': 'no-store, max-age=0',
         },
       }
     )
@@ -119,7 +118,7 @@ function extractJodi(text: string): string | null {
  */
 function parseHtmlForPanels(html: string, market: string): ParsedPanel[] {
   const results: ParsedPanel[] = []
-  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
   // Extract all <tr>...</tr> blocks
   const tableRowRegex = /<tr[^>]*>([\s\S]*?)<\/tr>/gi
