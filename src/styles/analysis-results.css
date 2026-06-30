@@ -1,0 +1,422 @@
+/* ─── Tab Panel (inner tabs for picks/stats/intel) ─────────────────────────── */
+.tab-panel {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.tab-nav {
+  display: flex;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 8px 8px 0;
+  gap: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 8px;
+  border-radius: 12px 12px 0 0;
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,0.4);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out-expo);
+  user-select: none;
+}
+
+.tab-btn.active {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.95);
+}
+
+/* ─── Picks Tab ────────────────────────────────────────────────────────────── */
+.picks-section {
+  padding: 16px;
+}
+
+.picks-hint {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Hint row: hint text + copy button side by side */
+.picks-hint-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.picks-hint-row > .picks-hint:first-child {
+  flex: 1 1 100%;
+}
+
+.picks-hint-calibration {
+  flex: 1 1 auto;
+  margin: 0;
+  color: rgba(255,255,255,0.62);
+  font-weight: 600;
+}
+
+/* Copy button */
+.copy-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.65);
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.35);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.copy-btn:active {
+  transform: scale(0.96);
+}
+
+.copy-btn-success {
+  background: rgba(74,222,128,0.12) !important;
+  border-color: rgba(74,222,128,0.5) !important;
+  color: #4ade80 !important;
+}
+
+.hero-picks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.hero-pick {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.hero-pick-1 {
+  background: rgba(255,215,0,0.06);
+  border-color: rgba(255,215,0,0.25);
+}
+.hero-pick-2 {
+  background: rgba(192,192,192,0.05);
+  border-color: rgba(192,192,192,0.2);
+}
+.hero-pick-3 {
+  background: rgba(205,127,50,0.05);
+  border-color: rgba(205,127,50,0.2);
+}
+
+.hero-rank {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.35);
+  min-width: 24px;
+}
+
+.hero-panel {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #ffffff;
+  flex: 1;
+  letter-spacing: 0.05em;
+}
+
+.hero-sutta {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.08);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.hero-score {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.honey-badge { font-size: 16px; }
+
+.picks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.pick-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.pick-rank { font-size: 11px; min-width: 24px; color: rgba(255,255,255,0.3); }
+
+.pick-panel {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  min-width: 36px;
+}
+
+.pick-sutta {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  min-width: 18px;
+}
+
+.pick-score-bar {
+  flex: 1;
+  height: 5px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.pick-score-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s var(--ease-out-expo);
+}
+
+.pick-score-num {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  min-width: 28px;
+  text-align: right;
+}
+
+.honey-mini { font-size: 13px; }
+.text-muted { color: rgba(255,255,255,0.4); }
+
+/* ─── Stats Tab ────────────────────────────────────────────────────────────── */
+.stats-section {
+  padding: 16px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.stat-label { font-size: 13px; color: rgba(255,255,255,0.55); }
+.stat-value { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; color: #fff; }
+.stat-warn { color: #facc15; }
+.stat-danger { color: #f87171; }
+
+.stat-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 16px 0 12px;
+}
+
+.stat-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.freq-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.freq-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 4px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  gap: 2px;
+}
+
+.freq-panel { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 15px; color: #fff; }
+.freq-count { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+.sutta-dist { display: flex; flex-direction: column; gap: 6px; }
+
+.sutta-dist-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sutta-dist-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  min-width: 16px;
+  text-align: center;
+}
+
+.sutta-dist-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sutta-dist-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.6));
+  border-radius: 4px;
+  transition: width 0.5s var(--ease-out-expo);
+}
+
+.sutta-dist-count { font-size: 12px; color: rgba(255,255,255,0.4); min-width: 28px; text-align: right; }
+
+/* ─── Intel / Breakdown Tab ────────────────────────────────────────────────── */
+.intel-section {
+  padding: 16px;
+}
+
+.breakdown-row {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.breakdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.breakdown-panel {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.breakdown-score {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.breakdown-bars { display: flex; flex-direction: column; gap: 6px; }
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bd-label { font-size: 11px; color: rgba(255,255,255,0.4); min-width: 70px; }
+
+.bd-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bd-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s var(--ease-out-expo);
+}
+
+.bd-green { background: #4ade80; }
+.bd-red { background: #f87171; }
+.bd-orange { background: #fb923c; }
+.bd-orange-text { color: #fb923c; }
+
+.bd-val {
+  font-size: 11px;
+  font-weight: 600;
+  min-width: 36px;
+  text-align: right;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ─── Empty State ──────────────────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.empty-icon { font-size: 48px; display: block; margin-bottom: 16px; }
+.empty-title { font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 10px; }
+.empty-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 24px; }
+
+.empty-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.fact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.fact-num {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  min-width: 50px;
+}
+
+.fact-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.4;
+}
