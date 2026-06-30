@@ -118,7 +118,7 @@ export function AnalysisTabs({
                           onCopy={() =>
                             handleCopy(
                               "open-dp",
-                              formatPicksForCopy(result.openDpPicks, `${selectedMarket} — Open DP Picks`)
+                              formatPicksForCopy(result.openDpPicks.slice(0, 2), `${selectedMarket} — Open DP Picks`)
                             )
                           }
                           getScoreColor={getScoreColor}
@@ -158,7 +158,7 @@ export function AnalysisTabs({
                           onCopy={() =>
                             handleCopy(
                               "close-dp",
-                              formatPicksForCopy(result.closeDpPicks, `${selectedMarket} — Close DP Picks`)
+                              formatPicksForCopy(result.closeDpPicks.slice(0, 2), `${selectedMarket} — Close DP Picks`)
                             )
                           }
                           getScoreColor={getScoreColor}
@@ -268,7 +268,7 @@ export function AnalysisTabs({
                             handleCopy(
                               "jodi-dp",
                               formatPicksForCopy(
-                                jodiResult.adjustedCloseDpPicks,
+                                jodiResult.adjustedCloseDpPicks.slice(0, 2),
                                 `${selectedMarket} — Jodi Close DP (Open Sutta=${jodiResult.openSutta})`
                               )
                             )

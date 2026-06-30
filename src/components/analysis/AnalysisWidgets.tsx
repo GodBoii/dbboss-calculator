@@ -44,6 +44,7 @@ function kindColor(kind: PanelKind) {
 export function KindForecastCard({ label, prediction }: { label: string; prediction: PanelKindPrediction }) {
   const kinds: PanelKind[] = ["SP", "DP"]
   const confidenceLevel = prediction.confidence >= 45 ? "strong" : prediction.confidence >= 38 ? "fair" : "weak"
+  const topSignals = prediction.dpSignals.slice(0, 2)
 
   return (
     <div className={`confidence-badge confidence-badge--${confidenceLevel}`}>
@@ -55,11 +56,17 @@ export function KindForecastCard({ label, prediction }: { label: string; predict
       </div>
       <div className="confidence-metrics">
         <span>{prediction.confidence.toFixed(1)}%</span>
-        <span>Top30 {prediction.top30Counts[prediction.predictedKind]}</span>
+        <span>DP est {prediction.estimatedDpRate.toFixed(1)}%</span>
       </div>
       <div className="confidence-foot">
         {kinds.map((kind) => `${kind} ${prediction.top30Counts[kind]}`).join(" / ")}
+        {` / Bias ${prediction.dpBias.toFixed(2)}x`}
       </div>
+      {topSignals.length > 0 && (
+        <div className="confidence-foot">
+          {topSignals.join(" | ")}
+        </div>
+      )}
     </div>
   )
 }
@@ -94,6 +101,7 @@ export function DpFocusSection({
   getScoreColor: (s: number) => string
 }) {
   if (!picks.length) return null
+  const focusPicks = picks.slice(0, 2)
 
   return (
     <div style={{ marginTop: "18px" }}>
@@ -101,12 +109,12 @@ export function DpFocusSection({
         <div>
           <h4 className="stat-section-title" style={{ margin: 0 }}>{title}</h4>
           <p className="picks-hint" style={{ margin: "4px 0 0" }}>
-            DP-only ranking from the same scoring model
+            Top 1-2 DP candidates after kind and digit-signal filters
           </p>
         </div>
         <CopyButton label={copyLabel} isCopied={isCopied} onClick={onCopy} />
       </div>
-      <PicksList picks={picks} getScoreColor={getScoreColor} />
+      <PicksList picks={focusPicks} getScoreColor={getScoreColor} />
     </div>
   )
 }
