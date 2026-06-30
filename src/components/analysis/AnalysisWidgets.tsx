@@ -101,7 +101,6 @@ export function DpFocusSection({
   getScoreColor: (s: number) => string
 }) {
   if (!picks.length) return null
-  const focusPicks = picks.slice(0, 2)
 
   return (
     <div style={{ marginTop: "18px" }}>
@@ -109,12 +108,12 @@ export function DpFocusSection({
         <div>
           <h4 className="stat-section-title" style={{ margin: 0 }}>{title}</h4>
           <p className="picks-hint" style={{ margin: "4px 0 0" }}>
-            Top 1-2 DP candidates after kind and digit-signal filters
+            DP-only ranking from the same scoring model
           </p>
         </div>
         <CopyButton label={copyLabel} isCopied={isCopied} onClick={onCopy} />
       </div>
-      <PicksList picks={focusPicks} getScoreColor={getScoreColor} />
+      <PicksList picks={picks} getScoreColor={getScoreColor} />
     </div>
   )
 }
