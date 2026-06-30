@@ -6,6 +6,7 @@ export const HIGH_VOLUME_MARKETS = [
   "Rajdhani Day",
   "Kalyan",
   "Sridevi Night",
+  "Kalyan Night",
   "Madhur Night",
   "Milan Night",
   "Rajdhani Night",
@@ -15,6 +16,7 @@ export const HIGH_VOLUME_MARKETS = [
 // Night markets set — used for weekday and cross-session DP signals
 const NIGHT_MARKET_NAMES = new Set([
   "Sridevi Night",
+  "Kalyan Night",
   "Madhur Night",
   "Milan Night",
   "Rajdhani Night",
@@ -53,6 +55,7 @@ const LIQUIDITY_FLOW_MAP: Record<string, string> = {
   "Rajdhani Day": "Milan Day",
   Kalyan: "Rajdhani Day",
   "Sridevi Night": "Kalyan",
+  "Kalyan Night": "Kalyan",
   "Madhur Night": "Sridevi Night",
   "Milan Night": "Madhur Night",
   "Rajdhani Night": "Milan Night",
@@ -71,6 +74,7 @@ const MEDIUM_VOL_SET = new Set([
   "Madhur Day",
   "Rajdhani Day",
   "Sridevi Night",
+  "Kalyan Night",
   "Madhur Night",
   "Rajdhani Night",
 ]);

@@ -38,6 +38,7 @@ const MARKET_URLS: Record<string, string> = {
   'Kalyan':         'https://dpbossss.boston/panel-chart-record/kalyan.php',
   // Night session
   'Sridevi Night':  'https://dpbossss.boston/panel-chart-record/sridevi-night.php',
+  'Kalyan Night':   'https://dpbossss.boston/panel-chart-record/kalyan-night.php',
   'Madhur Night':   'https://dpbossss.boston/panel-chart-record/madhur-night.php',
   'Milan Night':    'https://dpbossss.boston/panel-chart-record/milan-night.php',
   'Rajdhani Night': 'https://dpbossss.boston/panel-chart-record/rajdhani-night.php',
@@ -45,7 +46,7 @@ const MARKET_URLS: Record<string, string> = {
 }
 
 const DAY_MARKETS   = ['Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan']
-const NIGHT_MARKETS = ['Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar']
+const NIGHT_MARKETS = ['Sridevi Night', 'Kalyan Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar']
 
 
 
