@@ -17,6 +17,7 @@ import {
   CURRENT_SCORE_TUNING,
   OPEN_SCORE_TUNING,
   buildKindPrediction,
+  boostDoublePanelFocusPicks,
   scoreDoublePanelsForPosition,
   scorePanelsForPosition,
 } from "./scoring";
@@ -146,6 +147,7 @@ export function analyzeMarket(
     allMarketsRecords,
     todayDayName,
     false,
+    analysisDate,
   );
   const closeDpKindContext = computeDpKindContext(
     marketName,
@@ -154,6 +156,7 @@ export function analyzeMarket(
     allMarketsRecords,
     todayDayName,
     true,
+    analysisDate,
   );
 
   // ── 8. Score panels for Open and Close (pure historical scoring, no dpBias in scores) ─
@@ -182,17 +185,23 @@ export function analyzeMarket(
     undefined,
     CLOSE_SCORE_TUNING,
   );
-  const openDpPicks = scoreDoublePanelsForPosition(
-    openEntries,
-    openCtx,
-    CURRENT_SCORE_TUNING,
-    "open",
+  const openDpPicks = boostDoublePanelFocusPicks(
+    scoreDoublePanelsForPosition(
+      openEntries,
+      openCtx,
+      CURRENT_SCORE_TUNING,
+      "open",
+    ),
+    openDpKindContext,
   );
-  const closeDpPicks = scoreDoublePanelsForPosition(
-    closeEntries,
-    closeCtx,
-    CLOSE_SCORE_TUNING,
-    "close",
+  const closeDpPicks = boostDoublePanelFocusPicks(
+    scoreDoublePanelsForPosition(
+      closeEntries,
+      closeCtx,
+      CLOSE_SCORE_TUNING,
+      "close",
+    ),
+    closeDpKindContext,
   );
 
   const topPicks = scorePanelsForPosition(
@@ -233,11 +242,13 @@ export function analyzeMarket(
     closeDpPicks: closeDpPicks.slice(0, 30),
     openKindPrediction: buildKindPrediction(
       openPicks,
-      openDpKindContext.dpBias,
+      openDpKindContext,
+      1.25,
     ),
     closeKindPrediction: buildKindPrediction(
       closePicks,
-      closeDpKindContext.dpBias,
+      closeDpKindContext,
+      1.3,
     ),
     openDpKindContext,
     closeDpKindContext,

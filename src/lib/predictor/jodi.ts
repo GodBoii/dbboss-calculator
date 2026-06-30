@@ -1,5 +1,5 @@
 import type { PanelRecord } from "../db";
-import type { JodiAnalysis, JodiCalibration, PredictionResult } from "./types";
+import type { DpKindContext, JodiAnalysis, JodiCalibration, PanelPick, PredictionResult } from "./types";
 import type { FlatEntry } from "./data";
 import type { ScoringContext } from "./scoring";
 import { VOL_MULTIPLIER } from "./market-config";
@@ -12,11 +12,41 @@ import {
   scorePanelsForPosition,
 } from "./scoring";
 
+function applyOpenPanelCleanFilter(picks: PanelPick[], openPanel: string | null): PanelPick[] {
+  if (!openPanel || openPanel.length !== 3) return picks;
+
+  const openFirst = openPanel[0];
+  const openLast = openPanel[2];
+
+  return picks
+    .map((pick) => {
+      const sharesFirst = pick.panel.includes(openFirst);
+      const sharesLast = pick.panel.includes(openLast);
+      let adjustment = 0;
+
+      if (!sharesFirst && !sharesLast) adjustment = 18;
+      else if (sharesFirst && sharesLast) adjustment = -45;
+      else adjustment = -14;
+
+      const score = Math.max(0, Math.min(100, pick.score + adjustment));
+      return {
+        ...pick,
+        score: Math.round(score * 100) / 100,
+        breakdown: {
+          ...pick.breakdown,
+          dayBoost: Math.round((pick.breakdown.dayBoost + adjustment) * 100) / 100,
+        },
+      };
+    })
+    .sort((a, b) => b.score - a.score);
+}
+
 export function computeJodiAnalysis(
   openSutta: number,
   openPanel: string | null,
   records: PanelRecord[],
   ctx: ScoringContext,
+  dpKindContext?: DpKindContext,
 ): JodiAnalysis {
   const jodiCalibration = ctx.calibration as JodiCalibration;
   const jodiStrength = (jodiCalibration.strength ?? 0.8) * JODI_STRENGTH_SCALE;
@@ -111,6 +141,11 @@ export function computeJodiAnalysis(
     JODI_SCORE_TUNING,
   );
 
+  const adjustedCloseDpPicks = applyOpenPanelCleanFilter(
+    adjustedPicks.filter((pick) => isDoublePanel(pick.panel)),
+    openPanel,
+  );
+
   return {
     openSutta,
     openPanel,
@@ -123,10 +158,8 @@ export function computeJodiAnalysis(
     safeCloseSuttas: safe,
     closeSuttaPenalties,
     adjustedClosePicks: adjustedPicks.slice(0, 30),
-    adjustedCloseDpPicks: adjustedPicks
-      .filter((pick) => isDoublePanel(pick.panel))
-      .slice(0, 30),
-    kindPrediction: buildKindPrediction(adjustedPicks),
+    adjustedCloseDpPicks: adjustedCloseDpPicks.slice(0, 30),
+    kindPrediction: buildKindPrediction(adjustedPicks, dpKindContext ?? 1.0, 1.3),
     totalMatchingDraws: totalMatches,
   };
 }
