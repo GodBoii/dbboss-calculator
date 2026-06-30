@@ -63,14 +63,14 @@ function makeJodiCalibration(
 }
 
 const DEFAULT_MARKET_CALIBRATION: MarketCalibration = {
-  open: makeModelCalibration(14.6, 71.5),
+  open: makeModelCalibration(15.4, 94.9),
   close: makeModelCalibration(15.0, 72.1),
   jodi: makeJodiCalibration(16.1, 67.1, 0.8),
 };
 
 const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
   Sridevi: {
-    open: makeModelCalibration(12.4, 69.5, {
+    open: makeModelCalibration(13.2, 89.0, {
       recencyScale: 0.96,
       suttaPressureScale: 0.95,
     }),
@@ -81,7 +81,7 @@ const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
     jodi: makeJodiCalibration(14.1, 70.6, 0.55),
   },
   "Time Bazar": {
-    open: makeModelCalibration(16.6, 70.9, { recencyScale: 1.03 }),
+    open: makeModelCalibration(17.9, 98.7, { recencyScale: 1.03 }),
     close: makeModelCalibration(16.6, 66.9, {
       recencyScale: 1.04,
       suttaPressureScale: 0.92,
@@ -89,12 +89,12 @@ const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
     jodi: makeJodiCalibration(16.6, 66.2, 0.85),
   },
   "Madhur Day": {
-    open: makeModelCalibration(15.3, 75.7, { suttaPressureScale: 1.05 }),
+    open: makeModelCalibration(13.2, 95.6, { suttaPressureScale: 1.05 }),
     close: makeModelCalibration(15.8, 75.7, { suttaPressureScale: 1.05 }),
     jodi: makeJodiCalibration(18.1, 67.2, 1.0),
   },
   "Milan Day": {
-    open: makeModelCalibration(16.6, 63.6, {
+    open: makeModelCalibration(20.5, 96.2, {
       recencyScale: 1.04,
       suttaPressureScale: 0.86,
     }),
@@ -105,7 +105,7 @@ const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
     jodi: makeJodiCalibration(14.6, 64.9, 0.7),
   },
   "Rajdhani Day": {
-    open: makeModelCalibration(17.2, 72.8, { recencyScale: 1.04 }),
+    open: makeModelCalibration(16.7, 96.2, { recencyScale: 1.04 }),
     close: makeModelCalibration(13.2, 70.9, {
       recencyScale: 0.94,
       suttaPressureScale: 1.02,
@@ -113,7 +113,7 @@ const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
     jodi: makeJodiCalibration(11.9, 70.9, 0.35),
   },
   Kalyan: {
-    open: makeModelCalibration(12.6, 66.2, {
+    open: makeModelCalibration(24.4, 93.6, {
       recencyScale: 0.96,
       suttaPressureScale: 0.92,
     }),
@@ -121,12 +121,12 @@ const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
     jodi: makeJodiCalibration(14.6, 65.6, 0.65),
   },
   "Sridevi Night": {
-    open: makeModelCalibration(17.5, 72.9, { recencyScale: 1.04 }),
+    open: makeModelCalibration(14.3, 94.5, { recencyScale: 1.04 }),
     close: makeModelCalibration(15.8, 72.9),
     jodi: makeJodiCalibration(15.8, 61.0, 0.55),
   },
   "Madhur Night": {
-    open: makeModelCalibration(9.9, 73.7, {
+    open: makeModelCalibration(21.8, 98.7, {
       recencyScale: 0.9,
       suttaPressureScale: 1.06,
     }),
@@ -134,7 +134,7 @@ const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
     jodi: makeJodiCalibration(17.1, 71.7, 1.05),
   },
   "Milan Night": {
-    open: makeModelCalibration(10.7, 76.0, {
+    open: makeModelCalibration(3.8, 93.6, {
       recencyScale: 0.9,
       suttaPressureScale: 1.12,
     }),
@@ -142,12 +142,12 @@ const MARKET_CALIBRATIONS: Record<string, MarketCalibration> = {
     jodi: makeJodiCalibration(23.3, 65.3, 1.15),
   },
   "Rajdhani Night": {
-    open: makeModelCalibration(17.6, 73.6, { recencyScale: 1.04 }),
+    open: makeModelCalibration(12.3, 96.9, { recencyScale: 1.04 }),
     close: makeModelCalibration(15.2, 69.6),
     jodi: makeJodiCalibration(17.6, 69.6, 0.95),
   },
   "Main Bazar": {
-    open: makeModelCalibration(15.3, 69.4),
+    open: makeModelCalibration(10.9, 92.2),
     close: makeModelCalibration(14.5, 69.4),
     jodi: makeJodiCalibration(17.7, 62.9, 0.85),
   },

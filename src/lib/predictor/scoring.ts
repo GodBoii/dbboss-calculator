@@ -63,6 +63,19 @@ const CURRENT_SCORE_TUNING: ScoreTuning = {
   },
 };
 
+const OPEN_SCORE_TUNING: ScoreTuning = {
+  ...CURRENT_SCORE_TUNING,
+  suttaPenalty: {
+    fresh: 0,
+    warming: 0,
+    danger: 0,
+    dangerHigh: 0,
+    cooling: 0,
+    snapback: 0,
+    unknown: 0,
+  },
+};
+
 const CLOSE_SCORE_TUNING: ScoreTuning = {
   ...CURRENT_SCORE_TUNING,
   useDayBoost: false,
@@ -480,6 +493,7 @@ function scoreDoublePanelsForPosition(
 export type { ScoringContext, ScoreTuning, DpScoreProfile };
 export {
   CURRENT_SCORE_TUNING,
+  OPEN_SCORE_TUNING,
   CLOSE_SCORE_TUNING,
   JODI_SCORE_TUNING,
   JODI_SAMPLE_DENOMINATOR,
