@@ -21,6 +21,7 @@ import {
   saveRecords,
   getRecordsByMarket,
   clearMarket,
+  RECENT_HISTORY_DAYS,
   type PanelRecord,
 } from "@/lib/db"
 import { AnalysisTabs } from "./analysis/AnalysisTabs"
@@ -94,7 +95,7 @@ export default function AnalysisSection() {
   const runJodiModel = useCallback((sutta: number, panelStr: string | null) => {
     if (!result) return
     const ctx = buildContextFromResult(result)
-    const analysis = computeJodiAnalysis(sutta, panelStr, cachedRecordsRef.current, ctx)
+    const analysis = computeJodiAnalysis(sutta, panelStr, cachedRecordsRef.current, ctx, result.closeDpKindContext)
     setJodiResult(analysis)
     setPicksSubTab("jodi")
   }, [result])
@@ -124,7 +125,7 @@ export default function AnalysisSection() {
 
         if (cached.length > 50 && cacheIsFresh && !forceRefresh) {
           // We have enough cached data — skip scraping
-          setLoadingMessage(`Using ${cached.length} cached records…`)
+          setLoadingMessage(`Using ${cached.length} cached recent records (${RECENT_HISTORY_DAYS} days)…`)
           records = cached
           setCachedCount(cached.length)
         } else {
@@ -157,7 +158,7 @@ export default function AnalysisSection() {
           }
 
           // ── Step 3: Save to IndexedDB ──────────────────────────────────
-          setLoadingMessage(`Saving ${freshPanels.length} draws to local storage…`)
+          setLoadingMessage(`Saving ${freshPanels.length} recent draws to local storage…`)
           const now = Date.now()
           const toSave: PanelRecord[] = freshPanels.map((p) => ({
             id: `${p.market}|${p.dateRangeStart}|${p.day}`,
@@ -369,7 +370,7 @@ export default function AnalysisSection() {
           {/* ── Status Bar ───────────────────────────────────────────────── */}
           <div className="status-bar glass-panel">
             <div className="status-item">
-              <span className="status-label">Draws</span>
+              <span className="status-label">2yr Draws</span>
               <span className="status-value">{result.totalDraws.toLocaleString()}</span>
             </div>
             <div className="status-divider" />
