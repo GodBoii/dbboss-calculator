@@ -50,6 +50,9 @@ export type PanelKind = "SP" | "DP";
 export interface PanelKindPrediction {
   predictedKind: PanelKind;
   confidence: number;
+  estimatedDpRate: number;
+  dpBias: number;
+  dpSignals: string[];
   scores: Record<PanelKind, number>;
   top30Counts: Record<PanelKind, number>;
 }

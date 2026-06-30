@@ -1,13 +1,67 @@
 import type { PanelRecord } from "../db";
+import { getRecordISODate } from "../db";
 import type { DpKindContext } from "./types";
 import type { FlatEntry } from "./data";
 import {
+  HIGH_VOLUME_MARKETS,
   LIQUIDITY_FLOW_MAP,
   NIGHT_MARKET_NAMES,
   WEEKDAY_DP_BIAS_CLOSE,
   WEEKDAY_DP_BIAS_OPEN,
 } from "./market-config";
 import { getDoublePanelDigit, isDoublePanel } from "./panel-utils";
+
+function toLocalISODate(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function getLatestRecordForDate(records: PanelRecord[], isoDate: string): PanelRecord | null {
+  for (let i = records.length - 1; i >= 0; i--) {
+    if (getRecordISODate(records[i]) === isoDate) return records[i];
+  }
+  return null;
+}
+
+function getEarlierTodayDpState(
+  marketName: string,
+  allMarketsRecords: Record<string, PanelRecord[]>,
+  analysisDate: Date,
+  isClose: boolean,
+) {
+  const targetISO = toLocalISODate(analysisDate);
+  const marketIndex = HIGH_VOLUME_MARKETS.indexOf(marketName);
+  let observedPanels = 0;
+  let dpCount = 0;
+  let sameMarketOpenKind: "SP" | "DP" | null = null;
+
+  if (marketIndex === -1) return { observedPanels, dpCount, sameMarketOpenKind };
+
+  for (const [idx, name] of HIGH_VOLUME_MARKETS.entries()) {
+    if (idx > marketIndex) break;
+
+    const record = getLatestRecordForDate(allMarketsRecords[name] ?? [], targetISO);
+    if (!record) continue;
+
+    if (idx < marketIndex && record.openPanel) {
+      observedPanels++;
+      if (isDoublePanel(record.openPanel)) dpCount++;
+    }
+    if (idx < marketIndex && record.closePanel) {
+      observedPanels++;
+      if (isDoublePanel(record.closePanel)) dpCount++;
+    }
+    if (idx === marketIndex && isClose && record.openPanel) {
+      observedPanels++;
+      sameMarketOpenKind = isDoublePanel(record.openPanel) ? "DP" : "SP";
+      if (sameMarketOpenKind === "DP") dpCount++;
+    }
+  }
+
+  return { observedPanels, dpCount, sameMarketOpenKind };
+}
 
 function computeDpKindContext(
   marketName: string,
@@ -16,6 +70,7 @@ function computeDpKindContext(
   allMarketsRecords: Record<string, PanelRecord[]>,
   todayDayName: string,
   isClose: boolean,
+  analysisDate: Date,
 ): DpKindContext {
   const signals: string[] = [];
 
@@ -39,6 +94,34 @@ function computeDpKindContext(
   }
 
   // ── 3. Market-specific DP digit triggers ──────────────────────────────────
+  const earlierToday = getEarlierTodayDpState(
+    marketName,
+    allMarketsRecords,
+    analysisDate,
+    isClose,
+  );
+  if (earlierToday.observedPanels >= 2 && earlierToday.dpCount === 0) {
+    const dryMultiplier = todayDayName === "Sunday" ? 0.72 : 0.84;
+    dpBias *= dryMultiplier;
+    signals.push(
+      `Dry-day cascade: 0/${earlierToday.observedPanels} earlier DPs (x${dryMultiplier})`,
+    );
+  } else if (earlierToday.dpCount >= 4) {
+    dpBias *= 1.22;
+    signals.push(`Hot DP day: ${earlierToday.dpCount} earlier DPs (x1.22)`);
+  } else if (earlierToday.dpCount >= 2) {
+    dpBias *= 1.14;
+    signals.push(`Active DP day: ${earlierToday.dpCount} earlier DPs (x1.14)`);
+  }
+
+  if (isClose && earlierToday.sameMarketOpenKind === "DP") {
+    dpBias *= 1.1;
+    signals.push("Same-market open was DP (x1.10)");
+  } else if (isClose && earlierToday.sameMarketOpenKind === "SP") {
+    dpBias *= 0.92;
+    signals.push("Same-market open was SP (x0.92)");
+  }
+
   const lastOpenDpEntry = [...openEntries]
     .reverse()
     .find((e) => isDoublePanel(e.panel));
@@ -91,6 +174,7 @@ function computeDpKindContext(
         lastSrc.closePanel && isDoublePanel(lastSrc.closePanel)
           ? getDoublePanelDigit(lastSrc.closePanel)
           : null;
+      const sourceCloseSutta = lastSrc.closeSutta;
 
       // Time Bazar: Sridevi prev-open dpDigit=6 → 57.1% (21 support)
       if (marketName === "Time Bazar" && srcOpenDpDigit === "6") {
@@ -103,6 +187,14 @@ function computeDpKindContext(
         signals.push(`Source prev-open digit-3 (night boost ×1.20)`);
       }
       // Madhur Night: Sridevi Night prev-open dpDigit=1 → 53.3% (30 support)
+      if (
+        NIGHT_MARKET_NAMES.has(marketName) &&
+        lastOpenDpDigit === "3" &&
+        sourceCloseSutta === 8
+      ) {
+        dpBias *= 1.28;
+        signals.push("Night gold rule: own digit-3 + source close sutta=8 (x1.28)");
+      }
       if (marketName === "Madhur Night" && srcOpenDpDigit === "1") {
         dpBias *= 1.15;
         signals.push("Madhur Night: Sridevi Night prev-open digit-1 (×1.15)");
