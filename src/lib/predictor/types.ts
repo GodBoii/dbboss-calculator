@@ -97,8 +97,18 @@ export interface JodiAnalysis {
   closeSuttaPenalties: Record<number, number>;
   adjustedClosePicks: PanelPick[];
   adjustedCloseDpPicks: PanelPick[];
+  adjustedCloseDpDigitFocus: DpDigitFocus | null;
   kindPrediction: PanelKindPrediction;
   totalMatchingDraws: number;
+}
+
+export interface DpDigitFocus {
+  digits: [string, string];
+  pairKey: string;
+  score: number;
+  confidence: number;
+  depth: number;
+  supportPanels: string[];
 }
 
 export type SuttaSignalState =
