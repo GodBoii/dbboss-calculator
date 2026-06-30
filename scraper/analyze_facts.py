@@ -55,7 +55,7 @@ def main():
     # Filter for high volume markets
     high_vol = [
         'Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan',
-        'Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar'
+        'Sridevi Night', 'Kalyan Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar'
     ]
     df_high = df[df['market'].isin(high_vol)].copy()
     

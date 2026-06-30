@@ -13,9 +13,9 @@ class AdvancedPredictor:
         # Categorize markets by assumed volume (Liquidity)
         self.high_volume = [
             'Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan',
-            'Sridevi Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar'
+            'Sridevi Night', 'Kalyan Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar'
         ]
-        self.medium_volume = ['Time Bazar', 'Madhur Day', 'Rajdhani Day', 'Sridevi Night', 'Madhur Night', 'Rajdhani Night']
+        self.medium_volume = ['Time Bazar', 'Madhur Day', 'Rajdhani Day', 'Sridevi Night', 'Kalyan Night', 'Madhur Night', 'Rajdhani Night']
         
         # Liquidity-Based Correlation (Chronological Flow)
         # Target Market (Where they chase) -> Source Market (Where they won/lost earlier)
@@ -26,6 +26,7 @@ class AdvancedPredictor:
             'Rajdhani Day': 'Milan Day',
             'Kalyan': 'Rajdhani Day',
             'Sridevi Night': 'Kalyan',
+            'Kalyan Night': 'Kalyan',
             'Madhur Night': 'Sridevi Night',
             'Milan Night': 'Madhur Night',
             'Rajdhani Night': 'Milan Night',
