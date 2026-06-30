@@ -15,6 +15,7 @@ import { computeDpKindContext } from "./dp-kind-context";
 import {
   CLOSE_SCORE_TUNING,
   CURRENT_SCORE_TUNING,
+  OPEN_SCORE_TUNING,
   buildKindPrediction,
   scoreDoublePanelsForPosition,
   scorePanelsForPosition,
@@ -169,7 +170,12 @@ export function analyzeMarket(
     calibration: calibration.close,
   };
 
-  const openPicks = scorePanelsForPosition(openEntries, openCtx);
+  const openPicks = scorePanelsForPosition(
+    openEntries,
+    openCtx,
+    undefined,
+    OPEN_SCORE_TUNING,
+  );
   const closePicks = scorePanelsForPosition(
     closeEntries,
     closeCtx,
@@ -189,11 +195,16 @@ export function analyzeMarket(
     "close",
   );
 
-  const topPicks = scorePanelsForPosition(allPanelEntries, {
-    ...baseCtx,
-    suttaDroughts: combinedSuttaDroughts,
-    calibration: calibration.open,
-  });
+  const topPicks = scorePanelsForPosition(
+    allPanelEntries,
+    {
+      ...baseCtx,
+      suttaDroughts: combinedSuttaDroughts,
+      calibration: calibration.open,
+    },
+    undefined,
+    OPEN_SCORE_TUNING,
+  );
 
   return {
     market: marketName,
