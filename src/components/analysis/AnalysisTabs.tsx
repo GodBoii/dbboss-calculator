@@ -3,9 +3,11 @@ import type { JodiAnalysis, PredictionResult } from "@/lib/predictor"
 import type { BacktestReport } from "@/lib/backtest"
 import {
   CopyButton,
+  DpDigitFocusSection,
   DpFocusSection,
   KindForecastCard,
   PicksList,
+  formatDpDigitFocusForCopy,
   formatPicksForCopy,
 } from "./AnalysisWidgets"
 
@@ -258,22 +260,22 @@ export function AnalysisTabs({
                           />
                         </div>
                         <PicksList picks={jodiResult.adjustedClosePicks} getScoreColor={getScoreColor} />
-                        <DpFocusSection
-                          title="Jodi Close DP Focus"
-                          copyLabel="Copy Jodi DP"
+                        <DpDigitFocusSection
+                          title="Jodi Close DP Numbers"
+                          copyLabel="Copy DP Numbers"
                           copyKey="jodi-dp"
-                          picks={jodiResult.adjustedCloseDpPicks}
+                          focus={jodiResult.adjustedCloseDpDigitFocus}
                           isCopied={copyingKey === "jodi-dp"}
                           onCopy={() =>
+                            jodiResult.adjustedCloseDpDigitFocus &&
                             handleCopy(
                               "jodi-dp",
-                              formatPicksForCopy(
-                                jodiResult.adjustedCloseDpPicks,
+                              formatDpDigitFocusForCopy(
+                                jodiResult.adjustedCloseDpDigitFocus,
                                 `${selectedMarket} — Jodi Close DP (Open Sutta=${jodiResult.openSutta})`
                               )
                             )
                           }
-                          getScoreColor={getScoreColor}
                         />
                       </>
                     )}

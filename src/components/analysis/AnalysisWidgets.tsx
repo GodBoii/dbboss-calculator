@@ -1,4 +1,5 @@
 import type {
+  DpDigitFocus,
   JodiCalibration,
   ModelCalibration,
   PanelKind,
@@ -8,6 +9,10 @@ import type {
 
 export function formatPicksForCopy(picks: PanelPick[], _header: string): string {
   return picks.map((p) => p.panel).join("-")
+}
+
+export function formatDpDigitFocusForCopy(focus: DpDigitFocus, _header: string): string {
+  return focus.digits.join("-")
 }
 
 function levelLabel(level: ModelCalibration["level"]) {
@@ -114,6 +119,66 @@ export function DpFocusSection({
         <CopyButton label={copyLabel} isCopied={isCopied} onClick={onCopy} />
       </div>
       <PicksList picks={picks} getScoreColor={getScoreColor} />
+    </div>
+  )
+}
+
+export function DpDigitFocusSection({
+  title,
+  copyLabel,
+  focus,
+  isCopied,
+  onCopy,
+}: {
+  title: string
+  copyLabel: string
+  copyKey: string
+  focus: DpDigitFocus | null
+  isCopied: boolean
+  onCopy: () => void
+}) {
+  if (!focus) return null
+
+  return (
+    <div style={{ marginTop: "18px" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "10px", gap: "12px" }}>
+        <div>
+          <h4 className="stat-section-title" style={{ margin: 0 }}>{title}</h4>
+          <p className="picks-hint" style={{ margin: "4px 0 0" }}>
+            Two-number DP focus from the Jodi-adjusted DP model
+          </p>
+        </div>
+        <CopyButton label={copyLabel} isCopied={isCopied} onClick={onCopy} />
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+          gap: "10px",
+          marginBottom: "10px",
+        }}
+      >
+        {focus.digits.map((digit, index) => (
+          <div
+            key={`${digit}-${index}`}
+            className="hero-pick"
+            style={{
+              minHeight: "92px",
+              justifyContent: "center",
+              gap: "6px",
+            }}
+          >
+            <span className="hero-rank">#{index + 1}</span>
+            <span className="hero-panel" style={{ fontSize: "34px", lineHeight: 1 }}>{digit}</span>
+            <span className="hero-sutta">Digit</span>
+          </div>
+        ))}
+      </div>
+
+      <p className="picks-hint" style={{ margin: 0 }}>
+        Pair strength {focus.confidence.toFixed(1)}% from top {focus.depth} DP candidates
+      </p>
     </div>
   )
 }
