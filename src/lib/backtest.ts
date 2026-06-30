@@ -232,6 +232,7 @@ export function runMarketBacktest(
         record.openPanel || null,
         prior,
         buildContextFromResult(prediction),
+        prediction.closeDpKindContext,
       )
       evaluatePickSet(
         jodi,

@@ -1,4 +1,4 @@
-import type { ModelCalibration, PanelKind, PanelKindPrediction, PanelPick } from "./types";
+import type { DpKindContext, ModelCalibration, PanelKind, PanelKindPrediction, PanelPick } from "./types";
 import type { FlatEntry } from "./data";
 import {
   ALL_PANELS,
@@ -186,8 +186,11 @@ function countDayDpSignals(entries: FlatEntry[], dayName: string) {
 
 function buildKindPrediction(
   picks: PanelPick[],
-  dpBias: number = 1.0,
+  dpContext: DpKindContext | number = 1.0,
+  dpBiasThreshold = 1.3,
 ): PanelKindPrediction {
+  const dpBias = typeof dpContext === "number" ? dpContext : dpContext.dpBias;
+  const dpSignals = typeof dpContext === "number" ? [] : dpContext.signals;
   // Re-rank using effective scores (dpBias applied to DP panels only)
   const reranked = picks
     .map((p) => ({
@@ -214,18 +217,26 @@ function buildKindPrediction(
   // ≥ 1.50) flip to DP. At the 1.50 level the actual DP probability in
   // the research data was consistently above 55-70%.
   const expectedDpInTop30 = (90 / 220) * 30; // ≈ 12.27
-  const dpThresholdReached =
-    top30Counts.DP > expectedDpInTop30 && dpBias >= 1.4;
+  // Kind-only mode: SP/DP comes from contextual DP pressure, not panel rank.
+  const dpThresholdReached = dpBias >= dpBiasThreshold;
   const predictedKind: PanelKind = dpThresholdReached ? "DP" : "SP";
 
   const totalScore = Object.values(scores).reduce((sum, s) => sum + s, 0);
+  const baseDpRate = 24.4;
+  const estimatedDpRate = Math.max(
+    5,
+    Math.min(70, Math.round(baseDpRate * dpBias * 10) / 10),
+  );
 
   return {
     predictedKind,
     confidence:
-      totalScore > 0
-        ? Math.round((scores[predictedKind] / totalScore) * 1000) / 10
-        : 0,
+      predictedKind === "DP"
+        ? estimatedDpRate
+        : Math.round((100 - estimatedDpRate) * 10) / 10,
+    estimatedDpRate,
+    dpBias: Math.round(dpBias * 100) / 100,
+    dpSignals,
     scores: {
       SP: Math.round(scores.SP * 10) / 10,
       DP: Math.round(scores.DP * 10) / 10,
@@ -490,6 +501,53 @@ function scoreDoublePanelsForPosition(
   return picks;
 }
 
+function boostDoublePanelFocusPicks(
+  picks: PanelPick[],
+  dpContext: DpKindContext,
+): PanelPick[] {
+  const boostedDigits = new Map<string, number>();
+  let suttaThreeBoost = 0;
+
+  for (const signal of dpContext.signals) {
+    const digitMatch = signal.match(/digit[-=](\d)/i);
+    if (digitMatch) {
+      const digit = digitMatch[1];
+      const boost =
+        signal.includes("night gold") || signal.includes("digit-3")
+          ? 18
+          : signal.includes("digit-8")
+            ? 16
+            : 12;
+      boostedDigits.set(digit, Math.max(boostedDigits.get(digit) ?? 0, boost));
+    }
+    if (signal.includes("sutta=3 blind-spot")) {
+      suttaThreeBoost = 8;
+    }
+  }
+
+  const dpBiasBoost = dpContext.dpBias >= 1.4 ? 5 : dpContext.dpBias <= 0.85 ? -8 : 0;
+
+  return picks
+    .map((pick) => {
+      const repeatedDigit = getDoublePanelDigit(pick.panel);
+      const digitBoost = repeatedDigit ? (boostedDigits.get(repeatedDigit) ?? 0) : 0;
+      const suttaBoost = pick.sutta === 3 ? suttaThreeBoost : 0;
+      const score = Math.max(
+        0,
+        Math.min(100, pick.score + digitBoost + suttaBoost + dpBiasBoost),
+      );
+      return {
+        ...pick,
+        score: Math.round(score * 100) / 100,
+        breakdown: {
+          ...pick.breakdown,
+          dayBoost: Math.round((pick.breakdown.dayBoost + digitBoost + suttaBoost + dpBiasBoost) * 100) / 100,
+        },
+      };
+    })
+    .sort((a, b) => b.score - a.score);
+}
+
 export type { ScoringContext, ScoreTuning, DpScoreProfile };
 export {
   CURRENT_SCORE_TUNING,
@@ -506,5 +564,6 @@ export {
   buildKindPrediction,
   scorePanelsForPosition,
   scoreDoublePanelsForPosition,
+  boostDoublePanelFocusPicks,
 };
 
