@@ -3,6 +3,7 @@ import { type NextRequest } from 'next/server'
 export const runtime = 'nodejs'
 // No caching - always fetch fresh data
 export const dynamic = 'force-dynamic'
+const RECENT_HISTORY_DAYS = 730
 
 /**
  * Thin CORS-bypass proxy for Matka panel data.
@@ -34,6 +35,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const response = await fetch(targetUrl, {
+      cache: 'no-store',
       headers: {
         'User-Agent':
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -53,7 +55,7 @@ export async function GET(request: NextRequest) {
     }
 
     const html = await response.text()
-    const panels = parseHtmlForPanels(html, marketName)
+    const panels = filterRecentPanels(parseHtmlForPanels(html, marketName))
 
     return Response.json(
       { market: marketName, panels, count: panels.length, scrapedAt: new Date().toISOString() },
@@ -193,6 +195,48 @@ function parseHtmlForPanels(html: string, market: string): ParsedPanel[] {
   }
 
   return results
+}
+
+const DAY_OFFSETS: Record<string, number> = {
+  Monday: 0,
+  Tuesday: 1,
+  Wednesday: 2,
+  Thursday: 3,
+  Friday: 4,
+  Saturday: 5,
+  Sunday: 6,
+}
+
+function parsePanelDate(dateStr: string): Date | null {
+  const cleaned = dateStr.replace(/-/g, '/')
+  const parts = cleaned.split('/').map((part) => parseInt(part, 10))
+  if (parts.length !== 3 || parts.some((part) => Number.isNaN(part))) return null
+  const [day, month, rawYear] = parts
+  const year = rawYear < 100 ? rawYear + 2000 : rawYear
+  return new Date(Date.UTC(year, month - 1, day))
+}
+
+function panelISODate(panel: ParsedPanel): string | null {
+  const start = parsePanelDate(panel.dateRangeStart)
+  if (!start) return null
+  start.setUTCDate(start.getUTCDate() + (DAY_OFFSETS[panel.day] ?? 0))
+  return start.toISOString().slice(0, 10)
+}
+
+function filterRecentPanels(panels: ParsedPanel[]): ParsedPanel[] {
+  const dated = panels
+    .map((panel) => ({ panel, isoDate: panelISODate(panel) }))
+    .filter((item): item is { panel: ParsedPanel; isoDate: string } => Boolean(item.isoDate))
+
+  if (dated.length === 0) return panels
+
+  const newestISO = dated.reduce((max, item) => item.isoDate > max ? item.isoDate : max, dated[0].isoDate)
+  const cutoff = new Date(`${newestISO}T00:00:00Z`)
+  cutoff.setUTCDate(cutoff.getUTCDate() - RECENT_HISTORY_DAYS + 1)
+  const cutoffISO = cutoff.toISOString().slice(0, 10)
+  return dated
+    .filter((item) => item.isoDate >= cutoffISO)
+    .map((item) => item.panel)
 }
 
 export interface ParsedPanel {

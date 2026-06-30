@@ -22,6 +22,7 @@ export interface PanelRecord {
 const DB_NAME = 'dbboss_v2'
 const DB_VERSION = 1
 const STORE_NAME = 'panels'
+export const RECENT_HISTORY_DAYS = 730
 
 let dbPromise: Promise<IDBDatabase> | null = null
 
@@ -48,26 +49,82 @@ function openDB(): Promise<IDBDatabase> {
   return dbPromise
 }
 
-/** Parse DD/MM/YYYY into a sortable number (YYYYMMDD). */
-function dateToSortKey(dateStr: string): number {
+const DAY_OFFSETS: Record<string, number> = {
+  Monday: 0,
+  Tuesday: 1,
+  Wednesday: 2,
+  Thursday: 3,
+  Friday: 4,
+  Saturday: 5,
+  Sunday: 6,
+}
+
+function addDays(date: Date, days: number): Date {
+  const next = new Date(date)
+  next.setUTCDate(next.getUTCDate() + days)
+  return next
+}
+
+function toISODate(date: Date): string {
+  return date.toISOString().slice(0, 10)
+}
+
+/** Parse DD/MM/YYYY into a UTC date. */
+export function parsePanelDate(dateStr: string): Date | null {
   // Handle formats: "DD/MM/YYYY", "DD-MM-YYYY", "DD/MM/YY"
   const cleaned = dateStr.replace(/-/g, '/')
   const parts = cleaned.split('/')
-  if (parts.length !== 3) return 0
+  if (parts.length !== 3) return null
   const day = parseInt(parts[0]) || 0
   const month = parseInt(parts[1]) || 0
   let year = parseInt(parts[2]) || 0
   if (year < 100) year += 2000
-  return year * 10000 + month * 100 + day
+  if (!day || !month || !year) return null
+  return new Date(Date.UTC(year, month - 1, day))
+}
+
+export function getRecordISODate(record: Pick<PanelRecord, 'dateRangeStart' | 'day'>): string | null {
+  const start = parsePanelDate(record.dateRangeStart)
+  if (!start) return null
+  return toISODate(addDays(start, DAY_OFFSETS[record.day] ?? 0))
+}
+
+function cutoffISO(days: number, anchor = new Date()): string {
+  const cutoff = new Date(anchor)
+  cutoff.setUTCDate(cutoff.getUTCDate() - days + 1)
+  return toISODate(cutoff)
+}
+
+export function filterRecordsByRecentHistory(records: PanelRecord[], days = RECENT_HISTORY_DAYS): PanelRecord[] {
+  const dated = records
+    .map((record) => ({ record, isoDate: getRecordISODate(record) }))
+    .filter((item): item is { record: PanelRecord; isoDate: string } => Boolean(item.isoDate))
+
+  if (dated.length === 0) return records
+
+  const newestISO = dated.reduce((max, item) => item.isoDate > max ? item.isoDate : max, dated[0].isoDate)
+  const anchor = new Date(`${newestISO}T00:00:00Z`)
+  const minISO = cutoffISO(days, anchor)
+  return dated
+    .filter((item) => item.isoDate >= minISO)
+    .map((item) => item.record)
+}
+
+/** Parse DD/MM/YYYY into a sortable number (YYYYMMDD). */
+function dateToSortKey(dateStr: string): number {
+  const date = parsePanelDate(dateStr)
+  if (!date) return 0
+  return date.getUTCFullYear() * 10000 + (date.getUTCMonth() + 1) * 100 + date.getUTCDate()
 }
 
 /** Store an array of panel records (upserts by id). */
 export async function saveRecords(records: PanelRecord[]): Promise<void> {
   const db = await openDB()
+  const recentRecords = filterRecordsByRecentHistory(records)
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_NAME, 'readwrite')
     const store = tx.objectStore(STORE_NAME)
-    for (const record of records) {
+    for (const record of recentRecords) {
       store.put(record)
     }
     tx.oncomplete = () => resolve()
@@ -96,7 +153,7 @@ export async function getRecordsByMarket(market: string): Promise<PanelRecord[]>
         if (dateA !== dateB) return dateA - dateB
         return (dayOrder[a.day] ?? 9) - (dayOrder[b.day] ?? 9)
       })
-      resolve(records)
+      resolve(filterRecordsByRecentHistory(records))
     }
     request.onerror = (e) => reject((e.target as IDBRequest).error)
   })
