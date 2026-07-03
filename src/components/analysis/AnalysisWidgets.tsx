@@ -129,6 +129,7 @@ export function DpDigitFocusSection({
   focus,
   isCopied,
   onCopy,
+  description = "Two-number DP focus from the DP model",
 }: {
   title: string
   copyLabel: string
@@ -136,6 +137,7 @@ export function DpDigitFocusSection({
   focus: DpDigitFocus | null
   isCopied: boolean
   onCopy: () => void
+  description?: string
 }) {
   if (!focus) return null
 
@@ -145,7 +147,7 @@ export function DpDigitFocusSection({
         <div>
           <h4 className="stat-section-title" style={{ margin: 0 }}>{title}</h4>
           <p className="picks-hint" style={{ margin: "4px 0 0" }}>
-            Two-number DP focus from the Jodi-adjusted DP model
+            {description}
           </p>
         </div>
         <CopyButton label={copyLabel} isCopied={isCopied} onClick={onCopy} />

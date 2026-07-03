@@ -144,6 +144,23 @@ export function AnalysisTabs({
                           }
                           getScoreColor={getScoreColor}
                         />
+                        <DpDigitFocusSection
+                          title="Open DP Numbers"
+                          copyLabel="Copy Open Numbers"
+                          copyKey="open-dp-numbers"
+                          focus={result.openDpDigitFocus}
+                          isCopied={copyingKey === "open-dp-numbers"}
+                          onCopy={() =>
+                            result.openDpDigitFocus &&
+                            handleCopy(
+                              "open-dp-numbers",
+                              formatDpDigitFocusForCopy(
+                                result.openDpDigitFocus,
+                                `${selectedMarket} â€” Open DP Numbers`
+                              )
+                            )
+                          }
+                        />
                       </>
                     )}
     
@@ -183,6 +200,23 @@ export function AnalysisTabs({
                             )
                           }
                           getScoreColor={getScoreColor}
+                        />
+                        <DpDigitFocusSection
+                          title="Close DP Numbers"
+                          copyLabel="Copy Close Numbers"
+                          copyKey="close-dp-numbers"
+                          focus={result.closeDpDigitFocus}
+                          isCopied={copyingKey === "close-dp-numbers"}
+                          onCopy={() =>
+                            result.closeDpDigitFocus &&
+                            handleCopy(
+                              "close-dp-numbers",
+                              formatDpDigitFocusForCopy(
+                                result.closeDpDigitFocus,
+                                `${selectedMarket} â€” Close DP Numbers`
+                              )
+                            )
+                          }
                         />
                       </>
                     )}
@@ -295,6 +329,7 @@ export function AnalysisTabs({
                               )
                             )
                           }
+                          description="Two-number DP focus from the Jodi-adjusted DP model"
                         />
                       </>
                     )}
