@@ -1,5 +1,5 @@
 import type { PanelRecord } from "../db";
-import type { DpDigitFocus, DpKindContext, JodiAnalysis, JodiCalibration, PanelPick, PredictionResult } from "./types";
+import type { DpKindContext, JodiAnalysis, JodiCalibration, PredictionResult } from "./types";
 import type { FlatEntry } from "./data";
 import type { ScoringContext } from "./scoring";
 import { VOL_MULTIPLIER } from "./market-config";
@@ -9,68 +9,10 @@ import {
   JODI_SAMPLE_DENOMINATOR,
   JODI_SCORE_TUNING,
   JODI_STRENGTH_SCALE,
+  buildDpDigitFocus,
   buildKindPrediction,
   scorePanelsForPosition,
 } from "./scoring";
-
-function getDoublePanelDigitPair(panel: string): [string, string] | null {
-  if (!isDoublePanel(panel)) return null;
-
-  const counts: Record<string, number> = {};
-  for (const digit of panel) counts[digit] = (counts[digit] ?? 0) + 1;
-
-  const digits = Object.keys(counts);
-  if (digits.length !== 2) return null;
-
-  return digits.sort() as [string, string];
-}
-
-function buildDpDigitFocus(picks: PanelPick[], depth = 15): DpDigitFocus | null {
-  const pairScores = new Map<
-    string,
-    {
-      digits: [string, string];
-      score: number;
-      supportPanels: string[];
-    }
-  >();
-
-  for (const [index, pick] of picks.slice(0, depth).entries()) {
-    const digits = getDoublePanelDigitPair(pick.panel);
-    if (!digits) continue;
-
-    const pairKey = digits.join("");
-    const rankWeight = depth - index;
-    const weightedScore = pick.score * rankWeight;
-    const current = pairScores.get(pairKey) ?? {
-      digits,
-      score: 0,
-      supportPanels: [],
-    };
-
-    current.score += weightedScore;
-    if (!current.supportPanels.includes(pick.panel)) {
-      current.supportPanels.push(pick.panel);
-    }
-    pairScores.set(pairKey, current);
-  }
-
-  const ranked = [...pairScores.entries()].sort((a, b) => b[1].score - a[1].score);
-  const winner = ranked[0];
-  if (!winner) return null;
-
-  const totalScore = ranked.reduce((sum, [, item]) => sum + item.score, 0);
-  const [, item] = winner;
-
-  return {
-    digits: item.digits,
-    pairKey: winner[0],
-    score: Math.round(item.score * 10) / 10,
-    confidence: totalScore > 0 ? Math.round((item.score / totalScore) * 1000) / 10 : 0,
-    depth,
-    supportPanels: item.supportPanels.slice(0, 4),
-  };
-}
 
 export function computeJodiAnalysis(
   openSutta: number,

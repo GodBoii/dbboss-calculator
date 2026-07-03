@@ -1,4 +1,4 @@
-import type { DpKindContext, ModelCalibration, PanelKind, PanelKindPrediction, PanelPick } from "./types";
+import type { DpDigitFocus, DpKindContext, ModelCalibration, PanelKind, PanelKindPrediction, PanelPick } from "./types";
 import type { FlatEntry } from "./data";
 import {
   ALL_PANELS,
@@ -508,6 +508,65 @@ function scoreDoublePanelsForPosition(
   return picks;
 }
 
+function getDoublePanelDigitPair(panel: string): [string, string] | null {
+  if (!isDoublePanel(panel)) return null;
+
+  const counts: Record<string, number> = {};
+  for (const digit of panel) counts[digit] = (counts[digit] ?? 0) + 1;
+
+  const digits = Object.keys(counts);
+  if (digits.length !== 2) return null;
+
+  return digits.sort() as [string, string];
+}
+
+function buildDpDigitFocus(picks: PanelPick[], depth = 15): DpDigitFocus | null {
+  const pairScores = new Map<
+    string,
+    {
+      digits: [string, string];
+      score: number;
+      supportPanels: string[];
+    }
+  >();
+
+  for (const [index, pick] of picks.slice(0, depth).entries()) {
+    const digits = getDoublePanelDigitPair(pick.panel);
+    if (!digits) continue;
+
+    const pairKey = digits.join("");
+    const rankWeight = depth - index;
+    const weightedScore = pick.score * rankWeight;
+    const current = pairScores.get(pairKey) ?? {
+      digits,
+      score: 0,
+      supportPanels: [],
+    };
+
+    current.score += weightedScore;
+    if (!current.supportPanels.includes(pick.panel)) {
+      current.supportPanels.push(pick.panel);
+    }
+    pairScores.set(pairKey, current);
+  }
+
+  const ranked = [...pairScores.entries()].sort((a, b) => b[1].score - a[1].score);
+  const winner = ranked[0];
+  if (!winner) return null;
+
+  const totalScore = ranked.reduce((sum, [, item]) => sum + item.score, 0);
+  const [, item] = winner;
+
+  return {
+    digits: item.digits,
+    pairKey: winner[0],
+    score: Math.round(item.score * 10) / 10,
+    confidence: totalScore > 0 ? Math.round((item.score / totalScore) * 1000) / 10 : 0,
+    depth,
+    supportPanels: item.supportPanels.slice(0, 4),
+  };
+}
+
 function boostDoublePanelFocusPicks(
   picks: PanelPick[],
   dpContext: DpKindContext,
@@ -569,6 +628,7 @@ export {
   getLastSeenGap,
   countDayDpSignals,
   buildKindPrediction,
+  buildDpDigitFocus,
   scorePanelsForPosition,
   scoreDoublePanelsForPosition,
   boostDoublePanelFocusPicks,

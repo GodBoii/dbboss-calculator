@@ -20,6 +20,7 @@ import {
   CLOSE_SCORE_TUNING,
   CURRENT_SCORE_TUNING,
   OPEN_SCORE_TUNING,
+  buildDpDigitFocus,
   buildKindPrediction,
   boostDoublePanelFocusPicks,
   scoreDoublePanelsForPosition,
@@ -262,6 +263,8 @@ export function analyzeMarket(
     closePicks: closePicks.slice(0, 30),
     openDpPicks: openDpPicks.slice(0, 30),
     closeDpPicks: closeDpPicks.slice(0, 30),
+    openDpDigitFocus: buildDpDigitFocus(openDpPicks),
+    closeDpDigitFocus: buildDpDigitFocus(closeDpPicks),
     openKindPrediction: buildKindPrediction(
       openPicks,
       openDpKindContext,
