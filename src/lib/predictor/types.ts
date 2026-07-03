@@ -27,6 +27,8 @@ export interface PredictionResult {
   closeKindPrediction: PanelKindPrediction;
   openDpKindContext: DpKindContext;
   closeDpKindContext: DpKindContext;
+  openOperatorContext: OperatorContext;
+  closeOperatorContext: OperatorContext;
   totalRecordsAnalysed: number;
   totalDraws: number;
   stats: MarketStats;
@@ -43,6 +45,13 @@ export interface DpKindContext {
   weekdayBias: number;
   /** Human-readable list of active signals and their multipliers. */
   signals: string[];
+}
+
+export interface OperatorContext {
+  panelAdjustments: Record<string, number>;
+  dpBiasMultiplier: number;
+  signals: string[];
+  mood: "balanced" | "defensive" | "hooking";
 }
 
 export type PanelKind = "SP" | "DP";
@@ -74,6 +83,7 @@ export interface PanelPick {
     cooldownPenalty: number;
     dayBoost: number;
     jodiPenalty: number;
+    operatorAdjustment?: number;
   };
 }
 

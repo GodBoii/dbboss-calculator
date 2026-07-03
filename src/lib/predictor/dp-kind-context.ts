@@ -101,17 +101,17 @@ function computeDpKindContext(
     isClose,
   );
   if (earlierToday.observedPanels >= 2 && earlierToday.dpCount === 0) {
-    const dryMultiplier = todayDayName === "Sunday" ? 0.72 : 0.84;
+    const dryMultiplier = todayDayName === "Sunday" ? 0.78 : 0.94;
     dpBias *= dryMultiplier;
     signals.push(
       `Dry-day cascade: 0/${earlierToday.observedPanels} earlier DPs (x${dryMultiplier})`,
     );
   } else if (earlierToday.dpCount >= 4) {
-    dpBias *= 1.22;
-    signals.push(`Hot DP day: ${earlierToday.dpCount} earlier DPs (x1.22)`);
+    dpBias *= 0.92;
+    signals.push(`Hot DP day defensive turn: ${earlierToday.dpCount} earlier DPs (x0.92)`);
   } else if (earlierToday.dpCount >= 2) {
-    dpBias *= 1.14;
-    signals.push(`Active DP day: ${earlierToday.dpCount} earlier DPs (x1.14)`);
+    dpBias *= 1.04;
+    signals.push(`Active DP day mild continuation: ${earlierToday.dpCount} earlier DPs (x1.04)`);
   }
 
   if (isClose && earlierToday.sameMarketOpenKind === "DP") {
@@ -221,14 +221,14 @@ function computeDpKindContext(
         prevNightOpenDpCount++;
     }
     if (prevNightOpenDpCount === 1) {
-      dpBias *= 1.28;
+      dpBias *= 1.12;
       signals.push(
-        "Night→Day: prev night 1 open DP — key warm-up signal (×1.28)",
+        "Night-to-day: prev night 1 open DP, mild warm-up (x1.12)",
       );
     } else if (prevNightOpenDpCount === 0) {
-      dpBias *= 0.9;
+      dpBias *= 0.96;
       signals.push(
-        "Night→Day: prev night 0 open DPs — dry-night signal (×0.90)",
+        "Night-to-day: prev night 0 open DPs, mild dry signal (x0.96)",
       );
     }
   }
