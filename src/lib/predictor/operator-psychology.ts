@@ -71,6 +71,16 @@ function computeDpGapProfile(entries: FlatEntry[]) {
   };
 }
 
+function recentDpRate(entries: FlatEntry[], depth: number): number {
+  const recent = entries.slice(-depth);
+  if (recent.length === 0) return 0;
+  return recent.filter((entry) => isDoublePanel(entry.panel)).length / recent.length;
+}
+
+function countRecentDp(entries: FlatEntry[], depth: number): number {
+  return entries.slice(-depth).filter((entry) => isDoublePanel(entry.panel)).length;
+}
+
 function marketPressureMultiplier(marketName: string, position: Position): number {
   if (marketName === "Main Bazar" && position === "close") return 1.15;
   if (marketName === "Madhur Day" && position === "open") return 0.9;
@@ -95,6 +105,38 @@ function buildOperatorContext({
   const pressureScale = marketPressureMultiplier(marketName, position);
   const adjustments: Record<string, number> = {};
   const signals: string[] = [];
+  const recent6DpCount = countRecentDp(entries, 6);
+  const recent12DpRate = recentDpRate(entries, 12);
+  const recent24DpRate = recentDpRate(entries, 24);
+  const dpGap = computeDpGapProfile(entries);
+  const date = analysisDate.getDate();
+
+  let generosityIndex = 50;
+  if (recent12DpRate <= 0.12) generosityIndex += 10;
+  else if (recent12DpRate >= 0.42) generosityIndex -= 12;
+
+  if (recent24DpRate <= 0.16) generosityIndex += 6;
+  else if (recent24DpRate >= 0.36) generosityIndex -= 7;
+
+  if (dpGap.p90Gap !== null && dpGap.currentGap >= dpGap.p90Gap) {
+    generosityIndex += 8;
+  }
+  if (recent6DpCount === 0) generosityIndex += 6;
+  else if (recent6DpCount >= 3) generosityIndex -= 10;
+
+  if (date >= 1 && date <= 5) generosityIndex += 3;
+  else if (date >= 25 && date <= 28) generosityIndex += 4;
+  else if (date >= 29) generosityIndex -= 3;
+
+  generosityIndex = Math.round(clamp(generosityIndex, 0, 100));
+
+  let regime: OperatorContext["regime"] = "standard";
+  if (recent6DpCount >= 3 && position === "close") regime = "trap";
+  else if (generosityIndex < 30) regime = "iron";
+  else if (generosityIndex < 43) regime = "conservative";
+  else if (generosityIndex < 62) regime = "standard";
+  else if (generosityIndex < 78) regime = "hooking";
+  else regime = "hot";
 
   for (const panel of ALL_PANELS) {
     const count = panelCounts[panel] ?? 0;
@@ -126,21 +168,28 @@ function buildOperatorContext({
     else if (isSequential(panel)) adjustment -= 2;
     adjustment -= countLuckyDigits(panel) * 0.8;
 
+    if (regime === "iron" || regime === "trap") {
+      if (getPanelKind(panel) === "DP") {
+        const regimeDpPenalty = regime === "trap" ? 1.5 : position === "open" ? 1.5 : 2.5;
+        adjustment -= regimeDpPenalty * pressureScale;
+      }
+      if (isSequential(panel)) adjustment -= 4;
+    } else if (regime === "hooking" || regime === "hot") {
+      if (getPanelKind(panel) === "DP" && gap > 8) adjustment += regime === "hot" ? 3 : 2;
+      if (regime === "hot" && panelParityShape(panel) !== "MIXED") adjustment += 1;
+    }
+
     adjustments[panel] = round(clamp(adjustment, -12, 8));
   }
 
-  const recent = entries.slice(-12);
-  const recentDpCount = recent.filter((entry) => isDoublePanel(entry.panel)).length;
-  const recentDpRate = recent.length > 0 ? recentDpCount / recent.length : 0;
-  const dpGap = computeDpGapProfile(entries);
   let dpBiasMultiplier = 1;
   let mood: OperatorContext["mood"] = "balanced";
 
-  if (recent.length >= 8 && recentDpRate <= 0.12) {
+  if (entries.length >= 8 && recent12DpRate <= 0.12) {
     dpBiasMultiplier *= 1.08;
     mood = "hooking";
     signals.push("Operator hook pressure: recent DP scarcity (x1.08)");
-  } else if (recent.length >= 8 && recentDpRate >= 0.42) {
+  } else if (entries.length >= 8 && recent12DpRate >= 0.42) {
     dpBiasMultiplier *= 0.9;
     mood = "defensive";
     signals.push("Operator defensive pressure: recent DP cluster (x0.90)");
@@ -151,7 +200,6 @@ function buildOperatorContext({
     signals.push(`DP retention gap >= p90 (${dpGap.currentGap}/${dpGap.p90Gap}, x1.05)`);
   }
 
-  const date = analysisDate.getDate();
   if (date >= 1 && date <= 5) {
     mood = mood === "hooking" ? "hooking" : "defensive";
     signals.push("Payday book pressure: avoid obvious public bait");
@@ -159,13 +207,39 @@ function buildOperatorContext({
     signals.push("Month-end liquidity: camouflage band favored");
   }
 
-  dpBiasMultiplier = round(clamp(dpBiasMultiplier, 0.82, 1.16));
+  if (regime === "iron") {
+    const ironMultiplier = position === "open" ? 0.98 : 0.92;
+    dpBiasMultiplier *= ironMultiplier;
+    mood = "defensive";
+    signals.push(`Regime IRON: OGI ${generosityIndex}/100 (x${ironMultiplier})`);
+  } else if (regime === "conservative") {
+    dpBiasMultiplier *= 0.94;
+    signals.push(`Regime conservative: OGI ${generosityIndex}/100 (x0.94)`);
+  } else if (regime === "trap") {
+    dpBiasMultiplier *= 0.94;
+    mood = "defensive";
+    signals.push(`Regime TRAP: recent close-chase risk, OGI ${generosityIndex}/100 (x0.94)`);
+  } else if (regime === "hooking") {
+    dpBiasMultiplier *= 1.1;
+    mood = "hooking";
+    signals.push(`Regime hooking: OGI ${generosityIndex}/100 (x1.10)`);
+  } else if (regime === "hot") {
+    dpBiasMultiplier *= 1.14;
+    mood = "hooking";
+    signals.push(`Regime HOT: OGI ${generosityIndex}/100 (x1.14)`);
+  } else {
+    signals.push(`Regime standard: OGI ${generosityIndex}/100`);
+  }
+
+  dpBiasMultiplier = round(clamp(dpBiasMultiplier, 0.76, 1.22));
 
   return {
     panelAdjustments: adjustments,
     dpBiasMultiplier,
     signals,
     mood,
+    regime,
+    generosityIndex,
   };
 }
 

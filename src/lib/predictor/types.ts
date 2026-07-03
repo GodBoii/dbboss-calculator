@@ -23,6 +23,8 @@ export interface PredictionResult {
   closePicks: PanelPick[];
   openDpPicks: PanelPick[];
   closeDpPicks: PanelPick[];
+  openDpDigitFocus: DpDigitFocus | null;
+  closeDpDigitFocus: DpDigitFocus | null;
   openKindPrediction: PanelKindPrediction;
   closeKindPrediction: PanelKindPrediction;
   openDpKindContext: DpKindContext;
@@ -52,6 +54,8 @@ export interface OperatorContext {
   dpBiasMultiplier: number;
   signals: string[];
   mood: "balanced" | "defensive" | "hooking";
+  regime: "iron" | "conservative" | "standard" | "hooking" | "hot" | "trap";
+  generosityIndex: number;
 }
 
 export type PanelKind = "SP" | "DP";
