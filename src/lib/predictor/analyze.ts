@@ -13,6 +13,10 @@ import { flattenRecords } from "./data";
 import { computeStats } from "./stats";
 import { computeDpKindContext } from "./dp-kind-context";
 import {
+  buildOperatorContext,
+  mergeOperatorIntoDpContext,
+} from "./operator-psychology";
+import {
   CLOSE_SCORE_TUNING,
   CURRENT_SCORE_TUNING,
   OPEN_SCORE_TUNING,
@@ -140,7 +144,22 @@ export function analyzeMarket(
   };
 
   // ── 7. Compute DP kind context (research-backed signals for SP/DP bias) ────────
-  const openDpKindContext = computeDpKindContext(
+  const openOperatorContext = buildOperatorContext({
+    marketName,
+    entries: openEntries,
+    suttaDroughts: combinedSuttaDroughts,
+    position: "open",
+    analysisDate,
+  });
+  const closeOperatorContext = buildOperatorContext({
+    marketName,
+    entries: closeEntries,
+    suttaDroughts: closeSuttaDroughts,
+    position: "close",
+    analysisDate,
+  });
+
+  const openDpKindContext = mergeOperatorIntoDpContext(computeDpKindContext(
     marketName,
     openEntries,
     closeEntries,
@@ -148,8 +167,8 @@ export function analyzeMarket(
     todayDayName,
     false,
     analysisDate,
-  );
-  const closeDpKindContext = computeDpKindContext(
+  ), openOperatorContext);
+  const closeDpKindContext = mergeOperatorIntoDpContext(computeDpKindContext(
     marketName,
     openEntries,
     closeEntries,
@@ -157,7 +176,7 @@ export function analyzeMarket(
     todayDayName,
     true,
     analysisDate,
-  );
+  ), closeOperatorContext);
 
   // ── 8. Score panels for Open and Close (pure historical scoring, no dpBias in scores) ─
   // The dpBias is applied only inside buildKindPrediction (reranking for kind decision)
@@ -166,11 +185,13 @@ export function analyzeMarket(
     ...baseCtx,
     suttaDroughts: combinedSuttaDroughts,
     calibration: calibration.open,
+    operatorPanelAdjustments: openOperatorContext.panelAdjustments,
   };
   const closeCtx = {
     ...baseCtx,
     suttaDroughts: closeSuttaDroughts,
     calibration: calibration.close,
+    operatorPanelAdjustments: closeOperatorContext.panelAdjustments,
   };
 
   const openPicks = scorePanelsForPosition(
@@ -210,6 +231,7 @@ export function analyzeMarket(
       ...baseCtx,
       suttaDroughts: combinedSuttaDroughts,
       calibration: calibration.open,
+      operatorPanelAdjustments: openOperatorContext.panelAdjustments,
     },
     undefined,
     OPEN_SCORE_TUNING,
@@ -252,6 +274,8 @@ export function analyzeMarket(
     ),
     openDpKindContext,
     closeDpKindContext,
+    openOperatorContext,
+    closeOperatorContext,
     totalRecordsAnalysed: allPanelEntries.length,
     totalDraws: records.length,
     stats,

@@ -12,5 +12,6 @@ export * from "./predictor/panel-utils";
 export * from "./predictor/sutta-signals";
 export * from "./predictor/scoring";
 export * from "./predictor/stats";
+export * from "./predictor/operator-psychology";
 export * from "./predictor/analyze";
 export * from "./predictor/jodi";

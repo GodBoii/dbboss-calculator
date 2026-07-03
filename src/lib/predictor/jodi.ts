@@ -4,6 +4,7 @@ import type { FlatEntry } from "./data";
 import type { ScoringContext } from "./scoring";
 import { VOL_MULTIPLIER } from "./market-config";
 import { isDoublePanel } from "./panel-utils";
+import { applyKnownOpenOperatorReaction } from "./operator-psychology";
 import {
   JODI_SAMPLE_DENOMINATOR,
   JODI_SCORE_TUNING,
@@ -11,35 +12,6 @@ import {
   buildKindPrediction,
   scorePanelsForPosition,
 } from "./scoring";
-
-function applyOpenPanelCleanFilter(picks: PanelPick[], openPanel: string | null): PanelPick[] {
-  if (!openPanel || openPanel.length !== 3) return picks;
-
-  const openFirst = openPanel[0];
-  const openLast = openPanel[2];
-
-  return picks
-    .map((pick) => {
-      const sharesFirst = pick.panel.includes(openFirst);
-      const sharesLast = pick.panel.includes(openLast);
-      let adjustment = 0;
-
-      if (!sharesFirst && !sharesLast) adjustment = 18;
-      else if (sharesFirst && sharesLast) adjustment = -45;
-      else adjustment = -14;
-
-      const score = Math.max(0, Math.min(100, pick.score + adjustment));
-      return {
-        ...pick,
-        score: Math.round(score * 100) / 100,
-        breakdown: {
-          ...pick.breakdown,
-          dayBoost: Math.round((pick.breakdown.dayBoost + adjustment) * 100) / 100,
-        },
-      };
-    })
-    .sort((a, b) => b.score - a.score);
-}
 
 function getDoublePanelDigitPair(panel: string): [string, string] | null {
   if (!isDoublePanel(panel)) return null;
@@ -193,17 +165,17 @@ export function computeJodiAnalysis(
     }
   }
 
-  const adjustedPicks = scorePanelsForPosition(
-    closeEntries,
-    ctx,
-    closeSuttaPenalties,
-    JODI_SCORE_TUNING,
-  );
-
-  const adjustedCloseDpPicks = applyOpenPanelCleanFilter(
-    adjustedPicks.filter((pick) => isDoublePanel(pick.panel)),
+  const adjustedPicks = applyKnownOpenOperatorReaction(
+    scorePanelsForPosition(
+      closeEntries,
+      ctx,
+      closeSuttaPenalties,
+      JODI_SCORE_TUNING,
+    ),
     openPanel,
   );
+
+  const adjustedCloseDpPicks = adjustedPicks.filter((pick) => isDoublePanel(pick.panel));
   const adjustedCloseDpDigitFocus = buildDpDigitFocus(adjustedCloseDpPicks);
 
   return {
@@ -241,6 +213,7 @@ export function buildContextFromResult(
     suttaDroughts: result.closeSuttaDroughts,
     todayDayName: result.analysisDayName,
     calibration: result.calibration.jodi,
+    operatorPanelAdjustments: result.closeOperatorContext.panelAdjustments,
   };
 }
 
