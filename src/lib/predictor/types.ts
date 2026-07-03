@@ -135,15 +135,27 @@ export interface SuttaSignal {
 export interface MarketStats {
   totalRecords: number;
   totalDraws: number;
+  openPanelCount: number;
+  closePanelCount: number;
   sequenceCount: number;
   sequenceRate: number;
+  openSequenceCount: number;
+  openSequenceRate: number;
+  closeSequenceCount: number;
+  closeSequenceRate: number;
   tripleCount: number;
   tripleRate: number;
+  openTripleCount: number;
+  openTripleRate: number;
+  closeTripleCount: number;
+  closeTripleRate: number;
   jodiCount: number;
   topOpenPanels: Array<{ panel: string; count: number }>;
   topClosePanels: Array<{ panel: string; count: number }>;
   topJodis: Array<{ jodi: string; count: number }>;
   suttaDistribution: Record<string, number>;
+  openSuttaDistribution: Record<string, number>;
+  closeSuttaDistribution: Record<string, number>;
 }
 
 export type CalibrationLevel = "weak" | "fair" | "strong";
