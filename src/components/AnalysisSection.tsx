@@ -108,6 +108,8 @@ export default function AnalysisSection() {
       setResult(null)
       setJodiResult(null)
       setBacktestReport(null)
+      setActiveTab("picks")
+      setPicksSubTab("open")
       setOpenSuttaInput(null)
       setOpenPanelInput("")
 
@@ -243,6 +245,9 @@ export default function AnalysisSection() {
     setSelectedMarket(s === "day" ? "Kalyan" : "Main Bazar")
     setResult(null)
     setBacktestReport(null)
+    setJodiResult(null)
+    setActiveTab("picks")
+    setPicksSubTab("open")
     setLoadingState("idle")
     setCachedCount(null)
   }
@@ -295,6 +300,9 @@ export default function AnalysisSection() {
                 setSelectedMarket(market)
                 setResult(null)
                 setBacktestReport(null)
+                setJodiResult(null)
+                setActiveTab("picks")
+                setPicksSubTab("open")
                 setLoadingState("idle")
                 setCachedCount(null)
               }}

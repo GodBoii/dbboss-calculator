@@ -102,7 +102,7 @@
 }
 
 .hero-picks {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 16px;
