@@ -21,6 +21,7 @@ interface ScoringContext {
   suttaDroughts: Record<string, number>;
   todayDayName: string;
   calibration: ModelCalibration;
+  operatorPanelAdjustments?: Record<string, number>;
 }
 
 type RecencyMode = "current" | "older-heavy";
@@ -344,6 +345,7 @@ function scorePanelsForPosition(
 
     // --- H) Jodi penalty (only for Close panels with Jodi model active) ---
     const jodiPenalty = jodiSuttaPenalties?.[panelSutta] ?? 0;
+    const operatorAdjustment = ctx.operatorPanelAdjustments?.[panel] ?? 0;
 
     // --- Final Score ---
     const rawScore =
@@ -354,7 +356,8 @@ function scorePanelsForPosition(
       triplePenalty -
       saturationPenalty +
       dayBoost -
-      jodiPenalty;
+      jodiPenalty +
+      operatorAdjustment;
 
     const finalScore = Math.max(0, Math.min(100, rawScore));
 
@@ -375,6 +378,7 @@ function scorePanelsForPosition(
         cooldownPenalty,
         dayBoost: Math.round(dayBoost * 100) / 100,
         jodiPenalty: Math.round(jodiPenalty * 100) / 100,
+        operatorAdjustment: Math.round(operatorAdjustment * 100) / 100,
       },
     });
   }
@@ -457,6 +461,7 @@ function scoreDoublePanelsForPosition(
           (profile === "open" ? 0.8 : 0.3)
         : 0;
     const dpDigitCooldown = digitGap <= 1 ? (profile === "close" ? 8 : 15) : 0;
+    const operatorAdjustment = ctx.operatorPanelAdjustments?.[panel] ?? 0;
     const dpOverlay =
       profile === "open"
         ? dayRepeatedBoost + daySuttaBoost
@@ -472,7 +477,8 @@ function scoreDoublePanelsForPosition(
       seqPenalty -
       triplePenalty -
       saturationPenalty -
-      dpDigitCooldown;
+      dpDigitCooldown +
+      operatorAdjustment;
 
     const finalScore = Math.max(0, Math.min(100, rawScore));
 
@@ -493,6 +499,7 @@ function scoreDoublePanelsForPosition(
         cooldownPenalty: cooldownPenalty + dpDigitCooldown,
         dayBoost: Math.round((dayRepeatedBoost + daySuttaBoost) * 100) / 100,
         jodiPenalty: 0,
+        operatorAdjustment: Math.round(operatorAdjustment * 100) / 100,
       },
     });
   }
