@@ -211,9 +211,9 @@ export function PicksList({ picks, getScoreColor }: { picks: PanelPick[]; getSco
 
       {/* Full Picks List */}
       <div className="picks-list">
-        {picks.slice(3).map((pick, i) => (
+        {picks.map((pick, i) => (
           <div key={pick.panel} className="pick-row">
-            <span className="pick-rank text-muted">#{i + 4}</span>
+            <span className="pick-rank text-muted">#{i + 1}</span>
             <span className="pick-panel">{pick.panel}</span>
             <span className="pick-sutta" style={{ color: kindColor(pick.kind) }}>{pick.kind}</span>
             <span className="pick-sutta">S{pick.sutta}</span>

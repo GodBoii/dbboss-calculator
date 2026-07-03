@@ -45,6 +45,25 @@ export function AnalysisTabs({
   pct,
   dpPrecision,
 }: AnalysisTabsProps) {
+  const effectivePicksSubTab = picksSubTab === "jodi" && !jodiResult ? "close" : picksSubTab
+  const activePickLabel =
+    effectivePicksSubTab === "open" ? "Open" : effectivePicksSubTab === "jodi" ? "Jodi Close" : "Close"
+  const activeBreakdownPicks =
+    effectivePicksSubTab === "open"
+      ? result.openPicks
+      : effectivePicksSubTab === "jodi" && jodiResult
+        ? jodiResult.adjustedClosePicks
+        : result.closePicks
+  const activeSequenceRate =
+    effectivePicksSubTab === "open" ? result.stats.openSequenceRate : result.stats.closeSequenceRate
+  const activeTripleRate =
+    effectivePicksSubTab === "open" ? result.stats.openTripleRate : result.stats.closeTripleRate
+  const activePanelCount =
+    effectivePicksSubTab === "open" ? result.stats.openPanelCount : result.stats.closePanelCount
+  const activeSuttaDistribution =
+    effectivePicksSubTab === "open" ? result.stats.openSuttaDistribution : result.stats.closeSuttaDistribution
+  const maxActiveSuttaCount = Math.max(...Object.values(activeSuttaDistribution), 1)
+
   return (
     <div className="glass-panel tab-panel">
                 <div className="tab-nav">
@@ -293,24 +312,48 @@ export function AnalysisTabs({
                 {activeTab === "stats" && (
                   <div className="stats-section">
                     <div className="stat-row">
+                      <span className="stat-label">Market</span>
+                      <span className="stat-value">{result.market}</span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Active view</span>
+                      <span className="stat-value">{activePickLabel}</span>
+                    </div>
+                    <div className="stat-row">
                       <span className="stat-label">Total Draws</span>
                       <span className="stat-value">{result.stats.totalDraws.toLocaleString()}</span>
                     </div>
                     <div className="stat-row">
-                      <span className="stat-label">Sequences (actual)</span>
-                      <span className="stat-value stat-warn">{result.stats.sequenceRate.toFixed(2)}%</span>
+                      <span className="stat-label">Open / Close panels</span>
+                      <span className="stat-value">
+                        {result.stats.openPanelCount.toLocaleString()} / {result.stats.closePanelCount.toLocaleString()}
+                      </span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">{activePickLabel} panels counted</span>
+                      <span className="stat-value">{activePanelCount.toLocaleString()}</span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">{activePickLabel} sequences (actual)</span>
+                      <span className="stat-value stat-warn">{activeSequenceRate.toFixed(2)}%</span>
                     </div>
                     <div className="stat-row">
                       <span className="stat-label">Sequences (expected random)</span>
                       <span className="stat-value">~5.45%</span>
                     </div>
                     <div className="stat-row">
-                      <span className="stat-label">Triples (actual)</span>
-                      <span className="stat-value stat-danger">{result.stats.tripleRate.toFixed(2)}%</span>
+                      <span className="stat-label">{activePickLabel} triples (actual)</span>
+                      <span className="stat-value stat-danger">{activeTripleRate.toFixed(2)}%</span>
                     </div>
                     <div className="stat-row">
                       <span className="stat-label">Triples (expected random)</span>
                       <span className="stat-value">~4.55%</span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-label">Combined sequence / triple</span>
+                      <span className="stat-value">
+                        {result.stats.sequenceRate.toFixed(2)}% / {result.stats.tripleRate.toFixed(2)}%
+                      </span>
                     </div>
     
                     {backtestReport && (
@@ -425,18 +468,17 @@ export function AnalysisTabs({
                     )}
     
                     <div className="stat-divider" />
-                    <h4 className="stat-section-title">Sutta Distribution</h4>
+                    <h4 className="stat-section-title">{activePickLabel} Sutta Distribution</h4>
                     <div className="sutta-dist">
                       {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => {
-                        const count = result.stats.suttaDistribution[String(s)] ?? 0
-                        const maxCount = Math.max(...Object.values(result.stats.suttaDistribution), 1)
+                        const count = activeSuttaDistribution[String(s)] ?? 0
                         return (
                           <div key={s} className="sutta-dist-row">
                             <span className="sutta-dist-label">{s}</span>
                             <div className="sutta-dist-bar-bg">
                               <div
                                 className="sutta-dist-bar-fill"
-                                style={{ width: `${(count / maxCount) * 100}%` }}
+                                style={{ width: `${(count / maxActiveSuttaCount) * 100}%` }}
                               />
                             </div>
                             <span className="sutta-dist-count">{count}</span>
@@ -450,11 +492,11 @@ export function AnalysisTabs({
                 {/* ── INTEL / BREAKDOWN TAB ─────────────────────────────────── */}
                 {activeTab === "intel" && (
                   <div className="intel-section">
-                    <h4 className="stat-section-title">Score Breakdown (Top 10)</h4>
+                    <h4 className="stat-section-title">{activePickLabel} Score Breakdown (Top 10)</h4>
                     <p className="picks-hint">
                       How each penalty factor contributed to the final score
                     </p>
-                    {result.topPicks.slice(0, 10).map((pick) => (
+                    {activeBreakdownPicks.slice(0, 10).map((pick) => (
                       <div key={pick.panel} className="breakdown-row">
                         <div className="breakdown-header">
                           <span className="breakdown-panel">{pick.panel}</span>
@@ -493,6 +535,15 @@ export function AnalysisTabs({
                               <span className="bd-val bd-orange-text">-{pick.breakdown.luckyPenalty.toFixed(1)}</span>
                             </div>
                           )}
+                          {pick.breakdown.triplePenalty > 0 && (
+                            <div className="breakdown-item">
+                              <span className="bd-label">Triple Penalty</span>
+                              <div className="bd-bar-bg">
+                                <div className="bd-bar-fill bd-red" style={{ width: `${pick.breakdown.triplePenalty}%` }} />
+                              </div>
+                              <span className="bd-val" style={{ color: "#f87171" }}>-{pick.breakdown.triplePenalty.toFixed(1)}</span>
+                            </div>
+                          )}
                           {pick.breakdown.saturationPenalty > 0 && (
                             <div className="breakdown-item">
                               <span className="bd-label">Sutta Sat.</span>
@@ -518,6 +569,34 @@ export function AnalysisTabs({
                                 <div className="bd-bar-fill bd-green" style={{ width: `${pick.breakdown.dayBoost}%` }} />
                               </div>
                               <span className="bd-val" style={{ color: "#4ade80" }}>+{pick.breakdown.dayBoost.toFixed(1)}</span>
+                            </div>
+                          )}
+                          {pick.breakdown.jodiPenalty !== 0 && (
+                            <div className="breakdown-item">
+                              <span className="bd-label">Jodi Adj.</span>
+                              <div className="bd-bar-bg">
+                                <div
+                                  className={`bd-bar-fill ${pick.breakdown.jodiPenalty < 0 ? "bd-green" : "bd-red"}`}
+                                  style={{ width: `${Math.abs(pick.breakdown.jodiPenalty)}%` }}
+                                />
+                              </div>
+                              <span className="bd-val" style={{ color: pick.breakdown.jodiPenalty < 0 ? "#4ade80" : "#f87171" }}>
+                                {pick.breakdown.jodiPenalty < 0 ? "+" : "-"}{Math.abs(pick.breakdown.jodiPenalty).toFixed(1)}
+                              </span>
+                            </div>
+                          )}
+                          {pick.breakdown.operatorAdjustment !== undefined && pick.breakdown.operatorAdjustment !== 0 && (
+                            <div className="breakdown-item">
+                              <span className="bd-label">Operator</span>
+                              <div className="bd-bar-bg">
+                                <div
+                                  className={`bd-bar-fill ${pick.breakdown.operatorAdjustment > 0 ? "bd-green" : "bd-red"}`}
+                                  style={{ width: `${Math.abs(pick.breakdown.operatorAdjustment)}%` }}
+                                />
+                              </div>
+                              <span className="bd-val" style={{ color: pick.breakdown.operatorAdjustment > 0 ? "#4ade80" : "#f87171" }}>
+                                {pick.breakdown.operatorAdjustment > 0 ? "+" : "-"}{Math.abs(pick.breakdown.operatorAdjustment).toFixed(1)}
+                              </span>
                             </div>
                           )}
                         </div>
