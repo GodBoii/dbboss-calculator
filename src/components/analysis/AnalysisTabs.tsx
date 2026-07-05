@@ -36,7 +36,9 @@ export interface CopySuttaPick {
   score: number
   signalColor: string
   signalLabel: string
+  signalState: ReturnType<typeof getSuttaSignal>["state"]
   isFresh: boolean
+  isSnapback: boolean
 }
 
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
@@ -58,13 +60,38 @@ export function buildTopSuttaSet(
       score: pick.score,
       signalColor: signal.color,
       signalLabel: signal.label,
+      signalState: signal.state,
       isFresh: signal.state === "fresh",
+      isSnapback: signal.state === "snapback",
     })
   })
 
+  for (let sutta = 0; sutta <= 9; sutta++) {
+    if (bySutta.has(sutta)) continue
+    const signal = getSuttaSignal(droughts[String(sutta)] ?? 1000)
+    bySutta.set(sutta, {
+      sutta,
+      rank: 999,
+      score: 0,
+      signalColor: signal.color,
+      signalLabel: signal.label,
+      signalState: signal.state,
+      isFresh: signal.state === "fresh",
+      isSnapback: signal.state === "snapback",
+    })
+  }
+
   const ranked = Array.from(bySutta.values())
   const fresh = ranked.filter((item) => item.isFresh)
+  const snapback = ranked.filter((item) => item.isSnapback)
   const selected = [...fresh]
+
+  for (const item of snapback) {
+    if (selected.length >= count) break
+    if (!selected.some((selectedItem) => selectedItem.sutta === item.sutta)) {
+      selected.push(item)
+    }
+  }
 
   for (const item of ranked) {
     if (selected.length >= count) break
@@ -106,7 +133,7 @@ export function BetCopyDesk({
       <div className="bet-copy-head">
         <div>
           <h4 className="stat-section-title bet-copy-title">Bet Copy</h4>
-          <p className="picks-hint bet-copy-hint">Green first, then top rank</p>
+          <p className="picks-hint bet-copy-hint">Green first, snapback next, then top rank</p>
         </div>
         <div className="copy-count-control" aria-label="Top sutta count">
           <button

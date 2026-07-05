@@ -67,6 +67,7 @@ export default function AnalysisSection() {
   const [errorMsg, setErrorMsg] = useState("")
   const [activeTab, setActiveTab] = useState<"picks" | "stats" | "intel">("picks")
   const [picksSubTab, setPicksSubTab] = useState<"open" | "close" | "jodi">("open")
+  const [suttaSignalView, setSuttaSignalView] = useState<"open" | "close">("open")
   const [suttaCopyExpanded, setSuttaCopyExpanded] = useState(false)
   const [copyCount, setCopyCount] = useState(4)
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
@@ -255,29 +256,33 @@ export default function AnalysisSection() {
     [openCopySuttas, closeCopySuttas],
   )
 
-  const renderSuttaSignalGrid = (label: string, droughts: Record<string, number>) => (
+  const renderSuttaSignalList = (label: string, droughts: Record<string, number>) => (
     <div className="sutta-signal-panel">
       <div className="sutta-signal-panel-head">
         <span className="sutta-signal-panel-title">{label}</span>
         <span className="sutta-signal-panel-subtitle">position-specific</span>
       </div>
-      <div className="sutta-grid">
+      <div className="sutta-signal-list">
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => {
           const drought = droughts[String(s)] ?? 1000
           const signal = getSuttaSignal(drought)
-          const isHot = signal.state === "danger" || signal.state === "snapback"
+          const width = drought === 1000 ? 100 : Math.min(100, Math.max(8, (drought / 25) * 100))
+          const showLabel = signal.state !== "warming" && signal.state !== "cooling"
           return (
-            <div
-              key={`${label}-${s}`}
-              className={`sutta-cell ${isHot ? "sutta-saturated" : ""}`}
-              style={{ borderColor: signal.color }}
-              title={signal.description}
-            >
-              <span className="sutta-number">{s}</span>
-              <span className="sutta-drought" style={{ color: signal.color }}>
+            <div key={`${label}-${s}`} className="sutta-signal-row" title={signal.description}>
+              <span className="sutta-signal-digit" style={{ color: signal.color }}>{s}</span>
+              <div className="sutta-signal-bar-track">
+                <div
+                  className="sutta-signal-bar-fill"
+                  style={{ width: `${width}%`, background: signal.color }}
+                />
+              </div>
+              <span className="sutta-signal-days" style={{ color: signal.color }}>
                 {drought === 1000 ? "???" : `${drought}d`}
               </span>
-              {isHot && <span className={`sutta-sat-label sutta-sat-label--${signal.state}`}>{signal.label}</span>}
+              <span className={`sutta-signal-state sutta-signal-state--${signal.state}`}>
+                {showLabel ? signal.label : ""}
+              </span>
             </div>
           )
         })}
@@ -561,9 +566,33 @@ export default function AnalysisSection() {
               </div>
             </div>
 
+            <div className="sutta-signal-switch" aria-label="Sutta signal position">
+              <button
+                type="button"
+                className={`sutta-signal-switch-btn ${suttaSignalView === "open" ? "sutta-signal-switch-btn--active" : ""}`}
+                onClick={() => {
+                  haptic()
+                  setSuttaSignalView("open")
+                }}
+              >
+                Open
+              </button>
+              <button
+                type="button"
+                className={`sutta-signal-switch-btn ${suttaSignalView === "close" ? "sutta-signal-switch-btn--active" : ""}`}
+                onClick={() => {
+                  haptic()
+                  setSuttaSignalView("close")
+                }}
+              >
+                Close
+              </button>
+            </div>
+
             <div className="sutta-signal-layout">
-              {renderSuttaSignalGrid("Open Sutta", result.openSuttaDroughts)}
-              {renderSuttaSignalGrid("Close Sutta", result.closeSuttaDroughts)}
+              {suttaSignalView === "open"
+                ? renderSuttaSignalList("Open Sutta", result.openSuttaDroughts)
+                : renderSuttaSignalList("Close Sutta", result.closeSuttaDroughts)}
             </div>
 
             <button
