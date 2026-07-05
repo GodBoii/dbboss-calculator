@@ -550,7 +550,36 @@
 .sutta-signal-layout {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
+}
+
+.sutta-signal-switch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  margin-bottom: 14px;
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+}
+
+.sutta-signal-switch-btn {
+  min-height: 38px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: rgba(255,255,255,0.5);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sutta-signal-switch-btn--active {
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.22);
 }
 
 .sutta-signal-panel {
@@ -578,6 +607,80 @@
   color: rgba(255,255,255,0.36);
   font-size: 11px;
   font-weight: 600;
+}
+
+.sutta-signal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sutta-signal-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 42px 58px;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+}
+
+.sutta-signal-digit {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.sutta-signal-bar-track {
+  height: 18px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.sutta-signal-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  opacity: 0.95;
+}
+
+.sutta-signal-days {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.sutta-signal-state {
+  min-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: rgba(255,255,255,0.28);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.sutta-signal-state--fresh {
+  color: #4ade80;
+  background: rgba(74,222,128,0.13);
+}
+
+.sutta-signal-state--danger {
+  color: #f87171;
+  background: rgba(248,113,113,0.14);
+}
+
+.sutta-signal-state--snapback {
+  color: #60a5fa;
+  background: rgba(96,165,250,0.14);
+}
+
+.sutta-signal-state--unknown {
+  color: rgba(255,255,255,0.36);
+  background: rgba(255,255,255,0.08);
 }
 
 .sutta-map-tools-toggle {
