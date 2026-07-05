@@ -547,6 +547,75 @@
   gap: 8px;
 }
 
+.sutta-signal-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sutta-signal-panel {
+  min-width: 0;
+}
+
+.sutta-signal-panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.sutta-signal-panel-title {
+  color: rgba(255,255,255,0.86);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sutta-signal-panel-subtitle {
+  color: rgba(255,255,255,0.36);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sutta-map-tools-toggle {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.045);
+  color: rgba(255,255,255,0.82);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sutta-map-tools-toggle:hover {
+  background: rgba(255,255,255,0.07);
+}
+
+.sutta-map-tools {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.sutta-map-tools .bet-copy-desk {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
 .sutta-cell {
   display: flex;
   flex-direction: column;
