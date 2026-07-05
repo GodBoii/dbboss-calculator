@@ -1,4 +1,4 @@
-import { useMemo, useState, type Dispatch, type SetStateAction } from "react"
+import type { Dispatch, SetStateAction } from "react"
 import { getSuttaSignal, type JodiAnalysis, type PanelPick, type PredictionResult } from "@/lib/predictor"
 import type { BacktestReport } from "@/lib/backtest"
 import {
@@ -30,7 +30,7 @@ interface AnalysisTabsProps {
   dpPrecision: (correct: number, predicted: number) => string
 }
 
-interface CopySuttaPick {
+export interface CopySuttaPick {
   sutta: number
   rank: number
   score: number
@@ -41,7 +41,7 @@ interface CopySuttaPick {
 
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
 
-function buildTopSuttaSet(
+export function buildTopSuttaSet(
   picks: PanelPick[],
   droughts: Record<string, number>,
   count: number,
@@ -76,7 +76,7 @@ function buildTopSuttaSet(
   return selected.slice(0, count)
 }
 
-function buildJodis(openSuttas: CopySuttaPick[], closeSuttas: CopySuttaPick[]): string[] {
+export function buildJodis(openSuttas: CopySuttaPick[], closeSuttas: CopySuttaPick[]): string[] {
   return openSuttas.flatMap((open) => closeSuttas.map((close) => `${open.sutta}${close.sutta}`))
 }
 
@@ -84,7 +84,7 @@ function formatSuttasForCopy(suttas: CopySuttaPick[]): string {
   return suttas.map((item) => item.sutta).join("-")
 }
 
-function BetCopyDesk({
+export function BetCopyDesk({
   copyCount,
   setCopyCount,
   openSuttas,
@@ -215,7 +215,6 @@ export function AnalysisTabs({
   pct,
   dpPrecision,
 }: AnalysisTabsProps) {
-  const [copyCount, setCopyCount] = useState(4)
   const effectivePicksSubTab = picksSubTab === "jodi" && !jodiResult ? "close" : picksSubTab
   const activePickLabel =
     effectivePicksSubTab === "open" ? "Open" : effectivePicksSubTab === "jodi" ? "Jodi Close" : "Close"
@@ -234,18 +233,6 @@ export function AnalysisTabs({
   const activeSuttaDistribution =
     effectivePicksSubTab === "open" ? result.stats.openSuttaDistribution : result.stats.closeSuttaDistribution
   const maxActiveSuttaCount = Math.max(...Object.values(activeSuttaDistribution), 1)
-  const openCopySuttas = useMemo(
-    () => buildTopSuttaSet(result.openPicks, result.openSuttaDroughts, copyCount),
-    [result.openPicks, result.openSuttaDroughts, copyCount],
-  )
-  const closeCopySuttas = useMemo(
-    () => buildTopSuttaSet(result.closePicks, result.closeSuttaDroughts, copyCount),
-    [result.closePicks, result.closeSuttaDroughts, copyCount],
-  )
-  const generatedJodis = useMemo(
-    () => buildJodis(openCopySuttas, closeCopySuttas),
-    [openCopySuttas, closeCopySuttas],
-  )
 
   return (
     <div className="glass-panel tab-panel">
@@ -290,16 +277,6 @@ export function AnalysisTabs({
                       >🎯 Jodi Close</button>
                     </div>
 
-                    <BetCopyDesk
-                      copyCount={copyCount}
-                      setCopyCount={setCopyCount}
-                      openSuttas={openCopySuttas}
-                      closeSuttas={closeCopySuttas}
-                      jodis={generatedJodis}
-                      copyingKey={copyingKey}
-                      handleCopy={handleCopy}
-                    />
-    
                     {/* ── Open Picks ──────────────────────────────────────────── */}
                     {picksSubTab === "open" && (
                       <>

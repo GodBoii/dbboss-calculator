@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useRef } from "react"
+import { useState, useCallback, useMemo, useRef } from "react"
 import {
   HIGH_VOLUME_MARKETS,
   analyzeMarket,
@@ -10,11 +10,6 @@ import {
   getSuttaSignal,
   type PredictionResult,
   type JodiAnalysis,
-  type PanelPick,
-  type PanelKind,
-  type PanelKindPrediction,
-  type ModelCalibration,
-  type JodiCalibration,
 } from "@/lib/predictor"
 import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
 import {
@@ -24,7 +19,7 @@ import {
   RECENT_HISTORY_DAYS,
   type PanelRecord,
 } from "@/lib/db"
-import { AnalysisTabs } from "./analysis/AnalysisTabs"
+import { AnalysisTabs, BetCopyDesk, buildJodis, buildTopSuttaSet } from "./analysis/AnalysisTabs"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
 
 // ── Market URL Config ───────────────────────────────────────────────────
@@ -70,10 +65,10 @@ export default function AnalysisSection() {
   const [loadingMessage, setLoadingMessage] = useState("")
   const [result, setResult] = useState<PredictionResult | null>(null)
   const [errorMsg, setErrorMsg] = useState("")
-  const [cachedCount, setCachedCount] = useState<number | null>(null)
-  const [showBreakdown, setShowBreakdown] = useState(false)
   const [activeTab, setActiveTab] = useState<"picks" | "stats" | "intel">("picks")
   const [picksSubTab, setPicksSubTab] = useState<"open" | "close" | "jodi">("open")
+  const [suttaCopyExpanded, setSuttaCopyExpanded] = useState(false)
+  const [copyCount, setCopyCount] = useState(4)
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
   const [openPanelInput, setOpenPanelInput] = useState("")
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
@@ -130,7 +125,6 @@ export default function AnalysisSection() {
           // We have enough cached data — skip scraping
           setLoadingMessage(`Using ${cached.length} cached recent records (${RECENT_HISTORY_DAYS} days)…`)
           records = cached
-          setCachedCount(cached.length)
         } else {
           // ── Step 2: Fetch fresh data via proxy API ─────────────────────
           setLoadingMessage("Fetching panel chart data…")
@@ -173,7 +167,6 @@ export default function AnalysisSection() {
           // Merge with any existing cached records (deduplicated by id via IndexedDB upsert)
           const allRecords = await getRecordsByMarket(selectedMarket)
           records = allRecords
-          setCachedCount(records.length)
         }
 
         // ── Step 4: Fetch data for liquidity source market ─────────────────
@@ -222,10 +215,6 @@ export default function AnalysisSection() {
     return "#f87171"                     // red
   }
 
-  const getSuttaColor = (drought: number) => {
-    return getSuttaSignal(drought).color
-  }
-
   const pct = (value: number, total: number) => {
     if (!total) return "0.0%"
     return `${((value / total) * 100).toFixed(1)}%`
@@ -249,16 +238,52 @@ export default function AnalysisSection() {
     setActiveTab("picks")
     setPicksSubTab("open")
     setLoadingState("idle")
-    setCachedCount(null)
   }
 
   const activeMarkets = session === "day" ? DAY_MARKETS : NIGHT_MARKETS
   const isNight = session === "night"
-  const displayedSuttaDroughts = result
-    ? picksSubTab === "open"
-      ? result.combinedSuttaDroughts
-      : result.closeSuttaDroughts
-    : null
+  const openCopySuttas = useMemo(
+    () => result ? buildTopSuttaSet(result.openPicks, result.openSuttaDroughts, copyCount) : [],
+    [result, copyCount],
+  )
+  const closeCopySuttas = useMemo(
+    () => result ? buildTopSuttaSet(result.closePicks, result.closeSuttaDroughts, copyCount) : [],
+    [result, copyCount],
+  )
+  const generatedJodis = useMemo(
+    () => buildJodis(openCopySuttas, closeCopySuttas),
+    [openCopySuttas, closeCopySuttas],
+  )
+
+  const renderSuttaSignalGrid = (label: string, droughts: Record<string, number>) => (
+    <div className="sutta-signal-panel">
+      <div className="sutta-signal-panel-head">
+        <span className="sutta-signal-panel-title">{label}</span>
+        <span className="sutta-signal-panel-subtitle">position-specific</span>
+      </div>
+      <div className="sutta-grid">
+        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => {
+          const drought = droughts[String(s)] ?? 1000
+          const signal = getSuttaSignal(drought)
+          const isHot = signal.state === "danger" || signal.state === "snapback"
+          return (
+            <div
+              key={`${label}-${s}`}
+              className={`sutta-cell ${isHot ? "sutta-saturated" : ""}`}
+              style={{ borderColor: signal.color }}
+              title={signal.description}
+            >
+              <span className="sutta-number">{s}</span>
+              <span className="sutta-drought" style={{ color: signal.color }}>
+                {drought === 1000 ? "???" : `${drought}d`}
+              </span>
+              {isHot && <span className={`sutta-sat-label sutta-sat-label--${signal.state}`}>{signal.label}</span>}
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
 
   return (
     <section className="analysis-section">
@@ -304,7 +329,6 @@ export default function AnalysisSection() {
                 setActiveTab("picks")
                 setPicksSubTab("open")
                 setLoadingState("idle")
-                setCachedCount(null)
               }}
             >
               {market}
@@ -532,31 +556,50 @@ export default function AnalysisSection() {
               <div>
                 <h3 className="section-title">Sutta Signal Map</h3>
                 <p className="section-subtitle">
-                  Red = heated risk, blue = extreme snapback, green = fresh
+                  Open and Close are tracked separately. Red = heated risk, blue = extreme snapback, green = fresh
                 </p>
               </div>
             </div>
-            <div className="sutta-grid">
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => {
-                const drought = displayedSuttaDroughts?.[String(s)] ?? 1000
-                const signal = getSuttaSignal(drought)
-                const isHot = signal.state === "danger" || signal.state === "snapback"
-                return (
-                  <div
-                    key={s}
-                    className={`sutta-cell ${isHot ? "sutta-saturated" : ""}`}
-                    style={{ borderColor: signal.color }}
-                    title={signal.description}
-                  >
-                    <span className="sutta-number">{s}</span>
-                    <span className="sutta-drought" style={{ color: signal.color }}>
-                      {drought === 1000 ? "???" : `${drought}d`}
-                    </span>
-                    {isHot && <span className={`sutta-sat-label sutta-sat-label--${signal.state}`}>{signal.label}</span>}
-                  </div>
-                )
-              })}
+
+            <div className="sutta-signal-layout">
+              {renderSuttaSignalGrid("Open Sutta", result.openSuttaDroughts)}
+              {renderSuttaSignalGrid("Close Sutta", result.closeSuttaDroughts)}
             </div>
+
+            <button
+              type="button"
+              className="sutta-map-tools-toggle"
+              onClick={() => {
+                haptic()
+                setSuttaCopyExpanded((value) => !value)
+              }}
+              aria-expanded={suttaCopyExpanded}
+            >
+              <span>Copy Sutta / Jodi</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                style={{ transform: suttaCopyExpanded ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}
+              >
+                <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+
+            {suttaCopyExpanded && (
+              <div className="sutta-map-tools">
+                <BetCopyDesk
+                  copyCount={copyCount}
+                  setCopyCount={setCopyCount}
+                  openSuttas={openCopySuttas}
+                  closeSuttas={closeCopySuttas}
+                  jodis={generatedJodis}
+                  copyingKey={copyingKey}
+                  handleCopy={handleCopy}
+                />
+              </div>
+            )}
           </div>
 
           {/* ── Jodi Dependency Model Input ────────────────────────────────── */}
