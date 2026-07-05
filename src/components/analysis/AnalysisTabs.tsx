@@ -1,5 +1,5 @@
-import type { Dispatch, SetStateAction } from "react"
-import type { JodiAnalysis, PredictionResult } from "@/lib/predictor"
+import { useMemo, useState, type Dispatch, type SetStateAction } from "react"
+import { getSuttaSignal, type JodiAnalysis, type PanelPick, type PredictionResult } from "@/lib/predictor"
 import type { BacktestReport } from "@/lib/backtest"
 import {
   CopyButton,
@@ -30,6 +30,176 @@ interface AnalysisTabsProps {
   dpPrecision: (correct: number, predicted: number) => string
 }
 
+interface CopySuttaPick {
+  sutta: number
+  rank: number
+  score: number
+  signalColor: string
+  signalLabel: string
+  isFresh: boolean
+}
+
+const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
+
+function buildTopSuttaSet(
+  picks: PanelPick[],
+  droughts: Record<string, number>,
+  count: number,
+): CopySuttaPick[] {
+  const bySutta = new Map<number, CopySuttaPick>()
+
+  picks.forEach((pick, index) => {
+    if (bySutta.has(pick.sutta)) return
+
+    const signal = getSuttaSignal(droughts[String(pick.sutta)] ?? 1000)
+    bySutta.set(pick.sutta, {
+      sutta: pick.sutta,
+      rank: index + 1,
+      score: pick.score,
+      signalColor: signal.color,
+      signalLabel: signal.label,
+      isFresh: signal.state === "fresh",
+    })
+  })
+
+  const ranked = Array.from(bySutta.values())
+  const fresh = ranked.filter((item) => item.isFresh)
+  const selected = [...fresh]
+
+  for (const item of ranked) {
+    if (selected.length >= count) break
+    if (!selected.some((selectedItem) => selectedItem.sutta === item.sutta)) {
+      selected.push(item)
+    }
+  }
+
+  return selected.slice(0, count)
+}
+
+function buildJodis(openSuttas: CopySuttaPick[], closeSuttas: CopySuttaPick[]): string[] {
+  return openSuttas.flatMap((open) => closeSuttas.map((close) => `${open.sutta}${close.sutta}`))
+}
+
+function formatSuttasForCopy(suttas: CopySuttaPick[]): string {
+  return suttas.map((item) => item.sutta).join("-")
+}
+
+function BetCopyDesk({
+  copyCount,
+  setCopyCount,
+  openSuttas,
+  closeSuttas,
+  jodis,
+  copyingKey,
+  handleCopy,
+}: {
+  copyCount: number
+  setCopyCount: Dispatch<SetStateAction<number>>
+  openSuttas: CopySuttaPick[]
+  closeSuttas: CopySuttaPick[]
+  jodis: string[]
+  copyingKey: string | null
+  handleCopy: (key: string, text: string) => void
+}) {
+  return (
+    <div className="bet-copy-desk">
+      <div className="bet-copy-head">
+        <div>
+          <h4 className="stat-section-title bet-copy-title">Bet Copy</h4>
+          <p className="picks-hint bet-copy-hint">Green first, then top rank</p>
+        </div>
+        <div className="copy-count-control" aria-label="Top sutta count">
+          <button
+            type="button"
+            className="copy-count-btn"
+            onClick={() => setCopyCount((value) => clampCopyCount(value - 1))}
+            aria-label="Decrease top count"
+          >
+            -
+          </button>
+          <input
+            type="number"
+            inputMode="numeric"
+            min={1}
+            max={10}
+            value={copyCount}
+            onChange={(event) => setCopyCount(clampCopyCount(Number(event.target.value)))}
+            className="copy-count-input"
+            aria-label="Top count"
+          />
+          <button
+            type="button"
+            className="copy-count-btn"
+            onClick={() => setCopyCount((value) => clampCopyCount(value + 1))}
+            aria-label="Increase top count"
+          >
+            +
+          </button>
+        </div>
+      </div>
+
+      <div className="bet-copy-summary">
+        <span>Open {openSuttas.length}</span>
+        <span>Close {closeSuttas.length}</span>
+        <span>Jodi {jodis.length}</span>
+      </div>
+
+      <div className="bet-copy-grid">
+        <SuttaCopyGroup label="Open Sutta" suttas={openSuttas} />
+        <SuttaCopyGroup label="Close Sutta" suttas={closeSuttas} />
+      </div>
+
+      <div className="jodi-preview">
+        <span className="jodi-preview-label">Jodi</span>
+        <div className="jodi-chip-row">
+          {jodis.slice(0, 24).map((jodi) => (
+            <span key={jodi} className="jodi-chip">{jodi}</span>
+          ))}
+          {jodis.length > 24 && <span className="jodi-chip jodi-chip-more">+{jodis.length - 24}</span>}
+        </div>
+      </div>
+
+      <div className="bet-copy-actions">
+        <CopyButton
+          label="Open Sutta"
+          isCopied={copyingKey === "bet-open-sutta"}
+          onClick={() => handleCopy("bet-open-sutta", formatSuttasForCopy(openSuttas))}
+        />
+        <CopyButton
+          label="Close Sutta"
+          isCopied={copyingKey === "bet-close-sutta"}
+          onClick={() => handleCopy("bet-close-sutta", formatSuttasForCopy(closeSuttas))}
+        />
+        <CopyButton
+          label="Top Jodi"
+          isCopied={copyingKey === "bet-jodi"}
+          onClick={() => handleCopy("bet-jodi", jodis.join("-"))}
+        />
+      </div>
+    </div>
+  )
+}
+
+function SuttaCopyGroup({ label, suttas }: { label: string; suttas: CopySuttaPick[] }) {
+  return (
+    <div className="sutta-copy-group">
+      <span className="sutta-copy-label">{label}</span>
+      <div className="sutta-copy-chips">
+        {suttas.map((item) => (
+          <span
+            key={item.sutta}
+            className={`sutta-copy-chip ${item.isFresh ? "sutta-copy-chip--fresh" : ""}`}
+            style={{ borderColor: item.signalColor }}
+            title={`Rank #${item.rank} - ${item.signalLabel} - ${item.score.toFixed(1)} pts`}
+          >
+            {item.sutta}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export function AnalysisTabs({
   result,
   jodiResult,
@@ -45,6 +215,7 @@ export function AnalysisTabs({
   pct,
   dpPrecision,
 }: AnalysisTabsProps) {
+  const [copyCount, setCopyCount] = useState(4)
   const effectivePicksSubTab = picksSubTab === "jodi" && !jodiResult ? "close" : picksSubTab
   const activePickLabel =
     effectivePicksSubTab === "open" ? "Open" : effectivePicksSubTab === "jodi" ? "Jodi Close" : "Close"
@@ -63,6 +234,18 @@ export function AnalysisTabs({
   const activeSuttaDistribution =
     effectivePicksSubTab === "open" ? result.stats.openSuttaDistribution : result.stats.closeSuttaDistribution
   const maxActiveSuttaCount = Math.max(...Object.values(activeSuttaDistribution), 1)
+  const openCopySuttas = useMemo(
+    () => buildTopSuttaSet(result.openPicks, result.openSuttaDroughts, copyCount),
+    [result.openPicks, result.openSuttaDroughts, copyCount],
+  )
+  const closeCopySuttas = useMemo(
+    () => buildTopSuttaSet(result.closePicks, result.closeSuttaDroughts, copyCount),
+    [result.closePicks, result.closeSuttaDroughts, copyCount],
+  )
+  const generatedJodis = useMemo(
+    () => buildJodis(openCopySuttas, closeCopySuttas),
+    [openCopySuttas, closeCopySuttas],
+  )
 
   return (
     <div className="glass-panel tab-panel">
@@ -106,6 +289,16 @@ export function AnalysisTabs({
                         disabled={!jodiResult}
                       >🎯 Jodi Close</button>
                     </div>
+
+                    <BetCopyDesk
+                      copyCount={copyCount}
+                      setCopyCount={setCopyCount}
+                      openSuttas={openCopySuttas}
+                      closeSuttas={closeCopySuttas}
+                      jodis={generatedJodis}
+                      copyingKey={copyingKey}
+                      handleCopy={handleCopy}
+                    />
     
                     {/* ── Open Picks ──────────────────────────────────────────── */}
                     {picksSubTab === "open" && (

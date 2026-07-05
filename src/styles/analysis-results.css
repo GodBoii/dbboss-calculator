@@ -101,6 +101,169 @@
   color: #4ade80 !important;
 }
 
+.bet-copy-desk {
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.035);
+}
+
+.bet-copy-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.bet-copy-title {
+  margin: 0;
+}
+
+.bet-copy-hint {
+  margin: 3px 0 0;
+}
+
+.copy-count-control {
+  display: grid;
+  grid-template-columns: 32px 44px 32px;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.16);
+}
+
+.copy-count-btn,
+.copy-count-input {
+  min-height: 34px;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,0.9);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.copy-count-btn {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.copy-count-btn:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.copy-count-input {
+  width: 44px;
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+  outline: none;
+}
+
+.copy-count-input::-webkit-outer-spin-button,
+.copy-count-input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.bet-copy-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.bet-copy-summary span {
+  padding: 7px 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.68);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bet-copy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.sutta-copy-group {
+  min-width: 0;
+}
+
+.sutta-copy-label,
+.jodi-preview-label {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(255,255,255,0.45);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sutta-copy-chips,
+.jodi-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.sutta-copy-chip,
+.jodi-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.045);
+  color: rgba(255,255,255,0.86);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.sutta-copy-chip--fresh {
+  background: rgba(74,222,128,0.1);
+  box-shadow: inset 0 0 0 1px rgba(74,222,128,0.18);
+}
+
+.jodi-preview {
+  margin-bottom: 12px;
+}
+
+.jodi-chip {
+  min-width: 34px;
+  color: rgba(255,255,255,0.72);
+  font-size: 12px;
+}
+
+.jodi-chip-more {
+  color: #4ade80;
+  background: rgba(74,222,128,0.08);
+}
+
+.bet-copy-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.bet-copy-actions .copy-btn {
+  width: 100%;
+  justify-content: center;
+  padding-inline: 6px;
+}
+
 .hero-picks {
   display: none;
   flex-direction: column;
@@ -419,4 +582,15 @@
   font-size: 12px;
   color: rgba(255,255,255,0.4);
   line-height: 1.4;
+}
+
+@media (max-width: 420px) {
+  .bet-copy-head {
+    align-items: flex-start;
+  }
+
+  .bet-copy-grid,
+  .bet-copy-actions {
+    grid-template-columns: 1fr;
+  }
 }
