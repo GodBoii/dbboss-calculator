@@ -248,12 +248,30 @@ export default function AnalysisSection() {
     [result, copyCount],
   )
   const closeCopySuttas = useMemo(
-    () => result ? buildTopSuttaSet(result.closePicks, result.closeSuttaDroughts, copyCount) : [],
+    () => result
+      ? buildTopSuttaSet(
+          result.closePicks,
+          result.closeSuttaDroughts,
+          copyCount,
+          copyCount <= 4 ? "aggregate" : "weightedAggregate",
+        )
+      : [],
+    [result, copyCount],
+  )
+  const jodiCopyCloseSuttas = useMemo(
+    () => result
+      ? buildTopSuttaSet(
+          result.closePicks,
+          result.closeSuttaDroughts,
+          copyCount,
+          copyCount <= 4 ? "current" : "weightedAggregate",
+        )
+      : [],
     [result, copyCount],
   )
   const generatedJodis = useMemo(
-    () => buildJodis(openCopySuttas, closeCopySuttas),
-    [openCopySuttas, closeCopySuttas],
+    () => buildJodis(openCopySuttas, jodiCopyCloseSuttas),
+    [openCopySuttas, jodiCopyCloseSuttas],
   )
 
   const renderSuttaSignalList = (label: string, droughts: Record<string, number>) => (

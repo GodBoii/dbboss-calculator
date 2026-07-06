@@ -41,23 +41,41 @@ export interface CopySuttaPick {
   isSnapback: boolean
 }
 
+type SuttaSelectionMode = "current" | "aggregate" | "weightedAggregate"
+
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
 
 export function buildTopSuttaSet(
   picks: PanelPick[],
   droughts: Record<string, number>,
   count: number,
+  mode: SuttaSelectionMode = "current",
 ): CopySuttaPick[] {
   const bySutta = new Map<number, CopySuttaPick>()
 
   picks.forEach((pick, index) => {
-    if (bySutta.has(pick.sutta)) return
-
     const signal = getSuttaSignal(droughts[String(pick.sutta)] ?? 1000)
+    const existing = bySutta.get(pick.sutta)
+    if (mode !== "current" && existing) {
+      const rankWeight = Math.max(1, 31 - index)
+      bySutta.set(pick.sutta, {
+        ...existing,
+        rank: Math.min(existing.rank, index + 1),
+        score:
+          mode === "weightedAggregate"
+            ? existing.score + pick.score * rankWeight
+            : existing.score + pick.score,
+      })
+      return
+    }
+
+    if (existing) return
+
+    const rankWeight = Math.max(1, 31 - index)
     bySutta.set(pick.sutta, {
       sutta: pick.sutta,
       rank: index + 1,
-      score: pick.score,
+      score: mode === "weightedAggregate" ? pick.score * rankWeight : pick.score,
       signalColor: signal.color,
       signalLabel: signal.label,
       signalState: signal.state,
@@ -82,6 +100,21 @@ export function buildTopSuttaSet(
   }
 
   const ranked = Array.from(bySutta.values())
+  if (mode !== "current") {
+    const signalBonus: Record<CopySuttaPick["signalState"], number> =
+      mode === "weightedAggregate"
+        ? { fresh: 20, warming: 8, danger: -8, cooling: -4, snapback: 6, unknown: 0 }
+        : { fresh: 8, warming: 5, danger: 0, cooling: 12, snapback: 8, unknown: 0 }
+
+    return ranked
+      .map((item) => ({
+        ...item,
+        score: item.score + signalBonus[item.signalState],
+      }))
+      .sort((a, b) => b.score - a.score || a.rank - b.rank)
+      .slice(0, count)
+  }
+
   const fresh = ranked.filter((item) => item.isFresh)
   const snapback = ranked.filter((item) => item.isSnapback)
   const selected = [...fresh]
