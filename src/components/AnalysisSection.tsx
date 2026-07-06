@@ -250,6 +250,7 @@ export default function AnalysisSection() {
           result.openSuttaDroughts,
           cachedRecordsRef.current,
           copyCount,
+          selectedMarket,
         )
       : [],
     [result, copyCount],

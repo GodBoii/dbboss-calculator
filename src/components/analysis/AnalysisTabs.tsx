@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from "react"
 import { getSuttaSignal, type JodiAnalysis, type PanelPick, type PredictionResult } from "@/lib/predictor"
 import type { BacktestReport } from "@/lib/backtest"
-import type { PanelRecord } from "@/lib/db"
+import { getRecordISODate, type PanelRecord } from "@/lib/db"
 import {
   CopyButton,
   DpDigitFocusSection,
@@ -164,8 +164,8 @@ export function buildOpenSuttaSet(
   droughts: Record<string, number>,
   records: PanelRecord[],
   count: number,
+  marketName = "",
 ): CopySuttaPick[] {
-  if (count <= 4) return buildTopSuttaSet(picks, droughts, count)
   if (records.length < 50) return buildTopSuttaSet(picks, droughts, count)
 
   const openRecords = records.filter((record) => record.openPanel && record.openSutta >= 0)
@@ -174,9 +174,13 @@ export function buildOpenSuttaSet(
   const todayDayName = getTodayDayName()
   const recent24 = Array(10).fill(0)
   const weekday = Array(10).fill(0)
+  const sameDate = Array(10).fill(0)
   const prevOpenDelta = Array(10).fill(0)
   const total = openRecords.length
   let weekdayTotal = 0
+  let sameDateTotal = 0
+  const currentDate = new Date()
+  const dayOfMonth = currentDate.getDate()
 
   for (const record of openRecords) {
     if (record.day === todayDayName) {
@@ -189,19 +193,39 @@ export function buildOpenSuttaSet(
     recent24[record.openSutta]++
   }
 
+  for (const record of openRecords) {
+    const isoDate = getRecordISODate(record)
+    if (isoDate && new Date(`${isoDate}T12:00:00`).getDate() === dayOfMonth) {
+      sameDate[record.openSutta]++
+      sameDateTotal++
+    }
+  }
+
   for (let i = 1; i < openRecords.length; i++) {
     const previous = openRecords[i - 1].openSutta
     const current = openRecords[i].openSutta
     prevOpenDelta[(current - previous + 10) % 10]++
   }
 
+  const sameDateFallbackMarkets = new Set(["Sridevi", "Kalyan", "Kalyan Night", "Rajdhani Night"])
+  const deltaFallbackMarkets = new Set(["Sridevi", "Rajdhani Day", "Milan Night"])
+  if (count <= 4 && sameDateFallbackMarkets.has(marketName)) {
+    return buildTopSuttaSet(picks, droughts, count)
+  }
+  if (count >= 5 && deltaFallbackMarkets.has(marketName)) {
+    return buildTopSuttaSet(picks, droughts, count)
+  }
+
   const previousOpen = openRecords[openRecords.length - 1].openSutta
   const rows = Array.from({ length: 10 }, (_, sutta) => {
     const delta = (sutta - previousOpen + 10) % 10
-    const score =
-      0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
-      0.2 * smoothedRate(weekday[sutta], weekdayTotal) +
-      0.55 * smoothedRate(prevOpenDelta[delta], Math.max(1, total - 1))
+    const score = count <= 4
+      ? 0.18 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.12 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.7 * smoothedRate(sameDate[sutta], sameDateTotal)
+      : 0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.2 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.55 * smoothedRate(prevOpenDelta[delta], Math.max(1, total - 1))
 
     return { sutta, score }
   })
