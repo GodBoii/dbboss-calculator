@@ -19,7 +19,7 @@ import {
   RECENT_HISTORY_DAYS,
   type PanelRecord,
 } from "@/lib/db"
-import { AnalysisTabs, BetCopyDesk, buildJodis, buildTopSuttaSet } from "./analysis/AnalysisTabs"
+import { AnalysisTabs, BetCopyDesk, buildJodis, buildOpenSuttaSet, buildTopSuttaSet } from "./analysis/AnalysisTabs"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
 
 // ── Market URL Config ───────────────────────────────────────────────────
@@ -244,7 +244,14 @@ export default function AnalysisSection() {
   const activeMarkets = session === "day" ? DAY_MARKETS : NIGHT_MARKETS
   const isNight = session === "night"
   const openCopySuttas = useMemo(
-    () => result ? buildTopSuttaSet(result.openPicks, result.openSuttaDroughts, copyCount) : [],
+    () => result
+      ? buildOpenSuttaSet(
+          result.openPicks,
+          result.openSuttaDroughts,
+          cachedRecordsRef.current,
+          copyCount,
+        )
+      : [],
     [result, copyCount],
   )
   const closeCopySuttas = useMemo(

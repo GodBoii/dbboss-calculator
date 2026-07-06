@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react"
 import { getSuttaSignal, type JodiAnalysis, type PanelPick, type PredictionResult } from "@/lib/predictor"
 import type { BacktestReport } from "@/lib/backtest"
+import type { PanelRecord } from "@/lib/db"
 import {
   CopyButton,
   DpDigitFocusSection,
@@ -134,6 +135,81 @@ export function buildTopSuttaSet(
   }
 
   return selected.slice(0, count)
+}
+
+function getTodayDayName() {
+  return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][new Date().getDay()]
+}
+
+function makeCopySuttaPick(sutta: number, score: number, rank: number, droughts: Record<string, number>): CopySuttaPick {
+  const signal = getSuttaSignal(droughts[String(sutta)] ?? 1000)
+  return {
+    sutta,
+    rank,
+    score,
+    signalColor: signal.color,
+    signalLabel: signal.label,
+    signalState: signal.state,
+    isFresh: signal.state === "fresh",
+    isSnapback: signal.state === "snapback",
+  }
+}
+
+function smoothedRate(count: number, total: number) {
+  return (count + 1) / (total + 10)
+}
+
+export function buildOpenSuttaSet(
+  picks: PanelPick[],
+  droughts: Record<string, number>,
+  records: PanelRecord[],
+  count: number,
+): CopySuttaPick[] {
+  if (count <= 4) return buildTopSuttaSet(picks, droughts, count)
+  if (records.length < 50) return buildTopSuttaSet(picks, droughts, count)
+
+  const openRecords = records.filter((record) => record.openPanel && record.openSutta >= 0)
+  if (openRecords.length < 50) return buildTopSuttaSet(picks, droughts, count)
+
+  const todayDayName = getTodayDayName()
+  const recent24 = Array(10).fill(0)
+  const weekday = Array(10).fill(0)
+  const prevOpenDelta = Array(10).fill(0)
+  const total = openRecords.length
+  let weekdayTotal = 0
+
+  for (const record of openRecords) {
+    if (record.day === todayDayName) {
+      weekday[record.openSutta]++
+      weekdayTotal++
+    }
+  }
+
+  for (const record of openRecords.slice(-24)) {
+    recent24[record.openSutta]++
+  }
+
+  for (let i = 1; i < openRecords.length; i++) {
+    const previous = openRecords[i - 1].openSutta
+    const current = openRecords[i].openSutta
+    prevOpenDelta[(current - previous + 10) % 10]++
+  }
+
+  const previousOpen = openRecords[openRecords.length - 1].openSutta
+  const rows = Array.from({ length: 10 }, (_, sutta) => {
+    const delta = (sutta - previousOpen + 10) % 10
+    const score =
+      0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+      0.2 * smoothedRate(weekday[sutta], weekdayTotal) +
+      0.55 * smoothedRate(prevOpenDelta[delta], Math.max(1, total - 1))
+
+    return { sutta, score }
+  })
+
+  return rows
+    .sort((a, b) => b.score - a.score)
+    .slice(0, count)
+    .map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts))
 }
 
 export function buildJodis(openSuttas: CopySuttaPick[], closeSuttas: CopySuttaPick[]): string[] {
