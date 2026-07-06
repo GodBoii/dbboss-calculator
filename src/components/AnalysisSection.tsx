@@ -19,7 +19,14 @@ import {
   RECENT_HISTORY_DAYS,
   type PanelRecord,
 } from "@/lib/db"
-import { AnalysisTabs, BetCopyDesk, buildJodis, buildOpenSuttaSet, buildTopSuttaSet } from "./analysis/AnalysisTabs"
+import {
+  AnalysisTabs,
+  BetCopyDesk,
+  buildCloseSuttaSet,
+  buildJodis,
+  buildOpenSuttaSet,
+  buildTopSuttaSet,
+} from "./analysis/AnalysisTabs"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
 
 // ── Market URL Config ───────────────────────────────────────────────────
@@ -74,7 +81,9 @@ export default function AnalysisSection() {
   const [openPanelInput, setOpenPanelInput] = useState("")
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
   const [backtestReport, setBacktestReport] = useState<BacktestReport | null>(null)
+  const [cachedRecords, setCachedRecords] = useState<PanelRecord[]>([])
   const cachedRecordsRef = useRef<PanelRecord[]>([])
+  const allMarketsRecordsRef = useRef<Record<string, PanelRecord[]>>({})
 
   // ── Copy helpers ─────────────────────────────────────────────────────────
   const [copyingKey, setCopyingKey] = useState<string | null>(null)
@@ -104,6 +113,7 @@ export default function AnalysisSection() {
       setResult(null)
       setJodiResult(null)
       setBacktestReport(null)
+      setCachedRecords([])
       setActiveTab("picks")
       setPicksSubTab("open")
       setOpenSuttaInput(null)
@@ -188,6 +198,8 @@ export default function AnalysisSection() {
 
         // ── Step 5: Run predictor ──────────────────────────────────────────
         cachedRecordsRef.current = records
+        allMarketsRecordsRef.current = allMarketsRecords
+        setCachedRecords(records)
         const prediction = analyzeMarket(selectedMarket, records, allMarketsRecords)
         if (!prediction) throw new Error("Not enough data to generate predictions.")
 
@@ -235,6 +247,7 @@ export default function AnalysisSection() {
     setSelectedMarket(s === "day" ? "Kalyan" : "Main Bazar")
     setResult(null)
     setBacktestReport(null)
+    setCachedRecords([])
     setJodiResult(null)
     setActiveTab("picks")
     setPicksSubTab("open")
@@ -248,23 +261,26 @@ export default function AnalysisSection() {
       ? buildOpenSuttaSet(
           result.openPicks,
           result.openSuttaDroughts,
-          cachedRecordsRef.current,
+          cachedRecords,
           copyCount,
           selectedMarket,
         )
       : [],
-    [result, copyCount],
+    [result, cachedRecords, copyCount, selectedMarket],
   )
   const closeCopySuttas = useMemo(
     () => result
-      ? buildTopSuttaSet(
-          result.closePicks,
+      ? buildCloseSuttaSet(
+          jodiResult?.adjustedClosePicks ?? result.closePicks,
           result.closeSuttaDroughts,
+          cachedRecords,
           copyCount,
-          copyCount <= 4 ? "aggregate" : "weightedAggregate",
+          selectedMarket,
+          openSuttaInput,
+          allMarketsRecordsRef.current,
         )
       : [],
-    [result, copyCount],
+    [result, jodiResult, cachedRecords, copyCount, selectedMarket, openSuttaInput],
   )
   const jodiCopyCloseSuttas = useMemo(
     () => result
@@ -356,6 +372,7 @@ export default function AnalysisSection() {
                 setSelectedMarket(market)
                 setResult(null)
                 setBacktestReport(null)
+                setCachedRecords([])
                 setJodiResult(null)
                 setActiveTab("picks")
                 setPicksSubTab("open")

@@ -1,5 +1,11 @@
 import type { Dispatch, SetStateAction } from "react"
-import { getSuttaSignal, type JodiAnalysis, type PanelPick, type PredictionResult } from "@/lib/predictor"
+import {
+  LIQUIDITY_FLOW_MAP,
+  getSuttaSignal,
+  type JodiAnalysis,
+  type PanelPick,
+  type PredictionResult,
+} from "@/lib/predictor"
 import type { BacktestReport } from "@/lib/backtest"
 import { getRecordISODate, type PanelRecord } from "@/lib/db"
 import {
@@ -42,22 +48,62 @@ export interface CopySuttaPick {
   isSnapback: boolean
 }
 
-type SuttaSelectionMode = "current" | "aggregate" | "weightedAggregate"
-type OpenSuttaStrategy = "current" | "sameDate" | "previousOpenDelta"
+type SuttaSelectionMode = "current" | "aggregate" | "weightedAggregate" | "weightedSnap"
+type OpenSuttaStrategy =
+  | "current"
+  | "rankOnly"
+  | "sameDate"
+  | "sameDateOpposite"
+  | "previousOpenDelta"
+  | "gapBalanced"
+  | "gapSnapback"
+  | "housePrevOpenSame"
+  | "housePrevOpenFlip"
+  | "weightedSnap"
+type CloseSuttaStrategy =
+  | "currentProduction"
+  | "currentUi"
+  | "rankOnly"
+  | "sumCooling"
+  | "calendarSameDate"
+  | "calendarSameDateOpposite"
+  | "prevCloseCond"
+  | "prevOpenCond"
+  | "prevJodiCond"
+  | "currentOpenCond"
+  | "currentOpenOppHouse"
+  | "currentOpenSameHouse"
+  | "prevCloseDelta"
+  | "sourcePrevOpenCond"
 
 const OPEN_SUTTA_MARKET_STRATEGY: Record<string, { narrow: OpenSuttaStrategy; wide: OpenSuttaStrategy }> = {
   Sridevi: { narrow: "current", wide: "current" },
-  "Time Bazar": { narrow: "sameDate", wide: "previousOpenDelta" },
-  "Madhur Day": { narrow: "sameDate", wide: "previousOpenDelta" },
-  "Milan Day": { narrow: "sameDate", wide: "previousOpenDelta" },
-  "Rajdhani Day": { narrow: "sameDate", wide: "current" },
-  Kalyan: { narrow: "current", wide: "previousOpenDelta" },
-  "Sridevi Night": { narrow: "sameDate", wide: "previousOpenDelta" },
-  "Kalyan Night": { narrow: "current", wide: "previousOpenDelta" },
-  "Madhur Night": { narrow: "sameDate", wide: "previousOpenDelta" },
-  "Milan Night": { narrow: "sameDate", wide: "current" },
-  "Rajdhani Night": { narrow: "current", wide: "previousOpenDelta" },
-  "Main Bazar": { narrow: "sameDate", wide: "previousOpenDelta" },
+  "Time Bazar": { narrow: "sameDate", wide: "sameDate" },
+  "Madhur Day": { narrow: "gapBalanced", wide: "gapBalanced" },
+  "Milan Day": { narrow: "gapSnapback", wide: "housePrevOpenFlip" },
+  "Rajdhani Day": { narrow: "sameDate", wide: "sameDate" },
+  Kalyan: { narrow: "rankOnly", wide: "rankOnly" },
+  "Sridevi Night": { narrow: "sameDate", wide: "sameDate" },
+  "Kalyan Night": { narrow: "current", wide: "weightedSnap" },
+  "Madhur Night": { narrow: "housePrevOpenSame", wide: "sameDateOpposite" },
+  "Milan Night": { narrow: "sameDate", wide: "sameDateOpposite" },
+  "Rajdhani Night": { narrow: "gapBalanced", wide: "gapBalanced" },
+  "Main Bazar": { narrow: "housePrevOpenSame", wide: "housePrevOpenSame" },
+}
+
+const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, { narrow: CloseSuttaStrategy; wide: CloseSuttaStrategy }> = {
+  Sridevi: { narrow: "currentOpenOppHouse", wide: "calendarSameDateOpposite" },
+  "Time Bazar": { narrow: "prevJodiCond", wide: "prevJodiCond" },
+  "Madhur Day": { narrow: "prevOpenCond", wide: "prevOpenCond" },
+  "Milan Day": { narrow: "currentProduction", wide: "sumCooling" },
+  "Rajdhani Day": { narrow: "sourcePrevOpenCond", wide: "currentOpenSameHouse" },
+  Kalyan: { narrow: "calendarSameDate", wide: "prevCloseCond" },
+  "Sridevi Night": { narrow: "currentProduction", wide: "currentUi" },
+  "Kalyan Night": { narrow: "currentOpenOppHouse", wide: "currentOpenCond" },
+  "Madhur Night": { narrow: "rankOnly", wide: "prevCloseDelta" },
+  "Milan Night": { narrow: "calendarSameDateOpposite", wide: "currentProduction" },
+  "Rajdhani Night": { narrow: "rankOnly", wide: "rankOnly" },
+  "Main Bazar": { narrow: "currentProduction", wide: "sumCooling" },
 }
 
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
@@ -79,7 +125,7 @@ export function buildTopSuttaSet(
         ...existing,
         rank: Math.min(existing.rank, index + 1),
         score:
-          mode === "weightedAggregate"
+          mode === "weightedAggregate" || mode === "weightedSnap"
             ? existing.score + pick.score * rankWeight
             : existing.score + pick.score,
       })
@@ -92,7 +138,7 @@ export function buildTopSuttaSet(
     bySutta.set(pick.sutta, {
       sutta: pick.sutta,
       rank: index + 1,
-      score: mode === "weightedAggregate" ? pick.score * rankWeight : pick.score,
+      score: mode === "weightedAggregate" || mode === "weightedSnap" ? pick.score * rankWeight : pick.score,
       signalColor: signal.color,
       signalLabel: signal.label,
       signalState: signal.state,
@@ -121,6 +167,8 @@ export function buildTopSuttaSet(
     const signalBonus: Record<CopySuttaPick["signalState"], number> =
       mode === "weightedAggregate"
         ? { fresh: 20, warming: 8, danger: -8, cooling: -4, snapback: 6, unknown: 0 }
+        : mode === "weightedSnap"
+        ? { fresh: 8, warming: 5, danger: -4, cooling: 0, snapback: 22, unknown: 0 }
         : { fresh: 8, warming: 5, danger: 0, cooling: 12, snapback: 8, unknown: 0 }
 
     return ranked
@@ -157,6 +205,23 @@ function getTodayDayName() {
   return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][new Date().getDay()]
 }
 
+function buildRankOnlySuttaSet(
+  picks: PanelPick[],
+  droughts: Record<string, number>,
+  count: number,
+): CopySuttaPick[] {
+  const selected: CopySuttaPick[] = []
+  const seen = new Set<number>()
+
+  picks.forEach((pick, index) => {
+    if (selected.length >= count || seen.has(pick.sutta)) return
+    seen.add(pick.sutta)
+    selected.push(makeCopySuttaPick(pick.sutta, pick.score, index + 1, droughts))
+  })
+
+  return selected
+}
+
 function makeCopySuttaPick(sutta: number, score: number, rank: number, droughts: Record<string, number>): CopySuttaPick {
   const signal = getSuttaSignal(droughts[String(sutta)] ?? 1000)
   return {
@@ -175,6 +240,19 @@ function smoothedRate(count: number, total: number) {
   return (count + 1) / (total + 10)
 }
 
+function oppositeSutta(sutta: number) {
+  return (sutta + 5) % 10
+}
+
+function suttaHouse(sutta: number | undefined) {
+  if (sutta === undefined) return null
+  return sutta >= 1 && sutta <= 5 ? "low" : "high"
+}
+
+function houseScore(sutta: number, targetHouse: "low" | "high" | null) {
+  return targetHouse !== null && suttaHouse(sutta) === targetHouse ? 1 : 0
+}
+
 export function buildOpenSuttaSet(
   picks: PanelPick[],
   droughts: Record<string, number>,
@@ -190,11 +268,15 @@ export function buildOpenSuttaSet(
   const strategy =
     OPEN_SUTTA_MARKET_STRATEGY[marketName]?.[count <= 4 ? "narrow" : "wide"] ?? "current"
   if (strategy === "current") return buildTopSuttaSet(picks, droughts, count)
+  if (strategy === "rankOnly") return buildRankOnlySuttaSet(picks, droughts, count)
+  if (strategy === "weightedSnap") return buildTopSuttaSet(picks, droughts, count, "weightedSnap")
 
   const todayDayName = getTodayDayName()
   const recent24 = Array(10).fill(0)
+  const recent60 = Array(10).fill(0)
   const weekday = Array(10).fill(0)
   const sameDate = Array(10).fill(0)
+  const sameDateOpposite = Array(10).fill(0)
   const prevOpenDelta = Array(10).fill(0)
   const total = openRecords.length
   let weekdayTotal = 0
@@ -213,10 +295,15 @@ export function buildOpenSuttaSet(
     recent24[record.openSutta]++
   }
 
+  for (const record of openRecords.slice(-60)) {
+    recent60[record.openSutta]++
+  }
+
   for (const record of openRecords) {
     const isoDate = getRecordISODate(record)
     if (isoDate && new Date(`${isoDate}T12:00:00`).getDate() === dayOfMonth) {
       sameDate[record.openSutta]++
+      sameDateOpposite[oppositeSutta(record.openSutta)]++
       sameDateTotal++
     }
   }
@@ -228,21 +315,224 @@ export function buildOpenSuttaSet(
   }
 
   const previousOpen = openRecords[openRecords.length - 1].openSutta
+  const previousOpenHouse = suttaHouse(previousOpen)
+  const previousOpenFlipHouse =
+    previousOpenHouse === "low" ? "high" : previousOpenHouse === "high" ? "low" : null
+
   const rows = Array.from({ length: 10 }, (_, sutta) => {
     const delta = (sutta - previousOpen + 10) % 10
-    const score = strategy === "sameDate"
-      ? 0.18 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+    const openGap = droughts[String(sutta)] ?? 1000
+    const gapBalancedBonus =
+      openGap <= 2 ? 0 : openGap <= 5 ? 0 : openGap <= 12 ? 0.05 : openGap <= 25 ? 0.06 : 0
+    const gapSnapbackBonus =
+      openGap <= 2 ? -0.08 : openGap <= 5 ? 0 : openGap <= 12 ? 0 : openGap <= 25 ? 0.04 : 0.12
+
+    let score = 0
+    if (strategy === "sameDate") {
+      score =
+        0.18 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.12 * smoothedRate(weekday[sutta], weekdayTotal) +
         0.7 * smoothedRate(sameDate[sutta], sameDateTotal)
-      : 0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+    } else if (strategy === "sameDateOpposite") {
+      score =
+        0.18 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.12 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.7 * smoothedRate(sameDateOpposite[sutta], sameDateTotal)
+    } else if (strategy === "gapBalanced") {
+      score =
+        0.18 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.18 * smoothedRate(recent60[sutta], Math.min(60, total)) +
+        0.2 * smoothedRate(weekday[sutta], weekdayTotal) +
+        gapBalancedBonus
+    } else if (strategy === "gapSnapback") {
+      score =
+        0.18 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.16 * smoothedRate(weekday[sutta], weekdayTotal) +
+        gapSnapbackBonus
+    } else if (strategy === "housePrevOpenSame") {
+      score =
+        0.24 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.16 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.6 * houseScore(sutta, previousOpenHouse)
+    } else if (strategy === "housePrevOpenFlip") {
+      score =
+        0.24 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.16 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.6 * houseScore(sutta, previousOpenFlipHouse)
+    } else {
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.2 * smoothedRate(weekday[sutta], weekdayTotal) +
         0.55 * smoothedRate(prevOpenDelta[delta], Math.max(1, total - 1))
+    }
 
     return { sutta, score }
   })
 
   return rows
     .sort((a, b) => b.score - a.score)
+    .slice(0, count)
+    .map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts))
+}
+
+export function buildCloseSuttaSet(
+  picks: PanelPick[],
+  droughts: Record<string, number>,
+  records: PanelRecord[],
+  count: number,
+  marketName = "",
+  currentOpenSutta: number | null = null,
+  allMarketsRecords: Record<string, PanelRecord[]> = {},
+): CopySuttaPick[] {
+  const productionMode = count <= 4 ? "aggregate" : "weightedAggregate"
+  const currentProduction = () => buildTopSuttaSet(picks, droughts, count, productionMode)
+
+  if (records.length < 50) return currentProduction()
+
+  const closeRecords = records.filter((record) => record.closePanel && record.closeSutta >= 0)
+  if (closeRecords.length < 50) return currentProduction()
+
+  const strategy =
+    CLOSE_SUTTA_MARKET_STRATEGY[marketName]?.[count <= 4 ? "narrow" : "wide"] ?? "currentProduction"
+  if (strategy === "currentProduction") return currentProduction()
+  if (strategy === "sumCooling") return buildTopSuttaSet(picks, droughts, count, "aggregate")
+  if (strategy === "currentUi") return buildTopSuttaSet(picks, droughts, count, "current")
+  if (strategy === "rankOnly") return buildRankOnlySuttaSet(picks, droughts, count)
+
+  const needsCurrentOpen =
+    strategy === "currentOpenCond" ||
+    strategy === "currentOpenOppHouse" ||
+    strategy === "currentOpenSameHouse"
+  if (needsCurrentOpen && (currentOpenSutta === null || currentOpenSutta < 0)) return currentProduction()
+
+  const todayDayName = getTodayDayName()
+  const recent24 = Array(10).fill(0)
+  const weekday = Array(10).fill(0)
+  const sameDate = Array(10).fill(0)
+  const sameDateOpposite = Array(10).fill(0)
+  const prevCloseCond = Array(10).fill(0)
+  const prevOpenCond = Array(10).fill(0)
+  const prevJodiCond = Array(10).fill(0)
+  const currentOpenCond = Array(10).fill(0)
+  const prevCloseDelta = Array(10).fill(0)
+  const sourcePrevOpenCond = Array(10).fill(0)
+  const currentDate = new Date()
+  const dayOfMonth = currentDate.getDate()
+  let weekdayTotal = 0
+  let sameDateTotal = 0
+  let prevCloseCondTotal = 0
+  let prevOpenCondTotal = 0
+  let prevJodiCondTotal = 0
+  let currentOpenCondTotal = 0
+  let sourcePrevOpenCondTotal = 0
+
+  for (const record of closeRecords.slice(-24)) recent24[record.closeSutta]++
+  for (const record of closeRecords) {
+    if (record.day === todayDayName) {
+      weekday[record.closeSutta]++
+      weekdayTotal++
+    }
+    const isoDate = getRecordISODate(record)
+    if (isoDate && new Date(`${isoDate}T12:00:00`).getDate() === dayOfMonth) {
+      sameDate[record.closeSutta]++
+      sameDateOpposite[oppositeSutta(record.closeSutta)]++
+      sameDateTotal++
+    }
+  }
+
+  const previousRecord = records[records.length - 1]
+  const previousClose = previousRecord?.closeSutta ?? 0
+  const previousOpen = previousRecord?.openSutta
+  const previousJodi = previousRecord?.jodi
+  const sourceMarket = LIQUIDITY_FLOW_MAP[marketName]
+  const sourceRecords = sourceMarket ? allMarketsRecords[sourceMarket] ?? [] : []
+  const sourcePreviousOpen = sourceRecords[sourceRecords.length - 1]?.openSutta
+
+  for (let i = 1; i < records.length; i++) {
+    const previous = records[i - 1]
+    const current = records[i]
+    if (current.closeSutta < 0) continue
+    if (previous.closeSutta === previousClose) {
+      prevCloseCond[current.closeSutta]++
+      prevCloseCondTotal++
+    }
+    if (previous.openSutta === previousOpen) {
+      prevOpenCond[current.closeSutta]++
+      prevOpenCondTotal++
+    }
+    if (previous.jodi === previousJodi) {
+      prevJodiCond[current.closeSutta]++
+      prevJodiCondTotal++
+    }
+    if (current.openSutta === currentOpenSutta) {
+      currentOpenCond[current.closeSutta]++
+      currentOpenCondTotal++
+    }
+    if (previous.closeSutta >= 0) prevCloseDelta[(current.closeSutta - previous.closeSutta + 10) % 10]++
+    if (sourcePreviousOpen !== undefined && current.openSutta === sourcePreviousOpen) {
+      sourcePrevOpenCond[current.closeSutta]++
+      sourcePrevOpenCondTotal++
+    }
+  }
+
+  const total = closeRecords.length
+  const rows = Array.from({ length: 10 }, (_, sutta) => {
+    let score = 0
+    if (strategy === "calendarSameDate") {
+      score =
+        0.2 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.1 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.7 * smoothedRate(sameDate[sutta], sameDateTotal)
+    } else if (strategy === "calendarSameDateOpposite") {
+      score =
+        0.2 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.8 * smoothedRate(sameDateOpposite[sutta], sameDateTotal)
+    } else if (strategy === "prevCloseCond") {
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.15 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.6 * smoothedRate(prevCloseCond[sutta], prevCloseCondTotal)
+    } else if (strategy === "prevOpenCond") {
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.15 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.6 * smoothedRate(prevOpenCond[sutta], prevOpenCondTotal)
+    } else if (strategy === "prevJodiCond") {
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.75 * smoothedRate(prevJodiCond[sutta], prevJodiCondTotal)
+    } else if (strategy === "currentOpenCond") {
+      score =
+        0.2 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.1 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.7 * smoothedRate(currentOpenCond[sutta], currentOpenCondTotal)
+    } else if (strategy === "currentOpenOppHouse") {
+      const currentHouse = suttaHouse(currentOpenSutta ?? undefined)
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.75 * (currentHouse !== null && suttaHouse(sutta) !== currentHouse ? 1 : 0)
+    } else if (strategy === "currentOpenSameHouse") {
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.75 * houseScore(sutta, suttaHouse(currentOpenSutta ?? undefined))
+    } else if (strategy === "prevCloseDelta") {
+      const delta = (sutta - previousClose + 10) % 10
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.2 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.55 * smoothedRate(prevCloseDelta[delta], Math.max(1, total - 1))
+    } else if (strategy === "sourcePrevOpenCond") {
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.15 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.6 * smoothedRate(sourcePrevOpenCond[sutta], sourcePrevOpenCondTotal)
+    }
+
+    return { sutta, score }
+  })
+
+  return rows
+    .sort((a, b) => b.score - a.score || a.sutta - b.sutta)
     .slice(0, count)
     .map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts))
 }
@@ -277,7 +567,7 @@ export function BetCopyDesk({
       <div className="bet-copy-head">
         <div>
           <h4 className="stat-section-title bet-copy-title">Bet Copy</h4>
-          <p className="picks-hint bet-copy-hint">Green first, snapback next, then top rank</p>
+          <p className="picks-hint bet-copy-hint">Market-tuned open, signal-ranked close</p>
         </div>
         <div className="copy-count-control" aria-label="Top sutta count">
           <button
