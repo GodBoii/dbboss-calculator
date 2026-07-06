@@ -76,7 +76,7 @@ export default function DBBossApp() {
       {/* ── Fixed Top Header ──────────────────────────────────────── */}
       <header className="app-header">
         <div className="app-brand">
-          <img src="/logo.png" alt="DBboss Logo" className="app-brand-mark" style={{ padding: 0, objectFit: "cover", background: "none", border: "none" }} />
+          <img src="/logo-dbboss-20260706.png" alt="DBboss Logo" className="app-brand-mark" style={{ padding: 0, objectFit: "cover", background: "none", border: "none" }} />
           <span className="app-brand-name">DBboss</span>
         </div>
 
