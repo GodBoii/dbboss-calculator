@@ -25,7 +25,6 @@ import {
   buildCloseSuttaSet,
   buildJodis,
   buildOpenSuttaSet,
-  buildTopSuttaSet,
 } from "./analysis/AnalysisTabs"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
 
@@ -282,20 +281,9 @@ export default function AnalysisSection() {
       : [],
     [result, jodiResult, cachedRecords, copyCount, selectedMarket, openSuttaInput],
   )
-  const jodiCopyCloseSuttas = useMemo(
-    () => result
-      ? buildTopSuttaSet(
-          result.closePicks,
-          result.closeSuttaDroughts,
-          copyCount,
-          copyCount <= 4 ? "current" : "weightedAggregate",
-        )
-      : [],
-    [result, copyCount],
-  )
   const generatedJodis = useMemo(
-    () => buildJodis(openCopySuttas, jodiCopyCloseSuttas),
-    [openCopySuttas, jodiCopyCloseSuttas],
+    () => buildJodis(openCopySuttas, closeCopySuttas),
+    [openCopySuttas, closeCopySuttas],
   )
 
   const renderSuttaSignalList = (label: string, droughts: Record<string, number>) => (

@@ -127,17 +127,20 @@
 
 .copy-count-control {
   display: grid;
-  grid-template-columns: 32px 44px 32px;
+  grid-template-columns: 40px 48px 40px;
   align-items: center;
   border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 12px;
+  overflow: visible;
   background: rgba(0,0,0,0.16);
+  flex: 0 0 auto;
+  min-width: 128px;
 }
 
 .copy-count-btn,
 .copy-count-input {
-  min-height: 34px;
+  min-width: 40px;
+  min-height: 38px;
   border: 0;
   background: transparent;
   color: rgba(255,255,255,0.9);
@@ -147,8 +150,13 @@
 }
 
 .copy-count-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 22px;
+  line-height: 1;
+  padding: 0;
 }
 
 .copy-count-btn:hover {
@@ -156,10 +164,10 @@
 }
 
 .copy-count-input {
-  width: 44px;
+  width: 48px;
   border-left: 1px solid rgba(255,255,255,0.1);
   border-right: 1px solid rgba(255,255,255,0.1);
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
 }
 
@@ -587,6 +595,11 @@
 @media (max-width: 420px) {
   .bet-copy-head {
     align-items: flex-start;
+    gap: 10px;
+  }
+
+  .bet-copy-head > div:first-child {
+    min-width: 0;
   }
 
   .bet-copy-grid,
