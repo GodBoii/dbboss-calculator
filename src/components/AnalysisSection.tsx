@@ -226,6 +226,7 @@ export default function AnalysisSection() {
 
   const getScoreColor = (score: number) => {
     if (score >= 70) return "#4ade80"   // green
+    if (score >= 60) return "#60a5fa"   // blue
     if (score >= 50) return "#facc15"   // yellow
     return "#f87171"                     // red
   }
