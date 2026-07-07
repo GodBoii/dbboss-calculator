@@ -33,7 +33,23 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/dbboss.png" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        {/* Capture beforeinstallprompt before React mounts to avoid race condition */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.__pwa_install_event = null;
+              window.addEventListener('beforeinstallprompt', function(e) {
+                e.preventDefault();
+                window.__pwa_install_event = e;
+                window.dispatchEvent(new CustomEvent('pwa-install-ready'));
+              });
+            `,
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>
