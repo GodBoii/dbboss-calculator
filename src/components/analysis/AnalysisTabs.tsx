@@ -150,9 +150,9 @@ const suttaSignalPriority: Record<CopySuttaPick["signalState"], number> = {
   fresh: 0,
   snapback: 1,
   warming: 2,
-  cooling: 3,
-  danger: 4,
-  unknown: 5,
+  cooling: 2,
+  danger: 3,
+  unknown: 4,
 }
 
 function compareCopySuttaPicks(a: CopySuttaPick, b: CopySuttaPick) {
@@ -172,10 +172,7 @@ function finalizeCopySuttaSet(items: CopySuttaPick[], count: number) {
 }
 
 function finalizeRawCopySuttaSet(items: CopySuttaPick[], count: number) {
-  return [...items]
-    .sort((a, b) => b.score - a.score || a.rank - b.rank || a.sutta - b.sutta)
-    .slice(0, count)
-    .map((item, index) => ({ ...item, rank: index + 1 }))
+  return finalizeCopySuttaSet(items, count)
 }
 
 function finalizeScoredSuttaRows(
@@ -219,27 +216,6 @@ function mergeCopySuttaSources(sources: CopySuttaPick[][], count: number) {
   })
 
   return finalizeCopySuttaSet(Array.from(bySutta.values()), count)
-}
-
-function mergeRawCopySuttaSources(sources: CopySuttaPick[][], count: number) {
-  const bySutta = new Map<number, CopySuttaPick>()
-
-  sources.forEach((source, sourceIndex) => {
-    const sourceBase = (sources.length - sourceIndex) * 100000
-    source.forEach((item, itemIndex) => {
-      const existing = bySutta.get(item.sutta)
-      const sourceScore = sourceBase + (100 - itemIndex) * 1000 + item.score
-      if (!existing || sourceScore > existing.score) {
-        bySutta.set(item.sutta, {
-          ...item,
-          score: sourceScore,
-          rank: Math.min(existing?.rank ?? Number.POSITIVE_INFINITY, itemIndex + 1),
-        })
-      }
-    })
-  })
-
-  return finalizeRawCopySuttaSet(Array.from(bySutta.values()), count)
 }
 
 function resolveCountAwareStrategy<T>(
@@ -762,9 +738,7 @@ export function buildCloseSuttaSet(
   }
 
   const sources = strategies.map((strategy) => buildStrategySet(strategy, 10))
-  return strategies.some((strategy) => strategy.startsWith("raw"))
-    ? mergeRawCopySuttaSources(sources, count)
-    : mergeCopySuttaSources(sources, count)
+  return mergeCopySuttaSources(sources, count)
 }
 
 export function buildJodis(openSuttas: CopySuttaPick[], closeSuttas: CopySuttaPick[]): string[] {
@@ -880,7 +854,7 @@ function SuttaCopyGroup({ label, suttas }: { label: string; suttas: CopySuttaPic
           <span
             key={item.sutta}
             className={`sutta-copy-chip ${item.isFresh ? "sutta-copy-chip--fresh" : ""}`}
-            style={{ borderColor: item.signalColor }}
+            style={{ borderColor: item.signalColor, color: item.signalColor }}
             title={`Rank #${item.rank} - ${item.signalLabel} - ${item.score.toFixed(1)} pts`}
           >
             {item.sutta}
