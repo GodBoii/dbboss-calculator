@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import NativeInstallPrompt from "@/components/NativeInstallPrompt";
 import PwaRegister from "@/components/PwaRegister";
 import "./globals.css";
 
@@ -41,6 +42,7 @@ export default function RootLayout({
       </head>
       <body>
         <PwaRegister />
+        <NativeInstallPrompt />
         {children}
       </body>
     </html>
