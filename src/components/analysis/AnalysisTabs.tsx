@@ -89,8 +89,13 @@ type CloseSuttaStrategy =
   | "rawPrevCloseDelta"
   | "rawPrevOpenDelta"
 type MarketStrategy<T> = T | T[]
+type CountAwareMarketStrategy<T> = MarketStrategy<T> | {
+  narrow: MarketStrategy<T>
+  wide: MarketStrategy<T>
+  counts?: Partial<Record<number, MarketStrategy<T>>>
+}
 
-const OPEN_SUTTA_MARKET_STRATEGY: Record<string, OpenSuttaStrategy> = {
+const OPEN_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<OpenSuttaStrategy>> = {
   Sridevi: "current",
   "Time Bazar": "sameDate",
   "Madhur Day": "gapBalanced",
@@ -105,17 +110,37 @@ const OPEN_SUTTA_MARKET_STRATEGY: Record<string, OpenSuttaStrategy> = {
   "Main Bazar": "housePrevOpenSame",
 }
 
-const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, MarketStrategy<CloseSuttaStrategy>> = {
+const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<CloseSuttaStrategy>> = {
   Sridevi: "currentOpenOppHouse",
-  "Time Bazar": "rawPrevJodiCond",
-  "Madhur Day": ["rawPrevOpenCond", "rawPrevOpenDelta"],
+  "Time Bazar": {
+    narrow: "rawPrevJodiCond",
+    wide: "rawPrevJodiCond",
+    counts: { 2: "prevJodiCond", 5: "prevJodiCond" },
+  },
+  "Madhur Day": {
+    narrow: ["rawPrevOpenCond", "rawPrevOpenDelta"],
+    wide: ["rawPrevOpenCond", "rawPrevOpenDelta"],
+    counts: { 2: "prevOpenCond" },
+  },
   "Milan Day": "sumCooling",
   "Rajdhani Day": ["rawCalendarSameDateOpposite", "rawPrevOpenDelta"],
   Kalyan: ["rawCalendarSameDate", "rawPrevCloseCond"],
-  "Sridevi Night": ["currentProduction", "currentUi"],
-  "Kalyan Night": ["currentOpenOppHouse", "currentOpenCond"],
+  "Sridevi Night": {
+    narrow: ["currentProduction", "currentUi"],
+    wide: ["currentProduction", "currentUi"],
+    counts: { 2: "sumCooling", 8: "currentUi" },
+  },
+  "Kalyan Night": {
+    narrow: ["currentOpenOppHouse", "currentOpenCond"],
+    wide: ["currentOpenOppHouse", "currentOpenCond"],
+    counts: { 8: "currentOpenCond" },
+  },
   "Madhur Night": ["rawRankOnly", "rawPrevCloseCond"],
-  "Milan Night": ["calendarSameDateOpposite", "currentProduction"],
+  "Milan Night": {
+    narrow: ["calendarSameDateOpposite", "currentProduction"],
+    wide: ["calendarSameDateOpposite", "currentProduction"],
+    counts: { 8: "currentProduction" },
+  },
   "Rajdhani Night": ["rawRankOnly", "rawPrevCloseCond"],
   "Main Bazar": ["rawCalendarSameDate", "rawPrevCloseCond"],
 }
@@ -215,6 +240,20 @@ function mergeRawCopySuttaSources(sources: CopySuttaPick[][], count: number) {
   })
 
   return finalizeRawCopySuttaSet(Array.from(bySutta.values()), count)
+}
+
+function resolveCountAwareStrategy<T>(
+  strategy: CountAwareMarketStrategy<T> | undefined,
+  fallback: MarketStrategy<T>,
+  count: number,
+): MarketStrategy<T> {
+  if (!strategy) return fallback
+  if (typeof strategy === "object" && !Array.isArray(strategy) && "narrow" in strategy) {
+    const exact = strategy.counts?.[count]
+    if (exact) return exact
+    return count <= 4 ? strategy.narrow : strategy.wide
+  }
+  return strategy
 }
 
 export function buildTopSuttaSet(
@@ -428,8 +467,11 @@ export function buildOpenSuttaSet(
   const openRecords = records.filter((record) => record.openPanel && record.openSutta >= 0)
   if (openRecords.length < 50) return buildTopSuttaSet(picks, droughts, count)
 
-  const strategy =
-    OPEN_SUTTA_MARKET_STRATEGY[marketName] ?? "current"
+  const strategy = resolveCountAwareStrategy(
+    OPEN_SUTTA_MARKET_STRATEGY[marketName],
+    "current",
+    count,
+  )
   if (strategy === "current") return buildTopSuttaSet(picks, droughts, count)
   if (strategy === "rankOnly") return buildRankOnlySuttaSet(picks, droughts, count)
   if (strategy === "weightedSnap") return buildTopSuttaSet(picks, droughts, count, "weightedSnap")
@@ -545,15 +587,18 @@ export function buildCloseSuttaSet(
   targetDate = new Date(),
 ): CopySuttaPick[] {
   const productionMode: SuttaSelectionMode = "weightedAggregate"
-  const currentProduction = () => buildTopSuttaSet(picks, droughts, count, productionMode)
+  const currentProduction = (strategyCount = count) => buildTopSuttaSet(picks, droughts, strategyCount, productionMode)
 
   if (records.length < 50) return currentProduction()
 
   const closeRecords = records.filter((record) => record.closePanel && record.closeSutta >= 0)
   if (closeRecords.length < 50) return currentProduction()
 
-  const strategyConfig =
-    CLOSE_SUTTA_MARKET_STRATEGY[marketName] ?? "currentProduction"
+  const strategyConfig = resolveCountAwareStrategy(
+    CLOSE_SUTTA_MARKET_STRATEGY[marketName],
+    "currentProduction",
+    count,
+  )
   const strategies = Array.isArray(strategyConfig) ? strategyConfig : [strategyConfig]
 
   const todayDayName = getDayNameForDate(targetDate)
@@ -629,7 +674,7 @@ export function buildCloseSuttaSet(
 
   const total = closeRecords.length
   const buildStrategySet = (strategy: CloseSuttaStrategy, strategyCount: number) => {
-    if (strategy === "currentProduction") return buildTopSuttaSet(picks, droughts, strategyCount, productionMode)
+    if (strategy === "currentProduction") return currentProduction(strategyCount)
     if (strategy === "sumCooling") return buildTopSuttaSet(picks, droughts, strategyCount, "aggregate")
     if (strategy === "weightedFresh") return buildTopSuttaSet(picks, droughts, strategyCount, "weightedAggregate")
     if (strategy === "currentUi") return buildTopSuttaSet(picks, droughts, strategyCount, "current")
