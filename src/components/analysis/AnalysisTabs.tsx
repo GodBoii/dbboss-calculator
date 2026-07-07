@@ -379,6 +379,12 @@ function buildRankOnlySuttaSet(
     selected.push(makeCopySuttaPick(pick.sutta, pick.score, index + 1, droughts))
   })
 
+  for (let sutta = 0; sutta <= 9; sutta++) {
+    if (seen.has(sutta)) continue
+    seen.add(sutta)
+    selected.push(makeCopySuttaPick(sutta, 0, 999, droughts))
+  }
+
   return finalizeCopySuttaSet(selected, count)
 }
 
@@ -395,6 +401,12 @@ function buildRawRankOnlySuttaSet(
     seen.add(pick.sutta)
     selected.push(makeCopySuttaPick(pick.sutta, pick.score, index + 1, droughts))
   })
+
+  for (let sutta = 0; sutta <= 9; sutta++) {
+    if (seen.has(sutta)) continue
+    seen.add(sutta)
+    selected.push(makeCopySuttaPick(sutta, 0, 999, droughts))
+  }
 
   return finalizeRawCopySuttaSet(selected, count)
 }
