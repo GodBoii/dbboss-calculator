@@ -4,7 +4,7 @@ import withPWAInit from "@ducanh2912/next-pwa";
 const withPWA = withPWAInit({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
-  register: true,
+  register: false, // Registered explicitly via PwaRegister component in layout.tsx
   reloadOnOnline: true,
   cacheOnFrontEndNav: true,
   workboxOptions: {
