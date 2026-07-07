@@ -16,6 +16,7 @@ import {
   buildOperatorContext,
   mergeOperatorIntoDpContext,
 } from "./operator-psychology";
+import { applyPrecisionKindOverride } from "./precision-kind-overrides";
 import {
   CLOSE_SCORE_TUNING,
   CURRENT_SCORE_TUNING,
@@ -238,6 +239,33 @@ export function analyzeMarket(
     OPEN_SCORE_TUNING,
   );
 
+  const openKindPrediction = applyPrecisionKindOverride({
+    marketName,
+    side: "open",
+    records,
+    allMarketsRecords,
+    analysisDate,
+    basePrediction: buildKindPrediction(
+      openPicks,
+      openDpKindContext,
+      1.25,
+    ),
+    dpContext: openDpKindContext,
+  });
+  const closeKindPrediction = applyPrecisionKindOverride({
+    marketName,
+    side: "close",
+    records,
+    allMarketsRecords,
+    analysisDate,
+    basePrediction: buildKindPrediction(
+      closePicks,
+      closeDpKindContext,
+      1.3,
+    ),
+    dpContext: closeDpKindContext,
+  });
+
   return {
     market: marketName,
     analysisDateISO: analysisDate.toISOString(),
@@ -265,16 +293,8 @@ export function analyzeMarket(
     closeDpPicks: closeDpPicks.slice(0, 30),
     openDpDigitFocus: buildDpDigitFocus(openDpPicks),
     closeDpDigitFocus: buildDpDigitFocus(closeDpPicks),
-    openKindPrediction: buildKindPrediction(
-      openPicks,
-      openDpKindContext,
-      1.25,
-    ),
-    closeKindPrediction: buildKindPrediction(
-      closePicks,
-      closeDpKindContext,
-      1.3,
-    ),
+    openKindPrediction,
+    closeKindPrediction,
     openDpKindContext,
     closeDpKindContext,
     openOperatorContext,

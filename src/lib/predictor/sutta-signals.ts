@@ -26,7 +26,7 @@ export function getSuttaSignal(drought: number): SuttaSignal {
       state: "cooling",
       label: "Cooling",
       scorePenalty: 10,
-      color: "#fb923c",
+      color: "#facc15",
       description: "Pressure may be fading, but the signal is still cautious.",
     };
   }
