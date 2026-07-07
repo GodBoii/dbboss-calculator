@@ -8,6 +8,7 @@ import {
   buildContextFromResult,
   calculateSutta,
   getSuttaSignal,
+  type PanelPick,
   type PredictionResult,
   type JodiAnalysis,
 } from "@/lib/predictor"
@@ -52,6 +53,60 @@ const NIGHT_MARKETS = ['Sridevi Night', 'Kalyan Night', 'Madhur Night', 'Milan N
 
 
 type LoadingState = "idle" | "fetching" | "analyzing" | "done" | "error"
+type AvoidDigitPick = {
+  digit: number
+  exposure: number
+  exposurePct: number
+}
+
+function buildAvoidDigits(picks: PanelPick[], count = 4): AvoidDigitPick[] {
+  const exposure = Array(10).fill(0) as number[]
+
+  picks.slice(0, 30).forEach((pick, index) => {
+    const rankWeight = Math.max(1, 30 - index)
+    const scoreWeight = Math.max(1, pick.score)
+    const uniqueDigits = new Set(
+      pick.panel
+        .split("")
+        .map(Number)
+        .filter((digit) => Number.isInteger(digit)),
+    )
+
+    uniqueDigits.forEach((digit) => {
+      if (digit >= 0 && digit <= 9) exposure[digit] += rankWeight * scoreWeight
+    })
+  })
+
+  const maxExposure = Math.max(...exposure, 1)
+
+  return exposure
+    .map((value, digit) => ({
+      digit,
+      exposure: value,
+      exposurePct: Math.round((value / maxExposure) * 100),
+    }))
+    .sort((a, b) => a.exposure - b.exposure || a.digit - b.digit)
+    .slice(0, count)
+}
+
+function AvoidDigitColumn({ label, digits }: { label: string; digits: AvoidDigitPick[] }) {
+  return (
+    <div className="avoid-digit-column">
+      <div className="avoid-digit-column-head">
+        <span className="avoid-digit-label">{label}</span>
+        <span className="avoid-digit-meta">lowest top-30 exposure</span>
+      </div>
+      <div className="avoid-digit-row">
+        {digits.map((item) => (
+          <div key={`${label}-${item.digit}`} className="avoid-digit-chip">
+            <span className="avoid-digit-number">{item.digit}</span>
+            <span className="avoid-digit-pressure">{item.exposurePct}% seen</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 // ─── Component ────────────────────────────────────────────────────────────────
 type Session = "day" | "night"
@@ -288,6 +343,14 @@ export default function AnalysisSection() {
   const generatedJodis = useMemo(
     () => buildJodis(openCopySuttas, closeCopySuttas),
     [openCopySuttas, closeCopySuttas],
+  )
+  const openAvoidDigits = useMemo(
+    () => (result ? buildAvoidDigits(result.openPicks, 4) : []),
+    [result],
+  )
+  const closeAvoidDigits = useMemo(
+    () => (result ? buildAvoidDigits(jodiResult?.adjustedClosePicks ?? result.closePicks, 4) : []),
+    [result, jodiResult],
   )
 
   const renderSuttaSignalList = (label: string, droughts: Record<string, number>) => (
@@ -756,6 +819,27 @@ export default function AnalysisSection() {
             pct={pct}
             dpPrecision={dpPrecision}
           />
+
+          <div className="glass-panel avoid-digit-panel">
+            <div className="section-header">
+              <span className="section-icon">🚫</span>
+              <div>
+                <h3 className="section-title">4 Numbers Not Expected</h3>
+                <p className="section-subtitle">
+                  Weakest digits from today&apos;s ranked panel model for {selectedMarket}
+                </p>
+              </div>
+            </div>
+
+            <div className="avoid-digit-grid">
+              <AvoidDigitColumn label="Open" digits={openAvoidDigits} />
+              <AvoidDigitColumn label={jodiResult ? "Close (Jodi adjusted)" : "Close"} digits={closeAvoidDigits} />
+            </div>
+
+            <p className="avoid-digit-note">
+              These are elimination digits with the least presence in the model&apos;s strongest panels, not guaranteed outcomes.
+            </p>
+          </div>
         </>
       )}
 
