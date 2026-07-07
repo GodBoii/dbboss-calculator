@@ -388,49 +388,6 @@
     text-align: center;
 }
 
-/* ─── PWA Install Banner ─────────────────────────────────────────────── */
-.pwa-install-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 12px 16px;
-    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-    background: linear-gradient(to top, rgba(8, 8, 8, 1) 60%, rgba(8, 8, 8, 0));
-    z-index: 150;
-    pointer-events: none;
-}
-
-.pwa-install-btn {
-    width: 100%;
-    padding: 16px;
-    background: var(--gold);
-    color: #000;
-    font-family: "Outfit", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    border: none;
-    border-radius: 16px;
-    cursor: pointer;
-    pointer-events: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    box-shadow: 0 4px 24px rgba(232, 160, 32, 0.4);
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-    animation: fadeInUp 0.4s var(--ease-out-expo) forwards;
-}
-
-.pwa-install-btn:active {
-    transform: scale(0.97);
-    box-shadow: 0 2px 12px rgba(232, 160, 32, 0.25);
-}
-
 .profile-toast {
     margin: auto 20px 0;
     padding: 12px 16px;

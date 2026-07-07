@@ -8,15 +8,6 @@ interface ProfilePanelProps {
   onClose: () => void;
 }
 
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
-}
-
-type PWAWindow = Window & {
-  __pwa_install_event?: BeforeInstallPromptEvent | null;
-};
-
 export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
   const {
     updateAvailable,
@@ -26,9 +17,6 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
     installUpdate,
   } = usePWAUpdate();
   const [toast, setToast] = useState<string | null>(null);
-  const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showAndroidInstallFallback, setShowAndroidInstallFallback] =
-    useState(false);
 
   // Declared before effects so it can be referenced in them
   const showToast = useCallback((msg: string) => {
@@ -47,50 +35,9 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
     }
   }, [updateAvailable, showToast]);
 
-  useEffect(() => {
-    const w = window as PWAWindow;
-    const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
-    const userAgent = navigator.userAgent;
-    const isAndroidChrome =
-      /Android/i.test(userAgent) &&
-      /Chrome/i.test(userAgent) &&
-      !/EdgA|OPR|SamsungBrowser/i.test(userAgent);
-
-    if (!isStandalone && isAndroidChrome) setShowAndroidInstallFallback(true);
-
-    const t = window.setTimeout(() => {
-      if (w.__pwa_install_event) setPrompt(w.__pwa_install_event);
-    }, 0);
-
-    const onInstallable = () => {
-      if (w.__pwa_install_event) setPrompt(w.__pwa_install_event);
-    };
-    window.addEventListener("pwa-install-ready", onInstallable);
-
-    return () => {
-      window.clearTimeout(t);
-      window.removeEventListener("pwa-install-ready", onInstallable);
-    };
-  }, []);
-
   const handleCheckUpdate = async () => {
     await checkForUpdate();
     if (!updateAvailable) showToast("✓ You're on the latest version");
-  };
-
-  const handleInstall = async () => {
-    if (!prompt) {
-      showToast("Open Chrome menu (three dots), then tap Install app");
-      return;
-    }
-
-    await prompt.prompt();
-    const { outcome } = await prompt.userChoice;
-    if (outcome === "accepted") {
-      setPrompt(null);
-      (window as PWAWindow).__pwa_install_event = null;
-      onClose();
-    }
   };
 
   const haptic = (ms = 8) => {
@@ -154,29 +101,6 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
         </div>
 
         <div className="profile-divider" />
-
-        {/* Install */}
-        {(prompt || showAndroidInstallFallback) && (
-          <>
-            <div className="profile-section-label">Installation</div>
-            <button
-              className="profile-menu-item profile-menu-item--accent"
-              onClick={() => {
-                haptic(12);
-                handleInstall();
-              }}
-            >
-              <span className="profile-item-icon">📲</span>
-              <span className="profile-item-text">
-                <span className="profile-item-title">Install App</span>
-                <span className="profile-item-sub">
-                  Full-screen, works offline
-                </span>
-              </span>
-            </button>
-            <div className="profile-divider" />
-          </>
-        )}
 
         {/* Updates */}
         <div className="profile-section-label">App Updates</div>
