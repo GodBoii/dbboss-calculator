@@ -16,7 +16,10 @@ export default function PwaRegister() {
 
     const register = () => {
       navigator.serviceWorker
-        .register("/sw.js", { scope: "/" })
+        .register("/sw.js", { scope: "/", updateViaCache: "none" })
+        .then(() => {
+          window.dispatchEvent(new CustomEvent("pwa-service-worker-ready"));
+        })
         .catch((err) => {
           console.warn("[PWA] Service worker registration failed:", err);
         });

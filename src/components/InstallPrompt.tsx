@@ -13,12 +13,20 @@ type PWAWindow = Window & {
 
 export default function InstallPrompt() {
   const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [showAndroidFallback, setShowAndroidFallback] = useState(false);
 
   useEffect(() => {
     // Nothing to do if already installed as a PWA
     if (window.matchMedia("(display-mode: standalone)").matches) return;
 
     const w = window as PWAWindow;
+    const userAgent = navigator.userAgent;
+    const isAndroidChrome =
+      /Android/i.test(userAgent) &&
+      /Chrome/i.test(userAgent) &&
+      !/EdgA|OPR|SamsungBrowser/i.test(userAgent);
+
+    if (isAndroidChrome) setShowAndroidFallback(true);
 
     // setTimeout makes the setState a callback (not synchronous inside effect)
     // and picks up the event captured by the early inline script in layout.tsx
@@ -38,9 +46,16 @@ export default function InstallPrompt() {
     };
   }, []);
 
-  if (!prompt) return null;
+  if (!prompt && !showAndroidFallback) return null;
 
   const handleInstall = async () => {
+    if (!prompt) {
+      window.alert(
+        "To install DBboss, open Chrome menu (three dots) and tap Install app or Add to Home screen.",
+      );
+      return;
+    }
+
     await prompt.prompt();
     const { outcome } = await prompt.userChoice;
     if (outcome === "accepted") {
