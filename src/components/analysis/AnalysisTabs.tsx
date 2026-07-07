@@ -65,16 +65,29 @@ type CloseSuttaStrategy =
   | "currentUi"
   | "rankOnly"
   | "sumCooling"
+  | "weightedFresh"
   | "calendarSameDate"
   | "calendarSameDateOpposite"
   | "prevCloseCond"
   | "prevOpenCond"
   | "prevJodiCond"
   | "currentOpenCond"
+  | "currentOpenOpposite"
   | "currentOpenOppHouse"
   | "currentOpenSameHouse"
   | "prevCloseDelta"
+  | "prevOpenDelta"
   | "sourcePrevOpenCond"
+  | "rawRankOnly"
+  | "rawSumCooling"
+  | "rawWeightedSnap"
+  | "rawCalendarSameDate"
+  | "rawCalendarSameDateOpposite"
+  | "rawPrevCloseCond"
+  | "rawPrevOpenCond"
+  | "rawPrevJodiCond"
+  | "rawPrevCloseDelta"
+  | "rawPrevOpenDelta"
 type MarketStrategy<T> = T | T[]
 
 const OPEN_SUTTA_MARKET_STRATEGY: Record<string, OpenSuttaStrategy> = {
@@ -94,17 +107,17 @@ const OPEN_SUTTA_MARKET_STRATEGY: Record<string, OpenSuttaStrategy> = {
 
 const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, MarketStrategy<CloseSuttaStrategy>> = {
   Sridevi: "currentOpenOppHouse",
-  "Time Bazar": "prevJodiCond",
-  "Madhur Day": "prevOpenCond",
+  "Time Bazar": "rawPrevJodiCond",
+  "Madhur Day": ["rawPrevOpenCond", "rawPrevOpenDelta"],
   "Milan Day": "sumCooling",
-  "Rajdhani Day": "currentOpenSameHouse",
-  Kalyan: ["calendarSameDate", "prevCloseCond"],
+  "Rajdhani Day": ["rawCalendarSameDateOpposite", "rawPrevOpenDelta"],
+  Kalyan: ["rawCalendarSameDate", "rawPrevCloseCond"],
   "Sridevi Night": ["currentProduction", "currentUi"],
   "Kalyan Night": ["currentOpenOppHouse", "currentOpenCond"],
-  "Madhur Night": "rankOnly",
+  "Madhur Night": ["rawRankOnly", "rawPrevCloseCond"],
   "Milan Night": ["calendarSameDateOpposite", "currentProduction"],
-  "Rajdhani Night": "rankOnly",
-  "Main Bazar": "sumCooling",
+  "Rajdhani Night": ["rawRankOnly", "rawPrevCloseCond"],
+  "Main Bazar": ["rawCalendarSameDate", "rawPrevCloseCond"],
 }
 
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
@@ -133,12 +146,30 @@ function finalizeCopySuttaSet(items: CopySuttaPick[], count: number) {
     .map((item, index) => ({ ...item, rank: index + 1 }))
 }
 
+function finalizeRawCopySuttaSet(items: CopySuttaPick[], count: number) {
+  return [...items]
+    .sort((a, b) => b.score - a.score || a.rank - b.rank || a.sutta - b.sutta)
+    .slice(0, count)
+    .map((item, index) => ({ ...item, rank: index + 1 }))
+}
+
 function finalizeScoredSuttaRows(
   rows: Array<{ sutta: number; score: number }>,
   droughts: Record<string, number>,
   count: number,
 ) {
   return finalizeCopySuttaSet(
+    rows.map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts)),
+    count,
+  )
+}
+
+function finalizeRawScoredSuttaRows(
+  rows: Array<{ sutta: number; score: number }>,
+  droughts: Record<string, number>,
+  count: number,
+) {
+  return finalizeRawCopySuttaSet(
     rows.map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts)),
     count,
   )
@@ -163,6 +194,27 @@ function mergeCopySuttaSources(sources: CopySuttaPick[][], count: number) {
   })
 
   return finalizeCopySuttaSet(Array.from(bySutta.values()), count)
+}
+
+function mergeRawCopySuttaSources(sources: CopySuttaPick[][], count: number) {
+  const bySutta = new Map<number, CopySuttaPick>()
+
+  sources.forEach((source, sourceIndex) => {
+    const sourceBase = (sources.length - sourceIndex) * 100000
+    source.forEach((item, itemIndex) => {
+      const existing = bySutta.get(item.sutta)
+      const sourceScore = sourceBase + (100 - itemIndex) * 1000 + item.score
+      if (!existing || sourceScore > existing.score) {
+        bySutta.set(item.sutta, {
+          ...item,
+          score: sourceScore,
+          rank: Math.min(existing?.rank ?? Number.POSITIVE_INFINITY, itemIndex + 1),
+        })
+      }
+    })
+  })
+
+  return finalizeRawCopySuttaSet(Array.from(bySutta.values()), count)
 }
 
 export function buildTopSuttaSet(
@@ -239,8 +291,59 @@ export function buildTopSuttaSet(
   return finalizeCopySuttaSet(ranked, count)
 }
 
-function getTodayDayName() {
-  return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][new Date().getDay()]
+function buildRawTopSuttaSet(
+  picks: PanelPick[],
+  droughts: Record<string, number>,
+  count: number,
+  mode: SuttaSelectionMode = "current",
+): CopySuttaPick[] {
+  const bySutta = new Map<number, CopySuttaPick>()
+
+  picks.forEach((pick, index) => {
+    const existing = bySutta.get(pick.sutta)
+    const rankWeight = Math.max(1, 31 - index)
+    if (existing) {
+      bySutta.set(pick.sutta, {
+        ...existing,
+        rank: Math.min(existing.rank, index + 1),
+        score:
+          mode === "weightedAggregate" || mode === "weightedSnap"
+            ? existing.score + pick.score * rankWeight
+            : existing.score + pick.score,
+      })
+      return
+    }
+
+    bySutta.set(pick.sutta, {
+      ...makeCopySuttaPick(
+        pick.sutta,
+        mode === "weightedAggregate" || mode === "weightedSnap" ? pick.score * rankWeight : pick.score,
+        index + 1,
+        droughts,
+      ),
+    })
+  })
+
+  for (let sutta = 0; sutta <= 9; sutta++) {
+    if (!bySutta.has(sutta)) bySutta.set(sutta, makeCopySuttaPick(sutta, 0, 999, droughts))
+  }
+
+  const signalBonus: Record<CopySuttaPick["signalState"], number> =
+    mode === "weightedAggregate"
+      ? { fresh: 20, warming: 8, danger: -8, cooling: -4, snapback: 6, unknown: 0 }
+      : mode === "weightedSnap"
+      ? { fresh: 8, warming: 5, danger: -4, cooling: 0, snapback: 22, unknown: 0 }
+      : mode === "aggregate"
+      ? { fresh: 8, warming: 5, danger: 0, cooling: 12, snapback: 8, unknown: 0 }
+      : { fresh: 0, warming: 0, danger: 0, cooling: 0, snapback: 0, unknown: 0 }
+
+  return finalizeRawCopySuttaSet(
+    Array.from(bySutta.values()).map((item) => ({
+      ...item,
+      score: item.score + signalBonus[item.signalState],
+    })),
+    count,
+  )
 }
 
 function getDayNameForDate(date: Date) {
@@ -262,6 +365,23 @@ function buildRankOnlySuttaSet(
   })
 
   return finalizeCopySuttaSet(selected, count)
+}
+
+function buildRawRankOnlySuttaSet(
+  picks: PanelPick[],
+  droughts: Record<string, number>,
+  count: number,
+): CopySuttaPick[] {
+  const selected: CopySuttaPick[] = []
+  const seen = new Set<number>()
+
+  picks.forEach((pick, index) => {
+    if (seen.has(pick.sutta)) return
+    seen.add(pick.sutta)
+    selected.push(makeCopySuttaPick(pick.sutta, pick.score, index + 1, droughts))
+  })
+
+  return finalizeRawCopySuttaSet(selected, count)
 }
 
 function makeCopySuttaPick(sutta: number, score: number, rank: number, droughts: Record<string, number>): CopySuttaPick {
@@ -446,6 +566,7 @@ export function buildCloseSuttaSet(
   const prevJodiCond = Array(10).fill(0)
   const currentOpenCond = Array(10).fill(0)
   const prevCloseDelta = Array(10).fill(0)
+  const prevOpenDelta = Array(10).fill(0)
   const sourcePrevOpenCond = Array(10).fill(0)
   const dayOfMonth = targetDate.getDate()
   let weekdayTotal = 0
@@ -499,6 +620,7 @@ export function buildCloseSuttaSet(
       currentOpenCondTotal++
     }
     if (previous.closeSutta >= 0) prevCloseDelta[(current.closeSutta - previous.closeSutta + 10) % 10]++
+    if (previous.openSutta >= 0) prevOpenDelta[(current.closeSutta - previous.openSutta + 10) % 10]++
     if (sourcePreviousOpen !== undefined && current.openSutta === sourcePreviousOpen) {
       sourcePrevOpenCond[current.closeSutta]++
       sourcePrevOpenCondTotal++
@@ -509,11 +631,16 @@ export function buildCloseSuttaSet(
   const buildStrategySet = (strategy: CloseSuttaStrategy, strategyCount: number) => {
     if (strategy === "currentProduction") return buildTopSuttaSet(picks, droughts, strategyCount, productionMode)
     if (strategy === "sumCooling") return buildTopSuttaSet(picks, droughts, strategyCount, "aggregate")
+    if (strategy === "weightedFresh") return buildTopSuttaSet(picks, droughts, strategyCount, "weightedAggregate")
     if (strategy === "currentUi") return buildTopSuttaSet(picks, droughts, strategyCount, "current")
     if (strategy === "rankOnly") return buildRankOnlySuttaSet(picks, droughts, strategyCount)
+    if (strategy === "rawSumCooling") return buildRawTopSuttaSet(picks, droughts, strategyCount, "aggregate")
+    if (strategy === "rawWeightedSnap") return buildRawTopSuttaSet(picks, droughts, strategyCount, "weightedSnap")
+    if (strategy === "rawRankOnly") return buildRawRankOnlySuttaSet(picks, droughts, strategyCount)
 
     const needsCurrentOpen =
       strategy === "currentOpenCond" ||
+      strategy === "currentOpenOpposite" ||
       strategy === "currentOpenOppHouse" ||
       strategy === "currentOpenSameHouse"
     if (needsCurrentOpen && (currentOpenSutta === null || currentOpenSutta < 0)) {
@@ -522,26 +649,26 @@ export function buildCloseSuttaSet(
 
     const rows = Array.from({ length: 10 }, (_, sutta) => {
       let score = 0
-    if (strategy === "calendarSameDate") {
+    if (strategy === "calendarSameDate" || strategy === "rawCalendarSameDate") {
       score =
         0.2 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.1 * smoothedRate(weekday[sutta], weekdayTotal) +
         0.7 * smoothedRate(sameDate[sutta], sameDateTotal)
-    } else if (strategy === "calendarSameDateOpposite") {
+    } else if (strategy === "calendarSameDateOpposite" || strategy === "rawCalendarSameDateOpposite") {
       score =
         0.2 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.8 * smoothedRate(sameDateOpposite[sutta], sameDateTotal)
-    } else if (strategy === "prevCloseCond") {
+    } else if (strategy === "prevCloseCond" || strategy === "rawPrevCloseCond") {
       score =
         0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.15 * smoothedRate(weekday[sutta], weekdayTotal) +
         0.6 * smoothedRate(prevCloseCond[sutta], prevCloseCondTotal)
-    } else if (strategy === "prevOpenCond") {
+    } else if (strategy === "prevOpenCond" || strategy === "rawPrevOpenCond") {
       score =
         0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.15 * smoothedRate(weekday[sutta], weekdayTotal) +
         0.6 * smoothedRate(prevOpenCond[sutta], prevOpenCondTotal)
-    } else if (strategy === "prevJodiCond") {
+    } else if (strategy === "prevJodiCond" || strategy === "rawPrevJodiCond") {
       score =
         0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.75 * smoothedRate(prevJodiCond[sutta], prevJodiCondTotal)
@@ -550,6 +677,10 @@ export function buildCloseSuttaSet(
         0.2 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.1 * smoothedRate(weekday[sutta], weekdayTotal) +
         0.7 * smoothedRate(currentOpenCond[sutta], currentOpenCondTotal)
+    } else if (strategy === "currentOpenOpposite") {
+      score =
+        0.2 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.8 * (currentOpenSutta !== null && oppositeSutta(currentOpenSutta) === sutta ? 1 : 0)
     } else if (strategy === "currentOpenOppHouse") {
       const currentHouse = suttaHouse(currentOpenSutta ?? undefined)
       score =
@@ -559,12 +690,18 @@ export function buildCloseSuttaSet(
       score =
         0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.75 * houseScore(sutta, suttaHouse(currentOpenSutta ?? undefined))
-    } else if (strategy === "prevCloseDelta") {
+    } else if (strategy === "prevCloseDelta" || strategy === "rawPrevCloseDelta") {
       const delta = (sutta - previousClose + 10) % 10
       score =
         0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.2 * smoothedRate(weekday[sutta], weekdayTotal) +
         0.55 * smoothedRate(prevCloseDelta[delta], Math.max(1, total - 1))
+    } else if (strategy === "prevOpenDelta" || strategy === "rawPrevOpenDelta") {
+      const delta = (sutta - (previousOpen ?? 0) + 10) % 10
+      score =
+        0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
+        0.2 * smoothedRate(weekday[sutta], weekdayTotal) +
+        0.55 * smoothedRate(prevOpenDelta[delta], Math.max(1, total - 1))
     } else if (strategy === "sourcePrevOpenCond") {
       score =
         0.25 * smoothedRate(recent24[sutta], Math.min(24, total)) +
@@ -575,13 +712,14 @@ export function buildCloseSuttaSet(
       return { sutta, score }
     })
 
+    if (strategy.startsWith("raw")) return finalizeRawScoredSuttaRows(rows, droughts, strategyCount)
     return finalizeScoredSuttaRows(rows, droughts, strategyCount)
   }
 
-  return mergeCopySuttaSources(
-    strategies.map((strategy) => buildStrategySet(strategy, 10)),
-    count,
-  )
+  const sources = strategies.map((strategy) => buildStrategySet(strategy, 10))
+  return strategies.some((strategy) => strategy.startsWith("raw"))
+    ? mergeRawCopySuttaSources(sources, count)
+    : mergeCopySuttaSources(sources, count)
 }
 
 export function buildJodis(openSuttas: CopySuttaPick[], closeSuttas: CopySuttaPick[]): string[] {

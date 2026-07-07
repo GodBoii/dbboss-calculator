@@ -81,6 +81,7 @@ export default function AnalysisSection() {
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
   const [backtestReport, setBacktestReport] = useState<BacktestReport | null>(null)
   const [cachedRecords, setCachedRecords] = useState<PanelRecord[]>([])
+  const [allMarketsRecords, setAllMarketsRecords] = useState<Record<string, PanelRecord[]>>({})
   const cachedRecordsRef = useRef<PanelRecord[]>([])
   const allMarketsRecordsRef = useRef<Record<string, PanelRecord[]>>({})
 
@@ -113,6 +114,7 @@ export default function AnalysisSection() {
       setJodiResult(null)
       setBacktestReport(null)
       setCachedRecords([])
+      setAllMarketsRecords({})
       setActiveTab("picks")
       setPicksSubTab("open")
       setOpenSuttaInput(null)
@@ -199,6 +201,7 @@ export default function AnalysisSection() {
         cachedRecordsRef.current = records
         allMarketsRecordsRef.current = allMarketsRecords
         setCachedRecords(records)
+        setAllMarketsRecords(allMarketsRecords)
         const prediction = analyzeMarket(selectedMarket, records, allMarketsRecords)
         if (!prediction) throw new Error("Not enough data to generate predictions.")
 
@@ -276,10 +279,10 @@ export default function AnalysisSection() {
           copyCount,
           selectedMarket,
           openSuttaInput,
-          allMarketsRecordsRef.current,
+          allMarketsRecords,
         )
       : [],
-    [result, jodiResult, cachedRecords, copyCount, selectedMarket, openSuttaInput],
+    [result, jodiResult, cachedRecords, copyCount, selectedMarket, openSuttaInput, allMarketsRecords],
   )
   const generatedJodis = useMemo(
     () => buildJodis(openCopySuttas, closeCopySuttas),
