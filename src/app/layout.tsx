@@ -38,19 +38,6 @@ export default function RootLayout({
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        {/* Capture beforeinstallprompt before React mounts to avoid race condition */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.__pwa_install_event = null;
-              window.addEventListener('beforeinstallprompt', function(e) {
-                e.preventDefault();
-                window.__pwa_install_event = e;
-                window.dispatchEvent(new CustomEvent('pwa-install-ready'));
-              });
-            `,
-          }}
-        />
       </head>
       <body>
         <PwaRegister />

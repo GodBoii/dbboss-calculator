@@ -3,7 +3,6 @@
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import ProfilePanel from "@/components/ProfilePanel";
-import InstallPrompt from "@/components/InstallPrompt";
 
 const AnalysisSection = dynamic(() => import("@/components/AnalysisSection"), {
   ssr: false,
@@ -130,7 +129,6 @@ export default function DBBossApp() {
 
       {/* ── Profile Side Panel ──────────────────────────────────────── */}
       <ProfilePanel isOpen={profileOpen} onClose={() => setProfileOpen(false)} />
-      <InstallPrompt />
     </div>
   );
 }
