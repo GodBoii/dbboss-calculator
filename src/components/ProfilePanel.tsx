@@ -9,28 +9,13 @@ interface ProfilePanelProps {
 }
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt: () => Promise<void>;
-  userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
+  prompt(): Promise<void>;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
 type PWAWindow = Window & {
   __pwa_install_event?: BeforeInstallPromptEvent | null;
 };
-
-// Lazy initializers — safe during SSR (window absent → defaults)
-function detectStandalone(): boolean | null {
-  if (typeof window === "undefined") return null;
-  return (
-    window.matchMedia("(display-mode: standalone)").matches ||
-    (window.navigator as Navigator & { standalone?: boolean }).standalone ===
-      true
-  );
-}
-
-function detectIOS(): boolean {
-  if (typeof window === "undefined") return false;
-  return /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
-}
 
 export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
   const {
@@ -41,14 +26,9 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
     installUpdate,
   } = usePWAUpdate();
   const [toast, setToast] = useState<string | null>(null);
-  const [canInstall, setCanInstall] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] =
-    useState<BeforeInstallPromptEvent | null>(null);
-  // Initialized via lazy functions — no synchronous setState needed inside effects
-  const [isStandalone] = useState<boolean | null>(detectStandalone);
-  const [isIOS] = useState<boolean>(detectIOS);
+  const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
 
-  // showToast declared before any useEffect that calls it to satisfy hoisting rules
+  // Declared before effects so it can be referenced in them
   const showToast = useCallback((msg: string) => {
     setToast(msg);
     setTimeout(() => setToast(null), 3000);
@@ -56,9 +36,9 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
 
   useEffect(() => {
     if (updateAvailable) {
-      // setTimeout defers setState so it runs in a callback, not synchronously in the effect
+      // setTimeout keeps setState in a callback, not synchronously in the effect body
       const t = window.setTimeout(
-        () => showToast("\uD83C\uDF89 New update available!"),
+        () => showToast("🎉 New update available!"),
         0,
       );
       return () => window.clearTimeout(t);
@@ -68,43 +48,32 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
   useEffect(() => {
     const w = window as PWAWindow;
 
-    // Check global capture slot asynchronously (setState must be in a callback per Next.js rules)
-    const checkTimer = window.setTimeout(() => {
-      if (w.__pwa_install_event) {
-        setDeferredPrompt(w.__pwa_install_event);
-        setCanInstall(true);
-      }
+    const t = window.setTimeout(() => {
+      if (w.__pwa_install_event) setPrompt(w.__pwa_install_event);
     }, 0);
 
-    // In case the event fires after this component mounts
-    const handleInstallReady = () => {
-      if (w.__pwa_install_event) {
-        setDeferredPrompt(w.__pwa_install_event);
-        setCanInstall(true);
-      }
+    const onInstallable = () => {
+      if (w.__pwa_install_event) setPrompt(w.__pwa_install_event);
     };
+    window.addEventListener("pwa-install-ready", onInstallable);
 
-    window.addEventListener("pwa-install-ready", handleInstallReady);
     return () => {
-      window.clearTimeout(checkTimer);
-      window.removeEventListener("pwa-install-ready", handleInstallReady);
+      window.clearTimeout(t);
+      window.removeEventListener("pwa-install-ready", onInstallable);
     };
   }, []);
 
   const handleCheckUpdate = async () => {
     await checkForUpdate();
-    if (!updateAvailable) {
-      showToast("\u2713 You\u2019re on the latest version");
-    }
+    if (!updateAvailable) showToast("✓ You're on the latest version");
   };
 
   const handleInstall = async () => {
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
+    if (!prompt) return;
+    await prompt.prompt();
+    const { outcome } = await prompt.userChoice;
     if (outcome === "accepted") {
-      setCanInstall(false);
-      setDeferredPrompt(null);
+      setPrompt(null);
       (window as PWAWindow).__pwa_install_event = null;
       onClose();
     }
@@ -132,7 +101,7 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
         role="dialog"
         aria-label="Profile & Settings"
       >
-        {/* Panel Header */}
+        {/* Header */}
         <div className="profile-panel-header">
           <div className="profile-avatar">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -172,7 +141,30 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
 
         <div className="profile-divider" />
 
-        {/* Updates Section */}
+        {/* Install — shown only when Chrome says the app is installable */}
+        {prompt && (
+          <>
+            <div className="profile-section-label">Installation</div>
+            <button
+              className="profile-menu-item profile-menu-item--accent"
+              onClick={() => {
+                haptic(12);
+                handleInstall();
+              }}
+            >
+              <span className="profile-item-icon">📲</span>
+              <span className="profile-item-text">
+                <span className="profile-item-title">Install App</span>
+                <span className="profile-item-sub">
+                  Full-screen, works offline
+                </span>
+              </span>
+            </button>
+            <div className="profile-divider" />
+          </>
+        )}
+
+        {/* Updates */}
         <div className="profile-section-label">App Updates</div>
 
         {updateAvailable ? (
@@ -216,64 +208,9 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
           </button>
         )}
 
-        {/* Install App Section — only shown when not already installed as PWA */}
-        {isStandalone === false && (
-          <>
-            <div className="profile-divider" style={{ margin: "8px 0" }} />
-            <div className="profile-section-label">Installation</div>
-
-            {isIOS ? (
-              <div className="profile-ios-install">
-                <span
-                  style={{ fontSize: 20, marginBottom: 6, display: "block" }}
-                >
-                  📲
-                </span>
-                <strong>Install on iOS</strong>
-                <p>
-                  Tap the <strong>Share</strong> icon in Safari, then{" "}
-                  <strong>&ldquo;Add to Home Screen&rdquo;</strong> for the full
-                  experience.
-                </p>
-              </div>
-            ) : canInstall ? (
-              <button
-                className="profile-menu-item profile-menu-item--install"
-                onClick={() => {
-                  haptic(12);
-                  handleInstall();
-                }}
-              >
-                <span className="profile-item-icon">📲</span>
-                <span className="profile-item-text">
-                  <span className="profile-item-title">Install App</span>
-                  <span className="profile-item-sub">
-                    Full-screen, works offline
-                  </span>
-                </span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  style={{ opacity: 0.4, flexShrink: 0 }}
-                >
-                  <path
-                    d="M6 3L11 8L6 13"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            ) : null}
-          </>
-        )}
-
         <div className="profile-divider" style={{ margin: "8px 0" }} />
 
-        {/* About Section */}
+        {/* About */}
         <div className="profile-section-label">About</div>
         <div className="profile-about-card">
           <p className="profile-about-text">
@@ -297,7 +234,6 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
           </div>
         </div>
 
-        {/* Toast */}
         {toast && <div className="profile-toast">{toast}</div>}
       </aside>
     </>

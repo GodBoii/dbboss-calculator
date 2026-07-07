@@ -4,319 +4,442 @@
 
 /* ─── Design Tokens ─────────────────────────────────────────────────── */
 :root {
-  --gold: #E8A020;
-  --gold-dim: rgba(232,160,32,0.12);
-  --gold-border: rgba(232,160,32,0.3);
-  --night-color: #818CF8;
-  --night-dim: rgba(129,140,248,0.12);
-  --night-border: rgba(129,140,248,0.3);
-  --surface-card: rgba(255,255,255,0.04);
-  --safe-top: env(safe-area-inset-top, 0px);
-  --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --gold: #e8a020;
+    --gold-dim: rgba(232, 160, 32, 0.12);
+    --gold-border: rgba(232, 160, 32, 0.3);
+    --night-color: #818cf8;
+    --night-dim: rgba(129, 140, 248, 0.12);
+    --night-border: rgba(129, 140, 248, 0.3);
+    --surface-card: rgba(255, 255, 255, 0.04);
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* ─── App Shell ──────────────────────────────────────────────────────── */
 .app-shell {
-  display: flex;
-  flex-direction: column;
-  height: 100dvh;
-  max-width: 480px;
-  margin: 0 auto;
-  background: #080808;
-  overflow: hidden;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    max-width: 480px;
+    margin: 0 auto;
+    background: #080808;
+    overflow: hidden;
+    position: relative;
 }
 
 /* ─── App Header ─────────────────────────────────────────────────────── */
 .app-header {
-  position: relative;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: calc(var(--safe-top) + 10px) 20px 10px;
-  background: rgba(8,8,8,0.92);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  flex-shrink: 0;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--safe-top) + 10px) 20px 10px;
+    background: rgba(8, 8, 8, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-shrink: 0;
 }
 
 .app-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .app-brand-mark {
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--gold-dim);
-  border: 1px solid var(--gold-border);
-  border-radius: 10px;
-  font-size: 16px;
-  color: var(--gold);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--gold);
 }
 
 .app-brand-name {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: #fff;
-  letter-spacing: -0.03em;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: -0.03em;
 }
 
 .app-profile-btn {
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.7);
-  cursor: pointer;
-  transition: all 0.2s var(--ease-spring);
-  -webkit-tap-highlight-color: transparent;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.2s var(--ease-spring);
+    -webkit-tap-highlight-color: transparent;
 }
 .app-profile-btn:active {
-  transform: scale(0.92);
-  background: rgba(255,255,255,0.12);
+    transform: scale(0.92);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 /* ─── Tab Bar ────────────────────────────────────────────────────────── */
 .app-tab-bar {
-  display: flex;
-  flex-shrink: 0;
-  background: rgba(8,8,8,0.85);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  padding: 6px 8px;
-  gap: 6px;
-  z-index: 99;
+    display: flex;
+    flex-shrink: 0;
+    background: rgba(8, 8, 8, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 6px 8px;
+    gap: 6px;
+    z-index: 99;
 }
 
 .app-tab-btn {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  height: 38px;
-  border-radius: 12px;
-  border: none;
-  background: transparent;
-  color: rgba(255,255,255,0.4);
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s var(--ease-spring);
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 38px;
+    border-radius: 12px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-spring);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 .app-tab-btn--active {
-  background: rgba(255,255,255,0.1);
-  color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
-.app-tab-btn:active { transform: scale(0.96); }
-.app-tab-icon { flex-shrink: 0; }
+.app-tab-btn:active {
+    transform: scale(0.96);
+}
+.app-tab-icon {
+    flex-shrink: 0;
+}
 
 /* ─── App Content ────────────────────────────────────────────────────── */
 .app-content {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 16px 16px calc(16px + var(--safe-bottom));
-  -webkit-overflow-scrolling: touch;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 16px 16px calc(16px + var(--safe-bottom));
+    -webkit-overflow-scrolling: touch;
 }
-.app-content::-webkit-scrollbar { display: none; }
+.app-content::-webkit-scrollbar {
+    display: none;
+}
 
 /* ─── Generic Card ───────────────────────────────────────────────────── */
 .card {
-  background: var(--surface-card);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 14px;
+    background: var(--surface-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 14px;
 }
 
 /* ─── Loading Placeholder ────────────────────────────────────────────── */
 .loading-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 60px 24px;
-  color: rgba(255,255,255,0.35);
-  font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 60px 24px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 14px;
 }
 .loading-placeholder-spinner {
-  width: 28px;
-  height: 28px;
-  border: 2px solid rgba(255,255,255,0.1);
-  border-top-color: var(--gold);
-  border-radius: 50%;
-  animation: spin 0.9s linear infinite;
+    width: 28px;
+    height: 28px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
 }
 
 /* ─── Profile Panel ──────────────────────────────────────────────────── */
 .profile-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: rgba(0,0,0,0);
-  pointer-events: none;
-  transition: background 0.3s ease;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: background 0.3s ease;
 }
 .profile-backdrop--open {
-  background: rgba(0,0,0,0.6);
-  pointer-events: auto;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.6);
+    pointer-events: auto;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .profile-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 201;
-  width: min(320px, 88vw);
-  background: #111;
-  border-left: 1px solid rgba(255,255,255,0.1);
-  transform: translateX(110%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow-y: auto;
-  padding-bottom: var(--safe-bottom);
-  display: flex;
-  flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 201;
+    width: min(320px, 88vw);
+    background: #111;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateX(110%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+    padding-bottom: var(--safe-bottom);
+    display: flex;
+    flex-direction: column;
 }
-.profile-panel--open { transform: translateX(0); }
-.profile-panel::-webkit-scrollbar { display: none; }
+.profile-panel--open {
+    transform: translateX(0);
+}
+.profile-panel::-webkit-scrollbar {
+    display: none;
+}
 
 .profile-panel-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: calc(var(--safe-top) + 20px) 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: calc(var(--safe-top) + 20px) 20px 20px;
 }
 .profile-avatar {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--gold-dim);
-  border: 1px solid var(--gold-border);
-  border-radius: 12px;
-  color: var(--gold);
-  flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: 12px;
+    color: var(--gold);
+    flex-shrink: 0;
 }
-.profile-header-info { flex: 1; }
-.profile-name { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 17px; color: #fff; display: block; }
-.profile-version { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px; display: block; }
+.profile-header-info {
+    flex: 1;
+}
+.profile-name {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+    display: block;
+}
+.profile-version {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+    margin-top: 1px;
+    display: block;
+}
 
 .profile-close-btn {
-  width: 32px; height: 32px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.5);
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: all 0.15s;
-  flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.15s;
+    flex-shrink: 0;
 }
-.profile-close-btn:active { transform: scale(0.9); }
+.profile-close-btn:active {
+    transform: scale(0.9);
+}
 
 .profile-divider {
-  height: 1px;
-  background: rgba(255,255,255,0.07);
-  margin: 0 20px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.07);
+    margin: 0 20px;
 }
 
 .profile-section-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-  padding: 14px 20px 6px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    padding: 14px 20px 6px;
 }
 
 .profile-menu-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 20px;
-  background: transparent;
-  border: none;
-  color: rgba(255,255,255,0.8);
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  transition: background 0.15s;
-  -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background 0.15s;
+    -webkit-tap-highlight-color: transparent;
 }
-.profile-menu-item:active { background: rgba(255,255,255,0.05); }
-.profile-menu-item:disabled { opacity: 0.5; cursor: not-allowed; }
+.profile-menu-item:active {
+    background: rgba(255, 255, 255, 0.05);
+}
+.profile-menu-item:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 .profile-menu-item--accent {
-  color: #34D399;
-  background: rgba(52,211,153,0.06);
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.06);
 }
-.profile-menu-item--accent:active { background: rgba(52,211,153,0.12); }
+.profile-menu-item--accent:active {
+    background: rgba(52, 211, 153, 0.12);
+}
 
-.profile-item-icon { font-size: 20px; flex-shrink: 0; width: 24px; text-align: center; }
-.profile-item-text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-.profile-item-title { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
-.profile-item-sub { font-size: 11px; color: rgba(255,255,255,0.35); }
+.profile-item-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    width: 24px;
+    text-align: center;
+}
+.profile-item-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.profile-item-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.profile-item-sub {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+}
 .profile-item-badge {
-  font-size: 9px; font-weight: 800; letter-spacing: 0.08em;
-  padding: 3px 7px; border-radius: 6px;
-  background: rgba(52,211,153,0.2); color: #34D399;
-  border: 1px solid rgba(52,211,153,0.3);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 3px 7px;
+    border-radius: 6px;
+    background: rgba(52, 211, 153, 0.2);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.3);
 }
 
 .profile-ios-install {
-  margin: 4px 20px;
-  padding: 14px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  color: rgba(255,255,255,0.6);
-  font-size: 13px;
-  line-height: 1.6;
+    margin: 4px 20px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    line-height: 1.6;
 }
-.profile-ios-install strong { color: rgba(255,255,255,0.85); }
+.profile-ios-install strong {
+    color: rgba(255, 255, 255, 0.85);
+}
 
 .profile-about-card {
-  margin: 4px 20px;
-  padding: 14px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 14px;
+    margin: 4px 20px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
 }
-.profile-about-text { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 14px; }
-.profile-stat-row { display: flex; justify-content: space-around; }
-.profile-stat { display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.profile-stat-val { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 18px; color: var(--gold); }
-.profile-stat-label { font-size: 10px; color: rgba(255,255,255,0.35); text-align: center; }
+.profile-about-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+.profile-stat-row {
+    display: flex;
+    justify-content: space-around;
+}
+.profile-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.profile-stat-val {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--gold);
+}
+.profile-stat-label {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+}
+
+/* ─── PWA Install Banner ─────────────────────────────────────────────── */
+.pwa-install-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    background: linear-gradient(to top, rgba(8, 8, 8, 1) 60%, rgba(8, 8, 8, 0));
+    z-index: 150;
+    pointer-events: none;
+}
+
+.pwa-install-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--gold);
+    color: #000;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 24px rgba(232, 160, 32, 0.4);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    animation: fadeInUp 0.4s var(--ease-out-expo) forwards;
+}
+
+.pwa-install-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 12px rgba(232, 160, 32, 0.25);
+}
 
 .profile-toast {
-  margin: auto 20px 0;
-  padding: 12px 16px;
-  background: rgba(30,30,30,0.98);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 12px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.85);
-  text-align: center;
-  animation: fadeInUp 0.25s var(--ease-out-expo) both;
-  margin-top: 20px;
+    margin: auto 20px 0;
+    padding: 12px 16px;
+    background: rgba(30, 30, 30, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    animation: fadeInUp 0.25s var(--ease-out-expo) both;
+    margin-top: 20px;
 }
