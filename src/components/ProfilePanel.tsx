@@ -27,6 +27,8 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
   } = usePWAUpdate();
   const [toast, setToast] = useState<string | null>(null);
   const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [showAndroidInstallFallback, setShowAndroidInstallFallback] =
+    useState(false);
 
   // Declared before effects so it can be referenced in them
   const showToast = useCallback((msg: string) => {
@@ -47,6 +49,14 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
 
   useEffect(() => {
     const w = window as PWAWindow;
+    const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
+    const userAgent = navigator.userAgent;
+    const isAndroidChrome =
+      /Android/i.test(userAgent) &&
+      /Chrome/i.test(userAgent) &&
+      !/EdgA|OPR|SamsungBrowser/i.test(userAgent);
+
+    if (!isStandalone && isAndroidChrome) setShowAndroidInstallFallback(true);
 
     const t = window.setTimeout(() => {
       if (w.__pwa_install_event) setPrompt(w.__pwa_install_event);
@@ -69,7 +79,11 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
   };
 
   const handleInstall = async () => {
-    if (!prompt) return;
+    if (!prompt) {
+      showToast("Open Chrome menu (three dots), then tap Install app");
+      return;
+    }
+
     await prompt.prompt();
     const { outcome } = await prompt.userChoice;
     if (outcome === "accepted") {
@@ -141,8 +155,8 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
 
         <div className="profile-divider" />
 
-        {/* Install — shown only when Chrome says the app is installable */}
-        {prompt && (
+        {/* Install */}
+        {(prompt || showAndroidInstallFallback) && (
           <>
             <div className="profile-section-label">Installation</div>
             <button
