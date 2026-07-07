@@ -29,8 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo-dbboss-20260706.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo-dbboss-20260706.png" />
+        <link rel="icon" href="/dbboss.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/dbboss.png" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

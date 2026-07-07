@@ -6,7 +6,7 @@ const withPWA = withPWAInit({
   disable: process.env.NODE_ENV === "development",
   register: true,
   workboxOptions: {
-    skipWaiting: false, // Manual control - wait for user to trigger update
+    skipWaiting: true,
     clientsClaim: true,
   },
 });

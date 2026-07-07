@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import ProfilePanel from "@/components/ProfilePanel";
+import InstallPrompt from "@/components/InstallPrompt";
 
 const AnalysisSection = dynamic(() => import("@/components/AnalysisSection"), {
   ssr: false,
@@ -76,7 +77,7 @@ export default function DBBossApp() {
       {/* ── Fixed Top Header ──────────────────────────────────────── */}
       <header className="app-header">
         <div className="app-brand">
-          <img src="/logo-dbboss-20260706.png" alt="DBboss Logo" className="app-brand-mark" style={{ padding: 0, objectFit: "cover", background: "none", border: "none" }} />
+          <img src="/dbboss.png" alt="DBboss Logo" className="app-brand-mark" style={{ padding: 0, objectFit: "cover", background: "none", border: "none" }} />
           <span className="app-brand-name">DBboss</span>
         </div>
 
@@ -129,6 +130,7 @@ export default function DBBossApp() {
 
       {/* ── Profile Side Panel ──────────────────────────────────────── */}
       <ProfilePanel isOpen={profileOpen} onClose={() => setProfileOpen(false)} />
+      <InstallPrompt />
     </div>
   );
 }
