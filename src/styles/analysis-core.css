@@ -590,7 +590,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 0;
+  margin-bottom: 18px;
 }
 
 .intel-card {
@@ -599,7 +599,7 @@
 
 .intel-compact-panel {
   padding: 10px 12px !important;
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 
 .intel-compact-header {
@@ -607,13 +607,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 4px;
-}
-
-.intel-compact-subtitle {
-  margin: 2px 0 0;
-  color: rgba(255,255,255,0.36);
-  font-size: 11px;
+  margin-bottom: 6px;
 }
 
 .intel-compact-count {
@@ -888,15 +882,15 @@
 .sutta-signal-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
 }
 
 .sutta-signal-row {
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) 42px 58px;
+  grid-template-columns: 32px 96px 38px 52px;
   align-items: center;
-  gap: 8px;
-  min-height: 28px;
+  gap: 7px;
+  min-height: 24px;
 }
 
 .sutta-signal-digit {
@@ -907,15 +901,17 @@
 }
 
 .sutta-signal-bar-track {
-  height: 18px;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.06);
-  overflow: hidden;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.075);
+  overflow: visible;
 }
 
 .sutta-signal-bar-fill {
   height: 100%;
-  border-radius: 6px;
+  max-width: 58px;
+  min-width: 8px;
+  border-radius: inherit;
   opacity: 0.95;
 }
 
