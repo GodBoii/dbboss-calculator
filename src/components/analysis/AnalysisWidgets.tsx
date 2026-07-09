@@ -21,7 +21,7 @@ function levelLabel(level: ModelCalibration["level"]) {
   return "Weak"
 }
 
-export function ConfidenceBadge({ label, model }: { label: string; model: ModelCalibration | JodiCalibration }) {
+export function ConfidenceBadge({ label, model, liveSuttaAcc }: { label: string; model: ModelCalibration | JodiCalibration; liveSuttaAcc?: number | null }) {
   const jodiStrength = "strength" in model ? model.strength : null
   return (
     <div className={`confidence-badge confidence-badge--${model.level}`}>
@@ -31,7 +31,14 @@ export function ConfidenceBadge({ label, model }: { label: string; model: ModelC
       </div>
       <div className="confidence-metrics">
         <span>Panel {model.panel30.toFixed(1)}%</span>
-        <span>Sutta {model.sutta30.toFixed(1)}%</span>
+        {liveSuttaAcc != null ? (
+          <span style={{ color: liveSuttaAcc >= 60 ? "#4ade80" : liveSuttaAcc >= 40 ? "#facc15" : "#f87171" }}>
+            Sutta {liveSuttaAcc.toFixed(1)}%
+            <span style={{ fontSize: "9px", opacity: 0.7, marginLeft: "3px" }}>7d live</span>
+          </span>
+        ) : (
+          <span>Sutta {model.sutta30.toFixed(1)}%</span>
+        )}
       </div>
       {jodiStrength !== null && (
         <div className="confidence-foot">Jodi strength {(jodiStrength * 100).toFixed(0)}%</div>

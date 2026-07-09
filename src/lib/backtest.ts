@@ -268,3 +268,130 @@ export function runMarketBacktest(
     jodiMovement,
   }
 }
+
+// ── 7-Day Sutta Backtest ────────────────────────────────────────────────────
+
+export interface SuttaBacktest7dResult {
+  drawsTested: number
+  openSuttaHits: number
+  closeSuttaHits: number
+  jodiHits: number
+  openSuttaAcc: number   // percentage 0-100
+  closeSuttaAcc: number  // percentage 0-100
+  jodiAcc: number        // percentage 0-100
+}
+
+interface CopySuttaPick {
+  sutta: number
+  [key: string]: unknown
+}
+
+type SuttaBuilder = (...args: unknown[]) => CopySuttaPick[]
+type JodiBuilder = (open: CopySuttaPick[], close: CopySuttaPick[]) => string[]
+
+/**
+ * Runs a 7-day sutta-level backtest for a single market.
+ *
+ * Because the sutta-set builders live in the component layer (AnalysisTabs.tsx),
+ * they are injected as callbacks to avoid coupling lib → component.
+ */
+export function runSuttaBacktest7d(
+  market: string,
+  records: PanelRecord[],
+  allMarketsRecords: Record<string, PanelRecord[]>,
+  builders: {
+    buildOpenSuttaSet: SuttaBuilder
+    buildCloseSuttaSet: SuttaBuilder
+    buildJodis: JodiBuilder
+  },
+  options: { days?: number; suttaCount?: number } = {},
+): SuttaBacktest7dResult | null {
+  const days = options.days ?? 7
+  const suttaCount = options.suttaCount ?? 6
+
+  const datedRecords = records
+    .map((record) => ({ record, isoDate: getRecordISODate(record) }))
+    .filter((item): item is { record: PanelRecord; isoDate: string } => Boolean(item.isoDate))
+    .sort((a, b) => a.isoDate.localeCompare(b.isoDate))
+
+  if (datedRecords.length < 50) return null
+
+  // Take the last N draws
+  const testRows = datedRecords.slice(-days)
+
+  let openSuttaHits = 0
+  let closeSuttaHits = 0
+  let jodiHits = 0
+  let drawsTested = 0
+
+  for (const { record, isoDate } of testRows) {
+    const prior = datedRecords
+      .filter((item) => item.isoDate < isoDate)
+      .map((item) => item.record)
+
+    if (prior.length < 50) continue
+
+    const priorAllMarkets: Record<string, PanelRecord[]> = {}
+    for (const [mkt, mktRecords] of Object.entries(allMarketsRecords)) {
+      priorAllMarkets[mkt] = mktRecords.filter((mktRecord) => {
+        const mktISODate = getRecordISODate(mktRecord)
+        return mktISODate !== null && mktISODate < isoDate
+      })
+    }
+    priorAllMarkets[market] = prior
+
+    const targetDate = new Date(`${isoDate}T12:00:00`)
+    const prediction = analyzeMarket(market, prior, priorAllMarkets, targetDate)
+    if (!prediction) continue
+
+    // Build top-N open suttas
+    const openSuttas: CopySuttaPick[] = builders.buildOpenSuttaSet(
+      prediction.openPicks,
+      prediction.openSuttaDroughts,
+      prior,
+      suttaCount,
+      market,
+      targetDate,
+    )
+
+    // Build top-N close suttas (Jodi-adjusted using actual open sutta)
+    const jodiResult = computeJodiAnalysis(
+      record.openSutta,
+      record.openPanel || null,
+      prior,
+      buildContextFromResult(prediction),
+      prediction.closeDpKindContext,
+    )
+    const closeSuttas: CopySuttaPick[] = builders.buildCloseSuttaSet(
+      jodiResult.adjustedClosePicks,
+      prediction.closeSuttaDroughts,
+      prior,
+      suttaCount,
+      market,
+      record.openSutta,
+      priorAllMarkets,
+      targetDate,
+    )
+
+    const openSuttaList = openSuttas.map((p) => p.sutta)
+    const closeSuttaList = closeSuttas.map((p) => p.sutta)
+    const predictedJodis = builders.buildJodis(openSuttas, closeSuttas)
+
+    drawsTested++
+    if (openSuttaList.includes(record.openSutta)) openSuttaHits++
+    if (closeSuttaList.includes(record.closeSutta)) closeSuttaHits++
+    if (predictedJodis.includes(record.jodi)) jodiHits++
+  }
+
+  if (drawsTested === 0) return null
+
+  return {
+    drawsTested,
+    openSuttaHits,
+    closeSuttaHits,
+    jodiHits,
+    openSuttaAcc: (openSuttaHits / drawsTested) * 100,
+    closeSuttaAcc: (closeSuttaHits / drawsTested) * 100,
+    jodiAcc: (jodiHits / drawsTested) * 100,
+  }
+}

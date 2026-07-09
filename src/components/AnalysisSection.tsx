@@ -12,7 +12,7 @@ import {
   type PredictionResult,
   type JodiAnalysis,
 } from "@/lib/predictor"
-import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
+import { runMarketBacktest, runSuttaBacktest7d, type BacktestReport, type SuttaBacktest7dResult } from "@/lib/backtest"
 import {
   saveRecords,
   getRecordsByMarket,
@@ -285,6 +285,7 @@ export default function AnalysisSection() {
   const [openPanelInput, setOpenPanelInput] = useState("")
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
   const [backtestReport, setBacktestReport] = useState<BacktestReport | null>(null)
+  const [suttaBacktest, setSuttaBacktest] = useState<SuttaBacktest7dResult | null>(null)
   const [cachedRecords, setCachedRecords] = useState<PanelRecord[]>([])
   const [allMarketsRecords, setAllMarketsRecords] = useState<Record<string, PanelRecord[]>>({})
   const cachedRecordsRef = useRef<PanelRecord[]>([])
@@ -411,6 +412,11 @@ export default function AnalysisSection() {
         if (!prediction) throw new Error("Not enough data to generate predictions.")
 
         setBacktestReport(runMarketBacktest(selectedMarket, records, allMarketsRecords, { days: 30 }))
+        setSuttaBacktest(runSuttaBacktest7d(selectedMarket, records, allMarketsRecords, {
+          buildOpenSuttaSet: buildOpenSuttaSet as (...args: unknown[]) => { sutta: number }[],
+          buildCloseSuttaSet: buildCloseSuttaSet as (...args: unknown[]) => { sutta: number }[],
+          buildJodis: buildJodis as (o: { sutta: number }[], c: { sutta: number }[]) => string[],
+        }))
         setResult(prediction)
         setLoadingState("done")
       } catch (err) {
@@ -685,9 +691,9 @@ export default function AnalysisSection() {
           </div>
 
           <div className="confidence-strip glass-panel">
-            <ConfidenceBadge label="Open" model={result.calibration.open} />
-            <ConfidenceBadge label="Close" model={result.calibration.close} />
-            <ConfidenceBadge label="Jodi" model={result.calibration.jodi} />
+            <ConfidenceBadge label="Open" model={result.calibration.open} liveSuttaAcc={suttaBacktest?.openSuttaAcc} />
+            <ConfidenceBadge label="Close" model={result.calibration.close} liveSuttaAcc={suttaBacktest?.closeSuttaAcc} />
+            <ConfidenceBadge label="Jodi" model={result.calibration.jodi} liveSuttaAcc={suttaBacktest?.jodiAcc} />
           </div>
 
           <div className="confidence-strip kind-forecast-strip glass-panel">
