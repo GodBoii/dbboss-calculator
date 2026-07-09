@@ -652,7 +652,7 @@ export default function AnalysisSection() {
                 <summary className="intel-summary-row intel-summary-row--drought">
                   <span className="intel-summary-title">
                     <span className="intel-icon">🌵</span>
-                    Sequence Drought
+                    Sequence
                   </span>
                   <span className="drought-summary">
                     <span className="drought-summary-text">{result.recordsSinceLastSequence} / avg {result.averageDroughtLength}</span>
@@ -762,6 +762,27 @@ export default function AnalysisSection() {
           </div>
 
           {/* ── Jodi Dependency Model Input ────────────────────────────────── */}
+          <div className="glass-panel avoid-digit-panel">
+            <div className="section-header">
+              <span className="section-icon">🚫</span>
+              <div>
+                <h3 className="section-title">2-Digit Avoid Safety Gate</h3>
+                <p className="section-subtitle">
+                  Strict all-clear check for {selectedMarket}
+                </p>
+              </div>
+            </div>
+
+            <div className="avoid-digit-grid">
+              <AvoidDigitColumn label="Open" call={openAvoidCall} />
+              <AvoidDigitColumn label={jodiResult ? "Close (Jodi adjusted)" : "Close"} call={closeAvoidCall} />
+            </div>
+
+            <p className="avoid-digit-note">
+              The pair is actionable only when both digits clear the strict research gate. Current research blocks calls below the verified threshold.
+            </p>
+          </div>
+
           <div className="glass-panel">
             <div className="section-header">
               <span className="section-icon">🎯</span>
@@ -852,26 +873,6 @@ export default function AnalysisSection() {
             dpPrecision={dpPrecision}
           />
 
-          <div className="glass-panel avoid-digit-panel">
-            <div className="section-header">
-              <span className="section-icon">🚫</span>
-              <div>
-                <h3 className="section-title">2-Digit Avoid Safety Gate</h3>
-                <p className="section-subtitle">
-                  Strict all-clear check for {selectedMarket}
-                </p>
-              </div>
-            </div>
-
-            <div className="avoid-digit-grid">
-              <AvoidDigitColumn label="Open" call={openAvoidCall} />
-              <AvoidDigitColumn label={jodiResult ? "Close (Jodi adjusted)" : "Close"} call={closeAvoidCall} />
-            </div>
-
-            <p className="avoid-digit-note">
-              The pair is actionable only when both digits clear the strict research gate. Current research blocks calls below the verified threshold.
-            </p>
-          </div>
         </>
       )}
 
