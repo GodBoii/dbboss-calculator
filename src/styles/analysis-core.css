@@ -1058,6 +1058,16 @@
   background: rgba(255,255,255,0.035);
 }
 
+.avoid-digit-column--blocked {
+  border-color: rgba(248,113,113,0.18);
+  background: rgba(248,113,113,0.04);
+}
+
+.avoid-digit-column--call {
+  border-color: rgba(34,197,94,0.28);
+  background: rgba(34,197,94,0.05);
+}
+
 .avoid-digit-column-head {
   display: flex;
   align-items: baseline;
@@ -1080,9 +1090,17 @@
   text-align: right;
 }
 
+.avoid-digit-meta--blocked {
+  color: #fca5a5;
+}
+
+.avoid-digit-meta--call {
+  color: #86efac;
+}
+
 .avoid-digit-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 6px;
 }
 
@@ -1113,6 +1131,14 @@
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
+}
+
+.avoid-digit-status {
+  margin: 10px 0 0;
+  color: rgba(254,202,202,0.76);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 .avoid-digit-note {
