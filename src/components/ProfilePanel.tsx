@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { usePWAUpdate } from "@/hooks/usePWAUpdate";
+import { APP_VERSION } from "@/lib/app-version";
 
 interface ProfilePanelProps {
   isOpen: boolean;
@@ -79,7 +80,7 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
           </div>
           <div className="profile-header-info">
             <span className="profile-name">DBboss</span>
-            <span className="profile-version">v1.0.0 · PWA</span>
+            <span className="profile-version">v{APP_VERSION} - PWA</span>
           </div>
           <button
             className="profile-close-btn"
