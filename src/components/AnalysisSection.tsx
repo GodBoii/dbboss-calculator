@@ -534,7 +534,7 @@ export default function AnalysisSection() {
             <ConfidenceBadge label="Jodi" model={result.calibration.jodi} />
           </div>
 
-          <div className="confidence-strip glass-panel">
+          <div className="confidence-strip kind-forecast-strip glass-panel">
             <KindForecastCard label="Open Kind" prediction={result.openKindPrediction} />
             <KindForecastCard label="Close Kind" prediction={result.closeKindPrediction} />
             {jodiResult && <KindForecastCard label="Jodi Close Kind" prediction={jodiResult.kindPrediction} />}

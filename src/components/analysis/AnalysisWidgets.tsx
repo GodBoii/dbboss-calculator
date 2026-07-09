@@ -50,27 +50,48 @@ export function KindForecastCard({ label, prediction }: { label: string; predict
   const kinds: PanelKind[] = ["SP", "DP"]
   const confidenceLevel = prediction.confidence >= 45 ? "strong" : prediction.confidence >= 38 ? "fair" : "weak"
   const topSignals = prediction.dpSignals.slice(0, 2)
+  const totalTop30 = Math.max(1, kinds.reduce((sum, kind) => sum + prediction.top30Counts[kind], 0))
+  const title = label.replace(" Kind Forecast", "").replace(" Kind", "")
 
   return (
-    <div className={`confidence-badge confidence-badge--${confidenceLevel}`}>
-      <div className="confidence-badge-head">
-        <span className="confidence-label">{label}</span>
-        <span className="confidence-level" style={{ color: kindColor(prediction.predictedKind) }}>
+    <div className={`kind-forecast-card confidence-badge--${confidenceLevel}`}>
+      <div className="kind-forecast-head">
+        <span className="kind-forecast-label">{title}</span>
+        <span className="kind-forecast-pill" style={{ color: kindColor(prediction.predictedKind) }}>
           {prediction.predictedKind}
         </span>
       </div>
-      <div className="confidence-metrics">
-        <span>{prediction.confidence.toFixed(1)}%</span>
-        <span>DP est {prediction.estimatedDpRate.toFixed(1)}%</span>
+
+      <div className="kind-forecast-primary">
+        <span className="kind-forecast-confidence">{prediction.confidence.toFixed(1)}%</span>
+        <span className="kind-forecast-dp">DP est {prediction.estimatedDpRate.toFixed(1)}%</span>
       </div>
-      <div className="confidence-foot">
-        {kinds.map((kind) => `${kind} ${prediction.top30Counts[kind]}`).join(" / ")}
-        {` / Bias ${prediction.dpBias.toFixed(2)}x`}
+
+      <div className="kind-mix" aria-label={`${title} SP DP mix`}>
+        {kinds.map((kind) => (
+          <div key={kind} className="kind-mix-row">
+            <span className="kind-mix-label" style={{ color: kindColor(kind) }}>{kind}</span>
+            <span className="kind-mix-track">
+              <span
+                className="kind-mix-fill"
+                style={{
+                  width: `${(prediction.top30Counts[kind] / totalTop30) * 100}%`,
+                  background: kindColor(kind),
+                }}
+              />
+            </span>
+            <span className="kind-mix-count">{prediction.top30Counts[kind]}</span>
+          </div>
+        ))}
       </div>
+
+      <div className="kind-forecast-meta">Bias {prediction.dpBias.toFixed(2)}x</div>
+
       {topSignals.length > 0 && (
-        <div className="confidence-foot">
-          {topSignals.join(" | ")}
-        </div>
+        <details className="kind-forecast-signals">
+          <summary>Signals</summary>
+          <p>{topSignals.join(" | ")}</p>
+        </details>
       )}
     </div>
   )
