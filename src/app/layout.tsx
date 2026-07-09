@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import NativeInstallPrompt from "@/components/NativeInstallPrompt";
 import PwaRegister from "@/components/PwaRegister";
 import "./globals.css";
@@ -38,6 +39,28 @@ export default function RootLayout({
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
+        />
+        <Script
+          id="pwa-install-event-capture"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                if (window.__dbbossPwaInstallCaptureReady) return;
+                window.__dbbossPwaInstallCaptureReady = true;
+                window.addEventListener("beforeinstallprompt", function (event) {
+                  event.preventDefault();
+                  window.__dbbossDeferredInstallPrompt = event;
+                  window.dispatchEvent(new CustomEvent("dbboss:pwa-beforeinstallprompt"));
+                });
+                window.addEventListener("appinstalled", function () {
+                  window.__dbbossDeferredInstallPrompt = undefined;
+                  window.__dbbossPwaInstalled = true;
+                  window.dispatchEvent(new CustomEvent("dbboss:pwa-appinstalled"));
+                });
+              })();
+            `,
+          }}
         />
       </head>
       <body>

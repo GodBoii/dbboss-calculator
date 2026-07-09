@@ -7,6 +7,13 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
+declare global {
+  interface Window {
+    __dbbossDeferredInstallPrompt?: BeforeInstallPromptEvent;
+    __dbbossPwaInstalled?: boolean;
+  }
+}
+
 const isStandalone = () =>
   window.matchMedia("(display-mode: standalone)").matches ||
   window.matchMedia("(display-mode: fullscreen)").matches ||
@@ -25,6 +32,16 @@ const isChromiumInstallCapable = () => {
     /Google Inc\./i.test(vendor)
   );
 };
+
+const isInstallPromptEvent = (
+  event: BeforeInstallPromptEvent | Event | undefined,
+): event is BeforeInstallPromptEvent =>
+  Boolean(
+    event &&
+      "prompt" in event &&
+      typeof event.prompt === "function" &&
+      "userChoice" in event,
+  );
 
 export default function NativeInstallPrompt() {
   const [promptEvent, setPromptEvent] =
@@ -45,23 +62,43 @@ export default function NativeInstallPrompt() {
 
     if (!isChromiumInstallCapable()) return;
 
-    const onBeforeInstallPrompt = (event: Event) => {
-      event.preventDefault();
-      setPromptEvent(event as BeforeInstallPromptEvent);
+    const showPrompt = (event: BeforeInstallPromptEvent) => {
+      setPromptEvent(event);
       setShowInstallCta(true);
     };
 
+    const syncSavedPrompt = () => {
+      if (isInstallPromptEvent(window.__dbbossDeferredInstallPrompt)) {
+        showPrompt(window.__dbbossDeferredInstallPrompt);
+      }
+    };
+
+    const onBeforeInstallPrompt = (event: Event) => {
+      event.preventDefault();
+      const installEvent = event as BeforeInstallPromptEvent;
+      window.__dbbossDeferredInstallPrompt = installEvent;
+      showPrompt(installEvent);
+    };
+
     const onAppInstalled = () => {
+      window.__dbbossDeferredInstallPrompt = undefined;
       setPromptEvent(null);
       setShowInstallCta(false);
     };
 
+    const initialSyncTimer = window.setTimeout(syncSavedPrompt, 0);
+
     window.addEventListener("beforeinstallprompt", onBeforeInstallPrompt);
+    window.addEventListener("dbboss:pwa-beforeinstallprompt", syncSavedPrompt);
     window.addEventListener("appinstalled", onAppInstalled);
+    window.addEventListener("dbboss:pwa-appinstalled", onAppInstalled);
 
     return () => {
+      window.clearTimeout(initialSyncTimer);
       window.removeEventListener("beforeinstallprompt", onBeforeInstallPrompt);
+      window.removeEventListener("dbboss:pwa-beforeinstallprompt", syncSavedPrompt);
       window.removeEventListener("appinstalled", onAppInstalled);
+      window.removeEventListener("dbboss:pwa-appinstalled", onAppInstalled);
     };
   }, []);
 
@@ -79,6 +116,7 @@ export default function NativeInstallPrompt() {
       const { outcome } = await promptEvent.userChoice;
 
       if (outcome === "accepted") {
+        window.__dbbossDeferredInstallPrompt = undefined;
         setShowInstallCta(false);
         setPromptEvent(null);
       } else {
