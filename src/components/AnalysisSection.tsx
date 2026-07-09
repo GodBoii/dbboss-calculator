@@ -16,6 +16,7 @@ import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
 import {
   saveRecords,
   getRecordsByMarket,
+  getRecordISODate,
   clearMarket,
   RECENT_HISTORY_DAYS,
   type PanelRecord,
@@ -63,6 +64,134 @@ type AvoidDigitCall = {
   digits: AvoidDigitPick[]
   isCallable: boolean
   confidenceLabel: string
+}
+
+type SuttaAccuracyReport = {
+  open: string
+  close: string
+  jodiAdjustedClose: string
+  jodi: string
+}
+
+function buildPriorMarkets(
+  marketName: string,
+  priorRecords: PanelRecord[],
+  allMarketsRecords: Record<string, PanelRecord[]>,
+  isoDate: string,
+): Record<string, PanelRecord[]> {
+  const priorMarkets: Record<string, PanelRecord[]> = {}
+
+  Object.entries(allMarketsRecords).forEach(([name, marketRecords]) => {
+    priorMarkets[name] = marketRecords.filter((record) => {
+      const recordISO = getRecordISODate(record)
+      return recordISO !== null && recordISO < isoDate
+    })
+  })
+
+  priorMarkets[marketName] = priorRecords
+  return priorMarkets
+}
+
+function accuracyPercent(correct: number, total: number): string {
+  if (!total) return "0.0%"
+  return `${((correct / total) * 100).toFixed(1)}%`
+}
+
+function buildSuttaAccuracyReport(
+  marketName: string,
+  records: PanelRecord[],
+  allMarketsRecords: Record<string, PanelRecord[]>,
+  copyCount: number,
+): SuttaAccuracyReport | null {
+  const datedRecords = records
+    .map((record) => ({ record, isoDate: getRecordISODate(record) }))
+    .filter((item): item is { record: PanelRecord; isoDate: string } => Boolean(item.isoDate))
+    .sort((a, b) => a.isoDate.localeCompare(b.isoDate))
+
+  if (datedRecords.length <= 50) return null
+
+  const testRecords = datedRecords.slice(-7)
+  const totals = { open: 0, close: 0, jodiAdjustedClose: 0, jodi: 0 }
+  const correct = { open: 0, close: 0, jodiAdjustedClose: 0, jodi: 0 }
+
+  for (const { record, isoDate } of testRecords) {
+    const priorRecords = datedRecords
+      .filter((item) => item.isoDate < isoDate)
+      .map((item) => item.record)
+
+    if (priorRecords.length < 50) continue
+
+    const targetDate = new Date(`${isoDate}T12:00:00`)
+    const priorMarkets = buildPriorMarkets(marketName, priorRecords, allMarketsRecords, isoDate)
+    const prediction = analyzeMarket(marketName, priorRecords, priorMarkets, targetDate)
+    if (!prediction) continue
+
+    const openSuttas = buildOpenSuttaSet(
+      prediction.openPicks,
+      prediction.openSuttaDroughts,
+      priorRecords,
+      copyCount,
+      marketName,
+      targetDate,
+    )
+    const closeSuttas = buildCloseSuttaSet(
+      prediction.closePicks,
+      prediction.closeSuttaDroughts,
+      priorRecords,
+      copyCount,
+      marketName,
+      null,
+      priorMarkets,
+      targetDate,
+    )
+
+    if (record.openPanel && record.openSutta >= 0) {
+      totals.open++
+      if (openSuttas.some((item) => item.sutta === record.openSutta)) correct.open++
+    }
+
+    if (record.closePanel && record.closeSutta >= 0) {
+      totals.close++
+      if (closeSuttas.some((item) => item.sutta === record.closeSutta)) correct.close++
+
+      if (record.openSutta >= 0) {
+        const jodiAnalysis = computeJodiAnalysis(
+          record.openSutta,
+          record.openPanel || null,
+          priorRecords,
+          buildContextFromResult(prediction),
+          prediction.closeDpKindContext,
+        )
+        const jodiAdjustedCloseSuttas = buildCloseSuttaSet(
+          jodiAnalysis.adjustedClosePicks,
+          prediction.closeSuttaDroughts,
+          priorRecords,
+          copyCount,
+          marketName,
+          record.openSutta,
+          priorMarkets,
+          targetDate,
+        )
+
+        totals.jodiAdjustedClose++
+        if (jodiAdjustedCloseSuttas.some((item) => item.sutta === record.closeSutta)) {
+          correct.jodiAdjustedClose++
+        }
+      }
+    }
+
+    if (record.jodi) {
+      totals.jodi++
+      if (buildJodis(openSuttas, closeSuttas).includes(record.jodi)) correct.jodi++
+    }
+  }
+
+  return {
+    open: accuracyPercent(correct.open, totals.open),
+    close: accuracyPercent(correct.close, totals.close),
+    jodiAdjustedClose: accuracyPercent(correct.jodiAdjustedClose, totals.jodiAdjustedClose),
+    jodi: accuracyPercent(correct.jodi, totals.jodi),
+  }
 }
 
 function buildAvoidDigits(picks: PanelPick[], count = 2): AvoidDigitPick[] {
@@ -372,6 +501,12 @@ export default function AnalysisSection() {
   const closeAvoidCall = useMemo(
     () => (result ? buildAvoidDigitCall(jodiResult?.adjustedClosePicks ?? result.closePicks) : { digits: [], isCallable: false, confidenceLabel: "No safe call" }),
     [result, jodiResult],
+  )
+  const suttaAccuracyReport = useMemo(
+    () => result
+      ? buildSuttaAccuracyReport(selectedMarket, cachedRecords, allMarketsRecords, copyCount)
+      : null,
+    [result, selectedMarket, cachedRecords, allMarketsRecords, copyCount],
   )
 
   const renderSuttaSignalList = (label: string, droughts: Record<string, number>) => (
@@ -866,6 +1001,7 @@ export default function AnalysisSection() {
             picksSubTab={picksSubTab}
             setPicksSubTab={setPicksSubTab}
             selectedMarket={selectedMarket}
+            suttaAccuracyReport={suttaAccuracyReport}
             copyingKey={copyingKey}
             handleCopy={handleCopy}
             getScoreColor={getScoreColor}

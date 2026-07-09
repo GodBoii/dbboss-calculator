@@ -20,6 +20,12 @@ import {
 
 type ActiveTab = "picks" | "stats" | "intel"
 type PicksSubTab = "open" | "close" | "jodi"
+type SuttaAccuracyReport = {
+  open: string
+  close: string
+  jodiAdjustedClose: string
+  jodi: string
+}
 
 interface AnalysisTabsProps {
   result: PredictionResult
@@ -30,6 +36,7 @@ interface AnalysisTabsProps {
   picksSubTab: PicksSubTab
   setPicksSubTab: Dispatch<SetStateAction<PicksSubTab>>
   selectedMarket: string
+  suttaAccuracyReport: SuttaAccuracyReport | null
   copyingKey: string | null
   handleCopy: (key: string, text: string) => void
   getScoreColor: (score: number) => string
@@ -886,6 +893,7 @@ export function AnalysisTabs({
   picksSubTab,
   setPicksSubTab,
   selectedMarket,
+  suttaAccuracyReport,
   copyingKey,
   handleCopy,
   getScoreColor,
@@ -965,6 +973,11 @@ export function AnalysisTabs({
                           <p className="picks-hint picks-hint-calibration">
                             Panel {result.calibration.open.panel30.toFixed(1)}% / Sutta {result.calibration.open.sutta30.toFixed(1)}%
                           </p>
+                          {suttaAccuracyReport && (
+                            <p className="picks-hint picks-hint-calibration">
+                              Open accuracy {suttaAccuracyReport.open}
+                            </p>
+                          )}
                           <CopyButton
                             label="Copy Open"
                             isCopied={copyingKey === "open"}
@@ -1022,6 +1035,11 @@ export function AnalysisTabs({
                           <p className="picks-hint picks-hint-calibration">
                             Panel {result.calibration.close.panel30.toFixed(1)}% / Sutta {result.calibration.close.sutta30.toFixed(1)}%
                           </p>
+                          {suttaAccuracyReport && (
+                            <p className="picks-hint picks-hint-calibration">
+                              Close accuracy {suttaAccuracyReport.close}
+                            </p>
+                          )}
                           <CopyButton
                             label="Copy Close"
                             isCopied={copyingKey === "close"}
@@ -1078,6 +1096,16 @@ export function AnalysisTabs({
                         <p className="picks-hint picks-hint-calibration">
                           Panel {jodiResult.calibration.panel30.toFixed(1)}% / Sutta {jodiResult.calibration.sutta30.toFixed(1)}% / Strength {(jodiResult.jodiStrength * 100).toFixed(0)}%
                         </p>
+                        {suttaAccuracyReport && (
+                          <>
+                            <p className="picks-hint picks-hint-calibration">
+                              Jodi adjusted close accuracy {suttaAccuracyReport.jodiAdjustedClose}
+                            </p>
+                            <p className="picks-hint picks-hint-calibration">
+                              Jodi accuracy {suttaAccuracyReport.jodi}
+                            </p>
+                          </>
+                        )}
     
                         {/* Jodi frequency chart */}
                         <div style={{ marginBottom: "16px" }}>
