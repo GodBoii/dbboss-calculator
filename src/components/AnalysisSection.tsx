@@ -571,84 +571,98 @@ export default function AnalysisSection() {
 
           {/* ── Intelligence Cards ───────────────────────────────────────── */}
           <div className="intel-grid">
-            {/* Temporal Card */}
-            <div className="intel-card glass-panel">
-              <div className="intel-card-header">
-                <span className="intel-icon">📅</span>
-                <h3 className="intel-card-title">Temporal Signal</h3>
+            <div className="intel-compact-panel glass-panel">
+              <div className="intel-compact-header">
+                <div>
+                  <h3 className="intel-card-title">Market Intelligence</h3>
+                  <p className="intel-compact-subtitle">Condensed context</p>
+                </div>
+                <span className="intel-compact-count">3 signals</span>
               </div>
-              <div className={`intel-badge ${getTemporalBadgeColor(result.temporalMode)}`}>
-                {result.temporalMode === "Payday" && "🔴 PAYDAY ZONE"}
-                {result.temporalMode === "Month-End" && "🟢 MONTH-END ZONE"}
-                {result.temporalMode === "Normal" && "⚪ NORMAL ZONE"}
-              </div>
-              <p className="intel-desc">
-                {result.temporalMode === "Payday" &&
-                  "Public has fresh salary. Operator drops popular 'honey-pot' sequences as bait to hook new players. Penalties REDUCED. Multiplier: 0.7×"}
-                {result.temporalMode === "Month-End" &&
-                  "Public is broke. Operator squeezes remaining bettors with hard, unpopular numbers. Penalties INCREASED. Multiplier: 1.3×"}
-                {result.temporalMode === "Normal" &&
-                  "Mid-month cycle. Standard liability-minimization mode. Multiplier: 1.0×"}
-              </p>
-            </div>
 
-            {/* Liquidity Card */}
-            <div className="intel-card glass-panel">
-              <div className="intel-card-header">
-                <span className="intel-icon">💧</span>
-                <h3 className="intel-card-title">Liquidity Flow</h3>
-              </div>
-              {result.liquiditySourceMarket ? (
-                <>
-                  <div className="liquidity-flow">
-                    <span className="liquidity-source">{result.liquiditySourceMarket}</span>
-                    <span className="liquidity-arrow">→</span>
-                    <span className="liquidity-target">{result.market}</span>
-                  </div>
-                  <div className={`intel-badge ${result.liquiditySourceHadPopular ? "intel-danger" : "intel-safe"}`}>
-                    {result.liquiditySourceHadPopular
-                      ? "🔴 Source had POPULAR result"
-                      : "🟢 Source had HARD result"}
-                  </div>
-                  <p className="intel-desc">
-                    {result.liquiditySourceHadPopular
-                      ? `${result.liquiditySourceMarket} just dropped a sequence. Public won big and will chase here. House will brutally wipe popular numbers. Multiplier: 1.5×`
-                      : `${result.liquiditySourceMarket} had a hard result. Public is cautious. House is slightly more relaxed. Multiplier: 0.9×`}
-                  </p>
-                </>
-              ) : (
-                <p className="intel-desc intel-muted">No source market tracked for {result.market}.</p>
-              )}
-            </div>
+              <details className="intel-detail">
+                <summary className="intel-summary-row">
+                  <span className="intel-summary-title">
+                    <span className="intel-icon">📅</span>
+                    Temporal Signal
+                  </span>
+                  <span className={`intel-badge intel-badge--compact ${getTemporalBadgeColor(result.temporalMode)}`}>
+                    {result.temporalMode}
+                  </span>
+                </summary>
+                <p className="intel-desc intel-detail-copy">
+                  {result.temporalMode === "Payday" &&
+                    "Public has fresh salary. Operator drops popular 'honey-pot' sequences as bait to hook new players. Penalties REDUCED. Multiplier: 0.7×"}
+                  {result.temporalMode === "Month-End" &&
+                    "Public is broke. Operator squeezes remaining bettors with hard, unpopular numbers. Penalties INCREASED. Multiplier: 1.3×"}
+                  {result.temporalMode === "Normal" &&
+                    "Mid-month cycle. Standard liability-minimization mode. Multiplier: 1.0×"}
+                </p>
+              </details>
 
-            {/* Drought Card */}
-            <div className="intel-card glass-panel">
-              <div className="intel-card-header">
-                <span className="intel-icon">🌵</span>
-                <h3 className="intel-card-title">Sequence Drought</h3>
-              </div>
-              <div className="drought-bar-container">
-                <div
-                  className="drought-bar-fill"
-                  style={{
-                    width: `${Math.min(100, (result.recordsSinceLastSequence / Math.max(result.averageDroughtLength * 2, 1)) * 100)}%`,
-                    background: result.honeyPotAlert
-                      ? "linear-gradient(90deg, #f97316, #ef4444)"
-                      : "linear-gradient(90deg, #22c55e, #facc15)",
-                  }}
-                />
-              </div>
-              <div className="drought-stats">
-                <span className="drought-current">{result.recordsSinceLastSequence} draws</span>
-                <span className="drought-avg">avg: {result.averageDroughtLength}</span>
-              </div>
-              <p className="intel-desc">
-                {result.honeyPotAlert
-                  ? "⚠️ Critical drought. Trap is mathematically imminent."
-                  : result.recordsSinceLastSequence > result.averageDroughtLength
-                  ? "Getting hot — above average drought length."
-                  : "Within normal drought range."}
-              </p>
+              <details className="intel-detail">
+                <summary className="intel-summary-row">
+                  <span className="intel-summary-title">
+                    <span className="intel-icon">💧</span>
+                    Liquidity Flow
+                  </span>
+                  <span className={`intel-badge intel-badge--compact ${result.liquiditySourceHadPopular ? "intel-danger" : "intel-safe"}`}>
+                    {result.liquiditySourceMarket
+                      ? result.liquiditySourceHadPopular ? "Popular source" : "Hard source"
+                      : "No source"}
+                  </span>
+                </summary>
+                {result.liquiditySourceMarket ? (
+                  <>
+                    <div className="liquidity-flow liquidity-flow--compact">
+                      <span className="liquidity-source">{result.liquiditySourceMarket}</span>
+                      <span className="liquidity-arrow">→</span>
+                      <span className="liquidity-target">{result.market}</span>
+                    </div>
+                    <p className="intel-desc intel-detail-copy">
+                      {result.liquiditySourceHadPopular
+                        ? `${result.liquiditySourceMarket} just dropped a sequence. Public won big and will chase here. House will brutally wipe popular numbers. Multiplier: 1.5×`
+                        : `${result.liquiditySourceMarket} had a hard result. Public is cautious. House is slightly more relaxed. Multiplier: 0.9×`}
+                    </p>
+                  </>
+                ) : (
+                  <p className="intel-desc intel-detail-copy intel-muted">No source market tracked for {result.market}.</p>
+                )}
+              </details>
+
+              <details className="intel-detail">
+                <summary className="intel-summary-row intel-summary-row--drought">
+                  <span className="intel-summary-title">
+                    <span className="intel-icon">🌵</span>
+                    Sequence Drought
+                  </span>
+                  <span className="drought-summary">
+                    <span className="drought-summary-text">{result.recordsSinceLastSequence} / avg {result.averageDroughtLength}</span>
+                    <span className="drought-bar-container drought-bar-container--compact">
+                      <span
+                        className="drought-bar-fill"
+                        style={{
+                          width: `${Math.min(100, (result.recordsSinceLastSequence / Math.max(result.averageDroughtLength * 2, 1)) * 100)}%`,
+                          background: result.honeyPotAlert
+                            ? "linear-gradient(90deg, #f97316, #ef4444)"
+                            : "linear-gradient(90deg, #22c55e, #facc15)",
+                        }}
+                      />
+                    </span>
+                  </span>
+                </summary>
+                <div className="drought-stats drought-stats--compact">
+                  <span className="drought-current">{result.recordsSinceLastSequence} draws</span>
+                  <span className="drought-avg">avg: {result.averageDroughtLength}</span>
+                </div>
+                <p className="intel-desc intel-detail-copy">
+                  {result.honeyPotAlert
+                    ? "⚠️ Critical drought. Trap is mathematically imminent."
+                    : result.recordsSinceLastSequence > result.averageDroughtLength
+                    ? "Getting hot — above average drought length."
+                    : "Within normal drought range."}
+                </p>
+              </details>
             </div>
           </div>
 
