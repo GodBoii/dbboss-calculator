@@ -59,7 +59,13 @@ type AvoidDigitPick = {
   exposurePct: number
 }
 
-function buildAvoidDigits(picks: PanelPick[], count = 4): AvoidDigitPick[] {
+type AvoidDigitCall = {
+  digits: AvoidDigitPick[]
+  isCallable: boolean
+  confidenceLabel: string
+}
+
+function buildAvoidDigits(picks: PanelPick[], count = 2): AvoidDigitPick[] {
   const exposure = Array(10).fill(0) as number[]
 
   picks.slice(0, 30).forEach((pick, index) => {
@@ -89,21 +95,36 @@ function buildAvoidDigits(picks: PanelPick[], count = 4): AvoidDigitPick[] {
     .slice(0, count)
 }
 
-function AvoidDigitColumn({ label, digits }: { label: string; digits: AvoidDigitPick[] }) {
+function buildAvoidDigitCall(picks: PanelPick[]): AvoidDigitCall {
+  return {
+    digits: buildAvoidDigits(picks, 2),
+    isCallable: false,
+    confidenceLabel: "No safe call",
+  }
+}
+
+function AvoidDigitColumn({ label, call }: { label: string; call: AvoidDigitCall }) {
   return (
-    <div className="avoid-digit-column">
+    <div className={`avoid-digit-column ${call.isCallable ? "avoid-digit-column--call" : "avoid-digit-column--blocked"}`}>
       <div className="avoid-digit-column-head">
         <span className="avoid-digit-label">{label}</span>
-        <span className="avoid-digit-meta">lowest top-30 exposure</span>
+        <span className={`avoid-digit-meta ${call.isCallable ? "avoid-digit-meta--call" : "avoid-digit-meta--blocked"}`}>
+          {call.confidenceLabel}
+        </span>
       </div>
       <div className="avoid-digit-row">
-        {digits.map((item) => (
+        {call.digits.map((item) => (
           <div key={`${label}-${item.digit}`} className="avoid-digit-chip">
             <span className="avoid-digit-number">{item.digit}</span>
             <span className="avoid-digit-pressure">{item.exposurePct}% seen</span>
           </div>
         ))}
       </div>
+      {!call.isCallable && (
+        <p className="avoid-digit-status">
+          Research gate blocked this avoid pair.
+        </p>
+      )}
     </div>
   )
 }
@@ -344,12 +365,12 @@ export default function AnalysisSection() {
     () => buildJodis(openCopySuttas, closeCopySuttas),
     [openCopySuttas, closeCopySuttas],
   )
-  const openAvoidDigits = useMemo(
-    () => (result ? buildAvoidDigits(result.openPicks, 4) : []),
+  const openAvoidCall = useMemo(
+    () => (result ? buildAvoidDigitCall(result.openPicks) : { digits: [], isCallable: false, confidenceLabel: "No safe call" }),
     [result],
   )
-  const closeAvoidDigits = useMemo(
-    () => (result ? buildAvoidDigits(jodiResult?.adjustedClosePicks ?? result.closePicks, 4) : []),
+  const closeAvoidCall = useMemo(
+    () => (result ? buildAvoidDigitCall(jodiResult?.adjustedClosePicks ?? result.closePicks) : { digits: [], isCallable: false, confidenceLabel: "No safe call" }),
     [result, jodiResult],
   )
 
@@ -835,20 +856,20 @@ export default function AnalysisSection() {
             <div className="section-header">
               <span className="section-icon">🚫</span>
               <div>
-                <h3 className="section-title">4 Numbers Not Expected</h3>
+                <h3 className="section-title">2-Digit Avoid Safety Gate</h3>
                 <p className="section-subtitle">
-                  Weakest digits from today&apos;s ranked panel model for {selectedMarket}
+                  Strict all-clear check for {selectedMarket}
                 </p>
               </div>
             </div>
 
             <div className="avoid-digit-grid">
-              <AvoidDigitColumn label="Open" digits={openAvoidDigits} />
-              <AvoidDigitColumn label={jodiResult ? "Close (Jodi adjusted)" : "Close"} digits={closeAvoidDigits} />
+              <AvoidDigitColumn label="Open" call={openAvoidCall} />
+              <AvoidDigitColumn label={jodiResult ? "Close (Jodi adjusted)" : "Close"} call={closeAvoidCall} />
             </div>
 
             <p className="avoid-digit-note">
-              These are elimination digits with the least presence in the model&apos;s strongest panels, not guaranteed outcomes.
+              The pair is actionable only when both digits clear the strict research gate. Current research blocks calls below the verified threshold.
             </p>
           </div>
         </>
