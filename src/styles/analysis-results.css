@@ -36,6 +36,10 @@
   padding: 16px;
 }
 
+.picks-section > .kind-forecast-card {
+  margin-bottom: 14px;
+}
+
 .picks-hint {
   font-size: 12px;
   color: rgba(255,255,255,0.4);
