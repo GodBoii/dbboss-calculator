@@ -1,16 +1,15 @@
 {
   "name": "dbboss-calculator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint src next.config.ts eslint.config.mjs",
     "verify:sutta-ranking": "node scripts/verify-sutta-ranking.cjs"
   },
   "dependencies": {
-    "@ducanh2912/next-pwa": "^10.2.9",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4"

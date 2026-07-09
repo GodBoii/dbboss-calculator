@@ -1,18 +1,40 @@
 import type { NextConfig } from "next";
-import withPWAInit from "@ducanh2912/next-pwa";
 
-const withPWA = withPWAInit({
-  dest: "public",
-  disable: process.env.NEXT_PUBLIC_DISABLE_PWA === "true",
-  register: false, // Registered explicitly via PwaRegister component in layout.tsx
-  reloadOnOnline: true,
-  cacheOnFrontEndNav: true,
-  workboxOptions: {
-    skipWaiting: true,
-    clientsClaim: true,
+const nextConfig: NextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/sw.js",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/javascript; charset=utf-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "no-cache, no-store, must-revalidate",
+          },
+          {
+            key: "Service-Worker-Allowed",
+            value: "/",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+        ],
+      },
+      {
+        source: "/manifest.json",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-cache, no-store, must-revalidate",
+          },
+        ],
+      },
+    ];
   },
-});
+};
 
-const nextConfig: NextConfig = {};
-
-export default withPWA(nextConfig);
+export default nextConfig;
