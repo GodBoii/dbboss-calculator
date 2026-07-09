@@ -2,13 +2,20 @@
   "name": "DBboss Calculator",
   "short_name": "DBboss",
   "description": "Game-Theory based Satta Matka prediction engine",
+  "version": "1.0.1",
   "start_url": "/",
   "scope": "/",
   "id": "/",
   "display": "standalone",
+  "display_override": ["standalone", "fullscreen", "minimal-ui"],
   "background_color": "#000000",
   "theme_color": "#000000",
   "orientation": "portrait",
+  "lang": "en",
+  "categories": ["utilities", "productivity"],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
   "icons": [
     {
       "src": "/dbboss-192.png",
