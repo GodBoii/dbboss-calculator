@@ -573,10 +573,7 @@ export default function AnalysisSection() {
           <div className="intel-grid">
             <div className="intel-compact-panel glass-panel">
               <div className="intel-compact-header">
-                <div>
-                  <h3 className="intel-card-title">Market Intelligence</h3>
-                  <p className="intel-compact-subtitle">Condensed context</p>
-                </div>
+                <h3 className="intel-card-title">Market Intelligence</h3>
                 <span className="intel-compact-count">3 signals</span>
               </div>
 
