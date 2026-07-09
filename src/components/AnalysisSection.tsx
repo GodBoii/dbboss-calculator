@@ -860,6 +860,25 @@ export default function AnalysisSection() {
                 : renderSuttaSignalList("Close Sutta", result.closeSuttaDroughts)}
             </div>
 
+            {suttaAccuracyReport && (
+              <div className="confidence-strip glass-panel" style={{ marginTop: "12px" }}>
+                <div className="status-item">
+                  <span className="status-label">Open accuracy</span>
+                  <span className="status-value">{suttaAccuracyReport.open}</span>
+                </div>
+                <div className="status-divider" />
+                <div className="status-item">
+                  <span className="status-label">Close accuracy</span>
+                  <span className="status-value">{suttaAccuracyReport.close}</span>
+                </div>
+                <div className="status-divider" />
+                <div className="status-item">
+                  <span className="status-label">Jodi accuracy</span>
+                  <span className="status-value">{suttaAccuracyReport.jodi}</span>
+                </div>
+              </div>
+            )}
+
             <button
               type="button"
               className="sutta-map-tools-toggle"
@@ -1001,7 +1020,6 @@ export default function AnalysisSection() {
             picksSubTab={picksSubTab}
             setPicksSubTab={setPicksSubTab}
             selectedMarket={selectedMarket}
-            suttaAccuracyReport={suttaAccuracyReport}
             copyingKey={copyingKey}
             handleCopy={handleCopy}
             getScoreColor={getScoreColor}
