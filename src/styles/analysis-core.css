@@ -444,12 +444,112 @@
 .intel-grid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   margin-bottom: 0;
 }
 
 .intel-card {
   margin-bottom: 0 !important;
+}
+
+.intel-compact-panel {
+  padding: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+.intel-compact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.intel-compact-subtitle {
+  margin: 2px 0 0;
+  color: rgba(255,255,255,0.36);
+  font-size: 11px;
+}
+
+.intel-compact-count {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 7px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.48);
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.intel-detail {
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.intel-detail:first-of-type {
+  border-top: 0;
+}
+
+.intel-summary-row {
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 2px;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.intel-summary-row::-webkit-details-marker {
+  display: none;
+}
+
+.intel-summary-row::after {
+  content: "⌄";
+  grid-column: 3;
+  justify-self: end;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.05);
+  font-size: 13px;
+  line-height: 1;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.intel-detail[open] .intel-summary-row::after {
+  transform: rotate(180deg);
+  color: rgba(255,255,255,0.75);
+}
+
+.intel-summary-title {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.84);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.intel-badge--compact {
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.intel-detail-copy {
+  margin: 0 24px 10px 26px;
 }
 
 .intel-card-header {
@@ -495,6 +595,11 @@
   margin-bottom: 10px;
 }
 
+.liquidity-flow--compact {
+  margin: 0 24px 8px 26px;
+  flex-wrap: wrap;
+}
+
 .liquidity-source, .liquidity-target {
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
@@ -516,7 +621,15 @@
   margin-bottom: 8px;
 }
 
+.drought-bar-container--compact {
+  width: 74px;
+  height: 6px;
+  display: block;
+  margin: 0;
+}
+
 .drought-bar-fill {
+  display: block;
   height: 100%;
   border-radius: 4px;
   transition: width 0.6s var(--ease-out-expo);
@@ -526,6 +639,24 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
+}
+
+.drought-stats--compact {
+  margin: 0 24px 6px 26px;
+}
+
+.drought-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drought-summary-text {
+  color: rgba(255,255,255,0.58);
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .drought-current {
