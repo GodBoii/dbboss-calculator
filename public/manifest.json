@@ -2,7 +2,7 @@
   "name": "DBboss Calculator",
   "short_name": "DBboss",
   "description": "Game-Theory based Satta Matka prediction engine",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "start_url": "/",
   "scope": "/",
   "id": "/",
@@ -21,25 +21,13 @@
       "src": "/dbboss-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/dbboss-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
       "src": "/dbboss-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/dbboss-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ]
 }

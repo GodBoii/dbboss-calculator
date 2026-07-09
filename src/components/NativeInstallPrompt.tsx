@@ -7,9 +7,6 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
-const DISMISSED_KEY = "dbboss-install-dismissed-at-v2";
-const DISMISS_COOLDOWN_MS = 24 * 60 * 60 * 1000;
-
 const isStandalone = () =>
   window.matchMedia("(display-mode: standalone)").matches ||
   window.matchMedia("(display-mode: fullscreen)").matches ||
@@ -29,11 +26,6 @@ const isChromiumInstallCapable = () => {
   );
 };
 
-const wasRecentlyDismissed = () => {
-  const dismissedAt = Number(localStorage.getItem(DISMISSED_KEY) || 0);
-  return Date.now() - dismissedAt < DISMISS_COOLDOWN_MS;
-};
-
 export default function NativeInstallPrompt() {
   const [promptEvent, setPromptEvent] =
     useState<BeforeInstallPromptEvent | null>(null);
@@ -46,7 +38,7 @@ export default function NativeInstallPrompt() {
 
     if (isIOS()) {
       const timer = window.setTimeout(() => {
-        setShowIOSHelp(!wasRecentlyDismissed());
+        setShowIOSHelp(true);
       }, 0);
       return () => window.clearTimeout(timer);
     }
@@ -56,16 +48,12 @@ export default function NativeInstallPrompt() {
     const onBeforeInstallPrompt = (event: Event) => {
       event.preventDefault();
       setPromptEvent(event as BeforeInstallPromptEvent);
-
-      if (!wasRecentlyDismissed()) {
-        setShowInstallCta(true);
-      }
+      setShowInstallCta(true);
     };
 
     const onAppInstalled = () => {
       setPromptEvent(null);
       setShowInstallCta(false);
-      localStorage.removeItem(DISMISSED_KEY);
     };
 
     window.addEventListener("beforeinstallprompt", onBeforeInstallPrompt);
@@ -78,7 +66,6 @@ export default function NativeInstallPrompt() {
   }, []);
 
   const dismiss = () => {
-    localStorage.setItem(DISMISSED_KEY, String(Date.now()));
     setShowInstallCta(false);
     setShowIOSHelp(false);
   };
@@ -92,7 +79,6 @@ export default function NativeInstallPrompt() {
       const { outcome } = await promptEvent.userChoice;
 
       if (outcome === "accepted") {
-        localStorage.removeItem(DISMISSED_KEY);
         setShowInstallCta(false);
         setPromptEvent(null);
       } else {

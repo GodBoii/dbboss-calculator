@@ -1,4 +1,4 @@
-const APP_VERSION = "1.0.2";
+const APP_VERSION = "1.0.3";
 const CACHE_PREFIX = "dbboss";
 const SHELL_CACHE = `${CACHE_PREFIX}-shell-${APP_VERSION}`;
 const STATIC_CACHE = `${CACHE_PREFIX}-static-${APP_VERSION}`;
@@ -8,11 +8,8 @@ const FONT_CACHE = `${CACHE_PREFIX}-fonts-${APP_VERSION}`;
 const APP_SHELL_URLS = [
   "/",
   "/manifest.json",
-  "/dbboss.png",
   "/dbboss-192.png",
   "/dbboss-512.png",
-  "/icon.png",
-  "/apple-icon.png",
 ];
 
 const isHttpGet = (request) =>
@@ -70,7 +67,15 @@ const staleWhileRevalidate = async (request, cacheName) => {
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(SHELL_CACHE).then((cache) => cache.addAll(APP_SHELL_URLS)),
+    caches.open(SHELL_CACHE).then((cache) =>
+      Promise.allSettled(
+        APP_SHELL_URLS.map((url) =>
+          cache.add(url).catch((error) => {
+            console.warn(`[PWA] Failed to precache ${url}:`, error);
+          }),
+        ),
+      ),
+    ),
   );
 });
 
