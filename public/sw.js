@@ -1,4 +1,4 @@
-const APP_VERSION = "1.0.1";
+const APP_VERSION = "1.0.2";
 const CACHE_PREFIX = "dbboss";
 const SHELL_CACHE = `${CACHE_PREFIX}-shell-${APP_VERSION}`;
 const STATIC_CACHE = `${CACHE_PREFIX}-static-${APP_VERSION}`;

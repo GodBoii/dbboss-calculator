@@ -1,26 +1,31 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
-const DISMISSED_KEY = "dbboss-install-dismissed-at";
-const DISMISS_COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000;
+const DISMISSED_KEY = "dbboss-install-dismissed-at-v2";
+const DISMISS_COOLDOWN_MS = 24 * 60 * 60 * 1000;
 
 const isStandalone = () =>
   window.matchMedia("(display-mode: standalone)").matches ||
   window.matchMedia("(display-mode: fullscreen)").matches ||
   ("standalone" in navigator && Boolean(navigator.standalone));
 
-const isAndroidChrome = () => {
+const isIOS = () =>
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+const isChromiumInstallCapable = () => {
   const userAgent = navigator.userAgent;
+  const vendor = navigator.vendor;
+
   return (
-    /Android/i.test(userAgent) &&
-    /Chrome/i.test(userAgent) &&
-    !/EdgA|OPR|SamsungBrowser/i.test(userAgent)
+    /Chrome|CriOS|EdgA|EdgiOS|Edg|OPR|SamsungBrowser/i.test(userAgent) ||
+    /Google Inc\./i.test(vendor)
   );
 };
 
@@ -30,50 +35,37 @@ const wasRecentlyDismissed = () => {
 };
 
 export default function NativeInstallPrompt() {
-  const promptRef = useRef<BeforeInstallPromptEvent | null>(null);
-  const promptedRef = useRef(false);
+  const [promptEvent, setPromptEvent] =
+    useState<BeforeInstallPromptEvent | null>(null);
+  const [showInstallCta, setShowInstallCta] = useState(false);
+  const [showIOSHelp, setShowIOSHelp] = useState(false);
+  const [isInstalling, setIsInstalling] = useState(false);
 
   useEffect(() => {
-    if (!isAndroidChrome() || isStandalone() || wasRecentlyDismissed()) return;
+    if (isStandalone()) return;
 
-    const cleanupInteractionListeners = () => {
-      window.removeEventListener("pointerup", promptAfterGesture, true);
-      window.removeEventListener("touchend", promptAfterGesture, true);
-      window.removeEventListener("click", promptAfterGesture, true);
-    };
+    if (isIOS()) {
+      const timer = window.setTimeout(() => {
+        setShowIOSHelp(!wasRecentlyDismissed());
+      }, 0);
+      return () => window.clearTimeout(timer);
+    }
 
-    const promptAfterGesture = async () => {
-      const promptEvent = promptRef.current;
-      if (!promptEvent || promptedRef.current) return;
-
-      promptedRef.current = true;
-      cleanupInteractionListeners();
-
-      await promptEvent.prompt();
-      const { outcome } = await promptEvent.userChoice;
-
-      if (outcome === "dismissed") {
-        localStorage.setItem(DISMISSED_KEY, String(Date.now()));
-      } else {
-        localStorage.removeItem(DISMISSED_KEY);
-      }
-
-      promptRef.current = null;
-    };
+    if (!isChromiumInstallCapable()) return;
 
     const onBeforeInstallPrompt = (event: Event) => {
       event.preventDefault();
-      promptRef.current = event as BeforeInstallPromptEvent;
+      setPromptEvent(event as BeforeInstallPromptEvent);
 
-      window.addEventListener("pointerup", promptAfterGesture, true);
-      window.addEventListener("touchend", promptAfterGesture, true);
-      window.addEventListener("click", promptAfterGesture, true);
+      if (!wasRecentlyDismissed()) {
+        setShowInstallCta(true);
+      }
     };
 
     const onAppInstalled = () => {
-      promptRef.current = null;
+      setPromptEvent(null);
+      setShowInstallCta(false);
       localStorage.removeItem(DISMISSED_KEY);
-      cleanupInteractionListeners();
     };
 
     window.addEventListener("beforeinstallprompt", onBeforeInstallPrompt);
@@ -82,9 +74,60 @@ export default function NativeInstallPrompt() {
     return () => {
       window.removeEventListener("beforeinstallprompt", onBeforeInstallPrompt);
       window.removeEventListener("appinstalled", onAppInstalled);
-      cleanupInteractionListeners();
     };
   }, []);
 
-  return null;
+  const dismiss = () => {
+    localStorage.setItem(DISMISSED_KEY, String(Date.now()));
+    setShowInstallCta(false);
+    setShowIOSHelp(false);
+  };
+
+  const install = async () => {
+    if (!promptEvent || isInstalling) return;
+
+    setIsInstalling(true);
+    try {
+      await promptEvent.prompt();
+      const { outcome } = await promptEvent.userChoice;
+
+      if (outcome === "accepted") {
+        localStorage.removeItem(DISMISSED_KEY);
+        setShowInstallCta(false);
+        setPromptEvent(null);
+      } else {
+        dismiss();
+      }
+    } finally {
+      setIsInstalling(false);
+    }
+  };
+
+  if (!showInstallCta && !showIOSHelp) return null;
+
+  return (
+    <div className="pwa-install-banner" role="status" aria-live="polite">
+      <img src="/dbboss-192.png" alt="" className="pwa-install-icon" />
+      <div className="pwa-install-copy">
+        <span className="pwa-install-title">Install DBboss</span>
+        <span className="pwa-install-subtitle">
+          {showIOSHelp
+            ? "Use Share, then Add to Home Screen."
+            : "Open it like a mobile app."}
+        </span>
+      </div>
+      {showInstallCta && (
+        <button
+          className="pwa-install-action"
+          onClick={install}
+          disabled={isInstalling}
+        >
+          {isInstalling ? "Opening..." : "Install"}
+        </button>
+      )}
+      <button className="pwa-install-dismiss" onClick={dismiss} aria-label="Dismiss">
+        x
+      </button>
+    </div>
+  );
 }
