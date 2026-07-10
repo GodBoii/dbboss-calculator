@@ -60,6 +60,7 @@ type OpenSuttaStrategy =
   | "housePrevOpenSame"
   | "housePrevOpenFlip"
   | "weightedSnap"
+  | "calendarDateOnly"
 type CloseSuttaStrategy =
   | "currentProduction"
   | "currentUi"
@@ -88,6 +89,8 @@ type CloseSuttaStrategy =
   | "rawPrevJodiCond"
   | "rawPrevCloseDelta"
   | "rawPrevOpenDelta"
+  | "recent30Cold"
+  | "knownOpenOnly"
 type MarketStrategy<T> = T | T[]
 type CountAwareMarketStrategy<T> = MarketStrategy<T> | {
   narrow: MarketStrategy<T>
@@ -97,17 +100,17 @@ type CountAwareMarketStrategy<T> = MarketStrategy<T> | {
 
 const OPEN_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<OpenSuttaStrategy>> = {
   Sridevi: "current",
-  "Time Bazar": "sameDate",
-  "Madhur Day": "gapBalanced",
+  "Time Bazar": { narrow: "sameDate", wide: "sameDate", counts: { 6: "calendarDateOnly" } },
+  "Madhur Day": { narrow: "gapBalanced", wide: "gapBalanced", counts: { 6: "calendarDateOnly" } },
   "Milan Day": "housePrevOpenFlip",
-  "Rajdhani Day": "sameDate",
+  "Rajdhani Day": { narrow: "sameDate", wide: "sameDate", counts: { 6: "calendarDateOnly" } },
   Kalyan: "rankOnly",
-  "Sridevi Night": "sameDate",
-  "Kalyan Night": "weightedSnap",
+  "Sridevi Night": { narrow: "sameDate", wide: "sameDate", counts: { 6: "calendarDateOnly" } },
+  "Kalyan Night": { narrow: "weightedSnap", wide: "weightedSnap", counts: { 6: "calendarDateOnly" } },
   "Madhur Night": "sameDateOpposite",
-  "Milan Night": "sameDateOpposite",
-  "Rajdhani Night": "gapBalanced",
-  "Main Bazar": "housePrevOpenSame",
+  "Milan Night": { narrow: "sameDateOpposite", wide: "sameDateOpposite", counts: { 6: "calendarDateOnly" } },
+  "Rajdhani Night": { narrow: "gapBalanced", wide: "gapBalanced", counts: { 6: "calendarDateOnly" } },
+  "Main Bazar": { narrow: "housePrevOpenSame", wide: "housePrevOpenSame", counts: { 6: "calendarDateOnly" } },
 }
 
 const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<CloseSuttaStrategy>> = {
@@ -144,6 +147,27 @@ const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<Close
   "Rajdhani Night": ["rawRankOnly", "rawPrevCloseCond"],
   "Main Bazar": ["rawCalendarSameDate", "rawPrevCloseCond"],
 }
+
+const TOP6_CLOSE_COLD_MARKETS = new Set([
+  "Madhur Day",
+  "Kalyan",
+  "Sridevi Night",
+  "Kalyan Night",
+  "Madhur Night",
+  "Milan Night",
+  "Rajdhani Night",
+])
+
+const TOP6_KNOWN_OPEN_MARKETS = new Set([
+  "Kalyan Night",
+  "Milan Night",
+  "Rajdhani Night",
+])
+
+const TOP6_ADJUSTED_COLD_MARKETS = new Set([
+  "Madhur Day",
+  "Madhur Night",
+])
 
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
 const suttaSignalPriority: Record<CopySuttaPick["signalState"], number> = {
@@ -195,6 +219,18 @@ function finalizeRawScoredSuttaRows(
     rows.map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts)),
     count,
   )
+}
+
+function finalizeStatisticalSuttaRows(
+  rows: Array<{ sutta: number; score: number }>,
+  droughts: Record<string, number>,
+  count: number,
+) {
+  return rows
+    .map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts))
+    .sort((a, b) => b.score - a.score || a.sutta - b.sutta)
+    .slice(0, count)
+    .map((item, index) => ({ ...item, rank: index + 1 }))
 }
 
 function mergeCopySuttaSources(sources: CopySuttaPick[][], count: number) {
@@ -520,7 +556,9 @@ export function buildOpenSuttaSet(
       openGap <= 2 ? -0.08 : openGap <= 5 ? 0 : openGap <= 12 ? 0 : openGap <= 25 ? 0.04 : 0.12
 
     let score = 0
-    if (strategy === "sameDate") {
+    if (strategy === "calendarDateOnly") {
+      score = smoothedRate(sameDate[sutta], sameDateTotal)
+    } else if (strategy === "sameDate") {
       score =
         0.18 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.12 * smoothedRate(weekday[sutta], weekdayTotal) +
@@ -561,6 +599,9 @@ export function buildOpenSuttaSet(
     return { sutta, score }
   })
 
+  if (strategy === "calendarDateOnly") {
+    return finalizeStatisticalSuttaRows(rows, droughts, count)
+  }
   return finalizeScoredSuttaRows(rows, droughts, count)
 }
 
@@ -587,7 +628,18 @@ export function buildCloseSuttaSet(
     "currentProduction",
     count,
   )
-  const strategies = Array.isArray(strategyConfig) ? strategyConfig : [strategyConfig]
+  const adjustedTop6Strategy =
+    count === 6 && currentOpenSutta !== null && TOP6_KNOWN_OPEN_MARKETS.has(marketName)
+      ? "knownOpenOnly"
+      : count === 6 && currentOpenSutta !== null && TOP6_ADJUSTED_COLD_MARKETS.has(marketName)
+        ? "recent30Cold"
+        : null
+  const coldTop6Strategy =
+    count === 6 && currentOpenSutta === null && TOP6_CLOSE_COLD_MARKETS.has(marketName)
+      ? "recent30Cold"
+      : null
+  const effectiveStrategy = adjustedTop6Strategy ?? coldTop6Strategy ?? strategyConfig
+  const strategies = Array.isArray(effectiveStrategy) ? effectiveStrategy : [effectiveStrategy]
 
   const todayDayName = getDayNameForDate(targetDate)
   const recent24 = Array(10).fill(0)
@@ -670,6 +722,22 @@ export function buildCloseSuttaSet(
     if (strategy === "rawSumCooling") return buildRawTopSuttaSet(picks, droughts, strategyCount, "aggregate")
     if (strategy === "rawWeightedSnap") return buildRawTopSuttaSet(picks, droughts, strategyCount, "weightedSnap")
     if (strategy === "rawRankOnly") return buildRawRankOnlySuttaSet(picks, droughts, strategyCount)
+    if (strategy === "recent30Cold") {
+      const recentCounts = Array(10).fill(0) as number[]
+      for (const record of closeRecords.slice(-30)) recentCounts[record.closeSutta]++
+      return finalizeStatisticalSuttaRows(
+        recentCounts.map((observed, sutta) => ({ sutta, score: -smoothedRate(observed, Math.min(30, total)) })),
+        droughts,
+        strategyCount,
+      )
+    }
+    if (strategy === "knownOpenOnly") {
+      return finalizeStatisticalSuttaRows(
+        currentOpenCond.map((observed, sutta) => ({ sutta, score: smoothedRate(observed, currentOpenCondTotal) })),
+        droughts,
+        strategyCount,
+      )
+    }
 
     const needsCurrentOpen =
       strategy === "currentOpenCond" ||
@@ -747,6 +815,13 @@ export function buildCloseSuttaSet(
 
     if (strategy.startsWith("raw")) return finalizeRawScoredSuttaRows(rows, droughts, strategyCount)
     return finalizeScoredSuttaRows(rows, droughts, strategyCount)
+  }
+
+  if (
+    strategies.length === 1 &&
+    (strategies[0] === "recent30Cold" || strategies[0] === "knownOpenOnly")
+  ) {
+    return buildStrategySet(strategies[0], count)
   }
 
   const sources = strategies.map((strategy) => buildStrategySet(strategy, 10))
