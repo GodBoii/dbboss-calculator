@@ -1,8 +1,8 @@
 const fs = require("fs");
 
 const requiredPngs = [
-  { file: "public/dbboss-192.png", width: 192, height: 192 },
-  { file: "public/dbboss-512.png", width: 512, height: 512 },
+  { file: "public/lakshmi-boss-192.png", width: 192, height: 192 },
+  { file: "public/lakshmi-boss-512.png", width: 512, height: 512 },
 ];
 
 function readPngSize(file) {

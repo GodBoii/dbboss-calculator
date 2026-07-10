@@ -1,5 +1,6 @@
 const APP_VERSION = "1.0.4";
-const CACHE_PREFIX = "dbboss";
+const CACHE_PREFIX = "lakshmi-boss";
+const LEGACY_CACHE_PREFIXES = ["dbboss"];
 const SHELL_CACHE = `${CACHE_PREFIX}-shell-${APP_VERSION}`;
 const STATIC_CACHE = `${CACHE_PREFIX}-static-${APP_VERSION}`;
 const API_CACHE = `${CACHE_PREFIX}-api-${APP_VERSION}`;
@@ -8,8 +9,8 @@ const FONT_CACHE = `${CACHE_PREFIX}-fonts-${APP_VERSION}`;
 const APP_SHELL_URLS = [
   "/",
   "/manifest.json",
-  "/dbboss-192.png",
-  "/dbboss-512.png",
+  "/lakshmi-boss-192.png",
+  "/lakshmi-boss-512.png",
 ];
 
 const isHttpGet = (request) =>
@@ -93,7 +94,12 @@ self.addEventListener("activate", (event) => {
       .then((keys) =>
         Promise.all(
           keys
-            .filter((key) => key.startsWith(CACHE_PREFIX) && !currentCaches.has(key))
+            .filter(
+              (key) =>
+                (key.startsWith(CACHE_PREFIX) ||
+                  LEGACY_CACHE_PREFIXES.some((prefix) => key.startsWith(prefix))) &&
+                !currentCaches.has(key),
+            )
             .map((key) => caches.delete(key)),
         ),
       )

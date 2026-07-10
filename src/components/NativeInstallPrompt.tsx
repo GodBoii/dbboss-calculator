@@ -9,8 +9,8 @@ interface BeforeInstallPromptEvent extends Event {
 
 declare global {
   interface Window {
-    __dbbossDeferredInstallPrompt?: BeforeInstallPromptEvent;
-    __dbbossPwaInstalled?: boolean;
+    __lakshmiBossDeferredInstallPrompt?: BeforeInstallPromptEvent;
+    __lakshmiBossPwaInstalled?: boolean;
   }
 }
 
@@ -68,20 +68,20 @@ export default function NativeInstallPrompt() {
     };
 
     const syncSavedPrompt = () => {
-      if (isInstallPromptEvent(window.__dbbossDeferredInstallPrompt)) {
-        showPrompt(window.__dbbossDeferredInstallPrompt);
+      if (isInstallPromptEvent(window.__lakshmiBossDeferredInstallPrompt)) {
+        showPrompt(window.__lakshmiBossDeferredInstallPrompt);
       }
     };
 
     const onBeforeInstallPrompt = (event: Event) => {
       event.preventDefault();
       const installEvent = event as BeforeInstallPromptEvent;
-      window.__dbbossDeferredInstallPrompt = installEvent;
+      window.__lakshmiBossDeferredInstallPrompt = installEvent;
       showPrompt(installEvent);
     };
 
     const onAppInstalled = () => {
-      window.__dbbossDeferredInstallPrompt = undefined;
+      window.__lakshmiBossDeferredInstallPrompt = undefined;
       setPromptEvent(null);
       setShowInstallCta(false);
     };
@@ -89,16 +89,16 @@ export default function NativeInstallPrompt() {
     const initialSyncTimer = window.setTimeout(syncSavedPrompt, 0);
 
     window.addEventListener("beforeinstallprompt", onBeforeInstallPrompt);
-    window.addEventListener("dbboss:pwa-beforeinstallprompt", syncSavedPrompt);
+    window.addEventListener("lakshmi-boss:pwa-beforeinstallprompt", syncSavedPrompt);
     window.addEventListener("appinstalled", onAppInstalled);
-    window.addEventListener("dbboss:pwa-appinstalled", onAppInstalled);
+    window.addEventListener("lakshmi-boss:pwa-appinstalled", onAppInstalled);
 
     return () => {
       window.clearTimeout(initialSyncTimer);
       window.removeEventListener("beforeinstallprompt", onBeforeInstallPrompt);
-      window.removeEventListener("dbboss:pwa-beforeinstallprompt", syncSavedPrompt);
+      window.removeEventListener("lakshmi-boss:pwa-beforeinstallprompt", syncSavedPrompt);
       window.removeEventListener("appinstalled", onAppInstalled);
-      window.removeEventListener("dbboss:pwa-appinstalled", onAppInstalled);
+      window.removeEventListener("lakshmi-boss:pwa-appinstalled", onAppInstalled);
     };
   }, []);
 
@@ -116,7 +116,7 @@ export default function NativeInstallPrompt() {
       const { outcome } = await promptEvent.userChoice;
 
       if (outcome === "accepted") {
-        window.__dbbossDeferredInstallPrompt = undefined;
+        window.__lakshmiBossDeferredInstallPrompt = undefined;
         setShowInstallCta(false);
         setPromptEvent(null);
       } else {
@@ -131,9 +131,9 @@ export default function NativeInstallPrompt() {
 
   return (
     <div className="pwa-install-banner" role="status" aria-live="polite">
-      <img src="/dbboss-192.png" alt="" className="pwa-install-icon" />
+      <img src="/lakshmi-boss-192.png" alt="" className="pwa-install-icon" />
       <div className="pwa-install-copy">
-        <span className="pwa-install-title">Install DBboss</span>
+        <span className="pwa-install-title">Install Lakshmi Boss</span>
         <span className="pwa-install-subtitle">
           {showIOSHelp
             ? "Use Share, then Add to Home Screen."
