@@ -1039,6 +1039,18 @@
   background: rgba(248,113,113,0.15);
 }
 
+/* Signal map and its safety decision stay together in the visual flow. */
+.analysis-signal-safety-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.analysis-signal-safety-stack > .glass-panel {
+  margin-bottom: 0;
+}
+
 /* Avoid digit section */
 .avoid-digit-panel {
   border-color: rgba(248,113,113,0.18);

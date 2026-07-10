@@ -826,6 +826,7 @@ export default function AnalysisSection() {
           </div>
 
           {/* ── Sutta Saturation Map ──────────────────────────────────────── */}
+          <div className="analysis-signal-safety-stack">
           <div className="glass-panel">
             <div className="section-header">
               <span className="section-icon">🎰</span>
@@ -941,6 +942,7 @@ export default function AnalysisSection() {
             <p className="avoid-digit-note">
               The pair is actionable only when both digits clear the strict research gate. Current research blocks calls below the verified threshold.
             </p>
+          </div>
           </div>
 
           <div className="glass-panel">
