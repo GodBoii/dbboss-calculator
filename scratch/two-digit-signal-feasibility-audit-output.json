@@ -1,0 +1,401 @@
+{
+  "generatedAt": "2026-07-10T07:23:05.099Z",
+  "kindCounts": {
+    "SP": 10905,
+    "DP": 3640,
+    "TP": 29
+  },
+  "theoreticalRandomPairByKind": {
+    "SP": 0.4666666666666667,
+    "DP": 0.6222222222222222,
+    "TP": 0.8
+  },
+  "empiricalRandomPairAccuracy": 0.506181479956696,
+  "temporalFixedPairSplit": {
+    "correct": 2263,
+    "total": 4386,
+    "accuracy": 0.5159598723210215,
+    "rows": [
+      {
+        "market": "Sridevi",
+        "side": "open",
+        "pair": "01",
+        "train": {
+          "correct": 288,
+          "total": 506,
+          "accuracy": 0.5691699604743083
+        },
+        "test": {
+          "correct": 114,
+          "total": 218,
+          "accuracy": 0.5229357798165137
+        }
+      },
+      {
+        "market": "Sridevi",
+        "side": "close",
+        "pair": "29",
+        "train": {
+          "correct": 269,
+          "total": 506,
+          "accuracy": 0.5316205533596838
+        },
+        "test": {
+          "correct": 113,
+          "total": 218,
+          "accuracy": 0.518348623853211
+        }
+      },
+      {
+        "market": "Time Bazar",
+        "side": "open",
+        "pair": "78",
+        "train": {
+          "correct": 227,
+          "total": 422,
+          "accuracy": 0.5379146919431279
+        },
+        "test": {
+          "correct": 102,
+          "total": 182,
+          "accuracy": 0.5604395604395604
+        }
+      },
+      {
+        "market": "Time Bazar",
+        "side": "close",
+        "pair": "18",
+        "train": {
+          "correct": 234,
+          "total": 422,
+          "accuracy": 0.5545023696682464
+        },
+        "test": {
+          "correct": 84,
+          "total": 182,
+          "accuracy": 0.46153846153846156
+        }
+      },
+      {
+        "market": "Madhur Day",
+        "side": "open",
+        "pair": "15",
+        "train": {
+          "correct": 269,
+          "total": 492,
+          "accuracy": 0.5467479674796748
+        },
+        "test": {
+          "correct": 108,
+          "total": 212,
+          "accuracy": 0.5094339622641509
+        }
+      },
+      {
+        "market": "Madhur Day",
+        "side": "close",
+        "pair": "23",
+        "train": {
+          "correct": 268,
+          "total": 492,
+          "accuracy": 0.5447154471544715
+        },
+        "test": {
+          "correct": 112,
+          "total": 212,
+          "accuracy": 0.5283018867924528
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "open",
+        "pair": "39",
+        "train": {
+          "correct": 236,
+          "total": 422,
+          "accuracy": 0.5592417061611374
+        },
+        "test": {
+          "correct": 91,
+          "total": 182,
+          "accuracy": 0.5
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "pair": "45",
+        "train": {
+          "correct": 236,
+          "total": 422,
+          "accuracy": 0.5592417061611374
+        },
+        "test": {
+          "correct": 102,
+          "total": 182,
+          "accuracy": 0.5604395604395604
+        }
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "open",
+        "pair": "28",
+        "train": {
+          "correct": 239,
+          "total": 424,
+          "accuracy": 0.5636792452830188
+        },
+        "test": {
+          "correct": 111,
+          "total": 182,
+          "accuracy": 0.6098901098901099
+        }
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "close",
+        "pair": "28",
+        "train": {
+          "correct": 240,
+          "total": 424,
+          "accuracy": 0.5660377358490566
+        },
+        "test": {
+          "correct": 94,
+          "total": 182,
+          "accuracy": 0.5164835164835165
+        }
+      },
+      {
+        "market": "Kalyan",
+        "side": "open",
+        "pair": "34",
+        "train": {
+          "correct": 233,
+          "total": 424,
+          "accuracy": 0.5495283018867925
+        },
+        "test": {
+          "correct": 99,
+          "total": 182,
+          "accuracy": 0.5439560439560439
+        }
+      },
+      {
+        "market": "Kalyan",
+        "side": "close",
+        "pair": "09",
+        "train": {
+          "correct": 231,
+          "total": 424,
+          "accuracy": 0.5448113207547169
+        },
+        "test": {
+          "correct": 90,
+          "total": 182,
+          "accuracy": 0.4945054945054945
+        }
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "open",
+        "pair": "27",
+        "train": {
+          "correct": 278,
+          "total": 506,
+          "accuracy": 0.549407114624506
+        },
+        "test": {
+          "correct": 104,
+          "total": 218,
+          "accuracy": 0.47706422018348627
+        }
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "close",
+        "pair": "09",
+        "train": {
+          "correct": 275,
+          "total": 506,
+          "accuracy": 0.5434782608695652
+        },
+        "test": {
+          "correct": 125,
+          "total": 218,
+          "accuracy": 0.573394495412844
+        }
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "pair": "15",
+        "train": {
+          "correct": 201,
+          "total": 350,
+          "accuracy": 0.5742857142857143
+        },
+        "test": {
+          "correct": 81,
+          "total": 150,
+          "accuracy": 0.54
+        }
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "close",
+        "pair": "03",
+        "train": {
+          "correct": 193,
+          "total": 350,
+          "accuracy": 0.5514285714285714
+        },
+        "test": {
+          "correct": 74,
+          "total": 150,
+          "accuracy": 0.49333333333333335
+        }
+      },
+      {
+        "market": "Madhur Night",
+        "side": "open",
+        "pair": "18",
+        "train": {
+          "correct": 241,
+          "total": 423,
+          "accuracy": 0.5697399527186762
+        },
+        "test": {
+          "correct": 86,
+          "total": 182,
+          "accuracy": 0.4725274725274725
+        }
+      },
+      {
+        "market": "Madhur Night",
+        "side": "close",
+        "pair": "36",
+        "train": {
+          "correct": 240,
+          "total": 423,
+          "accuracy": 0.5673758865248227
+        },
+        "test": {
+          "correct": 83,
+          "total": 182,
+          "accuracy": 0.45604395604395603
+        }
+      },
+      {
+        "market": "Milan Night",
+        "side": "open",
+        "pair": "04",
+        "train": {
+          "correct": 225,
+          "total": 420,
+          "accuracy": 0.5357142857142857
+        },
+        "test": {
+          "correct": 91,
+          "total": 181,
+          "accuracy": 0.5027624309392266
+        }
+      },
+      {
+        "market": "Milan Night",
+        "side": "close",
+        "pair": "15",
+        "train": {
+          "correct": 242,
+          "total": 420,
+          "accuracy": 0.5761904761904761
+        },
+        "test": {
+          "correct": 87,
+          "total": 181,
+          "accuracy": 0.48066298342541436
+        }
+      },
+      {
+        "market": "Rajdhani Night",
+        "side": "open",
+        "pair": "38",
+        "train": {
+          "correct": 198,
+          "total": 353,
+          "accuracy": 0.5609065155807366
+        },
+        "test": {
+          "correct": 81,
+          "total": 152,
+          "accuracy": 0.5328947368421053
+        }
+      },
+      {
+        "market": "Rajdhani Night",
+        "side": "close",
+        "pair": "01",
+        "train": {
+          "correct": 190,
+          "total": 353,
+          "accuracy": 0.5382436260623229
+        },
+        "test": {
+          "correct": 75,
+          "total": 152,
+          "accuracy": 0.4934210526315789
+        }
+      },
+      {
+        "market": "Main Bazar",
+        "side": "open",
+        "pair": "15",
+        "train": {
+          "correct": 193,
+          "total": 352,
+          "accuracy": 0.5482954545454546
+        },
+        "test": {
+          "correct": 78,
+          "total": 152,
+          "accuracy": 0.5131578947368421
+        }
+      },
+      {
+        "market": "Main Bazar",
+        "side": "close",
+        "pair": "35",
+        "train": {
+          "correct": 203,
+          "total": 352,
+          "accuracy": 0.5767045454545454
+        },
+        "test": {
+          "correct": 78,
+          "total": 152,
+          "accuracy": 0.5131578947368421
+        }
+      }
+    ]
+  },
+  "pairPersistence": {
+    "base": 0.506181479956696,
+    "afterSuccess": 0.5078494854008322,
+    "afterFailure": 0.5045387486971394,
+    "liftAfterSuccess": 0.0016680054441361447
+  },
+  "confidenceIntervals95": {
+    "isolated23of30": {
+      "correct": 23,
+      "total": 30,
+      "low": 0.5907167384187784,
+      "high": 0.8820761185551049
+    },
+    "rolling63of95": {
+      "correct": 63,
+      "total": 95,
+      "low": 0.563426095592386,
+      "high": 0.750207478515786
+    }
+  }
+}

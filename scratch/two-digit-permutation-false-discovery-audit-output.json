@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-07-10T07:57:07.193Z",
+  "repetitions": 2000,
+  "portfolioExactPermutation": {
+    "minimum30": {
+      "observed": {
+        "correct": 23,
+        "digitCorrect": 53,
+        "total": 30,
+        "accuracy": 0.7666666666666667,
+        "avgCorrectDigits": 1.7666666666666666
+      },
+      "nullPValue": 0.005997001499250375,
+      "nullBestP90": 0.6666666666666666,
+      "nullBestP95": 0.7,
+      "nullBestP99": 0.7333333333333333
+    },
+    "minimum120": {
+      "observed": {
+        "correct": 394,
+        "digitCorrect": 1081,
+        "total": 720,
+        "accuracy": 0.5472222222222223,
+        "avgCorrectDigits": 1.5013888888888889
+      },
+      "nullPValue": 0.09695152423788106,
+      "nullBestP90": 0.5458333333333333,
+      "nullBestP95": 0.5520833333333334,
+      "nullBestP99": 0.5638888888888889
+    }
+  },
+  "configurationSearchBootstrap": [
+    {
+      "name": "Rolling portfolio",
+      "configurations": 480,
+      "observedCorrect": 63,
+      "observedTotal": 95,
+      "observedAccuracy": 0.6631578947368421,
+      "nullPValue": 0.46276861569215394,
+      "nullBestP90": 0.7,
+      "nullBestP95": 0.7166666666666667,
+      "nullBestP99": 0.75,
+      "note": "Conservative independent-configuration bootstrap; real configurations overlap."
+    },
+    {
+      "name": "Regime/volatility",
+      "configurations": 72,
+      "observedCorrect": 26,
+      "observedTotal": 40,
+      "observedAccuracy": 0.65,
+      "nullPValue": 0.39980009995002497,
+      "nullBestP90": 0.6944444444444444,
+      "nullBestP95": 0.7142857142857143,
+      "nullBestP99": 0.75,
+      "note": "Conservative independent-configuration bootstrap; real configurations overlap."
+    },
+    {
+      "name": "Latent regime",
+      "configurations": 4,
+      "observedCorrect": 20,
+      "observedTotal": 30,
+      "observedAccuracy": 0.6666666666666666,
+      "nullPValue": 0.10144927536231885,
+      "nullBestP90": 0.6666666666666666,
+      "nullBestP95": 0.6666666666666666,
+      "nullBestP99": 0.7333333333333333,
+      "note": "Conservative independent-configuration bootstrap; real configurations overlap."
+    },
+    {
+      "name": "Randomized forest",
+      "configurations": 5,
+      "observedCorrect": 40,
+      "observedTotal": 63,
+      "observedAccuracy": 0.6349206349206349,
+      "nullPValue": 0.04097951024487756,
+      "nullBestP90": 0.6140350877192983,
+      "nullBestP95": 0.631578947368421,
+      "nullBestP99": 0.6666666666666666,
+      "note": "Conservative independent-configuration bootstrap; real configurations overlap."
+    },
+    {
+      "name": "Temporal reservoir",
+      "configurations": 5,
+      "observedCorrect": 43,
+      "observedTotal": 71,
+      "observedAccuracy": 0.6056338028169014,
+      "nullPValue": 0.0814592703648176,
+      "nullBestP90": 0.5950413223140496,
+      "nullBestP95": 0.6197183098591549,
+      "nullBestP99": 0.647887323943662,
+      "note": "Conservative independent-configuration bootstrap; real configurations overlap."
+    }
+  ]
+}

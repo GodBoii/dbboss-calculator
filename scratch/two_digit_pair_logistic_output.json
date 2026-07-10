@@ -1,0 +1,1819 @@
+{
+  "generatedAt": "2026-07-09T10:01:42.812134+00:00",
+  "folds": 96,
+  "selectedFolds": 6,
+  "aggregate": {
+    "n": 61,
+    "ok": 30,
+    "accuracy": 0.4918032786885246,
+    "folds80": 0
+  },
+  "foldRows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 23,
+        "accuracy": 0.5111111111111111
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "threshold": 0.9,
+      "validation": {
+        "n": 38,
+        "ok": 18,
+        "accuracy": 0.47368421052631576
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "threshold": 0.85,
+      "validation": {
+        "n": 33,
+        "ok": 19,
+        "accuracy": 0.5757575757575758
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 24,
+        "accuracy": 0.5333333333333333
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 17,
+        "accuracy": 0.37777777777777777
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "threshold": 0.9,
+      "validation": {
+        "n": 19,
+        "ok": 13,
+        "accuracy": 0.6842105263157895
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "threshold": 0.75,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "threshold": 0.5,
+      "validation": {
+        "n": 21,
+        "ok": 10,
+        "accuracy": 0.47619047619047616
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "threshold": 0.85,
+      "validation": {
+        "n": 12,
+        "ok": 7,
+        "accuracy": 0.5833333333333334
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.55,
+      "validation": {
+        "n": 4,
+        "ok": 2,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.55,
+      "validation": {
+        "n": 41,
+        "ok": 22,
+        "accuracy": 0.5365853658536586
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.85,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "threshold": 0.85,
+      "validation": {
+        "n": 5,
+        "ok": 4,
+        "accuracy": 0.8
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.5,
+      "validation": {
+        "n": 19,
+        "ok": 12,
+        "accuracy": 0.631578947368421
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.75,
+      "validation": {
+        "n": 38,
+        "ok": 19,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 23,
+        "accuracy": 0.5111111111111111
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "threshold": 0.85,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "threshold": 0.5,
+      "validation": {
+        "n": 44,
+        "ok": 20,
+        "accuracy": 0.45454545454545453
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "threshold": 0.65,
+      "validation": {
+        "n": 32,
+        "ok": 15,
+        "accuracy": 0.46875
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "threshold": 0.85,
+      "validation": {
+        "n": 19,
+        "ok": 11,
+        "accuracy": 0.5789473684210527
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "threshold": 0.85,
+      "validation": {
+        "n": 29,
+        "ok": 17,
+        "accuracy": 0.5862068965517241
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "threshold": 0.65,
+      "validation": {
+        "n": 2,
+        "ok": 1,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 21,
+        "accuracy": 0.4666666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "threshold": 0.85,
+      "validation": {
+        "n": 9,
+        "ok": 6,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-02-07..2026-03-14",
+      "threshold": 0.9,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-03-16..2026-04-18",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 25,
+        "accuracy": 0.5555555555555556
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-04-20..2026-05-23",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 22,
+        "accuracy": 0.4888888888888889
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-05-25..2026-06-27",
+      "threshold": 0.9,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-02-07..2026-03-14",
+      "threshold": 0.9,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-03-16..2026-04-18",
+      "threshold": 0.9,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-04-20..2026-05-23",
+      "threshold": 0.65,
+      "validation": {
+        "n": 25,
+        "ok": 15,
+        "accuracy": 0.6
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-05-25..2026-06-27",
+      "threshold": 0.6,
+      "validation": {
+        "n": 14,
+        "ok": 7,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "threshold": 0.55,
+      "validation": {
+        "n": 3,
+        "ok": 2,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.65,
+      "validation": {
+        "n": 25,
+        "ok": 12,
+        "accuracy": 0.48
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.9,
+      "validation": {
+        "n": 2,
+        "ok": 2,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.8,
+      "validation": {
+        "n": 9,
+        "ok": 7,
+        "accuracy": 0.7777777777777778
+      },
+      "test": {
+        "n": 15,
+        "ok": 6,
+        "accuracy": 0.4
+      },
+      "samplePicks": [
+        {
+          "date": "2026-06-01",
+          "pair": "09",
+          "prob": 0.9043854028765499,
+          "ok": false
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "19",
+          "prob": 0.8438610741163131,
+          "ok": true
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "19",
+          "prob": 0.9209089191734817,
+          "ok": false
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "05",
+          "prob": 0.8554860160209328,
+          "ok": true
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "09",
+          "prob": 0.9031328997895837,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "threshold": 0.65,
+      "validation": {
+        "n": 36,
+        "ok": 19,
+        "accuracy": 0.5277777777777778
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 25,
+        "accuracy": 0.5555555555555556
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.7,
+      "validation": {
+        "n": 29,
+        "ok": 16,
+        "accuracy": 0.5517241379310345
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.8,
+      "validation": {
+        "n": 7,
+        "ok": 6,
+        "accuracy": 0.8571428571428571
+      },
+      "test": {
+        "n": 14,
+        "ok": 9,
+        "accuracy": 0.6428571428571429
+      },
+      "samplePicks": [
+        {
+          "date": "2026-06-02",
+          "pair": "89",
+          "prob": 0.822510574556672,
+          "ok": false
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "01",
+          "prob": 0.818645489224776,
+          "ok": false
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "13",
+          "prob": 0.8111897011667165,
+          "ok": false
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "13",
+          "prob": 0.8291088456326865,
+          "ok": false
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "18",
+          "prob": 0.9044401826389209,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "threshold": 0.5,
+      "validation": {
+        "n": 43,
+        "ok": 15,
+        "accuracy": 0.3488372093023256
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.65,
+      "validation": {
+        "n": 44,
+        "ok": 22,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.55,
+      "validation": {
+        "n": 12,
+        "ok": 5,
+        "accuracy": 0.4166666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.55,
+      "validation": {
+        "n": 43,
+        "ok": 24,
+        "accuracy": 0.5581395348837209
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "threshold": 0.55,
+      "validation": {
+        "n": 12,
+        "ok": 6,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.85,
+      "validation": {
+        "n": 8,
+        "ok": 7,
+        "accuracy": 0.875
+      },
+      "test": {
+        "n": 7,
+        "ok": 4,
+        "accuracy": 0.5714285714285714
+      },
+      "samplePicks": [
+        {
+          "date": "2026-03-31",
+          "pair": "27",
+          "prob": 0.9868640348096154,
+          "ok": true
+        },
+        {
+          "date": "2026-04-09",
+          "pair": "07",
+          "prob": 0.8737182071853503,
+          "ok": false
+        },
+        {
+          "date": "2026-04-11",
+          "pair": "07",
+          "prob": 0.8728632794214599,
+          "ok": true
+        },
+        {
+          "date": "2026-04-14",
+          "pair": "07",
+          "prob": 0.903708599205626,
+          "ok": true
+        },
+        {
+          "date": "2026-04-15",
+          "pair": "07",
+          "prob": 0.8992303211831879,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.8,
+      "validation": {
+        "n": 3,
+        "ok": 2,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.55,
+      "validation": {
+        "n": 17,
+        "ok": 11,
+        "accuracy": 0.6470588235294118
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "threshold": 0.5,
+      "validation": {
+        "n": 14,
+        "ok": 9,
+        "accuracy": 0.6428571428571429
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "threshold": 0.9,
+      "validation": {
+        "n": 2,
+        "ok": 1,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "threshold": 0.7,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "threshold": 0.85,
+      "validation": {
+        "n": 17,
+        "ok": 8,
+        "accuracy": 0.47058823529411764
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "threshold": 0.5,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "threshold": 0.7,
+      "validation": {
+        "n": 22,
+        "ok": 11,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "threshold": 0.55,
+      "validation": {
+        "n": 2,
+        "ok": 2,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "threshold": 0.75,
+      "validation": {
+        "n": 44,
+        "ok": 21,
+        "accuracy": 0.4772727272727273
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-01-12..2026-02-23",
+      "threshold": 0.8,
+      "validation": {
+        "n": 19,
+        "ok": 13,
+        "accuracy": 0.6842105263157895
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-02-24..2026-04-07",
+      "threshold": 0.75,
+      "validation": {
+        "n": 3,
+        "ok": 2,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-04-08..2026-05-19",
+      "threshold": 0.6,
+      "validation": {
+        "n": 4,
+        "ok": 2,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-05-20..2026-07-03",
+      "threshold": 0.85,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-01-12..2026-02-23",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 19,
+        "accuracy": 0.4222222222222222
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-02-24..2026-04-07",
+      "threshold": 0.65,
+      "validation": {
+        "n": 8,
+        "ok": 6,
+        "accuracy": 0.75
+      },
+      "test": {
+        "n": 3,
+        "ok": 1,
+        "accuracy": 0.3333333333333333
+      },
+      "samplePicks": [
+        {
+          "date": "2026-03-16",
+          "pair": "78",
+          "prob": 0.6580574758219283,
+          "ok": false
+        },
+        {
+          "date": "2026-03-19",
+          "pair": "78",
+          "prob": 0.7751952382880007,
+          "ok": true
+        },
+        {
+          "date": "2026-03-24",
+          "pair": "78",
+          "prob": 0.7126357273330224,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-04-08..2026-05-19",
+      "threshold": 0.7,
+      "validation": {
+        "n": 44,
+        "ok": 17,
+        "accuracy": 0.38636363636363635
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-05-20..2026-07-03",
+      "threshold": 0.8,
+      "validation": {
+        "n": 8,
+        "ok": 5,
+        "accuracy": 0.625
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "threshold": 0.65,
+      "validation": {
+        "n": 35,
+        "ok": 18,
+        "accuracy": 0.5142857142857142
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.8,
+      "validation": {
+        "n": 44,
+        "ok": 21,
+        "accuracy": 0.4772727272727273
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.9,
+      "validation": {
+        "n": 13,
+        "ok": 10,
+        "accuracy": 0.7692307692307693
+      },
+      "test": {
+        "n": 15,
+        "ok": 7,
+        "accuracy": 0.4666666666666667
+      },
+      "samplePicks": [
+        {
+          "date": "2026-04-27",
+          "pair": "15",
+          "prob": 0.9455157439817952,
+          "ok": true
+        },
+        {
+          "date": "2026-04-29",
+          "pair": "28",
+          "prob": 0.9033373229364718,
+          "ok": false
+        },
+        {
+          "date": "2026-05-01",
+          "pair": "18",
+          "prob": 0.9688486428704408,
+          "ok": true
+        },
+        {
+          "date": "2026-05-02",
+          "pair": "18",
+          "prob": 0.9414460185827327,
+          "ok": true
+        },
+        {
+          "date": "2026-05-04",
+          "pair": "18",
+          "prob": 0.9069154429185985,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.7,
+      "validation": {
+        "n": 28,
+        "ok": 11,
+        "accuracy": 0.39285714285714285
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "threshold": 0.85,
+      "validation": {
+        "n": 34,
+        "ok": 13,
+        "accuracy": 0.38235294117647056
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 23,
+        "accuracy": 0.5111111111111111
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.7,
+      "validation": {
+        "n": 4,
+        "ok": 3,
+        "accuracy": 0.75
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.9,
+      "validation": {
+        "n": 19,
+        "ok": 13,
+        "accuracy": 0.6842105263157895
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-02-13..2026-03-20",
+      "threshold": 0.5,
+      "validation": {
+        "n": 22,
+        "ok": 10,
+        "accuracy": 0.45454545454545453
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 24,
+        "accuracy": 0.5333333333333333
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.9,
+      "validation": {
+        "n": 12,
+        "ok": 8,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.8,
+      "validation": {
+        "n": 15,
+        "ok": 7,
+        "accuracy": 0.4666666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-02-13..2026-03-20",
+      "threshold": 0.75,
+      "validation": {
+        "n": 39,
+        "ok": 21,
+        "accuracy": 0.5384615384615384
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "threshold": 0.9,
+      "validation": {
+        "n": 24,
+        "ok": 14,
+        "accuracy": 0.5833333333333334
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "threshold": 0.5,
+      "validation": {
+        "n": 45,
+        "ok": 22,
+        "accuracy": 0.4888888888888889
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "threshold": 0.7,
+      "validation": {
+        "n": 5,
+        "ok": 4,
+        "accuracy": 0.8
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-01-15..2026-02-26",
+      "threshold": 0.55,
+      "validation": {
+        "n": 6,
+        "ok": 3,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-02-27..2026-04-10",
+      "threshold": 0.6,
+      "validation": {
+        "n": 44,
+        "ok": 20,
+        "accuracy": 0.45454545454545453
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-04-13..2026-05-22",
+      "threshold": 0.9,
+      "validation": {
+        "n": 13,
+        "ok": 8,
+        "accuracy": 0.6153846153846154
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-05-25..2026-07-03",
+      "threshold": 0.55,
+      "validation": {
+        "n": 5,
+        "ok": 2,
+        "accuracy": 0.4
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-01-15..2026-02-26",
+      "threshold": 0.6,
+      "validation": {
+        "n": 43,
+        "ok": 23,
+        "accuracy": 0.5348837209302325
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-02-27..2026-04-10",
+      "threshold": 0.7,
+      "validation": {
+        "n": 43,
+        "ok": 29,
+        "accuracy": 0.6744186046511628
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-04-13..2026-05-22",
+      "threshold": 0.85,
+      "validation": {
+        "n": 5,
+        "ok": 3,
+        "accuracy": 0.6
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-05-25..2026-07-03",
+      "threshold": 0.65,
+      "validation": {
+        "n": 10,
+        "ok": 8,
+        "accuracy": 0.8
+      },
+      "test": {
+        "n": 7,
+        "ok": 3,
+        "accuracy": 0.42857142857142855
+      },
+      "samplePicks": [
+        {
+          "date": "2026-05-28",
+          "pair": "05",
+          "prob": 0.7363042875906068,
+          "ok": false
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "01",
+          "prob": 0.6533818866444239,
+          "ok": true
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "59",
+          "prob": 0.8242415869170385,
+          "ok": false
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "68",
+          "prob": 0.6533533955060181,
+          "ok": true
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "18",
+          "prob": 0.6789101824107339,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-01-14..2026-02-25",
+      "threshold": 0.7,
+      "validation": {
+        "n": 35,
+        "ok": 22,
+        "accuracy": 0.6285714285714286
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-02-26..2026-04-09",
+      "threshold": 0.65,
+      "validation": {
+        "n": 44,
+        "ok": 27,
+        "accuracy": 0.6136363636363636
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-04-10..2026-05-22",
+      "threshold": 0.55,
+      "validation": {
+        "n": 3,
+        "ok": 3,
+        "accuracy": 1.0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-05-25..2026-07-03",
+      "threshold": 0.9,
+      "validation": {
+        "n": 36,
+        "ok": 17,
+        "accuracy": 0.4722222222222222
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-01-14..2026-02-25",
+      "threshold": 0.85,
+      "validation": {
+        "n": 6,
+        "ok": 3,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-02-26..2026-04-09",
+      "threshold": 0.9,
+      "validation": {
+        "n": 32,
+        "ok": 18,
+        "accuracy": 0.5625
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-04-10..2026-05-22",
+      "threshold": 0.65,
+      "validation": {
+        "n": 4,
+        "ok": 2,
+        "accuracy": 0.5
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-05-25..2026-07-03",
+      "threshold": 0.9,
+      "validation": {
+        "n": 38,
+        "ok": 16,
+        "accuracy": 0.42105263157894735
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "samplePicks": []
+    }
+  ]
+}

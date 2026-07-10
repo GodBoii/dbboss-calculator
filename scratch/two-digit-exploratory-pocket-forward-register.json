@@ -1,0 +1,50 @@
+{
+  "registeredAt": "2026-07-10T08:01:00.000Z",
+  "status": "research_only_post_hoc",
+  "market": "Madhur Night",
+  "side": "close",
+  "startAfter": "2026-07-04",
+  "rule": {
+    "context": "previous available Madhur Night open-panel kind",
+    "allowedWeekdays": [
+      "Monday",
+      "Tuesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "avoidPairByPreviousOpenKind": {
+      "SP": [2, 5],
+      "DP": [1, 8]
+    },
+    "noCallWhen": [
+      "weekday is Wednesday or Sunday",
+      "previous open-panel kind is TP",
+      "previous open panel is unavailable"
+    ]
+  },
+  "historicalEvidence": {
+    "validation": {
+      "correct": 57,
+      "total": 76,
+      "accuracy": 0.75
+    },
+    "inspectedLaterWindow": {
+      "correct": 20,
+      "total": 25,
+      "accuracy": 0.8,
+      "warning": "Post-hoc exploratory evidence; not a pristine holdout."
+    },
+    "rollingGuardian": {
+      "correct": 345,
+      "total": 687,
+      "accuracy": 0.5021834061135371
+    }
+  },
+  "promotionRequirements": {
+    "minimumFreshCalls": 30,
+    "minimumObservedStrictAccuracy": 0.8,
+    "minimumIndependentWindows": 2,
+    "appBehaviorUntilPromotion": "No safe call"
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "generatedAt": "2026-07-09T17:19:43.207Z",
+  "alignedRows": 720,
+  "configsTested": 24,
+  "viable80Count": 0,
+  "viable85Count": 0,
+  "bestMin30": {
+    "config": {
+      "minExactVotes": 3,
+      "allowOverlap": true,
+      "minDigitVotes": 3
+    },
+    "summary": {
+      "correct": 97,
+      "digitCorrect": 255,
+      "total": 164,
+      "accuracy": 0.5914634146341463,
+      "avgCorrectDigits": 1.5548780487804879
+    }
+  },
+  "bestMin60": {
+    "config": {
+      "minExactVotes": 3,
+      "allowOverlap": true,
+      "minDigitVotes": 3
+    },
+    "summary": {
+      "correct": 97,
+      "digitCorrect": 255,
+      "total": 164,
+      "accuracy": 0.5914634146341463,
+      "avgCorrectDigits": 1.5548780487804879
+    }
+  },
+  "configResults": [
+    {
+      "config": {
+        "minExactVotes": 2,
+        "allowOverlap": false,
+        "minDigitVotes": 2
+      },
+      "summary": {
+        "correct": 245,
+        "digitCorrect": 668,
+        "total": 446,
+        "accuracy": 0.5493273542600897,
+        "avgCorrectDigits": 1.4977578475336324
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 2,
+        "allowOverlap": false,
+        "minDigitVotes": 3
+      },
+      "summary": {
+        "correct": 245,
+        "digitCorrect": 668,
+        "total": 446,
+        "accuracy": 0.5493273542600897,
+        "avgCorrectDigits": 1.4977578475336324
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 2,
+        "allowOverlap": false,
+        "minDigitVotes": 4
+      },
+      "summary": {
+        "correct": 245,
+        "digitCorrect": 668,
+        "total": 446,
+        "accuracy": 0.5493273542600897,
+        "avgCorrectDigits": 1.4977578475336324
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 2,
+        "allowOverlap": true,
+        "minDigitVotes": 2
+      },
+      "summary": {
+        "correct": 338,
+        "digitCorrect": 928,
+        "total": 619,
+        "accuracy": 0.5460420032310178,
+        "avgCorrectDigits": 1.4991922455573505
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 2,
+        "allowOverlap": true,
+        "minDigitVotes": 3
+      },
+      "summary": {
+        "correct": 251,
+        "digitCorrect": 685,
+        "total": 457,
+        "accuracy": 0.5492341356673961,
+        "avgCorrectDigits": 1.49890590809628
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 2,
+        "allowOverlap": true,
+        "minDigitVotes": 4
+      },
+      "summary": {
+        "correct": 245,
+        "digitCorrect": 668,
+        "total": 446,
+        "accuracy": 0.5493273542600897,
+        "avgCorrectDigits": 1.4977578475336324
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 3,
+        "allowOverlap": false,
+        "minDigitVotes": 2
+      },
+      "summary": {
+        "correct": 29,
+        "digitCorrect": 77,
+        "total": 51,
+        "accuracy": 0.5686274509803921,
+        "avgCorrectDigits": 1.5098039215686274
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 3,
+        "allowOverlap": false,
+        "minDigitVotes": 3
+      },
+      "summary": {
+        "correct": 29,
+        "digitCorrect": 77,
+        "total": 51,
+        "accuracy": 0.5686274509803921,
+        "avgCorrectDigits": 1.5098039215686274
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 3,
+        "allowOverlap": false,
+        "minDigitVotes": 4
+      },
+      "summary": {
+        "correct": 29,
+        "digitCorrect": 77,
+        "total": 51,
+        "accuracy": 0.5686274509803921,
+        "avgCorrectDigits": 1.5098039215686274
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 3,
+        "allowOverlap": true,
+        "minDigitVotes": 2
+      },
+      "summary": {
+        "correct": 299,
+        "digitCorrect": 821,
+        "total": 546,
+        "accuracy": 0.5476190476190477,
+        "avgCorrectDigits": 1.5036630036630036
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 3,
+        "allowOverlap": true,
+        "minDigitVotes": 3
+      },
+      "summary": {
+        "correct": 97,
+        "digitCorrect": 255,
+        "total": 164,
+        "accuracy": 0.5914634146341463,
+        "avgCorrectDigits": 1.5548780487804879
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 3,
+        "allowOverlap": true,
+        "minDigitVotes": 4
+      },
+      "summary": {
+        "correct": 29,
+        "digitCorrect": 77,
+        "total": 51,
+        "accuracy": 0.5686274509803921,
+        "avgCorrectDigits": 1.5098039215686274
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 4,
+        "allowOverlap": false,
+        "minDigitVotes": 2
+      },
+      "summary": {
+        "correct": 3,
+        "digitCorrect": 11,
+        "total": 8,
+        "accuracy": 0.375,
+        "avgCorrectDigits": 1.375
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 4,
+        "allowOverlap": false,
+        "minDigitVotes": 3
+      },
+      "summary": {
+        "correct": 3,
+        "digitCorrect": 11,
+        "total": 8,
+        "accuracy": 0.375,
+        "avgCorrectDigits": 1.375
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 4,
+        "allowOverlap": false,
+        "minDigitVotes": 4
+      },
+      "summary": {
+        "correct": 3,
+        "digitCorrect": 11,
+        "total": 8,
+        "accuracy": 0.375,
+        "avgCorrectDigits": 1.375
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 4,
+        "allowOverlap": true,
+        "minDigitVotes": 2
+      },
+      "summary": {
+        "correct": 299,
+        "digitCorrect": 821,
+        "total": 546,
+        "accuracy": 0.5476190476190477,
+        "avgCorrectDigits": 1.5036630036630036
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 4,
+        "allowOverlap": true,
+        "minDigitVotes": 3
+      },
+      "summary": {
+        "correct": 97,
+        "digitCorrect": 255,
+        "total": 164,
+        "accuracy": 0.5914634146341463,
+        "avgCorrectDigits": 1.5548780487804879
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 4,
+        "allowOverlap": true,
+        "minDigitVotes": 4
+      },
+      "summary": {
+        "correct": 5,
+        "digitCorrect": 15,
+        "total": 10,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.5
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 5,
+        "allowOverlap": false,
+        "minDigitVotes": 2
+      },
+      "summary": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 5,
+        "allowOverlap": false,
+        "minDigitVotes": 3
+      },
+      "summary": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 5,
+        "allowOverlap": false,
+        "minDigitVotes": 4
+      },
+      "summary": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 5,
+        "allowOverlap": true,
+        "minDigitVotes": 2
+      },
+      "summary": {
+        "correct": 299,
+        "digitCorrect": 821,
+        "total": 546,
+        "accuracy": 0.5476190476190477,
+        "avgCorrectDigits": 1.5036630036630036
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 5,
+        "allowOverlap": true,
+        "minDigitVotes": 3
+      },
+      "summary": {
+        "correct": 97,
+        "digitCorrect": 255,
+        "total": 164,
+        "accuracy": 0.5914634146341463,
+        "avgCorrectDigits": 1.5548780487804879
+      }
+    },
+    {
+      "config": {
+        "minExactVotes": 5,
+        "allowOverlap": true,
+        "minDigitVotes": 4
+      },
+      "summary": {
+        "correct": 5,
+        "digitCorrect": 15,
+        "total": 10,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.5
+      }
+    }
+  ]
+}

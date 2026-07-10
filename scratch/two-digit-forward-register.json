@@ -1,0 +1,969 @@
+{
+  "generatedAt": "2026-07-09T12:13:37.144Z",
+  "purpose": "Pre-registered future 2-digit avoid calls. Score this only after future results are known.",
+  "gate": "CALL only when context validation is strong and either consensus validation is >=80% or consensus agrees with context.",
+  "calls": 0,
+  "noSafeCalls": 24,
+  "rows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "targetDate": "2026-07-06",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "dom_bucket",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 365,
+        "validationAccuracy": 0.5444444444444444,
+        "validationCorrect": 49,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.511111111111111,
+        "nextContextKey": "early",
+        "usedGlobalFallback": false,
+        "proposedPair": "38"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5444444444444444,
+        "validationCorrect": 49,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 35,
+        "topVoteShare": 0.3125,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "targetDate": "2026-07-06",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "weekday",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 240,
+        "validationAccuracy": 0.6,
+        "validationCorrect": 54,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5666666666666667,
+        "nextContextKey": "Monday",
+        "usedGlobalFallback": false,
+        "proposedPair": "13"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5666666666666667,
+        "validationCorrect": 51,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 43,
+        "topVoteShare": 0.3805309734513274,
+        "topVoteFamilies": 11
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_sum_bucket",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 180,
+        "validationAccuracy": 0.6555555555555556,
+        "validationCorrect": 59,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.6111111111111112,
+        "nextContextKey": "1",
+        "usedGlobalFallback": false,
+        "proposedPair": "67"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5,
+        "validationCorrect": 45,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 38,
+        "topVoteShare": 0.34545454545454546,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_opp_sutta",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 500,
+        "validationAccuracy": 0.6666666666666666,
+        "validationCorrect": 60,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.6555555555555554,
+        "nextContextKey": "2",
+        "usedGlobalFallback": false,
+        "proposedPair": "34"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.4888888888888889,
+        "validationCorrect": 44,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 41,
+        "topVoteShare": 0.36607142857142855,
+        "topVoteFamilies": 10
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "targetDate": "2026-07-06",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_opp_kind",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 180,
+        "validationAccuracy": 0.6333333333333333,
+        "validationCorrect": 57,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5666666666666667,
+        "nextContextKey": "SP",
+        "usedGlobalFallback": false,
+        "proposedPair": "27"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.45555555555555555,
+        "validationCorrect": 41,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 35,
+        "topVoteShare": 0.2892561983471074,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "targetDate": "2026-07-06",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "month",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 180,
+        "validationAccuracy": 0.6222222222222222,
+        "validationCorrect": 56,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.6222222222222222,
+        "nextContextKey": "7",
+        "usedGlobalFallback": true,
+        "proposedPair": "17"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5,
+        "validationCorrect": 45,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 36,
+        "topVoteShare": 0.3025210084033613,
+        "topVoteFamilies": 9
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "targetDate": "2026-06-28",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_opp_sutta",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 500,
+        "validationAccuracy": 0.6111111111111112,
+        "validationCorrect": 55,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.6,
+        "nextContextKey": "0",
+        "usedGlobalFallback": false,
+        "proposedPair": "35"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.4666666666666667,
+        "validationCorrect": 42,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 42,
+        "topVoteShare": 0.3652173913043478,
+        "topVoteFamilies": 9
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "targetDate": "2026-06-28",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "dom_bucket",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 180,
+        "validationAccuracy": 0.6111111111111112,
+        "validationCorrect": 55,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5666666666666667,
+        "nextContextKey": "late",
+        "usedGlobalFallback": false,
+        "proposedPair": "59"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5,
+        "validationCorrect": 45,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 42,
+        "topVoteShare": 0.3652173913043478,
+        "topVoteFamilies": 9
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_sum_bucket",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 500,
+        "validationAccuracy": 0.6333333333333333,
+        "validationCorrect": 57,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5666666666666667,
+        "nextContextKey": "3",
+        "usedGlobalFallback": false,
+        "proposedPair": "12"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.4,
+        "validationCorrect": 36,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 40,
+        "topVoteShare": 0.36036036036036034,
+        "topVoteFamilies": 9
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_sutta",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 180,
+        "validationAccuracy": 0.6666666666666666,
+        "validationCorrect": 60,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.6111111111111112,
+        "nextContextKey": "2",
+        "usedGlobalFallback": false,
+        "proposedPair": "19"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.4222222222222222,
+        "validationCorrect": 38,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 35,
+        "topVoteShare": 0.3181818181818182,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "dom_bucket",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 500,
+        "validationAccuracy": 0.7,
+        "validationCorrect": 63,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.6777777777777778,
+        "nextContextKey": "early",
+        "usedGlobalFallback": false,
+        "proposedPair": "46"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.6,
+        "validationCorrect": 54,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 42,
+        "topVoteShare": 0.4,
+        "topVoteFamilies": 11
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "dom_mod3",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 365,
+        "validationAccuracy": 0.5777777777777777,
+        "validationCorrect": 52,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5555555555555556,
+        "nextContextKey": "2",
+        "usedGlobalFallback": false,
+        "proposedPair": "03"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5222222222222223,
+        "validationCorrect": 47,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 35,
+        "topVoteShare": 0.330188679245283,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "targetDate": "2026-07-06",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "dom_mod3",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 240,
+        "validationAccuracy": 0.6555555555555556,
+        "validationCorrect": 59,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.6,
+        "nextContextKey": "0",
+        "usedGlobalFallback": false,
+        "proposedPair": "25"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.45555555555555555,
+        "validationCorrect": 41,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 38,
+        "topVoteShare": 0.35185185185185186,
+        "topVoteFamilies": 9
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "targetDate": "2026-07-06",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_sutta",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 365,
+        "validationAccuracy": 0.6111111111111112,
+        "validationCorrect": 55,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5444444444444445,
+        "nextContextKey": "4",
+        "usedGlobalFallback": false,
+        "proposedPair": "28"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.6,
+        "validationCorrect": 54,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 39,
+        "topVoteShare": 0.34513274336283184,
+        "topVoteFamilies": 9
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "targetDate": "2026-07-04",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "dom_bucket",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 500,
+        "validationAccuracy": 0.5888888888888889,
+        "validationCorrect": 53,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5666666666666667,
+        "nextContextKey": "early",
+        "usedGlobalFallback": false,
+        "proposedPair": "12"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5333333333333333,
+        "validationCorrect": 48,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 35,
+        "topVoteShare": 0.3181818181818182,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "targetDate": "2026-07-04",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "dom_mod3",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 180,
+        "validationAccuracy": 0.5777777777777777,
+        "validationCorrect": 52,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5222222222222221,
+        "nextContextKey": "1",
+        "usedGlobalFallback": false,
+        "proposedPair": "38"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5222222222222223,
+        "validationCorrect": 47,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 36,
+        "topVoteShare": 0.32727272727272727,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_opp_sutta",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 180,
+        "validationAccuracy": 0.5777777777777777,
+        "validationCorrect": 52,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5222222222222221,
+        "nextContextKey": "7",
+        "usedGlobalFallback": false,
+        "proposedPair": "58"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.43333333333333335,
+        "validationCorrect": 39,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 34,
+        "topVoteShare": 0.3119266055045872,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_opp_kind",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 365,
+        "validationAccuracy": 0.7333333333333333,
+        "validationCorrect": 66,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.7,
+        "nextContextKey": "SP",
+        "usedGlobalFallback": false,
+        "proposedPair": "25"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.4777777777777778,
+        "validationCorrect": 43,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 35,
+        "topVoteShare": 0.330188679245283,
+        "topVoteFamilies": 9
+      },
+      "gates": {
+        "contextPass": true,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_house_shape",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 180,
+        "validationAccuracy": 0.5888888888888889,
+        "validationCorrect": 53,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5333333333333334,
+        "nextContextKey": "HHL",
+        "usedGlobalFallback": false,
+        "proposedPair": "46"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.4888888888888889,
+        "validationCorrect": 44,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 34,
+        "topVoteShare": 0.3300970873786408,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "targetDate": "2026-07-05",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_sum_bucket",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 240,
+        "validationAccuracy": 0.6,
+        "validationCorrect": 54,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5888888888888888,
+        "nextContextKey": "1",
+        "usedGlobalFallback": false,
+        "proposedPair": "35"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5333333333333333,
+        "validationCorrect": 48,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 34,
+        "topVoteShare": 0.3148148148148148,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "targetDate": "2026-07-04",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_kind",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 500,
+        "validationAccuracy": 0.6222222222222222,
+        "validationCorrect": 56,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5777777777777777,
+        "nextContextKey": "DP",
+        "usedGlobalFallback": false,
+        "proposedPair": "37"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.4444444444444444,
+        "validationCorrect": 40,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 37,
+        "topVoteShare": 0.3425925925925926,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "targetDate": "2026-07-04",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_opp_sutta",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 365,
+        "validationAccuracy": 0.6,
+        "validationCorrect": 54,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5222222222222221,
+        "nextContextKey": "2",
+        "usedGlobalFallback": false,
+        "proposedPair": "01"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5,
+        "validationCorrect": 45,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 42,
+        "topVoteShare": 0.40384615384615385,
+        "topVoteFamilies": 11
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": true
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "targetDate": "2026-07-04",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_house_shape",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 365,
+        "validationAccuracy": 0.5777777777777777,
+        "validationCorrect": 52,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5444444444444445,
+        "nextContextKey": "HLL",
+        "usedGlobalFallback": false,
+        "proposedPair": "49"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5111111111111111,
+        "validationCorrect": 46,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 35,
+        "topVoteShare": 0.33653846153846156,
+        "topVoteFamilies": 8
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "targetDate": "2026-07-04",
+      "status": "NO_SAFE_CALL",
+      "avoidPair": null,
+      "contextModel": {
+        "mode": "prev_kind",
+        "minSupport": 3,
+        "shrink": 0,
+        "trainLookback": 365,
+        "validationAccuracy": 0.6111111111111112,
+        "validationCorrect": 55,
+        "validationTotal": 90,
+        "validationAvgCorrectDigits": 1.5666666666666667,
+        "nextContextKey": "SP",
+        "usedGlobalFallback": false,
+        "proposedPair": "03"
+      },
+      "consensusModel": {
+        "config": {
+          "minVotes": 8,
+          "minShare": 0.1,
+          "minMargin": 1,
+          "minFamilies": 2
+        },
+        "validationAccuracy": 0.5666666666666667,
+        "validationCorrect": 51,
+        "validationTotal": 90,
+        "topVotePair": "01",
+        "topVoteScore": 38,
+        "topVoteShare": 0.35185185185185186,
+        "topVoteFamilies": 10
+      },
+      "gates": {
+        "contextPass": false,
+        "consensusPass": false,
+        "agreementPass": false
+      }
+    }
+  ]
+}

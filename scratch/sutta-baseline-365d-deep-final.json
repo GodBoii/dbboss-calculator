@@ -1,0 +1,551 @@
+{
+  "generatedAt": "2026-07-10T13:45:26.599Z",
+  "days": 365,
+  "sourceCache": "C:\\Users\\prajw\\Downloads\\dbboss\\dbboss-calculator\\scratch\\sutta-research-records.json",
+  "dateRanges": {
+    "Sridevi": [
+      "2025-07-06",
+      "2026-07-05"
+    ],
+    "Time Bazar": [
+      "2025-07-05",
+      "2026-07-04"
+    ],
+    "Madhur Day": [
+      "2025-07-06",
+      "2026-07-05"
+    ],
+    "Milan Day": [
+      "2025-07-05",
+      "2026-07-04"
+    ],
+    "Rajdhani Day": [
+      "2025-07-05",
+      "2026-07-04"
+    ],
+    "Kalyan": [
+      "2025-07-05",
+      "2026-07-04"
+    ],
+    "Sridevi Night": [
+      "2025-07-06",
+      "2026-07-05"
+    ],
+    "Kalyan Night": [
+      "2025-07-04",
+      "2026-07-03"
+    ],
+    "Madhur Night": [
+      "2025-07-05",
+      "2026-07-04"
+    ],
+    "Milan Night": [
+      "2025-07-05",
+      "2026-07-04"
+    ],
+    "Rajdhani Night": [
+      "2025-07-04",
+      "2026-07-03"
+    ],
+    "Main Bazar": [
+      "2025-07-04",
+      "2026-07-03"
+    ]
+  },
+  "totals": {
+    "4": {
+      "open": {
+        "n": 3641,
+        "hit": 1544
+      },
+      "close": {
+        "n": 3641,
+        "hit": 1402
+      },
+      "jodi": {
+        "n": 3641,
+        "hit": 627
+      },
+      "adjustedClose": {
+        "n": 3641,
+        "hit": 1389
+      }
+    },
+    "6": {
+      "open": {
+        "n": 3641,
+        "hit": 2296
+      },
+      "close": {
+        "n": 3641,
+        "hit": 2260
+      },
+      "jodi": {
+        "n": 3641,
+        "hit": 1418
+      },
+      "adjustedClose": {
+        "n": 3641,
+        "hit": 2228
+      }
+    }
+  },
+  "byMarket": {
+    "Sridevi": {
+      "4": {
+        "open": {
+          "n": 362,
+          "hit": 171
+        },
+        "close": {
+          "n": 362,
+          "hit": 163
+        },
+        "jodi": {
+          "n": 362,
+          "hit": 78
+        },
+        "adjustedClose": {
+          "n": 362,
+          "hit": 160
+        }
+      },
+      "6": {
+        "open": {
+          "n": 362,
+          "hit": 233
+        },
+        "close": {
+          "n": 362,
+          "hit": 223
+        },
+        "jodi": {
+          "n": 362,
+          "hit": 142
+        },
+        "adjustedClose": {
+          "n": 362,
+          "hit": 232
+        }
+      }
+    },
+    "Time Bazar": {
+      "4": {
+        "open": {
+          "n": 302,
+          "hit": 125
+        },
+        "close": {
+          "n": 302,
+          "hit": 93
+        },
+        "jodi": {
+          "n": 302,
+          "hit": 40
+        },
+        "adjustedClose": {
+          "n": 302,
+          "hit": 93
+        }
+      },
+      "6": {
+        "open": {
+          "n": 302,
+          "hit": 201
+        },
+        "close": {
+          "n": 302,
+          "hit": 157
+        },
+        "jodi": {
+          "n": 302,
+          "hit": 112
+        },
+        "adjustedClose": {
+          "n": 302,
+          "hit": 157
+        }
+      }
+    },
+    "Madhur Day": {
+      "4": {
+        "open": {
+          "n": 352,
+          "hit": 144
+        },
+        "close": {
+          "n": 352,
+          "hit": 122
+        },
+        "jodi": {
+          "n": 352,
+          "hit": 48
+        },
+        "adjustedClose": {
+          "n": 352,
+          "hit": 122
+        }
+      },
+      "6": {
+        "open": {
+          "n": 352,
+          "hit": 219
+        },
+        "close": {
+          "n": 352,
+          "hit": 227
+        },
+        "jodi": {
+          "n": 352,
+          "hit": 142
+        },
+        "adjustedClose": {
+          "n": 352,
+          "hit": 227
+        }
+      }
+    },
+    "Milan Day": {
+      "4": {
+        "open": {
+          "n": 302,
+          "hit": 127
+        },
+        "close": {
+          "n": 302,
+          "hit": 122
+        },
+        "jodi": {
+          "n": 302,
+          "hit": 59
+        },
+        "adjustedClose": {
+          "n": 302,
+          "hit": 123
+        }
+      },
+      "6": {
+        "open": {
+          "n": 302,
+          "hit": 207
+        },
+        "close": {
+          "n": 302,
+          "hit": 183
+        },
+        "jodi": {
+          "n": 302,
+          "hit": 134
+        },
+        "adjustedClose": {
+          "n": 302,
+          "hit": 184
+        }
+      }
+    },
+    "Rajdhani Day": {
+      "4": {
+        "open": {
+          "n": 303,
+          "hit": 116
+        },
+        "close": {
+          "n": 303,
+          "hit": 105
+        },
+        "jodi": {
+          "n": 303,
+          "hit": 39
+        },
+        "adjustedClose": {
+          "n": 303,
+          "hit": 105
+        }
+      },
+      "6": {
+        "open": {
+          "n": 303,
+          "hit": 175
+        },
+        "close": {
+          "n": 303,
+          "hit": 208
+        },
+        "jodi": {
+          "n": 303,
+          "hit": 118
+        },
+        "adjustedClose": {
+          "n": 303,
+          "hit": 185
+        }
+      }
+    },
+    "Kalyan": {
+      "4": {
+        "open": {
+          "n": 303,
+          "hit": 135
+        },
+        "close": {
+          "n": 303,
+          "hit": 125
+        },
+        "jodi": {
+          "n": 303,
+          "hit": 66
+        },
+        "adjustedClose": {
+          "n": 303,
+          "hit": 125
+        }
+      },
+      "6": {
+        "open": {
+          "n": 303,
+          "hit": 194
+        },
+        "close": {
+          "n": 303,
+          "hit": 192
+        },
+        "jodi": {
+          "n": 303,
+          "hit": 124
+        },
+        "adjustedClose": {
+          "n": 303,
+          "hit": 184
+        }
+      }
+    },
+    "Sridevi Night": {
+      "4": {
+        "open": {
+          "n": 362,
+          "hit": 152
+        },
+        "close": {
+          "n": 362,
+          "hit": 150
+        },
+        "jodi": {
+          "n": 362,
+          "hit": 74
+        },
+        "adjustedClose": {
+          "n": 362,
+          "hit": 146
+        }
+      },
+      "6": {
+        "open": {
+          "n": 362,
+          "hit": 221
+        },
+        "close": {
+          "n": 362,
+          "hit": 235
+        },
+        "jodi": {
+          "n": 362,
+          "hit": 137
+        },
+        "adjustedClose": {
+          "n": 362,
+          "hit": 222
+        }
+      }
+    },
+    "Kalyan Night": {
+      "4": {
+        "open": {
+          "n": 248,
+          "hit": 125
+        },
+        "close": {
+          "n": 248,
+          "hit": 102
+        },
+        "jodi": {
+          "n": 248,
+          "hit": 56
+        },
+        "adjustedClose": {
+          "n": 248,
+          "hit": 101
+        }
+      },
+      "6": {
+        "open": {
+          "n": 248,
+          "hit": 167
+        },
+        "close": {
+          "n": 248,
+          "hit": 147
+        },
+        "jodi": {
+          "n": 248,
+          "hit": 100
+        },
+        "adjustedClose": {
+          "n": 248,
+          "hit": 149
+        }
+      }
+    },
+    "Madhur Night": {
+      "4": {
+        "open": {
+          "n": 303,
+          "hit": 114
+        },
+        "close": {
+          "n": 303,
+          "hit": 111
+        },
+        "jodi": {
+          "n": 303,
+          "hit": 38
+        },
+        "adjustedClose": {
+          "n": 303,
+          "hit": 107
+        }
+      },
+      "6": {
+        "open": {
+          "n": 303,
+          "hit": 178
+        },
+        "close": {
+          "n": 303,
+          "hit": 180
+        },
+        "jodi": {
+          "n": 303,
+          "hit": 110
+        },
+        "adjustedClose": {
+          "n": 303,
+          "hit": 180
+        }
+      }
+    },
+    "Milan Night": {
+      "4": {
+        "open": {
+          "n": 299,
+          "hit": 124
+        },
+        "close": {
+          "n": 299,
+          "hit": 127
+        },
+        "jodi": {
+          "n": 299,
+          "hit": 58
+        },
+        "adjustedClose": {
+          "n": 299,
+          "hit": 127
+        }
+      },
+      "6": {
+        "open": {
+          "n": 299,
+          "hit": 186
+        },
+        "close": {
+          "n": 299,
+          "hit": 189
+        },
+        "jodi": {
+          "n": 299,
+          "hit": 113
+        },
+        "adjustedClose": {
+          "n": 299,
+          "hit": 189
+        }
+      }
+    },
+    "Rajdhani Night": {
+      "4": {
+        "open": {
+          "n": 253,
+          "hit": 106
+        },
+        "close": {
+          "n": 253,
+          "hit": 86
+        },
+        "jodi": {
+          "n": 253,
+          "hit": 32
+        },
+        "adjustedClose": {
+          "n": 253,
+          "hit": 84
+        }
+      },
+      "6": {
+        "open": {
+          "n": 253,
+          "hit": 158
+        },
+        "close": {
+          "n": 253,
+          "hit": 164
+        },
+        "jodi": {
+          "n": 253,
+          "hit": 97
+        },
+        "adjustedClose": {
+          "n": 253,
+          "hit": 164
+        }
+      }
+    },
+    "Main Bazar": {
+      "4": {
+        "open": {
+          "n": 252,
+          "hit": 105
+        },
+        "close": {
+          "n": 252,
+          "hit": 96
+        },
+        "jodi": {
+          "n": 252,
+          "hit": 39
+        },
+        "adjustedClose": {
+          "n": 252,
+          "hit": 96
+        }
+      },
+      "6": {
+        "open": {
+          "n": 252,
+          "hit": 157
+        },
+        "close": {
+          "n": 252,
+          "hit": 155
+        },
+        "jodi": {
+          "n": 252,
+          "hit": 89
+        },
+        "adjustedClose": {
+          "n": 252,
+          "hit": 155
+        }
+      }
+    }
+  }
+}

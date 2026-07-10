@@ -1,0 +1,1729 @@
+{
+  "generatedAt": "2026-07-09T09:55:35.271Z",
+  "configs": 24,
+  "folds": 72,
+  "selectedFolds": 5,
+  "aggregate": {
+    "n": 149,
+    "ok": 81,
+    "accuracy": 0.5436241610738255,
+    "folds80": 0
+  },
+  "foldRows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1443,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1457,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 808,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 97,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1480,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 114,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1318,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 162,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2630,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2649,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1389,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 183,
+        "validation": {
+          "n": 30,
+          "ok": 21,
+          "accuracy": 0.7
+        }
+      },
+      "selected": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 183,
+        "validation": {
+          "n": 30,
+          "ok": 21,
+          "accuracy": 0.7
+        },
+        "test": {
+          "n": 30,
+          "ok": 20,
+          "accuracy": 0.6666666666666666
+        },
+        "samplePicks": [
+          {
+            "ok": false,
+            "pair": "04",
+            "context": "target.l60.hot2=4",
+            "precision": 0.9230769230769231,
+            "support": 13
+          },
+          {
+            "ok": false,
+            "pair": "04",
+            "context": "target.l60.hot2=4",
+            "precision": 0.9230769230769231,
+            "support": 13
+          },
+          {
+            "ok": true,
+            "pair": "04",
+            "context": "target.l60.hot2=4",
+            "precision": 0.9230769230769231,
+            "support": 13
+          },
+          {
+            "ok": true,
+            "pair": "04",
+            "context": "target.l60.hot2=4",
+            "precision": 0.9230769230769231,
+            "support": 13
+          },
+          {
+            "ok": false,
+            "pair": "04",
+            "context": "target.l60.hot2=4",
+            "precision": 0.9230769230769231,
+            "support": 13
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 173,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 192,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 173,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 179,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 157,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2548,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-03-16..2026-04-18",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.78,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 47,
+        "validation": {
+          "n": 27,
+          "ok": 17,
+          "accuracy": 0.6296296296296297
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-04-20..2026-05-23",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2684,
+        "validation": {
+          "n": 30,
+          "ok": 21,
+          "accuracy": 0.7
+        }
+      },
+      "selected": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2684,
+        "validation": {
+          "n": 30,
+          "ok": 21,
+          "accuracy": 0.7
+        },
+        "test": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        },
+        "samplePicks": [
+          {
+            "ok": true,
+            "pair": "39",
+            "context": "dom.bucket=mid && source.prev.close.sutta=0",
+            "precision": 1,
+            "support": 13
+          },
+          {
+            "ok": false,
+            "pair": "27",
+            "context": "same.prev.close.sutta=7 && source.prev.close.kind=SP",
+            "precision": 0.9166666666666666,
+            "support": 12
+          },
+          {
+            "ok": false,
+            "pair": "08",
+            "context": "target.prev.kind=SP && source.prev.close.sutta=7",
+            "precision": 1,
+            "support": 10
+          },
+          {
+            "ok": true,
+            "pair": "35",
+            "context": "dom.mod3=2 && source.prev.close.sutta=9",
+            "precision": 1,
+            "support": 8
+          },
+          {
+            "ok": false,
+            "pair": "39",
+            "context": "source.prev.close.sutta=0 && target.l14.hot2=0",
+            "precision": 1,
+            "support": 8
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-05-25..2026-06-27",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 185,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-03-16..2026-04-18",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2551,
+        "validation": {
+          "n": 30,
+          "ok": 22,
+          "accuracy": 0.7333333333333333
+        }
+      },
+      "selected": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 196,
+        "validation": {
+          "n": 30,
+          "ok": 22,
+          "accuracy": 0.7333333333333333
+        },
+        "test": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        },
+        "samplePicks": [
+          {
+            "ok": false,
+            "pair": "03",
+            "context": "target.prev.sutta=2",
+            "precision": 0.8666666666666667,
+            "support": 15
+          },
+          {
+            "ok": true,
+            "pair": "03",
+            "context": "target.prev.sutta=2",
+            "precision": 0.8666666666666667,
+            "support": 15
+          },
+          {
+            "ok": false,
+            "pair": "47",
+            "context": "source.l30.cold1=4",
+            "precision": 0.8,
+            "support": 10
+          },
+          {
+            "ok": true,
+            "pair": "34",
+            "context": "same.prev.open.sutta=9",
+            "precision": 0.8235294117647058,
+            "support": 17
+          },
+          {
+            "ok": true,
+            "pair": "34",
+            "context": "same.prev.open.sutta=4",
+            "precision": 0.8461538461538461,
+            "support": 26
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-04-20..2026-05-23",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1368,
+        "validation": {
+          "n": 30,
+          "ok": 14,
+          "accuracy": 0.4666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-05-25..2026-06-27",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1398,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 179,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2735,
+        "validation": {
+          "n": 30,
+          "ok": 14,
+          "accuracy": 0.4666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 160,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1330,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2674,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2776,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1314,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1298,
+        "validation": {
+          "n": 30,
+          "ok": 24,
+          "accuracy": 0.8
+        }
+      },
+      "selected": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1298,
+        "validation": {
+          "n": 30,
+          "ok": 24,
+          "accuracy": 0.8
+        },
+        "test": {
+          "n": 30,
+          "ok": 11,
+          "accuracy": 0.36666666666666664
+        },
+        "samplePicks": [
+          {
+            "ok": false,
+            "pair": "13",
+            "context": "target.l30.cold1=1 && target.l60.cold2=0",
+            "precision": 0.9230769230769231,
+            "support": 13
+          },
+          {
+            "ok": false,
+            "pair": "67",
+            "context": "dom.mod3=1 && source.l30.cold1=2",
+            "precision": 0.9166666666666666,
+            "support": 12
+          },
+          {
+            "ok": true,
+            "pair": "12",
+            "context": "target.l30.cold2=5",
+            "precision": 1,
+            "support": 12
+          },
+          {
+            "ok": false,
+            "pair": "05",
+            "context": "target.prev.sutta=7 && same.prev.close.kind=SP",
+            "precision": 0.85,
+            "support": 20
+          },
+          {
+            "ok": false,
+            "pair": "13",
+            "context": "same.prev.close.sutta=7 && source.prev.close.kind=SP",
+            "precision": 0.875,
+            "support": 16
+          }
+        ]
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 188,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2523,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2542,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2559,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1396,
+        "validation": {
+          "n": 30,
+          "ok": 20,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 138,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1395,
+        "validation": {
+          "n": 30,
+          "ok": 20,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 652,
+        "validation": {
+          "n": 30,
+          "ok": 20,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1360,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1425,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-02-24..2026-04-07",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.78,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 42,
+        "validation": {
+          "n": 28,
+          "ok": 19,
+          "accuracy": 0.6785714285714286
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-04-08..2026-05-19",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2658,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-05-20..2026-07-03",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1332,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-02-24..2026-04-07",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 171,
+        "validation": {
+          "n": 30,
+          "ok": 13,
+          "accuracy": 0.43333333333333335
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-04-08..2026-05-19",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.78,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 23,
+        "validation": {
+          "n": 28,
+          "ok": 17,
+          "accuracy": 0.6071428571428571
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-05-20..2026-07-03",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 177,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 181,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 183,
+        "validation": {
+          "n": 30,
+          "ok": 20,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2708,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1264,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1289,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2596,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1307,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1270,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2495,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.78,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 31,
+        "validation": {
+          "n": 27,
+          "ok": 15,
+          "accuracy": 0.5555555555555556
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2589,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2641,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-02-27..2026-04-10",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2550,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-04-13..2026-05-22",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1353,
+        "validation": {
+          "n": 30,
+          "ok": 20,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-05-25..2026-07-03",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2705,
+        "validation": {
+          "n": 30,
+          "ok": 15,
+          "accuracy": 0.5
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-02-27..2026-04-10",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2625,
+        "validation": {
+          "n": 30,
+          "ok": 20,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-04-13..2026-05-22",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1303,
+        "validation": {
+          "n": 30,
+          "ok": 14,
+          "accuracy": 0.4666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-05-25..2026-07-03",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2533,
+        "validation": {
+          "n": 30,
+          "ok": 14,
+          "accuracy": 0.4666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-02-26..2026-04-09",
+      "bestValidation": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.78,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 25,
+        "validation": {
+          "n": 27,
+          "ok": 19,
+          "accuracy": 0.7037037037037037
+        }
+      },
+      "selected": {
+        "config": {
+          "contextMode": "single",
+          "minSupport": 12,
+          "trainMinPrecision": 0.78,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 25,
+        "validation": {
+          "n": 27,
+          "ok": 19,
+          "accuracy": 0.7037037037037037
+        },
+        "test": {
+          "n": 29,
+          "ok": 16,
+          "accuracy": 0.5517241379310345
+        },
+        "samplePicks": [
+          {
+            "ok": false,
+            "pair": "25",
+            "context": "same.prev.close.sutta=2",
+            "precision": 0.8571428571428571,
+            "support": 14
+          },
+          {
+            "ok": true,
+            "pair": "68",
+            "context": "source.l30.cold1=0",
+            "precision": 0.8260869565217391,
+            "support": 23
+          },
+          {
+            "ok": true,
+            "pair": "68",
+            "context": "source.l30.cold1=0",
+            "precision": 0.8260869565217391,
+            "support": 23
+          },
+          {
+            "ok": false,
+            "pair": "68",
+            "context": "source.l30.cold1=0",
+            "precision": 0.8260869565217391,
+            "support": 23
+          },
+          {
+            "ok": false,
+            "pair": "15",
+            "context": "target.l14.hot2=5",
+            "precision": 0.8333333333333334,
+            "support": 12
+          }
+        ]
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-04-10..2026-05-22",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2642,
+        "validation": {
+          "n": 30,
+          "ok": 17,
+          "accuracy": 0.5666666666666667
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-05-25..2026-07-03",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2676,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-02-26..2026-04-09",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1389,
+        "validation": {
+          "n": 30,
+          "ok": 16,
+          "accuracy": 0.5333333333333333
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-04-10..2026-05-22",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 8,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 2668,
+        "validation": {
+          "n": 30,
+          "ok": 18,
+          "accuracy": 0.6
+        }
+      },
+      "selected": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-05-25..2026-07-03",
+      "bestValidation": {
+        "config": {
+          "contextMode": "pair",
+          "minSupport": 12,
+          "trainMinPrecision": 0.62,
+          "validationMinAccuracy": 0.7
+        },
+        "candidates": 1395,
+        "validation": {
+          "n": 30,
+          "ok": 19,
+          "accuracy": 0.6333333333333333
+        }
+      },
+      "selected": null
+    }
+  ]
+}

@@ -1,0 +1,736 @@
+{
+  "generatedAt": "2026-07-10T07:15:21.869Z",
+  "expertModels": 133,
+  "candidateConfigs": 36,
+  "selectorGates": 6,
+  "forwardFolds": 72,
+  "viable80Count": 0,
+  "viable85Count": 0,
+  "bestMin30": {
+    "gate": {
+      "minValCalls": 20,
+      "minValAccuracy": 0.6
+    },
+    "summary": {
+      "correct": 87,
+      "digitCorrect": 256,
+      "total": 180,
+      "accuracy": 0.48333333333333334,
+      "avgCorrectDigits": 1.4222222222222223,
+      "folds": 6
+    },
+    "folds": [
+      {
+        "market": "Sridevi",
+        "side": "close",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "mode": "exact_pair_vote",
+          "eta": 0.7,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 54,
+          "digitCorrect": 142,
+          "total": 90,
+          "accuracy": 0.6,
+          "avgCorrectDigits": 1.5777777777777777
+        },
+        "test": {
+          "correct": 17,
+          "digitCorrect": 46,
+          "total": 30,
+          "accuracy": 0.5666666666666667,
+          "avgCorrectDigits": 1.5333333333333334
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-06-27",
+        "config": {
+          "mode": "digit_vote",
+          "eta": 0.7,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 56,
+          "digitCorrect": 146,
+          "total": 90,
+          "accuracy": 0.6222222222222222,
+          "avgCorrectDigits": 1.6222222222222222
+        },
+        "test": {
+          "correct": 14,
+          "digitCorrect": 41,
+          "total": 30,
+          "accuracy": 0.4666666666666667,
+          "avgCorrectDigits": 1.3666666666666667
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-04-20..2026-05-23",
+        "config": {
+          "mode": "digit_vote",
+          "eta": 0.7,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 57,
+          "digitCorrect": 144,
+          "total": 90,
+          "accuracy": 0.6333333333333333,
+          "avgCorrectDigits": 1.6
+        },
+        "test": {
+          "correct": 13,
+          "digitCorrect": 41,
+          "total": 30,
+          "accuracy": 0.43333333333333335,
+          "avgCorrectDigits": 1.3666666666666667
+        }
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "close",
+        "testWindow": "2026-03-23..2026-04-25",
+        "config": {
+          "mode": "exact_pair_vote",
+          "eta": 0.7,
+          "decay": 0.98,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 54,
+          "digitCorrect": 142,
+          "total": 90,
+          "accuracy": 0.6,
+          "avgCorrectDigits": 1.5777777777777777
+        },
+        "test": {
+          "correct": 17,
+          "digitCorrect": 46,
+          "total": 30,
+          "accuracy": 0.5666666666666667,
+          "avgCorrectDigits": 1.5333333333333334
+        }
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "testWindow": "2026-05-20..2026-07-03",
+        "config": {
+          "mode": "exact_pair_vote",
+          "eta": 0.1,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 56,
+          "digitCorrect": 143,
+          "total": 90,
+          "accuracy": 0.6222222222222222,
+          "avgCorrectDigits": 1.5888888888888888
+        },
+        "test": {
+          "correct": 10,
+          "digitCorrect": 37,
+          "total": 30,
+          "accuracy": 0.3333333333333333,
+          "avgCorrectDigits": 1.2333333333333334
+        }
+      },
+      {
+        "market": "Main Bazar",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-07-03",
+        "config": {
+          "mode": "exact_pair_vote",
+          "eta": 0.1,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 54,
+          "digitCorrect": 141,
+          "total": 90,
+          "accuracy": 0.6,
+          "avgCorrectDigits": 1.5666666666666667
+        },
+        "test": {
+          "correct": 16,
+          "digitCorrect": 45,
+          "total": 30,
+          "accuracy": 0.5333333333333333,
+          "avgCorrectDigits": 1.5
+        }
+      }
+    ]
+  },
+  "bestMin120": {
+    "gate": {
+      "minValCalls": 20,
+      "minValAccuracy": 0.6
+    },
+    "summary": {
+      "correct": 87,
+      "digitCorrect": 256,
+      "total": 180,
+      "accuracy": 0.48333333333333334,
+      "avgCorrectDigits": 1.4222222222222223,
+      "folds": 6
+    },
+    "folds": [
+      {
+        "market": "Sridevi",
+        "side": "close",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "mode": "exact_pair_vote",
+          "eta": 0.7,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 54,
+          "digitCorrect": 142,
+          "total": 90,
+          "accuracy": 0.6,
+          "avgCorrectDigits": 1.5777777777777777
+        },
+        "test": {
+          "correct": 17,
+          "digitCorrect": 46,
+          "total": 30,
+          "accuracy": 0.5666666666666667,
+          "avgCorrectDigits": 1.5333333333333334
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-06-27",
+        "config": {
+          "mode": "digit_vote",
+          "eta": 0.7,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 56,
+          "digitCorrect": 146,
+          "total": 90,
+          "accuracy": 0.6222222222222222,
+          "avgCorrectDigits": 1.6222222222222222
+        },
+        "test": {
+          "correct": 14,
+          "digitCorrect": 41,
+          "total": 30,
+          "accuracy": 0.4666666666666667,
+          "avgCorrectDigits": 1.3666666666666667
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-04-20..2026-05-23",
+        "config": {
+          "mode": "digit_vote",
+          "eta": 0.7,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 57,
+          "digitCorrect": 144,
+          "total": 90,
+          "accuracy": 0.6333333333333333,
+          "avgCorrectDigits": 1.6
+        },
+        "test": {
+          "correct": 13,
+          "digitCorrect": 41,
+          "total": 30,
+          "accuracy": 0.43333333333333335,
+          "avgCorrectDigits": 1.3666666666666667
+        }
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "close",
+        "testWindow": "2026-03-23..2026-04-25",
+        "config": {
+          "mode": "exact_pair_vote",
+          "eta": 0.7,
+          "decay": 0.98,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 54,
+          "digitCorrect": 142,
+          "total": 90,
+          "accuracy": 0.6,
+          "avgCorrectDigits": 1.5777777777777777
+        },
+        "test": {
+          "correct": 17,
+          "digitCorrect": 46,
+          "total": 30,
+          "accuracy": 0.5666666666666667,
+          "avgCorrectDigits": 1.5333333333333334
+        }
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "testWindow": "2026-05-20..2026-07-03",
+        "config": {
+          "mode": "exact_pair_vote",
+          "eta": 0.1,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 56,
+          "digitCorrect": 143,
+          "total": 90,
+          "accuracy": 0.6222222222222222,
+          "avgCorrectDigits": 1.5888888888888888
+        },
+        "test": {
+          "correct": 10,
+          "digitCorrect": 37,
+          "total": 30,
+          "accuracy": 0.3333333333333333,
+          "avgCorrectDigits": 1.2333333333333334
+        }
+      },
+      {
+        "market": "Main Bazar",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-07-03",
+        "config": {
+          "mode": "exact_pair_vote",
+          "eta": 0.1,
+          "decay": 1,
+          "minConfidence": 0
+        },
+        "validation": {
+          "correct": 54,
+          "digitCorrect": 141,
+          "total": 90,
+          "accuracy": 0.6,
+          "avgCorrectDigits": 1.5666666666666667
+        },
+        "test": {
+          "correct": 16,
+          "digitCorrect": 45,
+          "total": 30,
+          "accuracy": 0.5333333333333333,
+          "avgCorrectDigits": 1.5
+        }
+      }
+    ]
+  },
+  "bestMin720": null,
+  "results": [
+    {
+      "gate": {
+        "minValCalls": 20,
+        "minValAccuracy": 0.6
+      },
+      "summary": {
+        "correct": 87,
+        "digitCorrect": 256,
+        "total": 180,
+        "accuracy": 0.48333333333333334,
+        "avgCorrectDigits": 1.4222222222222223,
+        "folds": 6
+      },
+      "folds": [
+        {
+          "market": "Sridevi",
+          "side": "close",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "mode": "exact_pair_vote",
+            "eta": 0.7,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 54,
+            "digitCorrect": 142,
+            "total": 90,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.5777777777777777
+          },
+          "test": {
+            "correct": 17,
+            "digitCorrect": 46,
+            "total": 30,
+            "accuracy": 0.5666666666666667,
+            "avgCorrectDigits": 1.5333333333333334
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "mode": "digit_vote",
+            "eta": 0.7,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 56,
+            "digitCorrect": 146,
+            "total": 90,
+            "accuracy": 0.6222222222222222,
+            "avgCorrectDigits": 1.6222222222222222
+          },
+          "test": {
+            "correct": 14,
+            "digitCorrect": 41,
+            "total": 30,
+            "accuracy": 0.4666666666666667,
+            "avgCorrectDigits": 1.3666666666666667
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-04-20..2026-05-23",
+          "config": {
+            "mode": "digit_vote",
+            "eta": 0.7,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 57,
+            "digitCorrect": 144,
+            "total": 90,
+            "accuracy": 0.6333333333333333,
+            "avgCorrectDigits": 1.6
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 41,
+            "total": 30,
+            "accuracy": 0.43333333333333335,
+            "avgCorrectDigits": 1.3666666666666667
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-03-23..2026-04-25",
+          "config": {
+            "mode": "exact_pair_vote",
+            "eta": 0.7,
+            "decay": 0.98,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 54,
+            "digitCorrect": 142,
+            "total": 90,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.5777777777777777
+          },
+          "test": {
+            "correct": 17,
+            "digitCorrect": 46,
+            "total": 30,
+            "accuracy": 0.5666666666666667,
+            "avgCorrectDigits": 1.5333333333333334
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-05-20..2026-07-03",
+          "config": {
+            "mode": "exact_pair_vote",
+            "eta": 0.1,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 56,
+            "digitCorrect": 143,
+            "total": 90,
+            "accuracy": 0.6222222222222222,
+            "avgCorrectDigits": 1.5888888888888888
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 37,
+            "total": 30,
+            "accuracy": 0.3333333333333333,
+            "avgCorrectDigits": 1.2333333333333334
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "mode": "exact_pair_vote",
+            "eta": 0.1,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 54,
+            "digitCorrect": 141,
+            "total": 90,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.5666666666666667
+          },
+          "test": {
+            "correct": 16,
+            "digitCorrect": 45,
+            "total": 30,
+            "accuracy": 0.5333333333333333,
+            "avgCorrectDigits": 1.5
+          }
+        }
+      ]
+    },
+    {
+      "gate": {
+        "minValCalls": 20,
+        "minValAccuracy": 0.7
+      },
+      "summary": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0,
+        "folds": 0
+      },
+      "folds": []
+    },
+    {
+      "gate": {
+        "minValCalls": 20,
+        "minValAccuracy": 0.8
+      },
+      "summary": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0,
+        "folds": 0
+      },
+      "folds": []
+    },
+    {
+      "gate": {
+        "minValCalls": 50,
+        "minValAccuracy": 0.6
+      },
+      "summary": {
+        "correct": 87,
+        "digitCorrect": 256,
+        "total": 180,
+        "accuracy": 0.48333333333333334,
+        "avgCorrectDigits": 1.4222222222222223,
+        "folds": 6
+      },
+      "folds": [
+        {
+          "market": "Sridevi",
+          "side": "close",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "mode": "exact_pair_vote",
+            "eta": 0.7,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 54,
+            "digitCorrect": 142,
+            "total": 90,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.5777777777777777
+          },
+          "test": {
+            "correct": 17,
+            "digitCorrect": 46,
+            "total": 30,
+            "accuracy": 0.5666666666666667,
+            "avgCorrectDigits": 1.5333333333333334
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "mode": "digit_vote",
+            "eta": 0.7,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 56,
+            "digitCorrect": 146,
+            "total": 90,
+            "accuracy": 0.6222222222222222,
+            "avgCorrectDigits": 1.6222222222222222
+          },
+          "test": {
+            "correct": 14,
+            "digitCorrect": 41,
+            "total": 30,
+            "accuracy": 0.4666666666666667,
+            "avgCorrectDigits": 1.3666666666666667
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-04-20..2026-05-23",
+          "config": {
+            "mode": "digit_vote",
+            "eta": 0.7,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 57,
+            "digitCorrect": 144,
+            "total": 90,
+            "accuracy": 0.6333333333333333,
+            "avgCorrectDigits": 1.6
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 41,
+            "total": 30,
+            "accuracy": 0.43333333333333335,
+            "avgCorrectDigits": 1.3666666666666667
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-03-23..2026-04-25",
+          "config": {
+            "mode": "exact_pair_vote",
+            "eta": 0.7,
+            "decay": 0.98,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 54,
+            "digitCorrect": 142,
+            "total": 90,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.5777777777777777
+          },
+          "test": {
+            "correct": 17,
+            "digitCorrect": 46,
+            "total": 30,
+            "accuracy": 0.5666666666666667,
+            "avgCorrectDigits": 1.5333333333333334
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-05-20..2026-07-03",
+          "config": {
+            "mode": "exact_pair_vote",
+            "eta": 0.1,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 56,
+            "digitCorrect": 143,
+            "total": 90,
+            "accuracy": 0.6222222222222222,
+            "avgCorrectDigits": 1.5888888888888888
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 37,
+            "total": 30,
+            "accuracy": 0.3333333333333333,
+            "avgCorrectDigits": 1.2333333333333334
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "mode": "exact_pair_vote",
+            "eta": 0.1,
+            "decay": 1,
+            "minConfidence": 0
+          },
+          "validation": {
+            "correct": 54,
+            "digitCorrect": 141,
+            "total": 90,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.5666666666666667
+          },
+          "test": {
+            "correct": 16,
+            "digitCorrect": 45,
+            "total": 30,
+            "accuracy": 0.5333333333333333,
+            "avgCorrectDigits": 1.5
+          }
+        }
+      ]
+    },
+    {
+      "gate": {
+        "minValCalls": 50,
+        "minValAccuracy": 0.7
+      },
+      "summary": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0,
+        "folds": 0
+      },
+      "folds": []
+    },
+    {
+      "gate": {
+        "minValCalls": 50,
+        "minValAccuracy": 0.8
+      },
+      "summary": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0,
+        "folds": 0
+      },
+      "folds": []
+    }
+  ]
+}

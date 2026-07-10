@@ -1,0 +1,4497 @@
+{
+  "generatedAt": "2026-07-09T17:32:21.305Z",
+  "baseConfigs": 16,
+  "gateConfigs": 27,
+  "aggregate": {
+    "correct": 106,
+    "digitCorrect": 288,
+    "total": 191,
+    "accuracy": 0.5549738219895288,
+    "avgCorrectDigits": 1.5078534031413613,
+    "folds": 14
+  },
+  "foldsAt70": 3,
+  "foldsAt80": 0,
+  "folds": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "testWindow": "2026-06-06..2026-07-05",
+      "config": {
+        "shortLookback": 5,
+        "mediumLookback": 30,
+        "longLookback": 180,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": 1.5,
+        "mediumWeight": 1,
+        "longWeight": 0.5,
+        "contextWeight": 0,
+        "presentGapWeight": 0.2,
+        "absentGapWeight": 0.1
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 15,
+        "digitCorrect": 38,
+        "total": 23,
+        "accuracy": 0.6521739130434783,
+        "avgCorrectDigits": 1.6521739130434783,
+        "predictions": [
+          {
+            "date": "2026-03-13",
+            "pair": "29",
+            "risk": 0.8816666666666666,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-21",
+            "pair": "29",
+            "risk": 0.9827777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-22",
+            "pair": "29",
+            "risk": 0.9444444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-23",
+            "pair": "26",
+            "risk": 0.9205555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "26",
+            "risk": 0.9155555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "26",
+            "risk": 0.9133333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "26",
+            "risk": 0.8777777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-27",
+            "pair": "26",
+            "risk": 0.87,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "26",
+            "risk": 0.8316666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-29",
+            "pair": "69",
+            "risk": 0.8183333333333334,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "49",
+            "risk": 0.9605555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "49",
+            "risk": 0.9555555555555555,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "06",
+            "risk": 0.9627777777777777,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "06",
+            "risk": 0.9244444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-08",
+            "pair": "06",
+            "risk": 0.8888888888888888,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-09",
+            "pair": "06",
+            "risk": 0.8866666666666666,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "46",
+            "risk": 0.9272222222222223,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "36",
+            "risk": 0.8911111111111112,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-29",
+            "pair": "06",
+            "risk": 0.8961111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "06",
+            "risk": 0.893888888888889,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-26",
+            "pair": "23",
+            "risk": 0.9805555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "23",
+            "risk": 0.9755555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-28",
+            "pair": "23",
+            "risk": 0.9705555555555555,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      },
+      "test": {
+        "correct": 4,
+        "digitCorrect": 10,
+        "total": 7,
+        "accuracy": 0.5714285714285714,
+        "avgCorrectDigits": 1.4285714285714286,
+        "predictions": [
+          {
+            "date": "2026-06-08",
+            "pair": "15",
+            "risk": 0.9538888888888888,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-09",
+            "pair": "15",
+            "risk": 0.9516666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "15",
+            "risk": 0.9466666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-11",
+            "pair": "15",
+            "risk": 0.9416666666666665,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-12",
+            "pair": "15",
+            "risk": 0.9394444444444444,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "15",
+            "risk": 0.9711111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-28",
+            "pair": "15",
+            "risk": 0.9305555555555556,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      }
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "testWindow": "2026-06-06..2026-07-05",
+      "config": {
+        "shortLookback": 5,
+        "mediumLookback": 30,
+        "longLookback": 90,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": 1.5,
+        "mediumWeight": 1,
+        "longWeight": 0.5,
+        "contextWeight": 1,
+        "presentGapWeight": 0.2,
+        "absentGapWeight": 0.1
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 15,
+        "digitCorrect": 38,
+        "total": 23,
+        "accuracy": 0.6521739130434783,
+        "avgCorrectDigits": 1.6521739130434783,
+        "predictions": [
+          {
+            "date": "2026-03-23",
+            "pair": "13",
+            "risk": 1.5058169934640522,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "13",
+            "risk": 1.5529914529914528,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "13",
+            "risk": 1.5209803921568628,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "27",
+            "risk": 1.548888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "27",
+            "risk": 1.568627450980392,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "03",
+            "risk": 1.5701960784313727,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "03",
+            "risk": 1.505982905982906,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "02",
+            "risk": 1.551025641025641,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-28",
+            "pair": "18",
+            "risk": 1.5711111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "18",
+            "risk": 1.5494117647058823,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-02",
+            "pair": "18",
+            "risk": 1.5036752136752136,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-04",
+            "pair": "01",
+            "risk": 1.4177777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-07",
+            "pair": "04",
+            "risk": 1.537777777777778,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-10",
+            "pair": "03",
+            "risk": 1.5122222222222224,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-11",
+            "pair": "03",
+            "risk": 1.4554248366013072,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "03",
+            "risk": 1.5214529914529913,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "02",
+            "risk": 1.3417094017094016,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "02",
+            "risk": 1.463921568627451,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "02",
+            "risk": 1.5295726495726496,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "34",
+            "risk": 1.5146405228758169,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "25",
+            "risk": 1.48017094017094,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "25",
+            "risk": 1.5305882352941176,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "07",
+            "risk": 1.5156862745098039,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      },
+      "test": {
+        "correct": 4,
+        "digitCorrect": 13,
+        "total": 10,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.3,
+        "predictions": [
+          {
+            "date": "2026-06-08",
+            "pair": "27",
+            "risk": 1.5264705882352942,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "04",
+            "risk": 1.5331372549019608,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "04",
+            "risk": 1.5454700854700856,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "02",
+            "risk": 1.4446153846153846,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "12",
+            "risk": 1.4633333333333334,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "12",
+            "risk": 1.443267973856209,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-23",
+            "pair": "12",
+            "risk": 1.554017094017094,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "14",
+            "risk": 1.4061437908496732,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "14",
+            "risk": 1.5487179487179488,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "48",
+            "risk": 1.5096732026143789,
+            "hit": false,
+            "absentDigits": 0
+          }
+        ]
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "testWindow": "2026-06-01..2026-07-04",
+      "config": {
+        "shortLookback": 10,
+        "mediumLookback": 30,
+        "longLookback": 180,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 1,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 15,
+        "digitCorrect": 37,
+        "total": 23,
+        "accuracy": 0.6521739130434783,
+        "avgCorrectDigits": 1.608695652173913,
+        "predictions": [
+          {
+            "date": "2026-02-16",
+            "pair": "78",
+            "risk": 1.0233333333333334,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-20",
+            "pair": "78",
+            "risk": 1.0565065913370997,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-03",
+            "pair": "89",
+            "risk": 1.0495537340619308,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "78",
+            "risk": 1.0612241054613933,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-09",
+            "pair": "78",
+            "risk": 1.08,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-13",
+            "pair": "78",
+            "risk": 1.0712241054613933,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-18",
+            "pair": "28",
+            "risk": 1.0801224105461391,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-23",
+            "pair": "28",
+            "risk": 1.0827777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "47",
+            "risk": 1.0240018832391713,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "57",
+            "risk": 1.0144444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "57",
+            "risk": 1.0968123861566486,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "57",
+            "risk": 0.9367702448210924,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "47",
+            "risk": 0.9722222222222222,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-20",
+            "pair": "57",
+            "risk": 0.9483333333333333,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-22",
+            "pair": "47",
+            "risk": 1.0134745762711865,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-04-23",
+            "pair": "47",
+            "risk": 1.0462659380692167,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "47",
+            "risk": 0.8776082862523539,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-25",
+            "pair": "47",
+            "risk": 0.9888888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-27",
+            "pair": "57",
+            "risk": 1.0061111111111112,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "37",
+            "risk": 0.9778813559322033,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-04",
+            "pair": "57",
+            "risk": 1.0655555555555554,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-08",
+            "pair": "47",
+            "risk": 1.0795574387947267,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-25",
+            "pair": "78",
+            "risk": 1.0583333333333331,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 7,
+        "digitCorrect": 16,
+        "total": 9,
+        "accuracy": 0.7777777777777778,
+        "avgCorrectDigits": 1.7777777777777777,
+        "predictions": [
+          {
+            "date": "2026-06-01",
+            "pair": "78",
+            "risk": 1.016111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "78",
+            "risk": 0.9972222222222222,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-12",
+            "pair": "37",
+            "risk": 1.0661111111111112,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "78",
+            "risk": 1.066111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "37",
+            "risk": 1.035,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "78",
+            "risk": 1.0805555555555557,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "37",
+            "risk": 1.01,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "78",
+            "risk": 0.9816666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "57",
+            "risk": 1.0227777777777778,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "testWindow": "2026-06-01..2026-07-04",
+      "config": {
+        "shortLookback": 10,
+        "mediumLookback": 30,
+        "longLookback": 90,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 0,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 15,
+        "digitCorrect": 37,
+        "total": 23,
+        "accuracy": 0.6521739130434783,
+        "avgCorrectDigits": 1.608695652173913,
+        "predictions": [
+          {
+            "date": "2026-02-14",
+            "pair": "37",
+            "risk": 0.5388888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-16",
+            "pair": "78",
+            "risk": 0.54,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-17",
+            "pair": "78",
+            "risk": 0.5244444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-18",
+            "pair": "78",
+            "risk": 0.5255555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-19",
+            "pair": "37",
+            "risk": 0.5905555555555555,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-02-21",
+            "pair": "78",
+            "risk": 0.6088888888888888,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-09",
+            "pair": "67",
+            "risk": 0.5883333333333333,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-27",
+            "pair": "38",
+            "risk": 0.6066666666666666,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "38",
+            "risk": 0.5733333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "38",
+            "risk": 0.5733333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "38",
+            "risk": 0.5577777777777777,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "38",
+            "risk": 0.5588888888888888,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "38",
+            "risk": 0.6088888888888888,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "37",
+            "risk": 0.5883333333333334,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "48",
+            "risk": 0.5955555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-05",
+            "pair": "69",
+            "risk": 0.6088888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-08",
+            "pair": "59",
+            "risk": 0.5722222222222222,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-05-09",
+            "pair": "59",
+            "risk": 0.54,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-11",
+            "pair": "59",
+            "risk": 0.5544444444444443,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "59",
+            "risk": 0.5388888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "59",
+            "risk": 0.5899999999999999,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "35",
+            "risk": 0.6066666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "36",
+            "risk": 0.5899999999999999,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      },
+      "test": {
+        "correct": 10,
+        "digitCorrect": 26,
+        "total": 17,
+        "accuracy": 0.5882352941176471,
+        "avgCorrectDigits": 1.5294117647058822,
+        "predictions": [
+          {
+            "date": "2026-06-01",
+            "pair": "36",
+            "risk": 0.5411111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-02",
+            "pair": "36",
+            "risk": 0.5411111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "36",
+            "risk": 0.5755555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "36",
+            "risk": 0.5599999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "36",
+            "risk": 0.5944444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-06",
+            "pair": "36",
+            "risk": 0.578888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "36",
+            "risk": 0.6072222222222221,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "36",
+            "risk": 0.605,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "36",
+            "risk": 0.605,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-20",
+            "pair": "37",
+            "risk": 0.5883333333333334,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "37",
+            "risk": 0.5894444444444444,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "37",
+            "risk": 0.6055555555555554,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "03",
+            "risk": 0.5911111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "03",
+            "risk": 0.59,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "03",
+            "risk": 0.5899999999999999,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "23",
+            "risk": 0.606111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-04",
+            "pair": "23",
+            "risk": 0.605,
+            "hit": false,
+            "absentDigits": 0
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "testWindow": "2026-06-06..2026-07-05",
+      "config": {
+        "shortLookback": 5,
+        "mediumLookback": 30,
+        "longLookback": 90,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 0,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 17,
+        "digitCorrect": 41,
+        "total": 24,
+        "accuracy": 0.7083333333333334,
+        "avgCorrectDigits": 1.7083333333333333,
+        "predictions": [
+          {
+            "date": "2026-04-11",
+            "pair": "27",
+            "risk": 0.49,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-12",
+            "pair": "27",
+            "risk": 0.4049999999999998,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "27",
+            "risk": 0.38833333333333325,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "27",
+            "risk": 0.4394444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "17",
+            "risk": 0.4572222222222222,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "17",
+            "risk": 0.45611111111111113,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "12",
+            "risk": 0.45555555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-19",
+            "pair": "27",
+            "risk": 0.4388888888888889,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-20",
+            "pair": "27",
+            "risk": 0.3716666666666667,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "27",
+            "risk": 0.30499999999999994,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-22",
+            "pair": "27",
+            "risk": 0.40499999999999997,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-23",
+            "pair": "27",
+            "risk": 0.38944444444444437,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-27",
+            "pair": "27",
+            "risk": 0.45611111111111113,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-28",
+            "pair": "27",
+            "risk": 0.405,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-29",
+            "pair": "27",
+            "risk": 0.38833333333333336,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "27",
+            "risk": 0.33944444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-02",
+            "pair": "12",
+            "risk": 0.47277777777777774,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "27",
+            "risk": 0.43999999999999995,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "27",
+            "risk": 0.49,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-01",
+            "pair": "27",
+            "risk": 0.4588888888888889,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-02",
+            "pair": "27",
+            "risk": 0.3588888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "25",
+            "risk": 0.37277777777777776,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "27",
+            "risk": 0.27222222222222225,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "27",
+            "risk": 0.2711111111111111,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 15,
+        "digitCorrect": 36,
+        "total": 21,
+        "accuracy": 0.7142857142857143,
+        "avgCorrectDigits": 1.7142857142857142,
+        "predictions": [
+          {
+            "date": "2026-06-06",
+            "pair": "27",
+            "risk": 0.27222222222222225,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-07",
+            "pair": "27",
+            "risk": 0.32333333333333336,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "27",
+            "risk": 0.25666666666666665,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-09",
+            "pair": "27",
+            "risk": 0.44,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "27",
+            "risk": 0.42444444444444446,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-11",
+            "pair": "27",
+            "risk": 0.35611111111111104,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-12",
+            "pair": "27",
+            "risk": 0.30499999999999994,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-13",
+            "pair": "27",
+            "risk": 0.3883333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-14",
+            "pair": "27",
+            "risk": 0.37277777777777776,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "27",
+            "risk": 0.3738888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "27",
+            "risk": 0.4583333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-21",
+            "pair": "28",
+            "risk": 0.4716666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-23",
+            "pair": "27",
+            "risk": 0.4438888888888889,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "27",
+            "risk": 0.3455555555555556,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "27",
+            "risk": 0.3883333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "27",
+            "risk": 0.37166666666666665,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "27",
+            "risk": 0.37277777777777776,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-28",
+            "pair": "27",
+            "risk": 0.39,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "79",
+            "risk": 0.4211111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "79",
+            "risk": 0.4727777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-04",
+            "pair": "24",
+            "risk": 0.48944444444444435,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "testWindow": "2026-06-01..2026-07-04",
+      "config": {
+        "shortLookback": 5,
+        "mediumLookback": 30,
+        "longLookback": 180,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 1,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.5
+      },
+      "val": {
+        "correct": 30,
+        "digitCorrect": 74,
+        "total": 45,
+        "accuracy": 0.6666666666666666,
+        "avgCorrectDigits": 1.6444444444444444,
+        "predictions": [
+          {
+            "date": "2026-02-14",
+            "pair": "28",
+            "risk": 0.8961111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-17",
+            "pair": "28",
+            "risk": 0.9326229508196721,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-24",
+            "pair": "89",
+            "risk": 1.0331693989071038,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-27",
+            "pair": "28",
+            "risk": 0.9623352165725046,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-02-28",
+            "pair": "28",
+            "risk": 0.8472222222222222,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-02",
+            "pair": "29",
+            "risk": 1.0144444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-03",
+            "pair": "28",
+            "risk": 0.9159471766848816,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-05",
+            "pair": "89",
+            "risk": 0.9573315118397084,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "28",
+            "risk": 0.8703954802259887,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-07",
+            "pair": "28",
+            "risk": 0.8316666666666668,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-09",
+            "pair": "29",
+            "risk": 0.8666666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "29",
+            "risk": 0.7906739526411658,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-11",
+            "pair": "89",
+            "risk": 0.8144444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-12",
+            "pair": "19",
+            "risk": 0.9089981785063752,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-13",
+            "pair": "29",
+            "risk": 1.014030131826742,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-14",
+            "pair": "12",
+            "risk": 0.98,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "29",
+            "risk": 1.0388888888888888,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "23",
+            "risk": 1.022367941712204,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-20",
+            "pair": "25",
+            "risk": 0.9473258003766477,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-21",
+            "pair": "25",
+            "risk": 0.8883333333333332,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "28",
+            "risk": 0.9820582877959928,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-09",
+            "pair": "27",
+            "risk": 0.9231967213114753,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "27",
+            "risk": 0.9376177024482109,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "27",
+            "risk": 0.8816666666666668,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "57",
+            "risk": 0.9655555555555555,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "79",
+            "risk": 0.9653916211293262,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "24",
+            "risk": 0.9834463276836158,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "24",
+            "risk": 1.0099999999999998,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "29",
+            "risk": 1.0212386156648452,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-23",
+            "pair": "49",
+            "risk": 1.013743169398907,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-25",
+            "pair": "28",
+            "risk": 0.9716666666666667,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-27",
+            "pair": "26",
+            "risk": 1.04,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-28",
+            "pair": "27",
+            "risk": 0.8812295081967214,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-29",
+            "pair": "24",
+            "risk": 0.9233333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "26",
+            "risk": 0.913752276867031,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "24",
+            "risk": 0.8545668549905838,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-02",
+            "pair": "24",
+            "risk": 0.9138888888888888,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-04",
+            "pair": "28",
+            "risk": 1.0388888888888888,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-05",
+            "pair": "28",
+            "risk": 1.0317850637522767,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-08",
+            "pair": "26",
+            "risk": 1.0384557438794726,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "28",
+            "risk": 0.9826138433515481,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "24",
+            "risk": 1.0040018832391713,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "25",
+            "risk": 1.0144444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "26",
+            "risk": 1.0116666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "27",
+            "risk": 1.0127777777777776,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 9,
+        "digitCorrect": 24,
+        "total": 15,
+        "accuracy": 0.6,
+        "avgCorrectDigits": 1.6,
+        "predictions": [
+          {
+            "date": "2026-06-03",
+            "pair": "25",
+            "risk": 0.9977777777777777,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "25",
+            "risk": 1.0131967213114754,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "23",
+            "risk": 0.8805555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-06",
+            "pair": "25",
+            "risk": 0.7883333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "23",
+            "risk": 0.9805555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-12",
+            "pair": "28",
+            "risk": 0.9572222222222222,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-13",
+            "pair": "28",
+            "risk": 0.8977777777777776,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "28",
+            "risk": 0.9662386156648453,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "28",
+            "risk": 1.0272222222222223,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "28",
+            "risk": 0.8138888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "28",
+            "risk": 0.921111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "48",
+            "risk": 1.039872495446266,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "48",
+            "risk": 0.8133333333333332,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "48",
+            "risk": 0.9561111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-04",
+            "pair": "68",
+            "risk": 1.0055555555555555,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "testWindow": "2026-06-01..2026-07-04",
+      "config": {
+        "shortLookback": 10,
+        "mediumLookback": 30,
+        "longLookback": 180,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": 1.5,
+        "mediumWeight": 1,
+        "longWeight": 0.5,
+        "contextWeight": 1,
+        "presentGapWeight": 0.2,
+        "absentGapWeight": 0.1
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 15,
+        "digitCorrect": 36,
+        "total": 23,
+        "accuracy": 0.6521739130434783,
+        "avgCorrectDigits": 1.565217391304348,
+        "predictions": [
+          {
+            "date": "2026-02-16",
+            "pair": "03",
+            "risk": 1.5966666666666667,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "02",
+            "risk": 1.6605555555555556,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "04",
+            "risk": 1.6677777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "04",
+            "risk": 1.3488888888888888,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "04",
+            "risk": 1.5704371584699452,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "04",
+            "risk": 1.4444444444444442,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "04",
+            "risk": 1.5468214936247722,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "04",
+            "risk": 1.4623634651600752,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "04",
+            "risk": 1.5127777777777776,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "04",
+            "risk": 1.2272222222222222,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "04",
+            "risk": 1.4295992714025498,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-08",
+            "pair": "04",
+            "risk": 1.3033333333333332,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-09",
+            "pair": "04",
+            "risk": 1.6182058287795993,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "34",
+            "risk": 1.5170621468926553,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "34",
+            "risk": 1.6355555555555557,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "04",
+            "risk": 1.4361111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "34",
+            "risk": 1.474007285974499,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "35",
+            "risk": 1.7193078324225863,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-05",
+            "pair": "35",
+            "risk": 1.667622950819672,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "24",
+            "risk": 1.673888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "24",
+            "risk": 1.59515065913371,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "12",
+            "risk": 1.6727777777777777,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-28",
+            "pair": "24",
+            "risk": 1.6651639344262295,
+            "hit": false,
+            "absentDigits": 0
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "digitCorrect": 2,
+        "total": 2,
+        "accuracy": 0,
+        "avgCorrectDigits": 1,
+        "predictions": [
+          {
+            "date": "2026-06-16",
+            "pair": "13",
+            "risk": 1.5295446265938069,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-04",
+            "pair": "07",
+            "risk": 1.7,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      }
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "testWindow": "2026-06-06..2026-07-05",
+      "config": {
+        "shortLookback": 10,
+        "mediumLookback": 30,
+        "longLookback": 90,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 0,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.5
+      },
+      "val": {
+        "correct": 31,
+        "digitCorrect": 75,
+        "total": 45,
+        "accuracy": 0.6888888888888889,
+        "avgCorrectDigits": 1.6666666666666667,
+        "predictions": [
+          {
+            "date": "2026-03-22",
+            "pair": "59",
+            "risk": 0.5549999999999999,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "59",
+            "risk": 0.5416666666666666,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "59",
+            "risk": 0.5266666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "59",
+            "risk": 0.5066666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-27",
+            "pair": "59",
+            "risk": 0.4411111111111112,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "59",
+            "risk": 0.44222222222222224,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-29",
+            "pair": "59",
+            "risk": 0.44333333333333336,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "59",
+            "risk": 0.4444444444444445,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "59",
+            "risk": 0.45999999999999996,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "59",
+            "risk": 0.47166666666666657,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "59",
+            "risk": 0.5049999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "59",
+            "risk": 0.556111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-08",
+            "pair": "59",
+            "risk": 0.5422222222222222,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-09",
+            "pair": "59",
+            "risk": 0.5255555555555556,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "59",
+            "risk": 0.5549999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "59",
+            "risk": 0.5383333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-25",
+            "pair": "59",
+            "risk": 0.5394444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-26",
+            "pair": "59",
+            "risk": 0.5405555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "59",
+            "risk": 0.5549999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "59",
+            "risk": 0.5049999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-02",
+            "pair": "59",
+            "risk": 0.556111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-05",
+            "pair": "39",
+            "risk": 0.5377777777777777,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-06",
+            "pair": "59",
+            "risk": 0.5216666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-07",
+            "pair": "59",
+            "risk": 0.5227777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-08",
+            "pair": "59",
+            "risk": 0.4905555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-09",
+            "pair": "39",
+            "risk": 0.54,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-05-10",
+            "pair": "39",
+            "risk": 0.5555555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-11",
+            "pair": "59",
+            "risk": 0.5383333333333333,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "59",
+            "risk": 0.5066666666666668,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "59",
+            "risk": 0.4555555555555556,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "59",
+            "risk": 0.5066666666666666,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "89",
+            "risk": 0.538888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "59",
+            "risk": 0.5383333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-17",
+            "pair": "59",
+            "risk": 0.5061111111111112,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "59",
+            "risk": 0.4738888888888889,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "59",
+            "risk": 0.4738888888888889,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "59",
+            "risk": 0.5049999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "89",
+            "risk": 0.5233333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "89",
+            "risk": 0.5244444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "59",
+            "risk": 0.5077777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-24",
+            "pair": "19",
+            "risk": 0.54,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-02",
+            "pair": "09",
+            "risk": 0.5549999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "09",
+            "risk": 0.5227777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "09",
+            "risk": 0.4905555555555555,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "89",
+            "risk": 0.5216666666666666,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      },
+      "test": {
+        "correct": 10,
+        "digitCorrect": 24,
+        "total": 15,
+        "accuracy": 0.6666666666666666,
+        "avgCorrectDigits": 1.6,
+        "predictions": [
+          {
+            "date": "2026-06-06",
+            "pair": "09",
+            "risk": 0.49,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-07",
+            "pair": "89",
+            "risk": 0.5066666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "89",
+            "risk": 0.5055555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-09",
+            "pair": "89",
+            "risk": 0.5066666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "89",
+            "risk": 0.5411111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "39",
+            "risk": 0.5466666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-23",
+            "pair": "39",
+            "risk": 0.5311111111111112,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "39",
+            "risk": 0.5222222222222221,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "49",
+            "risk": 0.5394444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "49",
+            "risk": 0.4883333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "49",
+            "risk": 0.4894444444444444,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-02",
+            "pair": "79",
+            "risk": 0.5222222222222223,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "79",
+            "risk": 0.5044444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-04",
+            "pair": "49",
+            "risk": 0.5244444444444444,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-05",
+            "pair": "79",
+            "risk": 0.47333333333333333,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      }
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "testWindow": "2026-06-06..2026-07-05",
+      "config": {
+        "shortLookback": 10,
+        "mediumLookback": 30,
+        "longLookback": 90,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 0,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 17,
+        "digitCorrect": 40,
+        "total": 23,
+        "accuracy": 0.7391304347826086,
+        "avgCorrectDigits": 1.7391304347826086,
+        "predictions": [
+          {
+            "date": "2026-03-26",
+            "pair": "02",
+            "risk": 0.6055555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-27",
+            "pair": "02",
+            "risk": 0.5722222222222222,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "02",
+            "risk": 0.5555555555555556,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-29",
+            "pair": "05",
+            "risk": 0.5216666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "05",
+            "risk": 0.5049999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "05",
+            "risk": 0.5061111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "05",
+            "risk": 0.4905555555555555,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "05",
+            "risk": 0.5233333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "05",
+            "risk": 0.5233333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "05",
+            "risk": 0.5744444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-05",
+            "pair": "05",
+            "risk": 0.5755555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "05",
+            "risk": 0.5599999999999999,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "05",
+            "risk": 0.581111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "05",
+            "risk": 0.5716666666666665,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "05",
+            "risk": 0.5894444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "05",
+            "risk": 0.5905555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "05",
+            "risk": 0.5394444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "05",
+            "risk": 0.5572222222222223,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "05",
+            "risk": 0.5561111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "05",
+            "risk": 0.5561111111111112,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "06",
+            "risk": 0.5755555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "06",
+            "risk": 0.5894444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-02",
+            "pair": "05",
+            "risk": 0.605,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 8,
+        "digitCorrect": 24,
+        "total": 17,
+        "accuracy": 0.47058823529411764,
+        "avgCorrectDigits": 1.411764705882353,
+        "predictions": [
+          {
+            "date": "2026-06-11",
+            "pair": "09",
+            "risk": 0.5883333333333334,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "19",
+            "risk": 0.5894444444444444,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "19",
+            "risk": 0.5555555555555556,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "19",
+            "risk": 0.5883333333333334,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "19",
+            "risk": 0.5566666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-20",
+            "pair": "16",
+            "risk": 0.5605555555555555,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-06-21",
+            "pair": "16",
+            "risk": 0.5222222222222223,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "16",
+            "risk": 0.45444444444444443,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-23",
+            "pair": "16",
+            "risk": 0.4555555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "16",
+            "risk": 0.47333333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "16",
+            "risk": 0.49111111111111116,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "16",
+            "risk": 0.4922222222222222,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "16",
+            "risk": 0.4933333333333334,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-28",
+            "pair": "16",
+            "risk": 0.525,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "16",
+            "risk": 0.5716666666666665,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "16",
+            "risk": 0.5716666666666665,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-05",
+            "pair": "06",
+            "risk": 0.5377777777777777,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      }
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "testWindow": "2026-05-20..2026-07-03",
+      "config": {
+        "shortLookback": 10,
+        "mediumLookback": 30,
+        "longLookback": 90,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 0,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 16,
+        "digitCorrect": 39,
+        "total": 23,
+        "accuracy": 0.6956521739130435,
+        "avgCorrectDigits": 1.6956521739130435,
+        "predictions": [
+          {
+            "date": "2026-01-23",
+            "pair": "05",
+            "risk": 0.5583333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-03",
+            "pair": "03",
+            "risk": 0.5583333333333333,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "03",
+            "risk": 0.5449999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-09",
+            "pair": "03",
+            "risk": 0.525,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "03",
+            "risk": 0.5261111111111112,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-12",
+            "pair": "03",
+            "risk": 0.5566666666666668,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-13",
+            "pair": "03",
+            "risk": 0.5549999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "03",
+            "risk": 0.5049999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "03",
+            "risk": 0.556111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "08",
+            "risk": 0.5394444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "02",
+            "risk": 0.5261111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "02",
+            "risk": 0.5216666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "02",
+            "risk": 0.5216666666666667,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "02",
+            "risk": 0.47277777777777774,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "02",
+            "risk": 0.455,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-08",
+            "pair": "02",
+            "risk": 0.4733333333333334,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-09",
+            "pair": "02",
+            "risk": 0.5222222222222221,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "02",
+            "risk": 0.54,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "05",
+            "risk": 0.5555555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-27",
+            "pair": "01",
+            "risk": 0.5394444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-28",
+            "pair": "01",
+            "risk": 0.5394444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-29",
+            "pair": "15",
+            "risk": 0.5555555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "15",
+            "risk": 0.5222222222222221,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 6,
+        "digitCorrect": 21,
+        "total": 17,
+        "accuracy": 0.35294117647058826,
+        "avgCorrectDigits": 1.2352941176470589,
+        "predictions": [
+          {
+            "date": "2026-05-26",
+            "pair": "08",
+            "risk": 0.5222222222222223,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "08",
+            "risk": 0.49111111111111105,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-28",
+            "pair": "08",
+            "risk": 0.42388888888888887,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "08",
+            "risk": 0.42166666666666663,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-01",
+            "pair": "08",
+            "risk": 0.3894444444444444,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-02",
+            "pair": "08",
+            "risk": 0.4733333333333334,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "08",
+            "risk": 0.4416666666666667,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "08",
+            "risk": 0.5433333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "18",
+            "risk": 0.5583333333333333,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "18",
+            "risk": 0.5266666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "18",
+            "risk": 0.556111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "18",
+            "risk": 0.5577777777777778,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "18",
+            "risk": 0.5577777777777777,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "18",
+            "risk": 0.5561111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "68",
+            "risk": 0.556111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-02",
+            "pair": "68",
+            "risk": 0.556111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "68",
+            "risk": 0.5555555555555556,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "testWindow": "2026-06-01..2026-07-04",
+      "config": {
+        "shortLookback": 10,
+        "mediumLookback": 30,
+        "longLookback": 180,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 0,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 15,
+        "digitCorrect": 38,
+        "total": 23,
+        "accuracy": 0.6521739130434783,
+        "avgCorrectDigits": 1.6521739130434783,
+        "predictions": [
+          {
+            "date": "2026-02-23",
+            "pair": "18",
+            "risk": 0.6466666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "89",
+            "risk": 0.6133333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "89",
+            "risk": 0.5655555555555556,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-11",
+            "pair": "49",
+            "risk": 0.5822222222222223,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-12",
+            "pair": "89",
+            "risk": 0.583888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-13",
+            "pair": "89",
+            "risk": 0.6294444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-14",
+            "pair": "89",
+            "risk": 0.6222222222222223,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-27",
+            "pair": "67",
+            "risk": 0.6466666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-28",
+            "pair": "17",
+            "risk": 0.6466666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "17",
+            "risk": 0.6405555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "17",
+            "risk": 0.6333333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-02",
+            "pair": "18",
+            "risk": 0.6233333333333333,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-04",
+            "pair": "18",
+            "risk": 0.5744444444444445,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-05",
+            "pair": "18",
+            "risk": 0.616111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-06",
+            "pair": "18",
+            "risk": 0.6088888888888888,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "17",
+            "risk": 0.6383333333333334,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "17",
+            "risk": 0.6383333333333334,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "17",
+            "risk": 0.6305555555555555,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "17",
+            "risk": 0.6155555555555556,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "17",
+            "risk": 0.6466666666666667,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "15",
+            "risk": 0.6261111111111112,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "15",
+            "risk": 0.6344444444444444,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "15",
+            "risk": 0.6438888888888887,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 16,
+        "digitCorrect": 42,
+        "total": 26,
+        "accuracy": 0.6153846153846154,
+        "avgCorrectDigits": 1.6153846153846154,
+        "predictions": [
+          {
+            "date": "2026-06-04",
+            "pair": "58",
+            "risk": 0.6238888888888889,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "58",
+            "risk": 0.5822222222222222,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-06",
+            "pair": "58",
+            "risk": 0.575,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "58",
+            "risk": 0.5344444444444444,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-09",
+            "pair": "58",
+            "risk": 0.565,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "58",
+            "risk": 0.6083333333333333,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-11",
+            "pair": "58",
+            "risk": 0.5633333333333332,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-12",
+            "pair": "58",
+            "risk": 0.5633333333333332,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-13",
+            "pair": "58",
+            "risk": 0.6144444444444443,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "58",
+            "risk": 0.6072222222222221,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "58",
+            "risk": 0.625,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "58",
+            "risk": 0.5744444444444443,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "58",
+            "risk": 0.5744444444444443,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "58",
+            "risk": 0.5672222222222223,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-20",
+            "pair": "28",
+            "risk": 0.59,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "28",
+            "risk": 0.5483333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "18",
+            "risk": 0.6305555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "48",
+            "risk": 0.6222222222222222,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "48",
+            "risk": 0.6138888888888889,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "48",
+            "risk": 0.5633333333333334,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "14",
+            "risk": 0.5572222222222222,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "14",
+            "risk": 0.5922222222222222,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "18",
+            "risk": 0.585,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-02",
+            "pair": "18",
+            "risk": 0.5627777777777777,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "15",
+            "risk": 0.5299999999999999,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-04",
+            "pair": "15",
+            "risk": 0.5800000000000001,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "testWindow": "2026-06-01..2026-07-04",
+      "config": {
+        "shortLookback": 5,
+        "mediumLookback": 30,
+        "longLookback": 180,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 1,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 17,
+        "digitCorrect": 40,
+        "total": 23,
+        "accuracy": 0.7391304347826086,
+        "avgCorrectDigits": 1.7391304347826086,
+        "predictions": [
+          {
+            "date": "2026-02-13",
+            "pair": "02",
+            "risk": 1.0299999999999998,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-18",
+            "pair": "89",
+            "risk": 1.016511839708561,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-20",
+            "pair": "89",
+            "risk": 0.9555555555555555,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-03",
+            "pair": "79",
+            "risk": 0.9598566308243726,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "17",
+            "risk": 1.0231876138433516,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "17",
+            "risk": 0.9821505376344084,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "47",
+            "risk": 0.9515232974910395,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "78",
+            "risk": 0.9823406193078323,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "47",
+            "risk": 0.9848387096774192,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "06",
+            "risk": 1.0227777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-20",
+            "pair": "06",
+            "risk": 1.0059744990892532,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "67",
+            "risk": 1.0176344086021505,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "09",
+            "risk": 1.0222222222222224,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-05",
+            "pair": "29",
+            "risk": 1.0227956989247313,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-11",
+            "pair": "07",
+            "risk": 0.972896174863388,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "02",
+            "risk": 1.0222222222222224,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "03",
+            "risk": 0.9670491803278689,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "37",
+            "risk": 1.009820788530466,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "06",
+            "risk": 0.981111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-25",
+            "pair": "36",
+            "risk": 0.9159562841530056,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-26",
+            "pair": "67",
+            "risk": 0.9571505376344087,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "05",
+            "risk": 1.006111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "07",
+            "risk": 0.9811494252873563,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 5,
+        "digitCorrect": 12,
+        "total": 7,
+        "accuracy": 0.7142857142857143,
+        "avgCorrectDigits": 1.7142857142857142,
+        "predictions": [
+          {
+            "date": "2026-06-01",
+            "pair": "03",
+            "risk": 0.9917759562841529,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "37",
+            "risk": 0.9805734767025089,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "07",
+            "risk": 0.9851092896174863,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "05",
+            "risk": 1.016111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "04",
+            "risk": 1.015382513661202,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "79",
+            "risk": 0.8348387096774195,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "29",
+            "risk": 0.9398360655737705,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "testWindow": "2026-05-25..2026-07-03",
+      "config": {
+        "shortLookback": 5,
+        "mediumLookback": 30,
+        "longLookback": 90,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 0,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 16,
+        "digitCorrect": 38,
+        "total": 23,
+        "accuracy": 0.6956521739130435,
+        "avgCorrectDigits": 1.6521739130434783,
+        "predictions": [
+          {
+            "date": "2026-01-21",
+            "pair": "48",
+            "risk": 0.37333333333333335,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-03",
+            "pair": "34",
+            "risk": 0.3911111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-02-04",
+            "pair": "34",
+            "risk": 0.4216666666666667,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-06",
+            "pair": "34",
+            "risk": 0.4061111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-10",
+            "pair": "14",
+            "risk": 0.4222222222222222,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-02-16",
+            "pair": "34",
+            "risk": 0.38999999999999996,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-17",
+            "pair": "14",
+            "risk": 0.4227777777777778,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "06",
+            "risk": 0.42166666666666663,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "67",
+            "risk": 0.42333333333333334,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "47",
+            "risk": 0.4244444444444444,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-09",
+            "pair": "68",
+            "risk": 0.3727777777777779,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "68",
+            "risk": 0.3727777777777779,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "68",
+            "risk": 0.42555555555555546,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "68",
+            "risk": 0.421111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-04",
+            "pair": "56",
+            "risk": 0.42166666666666663,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-05",
+            "pair": "56",
+            "risk": 0.40499999999999997,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-07",
+            "pair": "56",
+            "risk": 0.4061111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-08",
+            "pair": "56",
+            "risk": 0.406111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-11",
+            "pair": "06",
+            "risk": 0.4066666666666666,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "67",
+            "risk": 0.3883333333333333,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "67",
+            "risk": 0.3383333333333332,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "67",
+            "risk": 0.40611111111111103,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "56",
+            "risk": 0.2922222222222222,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 1,
+        "digitCorrect": 3,
+        "total": 2,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.5,
+        "predictions": [
+          {
+            "date": "2026-05-25",
+            "pair": "56",
+            "risk": 0.3877777777777777,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-26",
+            "pair": "56",
+            "risk": 0.40555555555555556,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "testWindow": "2026-05-25..2026-07-03",
+      "config": {
+        "shortLookback": 10,
+        "mediumLookback": 30,
+        "longLookback": 180,
+        "contextLookback": 365,
+        "minContext": 5,
+        "shortWeight": -0.5,
+        "mediumWeight": 1,
+        "longWeight": 1.5,
+        "contextWeight": 1,
+        "presentGapWeight": -0.1,
+        "absentGapWeight": 0.2
+      },
+      "gate": {
+        "minValAccuracy": 0.65,
+        "minValN": 10,
+        "maxRiskQuantile": 0.25
+      },
+      "val": {
+        "correct": 19,
+        "digitCorrect": 42,
+        "total": 23,
+        "accuracy": 0.8260869565217391,
+        "avgCorrectDigits": 1.826086956521739,
+        "predictions": [
+          {
+            "date": "2026-01-15",
+            "pair": "03",
+            "risk": 1.0157838660578387,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-05",
+            "pair": "08",
+            "risk": 1.0537387387387387,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-06",
+            "pair": "08",
+            "risk": 1.0883333333333332,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-12",
+            "pair": "08",
+            "risk": 1.046891891891892,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-20",
+            "pair": "08",
+            "risk": 1.0866666666666664,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-02-27",
+            "pair": "28",
+            "risk": 1.0827777777777776,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-03-12",
+            "pair": "08",
+            "risk": 1.0474324324324324,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-13",
+            "pair": "08",
+            "risk": 1.0677777777777777,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-19",
+            "pair": "03",
+            "risk": 0.9818918918918919,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-20",
+            "pair": "03",
+            "risk": 1.0738888888888887,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "03",
+            "risk": 1.0568918918918917,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "08",
+            "risk": 1.083918918918919,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "38",
+            "risk": 1.086111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-09",
+            "pair": "01",
+            "risk": 1.0239189189189188,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "01",
+            "risk": 1.0854033485540335,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "28",
+            "risk": 1.06197965571205,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "08",
+            "risk": 1.0533409436834096,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-23",
+            "pair": "08",
+            "risk": 1.0663242009132419,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "01",
+            "risk": 1.0305936073059359,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-08",
+            "pair": "28",
+            "risk": 1.086111111111111,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "01",
+            "risk": 1.0365165165165164,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "08",
+            "risk": 1.0855555555555556,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "03",
+            "risk": 1.0122672672672672,
+            "hit": true,
+            "absentDigits": 2
+          }
+        ]
+      },
+      "test": {
+        "correct": 11,
+        "digitCorrect": 35,
+        "total": 26,
+        "accuracy": 0.4230769230769231,
+        "avgCorrectDigits": 1.3461538461538463,
+        "predictions": [
+          {
+            "date": "2026-05-28",
+            "pair": "08",
+            "risk": 1.0244744744744745,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "08",
+            "risk": 1.0416666666666665,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-02",
+            "pair": "08",
+            "risk": 1.035015015015015,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "08",
+            "risk": 1.0711111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "08",
+            "risk": 0.9957657657657659,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "08",
+            "risk": 1.0133333333333332,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "02",
+            "risk": 1.0766742770167426,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-09",
+            "pair": "08",
+            "risk": 1.0040840840840841,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "08",
+            "risk": 0.9755555555555555,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-06-11",
+            "pair": "08",
+            "risk": 0.9046546546546548,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-12",
+            "pair": "28",
+            "risk": 0.9094444444444444,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "28",
+            "risk": 1.0557229832572297,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "08",
+            "risk": 0.9713063063063062,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "08",
+            "risk": 1.016111111111111,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "08",
+            "risk": 0.9813213213213213,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "08",
+            "risk": 0.9727777777777777,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "08",
+            "risk": 1.0473896499238964,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-23",
+            "pair": "08",
+            "risk": 1.0100150150150151,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "08",
+            "risk": 1.0344444444444445,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "03",
+            "risk": 1.0698498498498497,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "28",
+            "risk": 0.9938888888888889,
+            "hit": false,
+            "absentDigits": 0
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "02",
+            "risk": 1.080753424657534,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "38",
+            "risk": 1.0385435435435435,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "38",
+            "risk": 1.0238888888888888,
+            "hit": false,
+            "absentDigits": 1
+          },
+          {
+            "date": "2026-07-02",
+            "pair": "38",
+            "risk": 0.9226276276276276,
+            "hit": true,
+            "absentDigits": 2
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "38",
+            "risk": 0.8883333333333332,
+            "hit": false,
+            "absentDigits": 1
+          }
+        ]
+      }
+    }
+  ]
+}

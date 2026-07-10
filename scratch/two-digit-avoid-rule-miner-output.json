@@ -1,0 +1,4285 @@
+{
+  "generatedAt": "2026-07-09T09:23:11.892Z",
+  "folds": 192,
+  "acceptedFolds": 0,
+  "aggregate": {
+    "n": 0,
+    "ok": 0,
+    "accuracy": 0,
+    "folds80": 0
+  },
+  "foldRows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2025-11-06..2025-12-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2025-12-06..2026-01-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-01-05..2026-02-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-02-05..2026-03-07",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2025-11-06..2025-12-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2025-12-06..2026-01-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-01-05..2026-02-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 3,
+        "ok": 1,
+        "accuracy": 0.3333333333333333,
+        "coverage": 0.06666666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && digit.minabs.l120=<0.84",
+        "n": 28,
+        "precision": 0.8214285714285714
+      }
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-02-05..2026-03-07",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2025-09-18..2025-10-30",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=false && prev.kind=TP",
+        "n": 42,
+        "precision": 1
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2025-10-31..2025-12-04",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=false && prev.kind=TP",
+        "n": 42,
+        "precision": 1
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2025-12-05..2026-01-08",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=false && prev.kind=TP",
+        "n": 42,
+        "precision": 1
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-01-09..2026-02-13",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 5,
+        "ok": 2,
+        "accuracy": 0.4,
+        "coverage": 0.1111111111111111
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=false && prev.kind=TP",
+        "n": 42,
+        "precision": 1
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 2,
+        "ok": 1,
+        "accuracy": 0.5,
+        "coverage": 0.044444444444444446
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.house=low && prev.kind=TP",
+        "n": 30,
+        "precision": 0.8666666666666667
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 4,
+      "accepted": false,
+      "validation": {
+        "n": 4,
+        "ok": 1,
+        "accuracy": 0.25,
+        "coverage": 0.08888888888888889
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.house=low && prev.kind=TP",
+        "n": 30,
+        "precision": 0.8666666666666667
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && digit.minabs.l90=<0.84",
+        "n": 35,
+        "precision": 0.8285714285714286
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && digit.minabs.l90=<0.84",
+        "n": 35,
+        "precision": 0.8285714285714286
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2025-09-18..2025-10-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 6,
+        "ok": 4,
+        "accuracy": 0.6666666666666666,
+        "coverage": 0.13333333333333333
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.abs.l30=>=0.75 && pair.failGap=<16",
+        "n": 30,
+        "precision": 0.8
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2025-10-31..2025-12-04",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && digit.minabs.l120=<0.78",
+        "n": 30,
+        "precision": 0.8333333333333334
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2025-12-05..2026-01-08",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && digit.minabs.l120=<0.78",
+        "n": 30,
+        "precision": 0.8333333333333334
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-01-09..2026-02-13",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && digit.minabs.l120=<0.78",
+        "n": 30,
+        "precision": 0.8333333333333334
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 4,
+        "ok": 3,
+        "accuracy": 0.75,
+        "coverage": 0.08888888888888889
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && digit.minabs.l120=<0.78",
+        "n": 30,
+        "precision": 0.8333333333333334
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && digit.minabs.l120=<0.78",
+        "n": 30,
+        "precision": 0.8333333333333334
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && digit.minabs.l120=<0.78",
+        "n": 30,
+        "precision": 0.8333333333333334
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && digit.minabs.l120=<0.78",
+        "n": 30,
+        "precision": 0.8333333333333334
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2025-11-06..2025-12-05",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l14=<0.72",
+        "n": 28,
+        "precision": 0.7857142857142857
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2025-12-06..2026-01-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l14=<0.72",
+        "n": 28,
+        "precision": 0.7857142857142857
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-01-05..2026-02-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l14=<0.72",
+        "n": 28,
+        "precision": 0.7857142857142857
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-02-05..2026-03-07",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l14=<0.72",
+        "n": 34,
+        "precision": 0.7941176470588235
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l14=<0.72",
+        "n": 34,
+        "precision": 0.7941176470588235
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l14=<0.72",
+        "n": 34,
+        "precision": 0.7941176470588235
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2025-11-06..2025-12-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2025-12-06..2026-01-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-01-05..2026-02-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.kind=TP && digit.minabs.l60=<0.72",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-02-05..2026-03-07",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.kind=TP && digit.minabs.l60=<0.72",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.kind=TP && digit.minabs.l60=<0.72",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.kind=TP && digit.minabs.l60=<0.72",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.kind=TP && digit.minabs.l60=<0.72",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.kind=TP && digit.minabs.l60=<0.72",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2025-09-11..2025-10-15",
+      "rules": 5,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.sum=6 && pair.recentVs60=<-0.2",
+        "n": 25,
+        "precision": 0.84
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2025-10-16..2025-11-27",
+      "rules": 5,
+      "accepted": false,
+      "validation": {
+        "n": 7,
+        "ok": 3,
+        "accuracy": 0.42857142857142855,
+        "coverage": 0.15555555555555556
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.sum=6 && pair.recentVs60=<-0.2",
+        "n": 25,
+        "precision": 0.84
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2025-11-28..2026-01-01",
+      "rules": 5,
+      "accepted": false,
+      "validation": {
+        "n": 8,
+        "ok": 4,
+        "accuracy": 0.5,
+        "coverage": 0.17777777777777778
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.sum=6 && pair.recentVs60=<-0.2",
+        "n": 25,
+        "precision": 0.84
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-01-02..2026-02-06",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l60=<0.78 && pair.abs.l180=<0.45",
+        "n": 25,
+        "precision": 0.84
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-02-07..2026-03-14",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l60=<0.78 && pair.abs.l180=<0.45",
+        "n": 25,
+        "precision": 0.84
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-03-16..2026-04-18",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 4,
+        "ok": 2,
+        "accuracy": 0.5,
+        "coverage": 0.08888888888888889
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l60=<0.78 && pair.abs.l180=<0.45",
+        "n": 25,
+        "precision": 0.84
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-04-20..2026-05-23",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 3,
+        "ok": 2,
+        "accuracy": 0.6666666666666666,
+        "coverage": 0.06666666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l60=<0.78 && pair.abs.l180=<0.45",
+        "n": 26,
+        "precision": 0.8076923076923077
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-05-25..2026-06-27",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l60=<0.78 && pair.abs.l180=<0.45",
+        "n": 29,
+        "precision": 0.7931034482758621
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2025-09-11..2025-10-15",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2025-10-16..2025-11-27",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2025-11-28..2026-01-01",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-01-02..2026-02-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-02-07..2026-03-14",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-03-16..2026-04-18",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-04-20..2026-05-23",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-05-25..2026-06-27",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2025-09-18..2025-10-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l30=<0.78",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2025-10-31..2025-12-04",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 4,
+        "ok": 2,
+        "accuracy": 0.5,
+        "coverage": 0.08888888888888889
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l30=<0.78",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2025-12-05..2026-01-08",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l30=<0.78",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-01-09..2026-02-13",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l30=<0.78",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l30=<0.78",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l30=<0.78",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l30=<0.78",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=TP && digit.minabs.l30=<0.78",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2025-09-18..2025-10-30",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2025-10-31..2025-12-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2025-12-05..2026-01-08",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-01-09..2026-02-13",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2025-09-18..2025-10-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 7,
+        "ok": 5,
+        "accuracy": 0.7142857142857143,
+        "coverage": 0.15555555555555556
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Monday && digit.minabs.l90=<0.84",
+        "n": 35,
+        "precision": 0.8285714285714286
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2025-10-31..2025-12-04",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 13,
+        "ok": 7,
+        "accuracy": 0.5384615384615384,
+        "coverage": 0.28888888888888886
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && digit.minabs.l120=<0.84",
+        "n": 25,
+        "precision": 0.84
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2025-12-05..2026-01-08",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Monday && digit.minabs.l120=<0.84",
+        "n": 32,
+        "precision": 0.78125
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-01-09..2026-02-13",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Monday && digit.minabs.l120=<0.84",
+        "n": 32,
+        "precision": 0.78125
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Monday && digit.minabs.l120=<0.84",
+        "n": 33,
+        "precision": 0.7878787878787878
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Monday && digit.minabs.l120=<0.84",
+        "n": 33,
+        "precision": 0.7878787878787878
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Monday && digit.minabs.l120=<0.84",
+        "n": 33,
+        "precision": 0.7878787878787878
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Monday && digit.minabs.l120=<0.84",
+        "n": 33,
+        "precision": 0.7878787878787878
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2025-09-18..2025-10-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && pair.abs.l90=<0.75",
+        "n": 26,
+        "precision": 0.8076923076923077
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2025-10-31..2025-12-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && pair.abs.l90=<0.75",
+        "n": 26,
+        "precision": 0.8076923076923077
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2025-12-05..2026-01-08",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && pair.abs.l90=<0.75",
+        "n": 26,
+        "precision": 0.8076923076923077
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-01-09..2026-02-13",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && pair.abs.l90=<0.75",
+        "n": 26,
+        "precision": 0.8076923076923077
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && pair.abs.l90=<0.75",
+        "n": 27,
+        "precision": 0.8148148148148148
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && pair.abs.l90=<0.75",
+        "n": 27,
+        "precision": 0.8148148148148148
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && pair.abs.l90=<0.75",
+        "n": 27,
+        "precision": 0.8148148148148148
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Thursday && pair.abs.l90=<0.75",
+        "n": 27,
+        "precision": 0.8148148148148148
+      }
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2025-11-06..2025-12-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2025-12-06..2026-01-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-01-05..2026-02-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-02-05..2026-03-07",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2025-11-06..2025-12-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2025-12-06..2026-01-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-01-05..2026-02-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-02-05..2026-03-07",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2025-07-16..2025-08-27",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 6,
+        "ok": 2,
+        "accuracy": 0.3333333333333333,
+        "coverage": 0.13333333333333333
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.pairOverlap=2 && source.prev.pairOverlap=2",
+        "n": 36,
+        "precision": 0.8055555555555556
+      }
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2025-08-28..2025-10-10",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2025-10-13..2025-11-28",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2025-12-01..2026-01-09",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-01-12..2026-02-23",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-02-24..2026-04-07",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 2,
+        "ok": 2,
+        "accuracy": 1,
+        "coverage": 0.044444444444444446
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=DP && digit.minabs.l90=<0.84",
+        "n": 37,
+        "precision": 0.7837837837837838
+      }
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-04-08..2026-05-19",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 7,
+        "ok": 5,
+        "accuracy": 0.7142857142857143,
+        "coverage": 0.15555555555555556
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=DP && digit.minabs.l90=<0.84",
+        "n": 37,
+        "precision": 0.7837837837837838
+      }
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-05-20..2026-07-03",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 8,
+        "ok": 5,
+        "accuracy": 0.625,
+        "coverage": 0.17777777777777778
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "source.prev.kind=DP && digit.minabs.l90=<0.84",
+        "n": 43,
+        "precision": 0.7906976744186046
+      }
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2025-07-16..2025-08-27",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2025-08-28..2025-10-10",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2025-10-13..2025-11-28",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2025-12-01..2026-01-09",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-01-12..2026-02-23",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-02-24..2026-04-07",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-04-08..2026-05-19",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-05-20..2026-07-03",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2025-09-18..2025-10-30",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 5,
+        "ok": 2,
+        "accuracy": 0.4,
+        "coverage": 0.1111111111111111
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l90=<0.65 && digit.sumabs.l240=<1.65",
+        "n": 27,
+        "precision": 0.8148148148148148
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2025-10-31..2025-12-04",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 4,
+        "ok": 4,
+        "accuracy": 1,
+        "coverage": 0.08888888888888889
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.abs.l14=>=0.75 && digit.minabs.l60=>=0.84",
+        "n": 25,
+        "precision": 0.8
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2025-12-05..2026-01-08",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Wednesday && digit.sumabs.l14=>=1.8",
+        "n": 39,
+        "precision": 0.8205128205128205
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-01-09..2026-02-13",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 11,
+        "ok": 5,
+        "accuracy": 0.45454545454545453,
+        "coverage": 0.24444444444444444
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Wednesday && digit.sumabs.l14=>=1.8",
+        "n": 39,
+        "precision": 0.8205128205128205
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "day=Wednesday && digit.sumabs.l14=>=1.8",
+        "n": 39,
+        "precision": 0.8205128205128205
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 8,
+        "ok": 4,
+        "accuracy": 0.5,
+        "coverage": 0.17777777777777778
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.abs.l14=>=0.75 && digit.minabs.l60=>=0.84",
+        "n": 25,
+        "precision": 0.8
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 11,
+        "ok": 4,
+        "accuracy": 0.36363636363636365,
+        "coverage": 0.24444444444444444
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.abs.l14=>=0.75 && digit.minabs.l60=>=0.84",
+        "n": 25,
+        "precision": 0.8
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.abs.l14=>=0.75 && digit.minabs.l60=>=0.84",
+        "n": 25,
+        "precision": 0.8
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2025-09-18..2025-10-30",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.kind=DP && digit.sumabs.l14=>=1.8",
+        "n": 29,
+        "precision": 0.7931034482758621
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2025-10-31..2025-12-04",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 3,
+        "ok": 3,
+        "accuracy": 1,
+        "coverage": 0.06666666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.sumabs.l90=<1.35 && digit.minabs.l240=<0.78",
+        "n": 29,
+        "precision": 0.8275862068965517
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2025-12-05..2026-01-08",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 4,
+        "ok": 3,
+        "accuracy": 0.75,
+        "coverage": 0.08888888888888889
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.sumabs.l90=<1.35 && digit.minabs.l240=<0.78",
+        "n": 29,
+        "precision": 0.8275862068965517
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-01-09..2026-02-13",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 2,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.044444444444444446
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.sumabs.l90=<1.35 && digit.minabs.l240=<0.78",
+        "n": 29,
+        "precision": 0.8275862068965517
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 5,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.1111111111111111
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.sumabs.l90=<1.35 && digit.minabs.l240=<0.78",
+        "n": 29,
+        "precision": 0.8275862068965517
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 12,
+        "ok": 4,
+        "accuracy": 0.3333333333333333,
+        "coverage": 0.26666666666666666
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.sumabs.l90=<1.35 && digit.minabs.l240=<0.78",
+        "n": 29,
+        "precision": 0.8275862068965517
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2025-09-17..2025-10-29",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2025-10-30..2025-12-03",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2025-12-04..2026-01-07",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-01-08..2026-02-12",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-02-13..2026-03-20",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 6,
+        "ok": 3,
+        "accuracy": 0.5,
+        "coverage": 0.13333333333333333
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.pairOverlap=2 && pair.abs.l14=<0.75",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2025-09-17..2025-10-29",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2025-10-30..2025-12-03",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2025-12-04..2026-01-07",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-01-08..2026-02-12",
+      "rules": 4,
+      "accepted": false,
+      "validation": {
+        "n": 7,
+        "ok": 1,
+        "accuracy": 0.14285714285714285,
+        "coverage": 0.15555555555555556
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && pair.abs.l90=<0.65",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-02-13..2026-03-20",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && pair.abs.l90=<0.65",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && pair.abs.l90=<0.65",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && pair.abs.l90=<0.65",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prev.kind=TP && pair.abs.l90=<0.65",
+        "n": 26,
+        "precision": 0.8461538461538461
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2025-07-23..2025-09-03",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=true && digit.sumabs.l120=<1.35",
+        "n": 50,
+        "precision": 0.78
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2025-09-04..2025-10-15",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=true && digit.sumabs.l120=<1.35",
+        "n": 50,
+        "precision": 0.78
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2025-10-16..2025-12-03",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=true && digit.sumabs.l120=<1.35",
+        "n": 50,
+        "precision": 0.78
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2025-12-04..2026-01-14",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 2,
+        "ok": 2,
+        "accuracy": 1,
+        "coverage": 0.044444444444444446
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=true && digit.sumabs.l120=<1.35",
+        "n": 50,
+        "precision": 0.78
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-01-15..2026-02-26",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 10,
+        "ok": 4,
+        "accuracy": 0.4,
+        "coverage": 0.2222222222222222
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=true && digit.sumabs.l120=<1.35",
+        "n": 50,
+        "precision": 0.78
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-02-27..2026-04-10",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=true && digit.sumabs.l180=<1.35",
+        "n": 50,
+        "precision": 0.78
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-04-13..2026-05-22",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=true && digit.sumabs.l180=<1.35",
+        "n": 50,
+        "precision": 0.78
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-05-25..2026-07-03",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 2,
+        "ok": 1,
+        "accuracy": 0.5,
+        "coverage": 0.044444444444444446
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.has789=true && digit.sumabs.l180=<1.35",
+        "n": 50,
+        "precision": 0.78
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2025-07-23..2025-09-03",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.pairOverlap=2 && digit.sumabs.l120=<1.35",
+        "n": 32,
+        "precision": 0.8125
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2025-09-04..2025-10-15",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.pairOverlap=2 && digit.sumabs.l120=<1.35",
+        "n": 32,
+        "precision": 0.8125
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2025-10-16..2025-12-03",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.pairOverlap=2 && digit.sumabs.l120=<1.35",
+        "n": 32,
+        "precision": 0.8125
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2025-12-04..2026-01-14",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 3,
+        "ok": 2,
+        "accuracy": 0.6666666666666666,
+        "coverage": 0.06666666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.pairOverlap=2 && digit.sumabs.l120=<1.35",
+        "n": 32,
+        "precision": 0.8125
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-01-15..2026-02-26",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.pairOverlap=2 && digit.sumabs.l120=<1.35",
+        "n": 34,
+        "precision": 0.8235294117647058
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-02-27..2026-04-10",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.pairOverlap=2 && digit.sumabs.l180=<1.35",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-04-13..2026-05-22",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.pairOverlap=2 && digit.sumabs.l180=<1.35",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-05-25..2026-07-03",
+      "rules": 3,
+      "accepted": false,
+      "validation": {
+        "n": 3,
+        "ok": 3,
+        "accuracy": 1,
+        "coverage": 0.06666666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "prevOpp.pairOverlap=2 && digit.sumabs.l180=<1.35",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2025-07-22..2025-09-02",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2025-09-03..2025-10-14",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2025-10-15..2025-12-02",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2025-12-03..2026-01-13",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-01-14..2026-02-25",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-02-26..2026-04-09",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l60=<0.72 && digit.minabs.l120=<0.65",
+        "n": 26,
+        "precision": 0.8076923076923077
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-04-10..2026-05-22",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l60=<0.72 && digit.minabs.l120=<0.65",
+        "n": 26,
+        "precision": 0.8076923076923077
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-05-25..2026-07-03",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 3,
+        "ok": 1,
+        "accuracy": 0.3333333333333333,
+        "coverage": 0.06666666666666667
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l60=<0.72 && digit.minabs.l120=<0.65",
+        "n": 26,
+        "precision": 0.8076923076923077
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2025-07-22..2025-09-02",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 1,
+        "ok": 1,
+        "accuracy": 1,
+        "coverage": 0.022222222222222223
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.abs.l60=<0.75 && digit.minabs.l120=<0.72",
+        "n": 28,
+        "precision": 0.7857142857142857
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2025-09-03..2025-10-14",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 11,
+        "ok": 5,
+        "accuracy": 0.45454545454545453,
+        "coverage": 0.24444444444444444
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.abs.l60=<0.75 && digit.minabs.l120=<0.72",
+        "n": 28,
+        "precision": 0.7857142857142857
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2025-10-15..2025-12-02",
+      "rules": 2,
+      "accepted": false,
+      "validation": {
+        "n": 23,
+        "ok": 11,
+        "accuracy": 0.4782608695652174,
+        "coverage": 0.5111111111111111
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "pair.abs.l60=<0.75 && digit.minabs.l120=<0.72",
+        "n": 31,
+        "precision": 0.8064516129032258
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2025-12-03..2026-01-13",
+      "rules": 1,
+      "accepted": false,
+      "validation": {
+        "n": 8,
+        "ok": 4,
+        "accuracy": 0.5,
+        "coverage": 0.17777777777777778
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": {
+        "key": "digit.minabs.l14=>=0.84 && digit.minabs.l30=<0.72",
+        "n": 38,
+        "precision": 0.7894736842105263
+      }
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-01-14..2026-02-25",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-02-26..2026-04-09",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-04-10..2026-05-22",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-05-25..2026-07-03",
+      "rules": 0,
+      "accepted": false,
+      "validation": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "test": {
+        "n": 0,
+        "ok": 0,
+        "accuracy": 0,
+        "coverage": 0
+      },
+      "topRule": null
+    }
+  ]
+}

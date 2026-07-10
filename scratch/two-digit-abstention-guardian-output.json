@@ -1,0 +1,3916 @@
+{
+  "generatedAt": "2026-07-09T09:45:38.849Z",
+  "theories": 79,
+  "configs": 432,
+  "folds": 96,
+  "selectedCount": 7,
+  "aggregate": {
+    "correct": 15,
+    "total": 40,
+    "accuracy": 0.375
+  },
+  "selected": [
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "valStart": 629,
+      "valEnd": 674,
+      "testStart": 674,
+      "testEnd": 704,
+      "config": {
+        "families": null,
+        "minVotes": 6,
+        "minFamilies": 4,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 8,
+        "total": 9,
+        "accuracy": 0.8888888888888888,
+        "picks": [
+          {
+            "date": "2026-05-14",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-17",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-24",
+            "pair": "27",
+            "hit": false
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0,
+        "picks": []
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "valStart": 539,
+      "valEnd": 584,
+      "testStart": 584,
+      "testEnd": 614,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 10,
+        "minFamilies": 2,
+        "minMargin": 2
+      },
+      "val": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9,
+        "picks": [
+          {
+            "date": "2026-02-05",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-08",
+            "pair": "27",
+            "hit": false
+          },
+          {
+            "date": "2026-02-09",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-10",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-11",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-12",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-13",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-02-15",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-02-16",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "18",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 8,
+        "total": 14,
+        "accuracy": 0.5714285714285714,
+        "picks": [
+          {
+            "date": "2026-03-18",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-19",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-20",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-21",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-22",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-23",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-27",
+            "pair": "37",
+            "hit": false
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "17",
+            "hit": true
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "17",
+            "hit": false
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "27",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "valStart": 499,
+      "valEnd": 544,
+      "testStart": 544,
+      "testEnd": 574,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 14,
+        "minFamilies": 3,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 11,
+        "total": 12,
+        "accuracy": 0.9166666666666666,
+        "picks": [
+          {
+            "date": "2026-03-10",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-03-23",
+            "pair": "45",
+            "hit": true
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "45",
+            "hit": true
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "45",
+            "hit": true
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "45",
+            "hit": false
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "15",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 5,
+        "accuracy": 0,
+        "picks": [
+          {
+            "date": "2026-04-20",
+            "pair": "15",
+            "hit": false
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-05-09",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "01",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "valStart": 501,
+      "valEnd": 546,
+      "testStart": 546,
+      "testEnd": 576,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 12,
+        "minFamilies": 3,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9,
+        "picks": [
+          {
+            "date": "2026-03-28",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-22",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-23",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-25",
+            "pair": "37",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 6,
+        "accuracy": 0,
+        "picks": [
+          {
+            "date": "2026-04-27",
+            "pair": "37",
+            "hit": false
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "38",
+            "hit": false
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "01",
+            "hit": false
+          },
+          {
+            "date": "2026-05-25",
+            "pair": "45",
+            "hit": false
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "03",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "valStart": 500,
+      "valEnd": 545,
+      "testStart": 545,
+      "testEnd": 575,
+      "config": {
+        "families": null,
+        "minVotes": 6,
+        "minFamilies": 4,
+        "minMargin": 3
+      },
+      "val": {
+        "correct": 7,
+        "total": 8,
+        "accuracy": 0.875,
+        "picks": [
+          {
+            "date": "2026-04-03",
+            "pair": "04",
+            "hit": true
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "04",
+            "hit": true
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "04",
+            "hit": true
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "04",
+            "hit": true
+          },
+          {
+            "date": "2026-04-08",
+            "pair": "04",
+            "hit": false
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "49",
+            "hit": true
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "49",
+            "hit": true
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "49",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0,
+        "picks": []
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "valStart": 530,
+      "valEnd": 575,
+      "testStart": 575,
+      "testEnd": 605,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 5
+      },
+      "val": {
+        "correct": 8,
+        "total": 9,
+        "accuracy": 0.8888888888888888,
+        "picks": [
+          {
+            "date": "2026-04-09",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-25",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-26",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "58",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 4,
+        "accuracy": 0,
+        "picks": [
+          {
+            "date": "2026-06-01",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "58",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "valStart": 496,
+      "valEnd": 541,
+      "testStart": 541,
+      "testEnd": 571,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9,
+        "picks": [
+          {
+            "date": "2026-03-09",
+            "pair": "07",
+            "hit": true
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "07",
+            "hit": true
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "37",
+            "hit": false
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-03-27",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "07",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 7,
+        "total": 11,
+        "accuracy": 0.6363636363636364,
+        "picks": [
+          {
+            "date": "2026-05-06",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "35",
+            "hit": false
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "35",
+            "hit": false
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "67",
+            "hit": true
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "07",
+            "hit": false
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "35",
+            "hit": false
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "07",
+            "hit": true
+          }
+        ]
+      }
+    }
+  ],
+  "topDiagnostics": [
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "valStart": 440,
+      "valEnd": 485,
+      "testStart": 485,
+      "testEnd": 515,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 5
+      },
+      "val": {
+        "correct": 7,
+        "total": 7,
+        "accuracy": 1,
+        "picks": [
+          {
+            "date": "2025-12-25",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2025-12-30",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2025-12-31",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2026-01-02",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2026-02-07",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-02-12",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-02-13",
+            "pair": "18",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 2,
+        "total": 5,
+        "accuracy": 0.4,
+        "picks": [
+          {
+            "date": "2026-02-14",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-02-16",
+            "pair": "18",
+            "hit": false
+          },
+          {
+            "date": "2026-02-17",
+            "pair": "18",
+            "hit": false
+          },
+          {
+            "date": "2026-02-28",
+            "pair": "89",
+            "hit": true
+          },
+          {
+            "date": "2026-03-11",
+            "pair": "18",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "valStart": 589,
+      "valEnd": 634,
+      "testStart": 634,
+      "testEnd": 664,
+      "config": {
+        "families": null,
+        "minVotes": 6,
+        "minFamilies": 3,
+        "minMargin": 3
+      },
+      "val": {
+        "correct": 5,
+        "total": 5,
+        "accuracy": 1,
+        "picks": [
+          {
+            "date": "2026-03-09",
+            "pair": "59",
+            "hit": true
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "59",
+            "hit": true
+          },
+          {
+            "date": "2026-03-11",
+            "pair": "59",
+            "hit": true
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "59",
+            "hit": true
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "05",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0,
+        "picks": []
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "valStart": 499,
+      "valEnd": 544,
+      "testStart": 544,
+      "testEnd": 574,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 14,
+        "minFamilies": 3,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 11,
+        "total": 12,
+        "accuracy": 0.9166666666666666,
+        "picks": [
+          {
+            "date": "2026-03-10",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-03-23",
+            "pair": "45",
+            "hit": true
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "45",
+            "hit": true
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "45",
+            "hit": true
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "45",
+            "hit": false
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "15",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 5,
+        "accuracy": 0,
+        "picks": [
+          {
+            "date": "2026-04-20",
+            "pair": "15",
+            "hit": false
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-05-09",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "01",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "valStart": 539,
+      "valEnd": 584,
+      "testStart": 584,
+      "testEnd": 614,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 10,
+        "minFamilies": 2,
+        "minMargin": 2
+      },
+      "val": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9,
+        "picks": [
+          {
+            "date": "2026-02-05",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-08",
+            "pair": "27",
+            "hit": false
+          },
+          {
+            "date": "2026-02-09",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-10",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-11",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-12",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-02-13",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-02-15",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-02-16",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "18",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 8,
+        "total": 14,
+        "accuracy": 0.5714285714285714,
+        "picks": [
+          {
+            "date": "2026-03-18",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-19",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-20",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-21",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-22",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-23",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-27",
+            "pair": "37",
+            "hit": false
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "17",
+            "hit": true
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "17",
+            "hit": false
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "27",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "valStart": 501,
+      "valEnd": 546,
+      "testStart": 546,
+      "testEnd": 576,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 12,
+        "minFamilies": 3,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9,
+        "picks": [
+          {
+            "date": "2026-03-28",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-22",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-23",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-25",
+            "pair": "37",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 6,
+        "accuracy": 0,
+        "picks": [
+          {
+            "date": "2026-04-27",
+            "pair": "37",
+            "hit": false
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "38",
+            "hit": false
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "01",
+            "hit": false
+          },
+          {
+            "date": "2026-05-25",
+            "pair": "45",
+            "hit": false
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "03",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "valStart": 496,
+      "valEnd": 541,
+      "testStart": 541,
+      "testEnd": 571,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9,
+        "picks": [
+          {
+            "date": "2026-03-09",
+            "pair": "07",
+            "hit": true
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "07",
+            "hit": true
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "37",
+            "hit": false
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-03-27",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "07",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 7,
+        "total": 11,
+        "accuracy": 0.6363636363636364,
+        "picks": [
+          {
+            "date": "2026-05-06",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "35",
+            "hit": false
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "35",
+            "hit": false
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "67",
+            "hit": true
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "07",
+            "hit": false
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "35",
+            "hit": false
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "07",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "valStart": 629,
+      "valEnd": 674,
+      "testStart": 674,
+      "testEnd": 704,
+      "config": {
+        "families": null,
+        "minVotes": 6,
+        "minFamilies": 4,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 8,
+        "total": 9,
+        "accuracy": 0.8888888888888888,
+        "picks": [
+          {
+            "date": "2026-05-14",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-17",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-24",
+            "pair": "27",
+            "hit": false
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0,
+        "picks": []
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "valStart": 530,
+      "valEnd": 575,
+      "testStart": 575,
+      "testEnd": 605,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 5
+      },
+      "val": {
+        "correct": 8,
+        "total": 9,
+        "accuracy": 0.8888888888888888,
+        "picks": [
+          {
+            "date": "2026-04-09",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-25",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-26",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "58",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 4,
+        "accuracy": 0,
+        "picks": [
+          {
+            "date": "2026-06-01",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "58",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "valStart": 500,
+      "valEnd": 545,
+      "testStart": 545,
+      "testEnd": 575,
+      "config": {
+        "families": null,
+        "minVotes": 6,
+        "minFamilies": 4,
+        "minMargin": 3
+      },
+      "val": {
+        "correct": 7,
+        "total": 8,
+        "accuracy": 0.875,
+        "picks": [
+          {
+            "date": "2026-04-03",
+            "pair": "04",
+            "hit": true
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "04",
+            "hit": true
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "04",
+            "hit": true
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "04",
+            "hit": true
+          },
+          {
+            "date": "2026-04-08",
+            "pair": "04",
+            "hit": false
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "49",
+            "hit": true
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "49",
+            "hit": true
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "49",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0,
+        "picks": []
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "valStart": 526,
+      "valEnd": 571,
+      "testStart": 571,
+      "testEnd": 601,
+      "config": {
+        "families": [
+          "target",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 8,
+        "minFamilies": 2,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 6,
+        "total": 7,
+        "accuracy": 0.8571428571428571,
+        "picks": [
+          {
+            "date": "2026-05-01",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "36",
+            "hit": true
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "35",
+            "hit": false
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "07",
+            "hit": true
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "07",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 8,
+        "total": 11,
+        "accuracy": 0.7272727272727273,
+        "picks": [
+          {
+            "date": "2026-06-01",
+            "pair": "07",
+            "hit": true
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "67",
+            "hit": true
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "37",
+            "hit": false
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "07",
+            "hit": true
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "07",
+            "hit": false
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "19",
+            "hit": true
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "17",
+            "hit": false
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "17",
+            "hit": true
+          },
+          {
+            "date": "2026-07-04",
+            "pair": "27",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "valStart": 471,
+      "valEnd": 516,
+      "testStart": 516,
+      "testEnd": 546,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 8,
+        "minFamilies": 2,
+        "minMargin": 2
+      },
+      "val": {
+        "correct": 5,
+        "total": 6,
+        "accuracy": 0.8333333333333334,
+        "picks": [
+          {
+            "date": "2026-02-05",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-02-20",
+            "pair": "39",
+            "hit": true
+          },
+          {
+            "date": "2026-02-21",
+            "pair": "39",
+            "hit": true
+          },
+          {
+            "date": "2026-02-27",
+            "pair": "39",
+            "hit": true
+          },
+          {
+            "date": "2026-02-28",
+            "pair": "39",
+            "hit": true
+          },
+          {
+            "date": "2026-03-02",
+            "pair": "39",
+            "hit": false
+          }
+        ]
+      },
+      "test": {
+        "correct": 7,
+        "total": 14,
+        "accuracy": 0.5,
+        "picks": [
+          {
+            "date": "2026-03-26",
+            "pair": "69",
+            "hit": false
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-02",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-03",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-04-20",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-04-23",
+            "pair": "03",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "valStart": 531,
+      "valEnd": 576,
+      "testStart": 576,
+      "testEnd": 606,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 6,
+        "minFamilies": 3,
+        "minMargin": 5
+      },
+      "val": {
+        "correct": 5,
+        "total": 6,
+        "accuracy": 0.8333333333333334,
+        "picks": [
+          {
+            "date": "2026-04-21",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-22",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-23",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-25",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-04-27",
+            "pair": "37",
+            "hit": false
+          }
+        ]
+      },
+      "test": {
+        "correct": 7,
+        "total": 10,
+        "accuracy": 0.7,
+        "picks": [
+          {
+            "date": "2026-06-13",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "34",
+            "hit": true
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "34",
+            "hit": true
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "34",
+            "hit": true
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "34",
+            "hit": true
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "34",
+            "hit": false
+          },
+          {
+            "date": "2026-07-04",
+            "pair": "37",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "valStart": 430,
+      "valEnd": 475,
+      "testStart": 475,
+      "testEnd": 505,
+      "config": {
+        "families": null,
+        "minVotes": 6,
+        "minFamilies": 3,
+        "minMargin": 5
+      },
+      "val": {
+        "correct": 5,
+        "total": 6,
+        "accuracy": 0.8333333333333334,
+        "picks": [
+          {
+            "date": "2026-04-13",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-04-20",
+            "pair": "78",
+            "hit": false
+          }
+        ]
+      },
+      "test": {
+        "correct": 1,
+        "total": 2,
+        "accuracy": 0.5,
+        "picks": [
+          {
+            "date": "2026-05-29",
+            "pair": "23",
+            "hit": true
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "37",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "valStart": 469,
+      "valEnd": 514,
+      "testStart": 514,
+      "testEnd": 544,
+      "config": {
+        "families": null,
+        "minVotes": 6,
+        "minFamilies": 4,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8,
+        "picks": [
+          {
+            "date": "2026-02-13",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-02-14",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-02-16",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-02-19",
+            "pair": "57",
+            "hit": true
+          },
+          {
+            "date": "2026-02-20",
+            "pair": "57",
+            "hit": false
+          }
+        ]
+      },
+      "test": {
+        "correct": 1,
+        "total": 2,
+        "accuracy": 0.5,
+        "picks": [
+          {
+            "date": "2026-04-07",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-04-08",
+            "pair": "12",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "valStart": 500,
+      "valEnd": 545,
+      "testStart": 545,
+      "testEnd": 575,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 5
+      },
+      "val": {
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8,
+        "picks": [
+          {
+            "date": "2026-03-11",
+            "pair": "18",
+            "hit": false
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-04-07",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-04-08",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-04-09",
+            "pair": "18",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 7,
+        "total": 8,
+        "accuracy": 0.875,
+        "picks": [
+          {
+            "date": "2026-05-21",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-25",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-26",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "58",
+            "hit": false
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "58",
+            "hit": true
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "58",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "valStart": 466,
+      "valEnd": 511,
+      "testStart": 511,
+      "testEnd": 541,
+      "config": {
+        "families": [
+          "target",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 8,
+        "minFamilies": 2,
+        "minMargin": 3
+      },
+      "val": {
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8,
+        "picks": [
+          {
+            "date": "2026-02-11",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-03-09",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "18",
+            "hit": false
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "18",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 1,
+        "total": 2,
+        "accuracy": 0.5,
+        "picks": [
+          {
+            "date": "2026-03-23",
+            "pair": "17",
+            "hit": false
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "08",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "valStart": 430,
+      "valEnd": 475,
+      "testStart": 475,
+      "testEnd": 505,
+      "config": {
+        "families": null,
+        "minVotes": 6,
+        "minFamilies": 3,
+        "minMargin": 5
+      },
+      "val": {
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8,
+        "picks": [
+          {
+            "date": "2026-03-25",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "39",
+            "hit": true
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "39",
+            "hit": true
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "46",
+            "hit": true
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "46",
+            "hit": false
+          }
+        ]
+      },
+      "test": {
+        "correct": 5,
+        "total": 5,
+        "accuracy": 1,
+        "picks": [
+          {
+            "date": "2026-06-29",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-06-30",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-07-02",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-07-03",
+            "pair": "03",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "valStart": 559,
+      "valEnd": 604,
+      "testStart": 604,
+      "testEnd": 634,
+      "config": {
+        "families": [
+          "target",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 3
+      },
+      "val": {
+        "correct": 7,
+        "total": 9,
+        "accuracy": 0.7777777777777778,
+        "picks": [
+          {
+            "date": "2026-01-21",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-01-22",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-01-23",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-01-24",
+            "pair": "03",
+            "hit": false
+          },
+          {
+            "date": "2026-01-25",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-02-06",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-02-08",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-02-09",
+            "pair": "03",
+            "hit": true
+          },
+          {
+            "date": "2026-02-28",
+            "pair": "02",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0,
+        "picks": []
+      }
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "valStart": 425,
+      "valEnd": 470,
+      "testStart": 470,
+      "testEnd": 500,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 16,
+        "minFamilies": 3,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 7,
+        "total": 9,
+        "accuracy": 0.7777777777777778,
+        "picks": [
+          {
+            "date": "2026-03-20",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-03-23",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-04-22",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "08",
+            "hit": true
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "08",
+            "hit": true
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "08",
+            "hit": false
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "01",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 1,
+        "total": 4,
+        "accuracy": 0.25,
+        "picks": [
+          {
+            "date": "2026-05-25",
+            "pair": "01",
+            "hit": false
+          },
+          {
+            "date": "2026-06-02",
+            "pair": "15",
+            "hit": false
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "18",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "valStart": 529,
+      "valEnd": 574,
+      "testStart": 574,
+      "testEnd": 604,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 6,
+        "minFamilies": 3,
+        "minMargin": 3
+      },
+      "val": {
+        "correct": 10,
+        "total": 13,
+        "accuracy": 0.7692307692307693,
+        "picks": [
+          {
+            "date": "2026-04-13",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "15",
+            "hit": true
+          },
+          {
+            "date": "2026-04-20",
+            "pair": "15",
+            "hit": false
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2026-05-18",
+            "pair": "01",
+            "hit": false
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "01",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 2,
+        "total": 4,
+        "accuracy": 0.5,
+        "picks": [
+          {
+            "date": "2026-05-25",
+            "pair": "05",
+            "hit": false
+          },
+          {
+            "date": "2026-06-02",
+            "pair": "68",
+            "hit": true
+          },
+          {
+            "date": "2026-06-03",
+            "pair": "68",
+            "hit": true
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "68",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "valStart": 441,
+      "valEnd": 486,
+      "testStart": 486,
+      "testEnd": 516,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 12,
+        "total": 16,
+        "accuracy": 0.75,
+        "picks": [
+          {
+            "date": "2025-12-26",
+            "pair": "16",
+            "hit": true
+          },
+          {
+            "date": "2025-12-27",
+            "pair": "16",
+            "hit": true
+          },
+          {
+            "date": "2025-12-29",
+            "pair": "16",
+            "hit": false
+          },
+          {
+            "date": "2026-01-01",
+            "pair": "16",
+            "hit": false
+          },
+          {
+            "date": "2026-01-02",
+            "pair": "14",
+            "hit": true
+          },
+          {
+            "date": "2026-01-03",
+            "pair": "14",
+            "hit": true
+          },
+          {
+            "date": "2026-01-07",
+            "pair": "14",
+            "hit": false
+          },
+          {
+            "date": "2026-01-13",
+            "pair": "14",
+            "hit": true
+          },
+          {
+            "date": "2026-01-14",
+            "pair": "14",
+            "hit": false
+          },
+          {
+            "date": "2026-01-20",
+            "pair": "24",
+            "hit": true
+          },
+          {
+            "date": "2026-01-21",
+            "pair": "37",
+            "hit": true
+          },
+          {
+            "date": "2026-02-06",
+            "pair": "06",
+            "hit": true
+          },
+          {
+            "date": "2026-02-10",
+            "pair": "06",
+            "hit": true
+          },
+          {
+            "date": "2026-02-11",
+            "pair": "06",
+            "hit": true
+          },
+          {
+            "date": "2026-02-12",
+            "pair": "06",
+            "hit": true
+          },
+          {
+            "date": "2026-02-13",
+            "pair": "06",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 7,
+        "total": 14,
+        "accuracy": 0.5,
+        "picks": [
+          {
+            "date": "2026-02-14",
+            "pair": "06",
+            "hit": false
+          },
+          {
+            "date": "2026-02-16",
+            "pair": "06",
+            "hit": true
+          },
+          {
+            "date": "2026-02-19",
+            "pair": "01",
+            "hit": false
+          },
+          {
+            "date": "2026-02-21",
+            "pair": "06",
+            "hit": true
+          },
+          {
+            "date": "2026-02-23",
+            "pair": "06",
+            "hit": false
+          },
+          {
+            "date": "2026-02-24",
+            "pair": "06",
+            "hit": false
+          },
+          {
+            "date": "2026-02-25",
+            "pair": "06",
+            "hit": true
+          },
+          {
+            "date": "2026-02-26",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-02-27",
+            "pair": "06",
+            "hit": true
+          },
+          {
+            "date": "2026-03-05",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-03-07",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-03-09",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "59",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "valStart": 589,
+      "valEnd": 634,
+      "testStart": 634,
+      "testEnd": 664,
+      "config": {
+        "families": [
+          "target",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 9,
+        "total": 12,
+        "accuracy": 0.75,
+        "picks": [
+          {
+            "date": "2026-02-24",
+            "pair": "47",
+            "hit": false
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "14",
+            "hit": true
+          },
+          {
+            "date": "2026-03-14",
+            "pair": "09",
+            "hit": true
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "59",
+            "hit": true
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "59",
+            "hit": false
+          },
+          {
+            "date": "2026-03-26",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-03-28",
+            "pair": "05",
+            "hit": false
+          },
+          {
+            "date": "2026-03-29",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-04-04",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-04-05",
+            "pair": "05",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 4,
+        "total": 7,
+        "accuracy": 0.5714285714285714,
+        "picks": [
+          {
+            "date": "2026-04-09",
+            "pair": "05",
+            "hit": false
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-04-12",
+            "pair": "05",
+            "hit": false
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "05",
+            "hit": false
+          },
+          {
+            "date": "2026-04-14",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-04-20",
+            "pair": "56",
+            "hit": true
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "25",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "valStart": 469,
+      "valEnd": 514,
+      "testStart": 514,
+      "testEnd": 544,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 12,
+        "minFamilies": 2,
+        "minMargin": 2
+      },
+      "val": {
+        "correct": 6,
+        "total": 8,
+        "accuracy": 0.75,
+        "picks": [
+          {
+            "date": "2026-02-14",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-02-16",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-02-17",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-02-19",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-02-20",
+            "pair": "78",
+            "hit": false
+          },
+          {
+            "date": "2026-02-23",
+            "pair": "78",
+            "hit": false
+          },
+          {
+            "date": "2026-03-14",
+            "pair": "38",
+            "hit": true
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "38",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0,
+        "picks": []
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "valStart": 471,
+      "valEnd": 516,
+      "testStart": 516,
+      "testEnd": 546,
+      "config": {
+        "families": [
+          "target",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 8,
+        "minFamilies": 2,
+        "minMargin": 3
+      },
+      "val": {
+        "correct": 6,
+        "total": 8,
+        "accuracy": 0.75,
+        "picks": [
+          {
+            "date": "2026-02-07",
+            "pair": "16",
+            "hit": false
+          },
+          {
+            "date": "2026-02-10",
+            "pair": "16",
+            "hit": true
+          },
+          {
+            "date": "2026-02-13",
+            "pair": "24",
+            "hit": true
+          },
+          {
+            "date": "2026-02-17",
+            "pair": "29",
+            "hit": true
+          },
+          {
+            "date": "2026-02-18",
+            "pair": "29",
+            "hit": true
+          },
+          {
+            "date": "2026-03-06",
+            "pair": "29",
+            "hit": true
+          },
+          {
+            "date": "2026-03-12",
+            "pair": "29",
+            "hit": false
+          },
+          {
+            "date": "2026-03-13",
+            "pair": "29",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1,
+        "picks": [
+          {
+            "date": "2026-03-31",
+            "pair": "49",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "valStart": 530,
+      "valEnd": 575,
+      "testStart": 575,
+      "testEnd": 605,
+      "config": {
+        "families": [
+          "digit",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 8,
+        "minFamilies": 2,
+        "minMargin": 2
+      },
+      "val": {
+        "correct": 6,
+        "total": 8,
+        "accuracy": 0.75,
+        "picks": [
+          {
+            "date": "2026-04-09",
+            "pair": "04",
+            "hit": false
+          },
+          {
+            "date": "2026-04-10",
+            "pair": "49",
+            "hit": true
+          },
+          {
+            "date": "2026-04-11",
+            "pair": "49",
+            "hit": true
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "49",
+            "hit": true
+          },
+          {
+            "date": "2026-04-30",
+            "pair": "89",
+            "hit": true
+          },
+          {
+            "date": "2026-05-04",
+            "pair": "89",
+            "hit": false
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "08",
+            "hit": true
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "45",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1,
+        "picks": [
+          {
+            "date": "2026-06-04",
+            "pair": "89",
+            "hit": true
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "89",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "valStart": 466,
+      "valEnd": 511,
+      "testStart": 511,
+      "testEnd": 541,
+      "config": {
+        "families": [
+          "target",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 8,
+        "minFamilies": 2,
+        "minMargin": 3
+      },
+      "val": {
+        "correct": 6,
+        "total": 8,
+        "accuracy": 0.75,
+        "picks": [
+          {
+            "date": "2026-01-27",
+            "pair": "04",
+            "hit": false
+          },
+          {
+            "date": "2026-01-29",
+            "pair": "08",
+            "hit": true
+          },
+          {
+            "date": "2026-01-30",
+            "pair": "08",
+            "hit": true
+          },
+          {
+            "date": "2026-01-31",
+            "pair": "08",
+            "hit": true
+          },
+          {
+            "date": "2026-02-04",
+            "pair": "08",
+            "hit": true
+          },
+          {
+            "date": "2026-02-10",
+            "pair": "28",
+            "hit": false
+          },
+          {
+            "date": "2026-02-21",
+            "pair": "18",
+            "hit": true
+          },
+          {
+            "date": "2026-02-23",
+            "pair": "08",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 1,
+        "total": 2,
+        "accuracy": 0.5,
+        "picks": [
+          {
+            "date": "2026-03-23",
+            "pair": "17",
+            "hit": false
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "58",
+            "hit": true
+          }
+        ]
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "valStart": 531,
+      "valEnd": 576,
+      "testStart": 576,
+      "testEnd": 606,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 6,
+        "minFamilies": 3,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 11,
+        "total": 15,
+        "accuracy": 0.7333333333333333,
+        "picks": [
+          {
+            "date": "2026-04-09",
+            "pair": "48",
+            "hit": true
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "28",
+            "hit": true
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "28",
+            "hit": false
+          },
+          {
+            "date": "2026-04-21",
+            "pair": "26",
+            "hit": true
+          },
+          {
+            "date": "2026-04-22",
+            "pair": "26",
+            "hit": false
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "16",
+            "hit": false
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "26",
+            "hit": false
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "27",
+            "hit": true
+          },
+          {
+            "date": "2026-05-25",
+            "pair": "23",
+            "hit": true
+          },
+          {
+            "date": "2026-05-26",
+            "pair": "23",
+            "hit": true
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "23",
+            "hit": true
+          },
+          {
+            "date": "2026-05-28",
+            "pair": "23",
+            "hit": true
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "23",
+            "hit": true
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "23",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 1,
+        "total": 4,
+        "accuracy": 0.25,
+        "picks": [
+          {
+            "date": "2026-06-01",
+            "pair": "23",
+            "hit": false
+          },
+          {
+            "date": "2026-06-13",
+            "pair": "23",
+            "hit": false
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "78",
+            "hit": true
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "78",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "valStart": 649,
+      "valEnd": 694,
+      "testStart": 694,
+      "testEnd": 724,
+      "config": {
+        "families": [
+          "target",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 6,
+        "minFamilies": 2,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 8,
+        "total": 11,
+        "accuracy": 0.7272727272727273,
+        "picks": [
+          {
+            "date": "2026-04-22",
+            "pair": "26",
+            "hit": true
+          },
+          {
+            "date": "2026-05-03",
+            "pair": "29",
+            "hit": false
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-05-17",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-05-19",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-05-26",
+            "pair": "09",
+            "hit": true
+          },
+          {
+            "date": "2026-05-27",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-05-28",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "02",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 6,
+        "total": 12,
+        "accuracy": 0.5,
+        "picks": [
+          {
+            "date": "2026-06-07",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-06-11",
+            "pair": "05",
+            "hit": true
+          },
+          {
+            "date": "2026-06-12",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-06-13",
+            "pair": "35",
+            "hit": true
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-06-28",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-07-05",
+            "pair": "35",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "valStart": 619,
+      "valEnd": 664,
+      "testStart": 664,
+      "testEnd": 694,
+      "config": {
+        "families": [
+          "target",
+          "digit",
+          "shape"
+        ],
+        "minVotes": 12,
+        "minFamilies": 3,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 8,
+        "total": 11,
+        "accuracy": 0.7272727272727273,
+        "picks": [
+          {
+            "date": "2026-03-23",
+            "pair": "13",
+            "hit": true
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "13",
+            "hit": false
+          },
+          {
+            "date": "2026-03-29",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-03-31",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-04-18",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-04-19",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "18",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 4,
+        "total": 11,
+        "accuracy": 0.36363636363636365,
+        "picks": [
+          {
+            "date": "2026-05-11",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "01",
+            "hit": true
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "01",
+            "hit": false
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "02",
+            "hit": true
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-05-21",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-05-31",
+            "pair": "02",
+            "hit": false
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "02",
+            "hit": false
+          }
+        ]
+      }
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "valStart": 531,
+      "valEnd": 576,
+      "testStart": 576,
+      "testEnd": 606,
+      "config": {
+        "families": [
+          "target",
+          "opposite",
+          "source"
+        ],
+        "minVotes": 8,
+        "minFamilies": 2,
+        "minMargin": 1
+      },
+      "val": {
+        "correct": 8,
+        "total": 11,
+        "accuracy": 0.7272727272727273,
+        "picks": [
+          {
+            "date": "2026-04-30",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-01",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-04",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-05-06",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-07",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-05-11",
+            "pair": "12",
+            "hit": false
+          },
+          {
+            "date": "2026-05-12",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-16",
+            "pair": "12",
+            "hit": true
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "12",
+            "hit": true
+          }
+        ]
+      },
+      "test": {
+        "correct": 9,
+        "total": 19,
+        "accuracy": 0.47368421052631576,
+        "picks": [
+          {
+            "date": "2026-06-06",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-08",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-09",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-11",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-12",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-06-13",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-06-16",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-06-20",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-06-22",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-23",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "25",
+            "hit": true
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-06-27",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "25",
+            "hit": false
+          },
+          {
+            "date": "2026-07-02",
+            "pair": "25",
+            "hit": false
+          }
+        ]
+      }
+    }
+  ]
+}

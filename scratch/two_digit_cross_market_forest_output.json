@@ -1,0 +1,3946 @@
+{
+  "generatedAt": "2026-07-10T07:44:49.595245+00:00",
+  "baseForestConfigs": 12,
+  "modelVariants": 96,
+  "forwardFolds": 48,
+  "viable80Count": 0,
+  "viable85Count": 0,
+  "bestMin30": {
+    "gate": {
+      "minValCalls": 60,
+      "minValAccuracy": 0.7
+    },
+    "summary": {
+      "correct": 40,
+      "digitCorrect": 102,
+      "total": 63,
+      "accuracy": 0.6349206349206349,
+      "avgCorrectDigits": 1.619047619047619,
+      "folds": 3
+    },
+    "folds": [
+      {
+        "market": "Time Bazar",
+        "side": "open",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "depth": 2,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.25
+        },
+        "validation": {
+          "correct": 47,
+          "digitCorrect": 113,
+          "total": 67,
+          "accuracy": 0.7014925373134329,
+          "avgCorrectDigits": 1.6865671641791045
+        },
+        "test": {
+          "correct": 16,
+          "digitCorrect": 36,
+          "total": 20,
+          "accuracy": 0.8,
+          "avgCorrectDigits": 1.8
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-06-27",
+        "config": {
+          "depth": 4,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.25
+        },
+        "validation": {
+          "correct": 48,
+          "digitCorrect": 113,
+          "total": 67,
+          "accuracy": 0.7164179104477612,
+          "avgCorrectDigits": 1.6865671641791045
+        },
+        "test": {
+          "correct": 11,
+          "digitCorrect": 33,
+          "total": 23,
+          "accuracy": 0.4782608695652174,
+          "avgCorrectDigits": 1.434782608695652
+        }
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "close",
+        "testWindow": "2026-04-27..2026-05-30",
+        "config": {
+          "depth": 2,
+          "minLeaf": 10,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.25
+        },
+        "validation": {
+          "correct": 47,
+          "digitCorrect": 112,
+          "total": 67,
+          "accuracy": 0.7014925373134329,
+          "avgCorrectDigits": 1.671641791044776
+        },
+        "test": {
+          "correct": 13,
+          "digitCorrect": 33,
+          "total": 20,
+          "accuracy": 0.65,
+          "avgCorrectDigits": 1.65
+        }
+      }
+    ]
+  },
+  "bestMin120": {
+    "gate": {
+      "minValCalls": 20,
+      "minValAccuracy": 0.7
+    },
+    "summary": {
+      "correct": 131,
+      "digitCorrect": 356,
+      "total": 230,
+      "accuracy": 0.5695652173913044,
+      "avgCorrectDigits": 1.5478260869565217,
+      "folds": 24
+    },
+    "folds": [
+      {
+        "market": "Sridevi",
+        "side": "close",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "depth": 3,
+          "minLeaf": 10,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 38,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.6521739130434783
+        },
+        "test": {
+          "correct": 7,
+          "digitCorrect": 18,
+          "total": 11,
+          "accuracy": 0.6363636363636364,
+          "avgCorrectDigits": 1.6363636363636365
+        }
+      },
+      {
+        "market": "Time Bazar",
+        "side": "open",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "depth": 4,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 18,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.782608695652174,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 6,
+          "digitCorrect": 15,
+          "total": 9,
+          "accuracy": 0.6666666666666666,
+          "avgCorrectDigits": 1.6666666666666667
+        }
+      },
+      {
+        "market": "Time Bazar",
+        "side": "close",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "depth": 2,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 38,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.6521739130434783
+        },
+        "test": {
+          "correct": 10,
+          "digitCorrect": 22,
+          "total": 12,
+          "accuracy": 0.8333333333333334,
+          "avgCorrectDigits": 1.8333333333333333
+        }
+      },
+      {
+        "market": "Madhur Day",
+        "side": "open",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "depth": 2,
+          "minLeaf": 10,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 19,
+          "digitCorrect": 41,
+          "total": 23,
+          "accuracy": 0.8260869565217391,
+          "avgCorrectDigits": 1.7826086956521738
+        },
+        "test": {
+          "correct": 4,
+          "digitCorrect": 13,
+          "total": 9,
+          "accuracy": 0.4444444444444444,
+          "avgCorrectDigits": 1.4444444444444444
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "open",
+        "testWindow": "2026-05-25..2026-06-27",
+        "config": {
+          "depth": 2,
+          "minLeaf": 20,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 12,
+          "digitCorrect": 26,
+          "total": 14,
+          "accuracy": 0.8571428571428571,
+          "avgCorrectDigits": 1.8571428571428572
+        }
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-06-27",
+        "config": {
+          "depth": 4,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.5
+        },
+        "validation": {
+          "correct": 33,
+          "digitCorrect": 76,
+          "total": 45,
+          "accuracy": 0.7333333333333333,
+          "avgCorrectDigits": 1.6888888888888889
+        },
+        "test": {
+          "correct": 8,
+          "digitCorrect": 23,
+          "total": 16,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.4375
+        }
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "open",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "depth": 2,
+          "minLeaf": 10,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 18,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.782608695652174,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 1,
+          "digitCorrect": 8,
+          "total": 7,
+          "accuracy": 0.14285714285714285,
+          "avgCorrectDigits": 1.1428571428571428
+        }
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "close",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "depth": 3,
+          "minLeaf": 10,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 18,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.782608695652174,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 4,
+          "digitCorrect": 13,
+          "total": 9,
+          "accuracy": 0.4444444444444444,
+          "avgCorrectDigits": 1.4444444444444444
+        }
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "close",
+        "testWindow": "2026-04-27..2026-05-30",
+        "config": {
+          "depth": 2,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 19,
+          "digitCorrect": 42,
+          "total": 23,
+          "accuracy": 0.8260869565217391,
+          "avgCorrectDigits": 1.826086956521739
+        },
+        "test": {
+          "correct": 9,
+          "digitCorrect": 23,
+          "total": 14,
+          "accuracy": 0.6428571428571429,
+          "avgCorrectDigits": 1.6428571428571428
+        }
+      },
+      {
+        "market": "Kalyan",
+        "side": "open",
+        "testWindow": "2026-04-27..2026-05-30",
+        "config": {
+          "depth": 3,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 4,
+          "digitCorrect": 11,
+          "total": 7,
+          "accuracy": 0.5714285714285714,
+          "avgCorrectDigits": 1.5714285714285714
+        }
+      },
+      {
+        "market": "Kalyan",
+        "side": "close",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "depth": 4,
+          "minLeaf": 20,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 2,
+          "digitCorrect": 10,
+          "total": 8,
+          "accuracy": 0.25,
+          "avgCorrectDigits": 1.25
+        }
+      },
+      {
+        "market": "Kalyan",
+        "side": "close",
+        "testWindow": "2026-04-27..2026-05-30",
+        "config": {
+          "depth": 3,
+          "minLeaf": 10,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 5,
+          "digitCorrect": 13,
+          "total": 8,
+          "accuracy": 0.625,
+          "avgCorrectDigits": 1.625
+        }
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "open",
+        "testWindow": "2026-06-06..2026-07-05",
+        "config": {
+          "depth": 2,
+          "minLeaf": 10,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 3,
+          "digitCorrect": 8,
+          "total": 5,
+          "accuracy": 0.6,
+          "avgCorrectDigits": 1.6
+        }
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "close",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "depth": 4,
+          "minLeaf": 10,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 18,
+          "digitCorrect": 41,
+          "total": 23,
+          "accuracy": 0.782608695652174,
+          "avgCorrectDigits": 1.7826086956521738
+        },
+        "test": {
+          "correct": 5,
+          "digitCorrect": 14,
+          "total": 10,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.4
+        }
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "testWindow": "2026-05-20..2026-07-03",
+        "config": {
+          "depth": 4,
+          "minLeaf": 20,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 19,
+          "digitCorrect": 42,
+          "total": 23,
+          "accuracy": 0.8260869565217391,
+          "avgCorrectDigits": 1.826086956521739
+        },
+        "test": {
+          "correct": 4,
+          "digitCorrect": 12,
+          "total": 8,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.5
+        }
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "testWindow": "2026-04-08..2026-05-19",
+        "config": {
+          "depth": 2,
+          "minLeaf": 20,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 19,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.8260869565217391,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 5,
+          "digitCorrect": 13,
+          "total": 8,
+          "accuracy": 0.625,
+          "avgCorrectDigits": 1.625
+        }
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "close",
+        "testWindow": "2026-04-08..2026-05-19",
+        "config": {
+          "depth": 2,
+          "minLeaf": 10,
+          "maxFeatures": 24,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 39,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.6956521739130435
+        },
+        "test": {
+          "correct": 7,
+          "digitCorrect": 21,
+          "total": 14,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.5
+        }
+      },
+      {
+        "market": "Madhur Night",
+        "side": "close",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "depth": 2,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 18,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.782608695652174,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 6,
+          "digitCorrect": 18,
+          "total": 12,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.5
+        }
+      },
+      {
+        "market": "Madhur Night",
+        "side": "close",
+        "testWindow": "2026-04-27..2026-05-30",
+        "config": {
+          "depth": 2,
+          "minLeaf": 10,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 18,
+          "digitCorrect": 41,
+          "total": 23,
+          "accuracy": 0.782608695652174,
+          "avgCorrectDigits": 1.7826086956521738
+        },
+        "test": {
+          "correct": 6,
+          "digitCorrect": 13,
+          "total": 9,
+          "accuracy": 0.6666666666666666,
+          "avgCorrectDigits": 1.4444444444444444
+        }
+      },
+      {
+        "market": "Milan Night",
+        "side": "close",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "depth": 4,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 0,
+          "digitCorrect": 4,
+          "total": 5,
+          "accuracy": 0.0,
+          "avgCorrectDigits": 0.8
+        }
+      },
+      {
+        "market": "Rajdhani Night",
+        "side": "open",
+        "testWindow": "2026-05-25..2026-07-03",
+        "config": {
+          "depth": 3,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 19,
+          "digitCorrect": 41,
+          "total": 23,
+          "accuracy": 0.8260869565217391,
+          "avgCorrectDigits": 1.7826086956521738
+        },
+        "test": {
+          "correct": 2,
+          "digitCorrect": 9,
+          "total": 7,
+          "accuracy": 0.2857142857142857,
+          "avgCorrectDigits": 1.2857142857142858
+        }
+      },
+      {
+        "market": "Rajdhani Night",
+        "side": "open",
+        "testWindow": "2026-04-13..2026-05-22",
+        "config": {
+          "depth": 4,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 18,
+          "digitCorrect": 41,
+          "total": 23,
+          "accuracy": 0.782608695652174,
+          "avgCorrectDigits": 1.7826086956521738
+        },
+        "test": {
+          "correct": 6,
+          "digitCorrect": 17,
+          "total": 11,
+          "accuracy": 0.5454545454545454,
+          "avgCorrectDigits": 1.5454545454545454
+        }
+      },
+      {
+        "market": "Rajdhani Night",
+        "side": "close",
+        "testWindow": "2026-04-13..2026-05-22",
+        "config": {
+          "depth": 4,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "digit_risk",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 17,
+          "digitCorrect": 40,
+          "total": 23,
+          "accuracy": 0.7391304347826086,
+          "avgCorrectDigits": 1.7391304347826086
+        },
+        "test": {
+          "correct": 4,
+          "digitCorrect": 10,
+          "total": 6,
+          "accuracy": 0.6666666666666666,
+          "avgCorrectDigits": 1.6666666666666667
+        }
+      },
+      {
+        "market": "Main Bazar",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-07-03",
+        "config": {
+          "depth": 2,
+          "minLeaf": 20,
+          "maxFeatures": 12,
+          "trees": 15,
+          "seed": 47,
+          "outputMode": "pair_probability",
+          "confidenceQuantile": 0.75
+        },
+        "validation": {
+          "correct": 19,
+          "digitCorrect": 42,
+          "total": 23,
+          "accuracy": 0.8260869565217391,
+          "avgCorrectDigits": 1.826086956521739
+        },
+        "test": {
+          "correct": 11,
+          "digitCorrect": 22,
+          "total": 11,
+          "accuracy": 1.0,
+          "avgCorrectDigits": 2.0
+        }
+      }
+    ]
+  },
+  "bestMin720": null,
+  "results": [
+    {
+      "gate": {
+        "minValCalls": 20,
+        "minValAccuracy": 0.6
+      },
+      "summary": {
+        "correct": 253,
+        "digitCorrect": 700,
+        "total": 459,
+        "accuracy": 0.55119825708061,
+        "avgCorrectDigits": 1.5250544662309369,
+        "folds": 47
+      },
+      "folds": [
+        {
+          "market": "Sridevi",
+          "side": "open",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.5
+          },
+          "validation": {
+            "correct": 27,
+            "digitCorrect": 71,
+            "total": 45,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.5777777777777777
+          },
+          "test": {
+            "correct": 12,
+            "digitCorrect": 31,
+            "total": 22,
+            "accuracy": 0.5454545454545454,
+            "avgCorrectDigits": 1.4090909090909092
+          }
+        },
+        {
+          "market": "Sridevi",
+          "side": "close",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 14,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6086956521739131,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 11,
+            "total": 6,
+            "accuracy": 0.8333333333333334,
+            "avgCorrectDigits": 1.8333333333333333
+          }
+        },
+        {
+          "market": "Sridevi",
+          "side": "close",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 7,
+            "digitCorrect": 18,
+            "total": 11,
+            "accuracy": 0.6363636363636364,
+            "avgCorrectDigits": 1.6363636363636365
+          }
+        },
+        {
+          "market": "Time Bazar",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 15,
+            "total": 9,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.6666666666666667
+          }
+        },
+        {
+          "market": "Time Bazar",
+          "side": "open",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 14,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6086956521739131,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 3,
+            "digitCorrect": 9,
+            "total": 6,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Time Bazar",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 22,
+            "total": 12,
+            "accuracy": 0.8333333333333334,
+            "avgCorrectDigits": 1.8333333333333333
+          }
+        },
+        {
+          "market": "Time Bazar",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 16,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6956521739130435,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 10,
+            "total": 6,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.6666666666666667
+          }
+        },
+        {
+          "market": "Madhur Day",
+          "side": "open",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 15,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.6521739130434783,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 3,
+            "digitCorrect": 7,
+            "total": 5,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.4
+          }
+        },
+        {
+          "market": "Madhur Day",
+          "side": "open",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 13,
+            "total": 9,
+            "accuracy": 0.4444444444444444,
+            "avgCorrectDigits": 1.4444444444444444
+          }
+        },
+        {
+          "market": "Madhur Day",
+          "side": "close",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.5
+          },
+          "validation": {
+            "correct": 31,
+            "digitCorrect": 74,
+            "total": 45,
+            "accuracy": 0.6888888888888889,
+            "avgCorrectDigits": 1.6444444444444444
+          },
+          "test": {
+            "correct": 7,
+            "digitCorrect": 24,
+            "total": 18,
+            "accuracy": 0.3888888888888889,
+            "avgCorrectDigits": 1.3333333333333333
+          }
+        },
+        {
+          "market": "Madhur Day",
+          "side": "close",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 14,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6086956521739131,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 14,
+            "total": 9,
+            "accuracy": 0.5555555555555556,
+            "avgCorrectDigits": 1.5555555555555556
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 12,
+            "digitCorrect": 26,
+            "total": 14,
+            "accuracy": 0.8571428571428571,
+            "avgCorrectDigits": 1.8571428571428572
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "open",
+          "testWindow": "2026-04-20..2026-05-23",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 16,
+            "digitCorrect": 39,
+            "total": 23,
+            "accuracy": 0.6956521739130435,
+            "avgCorrectDigits": 1.6956521739130435
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 10,
+            "total": 6,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.6666666666666667
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.5
+          },
+          "validation": {
+            "correct": 33,
+            "digitCorrect": 76,
+            "total": 45,
+            "accuracy": 0.7333333333333333,
+            "avgCorrectDigits": 1.6888888888888889
+          },
+          "test": {
+            "correct": 8,
+            "digitCorrect": 23,
+            "total": 16,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.4375
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-04-20..2026-05-23",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 16,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6956521739130435,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 10,
+            "total": 5,
+            "accuracy": 1.0,
+            "avgCorrectDigits": 2.0
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 1,
+            "digitCorrect": 8,
+            "total": 7,
+            "accuracy": 0.14285714285714285,
+            "avgCorrectDigits": 1.1428571428571428
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "open",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 16,
+            "digitCorrect": 39,
+            "total": 23,
+            "accuracy": 0.6956521739130435,
+            "avgCorrectDigits": 1.6956521739130435
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 10,
+            "total": 6,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.6666666666666667
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 13,
+            "total": 9,
+            "accuracy": 0.4444444444444444,
+            "avgCorrectDigits": 1.4444444444444444
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 9,
+            "digitCorrect": 23,
+            "total": 14,
+            "accuracy": 0.6428571428571429,
+            "avgCorrectDigits": 1.6428571428571428
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 15,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6521739130434783,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 7,
+            "digitCorrect": 19,
+            "total": 12,
+            "accuracy": 0.5833333333333334,
+            "avgCorrectDigits": 1.5833333333333333
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "open",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 11,
+            "total": 7,
+            "accuracy": 0.5714285714285714,
+            "avgCorrectDigits": 1.5714285714285714
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 2,
+            "digitCorrect": 10,
+            "total": 8,
+            "accuracy": 0.25,
+            "avgCorrectDigits": 1.25
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 13,
+            "total": 8,
+            "accuracy": 0.625,
+            "avgCorrectDigits": 1.625
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "open",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 3,
+            "digitCorrect": 8,
+            "total": 5,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.6
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "open",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 16,
+            "digitCorrect": 39,
+            "total": 23,
+            "accuracy": 0.6956521739130435,
+            "avgCorrectDigits": 1.6956521739130435
+          },
+          "test": {
+            "correct": 3,
+            "digitCorrect": 7,
+            "total": 5,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.4
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "close",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 15,
+            "digitCorrect": 36,
+            "total": 23,
+            "accuracy": 0.6521739130434783,
+            "avgCorrectDigits": 1.565217391304348
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 18,
+            "total": 12,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "close",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 14,
+            "total": 10,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.4
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-05-20..2026-07-03",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 12,
+            "total": 8,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-04-08..2026-05-19",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 13,
+            "total": 8,
+            "accuracy": 0.625,
+            "avgCorrectDigits": 1.625
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "close",
+          "testWindow": "2026-05-20..2026-07-03",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 15,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.6521739130434783,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 13,
+            "total": 8,
+            "accuracy": 0.625,
+            "avgCorrectDigits": 1.625
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "close",
+          "testWindow": "2026-04-08..2026-05-19",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 39,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.6956521739130435
+          },
+          "test": {
+            "correct": 7,
+            "digitCorrect": 21,
+            "total": 14,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Madhur Night",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 14,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6086956521739131,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 16,
+            "total": 12,
+            "accuracy": 0.3333333333333333,
+            "avgCorrectDigits": 1.3333333333333333
+          }
+        },
+        {
+          "market": "Madhur Night",
+          "side": "open",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 15,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.6521739130434783,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 13,
+            "total": 7,
+            "accuracy": 0.8571428571428571,
+            "avgCorrectDigits": 1.8571428571428572
+          }
+        },
+        {
+          "market": "Madhur Night",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 18,
+            "total": 12,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Madhur Night",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 13,
+            "total": 9,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.4444444444444444
+          }
+        },
+        {
+          "market": "Milan Night",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 15,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.6521739130434783,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 14,
+            "total": 10,
+            "accuracy": 0.4,
+            "avgCorrectDigits": 1.4
+          }
+        },
+        {
+          "market": "Milan Night",
+          "side": "open",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 16,
+            "digitCorrect": 39,
+            "total": 23,
+            "accuracy": 0.6956521739130435,
+            "avgCorrectDigits": 1.6956521739130435
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 14,
+            "total": 10,
+            "accuracy": 0.4,
+            "avgCorrectDigits": 1.4
+          }
+        },
+        {
+          "market": "Milan Night",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 0,
+            "digitCorrect": 4,
+            "total": 5,
+            "accuracy": 0.0,
+            "avgCorrectDigits": 0.8
+          }
+        },
+        {
+          "market": "Milan Night",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 14,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6086956521739131,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 3,
+            "digitCorrect": 9,
+            "total": 6,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 2,
+            "digitCorrect": 9,
+            "total": 7,
+            "accuracy": 0.2857142857142857,
+            "avgCorrectDigits": 1.2857142857142858
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "open",
+          "testWindow": "2026-04-13..2026-05-22",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 17,
+            "total": 11,
+            "accuracy": 0.5454545454545454,
+            "avgCorrectDigits": 1.5454545454545454
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 16,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.6956521739130435,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 18,
+            "total": 14,
+            "accuracy": 0.2857142857142857,
+            "avgCorrectDigits": 1.2857142857142858
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "close",
+          "testWindow": "2026-04-13..2026-05-22",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 10,
+            "total": 6,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.6666666666666667
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 15,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6521739130434783,
+            "avgCorrectDigits": 1.608695652173913
+          },
+          "test": {
+            "correct": 3,
+            "digitCorrect": 10,
+            "total": 7,
+            "accuracy": 0.42857142857142855,
+            "avgCorrectDigits": 1.4285714285714286
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "open",
+          "testWindow": "2026-04-10..2026-05-22",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 44,
+            "digitCorrect": 108,
+            "total": 67,
+            "accuracy": 0.6567164179104478,
+            "avgCorrectDigits": 1.6119402985074627
+          },
+          "test": {
+            "correct": 15,
+            "digitCorrect": 43,
+            "total": 28,
+            "accuracy": 0.5357142857142857,
+            "avgCorrectDigits": 1.5357142857142858
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 11,
+            "digitCorrect": 22,
+            "total": 11,
+            "accuracy": 1.0,
+            "avgCorrectDigits": 2.0
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "close",
+          "testWindow": "2026-04-10..2026-05-22",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 16,
+            "digitCorrect": 39,
+            "total": 23,
+            "accuracy": 0.6956521739130435,
+            "avgCorrectDigits": 1.6956521739130435
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 14,
+            "total": 9,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.5555555555555556
+          }
+        }
+      ]
+    },
+    {
+      "gate": {
+        "minValCalls": 20,
+        "minValAccuracy": 0.7
+      },
+      "summary": {
+        "correct": 131,
+        "digitCorrect": 356,
+        "total": 230,
+        "accuracy": 0.5695652173913044,
+        "avgCorrectDigits": 1.5478260869565217,
+        "folds": 24
+      },
+      "folds": [
+        {
+          "market": "Sridevi",
+          "side": "close",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 7,
+            "digitCorrect": 18,
+            "total": 11,
+            "accuracy": 0.6363636363636364,
+            "avgCorrectDigits": 1.6363636363636365
+          }
+        },
+        {
+          "market": "Time Bazar",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 15,
+            "total": 9,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.6666666666666667
+          }
+        },
+        {
+          "market": "Time Bazar",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 38,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.6521739130434783
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 22,
+            "total": 12,
+            "accuracy": 0.8333333333333334,
+            "avgCorrectDigits": 1.8333333333333333
+          }
+        },
+        {
+          "market": "Madhur Day",
+          "side": "open",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 13,
+            "total": 9,
+            "accuracy": 0.4444444444444444,
+            "avgCorrectDigits": 1.4444444444444444
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 12,
+            "digitCorrect": 26,
+            "total": 14,
+            "accuracy": 0.8571428571428571,
+            "avgCorrectDigits": 1.8571428571428572
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.5
+          },
+          "validation": {
+            "correct": 33,
+            "digitCorrect": 76,
+            "total": 45,
+            "accuracy": 0.7333333333333333,
+            "avgCorrectDigits": 1.6888888888888889
+          },
+          "test": {
+            "correct": 8,
+            "digitCorrect": 23,
+            "total": 16,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.4375
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 1,
+            "digitCorrect": 8,
+            "total": 7,
+            "accuracy": 0.14285714285714285,
+            "avgCorrectDigits": 1.1428571428571428
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 13,
+            "total": 9,
+            "accuracy": 0.4444444444444444,
+            "avgCorrectDigits": 1.4444444444444444
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 9,
+            "digitCorrect": 23,
+            "total": 14,
+            "accuracy": 0.6428571428571429,
+            "avgCorrectDigits": 1.6428571428571428
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "open",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 11,
+            "total": 7,
+            "accuracy": 0.5714285714285714,
+            "avgCorrectDigits": 1.5714285714285714
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 2,
+            "digitCorrect": 10,
+            "total": 8,
+            "accuracy": 0.25,
+            "avgCorrectDigits": 1.25
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 13,
+            "total": 8,
+            "accuracy": 0.625,
+            "avgCorrectDigits": 1.625
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "open",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 3,
+            "digitCorrect": 8,
+            "total": 5,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.6
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "close",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 14,
+            "total": 10,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.4
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-05-20..2026-07-03",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 12,
+            "total": 8,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-04-08..2026-05-19",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 13,
+            "total": 8,
+            "accuracy": 0.625,
+            "avgCorrectDigits": 1.625
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "close",
+          "testWindow": "2026-04-08..2026-05-19",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 39,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.6956521739130435
+          },
+          "test": {
+            "correct": 7,
+            "digitCorrect": 21,
+            "total": 14,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Madhur Night",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 18,
+            "total": 12,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Madhur Night",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 13,
+            "total": 9,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.4444444444444444
+          }
+        },
+        {
+          "market": "Milan Night",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 0,
+            "digitCorrect": 4,
+            "total": 5,
+            "accuracy": 0.0,
+            "avgCorrectDigits": 0.8
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 2,
+            "digitCorrect": 9,
+            "total": 7,
+            "accuracy": 0.2857142857142857,
+            "avgCorrectDigits": 1.2857142857142858
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "open",
+          "testWindow": "2026-04-13..2026-05-22",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 18,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.782608695652174,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 6,
+            "digitCorrect": 17,
+            "total": 11,
+            "accuracy": 0.5454545454545454,
+            "avgCorrectDigits": 1.5454545454545454
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "close",
+          "testWindow": "2026-04-13..2026-05-22",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 17,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 10,
+            "total": 6,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.6666666666666667
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 11,
+            "digitCorrect": 22,
+            "total": 11,
+            "accuracy": 1.0,
+            "avgCorrectDigits": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "gate": {
+        "minValCalls": 20,
+        "minValAccuracy": 0.8
+      },
+      "summary": {
+        "correct": 35,
+        "digitCorrect": 92,
+        "total": 57,
+        "accuracy": 0.6140350877192983,
+        "avgCorrectDigits": 1.6140350877192982,
+        "folds": 6
+      },
+      "folds": [
+        {
+          "market": "Madhur Day",
+          "side": "open",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 13,
+            "total": 9,
+            "accuracy": 0.4444444444444444,
+            "avgCorrectDigits": 1.4444444444444444
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 9,
+            "digitCorrect": 23,
+            "total": 14,
+            "accuracy": 0.6428571428571429,
+            "avgCorrectDigits": 1.6428571428571428
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-05-20..2026-07-03",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 4,
+            "digitCorrect": 12,
+            "total": 8,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.5
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-04-08..2026-05-19",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 40,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7391304347826086
+          },
+          "test": {
+            "correct": 5,
+            "digitCorrect": 13,
+            "total": 8,
+            "accuracy": 0.625,
+            "avgCorrectDigits": 1.625
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 41,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.7826086956521738
+          },
+          "test": {
+            "correct": 2,
+            "digitCorrect": 9,
+            "total": 7,
+            "accuracy": 0.2857142857142857,
+            "avgCorrectDigits": 1.2857142857142858
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.75
+          },
+          "validation": {
+            "correct": 19,
+            "digitCorrect": 42,
+            "total": 23,
+            "accuracy": 0.8260869565217391,
+            "avgCorrectDigits": 1.826086956521739
+          },
+          "test": {
+            "correct": 11,
+            "digitCorrect": 22,
+            "total": 11,
+            "accuracy": 1.0,
+            "avgCorrectDigits": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "gate": {
+        "minValCalls": 60,
+        "minValAccuracy": 0.6
+      },
+      "summary": {
+        "correct": 372,
+        "digitCorrect": 1037,
+        "total": 700,
+        "accuracy": 0.5314285714285715,
+        "avgCorrectDigits": 1.4814285714285715,
+        "folds": 29
+      },
+      "folds": [
+        {
+          "market": "Time Bazar",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 47,
+            "digitCorrect": 113,
+            "total": 67,
+            "accuracy": 0.7014925373134329,
+            "avgCorrectDigits": 1.6865671641791045
+          },
+          "test": {
+            "correct": 16,
+            "digitCorrect": 36,
+            "total": 20,
+            "accuracy": 0.8,
+            "avgCorrectDigits": 1.8
+          }
+        },
+        {
+          "market": "Time Bazar",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 42,
+            "digitCorrect": 106,
+            "total": 67,
+            "accuracy": 0.6268656716417911,
+            "avgCorrectDigits": 1.5820895522388059
+          },
+          "test": {
+            "correct": 14,
+            "digitCorrect": 37,
+            "total": 23,
+            "accuracy": 0.6086956521739131,
+            "avgCorrectDigits": 1.608695652173913
+          }
+        },
+        {
+          "market": "Time Bazar",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 42,
+            "digitCorrect": 103,
+            "total": 67,
+            "accuracy": 0.6268656716417911,
+            "avgCorrectDigits": 1.537313432835821
+          },
+          "test": {
+            "correct": 9,
+            "digitCorrect": 29,
+            "total": 22,
+            "accuracy": 0.4090909090909091,
+            "avgCorrectDigits": 1.3181818181818181
+          }
+        },
+        {
+          "market": "Madhur Day",
+          "side": "open",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 41,
+            "digitCorrect": 107,
+            "total": 67,
+            "accuracy": 0.6119402985074627,
+            "avgCorrectDigits": 1.5970149253731343
+          },
+          "test": {
+            "correct": 9,
+            "digitCorrect": 27,
+            "total": 20,
+            "accuracy": 0.45,
+            "avgCorrectDigits": 1.35
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 45,
+            "digitCorrect": 111,
+            "total": 67,
+            "accuracy": 0.6716417910447762,
+            "avgCorrectDigits": 1.6567164179104477
+          },
+          "test": {
+            "correct": 18,
+            "digitCorrect": 43,
+            "total": 27,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.5925925925925926
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "open",
+          "testWindow": "2026-04-20..2026-05-23",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 41,
+            "digitCorrect": 106,
+            "total": 67,
+            "accuracy": 0.6119402985074627,
+            "avgCorrectDigits": 1.5820895522388059
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 30,
+            "total": 22,
+            "accuracy": 0.45454545454545453,
+            "avgCorrectDigits": 1.3636363636363635
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 48,
+            "digitCorrect": 113,
+            "total": 67,
+            "accuracy": 0.7164179104477612,
+            "avgCorrectDigits": 1.6865671641791045
+          },
+          "test": {
+            "correct": 11,
+            "digitCorrect": 33,
+            "total": 23,
+            "accuracy": 0.4782608695652174,
+            "avgCorrectDigits": 1.434782608695652
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-04-20..2026-05-23",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 42,
+            "digitCorrect": 106,
+            "total": 67,
+            "accuracy": 0.6268656716417911,
+            "avgCorrectDigits": 1.5820895522388059
+          },
+          "test": {
+            "correct": 8,
+            "digitCorrect": 29,
+            "total": 22,
+            "accuracy": 0.36363636363636365,
+            "avgCorrectDigits": 1.3181818181818181
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.0
+          },
+          "validation": {
+            "correct": 57,
+            "digitCorrect": 138,
+            "total": 90,
+            "accuracy": 0.6333333333333333,
+            "avgCorrectDigits": 1.5333333333333334
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 41,
+            "total": 30,
+            "accuracy": 0.43333333333333335,
+            "avgCorrectDigits": 1.3666666666666667
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "open",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 43,
+            "digitCorrect": 104,
+            "total": 67,
+            "accuracy": 0.6417910447761194,
+            "avgCorrectDigits": 1.5522388059701493
+          },
+          "test": {
+            "correct": 17,
+            "digitCorrect": 39,
+            "total": 23,
+            "accuracy": 0.7391304347826086,
+            "avgCorrectDigits": 1.6956521739130435
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.0
+          },
+          "validation": {
+            "correct": 60,
+            "digitCorrect": 147,
+            "total": 90,
+            "accuracy": 0.6666666666666666,
+            "avgCorrectDigits": 1.6333333333333333
+          },
+          "test": {
+            "correct": 18,
+            "digitCorrect": 45,
+            "total": 28,
+            "accuracy": 0.6428571428571429,
+            "avgCorrectDigits": 1.6071428571428572
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 47,
+            "digitCorrect": 112,
+            "total": 67,
+            "accuracy": 0.7014925373134329,
+            "avgCorrectDigits": 1.671641791044776
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 33,
+            "total": 20,
+            "accuracy": 0.65,
+            "avgCorrectDigits": 1.65
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 43,
+            "digitCorrect": 108,
+            "total": 67,
+            "accuracy": 0.6417910447761194,
+            "avgCorrectDigits": 1.6119402985074627
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 30,
+            "total": 22,
+            "accuracy": 0.45454545454545453,
+            "avgCorrectDigits": 1.3636363636363635
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "open",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 42,
+            "digitCorrect": 107,
+            "total": 67,
+            "accuracy": 0.6268656716417911,
+            "avgCorrectDigits": 1.5970149253731343
+          },
+          "test": {
+            "correct": 12,
+            "digitCorrect": 32,
+            "total": 20,
+            "accuracy": 0.6,
+            "avgCorrectDigits": 1.6
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 41,
+            "digitCorrect": 105,
+            "total": 67,
+            "accuracy": 0.6119402985074627,
+            "avgCorrectDigits": 1.5671641791044777
+          },
+          "test": {
+            "correct": 17,
+            "digitCorrect": 44,
+            "total": 27,
+            "accuracy": 0.6296296296296297,
+            "avgCorrectDigits": 1.6296296296296295
+          }
+        },
+        {
+          "market": "Kalyan",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 43,
+            "digitCorrect": 108,
+            "total": 67,
+            "accuracy": 0.6417910447761194,
+            "avgCorrectDigits": 1.6119402985074627
+          },
+          "test": {
+            "correct": 15,
+            "digitCorrect": 36,
+            "total": 21,
+            "accuracy": 0.7142857142857143,
+            "avgCorrectDigits": 1.7142857142857142
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "open",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 44,
+            "digitCorrect": 109,
+            "total": 67,
+            "accuracy": 0.6567164179104478,
+            "avgCorrectDigits": 1.626865671641791
+          },
+          "test": {
+            "correct": 15,
+            "digitCorrect": 39,
+            "total": 27,
+            "accuracy": 0.5555555555555556,
+            "avgCorrectDigits": 1.4444444444444444
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "close",
+          "testWindow": "2026-06-06..2026-07-05",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 41,
+            "digitCorrect": 105,
+            "total": 67,
+            "accuracy": 0.6119402985074627,
+            "avgCorrectDigits": 1.5671641791044777
+          },
+          "test": {
+            "correct": 8,
+            "digitCorrect": 26,
+            "total": 21,
+            "accuracy": 0.38095238095238093,
+            "avgCorrectDigits": 1.2380952380952381
+          }
+        },
+        {
+          "market": "Sridevi Night",
+          "side": "close",
+          "testWindow": "2026-05-07..2026-06-05",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 41,
+            "digitCorrect": 105,
+            "total": 67,
+            "accuracy": 0.6119402985074627,
+            "avgCorrectDigits": 1.5671641791044777
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 33,
+            "total": 25,
+            "accuracy": 0.4,
+            "avgCorrectDigits": 1.32
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-05-20..2026-07-03",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 43,
+            "digitCorrect": 107,
+            "total": 67,
+            "accuracy": 0.6417910447761194,
+            "avgCorrectDigits": 1.5970149253731343
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 33,
+            "total": 25,
+            "accuracy": 0.4,
+            "avgCorrectDigits": 1.32
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "open",
+          "testWindow": "2026-04-08..2026-05-19",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 41,
+            "digitCorrect": 105,
+            "total": 67,
+            "accuracy": 0.6119402985074627,
+            "avgCorrectDigits": 1.5671641791044777
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 38,
+            "total": 27,
+            "accuracy": 0.48148148148148145,
+            "avgCorrectDigits": 1.4074074074074074
+          }
+        },
+        {
+          "market": "Kalyan Night",
+          "side": "close",
+          "testWindow": "2026-04-08..2026-05-19",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 24,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 45,
+            "digitCorrect": 109,
+            "total": 67,
+            "accuracy": 0.6716417910447762,
+            "avgCorrectDigits": 1.626865671641791
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 38,
+            "total": 26,
+            "accuracy": 0.5,
+            "avgCorrectDigits": 1.4615384615384615
+          }
+        },
+        {
+          "market": "Madhur Night",
+          "side": "close",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 45,
+            "digitCorrect": 109,
+            "total": 67,
+            "accuracy": 0.6716417910447762,
+            "avgCorrectDigits": 1.626865671641791
+          },
+          "test": {
+            "correct": 10,
+            "digitCorrect": 29,
+            "total": 22,
+            "accuracy": 0.45454545454545453,
+            "avgCorrectDigits": 1.3181818181818181
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 3,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 44,
+            "digitCorrect": 108,
+            "total": 67,
+            "accuracy": 0.6567164179104478,
+            "avgCorrectDigits": 1.6119402985074627
+          },
+          "test": {
+            "correct": 9,
+            "digitCorrect": 34,
+            "total": 25,
+            "accuracy": 0.36,
+            "avgCorrectDigits": 1.36
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "open",
+          "testWindow": "2026-04-13..2026-05-22",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 44,
+            "digitCorrect": 110,
+            "total": 67,
+            "accuracy": 0.6567164179104478,
+            "avgCorrectDigits": 1.6417910447761195
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 36,
+            "total": 23,
+            "accuracy": 0.5652173913043478,
+            "avgCorrectDigits": 1.565217391304348
+          }
+        },
+        {
+          "market": "Rajdhani Night",
+          "side": "close",
+          "testWindow": "2026-04-13..2026-05-22",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 41,
+            "digitCorrect": 105,
+            "total": 67,
+            "accuracy": 0.6119402985074627,
+            "avgCorrectDigits": 1.5671641791044777
+          },
+          "test": {
+            "correct": 14,
+            "digitCorrect": 40,
+            "total": 26,
+            "accuracy": 0.5384615384615384,
+            "avgCorrectDigits": 1.5384615384615385
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "open",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 3,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.0
+          },
+          "validation": {
+            "correct": 56,
+            "digitCorrect": 142,
+            "total": 90,
+            "accuracy": 0.6222222222222222,
+            "avgCorrectDigits": 1.5777777777777777
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 40,
+            "total": 30,
+            "accuracy": 0.43333333333333335,
+            "avgCorrectDigits": 1.3333333333333333
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "open",
+          "testWindow": "2026-04-10..2026-05-22",
+          "config": {
+            "depth": 4,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 44,
+            "digitCorrect": 108,
+            "total": 67,
+            "accuracy": 0.6567164179104478,
+            "avgCorrectDigits": 1.6119402985074627
+          },
+          "test": {
+            "correct": 15,
+            "digitCorrect": 43,
+            "total": 28,
+            "accuracy": 0.5357142857142857,
+            "avgCorrectDigits": 1.5357142857142858
+          }
+        },
+        {
+          "market": "Main Bazar",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-07-03",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 43,
+            "digitCorrect": 107,
+            "total": 67,
+            "accuracy": 0.6417910447761194,
+            "avgCorrectDigits": 1.5970149253731343
+          },
+          "test": {
+            "correct": 19,
+            "digitCorrect": 44,
+            "total": 25,
+            "accuracy": 0.76,
+            "avgCorrectDigits": 1.76
+          }
+        }
+      ]
+    },
+    {
+      "gate": {
+        "minValCalls": 60,
+        "minValAccuracy": 0.7
+      },
+      "summary": {
+        "correct": 40,
+        "digitCorrect": 102,
+        "total": 63,
+        "accuracy": 0.6349206349206349,
+        "avgCorrectDigits": 1.619047619047619,
+        "folds": 3
+      },
+      "folds": [
+        {
+          "market": "Time Bazar",
+          "side": "open",
+          "testWindow": "2026-06-01..2026-07-04",
+          "config": {
+            "depth": 2,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 47,
+            "digitCorrect": 113,
+            "total": 67,
+            "accuracy": 0.7014925373134329,
+            "avgCorrectDigits": 1.6865671641791045
+          },
+          "test": {
+            "correct": 16,
+            "digitCorrect": 36,
+            "total": 20,
+            "accuracy": 0.8,
+            "avgCorrectDigits": 1.8
+          }
+        },
+        {
+          "market": "Milan Day",
+          "side": "close",
+          "testWindow": "2026-05-25..2026-06-27",
+          "config": {
+            "depth": 4,
+            "minLeaf": 20,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "digit_risk",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 48,
+            "digitCorrect": 113,
+            "total": 67,
+            "accuracy": 0.7164179104477612,
+            "avgCorrectDigits": 1.6865671641791045
+          },
+          "test": {
+            "correct": 11,
+            "digitCorrect": 33,
+            "total": 23,
+            "accuracy": 0.4782608695652174,
+            "avgCorrectDigits": 1.434782608695652
+          }
+        },
+        {
+          "market": "Rajdhani Day",
+          "side": "close",
+          "testWindow": "2026-04-27..2026-05-30",
+          "config": {
+            "depth": 2,
+            "minLeaf": 10,
+            "maxFeatures": 12,
+            "trees": 15,
+            "seed": 47,
+            "outputMode": "pair_probability",
+            "confidenceQuantile": 0.25
+          },
+          "validation": {
+            "correct": 47,
+            "digitCorrect": 112,
+            "total": 67,
+            "accuracy": 0.7014925373134329,
+            "avgCorrectDigits": 1.671641791044776
+          },
+          "test": {
+            "correct": 13,
+            "digitCorrect": 33,
+            "total": 20,
+            "accuracy": 0.65,
+            "avgCorrectDigits": 1.65
+          }
+        }
+      ]
+    },
+    {
+      "gate": {
+        "minValCalls": 60,
+        "minValAccuracy": 0.8
+      },
+      "summary": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0.0,
+        "avgCorrectDigits": 0.0,
+        "folds": 0
+      },
+      "folds": []
+    }
+  ]
+}

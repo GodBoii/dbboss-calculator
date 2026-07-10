@@ -1,0 +1,4708 @@
+{
+  "generatedAt": "2026-07-09T17:17:11.198Z",
+  "configsTested": 125,
+  "viable80Count": 0,
+  "viable85Count": 0,
+  "bestCoverageAt80": null,
+  "bestAccuracyMin30": {
+    "minSupport": 8,
+    "minAccuracy": 0.8,
+    "maxRules": 8,
+    "selectedFolds": 12,
+    "aggregate": {
+      "correct": 18,
+      "digitCorrect": 45,
+      "total": 32,
+      "accuracy": 0.5625,
+      "avgCorrectDigits": 1.40625
+    },
+    "selected": [
+      {
+        "market": "Sridevi",
+        "side": "open",
+        "testWindow": "2026-06-06..2026-07-05",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "stateKind=DP",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          }
+        ],
+        "test": {
+          "correct": 3,
+          "digitCorrect": 7,
+          "total": 4,
+          "accuracy": 0.75,
+          "avgCorrectDigits": 1.75
+        },
+        "calls": [
+          {
+            "date": "2026-06-06",
+            "pair": "07",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "DP:2",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-17",
+            "pair": "12",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "DP:1",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-18",
+            "pair": "07",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "DP:2",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-25",
+            "pair": "12",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "DP:1",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Sridevi",
+        "side": "close",
+        "testWindow": "2026-04-07..2026-05-06",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "state=SP:8",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "pair=12|state=SP:8",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "state=SP:8|source=state",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "pair=12|state=SP:8|source=state",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 3,
+          "total": 3,
+          "accuracy": 0.3333333333333333,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-04-08",
+            "pair": "12",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "SP:8",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-19",
+            "pair": "12",
+            "hit": false,
+            "absentDigits": 0,
+            "state": "SP:8",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-29",
+            "pair": "12",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "SP:8",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Time Bazar",
+        "side": "close",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "mode": "prev_opp_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "pair=27",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "state=6",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "stateKind=6",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "pair=27|state=6",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "pair=27|source=state",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "state=6|source=state",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "pair=27|stateKind=6",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "pair=27|state=6|source=state",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          }
+        ],
+        "test": {
+          "correct": 2,
+          "digitCorrect": 4,
+          "total": 2,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-06-13",
+            "pair": "27",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "6",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-19",
+            "pair": "27",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "6",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Milan Day",
+        "side": "open",
+        "testWindow": "2026-03-16..2026-04-18",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "pair=18",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "state=0",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "stateKind=0",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "pair=18|state=0",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "pair=18|source=state",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "state=0|source=state",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "pair=18|stateKind=0",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "pair=18|state=0|source=state",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 3,
+          "total": 2,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.5
+        },
+        "calls": [
+          {
+            "date": "2026-03-23",
+            "pair": "18",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "0",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-06",
+            "pair": "18",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "0",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-06-27",
+        "config": {
+          "mode": "prev_opp_sutta",
+          "trainLookback": 240,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "pair=25",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "state=5",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "stateKind=5",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "pair=25|state=5",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "pair=25|source=state",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "state=5|source=state",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "pair=25|stateKind=5",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "pair=25|state=5|source=state",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          }
+        ],
+        "test": {
+          "correct": 2,
+          "digitCorrect": 5,
+          "total": 3,
+          "accuracy": 0.6666666666666666,
+          "avgCorrectDigits": 1.6666666666666667
+        },
+        "calls": [
+          {
+            "date": "2026-06-09",
+            "pair": "25",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "25",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "25",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "5",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-04-20..2026-05-23",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "pair=45",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "state=5",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "stateKind=5",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "pair=45|state=5",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "pair=45|source=state",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "state=5|source=state",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "pair=45|stateKind=5",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "pair=45|state=5|source=state",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 1,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-05-08",
+            "pair": "45",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan",
+        "side": "close",
+        "testWindow": "2026-03-23..2026-04-25",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "pair=14",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "state=4",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "stateKind=4",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "pair=14|state=4",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "pair=14|source=state",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "state=4|source=state",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "pair=14|stateKind=4",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "pair=14|state=4|source=state",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 4,
+          "total": 3,
+          "accuracy": 0.3333333333333333,
+          "avgCorrectDigits": 1.3333333333333333
+        },
+        "calls": [
+          {
+            "date": "2026-03-31",
+            "pair": "14",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "4",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "14",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "4",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "14",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "4",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "close",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 5,
+          "allowGlobal": true
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "pair=09|stateKind=DP",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 1,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-05-24",
+            "pair": "09",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "DP:0",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "testWindow": "2026-05-20..2026-07-03",
+        "config": {
+          "mode": "prev_opp_sutta",
+          "trainLookback": 240,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "state=9",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "stateKind=9",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "pair=01|state=9",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "state=9|source=state",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "pair=01|stateKind=9",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          },
+          {
+            "key": "pair=01|state=9|source=state",
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8181818181818182
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 2,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-06-19",
+            "pair": "01",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "9",
+            "source": "state"
+          },
+          {
+            "date": "2026-07-01",
+            "pair": "01",
+            "hit": false,
+            "absentDigits": 0,
+            "state": "9",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "testWindow": "2026-02-24..2026-04-07",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "state=2",
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8888888888888888
+          },
+          {
+            "key": "stateKind=2",
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8888888888888888
+          },
+          {
+            "key": "pair=15|state=2",
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8888888888888888
+          },
+          {
+            "key": "state=2|source=state",
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8888888888888888
+          },
+          {
+            "key": "pair=15|stateKind=2",
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8888888888888888
+          },
+          {
+            "key": "pair=15|state=2|source=state",
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8888888888888888
+          },
+          {
+            "key": "pair=39",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          },
+          {
+            "key": "state=9",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 4,
+          "total": 5,
+          "accuracy": 0.2,
+          "avgCorrectDigits": 0.8
+        },
+        "calls": [
+          {
+            "date": "2026-03-06",
+            "pair": "15",
+            "hit": false,
+            "absentDigits": 0,
+            "state": "2",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "15",
+            "hit": false,
+            "absentDigits": 0,
+            "state": "2",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-11",
+            "pair": "15",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "2",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-17",
+            "pair": "39",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "9",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-24",
+            "pair": "39",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "9",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Milan Night",
+        "side": "open",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "mode": "prev_opp_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "pair=04",
+            "correct": 11,
+            "total": 13,
+            "accuracy": 0.8461538461538461
+          },
+          {
+            "key": "state=6",
+            "correct": 11,
+            "total": 13,
+            "accuracy": 0.8461538461538461
+          },
+          {
+            "key": "stateKind=6",
+            "correct": 11,
+            "total": 13,
+            "accuracy": 0.8461538461538461
+          },
+          {
+            "key": "pair=04|state=6",
+            "correct": 11,
+            "total": 13,
+            "accuracy": 0.8461538461538461
+          },
+          {
+            "key": "pair=04|source=state",
+            "correct": 11,
+            "total": 13,
+            "accuracy": 0.8461538461538461
+          },
+          {
+            "key": "state=6|source=state",
+            "correct": 11,
+            "total": 13,
+            "accuracy": 0.8461538461538461
+          },
+          {
+            "key": "pair=04|stateKind=6",
+            "correct": 11,
+            "total": 13,
+            "accuracy": 0.8461538461538461
+          },
+          {
+            "key": "pair=04|state=6|source=state",
+            "correct": 11,
+            "total": 13,
+            "accuracy": 0.8461538461538461
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 2,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-06-02",
+            "pair": "04",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "6",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "04",
+            "hit": false,
+            "absentDigits": 0,
+            "state": "6",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Main Bazar",
+        "side": "open",
+        "testWindow": "2026-02-26..2026-04-09",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 8,
+          "minAccuracy": 0.8,
+          "maxRules": 8
+        },
+        "rules": [
+          {
+            "key": "state=SP:4",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          },
+          {
+            "key": "pair=48|state=SP:4",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          },
+          {
+            "key": "state=SP:4|source=state",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          },
+          {
+            "key": "pair=48|stateKind=SP",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          },
+          {
+            "key": "pair=48|state=SP:4|source=state",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          },
+          {
+            "key": "pair=48",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          },
+          {
+            "key": "pair=48|source=state",
+            "correct": 8,
+            "total": 10,
+            "accuracy": 0.8
+          }
+        ],
+        "test": {
+          "correct": 3,
+          "digitCorrect": 7,
+          "total": 4,
+          "accuracy": 0.75,
+          "avgCorrectDigits": 1.75
+        },
+        "calls": [
+          {
+            "date": "2026-02-27",
+            "pair": "48",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "SP:4",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "48",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "SP:4",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-18",
+            "pair": "48",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "DP:5",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "48",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "SP:4",
+            "source": "state"
+          }
+        ]
+      }
+    ]
+  },
+  "bestAccuracyMin60": {
+    "minSupport": 3,
+    "minAccuracy": 0.85,
+    "maxRules": 5,
+    "selectedFolds": 27,
+    "aggregate": {
+      "correct": 28,
+      "digitCorrect": 88,
+      "total": 62,
+      "accuracy": 0.45161290322580644,
+      "avgCorrectDigits": 1.4193548387096775
+    },
+    "selected": [
+      {
+        "market": "Sridevi",
+        "side": "close",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=07",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=07|source=state",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 2,
+          "digitCorrect": 5,
+          "total": 3,
+          "accuracy": 0.6666666666666666,
+          "avgCorrectDigits": 1.6666666666666667
+        },
+        "calls": [
+          {
+            "date": "2026-05-13",
+            "pair": "07",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "1>5",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-22",
+            "pair": "07",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "8>5",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "07",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "8>5",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Sridevi",
+        "side": "close",
+        "testWindow": "2026-04-07..2026-05-06",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=56",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "state=DP:8",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=56|state=DP:8",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=56|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "state=DP:8|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 1,
+          "total": 1,
+          "accuracy": 0,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-04-30",
+            "pair": "56",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "DP:8",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Time Bazar",
+        "side": "open",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": true
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=03",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=03|source=state",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=09",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=09|source=state",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 2,
+          "total": 3,
+          "accuracy": 0,
+          "avgCorrectDigits": 0.6666666666666666
+        },
+        "calls": [
+          {
+            "date": "2026-06-19",
+            "pair": "03",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "4>6",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-24",
+            "pair": "09",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "9>4",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-26",
+            "pair": "03",
+            "hit": false,
+            "absentDigits": 0,
+            "state": "0>8",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Madhur Day",
+        "side": "open",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 240,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=16",
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1
+          },
+          {
+            "key": "state=7",
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=7",
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=16|state=7",
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=16|source=state",
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 4,
+          "total": 4,
+          "accuracy": 0,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-05-07",
+            "pair": "16",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "7",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-10",
+            "pair": "16",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "7",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-13",
+            "pair": "16",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "7",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-29",
+            "pair": "16",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "7",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Madhur Day",
+        "side": "open",
+        "testWindow": "2026-04-07..2026-05-06",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=01",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          },
+          {
+            "key": "state=5",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=5",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=01|state=5",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=01|source=state",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 1,
+          "total": 1,
+          "accuracy": 0,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-04-14",
+            "pair": "01",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "5",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Madhur Day",
+        "side": "close",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "state=2>7",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=2>7",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=27|state=2>7",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "state=2>7|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=27|stateKind=2>7",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 1,
+          "total": 1,
+          "accuracy": 0,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-05-26",
+            "pair": "27",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "2>7",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Milan Day",
+        "side": "open",
+        "testWindow": "2026-04-20..2026-05-23",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=18",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=18|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 1,
+          "total": 1,
+          "accuracy": 0,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-04-28",
+            "pair": "18",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "9>7",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-06-27",
+        "config": {
+          "mode": "prev_opp_sutta",
+          "trainLookback": 240,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=25",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "state=5",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "stateKind=5",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "pair=25|state=5",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          },
+          {
+            "key": "pair=25|source=state",
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9090909090909091
+          }
+        ],
+        "test": {
+          "correct": 2,
+          "digitCorrect": 5,
+          "total": 3,
+          "accuracy": 0.6666666666666666,
+          "avgCorrectDigits": 1.6666666666666667
+        },
+        "calls": [
+          {
+            "date": "2026-06-09",
+            "pair": "25",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-10",
+            "pair": "25",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-15",
+            "pair": "25",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "5",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Milan Day",
+        "side": "close",
+        "testWindow": "2026-04-20..2026-05-23",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=45",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "state=5",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "stateKind=5",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "pair=45|state=5",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          {
+            "key": "pair=45|source=state",
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 1,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-05-08",
+            "pair": "45",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "close",
+        "testWindow": "2026-04-27..2026-05-30",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=25",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=25|source=state",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=48",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "state=0>1",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=0>1",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 1,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-05-23",
+            "pair": "25",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5>2",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Rajdhani Day",
+        "side": "close",
+        "testWindow": "2026-03-23..2026-04-25",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=48",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "state=SP:6",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=48|state=SP:6",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=48|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "state=SP:6|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 3,
+          "total": 2,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.5
+        },
+        "calls": [
+          {
+            "date": "2026-04-03",
+            "pair": "48",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "SP:6",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-16",
+            "pair": "48",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "SP:6",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan",
+        "side": "open",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=34",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=34|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 1,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-06-19",
+            "pair": "34",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "0>1",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan",
+        "side": "open",
+        "testWindow": "2026-04-27..2026-05-30",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=06",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=06|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "state=1>7",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=1>7",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=06|state=1>7",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 1,
+          "total": 1,
+          "accuracy": 0,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-05-26",
+            "pair": "06",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "1>7",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan",
+        "side": "open",
+        "testWindow": "2026-03-23..2026-04-25",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "state=1>7",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=1>7",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=06|state=1>7",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "state=1>7|source=state",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=06|stateKind=1>7",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 1,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-03-31",
+            "pair": "06",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "1>7",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan",
+        "side": "close",
+        "testWindow": "2026-03-23..2026-04-25",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=14",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "state=4",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "stateKind=4",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "pair=14|state=4",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          },
+          {
+            "key": "pair=14|source=state",
+            "correct": 13,
+            "total": 15,
+            "accuracy": 0.8666666666666667
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 4,
+          "total": 3,
+          "accuracy": 0.3333333333333333,
+          "avgCorrectDigits": 1.3333333333333333
+        },
+        "calls": [
+          {
+            "date": "2026-03-31",
+            "pair": "14",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "4",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-01",
+            "pair": "14",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "4",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-24",
+            "pair": "14",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "4",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "open",
+        "testWindow": "2026-06-06..2026-07-05",
+        "config": {
+          "mode": "two_step_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=25",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=25|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=26",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=26|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=15",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 2,
+          "digitCorrect": 4,
+          "total": 2,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-06-27",
+            "pair": "25",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5>5",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-29",
+            "pair": "25",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "1>9",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "open",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=49",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "state=3",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=3",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=49|state=3",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=49|source=state",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 5,
+          "total": 4,
+          "accuracy": 0.25,
+          "avgCorrectDigits": 1.25
+        },
+        "calls": [
+          {
+            "date": "2026-05-18",
+            "pair": "49",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "3",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-23",
+            "pair": "49",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "3",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-30",
+            "pair": "49",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "3",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-04",
+            "pair": "49",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "3",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "close",
+        "testWindow": "2026-06-06..2026-07-05",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=09",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=09|source=state",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=09|stateKind=DP",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=05",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "state=DP:5",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 1,
+          "total": 1,
+          "accuracy": 0,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-06-16",
+            "pair": "05",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "DP:5",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Sridevi Night",
+        "side": "close",
+        "testWindow": "2026-05-07..2026-06-05",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 5,
+          "allowGlobal": true
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=58",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          },
+          {
+            "key": "state=SP:9",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=58|state=SP:9",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=58|source=state",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          },
+          {
+            "key": "state=SP:9|source=state",
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 4,
+          "total": 4,
+          "accuracy": 0.25,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-05-10",
+            "pair": "58",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "SP:9",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "58",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "SP:9",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-28",
+            "pair": "58",
+            "hit": false,
+            "absentDigits": 0,
+            "state": "SP:9",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-05",
+            "pair": "58",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "SP:9",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "testWindow": "2026-04-08..2026-05-19",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 240,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=37",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "state=2",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "stateKind=2",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "pair=37|state=2",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "pair=37|source=state",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          }
+        ],
+        "test": {
+          "correct": 3,
+          "digitCorrect": 8,
+          "total": 5,
+          "accuracy": 0.6,
+          "avgCorrectDigits": 1.6
+        },
+        "calls": [
+          {
+            "date": "2026-04-08",
+            "pair": "37",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "2",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-13",
+            "pair": "37",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "2",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-15",
+            "pair": "37",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "2",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-17",
+            "pair": "37",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "2",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-14",
+            "pair": "37",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "2",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Kalyan Night",
+        "side": "open",
+        "testWindow": "2026-02-24..2026-04-07",
+        "config": {
+          "mode": "prev_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=14",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "state=5",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=5",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=14|state=5",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=14|source=state",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 2,
+          "digitCorrect": 6,
+          "total": 4,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.5
+        },
+        "calls": [
+          {
+            "date": "2026-03-05",
+            "pair": "14",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-12",
+            "pair": "14",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "5",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-13",
+            "pair": "14",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "5",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-16",
+            "pair": "14",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "5",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Madhur Night",
+        "side": "open",
+        "testWindow": "2026-04-27..2026-05-30",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 240,
+          "minSupport": 8,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=28",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "state=SP:4",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "pair=28|state=SP:4",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "pair=28|source=state",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "state=SP:4|source=state",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          }
+        ],
+        "test": {
+          "correct": 0,
+          "digitCorrect": 1,
+          "total": 1,
+          "accuracy": 0,
+          "avgCorrectDigits": 1
+        },
+        "calls": [
+          {
+            "date": "2026-05-12",
+            "pair": "28",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "SP:4",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Milan Night",
+        "side": "open",
+        "testWindow": "2026-06-01..2026-07-04",
+        "config": {
+          "mode": "prev_opp_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=15",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "state=9",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=9",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=15|state=9",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=15|source=state",
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 3,
+          "total": 2,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.5
+        },
+        "calls": [
+          {
+            "date": "2026-06-18",
+            "pair": "15",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "9",
+            "source": "state"
+          },
+          {
+            "date": "2026-06-20",
+            "pair": "15",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "9",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Main Bazar",
+        "side": "open",
+        "testWindow": "2026-04-10..2026-05-22",
+        "config": {
+          "mode": "prev_opp_sutta",
+          "trainLookback": 365,
+          "minSupport": 5,
+          "shrink": 5,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=47",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "state=8",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "stateKind=8",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=47|state=8",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=47|source=state",
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 4,
+          "digitCorrect": 8,
+          "total": 4,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-04-10",
+            "pair": "47",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "8",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-04",
+            "pair": "47",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "8",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-15",
+            "pair": "47",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "8",
+            "source": "state"
+          },
+          {
+            "date": "2026-05-20",
+            "pair": "47",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "8",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Main Bazar",
+        "side": "open",
+        "testWindow": "2026-02-26..2026-04-09",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 0,
+          "allowGlobal": false
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=13",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=13|source=state",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=13|stateKind=DP",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "state=SP:4",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          },
+          {
+            "key": "pair=48|state=SP:4",
+            "correct": 7,
+            "total": 8,
+            "accuracy": 0.875
+          }
+        ],
+        "test": {
+          "correct": 2,
+          "digitCorrect": 7,
+          "total": 5,
+          "accuracy": 0.4,
+          "avgCorrectDigits": 1.4
+        },
+        "calls": [
+          {
+            "date": "2026-02-27",
+            "pair": "48",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "SP:4",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-02",
+            "pair": "13",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "DP:6",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-10",
+            "pair": "48",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "SP:4",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-25",
+            "pair": "48",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "SP:4",
+            "source": "state"
+          },
+          {
+            "date": "2026-03-30",
+            "pair": "13",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "DP:6",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Main Bazar",
+        "side": "close",
+        "testWindow": "2026-05-25..2026-07-03",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 240,
+          "minSupport": 8,
+          "shrink": 0,
+          "allowGlobal": true
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=08",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "state=SP:6",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "pair=08|state=SP:6",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "pair=08|source=state",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          {
+            "key": "state=SP:6|source=state",
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 2,
+          "total": 1,
+          "accuracy": 1,
+          "avgCorrectDigits": 2
+        },
+        "calls": [
+          {
+            "date": "2026-06-29",
+            "pair": "08",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "SP:6",
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "market": "Main Bazar",
+        "side": "close",
+        "testWindow": "2026-04-10..2026-05-22",
+        "config": {
+          "mode": "prev_opp_kind_sutta",
+          "trainLookback": 365,
+          "minSupport": 8,
+          "shrink": 5,
+          "allowGlobal": true
+        },
+        "gate": {
+          "minSupport": 3,
+          "minAccuracy": 0.85,
+          "maxRules": 5
+        },
+        "rules": [
+          {
+            "key": "pair=07",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "state=DP:9",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=07|state=DP:9",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "pair=07|source=state",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          },
+          {
+            "key": "state=DP:9|source=state",
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1
+          }
+        ],
+        "test": {
+          "correct": 1,
+          "digitCorrect": 3,
+          "total": 2,
+          "accuracy": 0.5,
+          "avgCorrectDigits": 1.5
+        },
+        "calls": [
+          {
+            "date": "2026-04-13",
+            "pair": "07",
+            "hit": true,
+            "absentDigits": 2,
+            "state": "DP:9",
+            "source": "state"
+          },
+          {
+            "date": "2026-04-28",
+            "pair": "07",
+            "hit": false,
+            "absentDigits": 1,
+            "state": "DP:9",
+            "source": "state"
+          }
+        ]
+      }
+    ]
+  },
+  "configResults": [
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.8,
+      "maxRules": 1,
+      "selectedFolds": 32,
+      "aggregate": {
+        "correct": 29,
+        "digitCorrect": 95,
+        "total": 70,
+        "accuracy": 0.4142857142857143,
+        "avgCorrectDigits": 1.3571428571428572
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.8,
+      "maxRules": 2,
+      "selectedFolds": 32,
+      "aggregate": {
+        "correct": 29,
+        "digitCorrect": 95,
+        "total": 70,
+        "accuracy": 0.4142857142857143,
+        "avgCorrectDigits": 1.3571428571428572
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.8,
+      "maxRules": 3,
+      "selectedFolds": 32,
+      "aggregate": {
+        "correct": 29,
+        "digitCorrect": 96,
+        "total": 71,
+        "accuracy": 0.4084507042253521,
+        "avgCorrectDigits": 1.352112676056338
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.8,
+      "maxRules": 5,
+      "selectedFolds": 34,
+      "aggregate": {
+        "correct": 33,
+        "digitCorrect": 107,
+        "total": 78,
+        "accuracy": 0.4230769230769231,
+        "avgCorrectDigits": 1.3717948717948718
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.8,
+      "maxRules": 8,
+      "selectedFolds": 36,
+      "aggregate": {
+        "correct": 37,
+        "digitCorrect": 124,
+        "total": 94,
+        "accuracy": 0.39361702127659576,
+        "avgCorrectDigits": 1.3191489361702127
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.85,
+      "maxRules": 1,
+      "selectedFolds": 26,
+      "aggregate": {
+        "correct": 26,
+        "digitCorrect": 81,
+        "total": 57,
+        "accuracy": 0.45614035087719296,
+        "avgCorrectDigits": 1.4210526315789473
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.85,
+      "maxRules": 2,
+      "selectedFolds": 26,
+      "aggregate": {
+        "correct": 26,
+        "digitCorrect": 81,
+        "total": 57,
+        "accuracy": 0.45614035087719296,
+        "avgCorrectDigits": 1.4210526315789473
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.85,
+      "maxRules": 3,
+      "selectedFolds": 26,
+      "aggregate": {
+        "correct": 26,
+        "digitCorrect": 82,
+        "total": 58,
+        "accuracy": 0.4482758620689655,
+        "avgCorrectDigits": 1.4137931034482758
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.85,
+      "maxRules": 5,
+      "selectedFolds": 27,
+      "aggregate": {
+        "correct": 28,
+        "digitCorrect": 88,
+        "total": 62,
+        "accuracy": 0.45161290322580644,
+        "avgCorrectDigits": 1.4193548387096775
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.85,
+      "maxRules": 8,
+      "selectedFolds": 29,
+      "aggregate": {
+        "correct": 29,
+        "digitCorrect": 91,
+        "total": 65,
+        "accuracy": 0.4461538461538462,
+        "avgCorrectDigits": 1.4
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.9,
+      "maxRules": 1,
+      "selectedFolds": 22,
+      "aggregate": {
+        "correct": 21,
+        "digitCorrect": 66,
+        "total": 47,
+        "accuracy": 0.44680851063829785,
+        "avgCorrectDigits": 1.4042553191489362
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.9,
+      "maxRules": 2,
+      "selectedFolds": 22,
+      "aggregate": {
+        "correct": 21,
+        "digitCorrect": 66,
+        "total": 47,
+        "accuracy": 0.44680851063829785,
+        "avgCorrectDigits": 1.4042553191489362
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.9,
+      "maxRules": 3,
+      "selectedFolds": 22,
+      "aggregate": {
+        "correct": 21,
+        "digitCorrect": 67,
+        "total": 48,
+        "accuracy": 0.4375,
+        "avgCorrectDigits": 1.3958333333333333
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.9,
+      "maxRules": 5,
+      "selectedFolds": 23,
+      "aggregate": {
+        "correct": 21,
+        "digitCorrect": 68,
+        "total": 49,
+        "accuracy": 0.42857142857142855,
+        "avgCorrectDigits": 1.3877551020408163
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.9,
+      "maxRules": 8,
+      "selectedFolds": 25,
+      "aggregate": {
+        "correct": 22,
+        "digitCorrect": 71,
+        "total": 52,
+        "accuracy": 0.4230769230769231,
+        "avgCorrectDigits": 1.3653846153846154
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.95,
+      "maxRules": 1,
+      "selectedFolds": 20,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 59,
+        "total": 43,
+        "accuracy": 0.4186046511627907,
+        "avgCorrectDigits": 1.372093023255814
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.95,
+      "maxRules": 2,
+      "selectedFolds": 20,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 59,
+        "total": 43,
+        "accuracy": 0.4186046511627907,
+        "avgCorrectDigits": 1.372093023255814
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.95,
+      "maxRules": 3,
+      "selectedFolds": 20,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 60,
+        "total": 44,
+        "accuracy": 0.4090909090909091,
+        "avgCorrectDigits": 1.3636363636363635
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.95,
+      "maxRules": 5,
+      "selectedFolds": 21,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 61,
+        "total": 45,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.3555555555555556
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 0.95,
+      "maxRules": 8,
+      "selectedFolds": 23,
+      "aggregate": {
+        "correct": 19,
+        "digitCorrect": 64,
+        "total": 48,
+        "accuracy": 0.3958333333333333,
+        "avgCorrectDigits": 1.3333333333333333
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 1,
+      "maxRules": 1,
+      "selectedFolds": 20,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 59,
+        "total": 43,
+        "accuracy": 0.4186046511627907,
+        "avgCorrectDigits": 1.372093023255814
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 1,
+      "maxRules": 2,
+      "selectedFolds": 20,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 59,
+        "total": 43,
+        "accuracy": 0.4186046511627907,
+        "avgCorrectDigits": 1.372093023255814
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 1,
+      "maxRules": 3,
+      "selectedFolds": 20,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 60,
+        "total": 44,
+        "accuracy": 0.4090909090909091,
+        "avgCorrectDigits": 1.3636363636363635
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 1,
+      "maxRules": 5,
+      "selectedFolds": 21,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 61,
+        "total": 45,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.3555555555555556
+      }
+    },
+    {
+      "minSupport": 3,
+      "minAccuracy": 1,
+      "maxRules": 8,
+      "selectedFolds": 23,
+      "aggregate": {
+        "correct": 19,
+        "digitCorrect": 64,
+        "total": 48,
+        "accuracy": 0.3958333333333333,
+        "avgCorrectDigits": 1.3333333333333333
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.8,
+      "maxRules": 1,
+      "selectedFolds": 24,
+      "aggregate": {
+        "correct": 21,
+        "digitCorrect": 76,
+        "total": 60,
+        "accuracy": 0.35,
+        "avgCorrectDigits": 1.2666666666666666
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.8,
+      "maxRules": 2,
+      "selectedFolds": 24,
+      "aggregate": {
+        "correct": 21,
+        "digitCorrect": 76,
+        "total": 60,
+        "accuracy": 0.35,
+        "avgCorrectDigits": 1.2666666666666666
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.8,
+      "maxRules": 3,
+      "selectedFolds": 24,
+      "aggregate": {
+        "correct": 21,
+        "digitCorrect": 76,
+        "total": 60,
+        "accuracy": 0.35,
+        "avgCorrectDigits": 1.2666666666666666
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.8,
+      "maxRules": 5,
+      "selectedFolds": 25,
+      "aggregate": {
+        "correct": 23,
+        "digitCorrect": 81,
+        "total": 63,
+        "accuracy": 0.36507936507936506,
+        "avgCorrectDigits": 1.2857142857142858
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.8,
+      "maxRules": 8,
+      "selectedFolds": 25,
+      "aggregate": {
+        "correct": 28,
+        "digitCorrect": 99,
+        "total": 78,
+        "accuracy": 0.358974358974359,
+        "avgCorrectDigits": 1.2692307692307692
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.85,
+      "maxRules": 1,
+      "selectedFolds": 13,
+      "aggregate": {
+        "correct": 15,
+        "digitCorrect": 50,
+        "total": 36,
+        "accuracy": 0.4166666666666667,
+        "avgCorrectDigits": 1.3888888888888888
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.85,
+      "maxRules": 2,
+      "selectedFolds": 13,
+      "aggregate": {
+        "correct": 15,
+        "digitCorrect": 50,
+        "total": 36,
+        "accuracy": 0.4166666666666667,
+        "avgCorrectDigits": 1.3888888888888888
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.85,
+      "maxRules": 3,
+      "selectedFolds": 13,
+      "aggregate": {
+        "correct": 15,
+        "digitCorrect": 50,
+        "total": 36,
+        "accuracy": 0.4166666666666667,
+        "avgCorrectDigits": 1.3888888888888888
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.85,
+      "maxRules": 5,
+      "selectedFolds": 14,
+      "aggregate": {
+        "correct": 15,
+        "digitCorrect": 51,
+        "total": 37,
+        "accuracy": 0.40540540540540543,
+        "avgCorrectDigits": 1.3783783783783783
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.85,
+      "maxRules": 8,
+      "selectedFolds": 14,
+      "aggregate": {
+        "correct": 16,
+        "digitCorrect": 53,
+        "total": 38,
+        "accuracy": 0.42105263157894735,
+        "avgCorrectDigits": 1.394736842105263
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.9,
+      "maxRules": 1,
+      "selectedFolds": 8,
+      "aggregate": {
+        "correct": 8,
+        "digitCorrect": 30,
+        "total": 23,
+        "accuracy": 0.34782608695652173,
+        "avgCorrectDigits": 1.3043478260869565
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.9,
+      "maxRules": 2,
+      "selectedFolds": 8,
+      "aggregate": {
+        "correct": 8,
+        "digitCorrect": 30,
+        "total": 23,
+        "accuracy": 0.34782608695652173,
+        "avgCorrectDigits": 1.3043478260869565
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.9,
+      "maxRules": 3,
+      "selectedFolds": 8,
+      "aggregate": {
+        "correct": 8,
+        "digitCorrect": 30,
+        "total": 23,
+        "accuracy": 0.34782608695652173,
+        "avgCorrectDigits": 1.3043478260869565
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.9,
+      "maxRules": 5,
+      "selectedFolds": 9,
+      "aggregate": {
+        "correct": 8,
+        "digitCorrect": 31,
+        "total": 24,
+        "accuracy": 0.3333333333333333,
+        "avgCorrectDigits": 1.2916666666666667
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.9,
+      "maxRules": 8,
+      "selectedFolds": 9,
+      "aggregate": {
+        "correct": 9,
+        "digitCorrect": 33,
+        "total": 25,
+        "accuracy": 0.36,
+        "avgCorrectDigits": 1.32
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.95,
+      "maxRules": 1,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 23,
+        "total": 19,
+        "accuracy": 0.2631578947368421,
+        "avgCorrectDigits": 1.2105263157894737
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.95,
+      "maxRules": 2,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 23,
+        "total": 19,
+        "accuracy": 0.2631578947368421,
+        "avgCorrectDigits": 1.2105263157894737
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.95,
+      "maxRules": 3,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 23,
+        "total": 19,
+        "accuracy": 0.2631578947368421,
+        "avgCorrectDigits": 1.2105263157894737
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.95,
+      "maxRules": 5,
+      "selectedFolds": 7,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 24,
+        "total": 20,
+        "accuracy": 0.25,
+        "avgCorrectDigits": 1.2
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 0.95,
+      "maxRules": 8,
+      "selectedFolds": 7,
+      "aggregate": {
+        "correct": 6,
+        "digitCorrect": 26,
+        "total": 21,
+        "accuracy": 0.2857142857142857,
+        "avgCorrectDigits": 1.2380952380952381
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 1,
+      "maxRules": 1,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 23,
+        "total": 19,
+        "accuracy": 0.2631578947368421,
+        "avgCorrectDigits": 1.2105263157894737
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 1,
+      "maxRules": 2,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 23,
+        "total": 19,
+        "accuracy": 0.2631578947368421,
+        "avgCorrectDigits": 1.2105263157894737
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 1,
+      "maxRules": 3,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 23,
+        "total": 19,
+        "accuracy": 0.2631578947368421,
+        "avgCorrectDigits": 1.2105263157894737
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 1,
+      "maxRules": 5,
+      "selectedFolds": 7,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 24,
+        "total": 20,
+        "accuracy": 0.25,
+        "avgCorrectDigits": 1.2
+      }
+    },
+    {
+      "minSupport": 5,
+      "minAccuracy": 1,
+      "maxRules": 8,
+      "selectedFolds": 7,
+      "aggregate": {
+        "correct": 6,
+        "digitCorrect": 26,
+        "total": 21,
+        "accuracy": 0.2857142857142857,
+        "avgCorrectDigits": 1.2380952380952381
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.8,
+      "maxRules": 1,
+      "selectedFolds": 12,
+      "aggregate": {
+        "correct": 16,
+        "digitCorrect": 40,
+        "total": 29,
+        "accuracy": 0.5517241379310345,
+        "avgCorrectDigits": 1.3793103448275863
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.8,
+      "maxRules": 2,
+      "selectedFolds": 12,
+      "aggregate": {
+        "correct": 16,
+        "digitCorrect": 40,
+        "total": 29,
+        "accuracy": 0.5517241379310345,
+        "avgCorrectDigits": 1.3793103448275863
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.8,
+      "maxRules": 3,
+      "selectedFolds": 12,
+      "aggregate": {
+        "correct": 16,
+        "digitCorrect": 40,
+        "total": 29,
+        "accuracy": 0.5517241379310345,
+        "avgCorrectDigits": 1.3793103448275863
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.8,
+      "maxRules": 5,
+      "selectedFolds": 12,
+      "aggregate": {
+        "correct": 16,
+        "digitCorrect": 40,
+        "total": 29,
+        "accuracy": 0.5517241379310345,
+        "avgCorrectDigits": 1.3793103448275863
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.8,
+      "maxRules": 8,
+      "selectedFolds": 12,
+      "aggregate": {
+        "correct": 18,
+        "digitCorrect": 45,
+        "total": 32,
+        "accuracy": 0.5625,
+        "avgCorrectDigits": 1.40625
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.85,
+      "maxRules": 1,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 7,
+        "digitCorrect": 19,
+        "total": 14,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.3571428571428572
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.85,
+      "maxRules": 2,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 7,
+        "digitCorrect": 19,
+        "total": 14,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.3571428571428572
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.85,
+      "maxRules": 3,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 7,
+        "digitCorrect": 19,
+        "total": 14,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.3571428571428572
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.85,
+      "maxRules": 5,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 7,
+        "digitCorrect": 19,
+        "total": 14,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.3571428571428572
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.85,
+      "maxRules": 8,
+      "selectedFolds": 6,
+      "aggregate": {
+        "correct": 8,
+        "digitCorrect": 22,
+        "total": 16,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.375
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.9,
+      "maxRules": 1,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.9,
+      "maxRules": 2,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.9,
+      "maxRules": 3,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.9,
+      "maxRules": 5,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.9,
+      "maxRules": 8,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.95,
+      "maxRules": 1,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.95,
+      "maxRules": 2,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.95,
+      "maxRules": 3,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.95,
+      "maxRules": 5,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 0.95,
+      "maxRules": 8,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 1,
+      "maxRules": 1,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 1,
+      "maxRules": 2,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 1,
+      "maxRules": 3,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 1,
+      "maxRules": 5,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 8,
+      "minAccuracy": 1,
+      "maxRules": 8,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.8,
+      "maxRules": 1,
+      "selectedFolds": 11,
+      "aggregate": {
+        "correct": 17,
+        "digitCorrect": 41,
+        "total": 27,
+        "accuracy": 0.6296296296296297,
+        "avgCorrectDigits": 1.5185185185185186
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.8,
+      "maxRules": 2,
+      "selectedFolds": 11,
+      "aggregate": {
+        "correct": 17,
+        "digitCorrect": 41,
+        "total": 27,
+        "accuracy": 0.6296296296296297,
+        "avgCorrectDigits": 1.5185185185185186
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.8,
+      "maxRules": 3,
+      "selectedFolds": 11,
+      "aggregate": {
+        "correct": 17,
+        "digitCorrect": 41,
+        "total": 27,
+        "accuracy": 0.6296296296296297,
+        "avgCorrectDigits": 1.5185185185185186
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.8,
+      "maxRules": 5,
+      "selectedFolds": 11,
+      "aggregate": {
+        "correct": 17,
+        "digitCorrect": 41,
+        "total": 27,
+        "accuracy": 0.6296296296296297,
+        "avgCorrectDigits": 1.5185185185185186
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.8,
+      "maxRules": 8,
+      "selectedFolds": 11,
+      "aggregate": {
+        "correct": 17,
+        "digitCorrect": 41,
+        "total": 27,
+        "accuracy": 0.6296296296296297,
+        "avgCorrectDigits": 1.5185185185185186
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.85,
+      "maxRules": 1,
+      "selectedFolds": 4,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 13,
+        "total": 8,
+        "accuracy": 0.625,
+        "avgCorrectDigits": 1.625
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.85,
+      "maxRules": 2,
+      "selectedFolds": 4,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 13,
+        "total": 8,
+        "accuracy": 0.625,
+        "avgCorrectDigits": 1.625
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.85,
+      "maxRules": 3,
+      "selectedFolds": 4,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 13,
+        "total": 8,
+        "accuracy": 0.625,
+        "avgCorrectDigits": 1.625
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.85,
+      "maxRules": 5,
+      "selectedFolds": 4,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 13,
+        "total": 8,
+        "accuracy": 0.625,
+        "avgCorrectDigits": 1.625
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.85,
+      "maxRules": 8,
+      "selectedFolds": 4,
+      "aggregate": {
+        "correct": 5,
+        "digitCorrect": 13,
+        "total": 8,
+        "accuracy": 0.625,
+        "avgCorrectDigits": 1.625
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.9,
+      "maxRules": 1,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.9,
+      "maxRules": 2,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.9,
+      "maxRules": 3,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.9,
+      "maxRules": 5,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.9,
+      "maxRules": 8,
+      "selectedFolds": 3,
+      "aggregate": {
+        "correct": 4,
+        "digitCorrect": 9,
+        "total": 5,
+        "accuracy": 0.8,
+        "avgCorrectDigits": 1.8
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.95,
+      "maxRules": 1,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.95,
+      "maxRules": 2,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.95,
+      "maxRules": 3,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.95,
+      "maxRules": 5,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 0.95,
+      "maxRules": 8,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 1,
+      "maxRules": 1,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 1,
+      "maxRules": 2,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 1,
+      "maxRules": 3,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 1,
+      "maxRules": 5,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 10,
+      "minAccuracy": 1,
+      "maxRules": 8,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.8,
+      "maxRules": 1,
+      "selectedFolds": 2,
+      "aggregate": {
+        "correct": 2,
+        "digitCorrect": 6,
+        "total": 5,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.2
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.8,
+      "maxRules": 2,
+      "selectedFolds": 2,
+      "aggregate": {
+        "correct": 2,
+        "digitCorrect": 6,
+        "total": 5,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.2
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.8,
+      "maxRules": 3,
+      "selectedFolds": 2,
+      "aggregate": {
+        "correct": 2,
+        "digitCorrect": 6,
+        "total": 5,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.2
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.8,
+      "maxRules": 5,
+      "selectedFolds": 2,
+      "aggregate": {
+        "correct": 2,
+        "digitCorrect": 6,
+        "total": 5,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.2
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.8,
+      "maxRules": 8,
+      "selectedFolds": 2,
+      "aggregate": {
+        "correct": 2,
+        "digitCorrect": 6,
+        "total": 5,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.2
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.85,
+      "maxRules": 1,
+      "selectedFolds": 1,
+      "aggregate": {
+        "correct": 1,
+        "digitCorrect": 4,
+        "total": 3,
+        "accuracy": 0.3333333333333333,
+        "avgCorrectDigits": 1.3333333333333333
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.85,
+      "maxRules": 2,
+      "selectedFolds": 1,
+      "aggregate": {
+        "correct": 1,
+        "digitCorrect": 4,
+        "total": 3,
+        "accuracy": 0.3333333333333333,
+        "avgCorrectDigits": 1.3333333333333333
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.85,
+      "maxRules": 3,
+      "selectedFolds": 1,
+      "aggregate": {
+        "correct": 1,
+        "digitCorrect": 4,
+        "total": 3,
+        "accuracy": 0.3333333333333333,
+        "avgCorrectDigits": 1.3333333333333333
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.85,
+      "maxRules": 5,
+      "selectedFolds": 1,
+      "aggregate": {
+        "correct": 1,
+        "digitCorrect": 4,
+        "total": 3,
+        "accuracy": 0.3333333333333333,
+        "avgCorrectDigits": 1.3333333333333333
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.85,
+      "maxRules": 8,
+      "selectedFolds": 1,
+      "aggregate": {
+        "correct": 1,
+        "digitCorrect": 4,
+        "total": 3,
+        "accuracy": 0.3333333333333333,
+        "avgCorrectDigits": 1.3333333333333333
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.9,
+      "maxRules": 1,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.9,
+      "maxRules": 2,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.9,
+      "maxRules": 3,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.9,
+      "maxRules": 5,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.9,
+      "maxRules": 8,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.95,
+      "maxRules": 1,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.95,
+      "maxRules": 2,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.95,
+      "maxRules": 3,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.95,
+      "maxRules": 5,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 0.95,
+      "maxRules": 8,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 1,
+      "maxRules": 1,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 1,
+      "maxRules": 2,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 1,
+      "maxRules": 3,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 1,
+      "maxRules": 5,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    },
+    {
+      "minSupport": 12,
+      "minAccuracy": 1,
+      "maxRules": 8,
+      "selectedFolds": 0,
+      "aggregate": {
+        "correct": 0,
+        "digitCorrect": 0,
+        "total": 0,
+        "accuracy": 0,
+        "avgCorrectDigits": 0
+      }
+    }
+  ]
+}

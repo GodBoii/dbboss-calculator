@@ -1,0 +1,7771 @@
+{
+  "generatedAt": "2026-07-09T07:25:47.048Z",
+  "recordsPath": "C:\\Users\\prajw\\Downloads\\dbboss\\dbboss-calculator\\scratch\\open-sutta-records-cache.json",
+  "strategiesTested": 324,
+  "foldsTested": 192,
+  "selectedOverall": {
+    "n": 5665,
+    "ok": 2878,
+    "accuracy": 0.5080317740511915,
+    "foldsAt80": 0,
+    "avgHindsightOracle": 0.6894097222222234
+  },
+  "marketSideRows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.5049019607843137,
+      "avgOracle": 0.7125,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:2, opposite-side:2"
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5375,
+      "avgOracle": 0.6833333333333333,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:5, opposite-side:1"
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.5333333333333333,
+      "avgOracle": 0.6749999999999999,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:2, house:2"
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.48333333333333334,
+      "avgOracle": 0.6624999999999999,
+      "hits80": 0,
+      "topFamilies": "opposite-side:4, digit-rate:2"
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.4892703862660944,
+      "avgOracle": 0.6916666666666667,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:3, opposite-side:2"
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5083333333333333,
+      "avgOracle": 0.6791666666666667,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:4, source-market:2"
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.4791666666666667,
+      "avgOracle": 0.675,
+      "hits80": 0,
+      "topFamilies": "opposite-side:2, recent-vs-long:2"
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5416666666666666,
+      "avgOracle": 0.7083333333333333,
+      "hits80": 0,
+      "topFamilies": "opposite-side:3, recent-vs-long:2"
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.5,
+      "avgOracle": 0.7041666666666667,
+      "hits80": 0,
+      "topFamilies": "digit-rate:2, target-pair-rate:2"
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5041666666666667,
+      "avgOracle": 0.7041666666666667,
+      "hits80": 0,
+      "topFamilies": "opposite-side:2, gap:2"
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.5083333333333333,
+      "avgOracle": 0.6791666666666667,
+      "hits80": 0,
+      "topFamilies": "opposite-side:4, recent-vs-long:1"
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5,
+      "avgOracle": 0.6708333333333333,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:4, opposite-side:1"
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.4708333333333333,
+      "avgOracle": 0.6916666666666668,
+      "hits80": 0,
+      "topFamilies": "target-pair-rate:2, recent-vs-long:2"
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5375,
+      "avgOracle": 0.675,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:4, gap:2"
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.5166666666666667,
+      "avgOracle": 0.6916666666666667,
+      "hits80": 0,
+      "topFamilies": "source-market:3, previous-panel:2"
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.4791666666666667,
+      "avgOracle": 0.6791666666666667,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:3, opposite-side:2"
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.4708333333333333,
+      "avgOracle": 0.6833333333333333,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:3, opposite-side:3"
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.49166666666666664,
+      "avgOracle": 0.6875,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:3, previous-panel:2"
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.5583333333333333,
+      "avgOracle": 0.6791666666666666,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:5, source-market:2"
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5333333333333333,
+      "avgOracle": 0.6791666666666667,
+      "hits80": 0,
+      "topFamilies": "source-market:3, previous-panel:3"
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.5291666666666667,
+      "avgOracle": 0.7041666666666667,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:4, opposite-side:1"
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5291666666666667,
+      "avgOracle": 0.7125,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:3, source-market:3"
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "folds": 8,
+      "selectedAccuracy": 0.48333333333333334,
+      "avgOracle": 0.7041666666666667,
+      "hits80": 0,
+      "topFamilies": "opposite-side:3, previous-panel:2"
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "folds": 8,
+      "selectedAccuracy": 0.5,
+      "avgOracle": 0.7125,
+      "hits80": 0,
+      "topFamilies": "recent-vs-long:2, gated:2"
+    }
+  ],
+  "selectedFoldRows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2025-11-06..2025-12-05",
+      "selected": "odd_even_mixed_l240",
+      "family": "parity",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "46",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2025-12-06..2026-01-04",
+      "selected": "pair_cold_continue_s7_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "34",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-01-05..2026-02-04",
+      "selected": "pair_hot_fade_s21_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "08",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-02-05..2026-03-07",
+      "selected": "opposite_side_pair_l30",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "27",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "selected": "house_low_fade_l120",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "26",
+      "oracleAccuracy": 0.8333333333333334
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "selected": "gated_pair_rate_l21_t74",
+      "family": "gated",
+      "validation": {
+        "n": 38,
+        "ok": 28,
+        "accuracy": 0.7368421052631579
+      },
+      "test": {
+        "n": 10,
+        "ok": 5,
+        "accuracy": 0.5
+      },
+      "oraclePair": "09",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "selected": "gated_pair_rate_l21_t74",
+      "family": "gated",
+      "validation": {
+        "n": 31,
+        "ok": 21,
+        "accuracy": 0.6774193548387096
+      },
+      "test": {
+        "n": 14,
+        "ok": 7,
+        "accuracy": 0.5
+      },
+      "oraclePair": "25",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "selected": "opposite_side_pair_l120",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "15",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2025-11-06..2025-12-05",
+      "selected": "pair_hot_fade_s30_l90",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 44,
+        "accuracy": 0.7333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "23",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2025-12-06..2026-01-04",
+      "selected": "pair_hot_fade_s14_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 20,
+        "accuracy": 0.6666666666666666
+      },
+      "oraclePair": "01",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-01-05..2026-02-04",
+      "selected": "pair_hot_fade_s14_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-02-05..2026-03-07",
+      "selected": "opposite_side_pair_l120",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "24",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "selected": "target_pair_absence_recent_penalty_l120",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "24",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "selected": "pair_hot_fade_s45_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "selected": "prev_panel_digits_exclude_l14",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "02",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "selected": "pair_cold_continue_s7_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "48",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2025-09-18..2025-10-30",
+      "selected": "pair_hot_fade_s21_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "39",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2025-10-31..2025-12-04",
+      "selected": "source_pair_l60",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "68",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2025-12-05..2026-01-08",
+      "selected": "house_high_fade_l120",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "13",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-01-09..2026-02-13",
+      "selected": "house_high_fade_l120",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "37",
+      "oracleAccuracy": 0.6
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "selected": "pair_hot_fade_s30_l365",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "04",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "target_pair_absence_recent_penalty_l240",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "47",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "pair_absent_streak_l365",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 19,
+        "accuracy": 0.6333333333333333
+      },
+      "oraclePair": "15",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "same_weekday_pair_l30",
+      "family": "calendar",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "67",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2025-09-18..2025-10-30",
+      "selected": "digit_absence_min_l30",
+      "family": "digit-rate",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "01",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2025-10-31..2025-12-04",
+      "selected": "digit_absence_min_l240",
+      "family": "digit-rate",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "23",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2025-12-05..2026-01-08",
+      "selected": "target_pair_absence_recent_penalty_l30",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "56",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-01-09..2026-02-13",
+      "selected": "opposite_side_hot_fade_l365",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "78",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "selected": "opposite_side_pair_l120",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "23",
+      "oracleAccuracy": 0.6
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "opposite_side_pair_l180",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "05",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "source_pair_l60",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "37",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "opposite_side_hot_fade_l30",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 19,
+        "accuracy": 0.6333333333333333
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2025-11-06..2025-12-05",
+      "selected": "pair_cold_continue_s14_l365",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 10,
+        "accuracy": 0.3333333333333333
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2025-12-06..2026-01-04",
+      "selected": "source_digit_absence_l120",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "69",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-01-05..2026-02-04",
+      "selected": "opposite_side_hot_fade_l60",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "48",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-02-05..2026-03-07",
+      "selected": "pair_hot_fade_s45_l365",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "selected": "opposite_side_pair_l90",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "selected": "same_weekday_pair_l30",
+      "family": "calendar",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "selected": "gated_pair_rate_l240_t58",
+      "family": "gated",
+      "validation": {
+        "n": 32,
+        "ok": 21,
+        "accuracy": 0.65625
+      },
+      "test": {
+        "n": 23,
+        "ok": 10,
+        "accuracy": 0.43478260869565216
+      },
+      "oraclePair": "27",
+      "oracleAccuracy": 0.8333333333333334
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "selected": "pair_cold_continue_s60_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 21,
+        "accuracy": 0.7
+      },
+      "oraclePair": "47",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2025-11-06..2025-12-05",
+      "selected": "pair_hot_fade_s30_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 36,
+        "accuracy": 0.6
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "58",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2025-12-06..2026-01-04",
+      "selected": "pair_hot_fade_s30_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 36,
+        "accuracy": 0.6
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "27",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-01-05..2026-02-04",
+      "selected": "source_pair_l21",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "36",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-02-05..2026-03-07",
+      "selected": "pair_absent_streak_l30",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "45",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "selected": "pair_failed_recently_l30",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "02",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "selected": "source_digit_absence_l21",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "49",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "selected": "pair_hot_fade_s60_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 23,
+        "accuracy": 0.7666666666666667
+      },
+      "oraclePair": "47",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "selected": "pair_hot_fade_s60_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 9,
+        "accuracy": 0.3
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2025-09-11..2025-10-15",
+      "selected": "digit_absence_min_l180",
+      "family": "digit-rate",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "35",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2025-10-16..2025-11-27",
+      "selected": "opposite_side_hot_fade_l21",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "25",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2025-11-28..2026-01-01",
+      "selected": "house_high_fade_l240",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "35",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-01-02..2026-02-06",
+      "selected": "opposite_side_pair_l45",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "68",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-02-07..2026-03-14",
+      "selected": "target_pair_absence_recent_penalty_l60",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 36,
+        "accuracy": 0.6
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "17",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-03-16..2026-04-18",
+      "selected": "source_pair_l30",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "08",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-04-20..2026-05-23",
+      "selected": "pair_hot_fade_s60_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "56",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "fold": "2026-05-25..2026-06-27",
+      "selected": "pair_hot_fade_s45_l365",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "25",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2025-09-11..2025-10-15",
+      "selected": "opposite_side_pair_l180",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "34",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2025-10-16..2025-11-27",
+      "selected": "opposite_side_pair_l180",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "45",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2025-11-28..2026-01-01",
+      "selected": "gated_pair_rate_l120_t58",
+      "family": "gated",
+      "validation": {
+        "n": 32,
+        "ok": 23,
+        "accuracy": 0.71875
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "35",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-01-02..2026-02-06",
+      "selected": "target_pair_absence_recent_penalty_l30",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "05",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-02-07..2026-03-14",
+      "selected": "house_high_fade_l365",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "23",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-03-16..2026-04-18",
+      "selected": "pair_hot_fade_s30_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 22,
+        "accuracy": 0.7333333333333333
+      },
+      "oraclePair": "25",
+      "oracleAccuracy": 0.8333333333333334
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-04-20..2026-05-23",
+      "selected": "pair_cold_continue_s7_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 45,
+        "accuracy": 0.75
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "fold": "2026-05-25..2026-06-27",
+      "selected": "opposite_side_pair_l45",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "68",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2025-09-18..2025-10-30",
+      "selected": "digit_absence_sum_l45",
+      "family": "digit-rate",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "07",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2025-10-31..2025-12-04",
+      "selected": "target_pair_absence_recent_penalty_l90",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 10,
+        "accuracy": 0.3333333333333333
+      },
+      "oraclePair": "24",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2025-12-05..2026-01-08",
+      "selected": "target_pair_absence_recent_penalty_l30",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "45",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-01-09..2026-02-13",
+      "selected": "source_pair_l60",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 11,
+        "accuracy": 0.36666666666666664
+      },
+      "oraclePair": "28",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "selected": "prev_panel_digits_exclude_l240",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "27",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "digit_absence_min_l365",
+      "family": "digit-rate",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 19,
+        "accuracy": 0.6333333333333333
+      },
+      "oraclePair": "26",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "gated_pair_rate_l30_t58",
+      "family": "gated",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 19,
+        "accuracy": 0.6333333333333333
+      },
+      "oraclePair": "23",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "opposite_side_hot_fade_l30",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "67",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2025-09-18..2025-10-30",
+      "selected": "digit_absence_min_l240",
+      "family": "digit-rate",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2025-10-31..2025-12-04",
+      "selected": "opposite_side_hot_fade_l365",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "49",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2025-12-05..2026-01-08",
+      "selected": "opposite_side_pair_l120",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-01-09..2026-02-13",
+      "selected": "odd_even_same_l120",
+      "family": "parity",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "56",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "selected": "prev_panel_digits_exclude_l120",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "48",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "pair_hot_fade_s60_l365",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "pair_absent_streak_l240",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 19,
+        "accuracy": 0.6333333333333333
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "pair_failed_recently_l365",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 44,
+        "accuracy": 0.7333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "46",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2025-09-18..2025-10-30",
+      "selected": "opposite_side_pair_l120",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "24",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2025-10-31..2025-12-04",
+      "selected": "pair_hot_fade_s60_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2025-12-05..2026-01-08",
+      "selected": "opposite_side_hot_fade_l90",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-01-09..2026-02-13",
+      "selected": "opposite_side_pair_l21",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "06",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "selected": "same_weekday_pair_l45",
+      "family": "calendar",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "29",
+      "oracleAccuracy": 0.6
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "opposite_side_hot_fade_l180",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "01",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "prev_panel_digits_exclude_l365",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "24",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "house_low_fade_l180",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "08",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2025-09-18..2025-10-30",
+      "selected": "opposite_side_pair_l30",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "37",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2025-10-31..2025-12-04",
+      "selected": "odd_even_mixed_l60",
+      "family": "parity",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "34",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2025-12-05..2026-01-08",
+      "selected": "gated_pair_rate_l90_t58",
+      "family": "gated",
+      "validation": {
+        "n": 60,
+        "ok": 36,
+        "accuracy": 0.6
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "16",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-01-09..2026-02-13",
+      "selected": "prev_panel_digits_avoid_l21",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "49",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "selected": "pair_cold_continue_s7_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 11,
+        "accuracy": 0.36666666666666664
+      },
+      "oraclePair": "69",
+      "oracleAccuracy": 0.6
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "pair_hot_fade_s45_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "37",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "pair_hot_fade_s45_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "05",
+      "oracleAccuracy": 0.6
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "pair_hot_fade_s30_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "35",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2025-11-06..2025-12-05",
+      "selected": "target_pair_absence_recent_penalty_l30",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 11,
+        "accuracy": 0.36666666666666664
+      },
+      "oraclePair": "26",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2025-12-06..2026-01-04",
+      "selected": "target_pair_absence_recent_penalty_l240",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 11,
+        "accuracy": 0.36666666666666664
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-01-05..2026-02-04",
+      "selected": "pair_absent_streak_l180",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-02-05..2026-03-07",
+      "selected": "pair_hot_fade_s30_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "35",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-03-08..2026-04-06",
+      "selected": "pair_hot_fade_s30_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "56",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-04-07..2026-05-06",
+      "selected": "house_high_fade_l45",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "89",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-05-07..2026-06-05",
+      "selected": "house_high_fade_l90",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "09",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "fold": "2026-06-06..2026-07-05",
+      "selected": "opposite_side_hot_fade_l365",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "79",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2025-11-06..2025-12-05",
+      "selected": "pair_hot_fade_s45_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 20,
+        "accuracy": 0.6666666666666666
+      },
+      "oraclePair": "02",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2025-12-06..2026-01-04",
+      "selected": "pair_hot_fade_s45_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-01-05..2026-02-04",
+      "selected": "pair_failed_recently_l365",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "09",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-02-05..2026-03-07",
+      "selected": "pair_hot_fade_s30_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "05",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-03-08..2026-04-06",
+      "selected": "pair_hot_fade_s30_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "05",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-04-07..2026-05-06",
+      "selected": "opposite_side_pair_l21",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-05-07..2026-06-05",
+      "selected": "prev_panel_digits_exclude_l180",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "69",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "fold": "2026-06-06..2026-07-05",
+      "selected": "pair_failed_recently_l365",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "04",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2025-07-16..2025-08-27",
+      "selected": "source_pair_l30",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "38",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2025-08-28..2025-10-10",
+      "selected": "source_pair_l30",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "56",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2025-10-13..2025-11-28",
+      "selected": "house_high_fade_l60",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "08",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2025-12-01..2026-01-09",
+      "selected": "prev_panel_digits_exclude_l240",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "13",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-01-12..2026-02-23",
+      "selected": "prev_panel_digits_exclude_l240",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 19,
+        "accuracy": 0.6333333333333333
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-02-24..2026-04-07",
+      "selected": "pair_hot_fade_s14_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "04",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-04-08..2026-05-19",
+      "selected": "opposite_side_hot_fade_l120",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 44,
+        "accuracy": 0.7333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "08",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "fold": "2026-05-20..2026-07-03",
+      "selected": "source_pair_l240",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "26",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2025-07-16..2025-08-27",
+      "selected": "pair_cold_continue_s30_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "79",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2025-08-28..2025-10-10",
+      "selected": "target_pair_absence_recent_penalty_l45",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "09",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2025-10-13..2025-11-28",
+      "selected": "source_digit_absence_l90",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2025-12-01..2026-01-09",
+      "selected": "pair_hot_fade_s14_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 9,
+        "accuracy": 0.3
+      },
+      "oraclePair": "16",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-01-12..2026-02-23",
+      "selected": "opposite_side_pair_l30",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 20,
+        "accuracy": 0.6666666666666666
+      },
+      "oraclePair": "16",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-02-24..2026-04-07",
+      "selected": "opposite_side_pair_l30",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-04-08..2026-05-19",
+      "selected": "pair_hot_fade_s14_l90",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "04",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "fold": "2026-05-20..2026-07-03",
+      "selected": "pair_failed_recently_l180",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 35,
+        "accuracy": 0.5833333333333334
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "04",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2025-09-18..2025-10-30",
+      "selected": "pair_cold_continue_s14_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 9,
+        "accuracy": 0.3
+      },
+      "oraclePair": "07",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2025-10-31..2025-12-04",
+      "selected": "same_weekday_pair_l120",
+      "family": "calendar",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "02",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2025-12-05..2026-01-08",
+      "selected": "opposite_side_hot_fade_l21",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "58",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-01-09..2026-02-13",
+      "selected": "pair_hot_fade_s60_l365",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-02-14..2026-03-21",
+      "selected": "pair_hot_fade_s14_l90",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 11,
+        "accuracy": 0.36666666666666664
+      },
+      "oraclePair": "79",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "opposite_side_pair_l240",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "04",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "opposite_side_hot_fade_l365",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "49",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "pair_absent_streak_l90",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "47",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2025-09-18..2025-10-30",
+      "selected": "prev_panel_digits_avoid_l21",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 8,
+        "accuracy": 0.26666666666666666
+      },
+      "oraclePair": "24",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2025-10-31..2025-12-04",
+      "selected": "opposite_side_hot_fade_l60",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "67",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2025-12-05..2026-01-08",
+      "selected": "prev_panel_digits_exclude_l60",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 36,
+        "accuracy": 0.6
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "04",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-01-09..2026-02-13",
+      "selected": "pair_hot_fade_s7_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-02-14..2026-03-21",
+      "selected": "source_pair_l45",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "28",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "opposite_side_pair_l365",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "17",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "pair_hot_fade_s60_l90",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "45",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "pair_cold_continue_s7_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "28",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2025-09-17..2025-10-29",
+      "selected": "pair_hot_fade_s60_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "45",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2025-10-30..2025-12-03",
+      "selected": "pair_hot_fade_s30_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "06",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2025-12-04..2026-01-07",
+      "selected": "pair_hot_fade_s30_l90",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 20,
+        "accuracy": 0.6666666666666666
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-01-08..2026-02-12",
+      "selected": "house_low_fade_l240",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "46",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-02-13..2026-03-20",
+      "selected": "pair_hot_fade_s30_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "17",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "pair_hot_fade_s7_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "06",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "source_pair_l90",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 19,
+        "accuracy": 0.6333333333333333
+      },
+      "oraclePair": "07",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "source_pair_l90",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "19",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2025-09-17..2025-10-29",
+      "selected": "pair_hot_fade_s60_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "15",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2025-10-30..2025-12-03",
+      "selected": "source_pair_l240",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2025-12-04..2026-01-07",
+      "selected": "source_pair_l120",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 20,
+        "accuracy": 0.6666666666666666
+      },
+      "oraclePair": "45",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-01-08..2026-02-12",
+      "selected": "source_pair_l120",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "12",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-02-13..2026-03-20",
+      "selected": "prev_panel_digits_avoid_l180",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "37",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-03-23..2026-04-25",
+      "selected": "opposite_side_hot_fade_l365",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "28",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-04-27..2026-05-30",
+      "selected": "prev_panel_digits_avoid_l90",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "07",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "fold": "2026-06-01..2026-07-04",
+      "selected": "prev_panel_digits_avoid_l90",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "34",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2025-07-23..2025-09-03",
+      "selected": "opposite_side_pair_l30",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "48",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2025-09-04..2025-10-15",
+      "selected": "pair_hot_fade_s30_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "23",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2025-10-16..2025-12-03",
+      "selected": "pair_hot_fade_s30_l90",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "38",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2025-12-04..2026-01-14",
+      "selected": "pair_cold_continue_s45_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "57",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-01-15..2026-02-26",
+      "selected": "digit_absence_min_l365",
+      "family": "digit-rate",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "05",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-02-27..2026-04-10",
+      "selected": "house_high_fade_l240",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "89",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-04-13..2026-05-22",
+      "selected": "pair_failed_recently_l365",
+      "family": "gap",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "23",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "fold": "2026-05-25..2026-07-03",
+      "selected": "pair_hot_fade_s7_l365",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "37",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2025-07-23..2025-09-03",
+      "selected": "pair_hot_fade_s60_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "58",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2025-09-04..2025-10-15",
+      "selected": "source_pair_l21",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "01",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2025-10-16..2025-12-03",
+      "selected": "pair_hot_fade_s30_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "45",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2025-12-04..2026-01-14",
+      "selected": "source_digit_absence_l21",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "26",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-01-15..2026-02-26",
+      "selected": "pair_hot_fade_s45_l365",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 16,
+        "accuracy": 0.5333333333333333
+      },
+      "oraclePair": "29",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-02-27..2026-04-10",
+      "selected": "target_pair_absence_recent_penalty_l21",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-04-13..2026-05-22",
+      "selected": "house_low_fade_l60",
+      "family": "house",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "46",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "fold": "2026-05-25..2026-07-03",
+      "selected": "source_digit_absence_l90",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "05",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2025-07-22..2025-09-02",
+      "selected": "pair_hot_fade_s45_l240",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 45,
+        "accuracy": 0.75
+      },
+      "test": {
+        "n": 30,
+        "ok": 11,
+        "accuracy": 0.36666666666666664
+      },
+      "oraclePair": "56",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2025-09-03..2025-10-14",
+      "selected": "prev_panel_digits_avoid_l21",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 21,
+        "accuracy": 0.7
+      },
+      "oraclePair": "09",
+      "oracleAccuracy": 0.6333333333333333
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2025-10-15..2025-12-02",
+      "selected": "prev_panel_digits_avoid_l21",
+      "family": "previous-panel",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 12,
+        "accuracy": 0.4
+      },
+      "oraclePair": "05",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2025-12-03..2026-01-13",
+      "selected": "same_weekday_pair_l120",
+      "family": "calendar",
+      "validation": {
+        "n": 60,
+        "ok": 38,
+        "accuracy": 0.6333333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "48",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-01-14..2026-02-25",
+      "selected": "odd_even_mixed_l365",
+      "family": "parity",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 11,
+        "accuracy": 0.36666666666666664
+      },
+      "oraclePair": "06",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-02-26..2026-04-09",
+      "selected": "opposite_side_hot_fade_l90",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "06",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-04-10..2026-05-22",
+      "selected": "opposite_side_hot_fade_l90",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 43,
+        "accuracy": 0.7166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 13,
+        "accuracy": 0.43333333333333335
+      },
+      "oraclePair": "47",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "fold": "2026-05-25..2026-07-03",
+      "selected": "opposite_side_hot_fade_l120",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 37,
+        "accuracy": 0.6166666666666667
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "19",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2025-07-22..2025-09-02",
+      "selected": "pair_cold_continue_s30_l180",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 40,
+        "accuracy": 0.6666666666666666
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "35",
+      "oracleAccuracy": 0.7666666666666667
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2025-09-03..2025-10-14",
+      "selected": "gated_pair_rate_l45_t70",
+      "family": "gated",
+      "validation": {
+        "n": 28,
+        "ok": 20,
+        "accuracy": 0.7142857142857143
+      },
+      "test": {
+        "n": 7,
+        "ok": 2,
+        "accuracy": 0.2857142857142857
+      },
+      "oraclePair": "89",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2025-10-15..2025-12-02",
+      "selected": "source_digit_absence_l90",
+      "family": "source-market",
+      "validation": {
+        "n": 60,
+        "ok": 42,
+        "accuracy": 0.7
+      },
+      "test": {
+        "n": 30,
+        "ok": 17,
+        "accuracy": 0.5666666666666667
+      },
+      "oraclePair": "03",
+      "oracleAccuracy": 0.7333333333333333
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2025-12-03..2026-01-13",
+      "selected": "opposite_side_pair_l60",
+      "family": "opposite-side",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 18,
+        "accuracy": 0.6
+      },
+      "oraclePair": "47",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-01-14..2026-02-25",
+      "selected": "digit_absence_sum_l90",
+      "family": "digit-rate",
+      "validation": {
+        "n": 60,
+        "ok": 39,
+        "accuracy": 0.65
+      },
+      "test": {
+        "n": 30,
+        "ok": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-02-26..2026-04-09",
+      "selected": "pair_hot_fade_s60_l120",
+      "family": "recent-vs-long",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 11,
+        "accuracy": 0.36666666666666664
+      },
+      "oraclePair": "18",
+      "oracleAccuracy": 0.6666666666666666
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-04-10..2026-05-22",
+      "selected": "gated_pair_rate_l30_t70",
+      "family": "gated",
+      "validation": {
+        "n": 34,
+        "ok": 23,
+        "accuracy": 0.6764705882352942
+      },
+      "test": {
+        "n": 1,
+        "ok": 0,
+        "accuracy": 0
+      },
+      "oraclePair": "08",
+      "oracleAccuracy": 0.7
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "fold": "2026-05-25..2026-07-03",
+      "selected": "target_pair_absence_recent_penalty_l120",
+      "family": "target-pair-rate",
+      "validation": {
+        "n": 60,
+        "ok": 41,
+        "accuracy": 0.6833333333333333
+      },
+      "test": {
+        "n": 30,
+        "ok": 15,
+        "accuracy": 0.5
+      },
+      "oraclePair": "13",
+      "oracleAccuracy": 0.7333333333333333
+    }
+  ],
+  "strategySummary": [
+    {
+      "strategy": "gated_pair_rate_l60_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 25,
+      "validationOk": 11,
+      "testN": 11,
+      "testOk": 6,
+      "wins80": 0,
+      "validationAccuracy": 0.44,
+      "testAccuracy": 0.5454545454545454
+    },
+    {
+      "strategy": "gated_pair_rate_l90_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 97,
+      "validationOk": 55,
+      "testN": 32,
+      "testOk": 17,
+      "wins80": 0,
+      "validationAccuracy": 0.5670103092783505,
+      "testAccuracy": 0.53125
+    },
+    {
+      "strategy": "gated_pair_rate_l120_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 54,
+      "validationOk": 32,
+      "testN": 19,
+      "testOk": 10,
+      "wins80": 0,
+      "validationAccuracy": 0.5925925925925926,
+      "testAccuracy": 0.5263157894736842
+    },
+    {
+      "strategy": "opposite_side_pair_l240",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 6005,
+      "testN": 5760,
+      "testOk": 3027,
+      "wins80": 0,
+      "validationAccuracy": 0.5212673611111112,
+      "testAccuracy": 0.5255208333333333
+    },
+    {
+      "strategy": "gated_pair_rate_l90_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 759,
+      "validationOk": 413,
+      "testN": 383,
+      "testOk": 200,
+      "wins80": 0,
+      "validationAccuracy": 0.544137022397892,
+      "testAccuracy": 0.5221932114882507
+    },
+    {
+      "strategy": "house_low_fade_l240",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5977,
+      "testN": 5760,
+      "testOk": 2997,
+      "wins80": 0,
+      "validationAccuracy": 0.5188368055555556,
+      "testAccuracy": 0.5203125
+    },
+    {
+      "strategy": "pair_hot_fade_s14_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5930,
+      "testN": 5760,
+      "testOk": 2995,
+      "wins80": 1,
+      "validationAccuracy": 0.5147569444444444,
+      "testAccuracy": 0.5199652777777778
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l240",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5955,
+      "testN": 5760,
+      "testOk": 2994,
+      "wins80": 0,
+      "validationAccuracy": 0.5169270833333334,
+      "testAccuracy": 0.5197916666666667
+    },
+    {
+      "strategy": "odd_even_mixed_l90",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5890,
+      "testN": 5760,
+      "testOk": 2990,
+      "wins80": 0,
+      "validationAccuracy": 0.5112847222222222,
+      "testAccuracy": 0.5190972222222222
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l365",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5945,
+      "testN": 5760,
+      "testOk": 2984,
+      "wins80": 0,
+      "validationAccuracy": 0.5160590277777778,
+      "testAccuracy": 0.5180555555555556
+    },
+    {
+      "strategy": "pair_failed_recently_l365",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5972,
+      "testN": 5760,
+      "testOk": 2980,
+      "wins80": 0,
+      "validationAccuracy": 0.5184027777777778,
+      "testAccuracy": 0.5173611111111112
+    },
+    {
+      "strategy": "gated_pair_rate_l120_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 1848,
+      "validationOk": 953,
+      "testN": 1031,
+      "testOk": 533,
+      "wins80": 0,
+      "validationAccuracy": 0.5156926406926406,
+      "testAccuracy": 0.5169738118331717
+    },
+    {
+      "strategy": "pair_hot_fade_s30_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5875,
+      "testN": 5760,
+      "testOk": 2975,
+      "wins80": 0,
+      "validationAccuracy": 0.5099826388888888,
+      "testAccuracy": 0.5164930555555556
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l30",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5939,
+      "testN": 5760,
+      "testOk": 2975,
+      "wins80": 1,
+      "validationAccuracy": 0.5155381944444445,
+      "testAccuracy": 0.5164930555555556
+    },
+    {
+      "strategy": "opposite_side_pair_l180",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5883,
+      "testN": 5760,
+      "testOk": 2975,
+      "wins80": 0,
+      "validationAccuracy": 0.5106770833333333,
+      "testAccuracy": 0.5164930555555556
+    },
+    {
+      "strategy": "pair_absent_streak_l90",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5869,
+      "testN": 5760,
+      "testOk": 2974,
+      "wins80": 0,
+      "validationAccuracy": 0.5094618055555555,
+      "testAccuracy": 0.5163194444444444
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l30",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5941,
+      "testN": 5760,
+      "testOk": 2973,
+      "wins80": 1,
+      "validationAccuracy": 0.5157118055555555,
+      "testAccuracy": 0.5161458333333333
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l60",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5923,
+      "testN": 5760,
+      "testOk": 2973,
+      "wins80": 0,
+      "validationAccuracy": 0.5141493055555556,
+      "testAccuracy": 0.5161458333333333
+    },
+    {
+      "strategy": "digit_absence_min_l90",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5928,
+      "testN": 5760,
+      "testOk": 2972,
+      "wins80": 0,
+      "validationAccuracy": 0.5145833333333333,
+      "testAccuracy": 0.5159722222222223
+    },
+    {
+      "strategy": "gated_pair_rate_l45_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 1768,
+      "validationOk": 906,
+      "testN": 915,
+      "testOk": 472,
+      "wins80": 0,
+      "validationAccuracy": 0.5124434389140271,
+      "testAccuracy": 0.5158469945355191
+    },
+    {
+      "strategy": "gated_pair_rate_l30_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 9508,
+      "validationOk": 4882,
+      "testN": 4751,
+      "testOk": 2450,
+      "wins80": 0,
+      "validationAccuracy": 0.5134623474968447,
+      "testAccuracy": 0.5156809092822564
+    },
+    {
+      "strategy": "digit_absence_sum_l90",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5921,
+      "testN": 5760,
+      "testOk": 2969,
+      "wins80": 0,
+      "validationAccuracy": 0.5139756944444445,
+      "testAccuracy": 0.5154513888888889
+    },
+    {
+      "strategy": "digit_present_fade_l90",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5921,
+      "testN": 5760,
+      "testOk": 2969,
+      "wins80": 0,
+      "validationAccuracy": 0.5139756944444445,
+      "testAccuracy": 0.5154513888888889
+    },
+    {
+      "strategy": "house_low_fade_l365",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5904,
+      "testN": 5760,
+      "testOk": 2969,
+      "wins80": 0,
+      "validationAccuracy": 0.5125,
+      "testAccuracy": 0.5154513888888889
+    },
+    {
+      "strategy": "odd_even_mixed_l120",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5874,
+      "testN": 5760,
+      "testOk": 2966,
+      "wins80": 0,
+      "validationAccuracy": 0.5098958333333333,
+      "testAccuracy": 0.5149305555555556
+    },
+    {
+      "strategy": "target_pair_absence_l365",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5901,
+      "testN": 5760,
+      "testOk": 2965,
+      "wins80": 0,
+      "validationAccuracy": 0.5122395833333333,
+      "testAccuracy": 0.5147569444444444
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l180",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5852,
+      "testN": 5760,
+      "testOk": 2965,
+      "wins80": 0,
+      "validationAccuracy": 0.5079861111111111,
+      "testAccuracy": 0.5147569444444444
+    },
+    {
+      "strategy": "pair_absent_streak_l180",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5903,
+      "testN": 5760,
+      "testOk": 2963,
+      "wins80": 0,
+      "validationAccuracy": 0.5124131944444444,
+      "testAccuracy": 0.5144097222222223
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l90",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5897,
+      "testN": 5760,
+      "testOk": 2963,
+      "wins80": 0,
+      "validationAccuracy": 0.5118923611111111,
+      "testAccuracy": 0.5144097222222223
+    },
+    {
+      "strategy": "odd_even_mixed_l365",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5912,
+      "testN": 5760,
+      "testOk": 2963,
+      "wins80": 0,
+      "validationAccuracy": 0.5131944444444444,
+      "testAccuracy": 0.5144097222222223
+    },
+    {
+      "strategy": "gated_pair_rate_l180_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 5989,
+      "validationOk": 3064,
+      "testN": 3093,
+      "testOk": 1591,
+      "wins80": 0,
+      "validationAccuracy": 0.5116046084488228,
+      "testAccuracy": 0.5143873262204979
+    },
+    {
+      "strategy": "gated_pair_rate_l30_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 11235,
+      "validationOk": 5751,
+      "testN": 5612,
+      "testOk": 2886,
+      "wins80": 0,
+      "validationAccuracy": 0.5118825100133512,
+      "testAccuracy": 0.5142551674982181
+    },
+    {
+      "strategy": "pair_hot_fade_s7_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5870,
+      "testN": 5760,
+      "testOk": 2962,
+      "wins80": 1,
+      "validationAccuracy": 0.5095486111111112,
+      "testAccuracy": 0.5142361111111111
+    },
+    {
+      "strategy": "digit_absence_min_l120",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5908,
+      "testN": 5760,
+      "testOk": 2961,
+      "wins80": 0,
+      "validationAccuracy": 0.5128472222222222,
+      "testAccuracy": 0.5140625
+    },
+    {
+      "strategy": "pair_hot_fade_s7_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5870,
+      "testN": 5760,
+      "testOk": 2961,
+      "wins80": 2,
+      "validationAccuracy": 0.5095486111111112,
+      "testAccuracy": 0.5140625
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l7",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5940,
+      "testN": 5760,
+      "testOk": 2961,
+      "wins80": 0,
+      "validationAccuracy": 0.515625,
+      "testAccuracy": 0.5140625
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l14",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5940,
+      "testN": 5760,
+      "testOk": 2961,
+      "wins80": 0,
+      "validationAccuracy": 0.515625,
+      "testAccuracy": 0.5140625
+    },
+    {
+      "strategy": "pair_absent_streak_l365",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5911,
+      "testN": 5760,
+      "testOk": 2959,
+      "wins80": 0,
+      "validationAccuracy": 0.5131076388888889,
+      "testAccuracy": 0.5137152777777778
+    },
+    {
+      "strategy": "pair_hot_fade_s14_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5885,
+      "testN": 5760,
+      "testOk": 2958,
+      "wins80": 0,
+      "validationAccuracy": 0.5108506944444444,
+      "testAccuracy": 0.5135416666666667
+    },
+    {
+      "strategy": "pair_hot_fade_s30_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5927,
+      "testN": 5760,
+      "testOk": 2958,
+      "wins80": 0,
+      "validationAccuracy": 0.5144965277777778,
+      "testAccuracy": 0.5135416666666667
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l180",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5944,
+      "testN": 5760,
+      "testOk": 2958,
+      "wins80": 0,
+      "validationAccuracy": 0.5159722222222223,
+      "testAccuracy": 0.5135416666666667
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l180",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5906,
+      "testN": 5760,
+      "testOk": 2957,
+      "wins80": 1,
+      "validationAccuracy": 0.5126736111111111,
+      "testAccuracy": 0.5133680555555555
+    },
+    {
+      "strategy": "pair_hot_fade_s14_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5880,
+      "testN": 5760,
+      "testOk": 2957,
+      "wins80": 0,
+      "validationAccuracy": 0.5104166666666666,
+      "testAccuracy": 0.5133680555555555
+    },
+    {
+      "strategy": "pair_hot_fade_s30_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5893,
+      "testN": 5760,
+      "testOk": 2957,
+      "wins80": 0,
+      "validationAccuracy": 0.5115451388888889,
+      "testAccuracy": 0.5133680555555555
+    },
+    {
+      "strategy": "opposite_side_pair_l45",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5872,
+      "testN": 5760,
+      "testOk": 2957,
+      "wins80": 0,
+      "validationAccuracy": 0.5097222222222222,
+      "testAccuracy": 0.5133680555555555
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l45",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5872,
+      "testN": 5760,
+      "testOk": 2957,
+      "wins80": 0,
+      "validationAccuracy": 0.5097222222222222,
+      "testAccuracy": 0.5133680555555555
+    },
+    {
+      "strategy": "source_pair_l60",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4916,
+      "testN": 4800,
+      "testOk": 2463,
+      "wins80": 1,
+      "validationAccuracy": 0.5120833333333333,
+      "testAccuracy": 0.513125
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l120",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5850,
+      "testN": 5760,
+      "testOk": 2955,
+      "wins80": 0,
+      "validationAccuracy": 0.5078125,
+      "testAccuracy": 0.5130208333333334
+    },
+    {
+      "strategy": "pair_hot_fade_s21_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5858,
+      "testN": 5760,
+      "testOk": 2955,
+      "wins80": 1,
+      "validationAccuracy": 0.5085069444444444,
+      "testAccuracy": 0.5130208333333334
+    },
+    {
+      "strategy": "pair_hot_fade_s30_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5911,
+      "testN": 5760,
+      "testOk": 2955,
+      "wins80": 0,
+      "validationAccuracy": 0.5131076388888889,
+      "testAccuracy": 0.5130208333333334
+    },
+    {
+      "strategy": "pair_failed_recently_l240",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5906,
+      "testN": 5760,
+      "testOk": 2955,
+      "wins80": 0,
+      "validationAccuracy": 0.5126736111111111,
+      "testAccuracy": 0.5130208333333334
+    },
+    {
+      "strategy": "odd_even_same_l240",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5880,
+      "testN": 5760,
+      "testOk": 2955,
+      "wins80": 0,
+      "validationAccuracy": 0.5104166666666666,
+      "testAccuracy": 0.5130208333333334
+    },
+    {
+      "strategy": "house_high_fade_l90",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5901,
+      "testN": 5760,
+      "testOk": 2954,
+      "wins80": 0,
+      "validationAccuracy": 0.5122395833333333,
+      "testAccuracy": 0.5128472222222222
+    },
+    {
+      "strategy": "target_pair_absence_l240",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5891,
+      "testN": 5760,
+      "testOk": 2953,
+      "wins80": 0,
+      "validationAccuracy": 0.5113715277777777,
+      "testAccuracy": 0.5126736111111111
+    },
+    {
+      "strategy": "pair_failed_recently_l180",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5844,
+      "testN": 5760,
+      "testOk": 2953,
+      "wins80": 0,
+      "validationAccuracy": 0.5072916666666667,
+      "testAccuracy": 0.5126736111111111
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l240",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5904,
+      "testN": 5760,
+      "testOk": 2953,
+      "wins80": 0,
+      "validationAccuracy": 0.5125,
+      "testAccuracy": 0.5126736111111111
+    },
+    {
+      "strategy": "gated_pair_rate_l30_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 11513,
+      "validationOk": 5893,
+      "testN": 5756,
+      "testOk": 2949,
+      "wins80": 0,
+      "validationAccuracy": 0.5118561625988014,
+      "testAccuracy": 0.5123349548297429
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l240",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5851,
+      "testN": 5760,
+      "testOk": 2951,
+      "wins80": 0,
+      "validationAccuracy": 0.5078993055555555,
+      "testAccuracy": 0.5123263888888889
+    },
+    {
+      "strategy": "target_pair_absence_l30",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5893,
+      "testN": 5760,
+      "testOk": 2949,
+      "wins80": 0,
+      "validationAccuracy": 0.5115451388888889,
+      "testAccuracy": 0.5119791666666667
+    },
+    {
+      "strategy": "digit_absence_sum_l120",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5878,
+      "testN": 5760,
+      "testOk": 2949,
+      "wins80": 0,
+      "validationAccuracy": 0.5102430555555556,
+      "testAccuracy": 0.5119791666666667
+    },
+    {
+      "strategy": "digit_present_fade_l120",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5878,
+      "testN": 5760,
+      "testOk": 2949,
+      "wins80": 0,
+      "validationAccuracy": 0.5102430555555556,
+      "testAccuracy": 0.5119791666666667
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l365",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5859,
+      "testN": 5760,
+      "testOk": 2949,
+      "wins80": 1,
+      "validationAccuracy": 0.50859375,
+      "testAccuracy": 0.5119791666666667
+    },
+    {
+      "strategy": "target_pair_absence_l90",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5854,
+      "testN": 5760,
+      "testOk": 2948,
+      "wins80": 0,
+      "validationAccuracy": 0.5081597222222223,
+      "testAccuracy": 0.5118055555555555
+    },
+    {
+      "strategy": "pair_hot_fade_s14_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5888,
+      "testN": 5760,
+      "testOk": 2948,
+      "wins80": 0,
+      "validationAccuracy": 0.5111111111111111,
+      "testAccuracy": 0.5118055555555555
+    },
+    {
+      "strategy": "pair_hot_fade_s21_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5915,
+      "testN": 5760,
+      "testOk": 2948,
+      "wins80": 0,
+      "validationAccuracy": 0.5134548611111112,
+      "testAccuracy": 0.5118055555555555
+    },
+    {
+      "strategy": "pair_hot_fade_s60_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5923,
+      "testN": 5760,
+      "testOk": 2948,
+      "wins80": 0,
+      "validationAccuracy": 0.5141493055555556,
+      "testAccuracy": 0.5118055555555555
+    },
+    {
+      "strategy": "house_low_fade_l180",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5908,
+      "testN": 5760,
+      "testOk": 2948,
+      "wins80": 0,
+      "validationAccuracy": 0.5128472222222222,
+      "testAccuracy": 0.5118055555555555
+    },
+    {
+      "strategy": "odd_even_mixed_l240",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5901,
+      "testN": 5760,
+      "testOk": 2946,
+      "wins80": 0,
+      "validationAccuracy": 0.5122395833333333,
+      "testAccuracy": 0.5114583333333333
+    },
+    {
+      "strategy": "source_pair_l30",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4945,
+      "testN": 4800,
+      "testOk": 2455,
+      "wins80": 0,
+      "validationAccuracy": 0.5151041666666667,
+      "testAccuracy": 0.5114583333333333
+    },
+    {
+      "strategy": "pair_absent_streak_l30",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5867,
+      "testN": 5760,
+      "testOk": 2945,
+      "wins80": 0,
+      "validationAccuracy": 0.5092881944444444,
+      "testAccuracy": 0.5112847222222222
+    },
+    {
+      "strategy": "opposite_side_pair_l90",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5820,
+      "testN": 5760,
+      "testOk": 2945,
+      "wins80": 0,
+      "validationAccuracy": 0.5052083333333334,
+      "testAccuracy": 0.5112847222222222
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l120",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5895,
+      "testN": 5760,
+      "testOk": 2945,
+      "wins80": 0,
+      "validationAccuracy": 0.51171875,
+      "testAccuracy": 0.5112847222222222
+    },
+    {
+      "strategy": "house_low_fade_l90",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5825,
+      "testN": 5760,
+      "testOk": 2945,
+      "wins80": 0,
+      "validationAccuracy": 0.5056423611111112,
+      "testAccuracy": 0.5112847222222222
+    },
+    {
+      "strategy": "pair_hot_fade_s21_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5902,
+      "testN": 5760,
+      "testOk": 2944,
+      "wins80": 1,
+      "validationAccuracy": 0.5123263888888889,
+      "testAccuracy": 0.5111111111111111
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l120",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5853,
+      "testN": 5760,
+      "testOk": 2944,
+      "wins80": 0,
+      "validationAccuracy": 0.5080729166666667,
+      "testAccuracy": 0.5111111111111111
+    },
+    {
+      "strategy": "gated_pair_rate_l120_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 210,
+      "validationOk": 120,
+      "testN": 90,
+      "testOk": 46,
+      "wins80": 0,
+      "validationAccuracy": 0.5714285714285714,
+      "testAccuracy": 0.5111111111111111
+    },
+    {
+      "strategy": "pair_cold_continue_s21_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5874,
+      "testN": 5760,
+      "testOk": 2943,
+      "wins80": 0,
+      "validationAccuracy": 0.5098958333333333,
+      "testAccuracy": 0.5109375
+    },
+    {
+      "strategy": "source_pair_l45",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4897,
+      "testN": 4800,
+      "testOk": 2452,
+      "wins80": 0,
+      "validationAccuracy": 0.5101041666666667,
+      "testAccuracy": 0.5108333333333334
+    },
+    {
+      "strategy": "target_pair_absence_l180",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5874,
+      "testN": 5760,
+      "testOk": 2942,
+      "wins80": 0,
+      "validationAccuracy": 0.5098958333333333,
+      "testAccuracy": 0.5107638888888889
+    },
+    {
+      "strategy": "pair_cold_continue_s7_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5877,
+      "testN": 5760,
+      "testOk": 2941,
+      "wins80": 0,
+      "validationAccuracy": 0.51015625,
+      "testAccuracy": 0.5105902777777778
+    },
+    {
+      "strategy": "pair_hot_fade_s60_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5935,
+      "testN": 5760,
+      "testOk": 2941,
+      "wins80": 0,
+      "validationAccuracy": 0.5151909722222222,
+      "testAccuracy": 0.5105902777777778
+    },
+    {
+      "strategy": "digit_absence_min_l180",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5859,
+      "testN": 5760,
+      "testOk": 2940,
+      "wins80": 0,
+      "validationAccuracy": 0.50859375,
+      "testAccuracy": 0.5104166666666666
+    },
+    {
+      "strategy": "pair_hot_fade_s45_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5913,
+      "testN": 5760,
+      "testOk": 2940,
+      "wins80": 1,
+      "validationAccuracy": 0.51328125,
+      "testAccuracy": 0.5104166666666666
+    },
+    {
+      "strategy": "pair_failed_recently_l90",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5853,
+      "testN": 5760,
+      "testOk": 2940,
+      "wins80": 0,
+      "validationAccuracy": 0.5080729166666667,
+      "testAccuracy": 0.5104166666666666
+    },
+    {
+      "strategy": "source_pair_l21",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4887,
+      "testN": 4800,
+      "testOk": 2450,
+      "wins80": 0,
+      "validationAccuracy": 0.5090625,
+      "testAccuracy": 0.5104166666666666
+    },
+    {
+      "strategy": "pair_cold_continue_s30_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5895,
+      "testN": 5760,
+      "testOk": 2939,
+      "wins80": 0,
+      "validationAccuracy": 0.51171875,
+      "testAccuracy": 0.5102430555555556
+    },
+    {
+      "strategy": "opposite_side_pair_l60",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5806,
+      "testN": 5760,
+      "testOk": 2939,
+      "wins80": 0,
+      "validationAccuracy": 0.5039930555555555,
+      "testAccuracy": 0.5102430555555556
+    },
+    {
+      "strategy": "odd_even_same_l120",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5837,
+      "testN": 5760,
+      "testOk": 2939,
+      "wins80": 0,
+      "validationAccuracy": 0.5066840277777778,
+      "testAccuracy": 0.5102430555555556
+    },
+    {
+      "strategy": "source_digit_absence_l60",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4896,
+      "testN": 4800,
+      "testOk": 2449,
+      "wins80": 0,
+      "validationAccuracy": 0.51,
+      "testAccuracy": 0.5102083333333334
+    },
+    {
+      "strategy": "pair_hot_fade_s60_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5855,
+      "testN": 5760,
+      "testOk": 2938,
+      "wins80": 0,
+      "validationAccuracy": 0.5082465277777778,
+      "testAccuracy": 0.5100694444444445
+    },
+    {
+      "strategy": "pair_absent_streak_l240",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5871,
+      "testN": 5760,
+      "testOk": 2938,
+      "wins80": 0,
+      "validationAccuracy": 0.5096354166666667,
+      "testAccuracy": 0.5100694444444445
+    },
+    {
+      "strategy": "pair_failed_recently_l120",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5829,
+      "testN": 5760,
+      "testOk": 2937,
+      "wins80": 0,
+      "validationAccuracy": 0.5059895833333333,
+      "testAccuracy": 0.5098958333333333
+    },
+    {
+      "strategy": "gated_pair_rate_l240_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 3215,
+      "validationOk": 1685,
+      "testN": 1901,
+      "testOk": 969,
+      "wins80": 0,
+      "validationAccuracy": 0.5241057542768274,
+      "testAccuracy": 0.5097317201472908
+    },
+    {
+      "strategy": "pair_cold_continue_s30_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5885,
+      "testN": 5760,
+      "testOk": 2936,
+      "wins80": 0,
+      "validationAccuracy": 0.5108506944444444,
+      "testAccuracy": 0.5097222222222222
+    },
+    {
+      "strategy": "gated_pair_rate_l120_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 9142,
+      "validationOk": 4639,
+      "testN": 4694,
+      "testOk": 2392,
+      "wins80": 0,
+      "validationAccuracy": 0.5074381973309998,
+      "testAccuracy": 0.5095867064337452
+    },
+    {
+      "strategy": "source_digit_absence_l90",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4874,
+      "testN": 4800,
+      "testOk": 2446,
+      "wins80": 0,
+      "validationAccuracy": 0.5077083333333333,
+      "testAccuracy": 0.5095833333333334
+    },
+    {
+      "strategy": "target_pair_absence_l120",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5865,
+      "testN": 5760,
+      "testOk": 2935,
+      "wins80": 0,
+      "validationAccuracy": 0.5091145833333334,
+      "testAccuracy": 0.5095486111111112
+    },
+    {
+      "strategy": "pair_cold_continue_s21_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5845,
+      "testN": 5760,
+      "testOk": 2935,
+      "wins80": 0,
+      "validationAccuracy": 0.5073784722222222,
+      "testAccuracy": 0.5095486111111112
+    },
+    {
+      "strategy": "digit_absence_min_l240",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5873,
+      "testN": 5760,
+      "testOk": 2934,
+      "wins80": 0,
+      "validationAccuracy": 0.5098090277777778,
+      "testAccuracy": 0.509375
+    },
+    {
+      "strategy": "source_digit_absence_l30",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4905,
+      "testN": 4800,
+      "testOk": 2445,
+      "wins80": 0,
+      "validationAccuracy": 0.5109375,
+      "testAccuracy": 0.509375
+    },
+    {
+      "strategy": "pair_hot_fade_s60_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5875,
+      "testN": 5760,
+      "testOk": 2933,
+      "wins80": 0,
+      "validationAccuracy": 0.5099826388888888,
+      "testAccuracy": 0.5092013888888889
+    },
+    {
+      "strategy": "house_high_fade_l240",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5911,
+      "testN": 5760,
+      "testOk": 2933,
+      "wins80": 0,
+      "validationAccuracy": 0.5131076388888889,
+      "testAccuracy": 0.5092013888888889
+    },
+    {
+      "strategy": "source_digit_absence_l45",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4911,
+      "testN": 4800,
+      "testOk": 2444,
+      "wins80": 0,
+      "validationAccuracy": 0.5115625,
+      "testAccuracy": 0.5091666666666667
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l21",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5886,
+      "testN": 5760,
+      "testOk": 2932,
+      "wins80": 0,
+      "validationAccuracy": 0.5109375,
+      "testAccuracy": 0.5090277777777777
+    },
+    {
+      "strategy": "digit_absence_sum_l21",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5821,
+      "testN": 5760,
+      "testOk": 2932,
+      "wins80": 0,
+      "validationAccuracy": 0.5052951388888889,
+      "testAccuracy": 0.5090277777777777
+    },
+    {
+      "strategy": "digit_absence_min_l21",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5851,
+      "testN": 5760,
+      "testOk": 2932,
+      "wins80": 0,
+      "validationAccuracy": 0.5078993055555555,
+      "testAccuracy": 0.5090277777777777
+    },
+    {
+      "strategy": "digit_present_fade_l21",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5821,
+      "testN": 5760,
+      "testOk": 2932,
+      "wins80": 0,
+      "validationAccuracy": 0.5052951388888889,
+      "testAccuracy": 0.5090277777777777
+    },
+    {
+      "strategy": "pair_hot_fade_s21_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5887,
+      "testN": 5760,
+      "testOk": 2932,
+      "wins80": 0,
+      "validationAccuracy": 0.5110243055555556,
+      "testAccuracy": 0.5090277777777777
+    },
+    {
+      "strategy": "pair_absent_streak_l21",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5858,
+      "testN": 5760,
+      "testOk": 2932,
+      "wins80": 0,
+      "validationAccuracy": 0.5085069444444444,
+      "testAccuracy": 0.5090277777777777
+    },
+    {
+      "strategy": "source_digit_absence_l120",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4879,
+      "testN": 4800,
+      "testOk": 2443,
+      "wins80": 0,
+      "validationAccuracy": 0.5082291666666666,
+      "testAccuracy": 0.5089583333333333
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l90",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5886,
+      "testN": 5760,
+      "testOk": 2931,
+      "wins80": 0,
+      "validationAccuracy": 0.5109375,
+      "testAccuracy": 0.5088541666666667
+    },
+    {
+      "strategy": "digit_absence_sum_l180",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5852,
+      "testN": 5760,
+      "testOk": 2931,
+      "wins80": 0,
+      "validationAccuracy": 0.5079861111111111,
+      "testAccuracy": 0.5088541666666667
+    },
+    {
+      "strategy": "digit_present_fade_l180",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5852,
+      "testN": 5760,
+      "testOk": 2931,
+      "wins80": 0,
+      "validationAccuracy": 0.5079861111111111,
+      "testAccuracy": 0.5088541666666667
+    },
+    {
+      "strategy": "pair_hot_fade_s7_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5742,
+      "testN": 5760,
+      "testOk": 2931,
+      "wins80": 0,
+      "validationAccuracy": 0.4984375,
+      "testAccuracy": 0.5088541666666667
+    },
+    {
+      "strategy": "odd_even_same_l30",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5832,
+      "testN": 5760,
+      "testOk": 2931,
+      "wins80": 0,
+      "validationAccuracy": 0.50625,
+      "testAccuracy": 0.5088541666666667
+    },
+    {
+      "strategy": "pair_cold_continue_s7_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5848,
+      "testN": 5760,
+      "testOk": 2930,
+      "wins80": 0,
+      "validationAccuracy": 0.5076388888888889,
+      "testAccuracy": 0.5086805555555556
+    },
+    {
+      "strategy": "pair_cold_continue_s14_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5844,
+      "testN": 5760,
+      "testOk": 2930,
+      "wins80": 0,
+      "validationAccuracy": 0.5072916666666667,
+      "testAccuracy": 0.5086805555555556
+    },
+    {
+      "strategy": "pair_cold_continue_s14_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5842,
+      "testN": 5760,
+      "testOk": 2930,
+      "wins80": 0,
+      "validationAccuracy": 0.5071180555555556,
+      "testAccuracy": 0.5086805555555556
+    },
+    {
+      "strategy": "pair_failed_recently_l21",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5860,
+      "testN": 5760,
+      "testOk": 2930,
+      "wins80": 0,
+      "validationAccuracy": 0.5086805555555556,
+      "testAccuracy": 0.5086805555555556
+    },
+    {
+      "strategy": "target_pair_absence_l60",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5823,
+      "testN": 5760,
+      "testOk": 2929,
+      "wins80": 0,
+      "validationAccuracy": 0.50546875,
+      "testAccuracy": 0.5085069444444444
+    },
+    {
+      "strategy": "pair_hot_fade_s7_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5753,
+      "testN": 5760,
+      "testOk": 2929,
+      "wins80": 0,
+      "validationAccuracy": 0.4993923611111111,
+      "testAccuracy": 0.5085069444444444
+    },
+    {
+      "strategy": "pair_cold_continue_s7_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5840,
+      "testN": 5760,
+      "testOk": 2928,
+      "wins80": 0,
+      "validationAccuracy": 0.5069444444444444,
+      "testAccuracy": 0.5083333333333333
+    },
+    {
+      "strategy": "pair_hot_fade_s21_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5852,
+      "testN": 5760,
+      "testOk": 2928,
+      "wins80": 0,
+      "validationAccuracy": 0.5079861111111111,
+      "testAccuracy": 0.5083333333333333
+    },
+    {
+      "strategy": "opposite_side_pair_l120",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5849,
+      "testN": 5760,
+      "testOk": 2928,
+      "wins80": 0,
+      "validationAccuracy": 0.5077256944444445,
+      "testAccuracy": 0.5083333333333333
+    },
+    {
+      "strategy": "source_digit_absence_l365",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4894,
+      "testN": 4800,
+      "testOk": 2440,
+      "wins80": 0,
+      "validationAccuracy": 0.5097916666666666,
+      "testAccuracy": 0.5083333333333333
+    },
+    {
+      "strategy": "digit_absence_sum_l60",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5796,
+      "testN": 5760,
+      "testOk": 2927,
+      "wins80": 0,
+      "validationAccuracy": 0.503125,
+      "testAccuracy": 0.5081597222222223
+    },
+    {
+      "strategy": "digit_present_fade_l60",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5796,
+      "testN": 5760,
+      "testOk": 2927,
+      "wins80": 0,
+      "validationAccuracy": 0.503125,
+      "testAccuracy": 0.5081597222222223
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l30",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5870,
+      "testN": 5760,
+      "testOk": 2927,
+      "wins80": 0,
+      "validationAccuracy": 0.5095486111111112,
+      "testAccuracy": 0.5081597222222223
+    },
+    {
+      "strategy": "source_digit_absence_l180",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4828,
+      "testN": 4800,
+      "testOk": 2439,
+      "wins80": 0,
+      "validationAccuracy": 0.5029166666666667,
+      "testAccuracy": 0.508125
+    },
+    {
+      "strategy": "gated_pair_rate_l30_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 6231,
+      "validationOk": 3157,
+      "testN": 3157,
+      "testOk": 1604,
+      "wins80": 0,
+      "validationAccuracy": 0.5066602471513401,
+      "testAccuracy": 0.5080772885650935
+    },
+    {
+      "strategy": "pair_cold_continue_s7_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5840,
+      "testN": 5760,
+      "testOk": 2926,
+      "wins80": 0,
+      "validationAccuracy": 0.5069444444444444,
+      "testAccuracy": 0.5079861111111111
+    },
+    {
+      "strategy": "pair_cold_continue_s7_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5846,
+      "testN": 5760,
+      "testOk": 2926,
+      "wins80": 0,
+      "validationAccuracy": 0.5074652777777777,
+      "testAccuracy": 0.5079861111111111
+    },
+    {
+      "strategy": "pair_absent_streak_l120",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5826,
+      "testN": 5760,
+      "testOk": 2926,
+      "wins80": 0,
+      "validationAccuracy": 0.5057291666666667,
+      "testAccuracy": 0.5079861111111111
+    },
+    {
+      "strategy": "pair_hot_fade_s7_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5749,
+      "testN": 5760,
+      "testOk": 2925,
+      "wins80": 2,
+      "validationAccuracy": 0.4990451388888889,
+      "testAccuracy": 0.5078125
+    },
+    {
+      "strategy": "pair_hot_fade_s14_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5847,
+      "testN": 5760,
+      "testOk": 2925,
+      "wins80": 0,
+      "validationAccuracy": 0.5075520833333333,
+      "testAccuracy": 0.5078125
+    },
+    {
+      "strategy": "odd_even_same_l365",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5841,
+      "testN": 5760,
+      "testOk": 2925,
+      "wins80": 1,
+      "validationAccuracy": 0.50703125,
+      "testAccuracy": 0.5078125
+    },
+    {
+      "strategy": "gated_pair_rate_l60_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 11386,
+      "validationOk": 5747,
+      "testN": 5709,
+      "testOk": 2898,
+      "wins80": 0,
+      "validationAccuracy": 0.5047426664324609,
+      "testAccuracy": 0.5076195480819758
+    },
+    {
+      "strategy": "digit_absence_sum_l365",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5832,
+      "testN": 5760,
+      "testOk": 2923,
+      "wins80": 0,
+      "validationAccuracy": 0.50625,
+      "testAccuracy": 0.5074652777777777
+    },
+    {
+      "strategy": "digit_present_fade_l365",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5832,
+      "testN": 5760,
+      "testOk": 2923,
+      "wins80": 0,
+      "validationAccuracy": 0.50625,
+      "testAccuracy": 0.5074652777777777
+    },
+    {
+      "strategy": "odd_even_same_l90",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5808,
+      "testN": 5760,
+      "testOk": 2923,
+      "wins80": 0,
+      "validationAccuracy": 0.5041666666666667,
+      "testAccuracy": 0.5074652777777777
+    },
+    {
+      "strategy": "gated_pair_rate_l21_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 4544,
+      "validationOk": 2320,
+      "testN": 2292,
+      "testOk": 1163,
+      "wins80": 0,
+      "validationAccuracy": 0.5105633802816901,
+      "testAccuracy": 0.5074171029668412
+    },
+    {
+      "strategy": "source_digit_absence_l21",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4832,
+      "testN": 4800,
+      "testOk": 2435,
+      "wins80": 0,
+      "validationAccuracy": 0.5033333333333333,
+      "testAccuracy": 0.5072916666666667
+    },
+    {
+      "strategy": "pair_cold_continue_s14_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5824,
+      "testN": 5760,
+      "testOk": 2921,
+      "wins80": 0,
+      "validationAccuracy": 0.5055555555555555,
+      "testAccuracy": 0.5071180555555556
+    },
+    {
+      "strategy": "pair_cold_continue_s30_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5873,
+      "testN": 5760,
+      "testOk": 2921,
+      "wins80": 0,
+      "validationAccuracy": 0.5098090277777778,
+      "testAccuracy": 0.5071180555555556
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l21",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5819,
+      "testN": 5760,
+      "testOk": 2921,
+      "wins80": 0,
+      "validationAccuracy": 0.5051215277777777,
+      "testAccuracy": 0.5071180555555556
+    },
+    {
+      "strategy": "odd_even_mixed_l30",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5859,
+      "testN": 5760,
+      "testOk": 2921,
+      "wins80": 0,
+      "validationAccuracy": 0.50859375,
+      "testAccuracy": 0.5071180555555556
+    },
+    {
+      "strategy": "source_pair_l90",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4839,
+      "testN": 4800,
+      "testOk": 2434,
+      "wins80": 0,
+      "validationAccuracy": 0.5040625,
+      "testAccuracy": 0.5070833333333333
+    },
+    {
+      "strategy": "gated_pair_rate_l90_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 10143,
+      "validationOk": 5116,
+      "testN": 5158,
+      "testOk": 2615,
+      "wins80": 0,
+      "validationAccuracy": 0.5043872621512373,
+      "testAccuracy": 0.5069794493989919
+    },
+    {
+      "strategy": "same_weekday_pair_l14",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5835,
+      "testN": 5760,
+      "testOk": 2920,
+      "wins80": 0,
+      "validationAccuracy": 0.5065104166666666,
+      "testAccuracy": 0.5069444444444444
+    },
+    {
+      "strategy": "same_weekday_pair_l21",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5853,
+      "testN": 5760,
+      "testOk": 2920,
+      "wins80": 0,
+      "validationAccuracy": 0.5080729166666667,
+      "testAccuracy": 0.5069444444444444
+    },
+    {
+      "strategy": "odd_even_same_l45",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5778,
+      "testN": 5760,
+      "testOk": 2920,
+      "wins80": 0,
+      "validationAccuracy": 0.5015625,
+      "testAccuracy": 0.5069444444444444
+    },
+    {
+      "strategy": "digit_absence_min_l365",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5831,
+      "testN": 5760,
+      "testOk": 2919,
+      "wins80": 0,
+      "validationAccuracy": 0.5061631944444445,
+      "testAccuracy": 0.5067708333333333
+    },
+    {
+      "strategy": "pair_cold_continue_s60_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5825,
+      "testN": 5760,
+      "testOk": 2919,
+      "wins80": 0,
+      "validationAccuracy": 0.5056423611111112,
+      "testAccuracy": 0.5067708333333333
+    },
+    {
+      "strategy": "pair_cold_continue_s60_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5846,
+      "testN": 5760,
+      "testOk": 2919,
+      "wins80": 0,
+      "validationAccuracy": 0.5074652777777777,
+      "testAccuracy": 0.5067708333333333
+    },
+    {
+      "strategy": "pair_absent_streak_l60",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5797,
+      "testN": 5760,
+      "testOk": 2919,
+      "wins80": 0,
+      "validationAccuracy": 0.5032118055555556,
+      "testAccuracy": 0.5067708333333333
+    },
+    {
+      "strategy": "digit_absence_sum_l45",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5766,
+      "testN": 5760,
+      "testOk": 2918,
+      "wins80": 0,
+      "validationAccuracy": 0.5005208333333333,
+      "testAccuracy": 0.5065972222222223
+    },
+    {
+      "strategy": "digit_present_fade_l45",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5766,
+      "testN": 5760,
+      "testOk": 2918,
+      "wins80": 0,
+      "validationAccuracy": 0.5005208333333333,
+      "testAccuracy": 0.5065972222222223
+    },
+    {
+      "strategy": "pair_cold_continue_s21_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5824,
+      "testN": 5760,
+      "testOk": 2918,
+      "wins80": 0,
+      "validationAccuracy": 0.5055555555555555,
+      "testAccuracy": 0.5065972222222223
+    },
+    {
+      "strategy": "pair_hot_fade_s45_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5799,
+      "testN": 5760,
+      "testOk": 2918,
+      "wins80": 1,
+      "validationAccuracy": 0.5033854166666667,
+      "testAccuracy": 0.5065972222222223
+    },
+    {
+      "strategy": "pair_hot_fade_s45_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5890,
+      "testN": 5760,
+      "testOk": 2918,
+      "wins80": 0,
+      "validationAccuracy": 0.5112847222222222,
+      "testAccuracy": 0.5065972222222223
+    },
+    {
+      "strategy": "pair_failed_recently_l30",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5840,
+      "testN": 5760,
+      "testOk": 2918,
+      "wins80": 0,
+      "validationAccuracy": 0.5069444444444444,
+      "testAccuracy": 0.5065972222222223
+    },
+    {
+      "strategy": "digit_absence_sum_l240",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5827,
+      "testN": 5760,
+      "testOk": 2917,
+      "wins80": 0,
+      "validationAccuracy": 0.5058159722222222,
+      "testAccuracy": 0.5064236111111111
+    },
+    {
+      "strategy": "digit_present_fade_l240",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5827,
+      "testN": 5760,
+      "testOk": 2917,
+      "wins80": 0,
+      "validationAccuracy": 0.5058159722222222,
+      "testAccuracy": 0.5064236111111111
+    },
+    {
+      "strategy": "house_high_fade_l120",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5822,
+      "testN": 5760,
+      "testOk": 2917,
+      "wins80": 0,
+      "validationAccuracy": 0.5053819444444444,
+      "testAccuracy": 0.5064236111111111
+    },
+    {
+      "strategy": "odd_even_mixed_l60",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5803,
+      "testN": 5760,
+      "testOk": 2917,
+      "wins80": 0,
+      "validationAccuracy": 0.5037326388888889,
+      "testAccuracy": 0.5064236111111111
+    },
+    {
+      "strategy": "pair_cold_continue_s30_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5850,
+      "testN": 5760,
+      "testOk": 2916,
+      "wins80": 0,
+      "validationAccuracy": 0.5078125,
+      "testAccuracy": 0.50625
+    },
+    {
+      "strategy": "house_low_fade_l30",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5840,
+      "testN": 5760,
+      "testOk": 2916,
+      "wins80": 0,
+      "validationAccuracy": 0.5069444444444444,
+      "testAccuracy": 0.50625
+    },
+    {
+      "strategy": "odd_even_same_l21",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5825,
+      "testN": 5760,
+      "testOk": 2916,
+      "wins80": 0,
+      "validationAccuracy": 0.5056423611111112,
+      "testAccuracy": 0.50625
+    },
+    {
+      "strategy": "odd_even_mixed_l45",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5794,
+      "testN": 5760,
+      "testOk": 2916,
+      "wins80": 0,
+      "validationAccuracy": 0.5029513888888889,
+      "testAccuracy": 0.50625
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l60",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5816,
+      "testN": 5760,
+      "testOk": 2915,
+      "wins80": 0,
+      "validationAccuracy": 0.5048611111111111,
+      "testAccuracy": 0.5060763888888888
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l90",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5766,
+      "testN": 5760,
+      "testOk": 2914,
+      "wins80": 1,
+      "validationAccuracy": 0.5005208333333333,
+      "testAccuracy": 0.5059027777777778
+    },
+    {
+      "strategy": "opposite_side_pair_l365",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5862,
+      "testN": 5760,
+      "testOk": 2914,
+      "wins80": 0,
+      "validationAccuracy": 0.5088541666666667,
+      "testAccuracy": 0.5059027777777778
+    },
+    {
+      "strategy": "house_low_fade_l60",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5860,
+      "testN": 5760,
+      "testOk": 2914,
+      "wins80": 0,
+      "validationAccuracy": 0.5086805555555556,
+      "testAccuracy": 0.5059027777777778
+    },
+    {
+      "strategy": "gated_pair_rate_l60_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 7292,
+      "validationOk": 3688,
+      "testN": 3701,
+      "testOk": 1872,
+      "wins80": 0,
+      "validationAccuracy": 0.505759736697751,
+      "testAccuracy": 0.5058092407457444
+    },
+    {
+      "strategy": "pair_cold_continue_s45_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5737,
+      "testN": 5760,
+      "testOk": 2913,
+      "wins80": 0,
+      "validationAccuracy": 0.49800347222222224,
+      "testAccuracy": 0.5057291666666667
+    },
+    {
+      "strategy": "pair_cold_continue_s45_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5780,
+      "testN": 5760,
+      "testOk": 2913,
+      "wins80": 0,
+      "validationAccuracy": 0.5017361111111112,
+      "testAccuracy": 0.5057291666666667
+    },
+    {
+      "strategy": "pair_cold_continue_s60_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5816,
+      "testN": 5760,
+      "testOk": 2913,
+      "wins80": 0,
+      "validationAccuracy": 0.5048611111111111,
+      "testAccuracy": 0.5057291666666667
+    },
+    {
+      "strategy": "pair_hot_fade_s30_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5884,
+      "testN": 5760,
+      "testOk": 2912,
+      "wins80": 0,
+      "validationAccuracy": 0.5107638888888889,
+      "testAccuracy": 0.5055555555555555
+    },
+    {
+      "strategy": "pair_hot_fade_s45_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5827,
+      "testN": 5760,
+      "testOk": 2912,
+      "wins80": 0,
+      "validationAccuracy": 0.5058159722222222,
+      "testAccuracy": 0.5055555555555555
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l45",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5840,
+      "testN": 5760,
+      "testOk": 2912,
+      "wins80": 0,
+      "validationAccuracy": 0.5069444444444444,
+      "testAccuracy": 0.5055555555555555
+    },
+    {
+      "strategy": "prev_panel_digits_exclude_l365",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5781,
+      "testN": 5760,
+      "testOk": 2912,
+      "wins80": 0,
+      "validationAccuracy": 0.5018229166666667,
+      "testAccuracy": 0.5055555555555555
+    },
+    {
+      "strategy": "house_low_fade_l21",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5834,
+      "testN": 5760,
+      "testOk": 2912,
+      "wins80": 0,
+      "validationAccuracy": 0.5064236111111111,
+      "testAccuracy": 0.5055555555555555
+    },
+    {
+      "strategy": "gated_pair_rate_l21_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 11508,
+      "validationOk": 5829,
+      "testN": 5754,
+      "testOk": 2908,
+      "wins80": 0,
+      "validationAccuracy": 0.5065172054223149,
+      "testAccuracy": 0.505387556482447
+    },
+    {
+      "strategy": "pair_hot_fade_s45_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5800,
+      "testN": 5760,
+      "testOk": 2911,
+      "wins80": 1,
+      "validationAccuracy": 0.5034722222222222,
+      "testAccuracy": 0.5053819444444444
+    },
+    {
+      "strategy": "pair_cold_continue_s60_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5817,
+      "testN": 5760,
+      "testOk": 2911,
+      "wins80": 0,
+      "validationAccuracy": 0.5049479166666667,
+      "testAccuracy": 0.5053819444444444
+    },
+    {
+      "strategy": "pair_cold_continue_s60_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5821,
+      "testN": 5760,
+      "testOk": 2911,
+      "wins80": 0,
+      "validationAccuracy": 0.5052951388888889,
+      "testAccuracy": 0.5053819444444444
+    },
+    {
+      "strategy": "house_high_fade_l30",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5812,
+      "testN": 5760,
+      "testOk": 2911,
+      "wins80": 0,
+      "validationAccuracy": 0.5045138888888889,
+      "testAccuracy": 0.5053819444444444
+    },
+    {
+      "strategy": "odd_even_same_l180",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5821,
+      "testN": 5760,
+      "testOk": 2911,
+      "wins80": 0,
+      "validationAccuracy": 0.5052951388888889,
+      "testAccuracy": 0.5053819444444444
+    },
+    {
+      "strategy": "digit_absence_min_l45",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5777,
+      "testN": 5760,
+      "testOk": 2910,
+      "wins80": 0,
+      "validationAccuracy": 0.5014756944444444,
+      "testAccuracy": 0.5052083333333334
+    },
+    {
+      "strategy": "opposite_side_pair_l30",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5844,
+      "testN": 5760,
+      "testOk": 2910,
+      "wins80": 0,
+      "validationAccuracy": 0.5072916666666667,
+      "testAccuracy": 0.5052083333333334
+    },
+    {
+      "strategy": "target_pair_absence_l21",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5830,
+      "testN": 5760,
+      "testOk": 2909,
+      "wins80": 0,
+      "validationAccuracy": 0.5060763888888888,
+      "testAccuracy": 0.5050347222222222
+    },
+    {
+      "strategy": "pair_cold_continue_s14_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5791,
+      "testN": 5760,
+      "testOk": 2909,
+      "wins80": 0,
+      "validationAccuracy": 0.5026909722222223,
+      "testAccuracy": 0.5050347222222222
+    },
+    {
+      "strategy": "pair_cold_continue_s21_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5829,
+      "testN": 5760,
+      "testOk": 2908,
+      "wins80": 0,
+      "validationAccuracy": 0.5059895833333333,
+      "testAccuracy": 0.5048611111111111
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l21",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5784,
+      "testN": 5760,
+      "testOk": 2907,
+      "wins80": 0,
+      "validationAccuracy": 0.5020833333333333,
+      "testAccuracy": 0.5046875
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l180",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5760,
+      "testN": 5760,
+      "testOk": 2907,
+      "wins80": 0,
+      "validationAccuracy": 0.5,
+      "testAccuracy": 0.5046875
+    },
+    {
+      "strategy": "pair_cold_continue_s21_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5798,
+      "testN": 5760,
+      "testOk": 2906,
+      "wins80": 0,
+      "validationAccuracy": 0.5032986111111111,
+      "testAccuracy": 0.5045138888888889
+    },
+    {
+      "strategy": "odd_even_mixed_l180",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5807,
+      "testN": 5760,
+      "testOk": 2906,
+      "wins80": 0,
+      "validationAccuracy": 0.5040798611111111,
+      "testAccuracy": 0.5045138888888889
+    },
+    {
+      "strategy": "pair_hot_fade_s60_l240",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5856,
+      "testN": 5760,
+      "testOk": 2905,
+      "wins80": 1,
+      "validationAccuracy": 0.5083333333333333,
+      "testAccuracy": 0.5043402777777778
+    },
+    {
+      "strategy": "house_high_fade_l60",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5801,
+      "testN": 5760,
+      "testOk": 2905,
+      "wins80": 0,
+      "validationAccuracy": 0.5035590277777777,
+      "testAccuracy": 0.5043402777777778
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l45",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5769,
+      "testN": 5760,
+      "testOk": 2904,
+      "wins80": 0,
+      "validationAccuracy": 0.50078125,
+      "testAccuracy": 0.5041666666666667
+    },
+    {
+      "strategy": "digit_absence_min_l60",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5767,
+      "testN": 5760,
+      "testOk": 2904,
+      "wins80": 0,
+      "validationAccuracy": 0.5006076388888889,
+      "testAccuracy": 0.5041666666666667
+    },
+    {
+      "strategy": "house_high_fade_l21",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5826,
+      "testN": 5760,
+      "testOk": 2904,
+      "wins80": 0,
+      "validationAccuracy": 0.5057291666666667,
+      "testAccuracy": 0.5041666666666667
+    },
+    {
+      "strategy": "pair_failed_recently_l60",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5778,
+      "testN": 5760,
+      "testOk": 2903,
+      "wins80": 0,
+      "validationAccuracy": 0.5015625,
+      "testAccuracy": 0.5039930555555555
+    },
+    {
+      "strategy": "source_pair_l180",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4863,
+      "testN": 4800,
+      "testOk": 2418,
+      "wins80": 0,
+      "validationAccuracy": 0.5065625,
+      "testAccuracy": 0.50375
+    },
+    {
+      "strategy": "pair_cold_continue_s14_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5777,
+      "testN": 5760,
+      "testOk": 2901,
+      "wins80": 0,
+      "validationAccuracy": 0.5014756944444444,
+      "testAccuracy": 0.5036458333333333
+    },
+    {
+      "strategy": "opposite_side_pair_l21",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5784,
+      "testN": 5760,
+      "testOk": 2901,
+      "wins80": 0,
+      "validationAccuracy": 0.5020833333333333,
+      "testAccuracy": 0.5036458333333333
+    },
+    {
+      "strategy": "source_digit_absence_l240",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4822,
+      "testN": 4800,
+      "testOk": 2417,
+      "wins80": 0,
+      "validationAccuracy": 0.5022916666666667,
+      "testAccuracy": 0.5035416666666667
+    },
+    {
+      "strategy": "pair_cold_continue_s45_l120",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5735,
+      "testN": 5760,
+      "testOk": 2900,
+      "wins80": 0,
+      "validationAccuracy": 0.4978298611111111,
+      "testAccuracy": 0.5034722222222222
+    },
+    {
+      "strategy": "odd_even_mixed_l21",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5809,
+      "testN": 5760,
+      "testOk": 2900,
+      "wins80": 0,
+      "validationAccuracy": 0.5042534722222223,
+      "testAccuracy": 0.5034722222222222
+    },
+    {
+      "strategy": "same_weekday_pair_l30",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5868,
+      "testN": 5760,
+      "testOk": 2899,
+      "wins80": 0,
+      "validationAccuracy": 0.509375,
+      "testAccuracy": 0.5032986111111111
+    },
+    {
+      "strategy": "house_low_fade_l45",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5766,
+      "testN": 5760,
+      "testOk": 2899,
+      "wins80": 0,
+      "validationAccuracy": 0.5005208333333333,
+      "testAccuracy": 0.5032986111111111
+    },
+    {
+      "strategy": "digit_absence_sum_l30",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5827,
+      "testN": 5760,
+      "testOk": 2898,
+      "wins80": 0,
+      "validationAccuracy": 0.5058159722222222,
+      "testAccuracy": 0.503125
+    },
+    {
+      "strategy": "digit_present_fade_l30",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5827,
+      "testN": 5760,
+      "testOk": 2898,
+      "wins80": 0,
+      "validationAccuracy": 0.5058159722222222,
+      "testAccuracy": 0.503125
+    },
+    {
+      "strategy": "target_pair_absence_l45",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5741,
+      "testN": 5760,
+      "testOk": 2898,
+      "wins80": 0,
+      "validationAccuracy": 0.49835069444444446,
+      "testAccuracy": 0.503125
+    },
+    {
+      "strategy": "source_pair_l120",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4789,
+      "testN": 4800,
+      "testOk": 2415,
+      "wins80": 0,
+      "validationAccuracy": 0.49885416666666665,
+      "testAccuracy": 0.503125
+    },
+    {
+      "strategy": "gated_pair_rate_l45_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 11353,
+      "validationOk": 5652,
+      "testN": 5682,
+      "testOk": 2858,
+      "wins80": 0,
+      "validationAccuracy": 0.4978419800933674,
+      "testAccuracy": 0.5029919042590637
+    },
+    {
+      "strategy": "gated_pair_rate_l21_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 1766,
+      "validationOk": 907,
+      "testN": 883,
+      "testOk": 444,
+      "wins80": 0,
+      "validationAccuracy": 0.513590033975085,
+      "testAccuracy": 0.5028312570781427
+    },
+    {
+      "strategy": "digit_absence_min_l30",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5847,
+      "testN": 5760,
+      "testOk": 2896,
+      "wins80": 0,
+      "validationAccuracy": 0.5075520833333333,
+      "testAccuracy": 0.5027777777777778
+    },
+    {
+      "strategy": "pair_cold_continue_s45_l365",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5729,
+      "testN": 5760,
+      "testOk": 2896,
+      "wins80": 0,
+      "validationAccuracy": 0.4973090277777778,
+      "testAccuracy": 0.5027777777777778
+    },
+    {
+      "strategy": "odd_even_same_l60",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5773,
+      "testN": 5760,
+      "testOk": 2896,
+      "wins80": 0,
+      "validationAccuracy": 0.5011284722222222,
+      "testAccuracy": 0.5027777777777778
+    },
+    {
+      "strategy": "gated_pair_rate_l21_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 11086,
+      "validationOk": 5590,
+      "testN": 5543,
+      "testOk": 2786,
+      "wins80": 0,
+      "validationAccuracy": 0.5042395814540862,
+      "testAccuracy": 0.502615911961032
+    },
+    {
+      "strategy": "gated_pair_rate_l21_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 11086,
+      "validationOk": 5590,
+      "testN": 5543,
+      "testOk": 2786,
+      "wins80": 0,
+      "validationAccuracy": 0.5042395814540862,
+      "testAccuracy": 0.502615911961032
+    },
+    {
+      "strategy": "pair_cold_continue_s30_l90",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5793,
+      "testN": 5760,
+      "testOk": 2888,
+      "wins80": 0,
+      "validationAccuracy": 0.5028645833333333,
+      "testAccuracy": 0.5013888888888889
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l60",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5766,
+      "testN": 5760,
+      "testOk": 2887,
+      "wins80": 0,
+      "validationAccuracy": 0.5005208333333333,
+      "testAccuracy": 0.5012152777777777
+    },
+    {
+      "strategy": "house_low_fade_l120",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5763,
+      "testN": 5760,
+      "testOk": 2887,
+      "wins80": 0,
+      "validationAccuracy": 0.5002604166666667,
+      "testAccuracy": 0.5012152777777777
+    },
+    {
+      "strategy": "house_high_fade_l180",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5817,
+      "testN": 5760,
+      "testOk": 2887,
+      "wins80": 0,
+      "validationAccuracy": 0.5049479166666667,
+      "testAccuracy": 0.5012152777777777
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l60",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5723,
+      "testN": 5760,
+      "testOk": 2886,
+      "wins80": 0,
+      "validationAccuracy": 0.49678819444444444,
+      "testAccuracy": 0.5010416666666667
+    },
+    {
+      "strategy": "gated_pair_rate_l30_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 1393,
+      "validationOk": 703,
+      "testN": 689,
+      "testOk": 345,
+      "wins80": 0,
+      "validationAccuracy": 0.5046661880832735,
+      "testAccuracy": 0.5007256894049347
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l240",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5733,
+      "testN": 5760,
+      "testOk": 2884,
+      "wins80": 0,
+      "validationAccuracy": 0.49765625,
+      "testAccuracy": 0.5006944444444444
+    },
+    {
+      "strategy": "gated_pair_rate_l21_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 8422,
+      "validationOk": 4230,
+      "testN": 4229,
+      "testOk": 2117,
+      "wins80": 0,
+      "validationAccuracy": 0.5022559962004275,
+      "testAccuracy": 0.5005911563017261
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l21",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5696,
+      "testN": 5760,
+      "testOk": 2880,
+      "wins80": 0,
+      "validationAccuracy": 0.49444444444444446,
+      "testAccuracy": 0.5
+    },
+    {
+      "strategy": "gated_pair_rate_l60_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 2923,
+      "validationOk": 1464,
+      "testN": 1464,
+      "testOk": 732,
+      "wins80": 0,
+      "validationAccuracy": 0.5008552856654123,
+      "testAccuracy": 0.5
+    },
+    {
+      "strategy": "gated_pair_rate_l240_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 248,
+      "validationOk": 136,
+      "testN": 98,
+      "testOk": 49,
+      "wins80": 0,
+      "validationAccuracy": 0.5483870967741935,
+      "testAccuracy": 0.5
+    },
+    {
+      "strategy": "gated_pair_rate_l90_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 4725,
+      "validationOk": 2358,
+      "testN": 2492,
+      "testOk": 1245,
+      "wins80": 0,
+      "validationAccuracy": 0.4990476190476191,
+      "testAccuracy": 0.4995987158908507
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l45",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5664,
+      "testN": 5760,
+      "testOk": 2877,
+      "wins80": 0,
+      "validationAccuracy": 0.49166666666666664,
+      "testAccuracy": 0.49947916666666664
+    },
+    {
+      "strategy": "house_high_fade_l365",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5782,
+      "testN": 5760,
+      "testOk": 2877,
+      "wins80": 0,
+      "validationAccuracy": 0.5019097222222222,
+      "testAccuracy": 0.49947916666666664
+    },
+    {
+      "strategy": "source_pair_l365",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4809,
+      "testN": 4800,
+      "testOk": 2397,
+      "wins80": 0,
+      "validationAccuracy": 0.5009375,
+      "testAccuracy": 0.499375
+    },
+    {
+      "strategy": "gated_pair_rate_l45_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 10485,
+      "validationOk": 5192,
+      "testN": 5254,
+      "testOk": 2623,
+      "wins80": 0,
+      "validationAccuracy": 0.49518359561278014,
+      "testAccuracy": 0.4992386752950133
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l30",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5684,
+      "testN": 5760,
+      "testOk": 2875,
+      "wins80": 0,
+      "validationAccuracy": 0.4934027777777778,
+      "testAccuracy": 0.4991319444444444
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l120",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5732,
+      "testN": 5760,
+      "testOk": 2874,
+      "wins80": 0,
+      "validationAccuracy": 0.49756944444444445,
+      "testAccuracy": 0.49895833333333334
+    },
+    {
+      "strategy": "source_pair_l240",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 9600,
+      "validationOk": 4837,
+      "testN": 4800,
+      "testOk": 2395,
+      "wins80": 0,
+      "validationAccuracy": 0.5038541666666667,
+      "testAccuracy": 0.49895833333333334
+    },
+    {
+      "strategy": "pair_cold_continue_s45_l180",
+      "family": "recent-vs-long",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5680,
+      "testN": 5760,
+      "testOk": 2873,
+      "wins80": 0,
+      "validationAccuracy": 0.4930555555555556,
+      "testAccuracy": 0.4987847222222222
+    },
+    {
+      "strategy": "same_weekday_pair_l45",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5829,
+      "testN": 5760,
+      "testOk": 2872,
+      "wins80": 0,
+      "validationAccuracy": 0.5059895833333333,
+      "testAccuracy": 0.4986111111111111
+    },
+    {
+      "strategy": "pair_failed_recently_l45",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5733,
+      "testN": 5760,
+      "testOk": 2871,
+      "wins80": 0,
+      "validationAccuracy": 0.49765625,
+      "testAccuracy": 0.4984375
+    },
+    {
+      "strategy": "pair_absent_streak_l45",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5689,
+      "testN": 5760,
+      "testOk": 2864,
+      "wins80": 0,
+      "validationAccuracy": 0.49383680555555554,
+      "testAccuracy": 0.49722222222222223
+    },
+    {
+      "strategy": "same_weekday_pair_l120",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5792,
+      "testN": 5760,
+      "testOk": 2861,
+      "wins80": 0,
+      "validationAccuracy": 0.5027777777777778,
+      "testAccuracy": 0.4967013888888889
+    },
+    {
+      "strategy": "same_weekday_pair_l180",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5792,
+      "testN": 5760,
+      "testOk": 2861,
+      "wins80": 0,
+      "validationAccuracy": 0.5027777777777778,
+      "testAccuracy": 0.4967013888888889
+    },
+    {
+      "strategy": "same_weekday_pair_l240",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5792,
+      "testN": 5760,
+      "testOk": 2861,
+      "wins80": 0,
+      "validationAccuracy": 0.5027777777777778,
+      "testAccuracy": 0.4967013888888889
+    },
+    {
+      "strategy": "same_weekday_pair_l365",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5792,
+      "testN": 5760,
+      "testOk": 2861,
+      "wins80": 0,
+      "validationAccuracy": 0.5027777777777778,
+      "testAccuracy": 0.4967013888888889
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l365",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5675,
+      "testN": 5760,
+      "testOk": 2855,
+      "wins80": 0,
+      "validationAccuracy": 0.4926215277777778,
+      "testAccuracy": 0.4956597222222222
+    },
+    {
+      "strategy": "same_weekday_pair_l90",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5783,
+      "testN": 5760,
+      "testOk": 2854,
+      "wins80": 0,
+      "validationAccuracy": 0.5019965277777778,
+      "testAccuracy": 0.4954861111111111
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l90",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5668,
+      "testN": 5760,
+      "testOk": 2843,
+      "wins80": 0,
+      "validationAccuracy": 0.49201388888888886,
+      "testAccuracy": 0.4935763888888889
+    },
+    {
+      "strategy": "gated_pair_rate_l365_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 1177,
+      "validationOk": 591,
+      "testN": 568,
+      "testOk": 280,
+      "wins80": 0,
+      "validationAccuracy": 0.5021240441801189,
+      "testAccuracy": 0.49295774647887325
+    },
+    {
+      "strategy": "gated_pair_rate_l45_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 5722,
+      "validationOk": 2805,
+      "testN": 2836,
+      "testOk": 1398,
+      "wins80": 0,
+      "validationAccuracy": 0.49021321216357916,
+      "testAccuracy": 0.4929478138222849
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l7",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5612,
+      "testN": 5760,
+      "testOk": 2832,
+      "wins80": 0,
+      "validationAccuracy": 0.48715277777777777,
+      "testAccuracy": 0.49166666666666664
+    },
+    {
+      "strategy": "prev_panel_digits_avoid_l14",
+      "family": "previous-panel",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5612,
+      "testN": 5760,
+      "testOk": 2832,
+      "wins80": 0,
+      "validationAccuracy": 0.48715277777777777,
+      "testAccuracy": 0.49166666666666664
+    },
+    {
+      "strategy": "gated_pair_rate_l180_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 459,
+      "validationOk": 238,
+      "testN": 234,
+      "testOk": 115,
+      "wins80": 0,
+      "validationAccuracy": 0.5185185185185185,
+      "testAccuracy": 0.49145299145299143
+    },
+    {
+      "strategy": "house_high_fade_l45",
+      "family": "house",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5634,
+      "testN": 5760,
+      "testOk": 2828,
+      "wins80": 0,
+      "validationAccuracy": 0.4890625,
+      "testAccuracy": 0.4909722222222222
+    },
+    {
+      "strategy": "same_weekday_pair_l60",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 11520,
+      "validationOk": 5741,
+      "testN": 5760,
+      "testOk": 2818,
+      "wins80": 0,
+      "validationAccuracy": 0.49835069444444446,
+      "testAccuracy": 0.4892361111111111
+    },
+    {
+      "strategy": "gated_pair_rate_l30_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 437,
+      "validationOk": 218,
+      "testN": 202,
+      "testOk": 97,
+      "wins80": 0,
+      "validationAccuracy": 0.4988558352402746,
+      "testAccuracy": 0.4801980198019802
+    },
+    {
+      "strategy": "gated_pair_rate_l60_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 759,
+      "validationOk": 375,
+      "testN": 374,
+      "testOk": 178,
+      "wins80": 0,
+      "validationAccuracy": 0.49407114624505927,
+      "testAccuracy": 0.47593582887700536
+    },
+    {
+      "strategy": "gated_pair_rate_l180_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 34,
+      "validationOk": 18,
+      "testN": 11,
+      "testOk": 5,
+      "wins80": 0,
+      "validationAccuracy": 0.5294117647058824,
+      "testAccuracy": 0.45454545454545453
+    },
+    {
+      "strategy": "gated_pair_rate_l45_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 244,
+      "validationOk": 95,
+      "testN": 137,
+      "testOk": 56,
+      "wins80": 0,
+      "validationAccuracy": 0.38934426229508196,
+      "testAccuracy": 0.40875912408759124
+    },
+    {
+      "strategy": "gated_pair_rate_l45_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 10,
+      "validationOk": 2,
+      "testN": 11,
+      "testOk": 4,
+      "wins80": 0,
+      "validationAccuracy": 0.2,
+      "testAccuracy": 0.36363636363636365
+    },
+    {
+      "strategy": "target_pair_absence_l7",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l7",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "digit_absence_sum_l7",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "digit_absence_min_l7",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "digit_present_fade_l7",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "target_pair_absence_l14",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "target_pair_absence_recent_penalty_l14",
+      "family": "target-pair-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "digit_absence_sum_l14",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "digit_absence_min_l14",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "digit_present_fade_l14",
+      "family": "digit-rate",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "pair_failed_recently_l7",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "pair_absent_streak_l7",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "pair_failed_recently_l14",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "pair_absent_streak_l14",
+      "family": "gap",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "same_weekday_pair_l7",
+      "family": "calendar",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "opposite_side_pair_l7",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l7",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "opposite_side_pair_l14",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "opposite_side_hot_fade_l14",
+      "family": "opposite-side",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "source_pair_l7",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "source_digit_absence_l7",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "source_pair_l14",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "source_digit_absence_l14",
+      "family": "source-market",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "house_low_fade_l7",
+      "family": "house",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "house_high_fade_l7",
+      "family": "house",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "house_low_fade_l14",
+      "family": "house",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "house_high_fade_l14",
+      "family": "house",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "odd_even_mixed_l7",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "odd_even_same_l7",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "odd_even_mixed_l14",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "odd_even_same_l14",
+      "family": "parity",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l7_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l7_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l7_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l7_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l7_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l7_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l14_t58",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l14_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l14_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l14_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l14_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l14_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l60_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l90_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l90_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l120_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l120_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l180_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l180_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l180_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l240_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l240_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l240_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l240_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l365_t62",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l365_t66",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l365_t70",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l365_t74",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    },
+    {
+      "strategy": "gated_pair_rate_l365_t78",
+      "family": "gated",
+      "folds": 192,
+      "validationN": 0,
+      "validationOk": 0,
+      "testN": 0,
+      "testOk": 0,
+      "wins80": 0,
+      "validationAccuracy": 0,
+      "testAccuracy": 0
+    }
+  ]
+}

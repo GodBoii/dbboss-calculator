@@ -1,0 +1,357 @@
+{
+  "generatedAt": "2026-07-10T13:14:23.799Z",
+  "findingCount": 48,
+  "achieved80Count": 0,
+  "bestNonHindsight": {
+    "name": "Validation-selected model portfolio gate",
+    "status": "failed_portfolio_gate",
+    "strictAccuracy": 0.7666666666666667,
+    "details": "Tested 112 validation-only portfolio gates across 24 market-sides; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 76.7% (23/30).",
+    "evidenceFile": "scratch/two-digit-portfolio-selector-gate-output.json"
+  },
+  "findings": [
+    {
+      "name": "Broad formula strategy lab",
+      "status": "failed_target",
+      "strictAccuracy": 0.5080317740511915,
+      "details": "Tested 324 variants across 192 folds; selected strict 50.8% (2878/5665); 80% selected folds 0.",
+      "evidenceFile": "scratch/two-digit-avoid-strategy-lab-output.json"
+    },
+    {
+      "name": "High-precision rule miner",
+      "status": "failed_validation",
+      "strictAccuracy": 0,
+      "details": "Accepted folds 0; high training rules did not survive validation.",
+      "evidenceFile": "scratch/two-digit-avoid-rule-miner-output.json"
+    },
+    {
+      "name": "Context pocket miner",
+      "status": "insufficient",
+      "strictAccuracy": 0.5436241610738255,
+      "details": "Selected folds 5; strict aggregate 54.4% (81/149); 80% folds 0.",
+      "evidenceFile": "scratch/two-digit-context-pocket-miner-output.json"
+    },
+    {
+      "name": "Durable context pocket miner",
+      "status": "failed_forward",
+      "strictAccuracy": 0.47699757869249393,
+      "details": "Tested 324 context gate configs across 120 rolling folds; selected 86 folds; strict 47.7% (197/413).",
+      "evidenceFile": "scratch/two-digit-durable-pocket-miner-output.json"
+    },
+    {
+      "name": "Custom logistic pair classifier",
+      "status": "overfit",
+      "strictAccuracy": 0.4918032786885246,
+      "details": "Selected folds 6; strict aggregate 49.2% (30/61); 80% folds 0.",
+      "evidenceFile": "scratch/two_digit_pair_logistic_output.json"
+    },
+    {
+      "name": "Consensus abstention guardian",
+      "status": "failed_forward",
+      "strictAccuracy": 0.375,
+      "details": "Validation-gated folds 7; strict aggregate 37.5% (15/40).",
+      "evidenceFile": "scratch/two-digit-abstention-guardian-output.json"
+    },
+    {
+      "name": "134-model deep research runner",
+      "status": "best_full_coverage_so_far",
+      "strictAccuracy": 0.5708333333333333,
+      "details": "Baseline 51.2% (369/720); guarded improved 57.1% (411/720); market-sides >=80: 0.",
+      "evidenceFile": "scratch/two-digit-deep-research-output.json"
+    },
+    {
+      "name": "134-model consensus safe-call",
+      "status": "no_safe_region",
+      "strictAccuracy": 0,
+      "details": "80% validation-gated selected folds 0; strict test n/a.",
+      "evidenceFile": "scratch/two-digit-consensus-safe-call-output.json"
+    },
+    {
+      "name": "Latest-30 fixed-pair hindsight upper bound",
+      "status": "ceiling_below_target",
+      "strictAccuracy": 0.7013888888888887,
+      "details": "Cheating best fixed pair average 70.1%; market-sides >=80: 0/24.",
+      "evidenceFile": "scratch/two-digit-hindsight-upper-bound-output.json"
+    },
+    {
+      "name": "Latest-30 context hindsight oracle",
+      "status": "hindsight_only",
+      "strictAccuracy": 0.9388888888888888,
+      "details": "Supported context oracle 93.9% with 24/24 market-sides >=80; not deployable because it sees test outcomes.",
+      "evidenceFile": "scratch/two-digit-context-oracle-upper-bound-output.json"
+    },
+    {
+      "name": "Walk-forward context learner latest window",
+      "status": "failed_forward",
+      "strictAccuracy": 0.5097222222222222,
+      "details": "Strict 51.0% (367/720); market-sides >=80: 0/24.",
+      "evidenceFile": "scratch/two-digit-context-learner-output.json"
+    },
+    {
+      "name": "Walk-forward context learner rolling",
+      "status": "failed_stability",
+      "strictAccuracy": 0.5101851851851852,
+      "details": "144 folds strict 51.0% (2204/4320); folds >=80: 0/144.",
+      "evidenceFile": "scratch/two-digit-context-learner-rolling-output.json"
+    },
+    {
+      "name": "Validation gate frontier",
+      "status": "no_gate_region",
+      "strictAccuracy": 0.6166666666666667,
+      "details": "Gate configs >=80 with >=3 folds: 0; >=70 with >=3 folds: 0; best >=60 coverage 61.7% (74/120).",
+      "evidenceFile": "scratch/two-digit-gate-frontier-output.json"
+    },
+    {
+      "name": "Bayesian lower-bound gate",
+      "status": "low_coverage_unstable",
+      "strictAccuracy": 0.5369649805447471,
+      "details": "Val>=80,n>=5 strict 53.7% (138/257); val>=70,n>=5 strict 53.5% (250/467).",
+      "evidenceFile": "scratch/two-digit-bayesian-gate-output.json"
+    },
+    {
+      "name": "Markov / transition models",
+      "status": "partial_signal_not_target",
+      "strictAccuracy": 0.7567567567567568,
+      "details": "All folds 51.9% (932/1797); val>=70 folds 75.7% (28/37); val>=80 folds 0.",
+      "evidenceFile": "scratch/two-digit-markov-transition-output.json"
+    },
+    {
+      "name": "Markov high-confidence pocket gate",
+      "status": "failed_selective_gate",
+      "strictAccuracy": 0.5625,
+      "details": "Tested 125 validation-mined pocket gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 56.3% (18/32).",
+      "evidenceFile": "scratch/two-digit-markov-pocket-gate-output.json"
+    },
+    {
+      "name": "Meta formula search",
+      "status": "failed_forward",
+      "strictAccuracy": 0.5449074074074074,
+      "details": "Tested 167 weighted pair formulas; latest-30 53.5% (385/720); rolling folds 54.5% (1177/2160); folds >=80: 0.",
+      "evidenceFile": "scratch/two-digit-meta-formula-search-output.json"
+    },
+    {
+      "name": "Supervised pair ranker",
+      "status": "failed_latest_window",
+      "strictAccuracy": 0.5333333333333333,
+      "details": "Compact ridge ranker tested 2 learned models; latest-30 53.3% (384/720); market-sides >=80: 0; rolling folds skipped due uncached runtime.",
+      "evidenceFile": "scratch/two_digit_supervised_ranker_output.json"
+    },
+    {
+      "name": "Agent-style multi-model arbitration gate",
+      "status": "failed_agent_gate",
+      "strictAccuracy": 0.5914634146341463,
+      "details": "Aligned 720 prediction rows across model families; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 59.1% (97/164).",
+      "evidenceFile": "scratch/two-digit-agent-arbitration-gate-output.json"
+    },
+    {
+      "name": "Online adaptive expert ensemble",
+      "status": "failed_adaptive_agent",
+      "strictAccuracy": 0.48333333333333334,
+      "details": "Adaptively weighted 133 model experts with 36 voting configs across 72 forward folds; viable >=80 with >=30 calls: 0; best min-30 calls 48.3% (87/180).",
+      "evidenceFile": "scratch/two-digit-online-expert-ensemble-output.json"
+    },
+    {
+      "name": "Validation-selected model portfolio gate",
+      "status": "failed_portfolio_gate",
+      "strictAccuracy": 0.7666666666666667,
+      "details": "Tested 112 validation-only portfolio gates across 24 market-sides; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 76.7% (23/30).",
+      "evidenceFile": "scratch/two-digit-portfolio-selector-gate-output.json"
+    },
+    {
+      "name": "Rolling validation-selected portfolio stability",
+      "status": "failed_stability",
+      "strictAccuracy": 0.6631578947368421,
+      "details": "Tested 630 rolling portfolio gates across 216 grouped forward folds; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 66.3% (63/95).",
+      "evidenceFile": "scratch/two-digit-rolling-portfolio-selector-output.json"
+    },
+    {
+      "name": "Digit appearance risk gate",
+      "status": "failed_latest_window",
+      "strictAccuracy": 0.5549738219895288,
+      "details": "Tested 16 digit-risk formulas with 27 validation gates on latest windows; strict 55.5% (106/191); folds >=80: 0/14.",
+      "evidenceFile": "scratch/two-digit-digit-risk-gate-output.json"
+    },
+    {
+      "name": "Fixed-pair rolling selector",
+      "status": "failed_stability",
+      "strictAccuracy": 0.5777777777777777,
+      "details": "Tested 100 rolling fixed-pair gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 57.8% (52/90).",
+      "evidenceFile": "scratch/two-digit-fixed-pair-rolling-selector-output.json"
+    },
+    {
+      "name": "Weekday-conditioned pair selector",
+      "status": "failed_weekday_theory",
+      "strictAccuracy": 0.5229430379746836,
+      "details": "Tested 80 market/side/weekday pair gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 52.3% (661/1264).",
+      "evidenceFile": "scratch/two-digit-weekday-pair-selector-output.json"
+    },
+    {
+      "name": "Calendar bucket pair selector",
+      "status": "failed_calendar_theory",
+      "strictAccuracy": 0.580952380952381,
+      "details": "Tested 32 calendar bucket pair gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 58.1% (61/105).",
+      "evidenceFile": "scratch/two-digit-calendar-bucket-selector-output.json"
+    },
+    {
+      "name": "House/opposite constrained selector",
+      "status": "failed_house_opposite_theory",
+      "strictAccuracy": 0.7,
+      "details": "Tested 140 house/opposite/parity gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 70.0% (21/30).",
+      "evidenceFile": "scratch/two-digit-house-opposite-selector-output.json"
+    },
+    {
+      "name": "Sutta bucket pair selector",
+      "status": "failed_sutta_context",
+      "strictAccuracy": 0.568,
+      "details": "Tested 24 previous-sutta/jodi bucket gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 56.8% (71/125).",
+      "evidenceFile": "scratch/two-digit-sutta-bucket-selector-output.json"
+    },
+    {
+      "name": "Panel-shape bucket selector",
+      "status": "failed_panel_shape_context",
+      "strictAccuracy": 0.546916890080429,
+      "details": "Tested 36 previous-panel shape/kind/root gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 54.7% (204/373).",
+      "evidenceFile": "scratch/two-digit-panel-shape-selector-output.json"
+    },
+    {
+      "name": "Cross-market lead/lag selector",
+      "status": "failed_cross_market",
+      "strictAccuracy": 0.5333333333333333,
+      "details": "Tested 27 constrained source-market lead/lag gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 53.3% (16/30).",
+      "evidenceFile": "scratch/two-digit-cross-market-leadlag-selector-output.json"
+    },
+    {
+      "name": "Streak/cycle selector",
+      "status": "failed_streak_cycle",
+      "strictAccuracy": 0.6,
+      "details": "Tested 7 streak/cycle modes with 24 validation gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 60.0% (18/30).",
+      "evidenceFile": "scratch/two-digit-streak-cycle-selector-output.json"
+    },
+    {
+      "name": "Transition-transform selector",
+      "status": "failed_transition_transform",
+      "strictAccuracy": 0.55,
+      "details": "Tested 15 previous-result transform modes with 20 validation gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 55.0% (99/180).",
+      "evidenceFile": "scratch/two-digit-transition-transform-selector-output.json"
+    },
+    {
+      "name": "Regime/volatility bucket selector",
+      "status": "failed_regime_volatility",
+      "strictAccuracy": 0.65,
+      "details": "Tested 120 entropy/coverage/repeat/sum/persistence gates; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 65.0% (26/40).",
+      "evidenceFile": "scratch/two-digit-regime-volatility-selector-output.json"
+    },
+    {
+      "name": "Latent-regime clustering selector",
+      "status": "failed_latent_regime",
+      "strictAccuracy": 0.6666666666666666,
+      "details": "Tested 128 deterministic latent-state configs across 72 forward folds; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 66.7% (20/30).",
+      "evidenceFile": "scratch/two-digit-latent-regime-selector-output.json"
+    },
+    {
+      "name": "Adaptive change-point selector",
+      "status": "failed_change_point",
+      "strictAccuracy": 0.5269503546099291,
+      "details": "Tested 404 fixed/EWMA/change-detection configs across 72 forward folds; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 52.7% (743/1410).",
+      "evidenceFile": "scratch/two-digit-change-point-selector-output.json"
+    },
+    {
+      "name": "Forward pre-registration ledger",
+      "status": "active_safety_control",
+      "strictAccuracy": null,
+      "details": "Current calls 0; no-safe-calls 24; used for future non-hindsight scoring.",
+      "evidenceFile": "scratch/two-digit-forward-register.json"
+    },
+    {
+      "name": "Signal feasibility and temporal persistence audit",
+      "status": "diagnostic_low_stable_signal",
+      "strictAccuracy": 0.5159598723210215,
+      "details": "Empirical uninformed-pair base 50.6%; early-period selected fixed pairs scored 51.6% (2263/4386) later; same-pair next-result rate after success 50.8% versus 50.5% after failure.",
+      "evidenceFile": "scratch/two-digit-signal-feasibility-audit-output.json"
+    },
+    {
+      "name": "Time-ordered all-market feature graph",
+      "status": "failed_cross_market_graph",
+      "strictAccuracy": 0.5166666666666667,
+      "details": "Tested 3414 time-safe source/feature models with 8 pair variants across 69 forward folds; viable >=80 with >=30 calls: 0; best min-30 calls 51.7% (31/60).",
+      "evidenceFile": "scratch/two-digit-time-ordered-market-graph-output.json"
+    },
+    {
+      "name": "Multivariate time-ordered market kNN",
+      "status": "failed_multivariate_cross_market",
+      "strictAccuracy": 0.4971014492753623,
+      "details": "Tested 864 multivariate context/neighbor/risk configs across 46 forward folds; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 49.7% (686/1380).",
+      "evidenceFile": "scratch/two-digit-multivariate-market-knn-output.json"
+    },
+    {
+      "name": "Nonlinear supervised cross-market classifier",
+      "status": "failed_nonlinear_cross_market",
+      "strictAccuracy": 0.5116906474820144,
+      "details": "Tested 456 linear/ReLU/tanh/Fourier target-confidence variants across 48 forward folds; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 51.2% (569/1112).",
+      "evidenceFile": "scratch/two_digit_nonlinear_cross_market_output.json"
+    },
+    {
+      "name": "Cross-market randomized forest",
+      "status": "failed_tree_cross_market",
+      "strictAccuracy": 0.6349206349206349,
+      "details": "Tested 96 randomized-tree target-confidence variants across 48 forward folds; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 63.5% (40/63).",
+      "evidenceFile": "scratch/two_digit_cross_market_forest_output.json"
+    },
+    {
+      "name": "Temporal echo-state reservoir",
+      "status": "failed_temporal_reservoir",
+      "strictAccuracy": 0.6056338028169014,
+      "details": "Tested 576 recurrent-dynamics/readout/target-confidence variants across 48 forward folds; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 60.6% (43/71).",
+      "evidenceFile": "scratch/two_digit_temporal_reservoir_output.json"
+    },
+    {
+      "name": "Symbolic sequence grammar selector",
+      "status": "failed_symbolic_sequence",
+      "strictAccuracy": 0.5454545454545454,
+      "details": "Tested 540 root/kind/mask/shape/delta sequence variants across 72 forward folds; viable >=80 with >=30 calls: 0; viable >=85 with >=30 calls: 0; best min-30 calls 54.5% (42/77).",
+      "evidenceFile": "scratch/two-digit-symbolic-sequence-selector-output.json"
+    },
+    {
+      "name": "Permutation and false-discovery audit",
+      "status": "isolated_significant_not_stable",
+      "strictAccuracy": 0.7666666666666667,
+      "details": "Exact shuffled-panel p=0.0060 for isolated 76.7% (23/30); rolling portfolio search p=0.4628, so the latest pocket is unusual but not temporally durable.",
+      "evidenceFile": "scratch/two-digit-permutation-false-discovery-audit-output.json"
+    },
+    {
+      "name": "Context-weekday abstention guardian",
+      "status": "failed_rolling_posthoc_pocket",
+      "strictAccuracy": 0.5021834061135371,
+      "details": "Tested 42 validation-learned guardian configs across 144 folds; rolling best 50.2% (345/687); exploratory inspected Madhur Night close pocket 80.0% (20/25) and is not pristine holdout evidence.",
+      "evidenceFile": "scratch/two-digit-context-weekday-guardian-output.json"
+    },
+    {
+      "name": "Exploratory Madhur Night pocket forward register",
+      "status": "active_research_control",
+      "strictAccuracy": null,
+      "details": "Frozen after 2026-07-04; fresh calls 0; newest source row 2026-07-04; promotion eligible: false.",
+      "evidenceFile": "scratch/two-digit-exploratory-pocket-forward-score-output.json"
+    },
+    {
+      "name": "Context multi-block durability gate",
+      "status": "isolated_durable_validation_not_target",
+      "strictAccuracy": 0.7666666666666667,
+      "details": "Tested 840 three-block stability gates across 144 folds; viable >=80 with >=30 calls: 0; best 76.7% (23/30); Madhur Night validation blocks 66.7%/73.3%/70.0%.",
+      "evidenceFile": "scratch/two-digit-context-durability-gate-output.json"
+    },
+    {
+      "name": "Online regime continuation / stop-loss gate",
+      "status": "failed_online_regime_gate",
+      "strictAccuracy": 0.5347490347490348,
+      "details": "Tested 134 trailing/EWMA/Wilson/failure gates with 12 validation selectors across 144 folds; viable >=80 with >=30 calls: 0; rolling best 53.5% (554/1036); Madhur latest 76.0% (19/25).",
+      "evidenceFile": "scratch/two-digit-online-regime-stoploss-output.json"
+    }
+  ],
+  "conclusion": "No non-hindsight, forward-style experiment has proven a deployable 80-85% strict 2-digit avoid model.",
+  "nextDirections": [
+    "Continue frozen forward registration and scoring on fresh future results.",
+    "If more data is acquired, rerun rolling evaluations with larger train/validation/test windows.",
+    "Use an AI agent as an auditor/risk controller, not a direct digit oracle.",
+    "Do not lower live gates unless a historical forward frontier shows repeated >=80% regions."
+  ]
+}

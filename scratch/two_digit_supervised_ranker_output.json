@@ -1,0 +1,6291 @@
+{
+  "generatedAt": "2026-07-09T13:09:57.408406Z",
+  "methodsTested": 2,
+  "aggregate": {
+    "correct": 384,
+    "digitCorrect": 1069,
+    "total": 720,
+    "accuracy": 0.5333333333333333,
+    "avgCorrectDigits": 1.4847222222222223,
+    "at70": 1,
+    "at80": 0,
+    "folds": 24
+  },
+  "rollingAggregate": {
+    "correct": 0,
+    "digitCorrect": 0,
+    "total": 0,
+    "accuracy": 0,
+    "avgCorrectDigits": 0,
+    "at70": 0,
+    "at80": 0,
+    "folds": 0
+  },
+  "rows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 25,
+        "digitCorrect": 80,
+        "total": 60,
+        "accuracy": 0.4166666666666667,
+        "avgCorrectDigits": 1.3333333333333333
+      },
+      "test": {
+        "correct": 17,
+        "digitCorrect": 46,
+        "total": 30,
+        "accuracy": 0.5666666666666667,
+        "avgCorrectDigits": 1.5333333333333334
+      },
+      "predictions": [
+        {
+          "date": "2026-06-06",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16909942517715826,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-07",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09004215625554043,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10818201925335424,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10906605065685031,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08935944882570011,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10629345530686812,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "07",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12193445626782219,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14666759012938033,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-14",
+          "pair": "34",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1251186275246193,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11114732611021791,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "07",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09047192307682184,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "04",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05452763046923921,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1151902869714169,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "46",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07996880839765211,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07371596290552485,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-21",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09613074772018569,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "16",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.07736036950699882,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07604994225242041,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "24",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05363202001700365,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "27",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10530735610989778,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "23",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13331263812171548,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "24",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07101191562632872,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-28",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13109564312293256,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14249039048003861,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10141750902825844,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09898504706007044,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "23",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09030755908783997,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "16",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.055826995237437886,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13537791689845424,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-05",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09266482692343472,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 29,
+        "digitCorrect": 85,
+        "total": 60,
+        "accuracy": 0.48333333333333334,
+        "avgCorrectDigits": 1.4166666666666667
+      },
+      "test": {
+        "correct": 17,
+        "digitCorrect": 46,
+        "total": 30,
+        "accuracy": 0.5666666666666667,
+        "avgCorrectDigits": 1.5333333333333334
+      },
+      "predictions": [
+        {
+          "date": "2026-06-06",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13695473041015885,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-07",
+          "pair": "02",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14261390301545332,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14306090225259122,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16250195723083447,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "01",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.19278353272417695,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08976779902426488,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "38",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13684974463543717,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1381392236365422,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-14",
+          "pair": "13",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14986782798562315,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "15",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07277793189825993,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12266516294376628,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16096723668417154,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.16770774248939224,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.15186519617161992,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10558596665627606,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-21",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1550576137230956,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1419457028541234,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16513890437549866,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "17",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.122766970146651,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.19863782129574192,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "07",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.16219617685952342,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.17097132802122625,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-28",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1733869499857546,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "37",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10811861298956049,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "23",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1469464914161691,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "07",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08321689727704043,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09806948669862978,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1091966887003526,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14563474772058962,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-05",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12241710378954827,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 23,
+        "digitCorrect": 82,
+        "total": 60,
+        "accuracy": 0.38333333333333336,
+        "avgCorrectDigits": 1.3666666666666667
+      },
+      "test": {
+        "correct": 13,
+        "digitCorrect": 42,
+        "total": 30,
+        "accuracy": 0.43333333333333335,
+        "avgCorrectDigits": 1.4
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.1139585660799967,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08573024710605961,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12418855575882339,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "58",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07343500737489106,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08285287291774615,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08495004159363408,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11612604393459121,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08763954135753593,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11937612071479334,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10769165278510015,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13746100497976285,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1172651939484753,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10918060378718897,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09570322576998488,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09712074595814293,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07570162569694272,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06940332755953516,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0912950624196611,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1239619291350953,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11023556907887581,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "59",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1425368318240096,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.17068989846691088,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.2162612624142662,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "38",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06155750825231869,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06609680834451352,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08200981442379919,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07191010362306365,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10544030264560154,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07195231719617468,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07631361085504712,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 34,
+        "digitCorrect": 91,
+        "total": 60,
+        "accuracy": 0.5666666666666667,
+        "avgCorrectDigits": 1.5166666666666666
+      },
+      "test": {
+        "correct": 16,
+        "digitCorrect": 43,
+        "total": 30,
+        "accuracy": 0.5333333333333333,
+        "avgCorrectDigits": 1.4333333333333333
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09663621808850448,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.1311423705060535,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14629238463597083,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11023033299046979,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "14",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1258767145983044,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10469758312553502,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "45",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08745367412253546,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "14",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12369017854005074,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13892553614859068,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12142078492777822,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1439029785158225,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "47",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14121068359484354,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.16416968443246008,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.20370058989204357,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13637701907651179,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "48",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12762678944897093,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14568263061193903,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.17547993351118402,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1400405655491288,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14613094509322858,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "46",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.08571690318811705,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09397944690038408,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12084662256269216,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13167647534781146,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "47",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10403612210132132,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "07",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09572875453578425,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14309641974277618,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "48",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08744996441317768,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "48",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1185127605347612,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08202119682126699,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 31,
+        "digitCorrect": 90,
+        "total": 60,
+        "accuracy": 0.5166666666666667,
+        "avgCorrectDigits": 1.5
+      },
+      "test": {
+        "correct": 19,
+        "digitCorrect": 48,
+        "total": 30,
+        "accuracy": 0.6333333333333333,
+        "avgCorrectDigits": 1.6
+      },
+      "predictions": [
+        {
+          "date": "2026-06-06",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13795216149605383,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-07",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.120806013129123,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1129913705549016,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13500967893736432,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1270736287150912,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1866044566305925,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16555527901696337,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.15292509994959902,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-14",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14585496577910714,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13126327385747383,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12646248978655403,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12886091209600975,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14256953527184704,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.15948650686518603,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12843599292921987,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-21",
+          "pair": "16",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13481725675247713,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1512657207838366,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13290592952499897,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.15000463473311146,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14238625100087024,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12727248252627385,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12850509382307934,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-28",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.1660334000935959,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11964018678350904,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.16208158091541458,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0996678372282161,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1663236957901121,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.131486604978594,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13584374160314963,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-05",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10242407151455223,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 33,
+        "digitCorrect": 90,
+        "total": 60,
+        "accuracy": 0.55,
+        "avgCorrectDigits": 1.5
+      },
+      "test": {
+        "correct": 20,
+        "digitCorrect": 48,
+        "total": 30,
+        "accuracy": 0.6666666666666666,
+        "avgCorrectDigits": 1.6
+      },
+      "predictions": [
+        {
+          "date": "2026-06-06",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0879058537000128,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-07",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16218240944289106,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1635639883803832,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "89",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06746745249843894,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08159693377382018,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12031264999798143,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11697368854970552,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08175191367720276,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-14",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06338820654737116,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0816848161473577,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "56",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05938149542789142,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "58",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1291135757243522,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08217441074304277,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0669388457867279,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "58",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09718605714284265,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-21",
+          "pair": "59",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.06265959230825145,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07349302103464309,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09886984032077675,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09804258895099006,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09273008542065445,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08356229873514681,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08098762863268358,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-28",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09867867283211876,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.026594370303161915,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07451628621431658,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05142480656996415,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "56",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05434988353721615,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "59",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.08911238691928174,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.042005439534036855,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-05",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0748296884034997,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 33,
+        "digitCorrect": 90,
+        "total": 60,
+        "accuracy": 0.55,
+        "avgCorrectDigits": 1.5
+      },
+      "test": {
+        "correct": 14,
+        "digitCorrect": 42,
+        "total": 30,
+        "accuracy": 0.4666666666666667,
+        "avgCorrectDigits": 1.4
+      },
+      "predictions": [
+        {
+          "date": "2026-05-25",
+          "pair": "36",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06743588108986823,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-26",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08576823699775031,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-27",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07467042495299131,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-28",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06958396371597948,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "26",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06859886886223542,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-30",
+          "pair": "56",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.031038500124242797,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-01",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07700395451830745,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.08900432664504455,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "78",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0654068954831779,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09758585208118568,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "26",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11531423664458702,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0699473087028757,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "46",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09766903269015784,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11694757582007795,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09980939578208918,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "48",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.08270378396387713,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "26",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1083601565363981,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "24",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09147567098190987,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10601772924340655,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10817313539951937,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11463170594072374,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08502402404934743,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "26",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07560888843053837,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "24",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10986768348254305,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11222182168077212,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "02",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.134447691626636,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09722277299193523,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11330884775662403,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10107792489822646,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06270726107972285,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "model": "ridge_l2_500",
+      "val": {
+        "correct": 30,
+        "digitCorrect": 88,
+        "total": 60,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.4666666666666666
+      },
+      "test": {
+        "correct": 15,
+        "digitCorrect": 44,
+        "total": 30,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.4666666666666666
+      },
+      "predictions": [
+        {
+          "date": "2026-05-25",
+          "pair": "24",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08596047397489955,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-05-26",
+          "pair": "24",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08804493727684473,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-05-27",
+          "pair": "67",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11750283683327002,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-05-28",
+          "pair": "47",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1036243879561671,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "26",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09023406560473624,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-05-30",
+          "pair": "26",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07130850699192126,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-01",
+          "pair": "02",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08335692319519002,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06022366938552381,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "48",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09373441189943106,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "17",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09230007845547418,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "27",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08340226069651746,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07254610149278967,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10689298900045119,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "23",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08595608048556065,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "45",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09309385593560679,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "45",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06554321670075036,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "23",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11217088379945402,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.11170772012449857,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "13",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08513541418612094,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "01",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07429546591093288,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04668791462616942,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "34",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10955964570243874,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "47",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06643138138444862,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07372211796116787,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "47",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05838156648331169,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "45",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.076841041804583,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "14",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06942820867890051,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08840533838239927,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "24",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07221273968285298,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "34",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08570267027856338,
+          "kind": "ridge_l2_500"
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 33,
+        "digitCorrect": 91,
+        "total": 60,
+        "accuracy": 0.55,
+        "avgCorrectDigits": 1.5166666666666666
+      },
+      "test": {
+        "correct": 21,
+        "digitCorrect": 51,
+        "total": 30,
+        "accuracy": 0.7,
+        "avgCorrectDigits": 1.7
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06401387183106436,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10523530107470365,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "67",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10591245514069597,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "36",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0729815038327071,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "17",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07013645384003171,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "07",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06234223993994349,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05186997202461518,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "38",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07679334292520297,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "79",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07953896936176458,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "78",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06835562660670744,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "78",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06786452896703789,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07903966517613328,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "89",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06847529382032341,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "78",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08440597344829545,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "46",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06902690937192467,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09028777816783043,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07438508376802472,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "37",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.050065823928350725,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "37",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.060251582056507255,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06304090711091884,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "38",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07967487363000629,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "45",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07552221201243287,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08397171950395363,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "57",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07252167042999036,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "78",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08041188517679436,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "67",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06536602925169525,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "67",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08344250082909517,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "37",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06736958918584252,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "89",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07002958463260486,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "07",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07867548008530346,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 32,
+        "digitCorrect": 87,
+        "total": 60,
+        "accuracy": 0.5333333333333333,
+        "avgCorrectDigits": 1.45
+      },
+      "test": {
+        "correct": 17,
+        "digitCorrect": 45,
+        "total": 30,
+        "accuracy": 0.5666666666666667,
+        "avgCorrectDigits": 1.5
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07852249812017431,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08389667319103143,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08393844415578028,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08050118536300944,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0658725422778934,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07758406568187233,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.15180040403145736,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.03675071726327305,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.054067127323465816,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.060601678820113226,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.02912477511425586,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "79",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05244837648050581,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0669069603456481,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12026766096618027,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.052960048700985585,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.057808913787064826,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "59",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.024670733929551016,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "39",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.03755219480096094,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04129829143383425,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.041786079548948626,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.027716337814224952,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.061365907630472206,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "38",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05903845043752094,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08371885172403755,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05263666774112409,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06532560403366817,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "89",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.08540687194570938,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "48",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10787146721134475,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07663243294421658,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06173877769601069,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 35,
+        "digitCorrect": 94,
+        "total": 60,
+        "accuracy": 0.5833333333333334,
+        "avgCorrectDigits": 1.5666666666666667
+      },
+      "test": {
+        "correct": 18,
+        "digitCorrect": 48,
+        "total": 30,
+        "accuracy": 0.6,
+        "avgCorrectDigits": 1.6
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07892303052519098,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05222634301245299,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08919912286070462,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09242983555254085,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06449457472763333,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08276788364965652,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1688277707192935,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06526703166305522,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.073029500368312,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07078430698144621,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "39",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05798932510030709,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.060956069193520236,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10354091442197091,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "04",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0777401646118091,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13376273486623844,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "07",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06511931445529162,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "58",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0686399155462682,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12115409478002015,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "16",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12760172888247434,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05350380245271341,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "17",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10741811285731563,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07548539290186732,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "78",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07185571786227785,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07547323463004132,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.15709929161074915,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "17",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08198584312596831,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "16",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.049388310957391095,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07245448232552203,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "38",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.030384979793114393,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "16",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08990020728536445,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "model": "ridge_l2_500",
+      "val": {
+        "correct": 34,
+        "digitCorrect": 92,
+        "total": 60,
+        "accuracy": 0.5666666666666667,
+        "avgCorrectDigits": 1.5333333333333334
+      },
+      "test": {
+        "correct": 13,
+        "digitCorrect": 42,
+        "total": 30,
+        "accuracy": 0.43333333333333335,
+        "avgCorrectDigits": 1.4
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "16",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.04142179851138679,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06395555109804124,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04185440011581666,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04789391303148461,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.050308691693822426,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.035937268417382554,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "16",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08003725730492636,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "56",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07881158310392018,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "16",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06789207785751658,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0668452447788063,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "38",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0631532366768658,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06017935379577669,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "78",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06571164906493336,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05497931104599054,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06444916824267366,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04939411268618707,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "15",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06635892640172757,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04692856243497273,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.056819303516718885,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "89",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06309038538179132,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "78",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.061064005318842485,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "78",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.062379569466493506,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "78",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07160133078604486,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "15",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04032739331142281,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "78",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04458983328609642,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "16",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.03342972364437324,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.032445289518961105,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "89",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04028924054952186,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.038177578443956875,
+          "kind": "ridge_l2_500"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "15",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.024136926283289263,
+          "kind": "ridge_l2_500"
+        }
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 30,
+        "digitCorrect": 86,
+        "total": 60,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.4333333333333333
+      },
+      "test": {
+        "correct": 19,
+        "digitCorrect": 46,
+        "total": 30,
+        "accuracy": 0.6333333333333333,
+        "avgCorrectDigits": 1.5333333333333334
+      },
+      "predictions": [
+        {
+          "date": "2026-06-06",
+          "pair": "47",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09332277938614343,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-07",
+          "pair": "47",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.07552853662508886,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "89",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09239195708445958,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "57",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07877040951973989,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "58",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.10023977916756797,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "47",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08485454511862431,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "78",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08274380707055665,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06390696896729377,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-14",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11946277955800588,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07398441620308654,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.13155926954410324,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "45",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08612611131863063,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "56",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10368512651469913,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "56",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09693135561502553,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11746538551415016,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-21",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09150849991274844,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07218490617277368,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "48",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09580567045110462,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "58",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10892455920512908,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13945742793860572,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "48",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1349177790523373,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "58",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12036224740357396,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-28",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.055437612129088376,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09017414436911554,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "89",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12415267824721724,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "89",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0734157125757053,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "68",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09030344284457278,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "79",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.055087159753801414,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "78",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07655813926590871,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-05",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10585039971392482,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 31,
+        "digitCorrect": 91,
+        "total": 60,
+        "accuracy": 0.5166666666666667,
+        "avgCorrectDigits": 1.5166666666666666
+      },
+      "test": {
+        "correct": 17,
+        "digitCorrect": 47,
+        "total": 30,
+        "accuracy": 0.5666666666666667,
+        "avgCorrectDigits": 1.5666666666666667
+      },
+      "predictions": [
+        {
+          "date": "2026-06-06",
+          "pair": "67",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.026821608776219037,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-07",
+          "pair": "26",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.037931810171712335,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06981241691034877,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04136511967558508,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04513526674799065,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07130716271308213,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05307697700781988,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "26",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06461638751310615,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-14",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11000310163897706,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.03790643729627674,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04557153872006566,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.057929658910362294,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10366945972254281,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10378396743002422,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "07",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07041558822571704,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-21",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05209519489861462,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04922739215856987,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0800396028463042,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1037764649329274,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "57",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09232356122267826,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11279252331147373,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "57",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06826771525758447,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-28",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1306485499298766,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10925405413814285,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0761898678954977,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11013068486775232,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06932710818315413,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05306253814649223,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07183134566355996,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-05",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07716257611157476,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 30,
+        "digitCorrect": 87,
+        "total": 60,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.45
+      },
+      "test": {
+        "correct": 15,
+        "digitCorrect": 45,
+        "total": 30,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.5
+      },
+      "predictions": [
+        {
+          "date": "2026-05-20",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1132648223408704,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-21",
+          "pair": "15",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09791596507309196,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-22",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07222473964145845,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-25",
+          "pair": "15",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07111581118834556,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-26",
+          "pair": "15",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.079329151537605,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-27",
+          "pair": "36",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0651715872903782,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-28",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08904967273465811,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10713554580901477,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-01",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08870691359045099,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "89",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06316280106549142,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "01",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07528048849150674,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.17311977531956174,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "07",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08129509502394597,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10199313317595288,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.15808329880063918,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.23145353585309208,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16163670140892947,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.21303289949358942,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.187717436231733,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "15",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1345123764824683,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14590458891313013,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "01",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13465100998255666,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "15",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13677351861197073,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10813830401921329,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07656072917420567,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "15",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06250372035776437,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11534175171674564,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "15",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0887149888075141,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "15",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11207996252829706,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "16",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06085926143124614,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 29,
+        "digitCorrect": 85,
+        "total": 60,
+        "accuracy": 0.48333333333333334,
+        "avgCorrectDigits": 1.4166666666666667
+      },
+      "test": {
+        "correct": 16,
+        "digitCorrect": 46,
+        "total": 30,
+        "accuracy": 0.5333333333333333,
+        "avgCorrectDigits": 1.5333333333333334
+      },
+      "predictions": [
+        {
+          "date": "2026-05-20",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05495953010946519,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-21",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.03183539349384029,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-22",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04712543016514283,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-25",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05589907905411781,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-26",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06311957348361467,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-27",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.041151064045915495,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-28",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0443626453979106,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "24",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0608463495036117,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-01",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.03340170648752777,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.019331012414066946,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.052923725939391965,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04670026824404349,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04418192788784657,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "14",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.02892781415419147,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.03490857688648995,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.03139343059811582,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.030437786259811188,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04708424886268013,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07938738217174286,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "07",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06009966402631784,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07013693523206423,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.046775697055470494,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05635706811337145,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.02096960584304414,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0404713737538793,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.02668855807299264,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06745661867963296,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05689192862168198,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "07",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.036921811565419155,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06530300478036385,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 22,
+        "digitCorrect": 79,
+        "total": 60,
+        "accuracy": 0.36666666666666664,
+        "avgCorrectDigits": 1.3166666666666667
+      },
+      "test": {
+        "correct": 12,
+        "digitCorrect": 39,
+        "total": 30,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.3
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "58",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07865882094624346,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04162435829562912,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "89",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07524721683180453,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "36",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.09776940081401851,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "89",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09336846733647772,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07582261321261387,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "58",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07645062946319907,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06285422793376039,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "89",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08642455053047493,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "56",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07763458750977982,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "56",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09549488199246438,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "56",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09793937951082388,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06873090507534553,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "56",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1083196212988837,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1366109712342936,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08443287527954658,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0961276954244874,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.102273554552531,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1239657215001315,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09965115751488147,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "05",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1398695851333942,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1048089654021247,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.09758636012456466,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.10300968760930604,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10938941995780282,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08893227658899021,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "37",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09367907234363283,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08563811026842182,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "39",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08231277245426977,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06684191250011427,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 24,
+        "digitCorrect": 77,
+        "total": 60,
+        "accuracy": 0.4,
+        "avgCorrectDigits": 1.2833333333333334
+      },
+      "test": {
+        "correct": 16,
+        "digitCorrect": 44,
+        "total": 30,
+        "accuracy": 0.5333333333333333,
+        "avgCorrectDigits": 1.4666666666666666
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0841368769904538,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10909732440742283,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06964814994810245,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "39",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08016269502133103,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08418612158207642,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09248357675892825,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08939583836380151,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "39",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10987330751210754,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "39",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12879090155953016,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.08471449992713609,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "39",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08771492375109788,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09815249140012354,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10564425160456312,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "39",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10665225184370222,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "39",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11214837412141787,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "37",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09146446041441691,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "79",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09832843561781578,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "79",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09791351061542378,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.09663752760992618,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "37",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08316361925838346,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "39",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10418650642397533,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "47",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09202681726906584,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06332389334827199,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "09",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06324485518204628,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "09",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06990499762475988,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06486633234044081,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "39",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10545602525879193,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0835021363716426,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10072929270438444,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "49",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10089633221950198,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 31,
+        "digitCorrect": 87,
+        "total": 60,
+        "accuracy": 0.5166666666666667,
+        "avgCorrectDigits": 1.45
+      },
+      "test": {
+        "correct": 15,
+        "digitCorrect": 43,
+        "total": 30,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.4333333333333333
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12410963560023269,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "23",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.15315153537672793,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1312706142732622,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "26",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13681841580191223,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "26",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09142099753776328,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12193556771553507,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "02",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.15078739391184354,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1099614692832496,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "26",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11569279700552221,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.079797948913538,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "34",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13530756208561928,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.18269427812273376,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "26",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13077612742911346,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.1484818789930865,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.2160491789669398,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.28002952835123723,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.25157540230304026,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "34",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1770470570322456,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1992884985318288,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "06",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12850809857647733,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14925932835439715,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16531591931856576,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16309063738930757,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.2047275377934421,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.15131661345861375,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.17504763610783747,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12754330689868407,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13231759685673125,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "36",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.18141286316433308,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "23",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.15665086492605226,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 28,
+        "digitCorrect": 84,
+        "total": 60,
+        "accuracy": 0.4666666666666667,
+        "avgCorrectDigits": 1.4
+      },
+      "test": {
+        "correct": 11,
+        "digitCorrect": 39,
+        "total": 30,
+        "accuracy": 0.36666666666666664,
+        "avgCorrectDigits": 1.3
+      },
+      "predictions": [
+        {
+          "date": "2026-06-01",
+          "pair": "45",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10321805529262199,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "46",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12163973829530443,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "23",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09692523096123817,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "45",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.18732235238393097,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "45",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11789870046296314,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-06",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06457516367774072,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "02",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.16462700635748453,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "45",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.16947824977088297,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.153598949900758,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.18390076881015138,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "13",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11884300936127015,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-13",
+          "pair": "36",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14789176181311067,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10971963779799725,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "45",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.16801643667588093,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.15666179316092982,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1758160989810393,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "45",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06355196182908683,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-20",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1505520855002552,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14048564888054313,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "45",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09823432615109129,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09396235103260864,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "45",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13470524290991115,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.19777839625770532,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-27",
+          "pair": "78",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.0825979270971454,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1842867635169707,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.11867556908128638,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.2165598416783544,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "57",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13631276061586425,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.17798370034449643,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-04",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.12698415013586353,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 36,
+        "digitCorrect": 94,
+        "total": 60,
+        "accuracy": 0.6,
+        "avgCorrectDigits": 1.5666666666666667
+      },
+      "test": {
+        "correct": 17,
+        "digitCorrect": 47,
+        "total": 30,
+        "accuracy": 0.5666666666666667,
+        "avgCorrectDigits": 1.5666666666666667
+      },
+      "predictions": [
+        {
+          "date": "2026-05-25",
+          "pair": "89",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07871866695780014,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-26",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06975378848906032,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-27",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06168575780611139,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-28",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.03979295527367366,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.056152589550379155,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-01",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05459226938772866,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "46",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.015515855704153857,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "59",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.027576121185989774,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "01",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.036847353795543755,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "67",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05775098820802782,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04086435614619278,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05730738555413772,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.047463481239497105,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "35",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.051530843800675984,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "45",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0831086477969904,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08519782297591587,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "37",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.11581270400914692,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "47",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08708863624657195,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "79",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07757439869091345,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "89",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04582197248737584,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.050373683279241376,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "37",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0448259220237565,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "37",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.032532279334320915,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "69",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05398888710702064,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "16",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06054998806687631,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "69",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07745949798421183,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.03992886858560414,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05578618337130014,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "01",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04606571793734866,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "79",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08635260736772304,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 30,
+        "digitCorrect": 84,
+        "total": 60,
+        "accuracy": 0.5,
+        "avgCorrectDigits": 1.4
+      },
+      "test": {
+        "correct": 14,
+        "digitCorrect": 39,
+        "total": 30,
+        "accuracy": 0.4666666666666667,
+        "avgCorrectDigits": 1.3
+      },
+      "predictions": [
+        {
+          "date": "2026-05-25",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11994414348370817,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-26",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09796925116341812,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-27",
+          "pair": "68",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.084551528808512,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-28",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1540497075180076,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13121271513837726,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-01",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.14513028724226798,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.15352707396247744,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "05",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.06156102812794387,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13721453561871969,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12345296220648855,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "08",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09368848685815667,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.06147431924225992,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11219309275244285,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "28",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11689370601107425,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.1278395492400165,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09341618183937689,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.14809430711253205,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "24",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07752485227431473,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1395233212189015,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1128480929990224,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "25",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.1617230222282602,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "01",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09534376385712467,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "24",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06294145589542591,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12457354405989082,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10864758018496046,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10296725915732823,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.12307814630919636,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.09155052041261291,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10713545915161374,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "18",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.051842335880773686,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 34,
+        "digitCorrect": 92,
+        "total": 60,
+        "accuracy": 0.5666666666666667,
+        "avgCorrectDigits": 1.5333333333333334
+      },
+      "test": {
+        "correct": 13,
+        "digitCorrect": 41,
+        "total": 30,
+        "accuracy": 0.43333333333333335,
+        "avgCorrectDigits": 1.3666666666666667
+      },
+      "predictions": [
+        {
+          "date": "2026-05-25",
+          "pair": "34",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09756732576711283,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-26",
+          "pair": "24",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07922045527718515,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-27",
+          "pair": "48",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.053837659777517304,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-28",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09963648996809633,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "38",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.08089111812646915,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-01",
+          "pair": "38",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.13148596628919365,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "38",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13918386416037504,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "29",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05155864502254261,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "45",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04456528926486095,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "38",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09144635595156772,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "17",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09492205322666751,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06418203200963704,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "28",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07163626109492952,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "27",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.04816519929523381,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "16",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04603524752661145,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "39",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07410541745583014,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "19",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07973745735794575,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "19",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08962294512825962,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08011598898017687,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08558253532884648,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "35",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08142285815816817,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "29",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06543123252203245,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "25",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0887091569912911,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "49",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07848838544763202,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "01",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.04398710827588975,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07991905096021644,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "38",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10618121485503249,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "23",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08519422844113281,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "08",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.03536209529876335,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "38",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13243769349917334,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "model": "ridge_l2_100",
+      "val": {
+        "correct": 29,
+        "digitCorrect": 84,
+        "total": 60,
+        "accuracy": 0.48333333333333334,
+        "avgCorrectDigits": 1.4
+      },
+      "test": {
+        "correct": 19,
+        "digitCorrect": 48,
+        "total": 30,
+        "accuracy": 0.6333333333333333,
+        "avgCorrectDigits": 1.6
+      },
+      "predictions": [
+        {
+          "date": "2026-05-25",
+          "pair": "04",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.10320358598729461,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-26",
+          "pair": "01",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11758355691384893,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-27",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07509369246333639,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-28",
+          "pair": "27",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.0868049630858844,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-05-29",
+          "pair": "02",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.13880348507674237,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-01",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09431082277503988,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-02",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09612475984732385,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-03",
+          "pair": "36",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06249710642240307,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-04",
+          "pair": "12",
+          "hit": false,
+          "absentDigits": 0,
+          "score": 0.07043517713345077,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-05",
+          "pair": "23",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.10360213333557305,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-08",
+          "pair": "13",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.1070783872792093,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-09",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.03882588452026345,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-10",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07183189194850552,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-11",
+          "pair": "14",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.06735437073968727,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-12",
+          "pair": "23",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.061248396705260125,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-15",
+          "pair": "07",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.06822203324170484,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-16",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08604460782303933,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-17",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09068257745405184,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-18",
+          "pair": "03",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.09938168039457415,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-19",
+          "pair": "03",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.13098977610414467,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-22",
+          "pair": "13",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07826582967767956,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-23",
+          "pair": "12",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09496896778965114,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-24",
+          "pair": "02",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.05855331517914647,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-25",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.09127980132188879,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-26",
+          "pair": "18",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.08212761960875442,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-29",
+          "pair": "02",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.05962527713259722,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-06-30",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.11830310875489335,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-01",
+          "pair": "04",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.08009880932745929,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-02",
+          "pair": "14",
+          "hit": false,
+          "absentDigits": 1,
+          "score": 0.07986817484237078,
+          "kind": "ridge_l2_100"
+        },
+        {
+          "date": "2026-07-03",
+          "pair": "06",
+          "hit": true,
+          "absentDigits": 2,
+          "score": 0.07590617206196992,
+          "kind": "ridge_l2_100"
+        }
+      ]
+    }
+  ],
+  "rollingRows": []
+}

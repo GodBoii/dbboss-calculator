@@ -1,0 +1,1015 @@
+{
+  "generatedAt": "2026-07-09T10:19:09.198Z",
+  "avgBestFixedPairAccuracy": 0.7013888888888887,
+  "marketSidesAt80": 0,
+  "rows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "best": {
+        "pair": "15",
+        "correct": 23,
+        "total": 30,
+        "accuracy": 0.7666666666666667
+      },
+      "top5": [
+        {
+          "pair": "15",
+          "correct": 23,
+          "total": 30,
+          "accuracy": 0.7666666666666667
+        },
+        {
+          "pair": "18",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "58",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "01",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        },
+        {
+          "pair": "17",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "best": {
+        "pair": "48",
+        "correct": 21,
+        "total": 30,
+        "accuracy": 0.7
+      },
+      "top5": [
+        {
+          "pair": "48",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "12",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "14",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "24",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "17",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        }
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "best": {
+        "pair": "67",
+        "correct": 22,
+        "total": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "top5": [
+        {
+          "pair": "67",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "46",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "47",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "68",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "16",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "best": {
+        "pair": "03",
+        "correct": 19,
+        "total": 30,
+        "accuracy": 0.6333333333333333
+      },
+      "top5": [
+        {
+          "pair": "03",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "18",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "38",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "89",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "01",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "best": {
+        "pair": "47",
+        "correct": 22,
+        "total": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "top5": [
+        {
+          "pair": "47",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "24",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "27",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "29",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "79",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "best": {
+        "pair": "18",
+        "correct": 22,
+        "total": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "top5": [
+        {
+          "pair": "18",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "78",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "17",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "27",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "07",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        }
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "best": {
+        "pair": "25",
+        "correct": 20,
+        "total": 30,
+        "accuracy": 0.6666666666666666
+      },
+      "top5": [
+        {
+          "pair": "25",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "12",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "59",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "15",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        },
+        {
+          "pair": "23",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "best": {
+        "pair": "68",
+        "correct": 21,
+        "total": 30,
+        "accuracy": 0.7
+      },
+      "top5": [
+        {
+          "pair": "68",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "23",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        },
+        {
+          "pair": "25",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        },
+        {
+          "pair": "26",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        },
+        {
+          "pair": "28",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "best": {
+        "pair": "67",
+        "correct": 21,
+        "total": 30,
+        "accuracy": 0.7
+      },
+      "top5": [
+        {
+          "pair": "67",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "78",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "38",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "47",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "48",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "best": {
+        "pair": "46",
+        "correct": 20,
+        "total": 30,
+        "accuracy": 0.6666666666666666
+      },
+      "top5": [
+        {
+          "pair": "46",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "49",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "19",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "39",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "14",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "best": {
+        "pair": "08",
+        "correct": 20,
+        "total": 30,
+        "accuracy": 0.6666666666666666
+      },
+      "top5": [
+        {
+          "pair": "08",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "13",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "17",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "37",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "38",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "best": {
+        "pair": "35",
+        "correct": 22,
+        "total": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "top5": [
+        {
+          "pair": "35",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "03",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "23",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "39",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "34",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "best": {
+        "pair": "79",
+        "correct": 21,
+        "total": 30,
+        "accuracy": 0.7
+      },
+      "top5": [
+        {
+          "pair": "79",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "49",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "09",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "39",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "47",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        }
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "best": {
+        "pair": "04",
+        "correct": 21,
+        "total": 30,
+        "accuracy": 0.7
+      },
+      "top5": [
+        {
+          "pair": "04",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "01",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "06",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "46",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "02",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "best": {
+        "pair": "26",
+        "correct": 22,
+        "total": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "top5": [
+        {
+          "pair": "26",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "27",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "67",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "23",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "46",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        }
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "best": {
+        "pair": "04",
+        "correct": 21,
+        "total": 30,
+        "accuracy": 0.7
+      },
+      "top5": [
+        {
+          "pair": "04",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "02",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "06",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "08",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "07",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "best": {
+        "pair": "47",
+        "correct": 20,
+        "total": 30,
+        "accuracy": 0.6666666666666666
+      },
+      "top5": [
+        {
+          "pair": "47",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "23",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "24",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "29",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "39",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        }
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "best": {
+        "pair": "28",
+        "correct": 20,
+        "total": 30,
+        "accuracy": 0.6666666666666666
+      },
+      "top5": [
+        {
+          "pair": "28",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "25",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "27",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "56",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "26",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "best": {
+        "pair": "19",
+        "correct": 22,
+        "total": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "top5": [
+        {
+          "pair": "19",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "12",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "17",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "18",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "29",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "best": {
+        "pair": "34",
+        "correct": 21,
+        "total": 30,
+        "accuracy": 0.7
+      },
+      "top5": [
+        {
+          "pair": "34",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "03",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "38",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "08",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "01",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "best": {
+        "pair": "37",
+        "correct": 22,
+        "total": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "top5": [
+        {
+          "pair": "37",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "34",
+          "correct": 21,
+          "total": 30,
+          "accuracy": 0.7
+        },
+        {
+          "pair": "27",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "23",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "38",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "best": {
+        "pair": "05",
+        "correct": 20,
+        "total": 30,
+        "accuracy": 0.6666666666666666
+      },
+      "top5": [
+        {
+          "pair": "05",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "07",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "08",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "03",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "13",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        }
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "best": {
+        "pair": "19",
+        "correct": 20,
+        "total": 30,
+        "accuracy": 0.6666666666666666
+      },
+      "top5": [
+        {
+          "pair": "19",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "09",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "39",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "49",
+          "correct": 19,
+          "total": 30,
+          "accuracy": 0.6333333333333333
+        },
+        {
+          "pair": "29",
+          "correct": 18,
+          "total": 30,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "best": {
+        "pair": "13",
+        "correct": 22,
+        "total": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "top5": [
+        {
+          "pair": "13",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "36",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "38",
+          "correct": 22,
+          "total": 30,
+          "accuracy": 0.7333333333333333
+        },
+        {
+          "pair": "03",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "pair": "39",
+          "correct": 20,
+          "total": 30,
+          "accuracy": 0.6666666666666666
+        }
+      ]
+    }
+  ]
+}
