@@ -9,6 +9,14 @@ import {
 import type { BacktestReport } from "@/lib/backtest"
 import { getRecordISODate, type PanelRecord } from "@/lib/db"
 import {
+  applyRankProbabilities,
+  buildAdjustedCloseTop6Model,
+  buildCloseTop6Model,
+  buildJodiSet,
+  buildOpenTop6Model,
+  type SuttaPick,
+} from "@/lib/sutta-model"
+import {
   CopyButton,
   DpDigitFocusSection,
   DpFocusSection,
@@ -37,16 +45,7 @@ interface AnalysisTabsProps {
   dpPrecision: (correct: number, predicted: number) => string
 }
 
-export interface CopySuttaPick {
-  sutta: number
-  rank: number
-  score: number
-  signalColor: string
-  signalLabel: string
-  signalState: ReturnType<typeof getSuttaSignal>["state"]
-  isFresh: boolean
-  isSnapback: boolean
-}
+export type CopySuttaPick = SuttaPick
 
 type SuttaSelectionMode = "current" | "aggregate" | "weightedAggregate" | "weightedSnap"
 type OpenSuttaStrategy =
@@ -60,7 +59,6 @@ type OpenSuttaStrategy =
   | "housePrevOpenSame"
   | "housePrevOpenFlip"
   | "weightedSnap"
-  | "calendarDateOnly"
 type CloseSuttaStrategy =
   | "currentProduction"
   | "currentUi"
@@ -89,8 +87,6 @@ type CloseSuttaStrategy =
   | "rawPrevJodiCond"
   | "rawPrevCloseDelta"
   | "rawPrevOpenDelta"
-  | "recent30Cold"
-  | "knownOpenOnly"
 type MarketStrategy<T> = T | T[]
 type CountAwareMarketStrategy<T> = MarketStrategy<T> | {
   narrow: MarketStrategy<T>
@@ -100,17 +96,17 @@ type CountAwareMarketStrategy<T> = MarketStrategy<T> | {
 
 const OPEN_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<OpenSuttaStrategy>> = {
   Sridevi: "current",
-  "Time Bazar": { narrow: "sameDate", wide: "sameDate", counts: { 6: "calendarDateOnly" } },
-  "Madhur Day": { narrow: "gapBalanced", wide: "gapBalanced", counts: { 6: "calendarDateOnly" } },
+  "Time Bazar": "sameDate",
+  "Madhur Day": "gapBalanced",
   "Milan Day": "housePrevOpenFlip",
-  "Rajdhani Day": { narrow: "sameDate", wide: "sameDate", counts: { 6: "calendarDateOnly" } },
+  "Rajdhani Day": "sameDate",
   Kalyan: "rankOnly",
-  "Sridevi Night": { narrow: "sameDate", wide: "sameDate", counts: { 6: "calendarDateOnly" } },
-  "Kalyan Night": { narrow: "weightedSnap", wide: "weightedSnap", counts: { 6: "calendarDateOnly" } },
+  "Sridevi Night": "sameDate",
+  "Kalyan Night": "weightedSnap",
   "Madhur Night": "sameDateOpposite",
-  "Milan Night": { narrow: "sameDateOpposite", wide: "sameDateOpposite", counts: { 6: "calendarDateOnly" } },
-  "Rajdhani Night": { narrow: "gapBalanced", wide: "gapBalanced", counts: { 6: "calendarDateOnly" } },
-  "Main Bazar": { narrow: "housePrevOpenSame", wide: "housePrevOpenSame", counts: { 6: "calendarDateOnly" } },
+  "Milan Night": "sameDateOpposite",
+  "Rajdhani Night": "gapBalanced",
+  "Main Bazar": "housePrevOpenSame",
 }
 
 const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<CloseSuttaStrategy>> = {
@@ -148,27 +144,6 @@ const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<Close
   "Main Bazar": ["rawCalendarSameDate", "rawPrevCloseCond"],
 }
 
-const TOP6_CLOSE_COLD_MARKETS = new Set([
-  "Madhur Day",
-  "Kalyan",
-  "Sridevi Night",
-  "Kalyan Night",
-  "Madhur Night",
-  "Milan Night",
-  "Rajdhani Night",
-])
-
-const TOP6_KNOWN_OPEN_MARKETS = new Set([
-  "Kalyan Night",
-  "Milan Night",
-  "Rajdhani Night",
-])
-
-const TOP6_ADJUSTED_COLD_MARKETS = new Set([
-  "Madhur Day",
-  "Madhur Night",
-])
-
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
 const suttaSignalPriority: Record<CopySuttaPick["signalState"], number> = {
   fresh: 0,
@@ -189,10 +164,8 @@ function compareCopySuttaPicks(a: CopySuttaPick, b: CopySuttaPick) {
 }
 
 function finalizeCopySuttaSet(items: CopySuttaPick[], count: number) {
-  return [...items]
-    .sort(compareCopySuttaPicks)
-    .slice(0, count)
-    .map((item, index) => ({ ...item, rank: index + 1 }))
+  const ranked = [...items].sort(compareCopySuttaPicks)
+  return applyRankProbabilities(ranked).slice(0, count)
 }
 
 function finalizeRawCopySuttaSet(items: CopySuttaPick[], count: number) {
@@ -219,18 +192,6 @@ function finalizeRawScoredSuttaRows(
     rows.map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts)),
     count,
   )
-}
-
-function finalizeStatisticalSuttaRows(
-  rows: Array<{ sutta: number; score: number }>,
-  droughts: Record<string, number>,
-  count: number,
-) {
-  return rows
-    .map((row, index) => makeCopySuttaPick(row.sutta, row.score * 100, index + 1, droughts))
-    .sort((a, b) => b.score - a.score || a.sutta - b.sutta)
-    .slice(0, count)
-    .map((item, index) => ({ ...item, rank: index + 1 }))
 }
 
 function mergeCopySuttaSources(sources: CopySuttaPick[][], count: number) {
@@ -299,6 +260,7 @@ export function buildTopSuttaSet(
       sutta: pick.sutta,
       rank: index + 1,
       score: mode === "weightedAggregate" || mode === "weightedSnap" ? pick.score * rankWeight : pick.score,
+      probabilityPct: 0,
       signalColor: signal.color,
       signalLabel: signal.label,
       signalState: signal.state,
@@ -314,6 +276,7 @@ export function buildTopSuttaSet(
       sutta,
       rank: 999,
       score: 0,
+      probabilityPct: 0,
       signalColor: signal.color,
       signalLabel: signal.label,
       signalState: signal.state,
@@ -453,6 +416,7 @@ function makeCopySuttaPick(sutta: number, score: number, rank: number, droughts:
     sutta,
     rank,
     score,
+    probabilityPct: 0,
     signalColor: signal.color,
     signalLabel: signal.label,
     signalState: signal.state,
@@ -490,6 +454,9 @@ export function buildOpenSuttaSet(
 
   const openRecords = records.filter((record) => record.openPanel && record.openSutta >= 0)
   if (openRecords.length < 50) return buildTopSuttaSet(picks, droughts, count)
+
+  const isolatedTop6 = buildOpenTop6Model({ marketName, records, droughts, count, targetDate })
+  if (isolatedTop6) return isolatedTop6
 
   const strategy = resolveCountAwareStrategy(
     OPEN_SUTTA_MARKET_STRATEGY[marketName],
@@ -556,9 +523,7 @@ export function buildOpenSuttaSet(
       openGap <= 2 ? -0.08 : openGap <= 5 ? 0 : openGap <= 12 ? 0 : openGap <= 25 ? 0.04 : 0.12
 
     let score = 0
-    if (strategy === "calendarDateOnly") {
-      score = smoothedRate(sameDate[sutta], sameDateTotal)
-    } else if (strategy === "sameDate") {
+    if (strategy === "sameDate") {
       score =
         0.18 * smoothedRate(recent24[sutta], Math.min(24, total)) +
         0.12 * smoothedRate(weekday[sutta], weekdayTotal) +
@@ -599,9 +564,6 @@ export function buildOpenSuttaSet(
     return { sutta, score }
   })
 
-  if (strategy === "calendarDateOnly") {
-    return finalizeStatisticalSuttaRows(rows, droughts, count)
-  }
   return finalizeScoredSuttaRows(rows, droughts, count)
 }
 
@@ -623,23 +585,24 @@ export function buildCloseSuttaSet(
   const closeRecords = records.filter((record) => record.closePanel && record.closeSutta >= 0)
   if (closeRecords.length < 50) return currentProduction()
 
+  const isolatedTop6 = currentOpenSutta === null
+    ? buildCloseTop6Model({ marketName, records, droughts, count, targetDate })
+    : buildAdjustedCloseTop6Model({
+        marketName,
+        records,
+        droughts,
+        count,
+        currentOpenSutta,
+        targetDate,
+      })
+  if (isolatedTop6) return isolatedTop6
+
   const strategyConfig = resolveCountAwareStrategy(
     CLOSE_SUTTA_MARKET_STRATEGY[marketName],
     "currentProduction",
     count,
   )
-  const adjustedTop6Strategy =
-    count === 6 && currentOpenSutta !== null && TOP6_KNOWN_OPEN_MARKETS.has(marketName)
-      ? "knownOpenOnly"
-      : count === 6 && currentOpenSutta !== null && TOP6_ADJUSTED_COLD_MARKETS.has(marketName)
-        ? "recent30Cold"
-        : null
-  const coldTop6Strategy =
-    count === 6 && currentOpenSutta === null && TOP6_CLOSE_COLD_MARKETS.has(marketName)
-      ? "recent30Cold"
-      : null
-  const effectiveStrategy = adjustedTop6Strategy ?? coldTop6Strategy ?? strategyConfig
-  const strategies = Array.isArray(effectiveStrategy) ? effectiveStrategy : [effectiveStrategy]
+  const strategies = Array.isArray(strategyConfig) ? strategyConfig : [strategyConfig]
 
   const todayDayName = getDayNameForDate(targetDate)
   const recent24 = Array(10).fill(0)
@@ -722,23 +685,6 @@ export function buildCloseSuttaSet(
     if (strategy === "rawSumCooling") return buildRawTopSuttaSet(picks, droughts, strategyCount, "aggregate")
     if (strategy === "rawWeightedSnap") return buildRawTopSuttaSet(picks, droughts, strategyCount, "weightedSnap")
     if (strategy === "rawRankOnly") return buildRawRankOnlySuttaSet(picks, droughts, strategyCount)
-    if (strategy === "recent30Cold") {
-      const recentCounts = Array(10).fill(0) as number[]
-      for (const record of closeRecords.slice(-30)) recentCounts[record.closeSutta]++
-      return finalizeStatisticalSuttaRows(
-        recentCounts.map((observed, sutta) => ({ sutta, score: -smoothedRate(observed, Math.min(30, total)) })),
-        droughts,
-        strategyCount,
-      )
-    }
-    if (strategy === "knownOpenOnly") {
-      return finalizeStatisticalSuttaRows(
-        currentOpenCond.map((observed, sutta) => ({ sutta, score: smoothedRate(observed, currentOpenCondTotal) })),
-        droughts,
-        strategyCount,
-      )
-    }
-
     const needsCurrentOpen =
       strategy === "currentOpenCond" ||
       strategy === "currentOpenOpposite" ||
@@ -817,23 +763,19 @@ export function buildCloseSuttaSet(
     return finalizeScoredSuttaRows(rows, droughts, strategyCount)
   }
 
-  if (
-    strategies.length === 1 &&
-    (strategies[0] === "recent30Cold" || strategies[0] === "knownOpenOnly")
-  ) {
-    return buildStrategySet(strategies[0], count)
-  }
-
   const sources = strategies.map((strategy) => buildStrategySet(strategy, 10))
   return mergeCopySuttaSources(sources, count)
 }
 
 export function buildJodis(openSuttas: CopySuttaPick[], closeSuttas: CopySuttaPick[]): string[] {
-  return openSuttas.flatMap((open) => closeSuttas.map((close) => `${open.sutta}${close.sutta}`))
+  return buildJodiSet(openSuttas, closeSuttas)
 }
 
 function formatSuttasForCopy(suttas: CopySuttaPick[]): string {
-  return suttas.map((item) => item.sutta).join("-")
+  return [...suttas]
+    .sort((a, b) => a.rank - b.rank || b.probabilityPct - a.probabilityPct || a.sutta - b.sutta)
+    .map((item) => item.sutta)
+    .join("-")
 }
 
 export function BetCopyDesk({
@@ -858,7 +800,7 @@ export function BetCopyDesk({
       <div className="bet-copy-head">
         <div>
           <h4 className="stat-section-title bet-copy-title">Bet Copy</h4>
-          <p className="picks-hint bet-copy-hint">Market-tuned open, signal-ranked close</p>
+          <p className="picks-hint bet-copy-hint">Highest to lowest model chance. Colors show drought state only.</p>
         </div>
         <div className="copy-count-control" aria-label="Top sutta count">
           <button
@@ -933,20 +875,30 @@ export function BetCopyDesk({
 }
 
 function SuttaCopyGroup({ label, suttas }: { label: string; suttas: CopySuttaPick[] }) {
+  const rankedSuttas = [...suttas].sort(
+    (a, b) => a.rank - b.rank || b.probabilityPct - a.probabilityPct || a.sutta - b.sutta,
+  )
   return (
     <div className="sutta-copy-group">
       <span className="sutta-copy-label">{label}</span>
       <div className="sutta-copy-chips">
-        {suttas.map((item) => (
+        {rankedSuttas.map((item) => (
           <span
             key={item.sutta}
             className={`sutta-copy-chip ${item.isFresh ? "sutta-copy-chip--fresh" : ""}`}
             style={{ borderColor: item.signalColor, color: item.signalColor }}
-            title={`Rank #${item.rank} - ${item.signalLabel} - ${item.score.toFixed(1)} pts`}
+            title={`Rank #${item.rank} - ${item.probabilityPct.toFixed(1)}% model chance - ${item.signalLabel} - ${item.score.toFixed(1)} score`}
           >
-            {item.sutta}
+            <span className="sutta-copy-number">{item.sutta}</span>
+            <span className="sutta-copy-probability">{item.probabilityPct.toFixed(1)}%</span>
           </span>
         ))}
+      </div>
+      <div className="sutta-copy-legend" aria-label="Sutta color meaning">
+        <span className="sutta-legend-fresh">Green: fresh</span>
+        <span className="sutta-legend-warming">Yellow: warming/cooling</span>
+        <span className="sutta-legend-danger">Red: danger</span>
+        <span className="sutta-legend-snapback">Blue: snapback</span>
       </div>
     </div>
   )
