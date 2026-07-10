@@ -1,0 +1,48 @@
+{
+  "market": "Rajdhani Day",
+  "startDate": "2025-12-24",
+  "endDate": "2026-06-22",
+  "drawsTested": 153,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 153,
+    "panelTop3": 1,
+    "panelTop10": 7,
+    "panelTop30": 31,
+    "suttaTop3": 23,
+    "suttaTop10": 50,
+    "suttaTop30": 113,
+    "actualDanger": 29,
+    "actualSnapback": 11,
+    "averageActualRank": 18.322580645161292
+  },
+  "close": {
+    "n": 153,
+    "panelTop3": 1,
+    "panelTop10": 7,
+    "panelTop30": 17,
+    "suttaTop3": 15,
+    "suttaTop10": 60,
+    "suttaTop30": 107,
+    "actualDanger": 35,
+    "actualSnapback": 12,
+    "averageActualRank": 14.294117647058824
+  },
+  "jodi": {
+    "n": 153,
+    "panelTop3": 1,
+    "panelTop10": 6,
+    "panelTop30": 17,
+    "suttaTop3": 16,
+    "suttaTop10": 59,
+    "suttaTop30": 103,
+    "actualDanger": 35,
+    "actualSnapback": 12,
+    "averageActualRank": 14.764705882352942
+  },
+  "jodiMovement": {
+    "better": 4,
+    "worse": 5,
+    "same": 7
+  }
+}

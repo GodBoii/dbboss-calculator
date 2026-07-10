@@ -1,0 +1,48 @@
+{
+  "market": "Sridevi Night",
+  "startDate": "2025-12-24",
+  "endDate": "2026-06-22",
+  "drawsTested": 178,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 178,
+    "panelTop3": 3,
+    "panelTop10": 9,
+    "panelTop30": 25,
+    "suttaTop3": 31,
+    "suttaTop10": 71,
+    "suttaTop30": 133,
+    "actualDanger": 34,
+    "actualSnapback": 19,
+    "averageActualRank": 13.32
+  },
+  "close": {
+    "n": 178,
+    "panelTop3": 0,
+    "panelTop10": 5,
+    "panelTop30": 23,
+    "suttaTop3": 29,
+    "suttaTop10": 58,
+    "suttaTop30": 119,
+    "actualDanger": 40,
+    "actualSnapback": 17,
+    "averageActualRank": 17.73913043478261
+  },
+  "jodi": {
+    "n": 178,
+    "panelTop3": 0,
+    "panelTop10": 6,
+    "panelTop30": 25,
+    "suttaTop3": 30,
+    "suttaTop10": 58,
+    "suttaTop30": 112,
+    "actualDanger": 40,
+    "actualSnapback": 17,
+    "averageActualRank": 17.96
+  },
+  "jodiMovement": {
+    "better": 9,
+    "worse": 5,
+    "same": 9
+  }
+}

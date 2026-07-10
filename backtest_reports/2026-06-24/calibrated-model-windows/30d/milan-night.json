@@ -1,0 +1,48 @@
+{
+  "market": "Milan Night",
+  "startDate": "2026-05-23",
+  "endDate": "2026-06-22",
+  "drawsTested": 26,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 26,
+    "panelTop3": 0,
+    "panelTop10": 0,
+    "panelTop30": 1,
+    "suttaTop3": 5,
+    "suttaTop10": 12,
+    "suttaTop30": 18,
+    "actualDanger": 9,
+    "actualSnapback": 3,
+    "averageActualRank": 11
+  },
+  "close": {
+    "n": 26,
+    "panelTop3": 2,
+    "panelTop10": 2,
+    "panelTop30": 6,
+    "suttaTop3": 4,
+    "suttaTop10": 9,
+    "suttaTop30": 17,
+    "actualDanger": 6,
+    "actualSnapback": 4,
+    "averageActualRank": 17.5
+  },
+  "jodi": {
+    "n": 26,
+    "panelTop3": 2,
+    "panelTop10": 3,
+    "panelTop30": 7,
+    "suttaTop3": 7,
+    "suttaTop10": 11,
+    "suttaTop30": 17,
+    "actualDanger": 6,
+    "actualSnapback": 4,
+    "averageActualRank": 13.285714285714286
+  },
+  "jodiMovement": {
+    "better": 3,
+    "worse": 0,
+    "same": 2
+  }
+}

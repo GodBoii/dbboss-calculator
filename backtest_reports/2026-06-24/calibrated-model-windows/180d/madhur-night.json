@@ -1,0 +1,48 @@
+{
+  "market": "Madhur Night",
+  "startDate": "2025-12-24",
+  "endDate": "2026-06-22",
+  "drawsTested": 154,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 154,
+    "panelTop3": 1,
+    "panelTop10": 6,
+    "panelTop30": 19,
+    "suttaTop3": 32,
+    "suttaTop10": 64,
+    "suttaTop30": 115,
+    "actualDanger": 31,
+    "actualSnapback": 20,
+    "averageActualRank": 16.157894736842106
+  },
+  "close": {
+    "n": 154,
+    "panelTop3": 4,
+    "panelTop10": 8,
+    "panelTop30": 24,
+    "suttaTop3": 30,
+    "suttaTop10": 59,
+    "suttaTop30": 126,
+    "actualDanger": 23,
+    "actualSnapback": 17,
+    "averageActualRank": 15.833333333333334
+  },
+  "jodi": {
+    "n": 154,
+    "panelTop3": 4,
+    "panelTop10": 8,
+    "panelTop30": 28,
+    "suttaTop3": 29,
+    "suttaTop10": 62,
+    "suttaTop30": 114,
+    "actualDanger": 23,
+    "actualSnapback": 17,
+    "averageActualRank": 15.571428571428571
+  },
+  "jodiMovement": {
+    "better": 8,
+    "worse": 10,
+    "same": 2
+  }
+}

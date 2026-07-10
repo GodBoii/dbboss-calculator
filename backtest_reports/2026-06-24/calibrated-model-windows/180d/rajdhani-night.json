@@ -1,0 +1,48 @@
+{
+  "market": "Rajdhani Night",
+  "startDate": "2025-12-24",
+  "endDate": "2026-06-22",
+  "drawsTested": 127,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 127,
+    "panelTop3": 4,
+    "panelTop10": 7,
+    "panelTop30": 21,
+    "suttaTop3": 18,
+    "suttaTop10": 53,
+    "suttaTop30": 92,
+    "actualDanger": 24,
+    "actualSnapback": 11,
+    "averageActualRank": 15.761904761904763
+  },
+  "close": {
+    "n": 127,
+    "panelTop3": 3,
+    "panelTop10": 7,
+    "panelTop30": 21,
+    "suttaTop3": 19,
+    "suttaTop10": 45,
+    "suttaTop30": 88,
+    "actualDanger": 28,
+    "actualSnapback": 15,
+    "averageActualRank": 15.476190476190476
+  },
+  "jodi": {
+    "n": 127,
+    "panelTop3": 4,
+    "panelTop10": 7,
+    "panelTop30": 23,
+    "suttaTop3": 19,
+    "suttaTop10": 39,
+    "suttaTop30": 89,
+    "actualDanger": 28,
+    "actualSnapback": 15,
+    "averageActualRank": 15
+  },
+  "jodiMovement": {
+    "better": 11,
+    "worse": 5,
+    "same": 4
+  }
+}

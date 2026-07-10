@@ -1,0 +1,48 @@
+{
+  "market": "Milan Day",
+  "startDate": "2026-05-23",
+  "endDate": "2026-06-22",
+  "drawsTested": 26,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 26,
+    "panelTop3": 1,
+    "panelTop10": 1,
+    "panelTop30": 5,
+    "suttaTop3": 5,
+    "suttaTop10": 10,
+    "suttaTop30": 17,
+    "actualDanger": 9,
+    "actualSnapback": 2,
+    "averageActualRank": 16.4
+  },
+  "close": {
+    "n": 26,
+    "panelTop3": 0,
+    "panelTop10": 0,
+    "panelTop30": 3,
+    "suttaTop3": 5,
+    "suttaTop10": 15,
+    "suttaTop30": 21,
+    "actualDanger": 5,
+    "actualSnapback": 3,
+    "averageActualRank": 18.666666666666668
+  },
+  "jodi": {
+    "n": 26,
+    "panelTop3": 0,
+    "panelTop10": 1,
+    "panelTop30": 5,
+    "suttaTop3": 5,
+    "suttaTop10": 14,
+    "suttaTop30": 22,
+    "actualDanger": 5,
+    "actualSnapback": 3,
+    "averageActualRank": 18.6
+  },
+  "jodiMovement": {
+    "better": 1,
+    "worse": 1,
+    "same": 1
+  }
+}

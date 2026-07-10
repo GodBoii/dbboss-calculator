@@ -1,0 +1,48 @@
+{
+  "market": "Kalyan Night",
+  "startDate": "2025-12-24",
+  "endDate": "2026-06-22",
+  "drawsTested": 127,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 127,
+    "panelTop3": 1,
+    "panelTop10": 8,
+    "panelTop30": 16,
+    "suttaTop3": 22,
+    "suttaTop10": 46,
+    "suttaTop30": 89,
+    "actualDanger": 23,
+    "actualSnapback": 15,
+    "averageActualRank": 12.875
+  },
+  "close": {
+    "n": 127,
+    "panelTop3": 1,
+    "panelTop10": 4,
+    "panelTop30": 14,
+    "suttaTop3": 24,
+    "suttaTop10": 46,
+    "suttaTop30": 92,
+    "actualDanger": 23,
+    "actualSnapback": 13,
+    "averageActualRank": 17.071428571428573
+  },
+  "jodi": {
+    "n": 127,
+    "panelTop3": 1,
+    "panelTop10": 4,
+    "panelTop30": 14,
+    "suttaTop3": 23,
+    "suttaTop10": 47,
+    "suttaTop30": 93,
+    "actualDanger": 23,
+    "actualSnapback": 13,
+    "averageActualRank": 15.5
+  },
+  "jodiMovement": {
+    "better": 5,
+    "worse": 3,
+    "same": 5
+  }
+}

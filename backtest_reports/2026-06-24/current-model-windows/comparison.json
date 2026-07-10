@@ -1,0 +1,2543 @@
+{
+  "generatedAt": "2026-06-24T06:11:08.157Z",
+  "windowEnd": "2026-06-24",
+  "reports": [
+    {
+      "windowDays": 30,
+      "windowStart": "2026-05-26",
+      "global": {
+        "open": {
+          "N": 300,
+          "panel3": 1,
+          "panel10": 3.7,
+          "panel30": 14,
+          "sutta3": 18,
+          "sutta10": 39.3,
+          "sutta30": 76.7,
+          "danger": 19.3,
+          "snapback": 11.7,
+          "avgTop30Suttas": 7.2,
+          "avgRank": 102.8
+        },
+        "close": {
+          "N": 300,
+          "panel3": 1.3,
+          "panel10": 4.3,
+          "panel30": 16.3,
+          "sutta3": 16.7,
+          "sutta10": 37.3,
+          "sutta30": 70.3,
+          "danger": 19.3,
+          "snapback": 12,
+          "avgTop30Suttas": 7.3,
+          "avgRank": 105.6
+        },
+        "jodi": {
+          "N": 300,
+          "panel3": 1.3,
+          "panel10": 6.7,
+          "panel30": 17,
+          "sutta3": 21,
+          "sutta10": 37.7,
+          "sutta30": 66.7,
+          "danger": 19.3,
+          "snapback": 12,
+          "avgTop30Suttas": 6.7,
+          "avgRank": 104.7
+        }
+      },
+      "session": {
+        "day": {
+          "open": {
+            "N": 158,
+            "panel3": 1.3,
+            "panel10": 3.8,
+            "panel30": 16.5,
+            "sutta3": 16.5,
+            "sutta10": 35.4,
+            "sutta30": 74.7,
+            "danger": 18.4,
+            "snapback": 10.8,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 102.4
+          },
+          "close": {
+            "N": 158,
+            "panel3": 0.6,
+            "panel10": 3.8,
+            "panel30": 16.5,
+            "sutta3": 17.1,
+            "sutta10": 40.5,
+            "sutta30": 70.3,
+            "danger": 20.9,
+            "snapback": 12.7,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 104
+          },
+          "jodi": {
+            "N": 158,
+            "panel3": 0.6,
+            "panel10": 6.3,
+            "panel30": 17.1,
+            "sutta3": 21.5,
+            "sutta10": 41.1,
+            "sutta30": 69,
+            "danger": 20.9,
+            "snapback": 12.7,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 103.9
+          }
+        },
+        "night": {
+          "open": {
+            "N": 142,
+            "panel3": 0.7,
+            "panel10": 3.5,
+            "panel30": 11.3,
+            "sutta3": 19.7,
+            "sutta10": 43.7,
+            "sutta30": 78.9,
+            "danger": 20.4,
+            "snapback": 12.7,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 103.3
+          },
+          "close": {
+            "N": 142,
+            "panel3": 2.1,
+            "panel10": 4.9,
+            "panel30": 16.2,
+            "sutta3": 16.2,
+            "sutta10": 33.8,
+            "sutta30": 70.4,
+            "danger": 17.6,
+            "snapback": 11.3,
+            "avgTop30Suttas": 7.4,
+            "avgRank": 107.3
+          },
+          "jodi": {
+            "N": 142,
+            "panel3": 2.1,
+            "panel10": 7,
+            "panel30": 16.9,
+            "sutta3": 20.4,
+            "sutta10": 33.8,
+            "sutta30": 64.1,
+            "danger": 17.6,
+            "snapback": 11.3,
+            "avgTop30Suttas": 6.6,
+            "avgRank": 105.7
+          }
+        }
+      }
+    },
+    {
+      "windowDays": 90,
+      "windowStart": "2026-03-27",
+      "global": {
+        "open": {
+          "N": 911,
+          "panel3": 1,
+          "panel10": 4.4,
+          "panel30": 14.9,
+          "sutta3": 17.9,
+          "sutta10": 40.4,
+          "sutta30": 74.1,
+          "danger": 18.9,
+          "snapback": 11.9,
+          "avgTop30Suttas": 7.2,
+          "avgRank": 102.2
+        },
+        "close": {
+          "N": 911,
+          "panel3": 1.9,
+          "panel10": 5.6,
+          "panel30": 16.2,
+          "sutta3": 17.5,
+          "sutta10": 37.5,
+          "sutta30": 72.1,
+          "danger": 18.8,
+          "snapback": 10.6,
+          "avgTop30Suttas": 7.3,
+          "avgRank": 103.7
+        },
+        "jodi": {
+          "N": 911,
+          "panel3": 1.9,
+          "panel10": 6.3,
+          "panel30": 17.8,
+          "sutta3": 19.4,
+          "sutta10": 37.1,
+          "sutta30": 67.2,
+          "danger": 18.8,
+          "snapback": 10.6,
+          "avgTop30Suttas": 6.7,
+          "avgRank": 103
+        }
+      },
+      "session": {
+        "day": {
+          "open": {
+            "N": 482,
+            "panel3": 1,
+            "panel10": 4.6,
+            "panel30": 17.4,
+            "sutta3": 19.1,
+            "sutta10": 40.9,
+            "sutta30": 74.5,
+            "danger": 17.8,
+            "snapback": 10.4,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 100.5
+          },
+          "close": {
+            "N": 482,
+            "panel3": 1.5,
+            "panel10": 5.6,
+            "panel30": 16.4,
+            "sutta3": 18,
+            "sutta10": 39.6,
+            "sutta30": 72.2,
+            "danger": 21.4,
+            "snapback": 10.6,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 104.6
+          },
+          "jodi": {
+            "N": 482,
+            "panel3": 1.5,
+            "panel10": 6,
+            "panel30": 17.8,
+            "sutta3": 20.3,
+            "sutta10": 41.3,
+            "sutta30": 69.5,
+            "danger": 21.4,
+            "snapback": 10.6,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 103.3
+          }
+        },
+        "night": {
+          "open": {
+            "N": 429,
+            "panel3": 0.9,
+            "panel10": 4.2,
+            "panel30": 12.1,
+            "sutta3": 16.6,
+            "sutta10": 39.9,
+            "sutta30": 73.7,
+            "danger": 20,
+            "snapback": 13.5,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 104.3
+          },
+          "close": {
+            "N": 429,
+            "panel3": 2.3,
+            "panel10": 5.6,
+            "panel30": 16.1,
+            "sutta3": 16.8,
+            "sutta10": 35.2,
+            "sutta30": 72,
+            "danger": 15.9,
+            "snapback": 10.7,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 102.8
+          },
+          "jodi": {
+            "N": 429,
+            "panel3": 2.3,
+            "panel10": 6.5,
+            "panel30": 17.7,
+            "sutta3": 18.4,
+            "sutta10": 32.4,
+            "sutta30": 64.6,
+            "danger": 15.9,
+            "snapback": 10.7,
+            "avgTop30Suttas": 6.6,
+            "avgRank": 102.7
+          }
+        }
+      }
+    },
+    {
+      "windowDays": 180,
+      "windowStart": "2025-12-27",
+      "global": {
+        "open": {
+          "N": 1811,
+          "panel3": 1.4,
+          "panel10": 4.6,
+          "panel30": 14.6,
+          "sutta3": 16.6,
+          "sutta10": 37.6,
+          "sutta30": 71.5,
+          "danger": 19.5,
+          "snapback": 10.5,
+          "avgTop30Suttas": 7.1,
+          "avgRank": 103.9
+        },
+        "close": {
+          "N": 1811,
+          "panel3": 1.7,
+          "panel10": 5.2,
+          "panel30": 15,
+          "sutta3": 16.9,
+          "sutta10": 37,
+          "sutta30": 72.1,
+          "danger": 19.3,
+          "snapback": 10.2,
+          "avgTop30Suttas": 7.3,
+          "avgRank": 104.7
+        },
+        "jodi": {
+          "N": 1811,
+          "panel3": 1.6,
+          "panel10": 6,
+          "panel30": 16.1,
+          "sutta3": 17.7,
+          "sutta10": 36.5,
+          "sutta30": 67.1,
+          "danger": 19.3,
+          "snapback": 10.2,
+          "avgTop30Suttas": 6.8,
+          "avgRank": 104.3
+        }
+      },
+      "session": {
+        "day": {
+          "open": {
+            "N": 958,
+            "panel3": 1.5,
+            "panel10": 4.5,
+            "panel30": 15,
+            "sutta3": 16.4,
+            "sutta10": 36.3,
+            "sutta30": 69.9,
+            "danger": 19.7,
+            "snapback": 9.4,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 104.3
+          },
+          "close": {
+            "N": 958,
+            "panel3": 1.4,
+            "panel10": 5.2,
+            "panel30": 14.4,
+            "sutta3": 17,
+            "sutta10": 37.2,
+            "sutta30": 71.5,
+            "danger": 20.7,
+            "snapback": 9.9,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 106
+          },
+          "jodi": {
+            "N": 958,
+            "panel3": 1.1,
+            "panel10": 5.7,
+            "panel30": 15,
+            "sutta3": 17.7,
+            "sutta10": 37.3,
+            "sutta30": 67.6,
+            "danger": 20.7,
+            "snapback": 9.9,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 105.6
+          }
+        },
+        "night": {
+          "open": {
+            "N": 853,
+            "panel3": 1.4,
+            "panel10": 4.8,
+            "panel30": 14.1,
+            "sutta3": 16.8,
+            "sutta10": 39,
+            "sutta30": 73.2,
+            "danger": 19.2,
+            "snapback": 11.7,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 103.6
+          },
+          "close": {
+            "N": 853,
+            "panel3": 2,
+            "panel10": 5.3,
+            "panel30": 15.7,
+            "sutta3": 16.8,
+            "sutta10": 36.8,
+            "sutta30": 72.8,
+            "danger": 17.8,
+            "snapback": 10.6,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 103.2
+          },
+          "jodi": {
+            "N": 853,
+            "panel3": 2.1,
+            "panel10": 6.3,
+            "panel30": 17.4,
+            "sutta3": 17.6,
+            "sutta10": 35.6,
+            "sutta30": 66.6,
+            "danger": 17.8,
+            "snapback": 10.6,
+            "avgTop30Suttas": 6.7,
+            "avgRank": 102.8
+          }
+        }
+      }
+    }
+  ],
+  "markets": {
+    "Sridevi": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Sridevi",
+          "session": "day",
+          "url": "https://dpbosss.net.in/sridevi-penal-chart-record.php",
+          "totalRecords": 2937,
+          "sourceStart": "2018-03-05",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 29,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 29,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 6.9,
+            "sutta3": 24.1,
+            "sutta10": 44.8,
+            "sutta30": 82.8,
+            "danger": 6.9,
+            "snapback": 10.3,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 106.9
+          },
+          "close": {
+            "N": 29,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 17.2,
+            "sutta3": 20.7,
+            "sutta10": 41.4,
+            "sutta30": 82.8,
+            "danger": 13.8,
+            "snapback": 17.2,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 105.2
+          },
+          "jodi": {
+            "N": 29,
+            "panel3": 0,
+            "panel10": 6.9,
+            "panel30": 13.8,
+            "sutta3": 27.6,
+            "sutta10": 44.8,
+            "sutta30": 75.9,
+            "danger": 13.8,
+            "snapback": 17.2,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 110.2
+          },
+          "jodiMovement": {
+            "better": 8,
+            "worse": 17,
+            "same": 4
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Sridevi",
+          "session": "day",
+          "url": "https://dpbosss.net.in/sridevi-penal-chart-record.php",
+          "totalRecords": 2937,
+          "sourceStart": "2018-03-05",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 89,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 89,
+            "panel3": 0,
+            "panel10": 4.5,
+            "panel30": 12.4,
+            "sutta3": 23.6,
+            "sutta10": 44.9,
+            "sutta30": 73,
+            "danger": 15.7,
+            "snapback": 13.5,
+            "avgTop30Suttas": 7,
+            "avgRank": 97.3
+          },
+          "close": {
+            "N": 89,
+            "panel3": 3.4,
+            "panel10": 4.5,
+            "panel30": 13.5,
+            "sutta3": 22.5,
+            "sutta10": 39.3,
+            "sutta30": 78.7,
+            "danger": 18,
+            "snapback": 14.6,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 108.4
+          },
+          "jodi": {
+            "N": 89,
+            "panel3": 2.2,
+            "panel10": 7.9,
+            "panel30": 15.7,
+            "sutta3": 23.6,
+            "sutta10": 43.8,
+            "sutta30": 75.3,
+            "danger": 18,
+            "snapback": 14.6,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 109.1
+          },
+          "jodiMovement": {
+            "better": 33,
+            "worse": 45,
+            "same": 11
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Sridevi",
+          "session": "day",
+          "url": "https://dpbosss.net.in/sridevi-penal-chart-record.php",
+          "totalRecords": 2937,
+          "sourceStart": "2018-03-05",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 177,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 177,
+            "panel3": 0.6,
+            "panel10": 2.8,
+            "panel30": 12.4,
+            "sutta3": 18.6,
+            "sutta10": 38.4,
+            "sutta30": 69.5,
+            "danger": 17.5,
+            "snapback": 11.9,
+            "avgTop30Suttas": 7,
+            "avgRank": 101.4
+          },
+          "close": {
+            "N": 177,
+            "panel3": 2.3,
+            "panel10": 4.5,
+            "panel30": 12.4,
+            "sutta3": 19.8,
+            "sutta10": 37.3,
+            "sutta30": 75.7,
+            "danger": 17.5,
+            "snapback": 12.4,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 105.8
+          },
+          "jodi": {
+            "N": 177,
+            "panel3": 1.1,
+            "panel10": 6.2,
+            "panel30": 14.1,
+            "sutta3": 18.1,
+            "sutta10": 40.1,
+            "sutta30": 70.6,
+            "danger": 17.5,
+            "snapback": 12.4,
+            "avgTop30Suttas": 6.6,
+            "avgRank": 105.8
+          },
+          "jodiMovement": {
+            "better": 72,
+            "worse": 88,
+            "same": 17
+          }
+        }
+      }
+    ],
+    "Time Bazar": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Time Bazar",
+          "session": "day",
+          "url": "https://dpbosss.net.in/time-bazar-panel.php",
+          "totalRecords": 2801,
+          "sourceStart": "2017-08-21",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 25,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 4,
+            "panel30": 24,
+            "sutta3": 24,
+            "sutta10": 48,
+            "sutta30": 80,
+            "danger": 12,
+            "snapback": 16,
+            "avgTop30Suttas": 7.5,
+            "avgRank": 92.8
+          },
+          "close": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 20,
+            "sutta3": 16,
+            "sutta10": 24,
+            "sutta30": 64,
+            "danger": 20,
+            "snapback": 8,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 96.8
+          },
+          "jodi": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 16,
+            "sutta3": 16,
+            "sutta10": 40,
+            "sutta30": 60,
+            "danger": 20,
+            "snapback": 8,
+            "avgTop30Suttas": 6.7,
+            "avgRank": 95.5
+          },
+          "jodiMovement": {
+            "better": 10,
+            "worse": 13,
+            "same": 2
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Time Bazar",
+          "session": "day",
+          "url": "https://dpbosss.net.in/time-bazar-panel.php",
+          "totalRecords": 2801,
+          "sourceStart": "2017-08-21",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 76,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 76,
+            "panel3": 1.3,
+            "panel10": 5.3,
+            "panel30": 19.7,
+            "sutta3": 22.4,
+            "sutta10": 55.3,
+            "sutta30": 81.6,
+            "danger": 14.5,
+            "snapback": 11.8,
+            "avgTop30Suttas": 7.6,
+            "avgRank": 98.4
+          },
+          "close": {
+            "N": 76,
+            "panel3": 2.6,
+            "panel10": 5.3,
+            "panel30": 21.1,
+            "sutta3": 17.1,
+            "sutta10": 38.2,
+            "sutta30": 71.1,
+            "danger": 21.1,
+            "snapback": 6.6,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 102.7
+          },
+          "jodi": {
+            "N": 76,
+            "panel3": 2.6,
+            "panel10": 5.3,
+            "panel30": 19.7,
+            "sutta3": 21.1,
+            "sutta10": 46.1,
+            "sutta30": 69.7,
+            "danger": 21.1,
+            "snapback": 6.6,
+            "avgTop30Suttas": 7,
+            "avgRank": 97.4
+          },
+          "jodiMovement": {
+            "better": 37,
+            "worse": 31,
+            "same": 8
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Time Bazar",
+          "session": "day",
+          "url": "https://dpbosss.net.in/time-bazar-panel.php",
+          "totalRecords": 2801,
+          "sourceStart": "2017-08-21",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 151,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 151,
+            "panel3": 2.6,
+            "panel10": 5.3,
+            "panel30": 16.6,
+            "sutta3": 18.5,
+            "sutta10": 44.4,
+            "sutta30": 70.9,
+            "danger": 21.2,
+            "snapback": 9.9,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 109.1
+          },
+          "close": {
+            "N": 151,
+            "panel3": 2.6,
+            "panel10": 6.6,
+            "panel30": 16.6,
+            "sutta3": 15.9,
+            "sutta10": 32.5,
+            "sutta30": 66.9,
+            "danger": 25.2,
+            "snapback": 5.3,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 109.1
+          },
+          "jodi": {
+            "N": 151,
+            "panel3": 1.3,
+            "panel10": 6,
+            "panel30": 16.6,
+            "sutta3": 17.9,
+            "sutta10": 38.4,
+            "sutta30": 66.2,
+            "danger": 25.2,
+            "snapback": 5.3,
+            "avgTop30Suttas": 7,
+            "avgRank": 105.2
+          },
+          "jodiMovement": {
+            "better": 71,
+            "worse": 61,
+            "same": 19
+          }
+        }
+      }
+    ],
+    "Madhur Day": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Madhur Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/madhur-day-panel-chart.php",
+          "totalRecords": 2946,
+          "sourceStart": "2016-02-04",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 29,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 29,
+            "panel3": 3.4,
+            "panel10": 3.4,
+            "panel30": 17.2,
+            "sutta3": 10.3,
+            "sutta10": 27.6,
+            "sutta30": 79.3,
+            "danger": 17.2,
+            "snapback": 13.8,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 98.9
+          },
+          "close": {
+            "N": 29,
+            "panel3": 3.4,
+            "panel10": 10.3,
+            "panel30": 24.1,
+            "sutta3": 24.1,
+            "sutta10": 55.2,
+            "sutta30": 82.8,
+            "danger": 20.7,
+            "snapback": 13.8,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 86.3
+          },
+          "jodi": {
+            "N": 29,
+            "panel3": 3.4,
+            "panel10": 13.8,
+            "panel30": 31,
+            "sutta3": 34.5,
+            "sutta10": 62.1,
+            "sutta30": 79.3,
+            "danger": 20.7,
+            "snapback": 13.8,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 81.3
+          },
+          "jodiMovement": {
+            "better": 13,
+            "worse": 11,
+            "same": 5
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Madhur Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/madhur-day-panel-chart.php",
+          "totalRecords": 2946,
+          "sourceStart": "2016-02-04",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 89,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 89,
+            "panel3": 1.1,
+            "panel10": 3.4,
+            "panel30": 16.9,
+            "sutta3": 21.3,
+            "sutta10": 40.4,
+            "sutta30": 77.5,
+            "danger": 16.9,
+            "snapback": 9,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 102.4
+          },
+          "close": {
+            "N": 89,
+            "panel3": 2.2,
+            "panel10": 7.9,
+            "panel30": 18,
+            "sutta3": 13.5,
+            "sutta10": 43.8,
+            "sutta30": 71.9,
+            "danger": 24.7,
+            "snapback": 7.9,
+            "avgTop30Suttas": 7.6,
+            "avgRank": 98.2
+          },
+          "jodi": {
+            "N": 89,
+            "panel3": 2.2,
+            "panel10": 9,
+            "panel30": 21.3,
+            "sutta3": 19.1,
+            "sutta10": 41.6,
+            "sutta30": 68.5,
+            "danger": 24.7,
+            "snapback": 7.9,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 97.9
+          },
+          "jodiMovement": {
+            "better": 35,
+            "worse": 41,
+            "same": 13
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Madhur Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/madhur-day-panel-chart.php",
+          "totalRecords": 2946,
+          "sourceStart": "2016-02-04",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 177,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 177,
+            "panel3": 1.1,
+            "panel10": 4,
+            "panel30": 15.3,
+            "sutta3": 18.6,
+            "sutta10": 40.1,
+            "sutta30": 75.7,
+            "danger": 16.9,
+            "snapback": 9.6,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 102.4
+          },
+          "close": {
+            "N": 177,
+            "panel3": 1.7,
+            "panel10": 6.8,
+            "panel30": 15.8,
+            "sutta3": 16.4,
+            "sutta10": 39,
+            "sutta30": 75.7,
+            "danger": 18.6,
+            "snapback": 11.3,
+            "avgTop30Suttas": 7.5,
+            "avgRank": 98.9
+          },
+          "jodi": {
+            "N": 177,
+            "panel3": 1.7,
+            "panel10": 7.9,
+            "panel30": 18.1,
+            "sutta3": 18.1,
+            "sutta10": 39,
+            "sutta30": 67.2,
+            "danger": 18.6,
+            "snapback": 11.3,
+            "avgTop30Suttas": 6.7,
+            "avgRank": 99.5
+          },
+          "jodiMovement": {
+            "better": 71,
+            "worse": 85,
+            "same": 21
+          }
+        }
+      }
+    ],
+    "Milan Day": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Milan Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/milan-day-panel.php",
+          "totalRecords": 2332,
+          "sourceStart": "2018-12-24",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 25,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 25,
+            "panel3": 4,
+            "panel10": 4,
+            "panel30": 20,
+            "sutta3": 20,
+            "sutta10": 32,
+            "sutta30": 60,
+            "danger": 36,
+            "snapback": 8,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 112
+          },
+          "close": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 16,
+            "sutta3": 20,
+            "sutta10": 64,
+            "sutta30": 84,
+            "danger": 16,
+            "snapback": 12,
+            "avgTop30Suttas": 7,
+            "avgRank": 97.7
+          },
+          "jodi": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 4,
+            "panel30": 20,
+            "sutta3": 24,
+            "sutta10": 48,
+            "sutta30": 88,
+            "danger": 16,
+            "snapback": 12,
+            "avgTop30Suttas": 6.5,
+            "avgRank": 97.8
+          },
+          "jodiMovement": {
+            "better": 15,
+            "worse": 9,
+            "same": 1
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Milan Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/milan-day-panel.php",
+          "totalRecords": 2332,
+          "sourceStart": "2018-12-24",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 76,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 76,
+            "panel3": 2.6,
+            "panel10": 5.3,
+            "panel30": 23.7,
+            "sutta3": 22.4,
+            "sutta10": 36.8,
+            "sutta30": 71.1,
+            "danger": 22.4,
+            "snapback": 11.8,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 100.4
+          },
+          "close": {
+            "N": 76,
+            "panel3": 0,
+            "panel10": 3.9,
+            "panel30": 11.8,
+            "sutta3": 21.1,
+            "sutta10": 42.1,
+            "sutta30": 71.1,
+            "danger": 22.4,
+            "snapback": 11.8,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 109.5
+          },
+          "jodi": {
+            "N": 76,
+            "panel3": 0,
+            "panel10": 2.6,
+            "panel30": 14.5,
+            "sutta3": 23.7,
+            "sutta10": 39.5,
+            "sutta30": 65.8,
+            "danger": 22.4,
+            "snapback": 11.8,
+            "avgTop30Suttas": 6.3,
+            "avgRank": 107.9
+          },
+          "jodiMovement": {
+            "better": 40,
+            "worse": 32,
+            "same": 4
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Milan Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/milan-day-panel.php",
+          "totalRecords": 2332,
+          "sourceStart": "2018-12-24",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 151,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 151,
+            "panel3": 1.3,
+            "panel10": 4.6,
+            "panel30": 16.6,
+            "sutta3": 13.9,
+            "sutta10": 29.1,
+            "sutta30": 63.6,
+            "danger": 21.9,
+            "snapback": 8.6,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 103
+          },
+          "close": {
+            "N": 151,
+            "panel3": 0,
+            "panel10": 3.3,
+            "panel30": 13.9,
+            "sutta3": 18.5,
+            "sutta10": 38.4,
+            "sutta30": 69.5,
+            "danger": 21.9,
+            "snapback": 11.9,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 110.8
+          },
+          "jodi": {
+            "N": 151,
+            "panel3": 0,
+            "panel10": 4.6,
+            "panel30": 14.6,
+            "sutta3": 20.5,
+            "sutta10": 35.1,
+            "sutta30": 64.9,
+            "danger": 21.9,
+            "snapback": 11.9,
+            "avgTop30Suttas": 6.3,
+            "avgRank": 109.8
+          },
+          "jodiMovement": {
+            "better": 76,
+            "worse": 64,
+            "same": 11
+          }
+        }
+      }
+    ],
+    "Rajdhani Day": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Rajdhani Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/rajdhani-day-panel-chart.php",
+          "totalRecords": 907,
+          "sourceStart": "2023-06-12",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 25,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 8,
+            "panel30": 16,
+            "sutta3": 16,
+            "sutta10": 44,
+            "sutta30": 80,
+            "danger": 12,
+            "snapback": 8,
+            "avgTop30Suttas": 7.5,
+            "avgRank": 95.7
+          },
+          "close": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 8,
+            "panel30": 12,
+            "sutta3": 12,
+            "sutta10": 36,
+            "sutta30": 52,
+            "danger": 40,
+            "snapback": 12,
+            "avgTop30Suttas": 7.7,
+            "avgRank": 120.4
+          },
+          "jodi": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 8,
+            "panel30": 12,
+            "sutta3": 12,
+            "sutta10": 28,
+            "sutta30": 52,
+            "danger": 40,
+            "snapback": 12,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 120.1
+          },
+          "jodiMovement": {
+            "better": 11,
+            "worse": 10,
+            "same": 4
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Rajdhani Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/rajdhani-day-panel-chart.php",
+          "totalRecords": 907,
+          "sourceStart": "2023-06-12",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 76,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 76,
+            "panel3": 0,
+            "panel10": 3.9,
+            "panel30": 17.1,
+            "sutta3": 11.8,
+            "sutta10": 38.2,
+            "sutta30": 76.3,
+            "danger": 14.5,
+            "snapback": 5.3,
+            "avgTop30Suttas": 7.5,
+            "avgRank": 94.8
+          },
+          "close": {
+            "N": 76,
+            "panel3": 0,
+            "panel10": 9.2,
+            "panel30": 15.8,
+            "sutta3": 15.8,
+            "sutta10": 43.4,
+            "sutta30": 68.4,
+            "danger": 26.3,
+            "snapback": 10.5,
+            "avgTop30Suttas": 7.4,
+            "avgRank": 108.8
+          },
+          "jodi": {
+            "N": 76,
+            "panel3": 0,
+            "panel10": 7.9,
+            "panel30": 15.8,
+            "sutta3": 14.5,
+            "sutta10": 39.5,
+            "sutta30": 68.4,
+            "danger": 26.3,
+            "snapback": 10.5,
+            "avgTop30Suttas": 7,
+            "avgRank": 108.7
+          },
+          "jodiMovement": {
+            "better": 33,
+            "worse": 34,
+            "same": 9
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Rajdhani Day",
+          "session": "day",
+          "url": "https://dpbosss.net.in/rajdhani-day-panel-chart.php",
+          "totalRecords": 907,
+          "sourceStart": "2023-06-12",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 151,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 151,
+            "panel3": 1.3,
+            "panel10": 4.6,
+            "panel30": 17.2,
+            "sutta3": 12.6,
+            "sutta10": 34.4,
+            "sutta30": 72.8,
+            "danger": 19.2,
+            "snapback": 6.6,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 98.7
+          },
+          "close": {
+            "N": 151,
+            "panel3": 0,
+            "panel10": 6,
+            "panel30": 13.2,
+            "sutta3": 13.9,
+            "sutta10": 39.7,
+            "sutta30": 70.9,
+            "danger": 21.9,
+            "snapback": 7.9,
+            "avgTop30Suttas": 7.5,
+            "avgRank": 109.3
+          },
+          "jodi": {
+            "N": 151,
+            "panel3": 0,
+            "panel10": 5.3,
+            "panel30": 11.9,
+            "sutta3": 13.2,
+            "sutta10": 33.8,
+            "sutta30": 70.9,
+            "danger": 21.9,
+            "snapback": 7.9,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 110.5
+          },
+          "jodiMovement": {
+            "better": 58,
+            "worse": 77,
+            "same": 16
+          }
+        }
+      }
+    ],
+    "Kalyan": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Kalyan",
+          "session": "day",
+          "url": "https://dpbosss.net.in/kalyan-panel-chart.php",
+          "totalRecords": 1040,
+          "sourceStart": "2023-01-02",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 25,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 4,
+            "panel30": 16,
+            "sutta3": 4,
+            "sutta10": 16,
+            "sutta30": 64,
+            "danger": 28,
+            "snapback": 8,
+            "avgTop30Suttas": 6.6,
+            "avgRank": 108
+          },
+          "close": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 4,
+            "panel30": 8,
+            "sutta3": 8,
+            "sutta10": 20,
+            "sutta30": 52,
+            "danger": 16,
+            "snapback": 12,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 120.3
+          },
+          "jodi": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 4,
+            "panel30": 8,
+            "sutta3": 12,
+            "sutta10": 20,
+            "sutta30": 56,
+            "danger": 16,
+            "snapback": 12,
+            "avgTop30Suttas": 6.7,
+            "avgRank": 121
+          },
+          "jodiMovement": {
+            "better": 8,
+            "worse": 13,
+            "same": 4
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Kalyan",
+          "session": "day",
+          "url": "https://dpbosss.net.in/kalyan-panel-chart.php",
+          "totalRecords": 1040,
+          "sourceStart": "2023-01-02",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 76,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 76,
+            "panel3": 1.3,
+            "panel10": 5.3,
+            "panel30": 15.8,
+            "sutta3": 11.8,
+            "sutta10": 28.9,
+            "sutta30": 67.1,
+            "danger": 23.7,
+            "snapback": 10.5,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 109.7
+          },
+          "close": {
+            "N": 76,
+            "panel3": 0,
+            "panel10": 2.6,
+            "panel30": 18.4,
+            "sutta3": 18.4,
+            "sutta10": 30.3,
+            "sutta30": 71.1,
+            "danger": 15.8,
+            "snapback": 11.8,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 100.1
+          },
+          "jodi": {
+            "N": 76,
+            "panel3": 1.3,
+            "panel10": 2.6,
+            "panel30": 19.7,
+            "sutta3": 19.7,
+            "sutta10": 36.8,
+            "sutta30": 68.4,
+            "danger": 15.8,
+            "snapback": 11.8,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 98.7
+          },
+          "jodiMovement": {
+            "better": 31,
+            "worse": 36,
+            "same": 9
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Kalyan",
+          "session": "day",
+          "url": "https://dpbosss.net.in/kalyan-panel-chart.php",
+          "totalRecords": 1040,
+          "sourceStart": "2023-01-02",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 151,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 151,
+            "panel3": 2,
+            "panel10": 6,
+            "panel30": 12.6,
+            "sutta3": 15.2,
+            "sutta10": 30.5,
+            "sutta30": 66.2,
+            "danger": 22.5,
+            "snapback": 9.3,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 111.9
+          },
+          "close": {
+            "N": 151,
+            "panel3": 1.3,
+            "panel10": 4,
+            "panel30": 14.6,
+            "sutta3": 17.2,
+            "sutta10": 35.8,
+            "sutta30": 68.9,
+            "danger": 19.9,
+            "snapback": 9.9,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 103.5
+          },
+          "jodi": {
+            "N": 151,
+            "panel3": 2.6,
+            "panel10": 4,
+            "panel30": 14.6,
+            "sutta3": 18.5,
+            "sutta10": 36.4,
+            "sutta30": 65.6,
+            "danger": 19.9,
+            "snapback": 9.9,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 103.6
+          },
+          "jodiMovement": {
+            "better": 69,
+            "worse": 70,
+            "same": 12
+          }
+        }
+      }
+    ],
+    "Sridevi Night": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Sridevi Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/sridevi-night-panel-chart.php",
+          "totalRecords": 2269,
+          "sourceStart": "2020-01-06",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 29,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 29,
+            "panel3": 0,
+            "panel10": 3.4,
+            "panel30": 3.4,
+            "sutta3": 17.2,
+            "sutta10": 37.9,
+            "sutta30": 79.3,
+            "danger": 17.2,
+            "snapback": 6.9,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 99.2
+          },
+          "close": {
+            "N": 29,
+            "panel3": 0,
+            "panel10": 3.4,
+            "panel30": 17.2,
+            "sutta3": 10.3,
+            "sutta10": 31,
+            "sutta30": 72.4,
+            "danger": 13.8,
+            "snapback": 6.9,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 113.5
+          },
+          "jodi": {
+            "N": 29,
+            "panel3": 0,
+            "panel10": 6.9,
+            "panel30": 13.8,
+            "sutta3": 24.1,
+            "sutta10": 41.4,
+            "sutta30": 62.1,
+            "danger": 13.8,
+            "snapback": 6.9,
+            "avgTop30Suttas": 5.9,
+            "avgRank": 105.9
+          },
+          "jodiMovement": {
+            "better": 17,
+            "worse": 9,
+            "same": 3
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Sridevi Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/sridevi-night-panel-chart.php",
+          "totalRecords": 2269,
+          "sourceStart": "2020-01-06",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 89,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 89,
+            "panel3": 0,
+            "panel10": 4.5,
+            "panel30": 12.4,
+            "sutta3": 16.9,
+            "sutta10": 44.9,
+            "sutta30": 76.4,
+            "danger": 18,
+            "snapback": 12.4,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 100.2
+          },
+          "close": {
+            "N": 89,
+            "panel3": 0,
+            "panel10": 2.2,
+            "panel30": 13.5,
+            "sutta3": 12.4,
+            "sutta10": 27,
+            "sutta30": 69.7,
+            "danger": 13.5,
+            "snapback": 7.9,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 109.7
+          },
+          "jodi": {
+            "N": 89,
+            "panel3": 0,
+            "panel10": 4.5,
+            "panel30": 13.5,
+            "sutta3": 16.9,
+            "sutta10": 29.2,
+            "sutta30": 57.3,
+            "danger": 13.5,
+            "snapback": 7.9,
+            "avgTop30Suttas": 5.9,
+            "avgRank": 108
+          },
+          "jodiMovement": {
+            "better": 42,
+            "worse": 39,
+            "same": 8
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Sridevi Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/sridevi-night-panel-chart.php",
+          "totalRecords": 2269,
+          "sourceStart": "2020-01-06",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 177,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 177,
+            "panel3": 2.3,
+            "panel10": 7.9,
+            "panel30": 17.5,
+            "sutta3": 17.5,
+            "sutta10": 41.8,
+            "sutta30": 72.9,
+            "danger": 17.5,
+            "snapback": 13,
+            "avgTop30Suttas": 7,
+            "avgRank": 97.1
+          },
+          "close": {
+            "N": 177,
+            "panel3": 0,
+            "panel10": 4,
+            "panel30": 15.8,
+            "sutta3": 16.9,
+            "sutta10": 35,
+            "sutta30": 72.9,
+            "danger": 17.5,
+            "snapback": 9.6,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 103.3
+          },
+          "jodi": {
+            "N": 177,
+            "panel3": 0,
+            "panel10": 5.6,
+            "panel30": 15.8,
+            "sutta3": 19.2,
+            "sutta10": 34.5,
+            "sutta30": 61,
+            "danger": 17.5,
+            "snapback": 9.6,
+            "avgTop30Suttas": 6.3,
+            "avgRank": 102.5
+          },
+          "jodiMovement": {
+            "better": 83,
+            "worse": 76,
+            "same": 18
+          }
+        }
+      }
+    ],
+    "Madhur Night": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Madhur Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/madhuri-night-panel-chart.php",
+          "totalRecords": 2710,
+          "sourceStart": "2018-01-01",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 25,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 4,
+            "panel30": 12,
+            "sutta3": 28,
+            "sutta10": 48,
+            "sutta30": 88,
+            "danger": 8,
+            "snapback": 20,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 85.4
+          },
+          "close": {
+            "N": 25,
+            "panel3": 4,
+            "panel10": 8,
+            "panel30": 16,
+            "sutta3": 24,
+            "sutta10": 52,
+            "sutta30": 88,
+            "danger": 12,
+            "snapback": 16,
+            "avgTop30Suttas": 7.4,
+            "avgRank": 99.2
+          },
+          "jodi": {
+            "N": 25,
+            "panel3": 4,
+            "panel10": 4,
+            "panel30": 20,
+            "sutta3": 24,
+            "sutta10": 36,
+            "sutta30": 72,
+            "danger": 12,
+            "snapback": 16,
+            "avgTop30Suttas": 6.4,
+            "avgRank": 99.1
+          },
+          "jodiMovement": {
+            "better": 10,
+            "worse": 15,
+            "same": 0
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Madhur Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/madhuri-night-panel-chart.php",
+          "totalRecords": 2710,
+          "sourceStart": "2018-01-01",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 76,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 76,
+            "panel3": 0,
+            "panel10": 3.9,
+            "panel30": 11.8,
+            "sutta3": 23.7,
+            "sutta10": 39.5,
+            "sutta30": 76.3,
+            "danger": 19.7,
+            "snapback": 17.1,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 91.1
+          },
+          "close": {
+            "N": 76,
+            "panel3": 2.6,
+            "panel10": 5.3,
+            "panel30": 19.7,
+            "sutta3": 23.7,
+            "sutta10": 44.7,
+            "sutta30": 86.8,
+            "danger": 11.8,
+            "snapback": 11.8,
+            "avgTop30Suttas": 7.6,
+            "avgRank": 92.2
+          },
+          "jodi": {
+            "N": 76,
+            "panel3": 2.6,
+            "panel10": 3.9,
+            "panel30": 22.4,
+            "sutta3": 23.7,
+            "sutta10": 39.5,
+            "sutta30": 73.7,
+            "danger": 11.8,
+            "snapback": 11.8,
+            "avgTop30Suttas": 6.5,
+            "avgRank": 90.8
+          },
+          "jodiMovement": {
+            "better": 37,
+            "worse": 37,
+            "same": 2
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Madhur Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/madhuri-night-panel-chart.php",
+          "totalRecords": 2710,
+          "sourceStart": "2018-01-01",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 152,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 152,
+            "panel3": 0.7,
+            "panel10": 3.9,
+            "panel30": 9.9,
+            "sutta3": 21.7,
+            "sutta10": 38.8,
+            "sutta30": 73.7,
+            "danger": 19.1,
+            "snapback": 12.5,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 101.7
+          },
+          "close": {
+            "N": 152,
+            "panel3": 2.6,
+            "panel10": 4.6,
+            "panel30": 15.1,
+            "sutta3": 20.4,
+            "sutta10": 38.2,
+            "sutta30": 80.9,
+            "danger": 13.8,
+            "snapback": 11.2,
+            "avgTop30Suttas": 7.4,
+            "avgRank": 99.7
+          },
+          "jodi": {
+            "N": 152,
+            "panel3": 3.3,
+            "panel10": 4.6,
+            "panel30": 17.1,
+            "sutta3": 19.1,
+            "sutta10": 39.5,
+            "sutta30": 71.7,
+            "danger": 13.8,
+            "snapback": 11.2,
+            "avgTop30Suttas": 6.5,
+            "avgRank": 96
+          },
+          "jodiMovement": {
+            "better": 82,
+            "worse": 65,
+            "same": 5
+          }
+        }
+      }
+    ],
+    "Milan Night": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Milan Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/milan-night-panel.php",
+          "totalRecords": 2195,
+          "sourceStart": "2018-12-24",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 25,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 25,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 4,
+            "sutta3": 20,
+            "sutta10": 48,
+            "sutta30": 68,
+            "danger": 36,
+            "snapback": 12,
+            "avgTop30Suttas": 7.5,
+            "avgRank": 130.9
+          },
+          "close": {
+            "N": 25,
+            "panel3": 8,
+            "panel10": 12,
+            "panel30": 24,
+            "sutta3": 20,
+            "sutta10": 40,
+            "sutta30": 64,
+            "danger": 24,
+            "snapback": 16,
+            "avgTop30Suttas": 7,
+            "avgRank": 98
+          },
+          "jodi": {
+            "N": 25,
+            "panel3": 8,
+            "panel10": 16,
+            "panel30": 24,
+            "sutta3": 28,
+            "sutta10": 40,
+            "sutta30": 64,
+            "danger": 24,
+            "snapback": 16,
+            "avgTop30Suttas": 6.4,
+            "avgRank": 93.5
+          },
+          "jodiMovement": {
+            "better": 14,
+            "worse": 8,
+            "same": 3
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Milan Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/milan-night-panel.php",
+          "totalRecords": 2195,
+          "sourceStart": "2018-12-24",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 76,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 76,
+            "panel3": 0,
+            "panel10": 1.3,
+            "panel30": 5.3,
+            "sutta3": 13.2,
+            "sutta10": 38.2,
+            "sutta30": 76.3,
+            "danger": 19.7,
+            "snapback": 13.2,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 118.8
+          },
+          "close": {
+            "N": 76,
+            "panel3": 2.6,
+            "panel10": 9.2,
+            "panel30": 21.1,
+            "sutta3": 11.8,
+            "sutta10": 39.5,
+            "sutta30": 67.1,
+            "danger": 18.4,
+            "snapback": 10.5,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 102.5
+          },
+          "jodi": {
+            "N": 76,
+            "panel3": 5.3,
+            "panel10": 11.8,
+            "panel30": 21.1,
+            "sutta3": 19.7,
+            "sutta10": 30.3,
+            "sutta30": 61.8,
+            "danger": 18.4,
+            "snapback": 10.5,
+            "avgTop30Suttas": 6.3,
+            "avgRank": 100.9
+          },
+          "jodiMovement": {
+            "better": 36,
+            "worse": 32,
+            "same": 8
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Milan Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/milan-night-panel.php",
+          "totalRecords": 2195,
+          "sourceStart": "2018-12-24",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 150,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 150,
+            "panel3": 0.7,
+            "panel10": 2.7,
+            "panel30": 10.7,
+            "sutta3": 13.3,
+            "sutta10": 38.7,
+            "sutta30": 76,
+            "danger": 20.7,
+            "snapback": 10.7,
+            "avgTop30Suttas": 7.4,
+            "avgRank": 114.5
+          },
+          "close": {
+            "N": 150,
+            "panel3": 3.3,
+            "panel10": 8.7,
+            "panel30": 22.7,
+            "sutta3": 14,
+            "sutta10": 40,
+            "sutta30": 71.3,
+            "danger": 18,
+            "snapback": 10,
+            "avgTop30Suttas": 7,
+            "avgRank": 98.9
+          },
+          "jodi": {
+            "N": 150,
+            "panel3": 4,
+            "panel10": 12,
+            "panel30": 23.3,
+            "sutta3": 19.3,
+            "sutta10": 36.7,
+            "sutta30": 65.3,
+            "danger": 18,
+            "snapback": 10,
+            "avgTop30Suttas": 6.6,
+            "avgRank": 98.8
+          },
+          "jodiMovement": {
+            "better": 64,
+            "worse": 67,
+            "same": 19
+          }
+        }
+      }
+    ],
+    "Kalyan Night": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Kalyan Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/kalyan-night-penal.php",
+          "totalRecords": 756,
+          "sourceStart": "2023-06-12",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 21,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 21,
+            "panel3": 4.8,
+            "panel10": 9.5,
+            "panel30": 19,
+            "sutta3": 19,
+            "sutta10": 42.9,
+            "sutta30": 81,
+            "danger": 23.8,
+            "snapback": 14.3,
+            "avgTop30Suttas": 7,
+            "avgRank": 108.3
+          },
+          "close": {
+            "N": 21,
+            "panel3": 0,
+            "panel10": 4.8,
+            "panel30": 23.8,
+            "sutta3": 23.8,
+            "sutta10": 28.6,
+            "sutta30": 81,
+            "danger": 0,
+            "snapback": 19,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 92.1
+          },
+          "jodi": {
+            "N": 21,
+            "panel3": 0,
+            "panel10": 14.3,
+            "panel30": 23.8,
+            "sutta3": 23.8,
+            "sutta10": 38.1,
+            "sutta30": 85.7,
+            "danger": 0,
+            "snapback": 19,
+            "avgTop30Suttas": 7,
+            "avgRank": 90.2
+          },
+          "jodiMovement": {
+            "better": 12,
+            "worse": 9,
+            "same": 0
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Kalyan Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/kalyan-night-penal.php",
+          "totalRecords": 756,
+          "sourceStart": "2023-06-12",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 63,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 63,
+            "panel3": 3.2,
+            "panel10": 7.9,
+            "panel30": 14.3,
+            "sutta3": 19,
+            "sutta10": 38.1,
+            "sutta30": 71.4,
+            "danger": 20.6,
+            "snapback": 15.9,
+            "avgTop30Suttas": 6.7,
+            "avgRank": 110
+          },
+          "close": {
+            "N": 63,
+            "panel3": 0,
+            "panel10": 1.6,
+            "panel30": 12.7,
+            "sutta3": 17.5,
+            "sutta10": 31.7,
+            "sutta30": 74.6,
+            "danger": 11.1,
+            "snapback": 11.1,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 111.9
+          },
+          "jodi": {
+            "N": 63,
+            "panel3": 0,
+            "panel10": 4.8,
+            "panel30": 14.3,
+            "sutta3": 17.5,
+            "sutta10": 34.9,
+            "sutta30": 73,
+            "danger": 11.1,
+            "snapback": 11.1,
+            "avgTop30Suttas": 7,
+            "avgRank": 109.7
+          },
+          "jodiMovement": {
+            "better": 32,
+            "worse": 26,
+            "same": 5
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Kalyan Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/kalyan-night-penal.php",
+          "totalRecords": 756,
+          "sourceStart": "2023-06-12",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 125,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 125,
+            "panel3": 1.6,
+            "panel10": 5.6,
+            "panel30": 13.6,
+            "sutta3": 17.6,
+            "sutta10": 34.4,
+            "sutta30": 72.8,
+            "danger": 18.4,
+            "snapback": 12,
+            "avgTop30Suttas": 7,
+            "avgRank": 107.4
+          },
+          "close": {
+            "N": 125,
+            "panel3": 0.8,
+            "panel10": 1.6,
+            "panel30": 9.6,
+            "sutta3": 17.6,
+            "sutta10": 33.6,
+            "sutta30": 71.2,
+            "danger": 18.4,
+            "snapback": 10.4,
+            "avgTop30Suttas": 7.4,
+            "avgRank": 113.2
+          },
+          "jodi": {
+            "N": 125,
+            "panel3": 0.8,
+            "panel10": 3.2,
+            "panel30": 12,
+            "sutta3": 17.6,
+            "sutta10": 37.6,
+            "sutta30": 70.4,
+            "danger": 18.4,
+            "snapback": 10.4,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 112.8
+          },
+          "jodiMovement": {
+            "better": 60,
+            "worse": 56,
+            "same": 9
+          }
+        }
+      }
+    ],
+    "Rajdhani Night": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Rajdhani Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/rajdhani-night-panel.php",
+          "totalRecords": 1628,
+          "sourceStart": "2020-01-06",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 21,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 21,
+            "panel3": 0,
+            "panel10": 4.8,
+            "panel30": 23.8,
+            "sutta3": 19,
+            "sutta10": 57.1,
+            "sutta30": 76.2,
+            "danger": 23.8,
+            "snapback": 9.5,
+            "avgTop30Suttas": 6.9,
+            "avgRank": 87.6
+          },
+          "close": {
+            "N": 21,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 9.5,
+            "sutta3": 4.8,
+            "sutta10": 19,
+            "sutta30": 42.9,
+            "danger": 42.9,
+            "snapback": 4.8,
+            "avgTop30Suttas": 8.5,
+            "avgRank": 138.6
+          },
+          "jodi": {
+            "N": 21,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 9.5,
+            "sutta3": 4.8,
+            "sutta10": 9.5,
+            "sutta30": 38.1,
+            "danger": 42.9,
+            "snapback": 4.8,
+            "avgTop30Suttas": 7.6,
+            "avgRank": 142.3
+          },
+          "jodiMovement": {
+            "better": 11,
+            "worse": 9,
+            "same": 1
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Rajdhani Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/rajdhani-night-panel.php",
+          "totalRecords": 1628,
+          "sourceStart": "2020-01-06",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 63,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 63,
+            "panel3": 1.6,
+            "panel10": 3.2,
+            "panel30": 15.9,
+            "sutta3": 12.7,
+            "sutta10": 44.4,
+            "sutta30": 71.4,
+            "danger": 20.6,
+            "snapback": 11.1,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 96
+          },
+          "close": {
+            "N": 63,
+            "panel3": 3.2,
+            "panel10": 6.3,
+            "panel30": 15.9,
+            "sutta3": 15.9,
+            "sutta10": 34.9,
+            "sutta30": 65.1,
+            "danger": 23.8,
+            "snapback": 12.7,
+            "avgTop30Suttas": 7.8,
+            "avgRank": 104.8
+          },
+          "jodi": {
+            "N": 63,
+            "panel3": 3.2,
+            "panel10": 4.8,
+            "panel30": 19,
+            "sutta3": 15.9,
+            "sutta10": 25.4,
+            "sutta30": 66.7,
+            "danger": 23.8,
+            "snapback": 12.7,
+            "avgTop30Suttas": 7.4,
+            "avgRank": 106.3
+          },
+          "jodiMovement": {
+            "better": 29,
+            "worse": 30,
+            "same": 4
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Rajdhani Night",
+          "session": "night",
+          "url": "https://dpbosss.net.in/rajdhani-night-panel.php",
+          "totalRecords": 1628,
+          "sourceStart": "2020-01-06",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 125,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 125,
+            "panel3": 2.4,
+            "panel10": 4.8,
+            "panel30": 17.6,
+            "sutta3": 12.8,
+            "sutta10": 41.6,
+            "sutta30": 73.6,
+            "danger": 18.4,
+            "snapback": 8.8,
+            "avgTop30Suttas": 7.3,
+            "avgRank": 98.5
+          },
+          "close": {
+            "N": 125,
+            "panel3": 2.4,
+            "panel10": 6.4,
+            "panel30": 15.2,
+            "sutta3": 13.6,
+            "sutta10": 36.8,
+            "sutta30": 69.6,
+            "danger": 22.4,
+            "snapback": 12,
+            "avgTop30Suttas": 7.6,
+            "avgRank": 109.6
+          },
+          "jodi": {
+            "N": 125,
+            "panel3": 3.2,
+            "panel10": 5.6,
+            "panel30": 17.6,
+            "sutta3": 13.6,
+            "sutta10": 29.6,
+            "sutta30": 69.6,
+            "danger": 22.4,
+            "snapback": 12,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 110.8
+          },
+          "jodiMovement": {
+            "better": 59,
+            "worse": 56,
+            "same": 10
+          }
+        }
+      }
+    ],
+    "Main Bazar": [
+      {
+        "windowDays": 30,
+        "summary": {
+          "market": "Main Bazar",
+          "session": "night",
+          "url": "https://dpbosss.net.in/main-bazar-panel-chart.php",
+          "totalRecords": 2530,
+          "sourceStart": "2015-12-28",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-05-26",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 21,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 21,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 9.5,
+            "sutta3": 14.3,
+            "sutta10": 28.6,
+            "sutta30": 81,
+            "danger": 14.3,
+            "snapback": 14.3,
+            "avgTop30Suttas": 7.9,
+            "avgRank": 108.2
+          },
+          "close": {
+            "N": 21,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 4.8,
+            "sutta3": 14.3,
+            "sutta10": 28.6,
+            "sutta30": 71.4,
+            "danger": 14.3,
+            "snapback": 4.8,
+            "avgTop30Suttas": 7.8,
+            "avgRank": 103
+          },
+          "jodi": {
+            "N": 21,
+            "panel3": 0,
+            "panel10": 0,
+            "panel30": 9.5,
+            "sutta3": 14.3,
+            "sutta10": 33.3,
+            "sutta30": 61.9,
+            "danger": 14.3,
+            "snapback": 4.8,
+            "avgTop30Suttas": 7,
+            "avgRank": 106.6
+          },
+          "jodiMovement": {
+            "better": 9,
+            "worse": 11,
+            "same": 1
+          }
+        }
+      },
+      {
+        "windowDays": 90,
+        "summary": {
+          "market": "Main Bazar",
+          "session": "night",
+          "url": "https://dpbosss.net.in/main-bazar-panel-chart.php",
+          "totalRecords": 2530,
+          "sourceStart": "2015-12-28",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2026-03-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 62,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 62,
+            "panel3": 1.6,
+            "panel10": 4.8,
+            "panel30": 14.5,
+            "sutta3": 12.9,
+            "sutta10": 32.3,
+            "sutta30": 67.7,
+            "danger": 22.6,
+            "snapback": 11.3,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 111
+          },
+          "close": {
+            "N": 62,
+            "panel3": 6.5,
+            "panel10": 9.7,
+            "panel30": 12.9,
+            "sutta3": 21,
+            "sutta10": 33.9,
+            "sutta30": 67.7,
+            "danger": 17.7,
+            "snapback": 11.3,
+            "avgTop30Suttas": 7.1,
+            "avgRank": 95.1
+          },
+          "jodi": {
+            "N": 62,
+            "panel3": 3.2,
+            "panel10": 9.7,
+            "panel30": 16.1,
+            "sutta3": 16.1,
+            "sutta10": 35.5,
+            "sutta30": 56.5,
+            "danger": 17.7,
+            "snapback": 11.3,
+            "avgTop30Suttas": 6.6,
+            "avgRank": 101.4
+          },
+          "jodiMovement": {
+            "better": 17,
+            "worse": 38,
+            "same": 7
+          }
+        }
+      },
+      {
+        "windowDays": 180,
+        "summary": {
+          "market": "Main Bazar",
+          "session": "night",
+          "url": "https://dpbosss.net.in/main-bazar-panel-chart.php",
+          "totalRecords": 2530,
+          "sourceStart": "2015-12-28",
+          "sourceEnd": "2026-06-23",
+          "windowStart": "2025-12-27",
+          "windowEnd": "2026-06-24",
+          "drawsTested": 124,
+          "randomPanelTop30Baseline": 0.13636363636363635,
+          "open": {
+            "N": 124,
+            "panel3": 0.8,
+            "panel10": 3.2,
+            "panel30": 15.3,
+            "sutta3": 16.9,
+            "sutta10": 37.9,
+            "sutta30": 69.4,
+            "danger": 21.8,
+            "snapback": 12.9,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 103.1
+          },
+          "close": {
+            "N": 124,
+            "panel3": 3.2,
+            "panel10": 6.5,
+            "panel30": 14.5,
+            "sutta3": 17.7,
+            "sutta10": 37.1,
+            "sutta30": 69.4,
+            "danger": 17.7,
+            "snapback": 10.5,
+            "avgTop30Suttas": 7.2,
+            "avgRank": 95.7
+          },
+          "jodi": {
+            "N": 124,
+            "panel3": 1.6,
+            "panel10": 6.5,
+            "panel30": 17.7,
+            "sutta3": 15.3,
+            "sutta10": 35.5,
+            "sutta30": 62.9,
+            "danger": 17.7,
+            "snapback": 10.5,
+            "avgTop30Suttas": 6.8,
+            "avgRank": 98.2
+          },
+          "jodiMovement": {
+            "better": 50,
+            "worse": 60,
+            "same": 14
+          }
+        }
+      }
+    ]
+  }
+}

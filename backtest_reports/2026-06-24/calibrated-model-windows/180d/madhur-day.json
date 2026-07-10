@@ -1,0 +1,48 @@
+{
+  "market": "Madhur Day",
+  "startDate": "2025-12-24",
+  "endDate": "2026-06-22",
+  "drawsTested": 178,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 178,
+    "panelTop3": 1,
+    "panelTop10": 7,
+    "panelTop30": 32,
+    "suttaTop3": 32,
+    "suttaTop10": 76,
+    "suttaTop30": 133,
+    "actualDanger": 29,
+    "actualSnapback": 19,
+    "averageActualRank": 17.6875
+  },
+  "close": {
+    "n": 178,
+    "panelTop3": 4,
+    "panelTop10": 12,
+    "panelTop30": 27,
+    "suttaTop3": 29,
+    "suttaTop10": 64,
+    "suttaTop30": 130,
+    "actualDanger": 37,
+    "actualSnapback": 22,
+    "averageActualRank": 14.148148148148149
+  },
+  "jodi": {
+    "n": 178,
+    "panelTop3": 5,
+    "panelTop10": 12,
+    "panelTop30": 26,
+    "suttaTop3": 35,
+    "suttaTop10": 60,
+    "suttaTop30": 109,
+    "actualDanger": 37,
+    "actualSnapback": 22,
+    "averageActualRank": 11.5
+  },
+  "jodiMovement": {
+    "better": 7,
+    "worse": 3,
+    "same": 10
+  }
+}

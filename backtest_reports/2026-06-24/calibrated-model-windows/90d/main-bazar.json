@@ -1,0 +1,48 @@
+{
+  "market": "Main Bazar",
+  "startDate": "2026-03-24",
+  "endDate": "2026-06-22",
+  "drawsTested": 64,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 64,
+    "panelTop3": 1,
+    "panelTop10": 3,
+    "panelTop30": 10,
+    "suttaTop3": 9,
+    "suttaTop10": 22,
+    "suttaTop30": 44,
+    "actualDanger": 14,
+    "actualSnapback": 8,
+    "averageActualRank": 14.3
+  },
+  "close": {
+    "n": 64,
+    "panelTop3": 4,
+    "panelTop10": 6,
+    "panelTop30": 9,
+    "suttaTop3": 13,
+    "suttaTop10": 21,
+    "suttaTop30": 44,
+    "actualDanger": 11,
+    "actualSnapback": 7,
+    "averageActualRank": 9.11111111111111
+  },
+  "jodi": {
+    "n": 64,
+    "panelTop3": 2,
+    "panelTop10": 6,
+    "panelTop30": 11,
+    "suttaTop3": 11,
+    "suttaTop10": 22,
+    "suttaTop30": 39,
+    "actualDanger": 11,
+    "actualSnapback": 7,
+    "averageActualRank": 12.090909090909092
+  },
+  "jodiMovement": {
+    "better": 2,
+    "worse": 3,
+    "same": 3
+  }
+}

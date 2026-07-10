@@ -1,0 +1,48 @@
+{
+  "market": "Time Bazar",
+  "startDate": "2026-05-23",
+  "endDate": "2026-06-22",
+  "drawsTested": 26,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 26,
+    "panelTop3": 0,
+    "panelTop10": 1,
+    "panelTop30": 5,
+    "suttaTop3": 6,
+    "suttaTop10": 11,
+    "suttaTop30": 20,
+    "actualDanger": 3,
+    "actualSnapback": 4,
+    "averageActualRank": 18.6
+  },
+  "close": {
+    "n": 26,
+    "panelTop3": 0,
+    "panelTop10": 2,
+    "panelTop30": 4,
+    "suttaTop3": 4,
+    "suttaTop10": 8,
+    "suttaTop30": 17,
+    "actualDanger": 5,
+    "actualSnapback": 2,
+    "averageActualRank": 11.75
+  },
+  "jodi": {
+    "n": 26,
+    "panelTop3": 0,
+    "panelTop10": 1,
+    "panelTop30": 4,
+    "suttaTop3": 4,
+    "suttaTop10": 12,
+    "suttaTop30": 17,
+    "actualDanger": 5,
+    "actualSnapback": 2,
+    "averageActualRank": 12.5
+  },
+  "jodiMovement": {
+    "better": 1,
+    "worse": 2,
+    "same": 1
+  }
+}

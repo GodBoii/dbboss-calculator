@@ -1,0 +1,362 @@
+{
+  "generatedAt": "2026-06-24T06:37:03.274Z",
+  "reports": [
+    {
+      "days": 30,
+      "global": {
+        "open": {
+          "N": 313,
+          "panel3": 0.6,
+          "panel10": 3.8,
+          "panel30": 14.1,
+          "sutta3": 17.9,
+          "sutta10": 43.8,
+          "sutta30": 76.4,
+          "danger": 19.2,
+          "snapback": 11.8,
+          "avgRank": null
+        },
+        "close": {
+          "N": 312,
+          "panel3": 1.6,
+          "panel10": 4.8,
+          "panel30": 14.4,
+          "sutta3": 15.4,
+          "sutta10": 35.3,
+          "sutta30": 68.9,
+          "danger": 20.2,
+          "snapback": 11.9,
+          "avgRank": null
+        },
+        "jodi": {
+          "N": 312,
+          "panel3": 1.3,
+          "panel10": 5.4,
+          "panel30": 17.3,
+          "sutta3": 16.7,
+          "sutta10": 37.8,
+          "sutta30": 67.3,
+          "danger": 20.2,
+          "snapback": 11.9,
+          "avgRank": null
+        }
+      },
+      "session": {
+        "day": {
+          "open": {
+            "N": 165,
+            "panel3": 0.6,
+            "panel10": 4.8,
+            "panel30": 16.4,
+            "sutta3": 18.2,
+            "sutta10": 42.4,
+            "sutta30": 74.5,
+            "danger": 18.8,
+            "snapback": 11.5,
+            "avgRank": null
+          },
+          "close": {
+            "N": 164,
+            "panel3": 0.6,
+            "panel10": 4.3,
+            "panel30": 13.4,
+            "sutta3": 15.2,
+            "sutta10": 36.6,
+            "sutta30": 68.3,
+            "danger": 22.6,
+            "snapback": 12.2,
+            "avgRank": null
+          },
+          "jodi": {
+            "N": 164,
+            "panel3": 0.6,
+            "panel10": 4.9,
+            "panel30": 15.9,
+            "sutta3": 15.2,
+            "sutta10": 41.5,
+            "sutta30": 67.7,
+            "danger": 22.6,
+            "snapback": 12.2,
+            "avgRank": null
+          }
+        },
+        "night": {
+          "open": {
+            "N": 148,
+            "panel3": 0.7,
+            "panel10": 2.7,
+            "panel30": 11.5,
+            "sutta3": 17.6,
+            "sutta10": 45.3,
+            "sutta30": 78.4,
+            "danger": 19.6,
+            "snapback": 12.2,
+            "avgRank": null
+          },
+          "close": {
+            "N": 148,
+            "panel3": 2.7,
+            "panel10": 5.4,
+            "panel30": 15.5,
+            "sutta3": 15.5,
+            "sutta10": 33.8,
+            "sutta30": 69.6,
+            "danger": 17.6,
+            "snapback": 11.5,
+            "avgRank": null
+          },
+          "jodi": {
+            "N": 148,
+            "panel3": 2,
+            "panel10": 6.1,
+            "panel30": 18.9,
+            "sutta3": 18.2,
+            "sutta10": 33.8,
+            "sutta30": 66.9,
+            "danger": 17.6,
+            "snapback": 11.5,
+            "avgRank": null
+          }
+        }
+      }
+    },
+    {
+      "days": 90,
+      "global": {
+        "open": {
+          "N": 932,
+          "panel3": 1,
+          "panel10": 4.4,
+          "panel30": 15.5,
+          "sutta3": 18.1,
+          "sutta10": 41.8,
+          "sutta30": 74.9,
+          "danger": 18.5,
+          "snapback": 11.6,
+          "avgRank": null
+        },
+        "close": {
+          "N": 931,
+          "panel3": 1.6,
+          "panel10": 5.6,
+          "panel30": 16,
+          "sutta3": 16.8,
+          "sutta10": 35.6,
+          "sutta30": 71,
+          "danger": 20,
+          "snapback": 10.2,
+          "avgRank": null
+        },
+        "jodi": {
+          "N": 931,
+          "panel3": 1.8,
+          "panel10": 5.7,
+          "panel30": 18,
+          "sutta3": 18.4,
+          "sutta10": 36.2,
+          "sutta30": 67.8,
+          "danger": 20,
+          "snapback": 10.2,
+          "avgRank": null
+        }
+      },
+      "session": {
+        "day": {
+          "open": {
+            "N": 492,
+            "panel3": 0.8,
+            "panel10": 4.7,
+            "panel30": 18.1,
+            "sutta3": 19.3,
+            "sutta10": 42.7,
+            "sutta30": 76,
+            "danger": 17.7,
+            "snapback": 10,
+            "avgRank": null
+          },
+          "close": {
+            "N": 491,
+            "panel3": 1,
+            "panel10": 5.3,
+            "panel30": 15.5,
+            "sutta3": 16.7,
+            "sutta10": 36.7,
+            "sutta30": 70.3,
+            "danger": 22.8,
+            "snapback": 10,
+            "avgRank": null
+          },
+          "jodi": {
+            "N": 491,
+            "panel3": 1.6,
+            "panel10": 4.9,
+            "panel30": 17.1,
+            "sutta3": 18.7,
+            "sutta10": 39.1,
+            "sutta30": 68.4,
+            "danger": 22.8,
+            "snapback": 10,
+            "avgRank": null
+          }
+        },
+        "night": {
+          "open": {
+            "N": 440,
+            "panel3": 1.1,
+            "panel10": 4.1,
+            "panel30": 12.5,
+            "sutta3": 16.8,
+            "sutta10": 40.9,
+            "sutta30": 73.6,
+            "danger": 19.3,
+            "snapback": 13.4,
+            "avgRank": null
+          },
+          "close": {
+            "N": 440,
+            "panel3": 2.3,
+            "panel10": 5.9,
+            "panel30": 16.6,
+            "sutta3": 16.8,
+            "sutta10": 34.3,
+            "sutta30": 71.8,
+            "danger": 16.8,
+            "snapback": 10.5,
+            "avgRank": null
+          },
+          "jodi": {
+            "N": 440,
+            "panel3": 2,
+            "panel10": 6.6,
+            "panel30": 19.1,
+            "sutta3": 18,
+            "sutta10": 33,
+            "sutta30": 67,
+            "danger": 16.8,
+            "snapback": 10.5,
+            "avgRank": null
+          }
+        }
+      }
+    },
+    {
+      "days": 180,
+      "global": {
+        "open": {
+          "N": 1832,
+          "panel3": 1.3,
+          "panel10": 4.6,
+          "panel30": 14.8,
+          "sutta3": 16.3,
+          "sutta10": 38.4,
+          "sutta30": 71.7,
+          "danger": 19.7,
+          "snapback": 10.2,
+          "avgRank": null
+        },
+        "close": {
+          "N": 1831,
+          "panel3": 1.6,
+          "panel10": 5.2,
+          "panel30": 14.9,
+          "sutta3": 16.4,
+          "sutta10": 36,
+          "sutta30": 71.1,
+          "danger": 20.2,
+          "snapback": 10.1,
+          "avgRank": null
+        },
+        "jodi": {
+          "N": 1831,
+          "panel3": 1.7,
+          "panel10": 5.6,
+          "panel30": 15.9,
+          "sutta3": 17.3,
+          "sutta10": 36.5,
+          "sutta30": 67.6,
+          "danger": 20.2,
+          "snapback": 10.1,
+          "avgRank": null
+        }
+      },
+      "session": {
+        "day": {
+          "open": {
+            "N": 968,
+            "panel3": 1.2,
+            "panel10": 4.6,
+            "panel30": 16,
+            "sutta3": 15.9,
+            "sutta10": 37.4,
+            "sutta30": 70.4,
+            "danger": 19.6,
+            "snapback": 9.2,
+            "avgRank": null
+          },
+          "close": {
+            "N": 967,
+            "panel3": 1.4,
+            "panel10": 5.3,
+            "panel30": 14.4,
+            "sutta3": 16.2,
+            "sutta10": 35.6,
+            "sutta30": 70.3,
+            "danger": 21.4,
+            "snapback": 9.8,
+            "avgRank": null
+          },
+          "jodi": {
+            "N": 967,
+            "panel3": 1.4,
+            "panel10": 5.3,
+            "panel30": 14.9,
+            "sutta3": 17.4,
+            "sutta10": 36.8,
+            "sutta30": 66.8,
+            "danger": 21.4,
+            "snapback": 9.8,
+            "avgRank": null
+          }
+        },
+        "night": {
+          "open": {
+            "N": 864,
+            "panel3": 1.3,
+            "panel10": 4.5,
+            "panel30": 13.5,
+            "sutta3": 16.7,
+            "sutta10": 39.5,
+            "sutta30": 73.3,
+            "danger": 19.7,
+            "snapback": 11.3,
+            "avgRank": null
+          },
+          "close": {
+            "N": 864,
+            "panel3": 1.9,
+            "panel10": 5.1,
+            "panel30": 15.5,
+            "sutta3": 16.6,
+            "sutta10": 36.6,
+            "sutta30": 71.9,
+            "danger": 18.9,
+            "snapback": 10.4,
+            "avgRank": null
+          },
+          "jodi": {
+            "N": 864,
+            "panel3": 2,
+            "panel10": 5.9,
+            "panel30": 17.1,
+            "sutta3": 17.1,
+            "sutta10": 36.1,
+            "sutta30": 68.4,
+            "danger": 18.9,
+            "snapback": 10.4,
+            "avgRank": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "market": "Kalyan",
+  "startDate": "2026-03-24",
+  "endDate": "2026-06-22",
+  "drawsTested": 78,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 78,
+    "panelTop3": 1,
+    "panelTop10": 6,
+    "panelTop30": 13,
+    "suttaTop3": 10,
+    "suttaTop10": 28,
+    "suttaTop30": 54,
+    "actualDanger": 18,
+    "actualSnapback": 8,
+    "averageActualRank": 14.538461538461538
+  },
+  "close": {
+    "n": 78,
+    "panelTop3": 0,
+    "panelTop10": 3,
+    "panelTop30": 17,
+    "suttaTop3": 14,
+    "suttaTop10": 24,
+    "suttaTop30": 55,
+    "actualDanger": 13,
+    "actualSnapback": 9,
+    "averageActualRank": 17.352941176470587
+  },
+  "jodi": {
+    "n": 78,
+    "panelTop3": 1,
+    "panelTop10": 3,
+    "panelTop30": 18,
+    "suttaTop3": 15,
+    "suttaTop10": 28,
+    "suttaTop30": 54,
+    "actualDanger": 13,
+    "actualSnapback": 9,
+    "averageActualRank": 17.055555555555557
+  },
+  "jodiMovement": {
+    "better": 7,
+    "worse": 2,
+    "same": 8
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "market": "Sridevi",
+  "startDate": "2026-03-25",
+  "endDate": "2026-06-23",
+  "drawsTested": 90,
+  "randomTop30Baseline": 0.13636363636363635,
+  "open": {
+    "n": 90,
+    "panelTop3": 0,
+    "panelTop10": 2,
+    "panelTop30": 9,
+    "suttaTop3": 17,
+    "suttaTop10": 37,
+    "suttaTop30": 68,
+    "actualDanger": 17,
+    "actualSnapback": 8,
+    "averageActualRank": 19.444444444444443
+  },
+  "close": {
+    "n": 89,
+    "panelTop3": 2,
+    "panelTop10": 3,
+    "panelTop30": 12,
+    "suttaTop3": 17,
+    "suttaTop10": 29,
+    "suttaTop30": 66,
+    "actualDanger": 17,
+    "actualSnapback": 11,
+    "averageActualRank": 18.083333333333332
+  },
+  "jodi": {
+    "n": 89,
+    "panelTop3": 3,
+    "panelTop10": 4,
+    "panelTop30": 14,
+    "suttaTop3": 18,
+    "suttaTop10": 32,
+    "suttaTop30": 65,
+    "actualDanger": 17,
+    "actualSnapback": 11,
+    "averageActualRank": 17.214285714285715
+  },
+  "jodiMovement": {
+    "better": 6,
+    "worse": 4,
+    "same": 1
+  }
+}
