@@ -63,7 +63,7 @@ const getBaseKindForMode = (mode: CalcMode): PanelKind => {
 
 const isMultiPanelMode = (mode: CalcMode) => mode === "MPSP" || mode === "MPDP";
 
-export default function DBBossApp() {
+export default function LakshmiBossApp() {
   const [activeTab, setActiveTab] = useState<Tab>("calculator");
   const [profileOpen, setProfileOpen] = useState(false);
 
@@ -76,8 +76,8 @@ export default function DBBossApp() {
       {/* ── Fixed Top Header ──────────────────────────────────────── */}
       <header className="app-header">
         <div className="app-brand">
-          <img src="/dbboss.png" alt="DBboss Logo" className="app-brand-mark" style={{ padding: 0, objectFit: "cover", background: "none", border: "none" }} />
-          <span className="app-brand-name">DBboss</span>
+          <img src="/lakshmi-boss.png" alt="Lakshmi Boss logo" className="app-brand-mark" style={{ padding: 0, objectFit: "cover", background: "none", border: "none" }} />
+          <span className="app-brand-name">Lakshmi Boss</span>
         </div>
 
         <button

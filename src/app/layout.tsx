@@ -5,13 +5,13 @@ import PwaRegister from "@/components/PwaRegister";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DBboss Calculator",
+  title: "Lakshmi Boss Calculator",
   description: "Game-Theory based Satta Matka prediction engine",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "DBboss",
+    title: "Lakshmi Boss",
   },
 };
 
@@ -32,8 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/dbboss.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/dbboss.png" />
+        <link rel="icon" href="/lakshmi-boss.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/lakshmi-boss.png" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -46,17 +46,17 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function () {
-                if (window.__dbbossPwaInstallCaptureReady) return;
-                window.__dbbossPwaInstallCaptureReady = true;
+                if (window.__lakshmiBossPwaInstallCaptureReady) return;
+                window.__lakshmiBossPwaInstallCaptureReady = true;
                 window.addEventListener("beforeinstallprompt", function (event) {
                   event.preventDefault();
-                  window.__dbbossDeferredInstallPrompt = event;
-                  window.dispatchEvent(new CustomEvent("dbboss:pwa-beforeinstallprompt"));
+                  window.__lakshmiBossDeferredInstallPrompt = event;
+                  window.dispatchEvent(new CustomEvent("lakshmi-boss:pwa-beforeinstallprompt"));
                 });
                 window.addEventListener("appinstalled", function () {
-                  window.__dbbossDeferredInstallPrompt = undefined;
-                  window.__dbbossPwaInstalled = true;
-                  window.dispatchEvent(new CustomEvent("dbboss:pwa-appinstalled"));
+                  window.__lakshmiBossDeferredInstallPrompt = undefined;
+                  window.__lakshmiBossPwaInstalled = true;
+                  window.dispatchEvent(new CustomEvent("lakshmi-boss:pwa-appinstalled"));
                 });
               })();
             `,

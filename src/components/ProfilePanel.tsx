@@ -68,8 +68,8 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
           <div className="profile-avatar">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/dbboss.png"
-              alt="DBboss Logo"
+              src="/lakshmi-boss.png"
+              alt="Lakshmi Boss logo"
               style={{
                 width: "100%",
                 height: "100%",
@@ -79,7 +79,7 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
             />
           </div>
           <div className="profile-header-info">
-            <span className="profile-name">DBboss</span>
+            <span className="profile-name">Lakshmi Boss</span>
             <span className="profile-version">v{APP_VERSION} - PWA</span>
           </div>
           <button
@@ -153,7 +153,7 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
         <div className="profile-section-label">About</div>
         <div className="profile-about-card">
           <p className="profile-about-text">
-            DBboss uses a 6-factor Game-Theory engine to forecast Satta Matka
+            Lakshmi Boss uses a 6-factor Game-Theory engine to forecast Satta Matka
             panels based on operator liability minimization, temporal cycles,
             and liquidity flow analysis.
           </p>
