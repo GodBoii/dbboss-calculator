@@ -30,6 +30,7 @@ import {
   buildOpenSuttaSet,
 } from "./analysis/AnalysisTabs"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
+import { formatBetForCopy } from "@/lib/bet-copy-format"
 
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
@@ -297,7 +298,7 @@ export default function AnalysisSection() {
   const [copyingKey, setCopyingKey] = useState<string | null>(null)
 
   const handleCopy = useCallback((key: string, text: string) => {
-    navigator.clipboard.writeText(text).then(() => {
+    navigator.clipboard.writeText(formatBetForCopy(text)).then(() => {
       setCopyingKey(key)
       setTimeout(() => setCopyingKey(null), 1800)
     }).catch(() => {

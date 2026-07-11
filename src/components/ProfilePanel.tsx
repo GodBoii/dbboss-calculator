@@ -3,6 +3,18 @@
 import { useState, useEffect, useCallback } from "react";
 import { usePWAUpdate } from "@/hooks/usePWAUpdate";
 import { APP_VERSION } from "@/lib/app-version";
+import {
+  BET_COPY_FORMATS,
+  BET_COPY_TEXT_STYLES,
+  DEFAULT_BET_COPY_FORMAT,
+  DEFAULT_BET_COPY_TEXT_STYLE,
+  getSavedBetCopyFormat,
+  getSavedBetCopyTextStyle,
+  saveBetCopyFormat,
+  saveBetCopyTextStyle,
+  type BetCopyFormatId,
+  type BetCopyTextStyleId,
+} from "@/lib/bet-copy-format";
 
 interface ProfilePanelProps {
   isOpen: boolean;
@@ -18,6 +30,16 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
     installUpdate,
   } = usePWAUpdate();
   const [toast, setToast] = useState<string | null>(null);
+  const [betFormat, setBetFormat] = useState<BetCopyFormatId>(DEFAULT_BET_COPY_FORMAT);
+  const [betTextStyle, setBetTextStyle] = useState<BetCopyTextStyleId>(DEFAULT_BET_COPY_TEXT_STYLE);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setBetFormat(getSavedBetCopyFormat());
+      setBetTextStyle(getSavedBetCopyTextStyle());
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   // Declared before effects so it can be referenced in them
   const showToast = useCallback((msg: string) => {
@@ -102,6 +124,55 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
         </div>
 
         <div className="profile-divider" />
+
+        <div className="profile-section-label">Bet Copy Style</div>
+        <p className="profile-setting-help">
+          Changes only how copied bets look. Numbers and their order stay exactly the same.
+        </p>
+        <div className="bet-format-grid" role="radiogroup" aria-label="Copied bet style">
+          {BET_COPY_FORMATS.map((format) => (
+            <button
+              key={format.id}
+              type="button"
+              role="radio"
+              aria-checked={betFormat === format.id}
+              className={`bet-format-option ${betFormat === format.id ? "bet-format-option--active" : ""}`}
+              onClick={() => {
+                haptic();
+                setBetFormat(format.id);
+                saveBetCopyFormat(format.id);
+                showToast(`Copy style saved: ${format.label}`);
+              }}
+            >
+              <span className="bet-format-name">{format.label}</span>
+              <span className="bet-format-preview">{format.preview}</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="bet-style-heading">Text style</div>
+        <div className="bet-text-style-grid" role="radiogroup" aria-label="Copied bet text style">
+          {BET_COPY_TEXT_STYLES.map((style) => (
+            <button
+              key={style.id}
+              type="button"
+              role="radio"
+              aria-checked={betTextStyle === style.id}
+              className={`bet-text-style-option bet-text-style-option--${style.id} ${betTextStyle === style.id ? "bet-format-option--active" : ""}`}
+              onClick={() => {
+                haptic();
+                setBetTextStyle(style.id);
+                saveBetCopyTextStyle(style.id);
+                showToast(`Text style saved: ${style.label}`);
+              }}
+            >
+              <span>{style.label}</span>
+              <small>123 124</small>
+            </button>
+          ))}
+        </div>
+
+        <div className="profile-divider" style={{ margin: "14px 0 8px" }} />
 
         {/* Updates */}
         <div className="profile-section-label">App Updates</div>
