@@ -893,6 +893,14 @@
   min-height: 24px;
 }
 
+.sutta-signal-model {
+  min-width: 72px;
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
 .sutta-signal-digit {
   font-family: 'Outfit', sans-serif;
   font-size: 18px;
