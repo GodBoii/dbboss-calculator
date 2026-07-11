@@ -2,17 +2,24 @@
   "name": "Lakshmi Boss Calculator",
   "short_name": "Lakshmi Boss",
   "description": "Game-Theory based Satta Matka prediction engine",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "start_url": "/",
   "scope": "/",
   "id": "/",
   "display": "standalone",
-  "display_override": ["standalone", "fullscreen", "minimal-ui"],
+  "display_override": [
+    "standalone",
+    "fullscreen",
+    "minimal-ui"
+  ],
   "background_color": "#000000",
   "theme_color": "#000000",
   "orientation": "portrait",
   "lang": "en",
-  "categories": ["utilities", "productivity"],
+  "categories": [
+    "utilities",
+    "productivity"
+  ],
   "launch_handler": {
     "client_mode": "focus-existing"
   },
