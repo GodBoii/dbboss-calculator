@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import ProfilePanel from "@/components/ProfilePanel";
+import { formatBetForCopy } from "@/lib/bet-copy-format";
 
 const AnalysisSection = dynamic(() => import("@/components/AnalysisSection"), {
   ssr: false,
@@ -211,7 +212,7 @@ function CalculatorSection() {
   const handleCopy = async () => {
     if (!results.length) return;
     haptic(12);
-    await navigator.clipboard.writeText(results.join("-"));
+    await navigator.clipboard.writeText(formatBetForCopy(results.join("-")));
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
   };
@@ -219,7 +220,7 @@ function CalculatorSection() {
   const handleCopySkipped = async () => {
     if (!skippedResults.length) return;
     haptic(12);
-    await navigator.clipboard.writeText(skippedResults.join("-"));
+    await navigator.clipboard.writeText(formatBetForCopy(skippedResults.join("-")));
     setIsSkippedCopied(true);
     setTimeout(() => setIsSkippedCopied(false), 2000);
   };

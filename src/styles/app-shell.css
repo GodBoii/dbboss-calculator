@@ -401,6 +401,106 @@
     margin-top: 20px;
 }
 
+.profile-setting-help {
+  margin: -2px 4px 10px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.bet-format-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.bet-format-option {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.68);
+  text-align: left;
+  cursor: pointer;
+}
+
+.bet-format-option--active {
+  border-color: rgba(250, 204, 21, 0.68);
+  background: rgba(250, 204, 21, 0.1);
+  color: #facc15;
+  box-shadow: inset 0 0 0 1px rgba(250, 204, 21, 0.12);
+}
+
+.bet-format-name,
+.bet-format-preview {
+  display: block;
+}
+
+.bet-format-name {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.bet-format-preview {
+  min-height: 14px;
+  margin-top: 5px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9px;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+}
+
+.bet-format-option--active .bet-format-preview {
+  color: rgba(250, 204, 21, 0.72);
+}
+
+.bet-style-heading {
+  margin: 13px 3px 7px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.bet-text-style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.bet-text-style-option {
+  min-width: 0;
+  padding: 9px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 10px;
+  text-align: center;
+}
+
+.bet-text-style-option span,
+.bet-text-style-option small {
+  display: block;
+}
+
+.bet-text-style-option small {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 9px;
+}
+
+.bet-text-style-option--bold small {
+  font-weight: 800;
+}
+
+.bet-text-style-option--monospace small {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
 .pwa-install-banner {
     position: fixed;
     left: 12px;
