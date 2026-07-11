@@ -3,9 +3,11 @@ import type { SuttaPick } from "./types"
 
 export function applyRankProbabilities(items: SuttaPick[]): SuttaPick[] {
   if (items.length === 0) return []
-  // Conservative monotonic tilt around the 10% uniform prior. This prevents
-  // arbitrary legacy score scales from appearing more certain than they are.
-  const weights = items.map((_, index) => 1 + (items.length - index) * 0.03)
+  // Convert the model score into a conservative relative rating. Temperature
+  // limits overconfidence while ensuring that the displayed rating and rank
+  // are produced from the same score.
+  const maxScore = Math.max(...items.map((item) => item.score))
+  const weights = items.map((item) => Math.exp((item.score - maxScore) / 100))
   const total = weights.reduce((sum, weight) => sum + weight, 0)
   return items.map((item, index) => ({
     ...item,
