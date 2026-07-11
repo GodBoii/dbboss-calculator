@@ -7,7 +7,6 @@ import {
   computeJodiAnalysis,
   buildContextFromResult,
   calculateSutta,
-  getSuttaSignal,
   type PanelPick,
   type PredictionResult,
   type JodiAnalysis,
@@ -519,38 +518,28 @@ export default function AnalysisSection() {
 
   const renderSuttaSignalList = (
     label: string,
-    droughts: Record<string, number>,
     ranking: typeof openSuttaRanking,
   ) => (
     <div className="sutta-signal-panel">
       <div className="sutta-signal-panel-head">
         <span className="sutta-signal-panel-title">{label}</span>
-        <span className="sutta-signal-panel-subtitle">position-specific</span>
+        <span className="sutta-signal-panel-subtitle">highest model score first</span>
       </div>
       <div className="sutta-signal-list">
-        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => {
-          const prediction = ranking.find((pick) => pick.sutta === s)
-          const drought = droughts[String(s)] ?? 1000
-          const signal = getSuttaSignal(drought)
-          const width = drought === 1000 ? 100 : Math.min(100, Math.max(8, (drought / 25) * 100))
-          const showLabel = signal.state !== "warming" && signal.state !== "cooling"
+        {ranking.map((prediction) => {
+          const width = Math.max(8, Math.min(100, prediction.score))
           return (
-            <div key={`${label}-${s}`} className="sutta-signal-row" title={signal.description}>
-              <span className="sutta-signal-digit" style={{ color: signal.color }}>{s}</span>
+            <div key={`${label}-${prediction.sutta}`} className="sutta-signal-row">
+              <span className="sutta-signal-rank">#{prediction.rank}</span>
+              <span className="sutta-signal-digit">{prediction.sutta}</span>
               <div className="sutta-signal-bar-track">
                 <div
                   className="sutta-signal-bar-fill"
-                  style={{ width: `${width}%`, background: signal.color }}
+                  style={{ width: `${width}%` }}
                 />
               </div>
-              <span className="sutta-signal-days" style={{ color: signal.color }}>
-                {drought === 1000 ? "???" : `${drought}d`}
-              </span>
-              <span className={`sutta-signal-state sutta-signal-state--${signal.state}`}>
-                {showLabel ? signal.label : ""}
-              </span>
               <span className="sutta-signal-model">
-                {prediction ? `#${prediction.rank} · ${prediction.probabilityPct.toFixed(1)}%` : "—"}
+                Score {prediction.score.toFixed(1)}
               </span>
             </div>
           )
@@ -873,10 +862,9 @@ export default function AnalysisSection() {
 
             <div className="sutta-signal-layout">
               {suttaSignalView === "open"
-                ? renderSuttaSignalList("Open Sutta", result.openSuttaDroughts, openSuttaRanking)
+                ? renderSuttaSignalList("Open Sutta", openSuttaRanking)
                 : renderSuttaSignalList(
                     openSuttaInput === null ? "Close Sutta" : "Adjusted Close Sutta",
-                    result.closeSuttaDroughts,
                     closeSuttaRanking,
                   )}
             </div>
