@@ -24,6 +24,7 @@ DAY_OFFSET = {
 }
 WINDOWS = {"7d": 7, "30d": 30, "6m": 183, "1y": 365, "2y": 730}
 TARGETS = ("open", "close", "adjustedClose", "jodi")
+PHASES = {"development": (213, 10_000), "validation": (30, 213), "holdout30": (0, 30)}
 JODI_OPEN_CANDIDATES = (
     "recent7_hot", "recent14_hot", "calendar_date", "frequency_ensemble", "delta", "same_house",
 )
@@ -168,6 +169,68 @@ def feature_scores(prior: list[Row], side: str, target: Row) -> dict[str, list[f
         for digit in range(10)
     ]
 
+    # The second research cycle deliberately expands beyond global frequency,
+    # weekday, and one-step Markov ideas. Every anchor below is known before
+    # the target draw. A shrunk long-run distribution prevents a single echo
+    # or arithmetic identity from taking over the complete ranking.
+    def anchor_score(anchor: int, bonus: float = 0.045) -> list[float]:
+        return [long[digit] + (bonus if digit == anchor else 0.0) for digit in range(10)]
+
+    for lag in (1, 2, 3, 5, 7):
+        if len(values) >= lag:
+            anchor = values[-lag]
+            scores[f"lag{lag}_repeat"] = anchor_score(anchor)
+            scores[f"lag{lag}_opposite"] = anchor_score(opposite(anchor))
+
+    previous_same_weekday = next(
+        (getattr(row, side) for row in reversed(prior) if row.day == target.day),
+        previous_same,
+    )
+    previous_same_date = next(
+        (getattr(row, side) for row in reversed(prior) if row.day_of_month == target.day_of_month),
+        previous_same,
+    )
+    scores["same_weekday_echo"] = anchor_score(previous_same_weekday, 0.05)
+    scores["same_date_echo"] = anchor_score(previous_same_date, 0.05)
+    scores["same_weekday_opposite"] = anchor_score(opposite(previous_same_weekday), 0.05)
+    scores["same_date_opposite"] = anchor_score(opposite(previous_same_date), 0.05)
+
+    arithmetic_anchors = {
+        "previous_sum": (previous_same + previous_other) % 10,
+        "previous_difference": (previous_same - previous_other) % 10,
+        "previous_reverse_difference": (previous_other - previous_same) % 10,
+        "previous_absolute_difference": abs(previous_same - previous_other) % 10,
+        "previous_product": (previous_same * previous_other) % 10,
+        "previous_sum_opposite": opposite((previous_same + previous_other) % 10),
+    }
+    for name, anchor in arithmetic_anchors.items():
+        scores[name] = anchor_score(anchor)
+
+    gaps = []
+    for digit in range(10):
+        gap = next(
+            (index for index, value in enumerate(reversed(values)) if value == digit),
+            len(values),
+        )
+        gaps.append(min(gap, 30) / 30)
+    scores["gap_due"] = [0.7 * long[digit] + 0.03 * gaps[digit] for digit in range(10)]
+    scores["gap_suppression"] = [0.7 * long[digit] - 0.03 * gaps[digit] for digit in range(10)]
+    scores["frequency_acceleration"] = [
+        0.45 * long[digit] + 0.40 * recent[14][digit] - 0.15 * recent[60][digit]
+        for digit in range(10)
+    ]
+    scores["frequency_mean_reversion"] = [
+        0.45 * long[digit] + 0.40 * recent[60][digit] - 0.15 * recent[14][digit]
+        for digit in range(10)
+    ]
+
+    recent_entropy = -sum(value * math.log(max(value, 1e-9)) for value in recent[30])
+    entropy_ratio = min(1.0, recent_entropy / math.log(10))
+    scores["entropy_regime"] = [
+        entropy_ratio * recent[30][digit] + (1.0 - entropy_ratio) * long[digit]
+        for digit in range(10)
+    ]
+
     if side == "close":
         conditional, conditional_n = current_open_counts(prior, target.open)
         conditional_weight = min(0.55, conditional_n / 90)
@@ -184,6 +247,14 @@ def feature_scores(prior: list[Row], side: str, target: Row) -> dict[str, list[f
             + (0.035 if house(digit) != house(target.open) else 0.0)
             for digit in range(10)
         ]
+        if "lag7_opposite" in scores:
+            current_order = rank(scores["known_open_bayes"])
+            lag_order = rank(scores["lag7_opposite"])
+            hybrid_order = current_order[:4]
+            hybrid_order.extend(digit for digit in lag_order if digit not in hybrid_order)
+            scores["known_open4_lag7_opposite"] = [
+                float(10 - hybrid_order.index(digit)) for digit in range(10)
+            ]
     return scores
 
 
@@ -271,6 +342,10 @@ def evaluate(rows_by_market: dict[str, list[Row]]) -> dict:
             target_date = date.fromisoformat(target.iso)
             age_days = (newest - target_date).days
             active_windows = [name for name, days in WINDOWS.items() if age_days < days]
+            active_phases = [
+                name for name, (minimum_age, maximum_age) in PHASES.items()
+                if minimum_age <= age_days < maximum_age
+            ]
             if not active_windows:
                 continue
             prior = rows[:index]
@@ -288,16 +363,21 @@ def evaluate(rows_by_market: dict[str, list[Row]]) -> dict:
                 for name, scores in direct_jodi_scores.items()
             }
 
-            for window in active_windows:
+            for window in active_windows + active_phases:
                 for name in common:
                     open_hit = target.open in open_picks[name]
                     close_hit = target.close in close_picks[name]
                     jodi_hit = open_hit and close_hit
                     add(metrics[window][name]["open"], open_hit)
                     add(metrics[window][name]["close"], close_hit)
+                    # Any pre-open Close ranking is also a valid candidate after
+                    # Open is known. Score it in the adjusted-close competition
+                    # instead of limiting that target to conditional models.
+                    add(metrics[window][name]["adjustedClose"], close_hit)
                     add(metrics[window][name]["jodi"], jodi_hit)
                     add(per_market[market][window][name]["open"], open_hit)
                     add(per_market[market][window][name]["close"], close_hit)
+                    add(per_market[market][window][name]["adjustedClose"], close_hit)
                     add(per_market[market][window][name]["jodi"], jodi_hit)
                 for open_name in JODI_OPEN_CANDIDATES:
                     for close_name in JODI_CLOSE_CANDIDATES:
@@ -309,7 +389,7 @@ def evaluate(rows_by_market: dict[str, list[Row]]) -> dict:
                     hit = int(target.jodi.zfill(2)) in picks
                     add(metrics[window][name]["jodi"], hit)
                     add(per_market[market][window][name]["jodi"], hit)
-                for name in ("known_open", "known_open_bayes", "known_open_opposite_house"):
+                for name in sorted(set(close_scores) - set(common)):
                     hit = target.close in close_picks[name]
                     add(metrics[window][name]["adjustedClose"], hit)
                     add(per_market[market][window][name]["adjustedClose"], hit)
@@ -335,7 +415,7 @@ def evaluate(rows_by_market: dict[str, list[Row]]) -> dict:
 
 
 def print_rankings(report: dict) -> None:
-    for window in ("2y", "1y", "6m", "30d", "7d"):
+    for window in ("development", "validation", "holdout30", "2y", "1y", "6m", "30d", "7d"):
         print(f"\n=== {window} candidate leaders ===")
         for target in TARGETS:
             rows = []
@@ -348,13 +428,154 @@ def print_rankings(report: dict) -> None:
             print(f"{target:14} {leaders}")
 
 
+CURRENT_MODELS = {
+    "open": {
+        "Time Bazar": "calendar_date", "Madhur Day": "calendar_date",
+        "Rajdhani Day": "calendar_date", "Sridevi Night": "calendar_date",
+        "Kalyan Night": "calendar_date", "Milan Night": "calendar_date",
+        "Rajdhani Night": "calendar_date", "Main Bazar": "calendar_date",
+    },
+    "close": {
+        "Madhur Day": "recent30_cold", "Rajdhani Day": "delta",
+        "Kalyan": "calendar_date", "Sridevi Night": "recent30_cold",
+        "Kalyan Night": "recent30_cold", "Madhur Night": "recent30_cold",
+        "Milan Night": "recent30_cold", "Rajdhani Night": "recent30_cold",
+    },
+    "adjustedClose": {
+        "Madhur Day": "recent30_cold", "Rajdhani Day": "known_open_bayes",
+        "Kalyan Night": "known_open", "Madhur Night": "recent30_cold",
+        "Milan Night": "recent30_cold", "Rajdhani Night": "recent30_cold",
+    },
+}
+
+
+def promotion_candidates(report: dict) -> list[dict]:
+    """Find strict replacements without using holdout improvement as a selector.
+
+    A candidate must add at least one hit in both the older development and the
+    later validation block, improve the combined two-year result, and merely
+    avoid losing in the final 30-day audit. The last condition verifies rather
+    than selects the model.
+    """
+    rows = []
+    for target, markets in CURRENT_MODELS.items():
+        for market, current in markets.items():
+            market_report = report["perMarket"][market]
+            candidate_names = set(market_report["2y"])
+            for candidate in candidate_names:
+                if target not in market_report["2y"].get(candidate, {}):
+                    continue
+                comparisons = {}
+                valid = True
+                for phase in ("development", "validation", "holdout30", "2y"):
+                    current_metric = market_report[phase].get(current, {}).get(target)
+                    candidate_metric = market_report[phase].get(candidate, {}).get(target)
+                    if not current_metric or not candidate_metric:
+                        valid = False
+                        break
+                    comparisons[phase] = candidate_metric["hit"] - current_metric["hit"]
+                if not valid or candidate == current:
+                    continue
+                if (
+                    comparisons["development"] >= 1
+                    and comparisons["validation"] >= 1
+                    and comparisons["holdout30"] >= 0
+                    and comparisons["2y"] >= 3
+                ):
+                    rows.append({
+                        "market": market,
+                        "target": target,
+                        "current": current,
+                        "candidate": candidate,
+                        "hitDelta": comparisons,
+                        "current2y": market_report["2y"][current][target],
+                        "candidate2y": market_report["2y"][candidate][target],
+                        "currentHoldout": market_report["holdout30"][current][target],
+                        "candidateHoldout": market_report["holdout30"][candidate][target],
+                    })
+    return sorted(
+        rows,
+        key=lambda row: (row["hitDelta"]["validation"], row["hitDelta"]["2y"]),
+        reverse=True,
+    )
+
+
+def exact_sign_test(candidate_only: int, current_only: int) -> float:
+    discordant = candidate_only + current_only
+    if discordant == 0:
+        return 1.0
+    tail = sum(math.comb(discordant, index) for index in range(0, min(candidate_only, current_only) + 1))
+    return min(1.0, 2.0 * tail / (2 ** discordant))
+
+
+def stability_audit(rows_by_market: dict[str, list[Row]], promotions: list[dict]) -> list[dict]:
+    audited = []
+    seen: set[tuple[str, str, str, str]] = set()
+    for promotion in promotions:
+        key = (
+            promotion["market"], promotion["target"],
+            promotion["current"], promotion["candidate"],
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        market, target, current, candidate = key
+        outcomes = []
+        rows = rows_by_market[market]
+        for index in range(50, len(rows)):
+            prior, target_row = rows[:index], rows[index]
+            scores = feature_scores(prior, "close" if target == "adjustedClose" else target, target_row)
+            if current not in scores or candidate not in scores:
+                continue
+            actual = target_row.close if target == "adjustedClose" else getattr(target_row, target)
+            outcomes.append((
+                actual in rank(scores[current])[:6],
+                actual in rank(scores[candidate])[:6],
+            ))
+        candidate_only = sum(candidate_hit and not current_hit for current_hit, candidate_hit in outcomes)
+        current_only = sum(current_hit and not candidate_hit for current_hit, candidate_hit in outcomes)
+        blocks = []
+        for start in range(0, len(outcomes), 90):
+            block = outcomes[start:start + 90]
+            if len(block) < 30:
+                continue
+            current_hits = sum(current_hit for current_hit, _ in block)
+            candidate_hits = sum(candidate_hit for _, candidate_hit in block)
+            blocks.append({
+                "n": len(block), "currentHits": current_hits,
+                "candidateHits": candidate_hits, "delta": candidate_hits - current_hits,
+            })
+        raw_p = exact_sign_test(candidate_only, current_only)
+        audited.append({
+            **promotion,
+            "discordant": {"candidateOnly": candidate_only, "currentOnly": current_only},
+            "rawMcNemarExactP": round(raw_p, 6),
+            # Fifty is a conservative family size for the close/adjusted-close
+            # candidates inspected in this cycle.
+            "bonferroniP": round(min(1.0, raw_p * 50), 6),
+            "testedCandidateCorrection": 50,
+            "rolling90Blocks": blocks,
+            "nonNegativeBlocks": sum(block["delta"] >= 0 for block in blocks),
+            "positiveBlocks": sum(block["delta"] > 0 for block in blocks),
+        })
+    return audited
+
+
 def main() -> None:
     rows = load_rows()
     report = evaluate(rows)
+    report["promotionCandidates"] = promotion_candidates(report)
+    report["stabilityAudit"] = stability_audit(rows, report["promotionCandidates"])
     report["generatedAt"] = datetime.now().astimezone().isoformat()
     report["source"] = str(CACHE)
     OUTPUT.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print_rankings(report)
+    print("\n=== strict market-specific promotion candidates ===")
+    for candidate in report["promotionCandidates"][:30]:
+        print(candidate)
+    print("\n=== rolling stability audit ===")
+    for candidate in report["stabilityAudit"][:10]:
+        print(candidate)
     print(f"\nSaved {OUTPUT}")
 
 
