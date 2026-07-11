@@ -352,6 +352,7 @@ export function runSuttaBacktest7d(
       suttaCount,
       market,
       targetDate,
+      allMarketsRecords,
     )
 
     // Build top-N close suttas (Jodi-adjusted using actual open sutta)
@@ -369,7 +370,7 @@ export function runSuttaBacktest7d(
       suttaCount,
       market,
       record.openSutta,
-      priorAllMarkets,
+      allMarketsRecords,
       targetDate,
     )
 
