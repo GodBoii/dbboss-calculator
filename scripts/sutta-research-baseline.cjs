@@ -119,6 +119,7 @@ function add(metric, hit) {
 async function main() {
   const days = Number.parseInt(process.argv.find((value) => /^\d+$/.test(value)) || '30', 10)
   const refresh = process.argv.includes('--refresh')
+  const includeLedger = process.argv.includes('--ledger')
   const labelArg = process.argv.find((value) => value.startsWith('--label='))
   const label = labelArg ? `-${labelArg.slice('--label='.length).replace(/[^a-z0-9_-]/gi, '')}` : ''
   const allRecords = await fetchAll(refresh)
@@ -128,6 +129,7 @@ async function main() {
   const totals = Object.fromEntries(COUNTS.map((count) => [count, emptyTargets()]))
   const byMarket = {}
   const dateRanges = {}
+  const ledger = []
 
   for (const market of MARKET_ORDER) {
     const rows = allDated[market]
@@ -169,6 +171,7 @@ async function main() {
           count,
           market,
           targetDate,
+          allRecords,
         )
         const close = buildCloseSuttaSet(
           prediction.closePicks,
@@ -177,7 +180,7 @@ async function main() {
           count,
           market,
           null,
-          priorAll,
+          allRecords,
           targetDate,
         )
         const adjustedClose = buildCloseSuttaSet(
@@ -187,7 +190,7 @@ async function main() {
           count,
           market,
           record.openSutta,
-          priorAll,
+          allRecords,
           targetDate,
         )
         const results = {
@@ -195,6 +198,19 @@ async function main() {
           close: close.some((pick) => pick.sutta === record.closeSutta),
           jodi: buildJodis(open, close).includes(record.jodi),
           adjustedClose: adjustedClose.some((pick) => pick.sutta === record.closeSutta),
+        }
+        if (includeLedger && count === 6) {
+          ledger.push({
+            market,
+            isoDate,
+            day: record.day,
+            openPanel: record.openPanel,
+            closePanel: record.closePanel,
+            actualOpen: record.openSutta,
+            actualClose: record.closeSutta,
+            openRanking: open.map((pick) => pick.sutta),
+            closeRanking: close.map((pick) => pick.sutta),
+          })
         }
         for (const target of TARGETS) {
           add(totals[count][target], results[target])
@@ -211,6 +227,7 @@ async function main() {
     dateRanges,
     totals,
     byMarket,
+    ...(includeLedger ? { ledger } : {}),
   }
   const outputPath = path.join(process.cwd(), 'scratch', `sutta-baseline-${days}d${label}.json`)
   fs.writeFileSync(outputPath, JSON.stringify(report, null, 2))

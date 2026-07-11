@@ -160,6 +160,7 @@ function verify() {
         count,
         market,
         targetDate,
+        allMarketsRecords,
       )
       const closeSuttas = buildCloseSuttaSet(
         prediction.closePicks,
