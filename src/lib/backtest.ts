@@ -316,8 +316,13 @@ export function runSuttaBacktest7d(
 
   if (datedRecords.length < 50) return null
 
-  // Take the last N draws
-  const testRows = datedRecords.slice(-days)
+  // Use calendar days, not the last N draws. Markets can be closed on some days.
+  const endDate = datedRecords.at(-1)?.isoDate
+  if (!endDate) return null
+  const cutoff = new Date(`${endDate}T00:00:00Z`)
+  cutoff.setUTCDate(cutoff.getUTCDate() - Math.max(0, days - 1))
+  const startDate = cutoff.toISOString().slice(0, 10)
+  const testRows = datedRecords.filter((item) => item.isoDate >= startDate && item.isoDate <= endDate)
 
   let openSuttaHits = 0
   let closeSuttaHits = 0
@@ -355,21 +360,14 @@ export function runSuttaBacktest7d(
       allMarketsRecords,
     )
 
-    // Build top-N close suttas (Jodi-adjusted using actual open sutta)
-    const jodiResult = computeJodiAnalysis(
-      record.openSutta,
-      record.openPanel || null,
-      prior,
-      buildContextFromResult(prediction),
-      prediction.closeDpKindContext,
-    )
+    // Build the pre-result top-N close set used by the Signal Map.
     const closeSuttas: CopySuttaPick[] = builders.buildCloseSuttaSet(
-      jodiResult.adjustedClosePicks,
+      prediction.closePicks,
       prediction.closeSuttaDroughts,
       prior,
       suttaCount,
       market,
-      record.openSutta,
+      null,
       allMarketsRecords,
       targetDate,
     )
