@@ -24,8 +24,10 @@ import {
 import {
   AnalysisTabs,
   BetCopyDesk,
+  buildCloseSuttaRanking,
   buildCloseSuttaSet,
   buildJodis,
+  buildOpenSuttaRanking,
   buildOpenSuttaSet,
 } from "./analysis/AnalysisTabs"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
@@ -470,32 +472,32 @@ export default function AnalysisSection() {
 
   const activeMarkets = session === "day" ? DAY_MARKETS : NIGHT_MARKETS
   const isNight = session === "night"
-  const openCopySuttas = useMemo(
+  const openSuttaRanking = useMemo(
     () => result
-      ? buildOpenSuttaSet(
+      ? buildOpenSuttaRanking(
           result.openPicks,
           result.openSuttaDroughts,
           cachedRecords,
-          copyCount,
           selectedMarket,
         )
       : [],
-    [result, cachedRecords, copyCount, selectedMarket],
+    [result, cachedRecords, selectedMarket],
   )
-  const closeCopySuttas = useMemo(
+  const closeSuttaRanking = useMemo(
     () => result
-      ? buildCloseSuttaSet(
+      ? buildCloseSuttaRanking(
           jodiResult?.adjustedClosePicks ?? result.closePicks,
           result.closeSuttaDroughts,
           cachedRecords,
-          copyCount,
           selectedMarket,
           openSuttaInput,
           allMarketsRecords,
         )
       : [],
-    [result, jodiResult, cachedRecords, copyCount, selectedMarket, openSuttaInput, allMarketsRecords],
+    [result, jodiResult, cachedRecords, selectedMarket, openSuttaInput, allMarketsRecords],
   )
+  const openCopySuttas = useMemo(() => openSuttaRanking.slice(0, copyCount), [openSuttaRanking, copyCount])
+  const closeCopySuttas = useMemo(() => closeSuttaRanking.slice(0, copyCount), [closeSuttaRanking, copyCount])
   const generatedJodis = useMemo(
     () => buildJodis(openCopySuttas, closeCopySuttas),
     [openCopySuttas, closeCopySuttas],
@@ -515,7 +517,11 @@ export default function AnalysisSection() {
     [result, selectedMarket, cachedRecords, allMarketsRecords, copyCount],
   )
 
-  const renderSuttaSignalList = (label: string, droughts: Record<string, number>) => (
+  const renderSuttaSignalList = (
+    label: string,
+    droughts: Record<string, number>,
+    ranking: typeof openSuttaRanking,
+  ) => (
     <div className="sutta-signal-panel">
       <div className="sutta-signal-panel-head">
         <span className="sutta-signal-panel-title">{label}</span>
@@ -523,6 +529,7 @@ export default function AnalysisSection() {
       </div>
       <div className="sutta-signal-list">
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => {
+          const prediction = ranking.find((pick) => pick.sutta === s)
           const drought = droughts[String(s)] ?? 1000
           const signal = getSuttaSignal(drought)
           const width = drought === 1000 ? 100 : Math.min(100, Math.max(8, (drought / 25) * 100))
@@ -541,6 +548,9 @@ export default function AnalysisSection() {
               </span>
               <span className={`sutta-signal-state sutta-signal-state--${signal.state}`}>
                 {showLabel ? signal.label : ""}
+              </span>
+              <span className="sutta-signal-model">
+                {prediction ? `#${prediction.rank} · ${prediction.probabilityPct.toFixed(1)}%` : "—"}
               </span>
             </div>
           )
@@ -863,8 +873,12 @@ export default function AnalysisSection() {
 
             <div className="sutta-signal-layout">
               {suttaSignalView === "open"
-                ? renderSuttaSignalList("Open Sutta", result.openSuttaDroughts)
-                : renderSuttaSignalList("Close Sutta", result.closeSuttaDroughts)}
+                ? renderSuttaSignalList("Open Sutta", result.openSuttaDroughts, openSuttaRanking)
+                : renderSuttaSignalList(
+                    openSuttaInput === null ? "Close Sutta" : "Adjusted Close Sutta",
+                    result.closeSuttaDroughts,
+                    closeSuttaRanking,
+                  )}
             </div>
 
             {suttaAccuracyReport && (

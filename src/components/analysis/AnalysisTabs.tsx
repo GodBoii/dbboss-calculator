@@ -442,7 +442,7 @@ function houseScore(sutta: number, targetHouse: "low" | "high" | null) {
   return targetHouse !== null && suttaHouse(sutta) === targetHouse ? 1 : 0
 }
 
-export function buildOpenSuttaSet(
+function buildOpenSuttaSetCore(
   picks: PanelPick[],
   droughts: Record<string, number>,
   records: PanelRecord[],
@@ -567,7 +567,7 @@ export function buildOpenSuttaSet(
   return finalizeScoredSuttaRows(rows, droughts, count)
 }
 
-export function buildCloseSuttaSet(
+function buildCloseSuttaSetCore(
   picks: PanelPick[],
   droughts: Record<string, number>,
   records: PanelRecord[],
@@ -765,6 +765,62 @@ export function buildCloseSuttaSet(
 
   const sources = strategies.map((strategy) => buildStrategySet(strategy, 10))
   return mergeCopySuttaSources(sources, count)
+}
+
+function canonicalizeSuttaRanking(primary: CopySuttaPick[], remainder: CopySuttaPick[]) {
+  const seen = new Set<number>()
+  const ordered = [...primary, ...remainder]
+    .filter((pick) => {
+      if (seen.has(pick.sutta)) return false
+      seen.add(pick.sutta)
+      return true
+    })
+    .slice(0, 10)
+    .map((pick, index) => ({ ...pick, score: 100 - index * 5 }))
+  return applyRankProbabilities(ordered)
+}
+
+/** One count-independent Open model ranking. UI counters only slice this list. */
+export function buildOpenSuttaRanking(
+  picks: PanelPick[],
+  droughts: Record<string, number>,
+  records: PanelRecord[],
+  marketName = "",
+  targetDate = new Date(),
+) {
+  return canonicalizeSuttaRanking(
+    buildOpenSuttaSetCore(picks, droughts, records, 6, marketName, targetDate),
+    buildOpenSuttaSetCore(picks, droughts, records, 10, marketName, targetDate),
+  )
+}
+
+export function buildOpenSuttaSet(
+  picks: PanelPick[], droughts: Record<string, number>, records: PanelRecord[], count: number,
+  marketName = "", targetDate = new Date(),
+) {
+  return buildOpenSuttaRanking(picks, droughts, records, marketName, targetDate).slice(0, clampCopyCount(count))
+}
+
+/** One count-independent Close (or known-open adjusted Close) model ranking. */
+export function buildCloseSuttaRanking(
+  picks: PanelPick[], droughts: Record<string, number>, records: PanelRecord[], marketName = "",
+  currentOpenSutta: number | null = null, allMarketsRecords: Record<string, PanelRecord[]> = {},
+  targetDate = new Date(),
+) {
+  return canonicalizeSuttaRanking(
+    buildCloseSuttaSetCore(picks, droughts, records, 6, marketName, currentOpenSutta, allMarketsRecords, targetDate),
+    buildCloseSuttaSetCore(picks, droughts, records, 10, marketName, currentOpenSutta, allMarketsRecords, targetDate),
+  )
+}
+
+export function buildCloseSuttaSet(
+  picks: PanelPick[], droughts: Record<string, number>, records: PanelRecord[], count: number,
+  marketName = "", currentOpenSutta: number | null = null,
+  allMarketsRecords: Record<string, PanelRecord[]> = {}, targetDate = new Date(),
+) {
+  return buildCloseSuttaRanking(
+    picks, droughts, records, marketName, currentOpenSutta, allMarketsRecords, targetDate,
+  ).slice(0, clampCopyCount(count))
 }
 
 export function buildJodis(openSuttas: CopySuttaPick[], closeSuttas: CopySuttaPick[]): string[] {
