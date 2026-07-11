@@ -1,4 +1,3 @@
-import { getSuttaSignal } from "../predictor"
 import type { SuttaPick } from "./types"
 
 export function applyRankProbabilities(items: SuttaPick[]): SuttaPick[] {
@@ -22,22 +21,16 @@ export function smoothedRate(observed: number, total: number, alpha = 2) {
 
 export function rankStatisticalSuttas(
   rows: Array<{ sutta: number; score: number }>,
-  droughts: Record<string, number>,
+  _droughts: Record<string, number>,
   count: number,
 ): SuttaPick[] {
   const ranked = rows
     .map((row) => {
-      const signal = getSuttaSignal(droughts[String(row.sutta)] ?? 1000)
       return {
         sutta: row.sutta,
         rank: 0,
         score: row.score * 100,
         probabilityPct: 0,
-        signalColor: signal.color,
-        signalLabel: signal.label,
-        signalState: signal.state,
-        isFresh: signal.state === "fresh",
-        isSnapback: signal.state === "snapback",
       }
     })
     .sort((a, b) => b.score - a.score || a.sutta - b.sutta)
