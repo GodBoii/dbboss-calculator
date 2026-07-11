@@ -4,6 +4,8 @@ export const BET_COPY_TEXT_STYLE_STORAGE_KEY = "lakshmi-boss:bet-copy-text-style
 export const BET_COPY_FORMATS = [
   { id: "dash", label: "Classic dash", separator: "-", preview: "123-124-125" },
   { id: "double-dash", label: "Double dash", separator: "--", preview: "123--124--125" },
+  { id: "en-dash", label: "Long dash", separator: "–", preview: "123–124–125" },
+  { id: "em-dash", label: "Extra-long dash", separator: "—", preview: "123—124—125" },
   { id: "space", label: "Clean spaces", separator: "  ", preview: "123  124  125" },
   { id: "slash", label: "Slash /", separator: "/", preview: "123/124/125" },
   { id: "backslash", label: "Backslash", separator: "\\", preview: "123\\124\\125" },
@@ -23,6 +25,7 @@ export const DEFAULT_BET_COPY_FORMAT: BetCopyFormatId = "dash"
 export const BET_COPY_TEXT_STYLES = [
   { id: "normal", label: "Normal", prefix: "", suffix: "" },
   { id: "bold", label: "Bold", prefix: "*", suffix: "*" },
+  { id: "italic", label: "Italic", prefix: "_", suffix: "_" },
   { id: "monospace", label: "Monospace", prefix: "```", suffix: "```" },
 ] as const
 
@@ -72,4 +75,36 @@ export function formatBetForCopy(
   const formattedTokens = formatted.match(/\d+/g) ?? []
 
   return tokens.join("\u0000") === formattedTokens.join("\u0000") ? formatted : rawBet
+}
+
+export function convertStandardBetText(
+  input: string,
+  format: BetCopyFormatId,
+  textStyle: BetCopyTextStyleId,
+): { output: string; betCount: number } {
+  const originalTokens = input.match(/\d+/g) ?? []
+  if (originalTokens.length === 0) throw new Error("Paste at least one bet before generating.")
+
+  const selected = BET_COPY_FORMATS.find((item) => item.id === format)
+  const style = BET_COPY_TEXT_STYLES.find((item) => item.id === textStyle)
+  if (!selected || !style) throw new Error("Select a valid conversion style.")
+
+  const output = input
+    .replace(/\r\n/g, "\n")
+    .split("\n")
+    .map((line) => {
+      const tokens = line.match(/\d+/g) ?? []
+      if (tokens.length === 0) return ""
+      const convertedLine = tokens.join(selected.separator)
+      return `${style.prefix}${convertedLine}${style.suffix}`
+    })
+    .join("\n")
+    .trim()
+
+  const outputTokens = output.match(/\d+/g) ?? []
+  if (originalTokens.join("\u0000") !== outputTokens.join("\u0000")) {
+    throw new Error("Safety check failed. No formatted result was created.")
+  }
+
+  return { output, betCount: originalTokens.length }
 }
