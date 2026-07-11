@@ -1,7 +1,6 @@
 import type { Dispatch, SetStateAction } from "react"
 import {
   LIQUIDITY_FLOW_MAP,
-  getSuttaSignal,
   type JodiAnalysis,
   type PanelPick,
   type PredictionResult,
@@ -145,18 +144,8 @@ const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<Close
 }
 
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
-const suttaSignalPriority: Record<CopySuttaPick["signalState"], number> = {
-  fresh: 0,
-  snapback: 1,
-  warming: 2,
-  cooling: 2,
-  danger: 3,
-  unknown: 4,
-}
-
 function compareCopySuttaPicks(a: CopySuttaPick, b: CopySuttaPick) {
   return (
-    suttaSignalPriority[a.signalState] - suttaSignalPriority[b.signalState] ||
     b.score - a.score ||
     a.rank - b.rank ||
     a.sutta - b.sutta
@@ -238,7 +227,6 @@ export function buildTopSuttaSet(
   const bySutta = new Map<number, CopySuttaPick>()
 
   picks.forEach((pick, index) => {
-    const signal = getSuttaSignal(droughts[String(pick.sutta)] ?? 1000)
     const existing = bySutta.get(pick.sutta)
     if (mode !== "current" && existing) {
       const rankWeight = Math.max(1, 31 - index)
@@ -261,47 +249,20 @@ export function buildTopSuttaSet(
       rank: index + 1,
       score: mode === "weightedAggregate" || mode === "weightedSnap" ? pick.score * rankWeight : pick.score,
       probabilityPct: 0,
-      signalColor: signal.color,
-      signalLabel: signal.label,
-      signalState: signal.state,
-      isFresh: signal.state === "fresh",
-      isSnapback: signal.state === "snapback",
     })
   })
 
   for (let sutta = 0; sutta <= 9; sutta++) {
     if (bySutta.has(sutta)) continue
-    const signal = getSuttaSignal(droughts[String(sutta)] ?? 1000)
     bySutta.set(sutta, {
       sutta,
       rank: 999,
       score: 0,
       probabilityPct: 0,
-      signalColor: signal.color,
-      signalLabel: signal.label,
-      signalState: signal.state,
-      isFresh: signal.state === "fresh",
-      isSnapback: signal.state === "snapback",
     })
   }
 
   const ranked = Array.from(bySutta.values())
-  if (mode !== "current") {
-    const signalBonus: Record<CopySuttaPick["signalState"], number> =
-      mode === "weightedAggregate"
-        ? { fresh: 20, warming: 8, danger: -8, cooling: -4, snapback: 6, unknown: 0 }
-        : mode === "weightedSnap"
-        ? { fresh: 8, warming: 5, danger: -4, cooling: 0, snapback: 22, unknown: 0 }
-        : { fresh: 8, warming: 5, danger: 0, cooling: 12, snapback: 8, unknown: 0 }
-
-    return finalizeCopySuttaSet(
-      ranked.map((item) => ({
-        ...item,
-        score: item.score + signalBonus[item.signalState],
-      })),
-      count,
-    )
-  }
   return finalizeCopySuttaSet(ranked, count)
 }
 
@@ -342,22 +303,7 @@ function buildRawTopSuttaSet(
     if (!bySutta.has(sutta)) bySutta.set(sutta, makeCopySuttaPick(sutta, 0, 999, droughts))
   }
 
-  const signalBonus: Record<CopySuttaPick["signalState"], number> =
-    mode === "weightedAggregate"
-      ? { fresh: 20, warming: 8, danger: -8, cooling: -4, snapback: 6, unknown: 0 }
-      : mode === "weightedSnap"
-      ? { fresh: 8, warming: 5, danger: -4, cooling: 0, snapback: 22, unknown: 0 }
-      : mode === "aggregate"
-      ? { fresh: 8, warming: 5, danger: 0, cooling: 12, snapback: 8, unknown: 0 }
-      : { fresh: 0, warming: 0, danger: 0, cooling: 0, snapback: 0, unknown: 0 }
-
-  return finalizeRawCopySuttaSet(
-    Array.from(bySutta.values()).map((item) => ({
-      ...item,
-      score: item.score + signalBonus[item.signalState],
-    })),
-    count,
-  )
+  return finalizeRawCopySuttaSet(Array.from(bySutta.values()), count)
 }
 
 function getDayNameForDate(date: Date) {
@@ -410,18 +356,13 @@ function buildRawRankOnlySuttaSet(
   return finalizeRawCopySuttaSet(selected, count)
 }
 
-function makeCopySuttaPick(sutta: number, score: number, rank: number, droughts: Record<string, number>): CopySuttaPick {
-  const signal = getSuttaSignal(droughts[String(sutta)] ?? 1000)
+function makeCopySuttaPick(sutta: number, score: number, rank: number, _droughts: Record<string, number>): CopySuttaPick {
+  void _droughts
   return {
     sutta,
     rank,
     score,
     probabilityPct: 0,
-    signalColor: signal.color,
-    signalLabel: signal.label,
-    signalState: signal.state,
-    isFresh: signal.state === "fresh",
-    isSnapback: signal.state === "snapback",
   }
 }
 
@@ -856,7 +797,7 @@ export function BetCopyDesk({
       <div className="bet-copy-head">
         <div>
           <h4 className="stat-section-title bet-copy-title">Bet Copy</h4>
-          <p className="picks-hint bet-copy-hint">Highest to lowest model chance. Colors show drought state only.</p>
+          <p className="picks-hint bet-copy-hint">Highest to lowest model score.</p>
         </div>
         <div className="copy-count-control" aria-label="Top sutta count">
           <button
@@ -941,20 +882,13 @@ function SuttaCopyGroup({ label, suttas }: { label: string; suttas: CopySuttaPic
         {rankedSuttas.map((item) => (
           <span
             key={item.sutta}
-            className={`sutta-copy-chip ${item.isFresh ? "sutta-copy-chip--fresh" : ""}`}
-            style={{ borderColor: item.signalColor, color: item.signalColor }}
-            title={`Rank #${item.rank} - ${item.probabilityPct.toFixed(1)}% model chance - ${item.signalLabel} - ${item.score.toFixed(1)} score`}
+            className="sutta-copy-chip"
+            title={`Rank #${item.rank} - model score ${item.score.toFixed(1)}`}
           >
             <span className="sutta-copy-number">{item.sutta}</span>
-            <span className="sutta-copy-probability">{item.probabilityPct.toFixed(1)}%</span>
+            <span className="sutta-copy-score">{item.score.toFixed(1)}</span>
           </span>
         ))}
-      </div>
-      <div className="sutta-copy-legend" aria-label="Sutta color meaning">
-        <span className="sutta-legend-fresh">Green: fresh</span>
-        <span className="sutta-legend-warming">Yellow: warming/cooling</span>
-        <span className="sutta-legend-danger">Red: danger</span>
-        <span className="sutta-legend-snapback">Blue: snapback</span>
       </div>
     </div>
   )

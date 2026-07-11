@@ -832,7 +832,7 @@ export default function AnalysisSection() {
               <div>
                 <h3 className="section-title">Sutta Signal Map</h3>
                 <p className="section-subtitle">
-                  Open and Close are tracked separately. Red = heated risk, blue = extreme snapback, green = fresh
+                  Open and Close are ranked separately by model score.
                 </p>
               </div>
             </div>
