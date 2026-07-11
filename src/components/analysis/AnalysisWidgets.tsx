@@ -21,7 +21,17 @@ function levelLabel(level: ModelCalibration["level"]) {
   return "Weak"
 }
 
-export function ConfidenceBadge({ label, model, liveSuttaAcc }: { label: string; model: ModelCalibration | JodiCalibration; liveSuttaAcc?: number | null }) {
+export function ConfidenceBadge({
+  label,
+  model,
+  liveSuttaAcc,
+  liveSuttaLabel = "7d live",
+}: {
+  label: string
+  model: ModelCalibration | JodiCalibration
+  liveSuttaAcc?: number | null
+  liveSuttaLabel?: string
+}) {
   const jodiStrength = "strength" in model ? model.strength : null
   return (
     <div className={`confidence-badge confidence-badge--${model.level}`}>
@@ -34,7 +44,7 @@ export function ConfidenceBadge({ label, model, liveSuttaAcc }: { label: string;
         {liveSuttaAcc != null ? (
           <span style={{ color: liveSuttaAcc >= 60 ? "#4ade80" : liveSuttaAcc >= 40 ? "#facc15" : "#f87171" }}>
             Sutta {liveSuttaAcc.toFixed(1)}%
-            <span style={{ fontSize: "9px", opacity: 0.7, marginLeft: "3px" }}>7d live</span>
+            <span style={{ fontSize: "9px", opacity: 0.7, marginLeft: "3px" }}>{liveSuttaLabel}</span>
           </span>
         ) : (
           <span>Sutta {model.sutta30.toFixed(1)}%</span>

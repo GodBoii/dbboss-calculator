@@ -11,7 +11,7 @@ import {
   type PredictionResult,
   type JodiAnalysis,
 } from "@/lib/predictor"
-import { runMarketBacktest, runSuttaBacktest7d, type BacktestReport, type SuttaBacktest7dResult } from "@/lib/backtest"
+import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
 import {
   saveRecords,
   getRecordsByMarket,
@@ -68,10 +68,14 @@ type AvoidDigitCall = {
 }
 
 type SuttaAccuracyReport = {
-  open: string
-  close: string
-  jodiAdjustedClose: string
-  jodi: string
+  drawsTested: number
+  startDate: string
+  endDate: string
+  open: { hits: number; accuracy: number; label: string }
+  close: { hits: number; accuracy: number; label: string }
+  adjustedClose: { hits: number; accuracy: number; label: string }
+  jodi: { hits: number; accuracy: number; label: string }
+  adjustedJodi: { hits: number; accuracy: number; label: string }
 }
 
 function buildPriorMarkets(
@@ -93,9 +97,13 @@ function buildPriorMarkets(
   return priorMarkets
 }
 
-function accuracyPercent(correct: number, total: number): string {
-  if (!total) return "0.0%"
-  return `${((correct / total) * 100).toFixed(1)}%`
+function accuracyMetric(correct: number, total: number) {
+  const accuracy = total ? (correct / total) * 100 : 0
+  return {
+    hits: correct,
+    accuracy,
+    label: `${accuracy.toFixed(1)}% (${correct}/${total})`,
+  }
 }
 
 function buildSuttaAccuracyReport(
@@ -111,9 +119,15 @@ function buildSuttaAccuracyReport(
 
   if (datedRecords.length <= 50) return null
 
-  const testRecords = datedRecords.slice(-7)
-  const totals = { open: 0, close: 0, jodiAdjustedClose: 0, jodi: 0 }
-  const correct = { open: 0, close: 0, jodiAdjustedClose: 0, jodi: 0 }
+  const endDate = datedRecords.at(-1)?.isoDate
+  if (!endDate) return null
+  const startDateValue = new Date(`${endDate}T00:00:00Z`)
+  startDateValue.setUTCDate(startDateValue.getUTCDate() - 6)
+  const startDate = startDateValue.toISOString().slice(0, 10)
+  const testRecords = datedRecords.filter((item) => item.isoDate >= startDate && item.isoDate <= endDate)
+  const totals = { open: 0, close: 0, adjustedClose: 0, jodi: 0, adjustedJodi: 0 }
+  const correct = { open: 0, close: 0, adjustedClose: 0, jodi: 0, adjustedJodi: 0 }
+  let drawsTested = 0
 
   for (const { record, isoDate } of testRecords) {
     const priorRecords = datedRecords
@@ -126,6 +140,7 @@ function buildSuttaAccuracyReport(
     const priorMarkets = buildPriorMarkets(marketName, priorRecords, allMarketsRecords, isoDate)
     const prediction = analyzeMarket(marketName, priorRecords, priorMarkets, targetDate)
     if (!prediction) continue
+    drawsTested++
 
     const openSuttas = buildOpenSuttaSet(
       prediction.openPicks,
@@ -175,10 +190,12 @@ function buildSuttaAccuracyReport(
           targetDate,
         )
 
-        totals.jodiAdjustedClose++
+        totals.adjustedClose++
         if (jodiAdjustedCloseSuttas.some((item) => item.sutta === record.closeSutta)) {
-          correct.jodiAdjustedClose++
+          correct.adjustedClose++
         }
+        totals.adjustedJodi++
+        if (buildJodis(openSuttas, jodiAdjustedCloseSuttas).includes(record.jodi)) correct.adjustedJodi++
       }
     }
 
@@ -189,10 +206,14 @@ function buildSuttaAccuracyReport(
   }
 
   return {
-    open: accuracyPercent(correct.open, totals.open),
-    close: accuracyPercent(correct.close, totals.close),
-    jodiAdjustedClose: accuracyPercent(correct.jodiAdjustedClose, totals.jodiAdjustedClose),
-    jodi: accuracyPercent(correct.jodi, totals.jodi),
+    drawsTested,
+    startDate,
+    endDate,
+    open: accuracyMetric(correct.open, totals.open),
+    close: accuracyMetric(correct.close, totals.close),
+    adjustedClose: accuracyMetric(correct.adjustedClose, totals.adjustedClose),
+    jodi: accuracyMetric(correct.jodi, totals.jodi),
+    adjustedJodi: accuracyMetric(correct.adjustedJodi, totals.adjustedJodi),
   }
 }
 
@@ -282,12 +303,11 @@ export default function AnalysisSection() {
   const [picksSubTab, setPicksSubTab] = useState<"open" | "close" | "jodi">("open")
   const [suttaSignalView, setSuttaSignalView] = useState<"open" | "close">("open")
   const [suttaCopyExpanded, setSuttaCopyExpanded] = useState(false)
-  const [copyCount, setCopyCount] = useState(4)
+  const [copyCount, setCopyCount] = useState(6)
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
   const [openPanelInput, setOpenPanelInput] = useState("")
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
   const [backtestReport, setBacktestReport] = useState<BacktestReport | null>(null)
-  const [suttaBacktest, setSuttaBacktest] = useState<SuttaBacktest7dResult | null>(null)
   const [cachedRecords, setCachedRecords] = useState<PanelRecord[]>([])
   const [allMarketsRecords, setAllMarketsRecords] = useState<Record<string, PanelRecord[]>>({})
   const cachedRecordsRef = useRef<PanelRecord[]>([])
@@ -414,11 +434,6 @@ export default function AnalysisSection() {
         if (!prediction) throw new Error("Not enough data to generate predictions.")
 
         setBacktestReport(runMarketBacktest(selectedMarket, records, allMarketsRecords, { days: 30 }))
-        setSuttaBacktest(runSuttaBacktest7d(selectedMarket, records, allMarketsRecords, {
-          buildOpenSuttaSet: buildOpenSuttaSet as (...args: unknown[]) => { sutta: number }[],
-          buildCloseSuttaSet: buildCloseSuttaSet as (...args: unknown[]) => { sutta: number }[],
-          buildJodis: buildJodis as (o: { sutta: number }[], c: { sutta: number }[]) => string[],
-        }))
         setResult(prediction)
         setLoadingState("done")
       } catch (err) {
@@ -518,6 +533,12 @@ export default function AnalysisSection() {
       : null,
     [result, selectedMarket, cachedRecords, allMarketsRecords, copyCount],
   )
+  const displayedCloseAccuracy = openSuttaInput === null
+    ? suttaAccuracyReport?.close
+    : suttaAccuracyReport?.adjustedClose
+  const displayedJodiAccuracy = openSuttaInput === null
+    ? suttaAccuracyReport?.jodi
+    : suttaAccuracyReport?.adjustedJodi
 
   const renderSuttaSignalList = (
     label: string,
@@ -693,9 +714,9 @@ export default function AnalysisSection() {
           </div>
 
           <div className="confidence-strip glass-panel">
-            <ConfidenceBadge label="Open" model={result.calibration.open} liveSuttaAcc={suttaBacktest?.openSuttaAcc} />
-            <ConfidenceBadge label="Close" model={result.calibration.close} liveSuttaAcc={suttaBacktest?.closeSuttaAcc} />
-            <ConfidenceBadge label="Jodi" model={result.calibration.jodi} liveSuttaAcc={suttaBacktest?.jodiAcc} />
+            <ConfidenceBadge label="Open" model={result.calibration.open} liveSuttaAcc={suttaAccuracyReport?.open.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
+            <ConfidenceBadge label="Close" model={result.calibration.close} liveSuttaAcc={displayedCloseAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
+            <ConfidenceBadge label="Jodi" model={result.calibration.jodi} liveSuttaAcc={displayedJodiAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
           </div>
 
           <div className="confidence-strip kind-forecast-strip glass-panel">
@@ -875,18 +896,25 @@ export default function AnalysisSection() {
             {suttaAccuracyReport && (
               <div className="confidence-strip glass-panel" style={{ marginTop: "12px" }}>
                 <div className="status-item">
-                  <span className="status-label">Open accuracy</span>
-                  <span className="status-value">{suttaAccuracyReport.open}</span>
+                  <span className="status-label">Open accuracy · Top {copyCount}</span>
+                  <span className="status-value">{suttaAccuracyReport.open.label}</span>
                 </div>
                 <div className="status-divider" />
                 <div className="status-item">
-                  <span className="status-label">Close accuracy</span>
-                  <span className="status-value">{suttaAccuracyReport.close}</span>
+                  <span className="status-label">{openSuttaInput === null ? "Close" : "Adjusted Close"} accuracy · Top {copyCount}</span>
+                  <span className="status-value">{displayedCloseAccuracy?.label}</span>
                 </div>
                 <div className="status-divider" />
                 <div className="status-item">
-                  <span className="status-label">Jodi accuracy</span>
-                  <span className="status-value">{suttaAccuracyReport.jodi}</span>
+                  <span className="status-label">Jodi accuracy · Top {copyCount}</span>
+                  <span className="status-value">{displayedJodiAccuracy?.label}</span>
+                </div>
+                <div className="status-divider" />
+                <div className="status-item">
+                  <span className="status-label">Backtest window</span>
+                  <span className="status-value">
+                    {suttaAccuracyReport.startDate}–{suttaAccuracyReport.endDate} · {suttaAccuracyReport.drawsTested} draws
+                  </span>
                 </div>
               </div>
             )}
