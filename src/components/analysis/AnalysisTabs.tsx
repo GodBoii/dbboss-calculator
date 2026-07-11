@@ -143,6 +143,75 @@ const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<Close
   "Main Bazar": ["rawCalendarSameDate", "rawPrevCloseCond"],
 }
 
+type SourceFormulaSide = "open" | "close"
+type SourceFormulaOrigin = "previousDraw" | "sameDay"
+type SourceFormulaName =
+  | "source"
+  | "opposite"
+  | "sourceOpposite"
+  | "mirrorOpposite"
+  | "oppositeNearTwo"
+  | "nearTwoOpposite"
+  | "addThreeCycle"
+  | "houseLowFirst"
+type SourceFormulaFeature =
+  | "openSutta"
+  | "closeSutta"
+  | "openPanel.first"
+  | "openPanel.middle"
+  | "openPanel.last"
+  | "openPanel.outerSum"
+  | "openPanel.outerDiff"
+  | "closePanel.first"
+  | "closePanel.middle"
+  | "closePanel.last"
+  | "closePanel.outerSum"
+  | "closePanel.outerDiff"
+
+interface SourceHybridRule {
+  sourceMarket: string
+  sourceFeature: SourceFormulaFeature
+  origin: SourceFormulaOrigin
+  formula: SourceFormulaName
+}
+
+const OPEN_SOURCE_HYBRID_RULES: Partial<Record<string, SourceHybridRule | SourceHybridRule[]>> = {
+  "Madhur Day": { sourceMarket: "Milan Day", sourceFeature: "openSutta", origin: "previousDraw", formula: "sourceOpposite" },
+  "Milan Day": { sourceMarket: "Rajdhani Night", sourceFeature: "openPanel.middle", origin: "previousDraw", formula: "addThreeCycle" },
+  Kalyan: { sourceMarket: "Sridevi", sourceFeature: "openPanel.last", origin: "sameDay", formula: "addThreeCycle" },
+  Sridevi: { sourceMarket: "Milan Night", sourceFeature: "closeSutta", origin: "previousDraw", formula: "mirrorOpposite" },
+  "Sridevi Night": [
+    { sourceMarket: "Madhur Day", sourceFeature: "closeSutta", origin: "sameDay", formula: "addThreeCycle" },
+    { sourceMarket: "Main Bazar", sourceFeature: "openPanel.outerSum", origin: "previousDraw", formula: "source" },
+  ],
+  "Kalyan Night": { sourceMarket: "Madhur Day", sourceFeature: "closePanel.outerDiff", origin: "sameDay", formula: "houseLowFirst" },
+  "Madhur Night": { sourceMarket: "Kalyan Night", sourceFeature: "closePanel.outerSum", origin: "previousDraw", formula: "opposite" },
+  "Milan Night": { sourceMarket: "Madhur Night", sourceFeature: "openSutta", origin: "sameDay", formula: "sourceOpposite" },
+  "Rajdhani Day": { sourceMarket: "Time Bazar", sourceFeature: "openPanel.outerSum", origin: "sameDay", formula: "mirrorOpposite" },
+  "Main Bazar": { sourceMarket: "Madhur Day", sourceFeature: "openPanel.first", origin: "previousDraw", formula: "source" },
+}
+
+const CLOSE_SOURCE_HYBRID_RULES: Partial<Record<string, SourceHybridRule | SourceHybridRule[]>> = {
+  Sridevi: [
+    { sourceMarket: "Kalyan", sourceFeature: "openSutta", origin: "previousDraw", formula: "mirrorOpposite" },
+    { sourceMarket: "Milan Night", sourceFeature: "openPanel.outerDiff", origin: "previousDraw", formula: "opposite" },
+  ],
+  "Time Bazar": { sourceMarket: "Sridevi", sourceFeature: "openSutta", origin: "sameDay", formula: "oppositeNearTwo" },
+  "Madhur Day": { sourceMarket: "Main Bazar", sourceFeature: "closePanel.first", origin: "previousDraw", formula: "mirrorOpposite" },
+  "Milan Day": { sourceMarket: "Madhur Day", sourceFeature: "closeSutta", origin: "sameDay", formula: "oppositeNearTwo" },
+  Kalyan: { sourceMarket: "Time Bazar", sourceFeature: "openSutta", origin: "sameDay", formula: "nearTwoOpposite" },
+  "Sridevi Night": { sourceMarket: "Sridevi", sourceFeature: "closeSutta", origin: "previousDraw", formula: "mirrorOpposite" },
+  "Madhur Night": { sourceMarket: "Sridevi Night", sourceFeature: "openSutta", origin: "sameDay", formula: "addThreeCycle" },
+  "Milan Night": [
+    { sourceMarket: "Madhur Day", sourceFeature: "closeSutta", origin: "sameDay", formula: "addThreeCycle" },
+    { sourceMarket: "Sridevi", sourceFeature: "closePanel.first", origin: "sameDay", formula: "source" },
+  ],
+  "Main Bazar": [
+    { sourceMarket: "Time Bazar", sourceFeature: "openSutta", origin: "sameDay", formula: "addThreeCycle" },
+    { sourceMarket: "Milan Day", sourceFeature: "openPanel.outerSum", origin: "sameDay", formula: "opposite" },
+  ],
+}
+
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
 function compareCopySuttaPicks(a: CopySuttaPick, b: CopySuttaPick) {
   return (
@@ -383,6 +452,128 @@ function houseScore(sutta: number, targetHouse: "low" | "high" | null) {
   return targetHouse !== null && suttaHouse(sutta) === targetHouse ? 1 : 0
 }
 
+function mod10(value: number) {
+  return ((value % 10) + 10) % 10
+}
+
+function sourceFormulaDigits(formula: SourceFormulaName, sourceSutta: number) {
+  if (formula === "source") return [sourceSutta]
+  if (formula === "opposite") return [sourceSutta + 5].map(mod10)
+  if (formula === "sourceOpposite") return [sourceSutta, sourceSutta + 5].map(mod10)
+  if (formula === "oppositeNearTwo") {
+    return [sourceSutta + 5, sourceSutta + 4, sourceSutta + 6, sourceSutta, sourceSutta + 1, sourceSutta - 1].map(mod10)
+  }
+  if (formula === "nearTwoOpposite") {
+    return [sourceSutta, sourceSutta + 1, sourceSutta - 1, sourceSutta + 2, sourceSutta - 2, sourceSutta + 5].map(mod10)
+  }
+  if (formula === "addThreeCycle") {
+    return [sourceSutta, sourceSutta + 3, sourceSutta + 6, sourceSutta + 9, sourceSutta + 1, sourceSutta + 5].map(mod10)
+  }
+  if (formula === "houseLowFirst") {
+    return [sourceSutta, sourceSutta + 5, 1, 2, 3, 4].map(mod10)
+  }
+  return [sourceSutta, 9 - sourceSutta, sourceSutta + 5, 14 - sourceSutta, sourceSutta + 1, sourceSutta - 1].map(mod10)
+}
+
+function panelDigits(panel: string | undefined) {
+  if (!panel || panel.length !== 3) return null
+  const digits = panel.split("").map((part) => Number.parseInt(part, 10))
+  return digits.some((digitValue) => Number.isNaN(digitValue)) ? null : digits
+}
+
+function panelDigit(panel: string | undefined, index: number) {
+  const digits = panelDigits(panel)
+  return digits ? digits[index] : null
+}
+
+function panelOuterSum(panel: string | undefined) {
+  const digits = panelDigits(panel)
+  return digits ? mod10(digits[0] + digits[2]) : null
+}
+
+function panelOuterDiff(panel: string | undefined) {
+  const digits = panelDigits(panel)
+  return digits ? mod10(digits[0] - digits[2]) : null
+}
+
+function sourceFeatureValue(record: PanelRecord, feature: SourceFormulaFeature) {
+  if (feature === "openSutta") return record.openSutta >= 0 && record.openSutta <= 9 ? record.openSutta : null
+  if (feature === "closeSutta") return record.closeSutta >= 0 && record.closeSutta <= 9 ? record.closeSutta : null
+  if (feature === "openPanel.first") return panelDigit(record.openPanel, 0)
+  if (feature === "openPanel.middle") return panelDigit(record.openPanel, 1)
+  if (feature === "openPanel.last") return panelDigit(record.openPanel, 2)
+  if (feature === "openPanel.outerSum") return panelOuterSum(record.openPanel)
+  if (feature === "openPanel.outerDiff") return panelOuterDiff(record.openPanel)
+  if (feature === "closePanel.first") return panelDigit(record.closePanel, 0)
+  if (feature === "closePanel.middle") return panelDigit(record.closePanel, 1)
+  if (feature === "closePanel.last") return panelDigit(record.closePanel, 2)
+  if (feature === "closePanel.outerSum") return panelOuterSum(record.closePanel)
+  return panelOuterDiff(record.closePanel)
+}
+
+function findSourceRecord(
+  records: PanelRecord[],
+  targetDate: Date,
+  origin: SourceFormulaOrigin,
+) {
+  const targetISO = targetDate.toISOString().slice(0, 10)
+  const dated = records
+    .map((record) => ({ record, isoDate: getRecordISODate(record) }))
+    .filter((item): item is { record: PanelRecord; isoDate: string } => typeof item.isoDate === "string")
+    .sort((a, b) => a.isoDate.localeCompare(b.isoDate))
+
+  if (origin === "sameDay") return dated.find((item) => item.isoDate === targetISO)?.record ?? null
+  return dated
+    .filter((item) => item.isoDate < targetISO)
+    .at(-1)?.record ?? null
+}
+
+function applySourceHybridPromotion(input: {
+  ranking: CopySuttaPick[]
+  side: SourceFormulaSide
+  marketName: string
+  count: number
+  targetDate: Date
+  allMarketsRecords: Record<string, PanelRecord[]>
+}): CopySuttaPick[] {
+  const { ranking, side, marketName, count, targetDate, allMarketsRecords } = input
+  if (count !== 6) return ranking
+  const config = side === "open" ? OPEN_SOURCE_HYBRID_RULES[marketName] : CLOSE_SOURCE_HYBRID_RULES[marketName]
+  const rules = Array.isArray(config) ? config : config ? [config] : []
+  if (rules.length === 0) return ranking
+
+  let current = ranking
+  for (const rule of rules) {
+    const sourceRecord = findSourceRecord(allMarketsRecords[rule.sourceMarket] ?? [], targetDate, rule.origin)
+    if (!sourceRecord) continue
+    const sourceSutta = sourceFeatureValue(sourceRecord, rule.sourceFeature)
+    if (sourceSutta === null) continue
+
+    const order = current.slice(0, 4).map((pick) => pick.sutta)
+    for (const sutta of sourceFormulaDigits(rule.formula, sourceSutta)) {
+      if (order.length >= count) break
+      if (!order.includes(sutta)) order.push(sutta)
+    }
+    for (const pick of current) {
+      if (order.length >= count) break
+      if (!order.includes(pick.sutta)) order.push(pick.sutta)
+    }
+    for (let sutta = 0; order.length < count && sutta <= 9; sutta++) {
+      if (!order.includes(sutta)) order.push(sutta)
+    }
+
+    current = applyRankProbabilities(
+      order.slice(0, count).map((sutta, index) => ({
+        sutta,
+        rank: index + 1,
+        score: 100 - index * 5,
+        probabilityPct: 0,
+      })),
+    )
+  }
+  return current
+}
+
 function buildOpenSuttaSetCore(
   picks: PanelPick[],
   droughts: Record<string, number>,
@@ -390,23 +581,34 @@ function buildOpenSuttaSetCore(
   count: number,
   marketName = "",
   targetDate = new Date(),
+  allMarketsRecords: Record<string, PanelRecord[]> = {},
 ): CopySuttaPick[] {
-  if (records.length < 50) return buildTopSuttaSet(picks, droughts, count)
+  const withHybrid = (ranking: CopySuttaPick[]) => applySourceHybridPromotion({
+    ranking,
+    side: "open",
+    marketName,
+    count,
+    targetDate,
+    allMarketsRecords,
+  })
+  if (records.length < 50) return withHybrid(buildTopSuttaSet(picks, droughts, count))
 
   const openRecords = records.filter((record) => record.openPanel && record.openSutta >= 0)
-  if (openRecords.length < 50) return buildTopSuttaSet(picks, droughts, count)
+  if (openRecords.length < 50) return withHybrid(buildTopSuttaSet(picks, droughts, count))
 
-  const isolatedTop6 = buildOpenTop6Model({ marketName, records, droughts, count, targetDate })
-  if (isolatedTop6) return isolatedTop6
+  const isolatedTop6 = buildOpenTop6Model({
+    marketName, records, droughts, count, targetDate, allMarketsRecords,
+  })
+  if (isolatedTop6) return withHybrid(isolatedTop6)
 
   const strategy = resolveCountAwareStrategy(
     OPEN_SUTTA_MARKET_STRATEGY[marketName],
     "current",
     count,
   )
-  if (strategy === "current") return buildTopSuttaSet(picks, droughts, count)
-  if (strategy === "rankOnly") return buildRankOnlySuttaSet(picks, droughts, count)
-  if (strategy === "weightedSnap") return buildTopSuttaSet(picks, droughts, count, "weightedSnap")
+  if (strategy === "current") return withHybrid(buildTopSuttaSet(picks, droughts, count))
+  if (strategy === "rankOnly") return withHybrid(buildRankOnlySuttaSet(picks, droughts, count))
+  if (strategy === "weightedSnap") return withHybrid(buildTopSuttaSet(picks, droughts, count, "weightedSnap"))
 
   const todayDayName = getDayNameForDate(targetDate)
   const recent24 = Array(10).fill(0)
@@ -505,7 +707,7 @@ function buildOpenSuttaSetCore(
     return { sutta, score }
   })
 
-  return finalizeScoredSuttaRows(rows, droughts, count)
+  return withHybrid(finalizeScoredSuttaRows(rows, droughts, count))
 }
 
 function buildCloseSuttaSetCore(
@@ -520,11 +722,19 @@ function buildCloseSuttaSetCore(
 ): CopySuttaPick[] {
   const productionMode: SuttaSelectionMode = "weightedAggregate"
   const currentProduction = (strategyCount = count) => buildTopSuttaSet(picks, droughts, strategyCount, productionMode)
+  const withHybrid = (ranking: CopySuttaPick[]) => applySourceHybridPromotion({
+    ranking,
+    side: "close",
+    marketName,
+    count,
+    targetDate,
+    allMarketsRecords,
+  })
 
-  if (records.length < 50) return currentProduction()
+  if (records.length < 50) return withHybrid(currentProduction())
 
   const closeRecords = records.filter((record) => record.closePanel && record.closeSutta >= 0)
-  if (closeRecords.length < 50) return currentProduction()
+  if (closeRecords.length < 50) return withHybrid(currentProduction())
 
   const isolatedTop6 = currentOpenSutta === null
     ? buildCloseTop6Model({ marketName, records, droughts, count, targetDate })
@@ -536,7 +746,7 @@ function buildCloseSuttaSetCore(
         currentOpenSutta,
         targetDate,
       })
-  if (isolatedTop6) return isolatedTop6
+  if (isolatedTop6) return withHybrid(isolatedTop6)
 
   const strategyConfig = resolveCountAwareStrategy(
     CLOSE_SUTTA_MARKET_STRATEGY[marketName],
@@ -586,7 +796,7 @@ function buildCloseSuttaSetCore(
   const previousJodi = previousRecord?.jodi
   const sourceMarket = LIQUIDITY_FLOW_MAP[marketName]
   const sourceRecords = sourceMarket ? allMarketsRecords[sourceMarket] ?? [] : []
-  const sourcePreviousOpen = sourceRecords[sourceRecords.length - 1]?.openSutta
+  const sourcePreviousOpen = findSourceRecord(sourceRecords, targetDate, "previousDraw")?.openSutta
 
   for (let i = 1; i < records.length; i++) {
     const previous = records[i - 1]
@@ -705,7 +915,7 @@ function buildCloseSuttaSetCore(
   }
 
   const sources = strategies.map((strategy) => buildStrategySet(strategy, 10))
-  return mergeCopySuttaSources(sources, count)
+  return withHybrid(mergeCopySuttaSources(sources, count))
 }
 
 function canonicalizeSuttaRanking(primary: CopySuttaPick[], remainder: CopySuttaPick[]) {
@@ -728,18 +938,21 @@ export function buildOpenSuttaRanking(
   records: PanelRecord[],
   marketName = "",
   targetDate = new Date(),
+  allMarketsRecords: Record<string, PanelRecord[]> = {},
 ) {
   return canonicalizeSuttaRanking(
-    buildOpenSuttaSetCore(picks, droughts, records, 6, marketName, targetDate),
-    buildOpenSuttaSetCore(picks, droughts, records, 10, marketName, targetDate),
+    buildOpenSuttaSetCore(picks, droughts, records, 6, marketName, targetDate, allMarketsRecords),
+    buildOpenSuttaSetCore(picks, droughts, records, 10, marketName, targetDate, allMarketsRecords),
   )
 }
 
 export function buildOpenSuttaSet(
   picks: PanelPick[], droughts: Record<string, number>, records: PanelRecord[], count: number,
-  marketName = "", targetDate = new Date(),
+  marketName = "", targetDate = new Date(), allMarketsRecords: Record<string, PanelRecord[]> = {},
 ) {
-  return buildOpenSuttaRanking(picks, droughts, records, marketName, targetDate).slice(0, clampCopyCount(count))
+  return buildOpenSuttaRanking(
+    picks, droughts, records, marketName, targetDate, allMarketsRecords,
+  ).slice(0, clampCopyCount(count))
 }
 
 /** One count-independent Close (or known-open adjusted Close) model ranking. */

@@ -134,6 +134,7 @@ function buildSuttaAccuracyReport(
       copyCount,
       marketName,
       targetDate,
+      allMarketsRecords,
     )
     const closeSuttas = buildCloseSuttaSet(
       prediction.closePicks,
@@ -142,7 +143,7 @@ function buildSuttaAccuracyReport(
       copyCount,
       marketName,
       null,
-      priorMarkets,
+      allMarketsRecords,
       targetDate,
     )
 
@@ -170,7 +171,7 @@ function buildSuttaAccuracyReport(
           copyCount,
           marketName,
           record.openSutta,
-          priorMarkets,
+          allMarketsRecords,
           targetDate,
         )
 
@@ -478,9 +479,11 @@ export default function AnalysisSection() {
           result.openSuttaDroughts,
           cachedRecords,
           selectedMarket,
+          new Date(),
+          allMarketsRecords,
         )
       : [],
-    [result, cachedRecords, selectedMarket],
+    [result, cachedRecords, selectedMarket, allMarketsRecords],
   )
   const closeSuttaRanking = useMemo(
     () => result
