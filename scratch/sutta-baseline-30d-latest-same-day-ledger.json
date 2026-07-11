@@ -1,0 +1,8278 @@
+{
+  "generatedAt": "2026-07-11T08:34:06.531Z",
+  "days": 30,
+  "sourceCache": "C:\\Users\\prajw\\Downloads\\dbboss\\dbboss-calculator\\scratch\\sutta-research-records.json",
+  "dateRanges": {
+    "Sridevi": [
+      "2026-06-06",
+      "2026-07-05"
+    ],
+    "Time Bazar": [
+      "2026-06-05",
+      "2026-07-04"
+    ],
+    "Madhur Day": [
+      "2026-06-06",
+      "2026-07-05"
+    ],
+    "Milan Day": [
+      "2026-06-05",
+      "2026-07-04"
+    ],
+    "Rajdhani Day": [
+      "2026-06-05",
+      "2026-07-04"
+    ],
+    "Kalyan": [
+      "2026-06-05",
+      "2026-07-04"
+    ],
+    "Sridevi Night": [
+      "2026-06-06",
+      "2026-07-05"
+    ],
+    "Kalyan Night": [
+      "2026-06-04",
+      "2026-07-03"
+    ],
+    "Madhur Night": [
+      "2026-06-05",
+      "2026-07-04"
+    ],
+    "Milan Night": [
+      "2026-06-05",
+      "2026-07-04"
+    ],
+    "Rajdhani Night": [
+      "2026-06-04",
+      "2026-07-03"
+    ],
+    "Main Bazar": [
+      "2026-06-04",
+      "2026-07-03"
+    ]
+  },
+  "totals": {
+    "4": {
+      "open": {
+        "n": 309,
+        "hit": 149
+      },
+      "close": {
+        "n": 309,
+        "hit": 140
+      },
+      "jodi": {
+        "n": 309,
+        "hit": 69
+      },
+      "adjustedClose": {
+        "n": 309,
+        "hit": 149
+      }
+    },
+    "6": {
+      "open": {
+        "n": 309,
+        "hit": 235
+      },
+      "close": {
+        "n": 309,
+        "hit": 235
+      },
+      "jodi": {
+        "n": 309,
+        "hit": 176
+      },
+      "adjustedClose": {
+        "n": 309,
+        "hit": 230
+      }
+    }
+  },
+  "byMarket": {
+    "Sridevi": {
+      "4": {
+        "open": {
+          "n": 30,
+          "hit": 13
+        },
+        "close": {
+          "n": 30,
+          "hit": 14
+        },
+        "jodi": {
+          "n": 30,
+          "hit": 5
+        },
+        "adjustedClose": {
+          "n": 30,
+          "hit": 16
+        }
+      },
+      "6": {
+        "open": {
+          "n": 30,
+          "hit": 23
+        },
+        "close": {
+          "n": 30,
+          "hit": 23
+        },
+        "jodi": {
+          "n": 30,
+          "hit": 16
+        },
+        "adjustedClose": {
+          "n": 30,
+          "hit": 22
+        }
+      }
+    },
+    "Time Bazar": {
+      "4": {
+        "open": {
+          "n": 26,
+          "hit": 14
+        },
+        "close": {
+          "n": 26,
+          "hit": 14
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 9
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 14
+        }
+      },
+      "6": {
+        "open": {
+          "n": 26,
+          "hit": 21
+        },
+        "close": {
+          "n": 26,
+          "hit": 22
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 17
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 22
+        }
+      }
+    },
+    "Madhur Day": {
+      "4": {
+        "open": {
+          "n": 30,
+          "hit": 12
+        },
+        "close": {
+          "n": 30,
+          "hit": 11
+        },
+        "jodi": {
+          "n": 30,
+          "hit": 5
+        },
+        "adjustedClose": {
+          "n": 30,
+          "hit": 11
+        }
+      },
+      "6": {
+        "open": {
+          "n": 30,
+          "hit": 23
+        },
+        "close": {
+          "n": 30,
+          "hit": 19
+        },
+        "jodi": {
+          "n": 30,
+          "hit": 15
+        },
+        "adjustedClose": {
+          "n": 30,
+          "hit": 19
+        }
+      }
+    },
+    "Milan Day": {
+      "4": {
+        "open": {
+          "n": 26,
+          "hit": 9
+        },
+        "close": {
+          "n": 26,
+          "hit": 12
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 4
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 14
+        }
+      },
+      "6": {
+        "open": {
+          "n": 26,
+          "hit": 19
+        },
+        "close": {
+          "n": 26,
+          "hit": 21
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 15
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 21
+        }
+      }
+    },
+    "Rajdhani Day": {
+      "4": {
+        "open": {
+          "n": 26,
+          "hit": 16
+        },
+        "close": {
+          "n": 26,
+          "hit": 13
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 8
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 15
+        }
+      },
+      "6": {
+        "open": {
+          "n": 26,
+          "hit": 20
+        },
+        "close": {
+          "n": 26,
+          "hit": 18
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 13
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 19
+        }
+      }
+    },
+    "Kalyan": {
+      "4": {
+        "open": {
+          "n": 26,
+          "hit": 17
+        },
+        "close": {
+          "n": 26,
+          "hit": 13
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 7
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 12
+        }
+      },
+      "6": {
+        "open": {
+          "n": 26,
+          "hit": 21
+        },
+        "close": {
+          "n": 26,
+          "hit": 18
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 16
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 18
+        }
+      }
+    },
+    "Sridevi Night": {
+      "4": {
+        "open": {
+          "n": 30,
+          "hit": 16
+        },
+        "close": {
+          "n": 30,
+          "hit": 14
+        },
+        "jodi": {
+          "n": 30,
+          "hit": 8
+        },
+        "adjustedClose": {
+          "n": 30,
+          "hit": 15
+        }
+      },
+      "6": {
+        "open": {
+          "n": 30,
+          "hit": 26
+        },
+        "close": {
+          "n": 30,
+          "hit": 25
+        },
+        "jodi": {
+          "n": 30,
+          "hit": 22
+        },
+        "adjustedClose": {
+          "n": 30,
+          "hit": 21
+        }
+      }
+    },
+    "Kalyan Night": {
+      "4": {
+        "open": {
+          "n": 19,
+          "hit": 8
+        },
+        "close": {
+          "n": 19,
+          "hit": 7
+        },
+        "jodi": {
+          "n": 19,
+          "hit": 2
+        },
+        "adjustedClose": {
+          "n": 19,
+          "hit": 10
+        }
+      },
+      "6": {
+        "open": {
+          "n": 19,
+          "hit": 12
+        },
+        "close": {
+          "n": 19,
+          "hit": 14
+        },
+        "jodi": {
+          "n": 19,
+          "hit": 8
+        },
+        "adjustedClose": {
+          "n": 19,
+          "hit": 13
+        }
+      }
+    },
+    "Madhur Night": {
+      "4": {
+        "open": {
+          "n": 26,
+          "hit": 10
+        },
+        "close": {
+          "n": 26,
+          "hit": 10
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 4
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 10
+        }
+      },
+      "6": {
+        "open": {
+          "n": 26,
+          "hit": 20
+        },
+        "close": {
+          "n": 26,
+          "hit": 20
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 16
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 20
+        }
+      }
+    },
+    "Milan Night": {
+      "4": {
+        "open": {
+          "n": 26,
+          "hit": 15
+        },
+        "close": {
+          "n": 26,
+          "hit": 13
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 9
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 13
+        }
+      },
+      "6": {
+        "open": {
+          "n": 26,
+          "hit": 20
+        },
+        "close": {
+          "n": 26,
+          "hit": 21
+        },
+        "jodi": {
+          "n": 26,
+          "hit": 15
+        },
+        "adjustedClose": {
+          "n": 26,
+          "hit": 21
+        }
+      }
+    },
+    "Rajdhani Night": {
+      "4": {
+        "open": {
+          "n": 22,
+          "hit": 10
+        },
+        "close": {
+          "n": 22,
+          "hit": 10
+        },
+        "jodi": {
+          "n": 22,
+          "hit": 4
+        },
+        "adjustedClose": {
+          "n": 22,
+          "hit": 10
+        }
+      },
+      "6": {
+        "open": {
+          "n": 22,
+          "hit": 17
+        },
+        "close": {
+          "n": 22,
+          "hit": 17
+        },
+        "jodi": {
+          "n": 22,
+          "hit": 13
+        },
+        "adjustedClose": {
+          "n": 22,
+          "hit": 17
+        }
+      }
+    },
+    "Main Bazar": {
+      "4": {
+        "open": {
+          "n": 22,
+          "hit": 9
+        },
+        "close": {
+          "n": 22,
+          "hit": 9
+        },
+        "jodi": {
+          "n": 22,
+          "hit": 4
+        },
+        "adjustedClose": {
+          "n": 22,
+          "hit": 9
+        }
+      },
+      "6": {
+        "open": {
+          "n": 22,
+          "hit": 13
+        },
+        "close": {
+          "n": 22,
+          "hit": 17
+        },
+        "jodi": {
+          "n": 22,
+          "hit": 10
+        },
+        "adjustedClose": {
+          "n": 22,
+          "hit": 17
+        }
+      }
+    }
+  },
+  "ledger": [
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "667",
+      "closePanel": "558",
+      "actualOpen": 9,
+      "actualClose": 8,
+      "openRanking": [
+        3,
+        7,
+        8,
+        9,
+        4,
+        5
+      ],
+      "closeRanking": [
+        1,
+        7,
+        3,
+        5,
+        8,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-07",
+      "day": "Sunday",
+      "openPanel": "236",
+      "closePanel": "450",
+      "actualOpen": 1,
+      "actualClose": 9,
+      "openRanking": [
+        9,
+        5,
+        6,
+        3,
+        8,
+        1
+      ],
+      "closeRanking": [
+        1,
+        7,
+        5,
+        3,
+        4,
+        0
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "499",
+      "closePanel": "230",
+      "actualOpen": 2,
+      "actualClose": 5,
+      "openRanking": [
+        7,
+        8,
+        6,
+        3,
+        1,
+        4
+      ],
+      "closeRanking": [
+        1,
+        3,
+        5,
+        7,
+        4,
+        0
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "266",
+      "closePanel": "569",
+      "actualOpen": 4,
+      "actualClose": 0,
+      "openRanking": [
+        2,
+        3,
+        8,
+        7,
+        1,
+        9
+      ],
+      "closeRanking": [
+        1,
+        3,
+        7,
+        0,
+        9,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "688",
+      "closePanel": "117",
+      "actualOpen": 2,
+      "actualClose": 9,
+      "openRanking": [
+        8,
+        2,
+        5,
+        3,
+        7,
+        6
+      ],
+      "closeRanking": [
+        1,
+        3,
+        7,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "260",
+      "closePanel": "236",
+      "actualOpen": 8,
+      "actualClose": 1,
+      "openRanking": [
+        8,
+        9,
+        6,
+        3,
+        7,
+        2
+      ],
+      "closeRanking": [
+        1,
+        3,
+        7,
+        4,
+        9,
+        0
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "158",
+      "closePanel": "159",
+      "actualOpen": 4,
+      "actualClose": 5,
+      "openRanking": [
+        8,
+        4,
+        3,
+        7,
+        5,
+        9
+      ],
+      "closeRanking": [
+        3,
+        7,
+        1,
+        8,
+        6,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "249",
+      "closePanel": "167",
+      "actualOpen": 5,
+      "actualClose": 4,
+      "openRanking": [
+        8,
+        3,
+        9,
+        4,
+        5,
+        0
+      ],
+      "closeRanking": [
+        3,
+        1,
+        7,
+        8,
+        2,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-14",
+      "day": "Sunday",
+      "openPanel": "239",
+      "closePanel": "679",
+      "actualOpen": 4,
+      "actualClose": 2,
+      "openRanking": [
+        9,
+        5,
+        8,
+        7,
+        6,
+        3
+      ],
+      "closeRanking": [
+        3,
+        7,
+        8,
+        1,
+        6,
+        2
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "237",
+      "closePanel": "689",
+      "actualOpen": 2,
+      "actualClose": 3,
+      "openRanking": [
+        9,
+        7,
+        8,
+        2,
+        6,
+        3
+      ],
+      "closeRanking": [
+        3,
+        7,
+        8,
+        0,
+        1,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "479",
+      "closePanel": "344",
+      "actualOpen": 0,
+      "actualClose": 1,
+      "openRanking": [
+        9,
+        2,
+        7,
+        8,
+        0,
+        5
+      ],
+      "closeRanking": [
+        7,
+        8,
+        1,
+        0,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "370",
+      "closePanel": "778",
+      "actualOpen": 0,
+      "actualClose": 2,
+      "openRanking": [
+        9,
+        2,
+        8,
+        7,
+        6,
+        3
+      ],
+      "closeRanking": [
+        7,
+        8,
+        0,
+        9,
+        2,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "259",
+      "closePanel": "990",
+      "actualOpen": 6,
+      "actualClose": 8,
+      "openRanking": [
+        9,
+        8,
+        7,
+        2,
+        0,
+        4
+      ],
+      "closeRanking": [
+        7,
+        8,
+        5,
+        9,
+        0,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "114",
+      "closePanel": "390",
+      "actualOpen": 6,
+      "actualClose": 2,
+      "openRanking": [
+        8,
+        9,
+        7,
+        4,
+        3,
+        6
+      ],
+      "closeRanking": [
+        7,
+        5,
+        0,
+        8,
+        1,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "389",
+      "closePanel": "467",
+      "actualOpen": 0,
+      "actualClose": 7,
+      "openRanking": [
+        9,
+        5,
+        8,
+        7,
+        0,
+        4
+      ],
+      "closeRanking": [
+        7,
+        5,
+        0,
+        9,
+        4,
+        8
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-21",
+      "day": "Sunday",
+      "openPanel": "360",
+      "closePanel": "590",
+      "actualOpen": 9,
+      "actualClose": 4,
+      "openRanking": [
+        9,
+        5,
+        8,
+        7,
+        4,
+        0
+      ],
+      "closeRanking": [
+        6,
+        0,
+        5,
+        9,
+        4,
+        8
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "168",
+      "closePanel": "880",
+      "actualOpen": 5,
+      "actualClose": 6,
+      "openRanking": [
+        7,
+        9,
+        8,
+        6,
+        4,
+        5
+      ],
+      "closeRanking": [
+        6,
+        5,
+        0,
+        1,
+        9,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "900",
+      "closePanel": "257",
+      "actualOpen": 9,
+      "actualClose": 4,
+      "openRanking": [
+        9,
+        2,
+        8,
+        7,
+        1,
+        6
+      ],
+      "closeRanking": [
+        1,
+        5,
+        0,
+        9,
+        4,
+        8
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "677",
+      "closePanel": "399",
+      "actualOpen": 0,
+      "actualClose": 1,
+      "openRanking": [
+        9,
+        2,
+        8,
+        7,
+        0,
+        5
+      ],
+      "closeRanking": [
+        1,
+        5,
+        0,
+        8,
+        3,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "348",
+      "closePanel": "277",
+      "actualOpen": 5,
+      "actualClose": 6,
+      "openRanking": [
+        6,
+        8,
+        9,
+        7,
+        5,
+        4
+      ],
+      "closeRanking": [
+        5,
+        0,
+        8,
+        9,
+        4,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "479",
+      "closePanel": "570",
+      "actualOpen": 0,
+      "actualClose": 2,
+      "openRanking": [
+        8,
+        9,
+        7,
+        4,
+        2,
+        6
+      ],
+      "closeRanking": [
+        0,
+        8,
+        5,
+        7,
+        2,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "470",
+      "closePanel": "348",
+      "actualOpen": 1,
+      "actualClose": 5,
+      "openRanking": [
+        9,
+        5,
+        8,
+        7,
+        4,
+        0
+      ],
+      "closeRanking": [
+        0,
+        8,
+        5,
+        9,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-28",
+      "day": "Sunday",
+      "openPanel": "245",
+      "closePanel": "167",
+      "actualOpen": 1,
+      "actualClose": 4,
+      "openRanking": [
+        9,
+        5,
+        8,
+        7,
+        1,
+        3
+      ],
+      "closeRanking": [
+        8,
+        0,
+        9,
+        7,
+        4,
+        5
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "470",
+      "closePanel": "369",
+      "actualOpen": 1,
+      "actualClose": 8,
+      "openRanking": [
+        9,
+        8,
+        7,
+        2,
+        1,
+        3
+      ],
+      "closeRanking": [
+        8,
+        0,
+        9,
+        7,
+        4,
+        5
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "340",
+      "closePanel": "250",
+      "actualOpen": 7,
+      "actualClose": 7,
+      "openRanking": [
+        9,
+        2,
+        8,
+        7,
+        3,
+        6
+      ],
+      "closeRanking": [
+        0,
+        9,
+        7,
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "368",
+      "closePanel": "360",
+      "actualOpen": 7,
+      "actualClose": 9,
+      "openRanking": [
+        9,
+        2,
+        8,
+        7,
+        3,
+        1
+      ],
+      "closeRanking": [
+        0,
+        9,
+        1,
+        7,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "358",
+      "closePanel": "150",
+      "actualOpen": 6,
+      "actualClose": 6,
+      "openRanking": [
+        6,
+        8,
+        9,
+        7,
+        3,
+        1
+      ],
+      "closeRanking": [
+        0,
+        9,
+        7,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "239",
+      "closePanel": "458",
+      "actualOpen": 4,
+      "actualClose": 7,
+      "openRanking": [
+        8,
+        9,
+        7,
+        4,
+        5,
+        0
+      ],
+      "closeRanking": [
+        0,
+        5,
+        1,
+        9,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "690",
+      "closePanel": "566",
+      "actualOpen": 5,
+      "actualClose": 7,
+      "openRanking": [
+        9,
+        5,
+        8,
+        7,
+        1,
+        6
+      ],
+      "closeRanking": [
+        0,
+        1,
+        5,
+        9,
+        4,
+        8
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "isoDate": "2026-07-05",
+      "day": "Sunday",
+      "openPanel": "135",
+      "closePanel": "569",
+      "actualOpen": 9,
+      "actualClose": 0,
+      "openRanking": [
+        9,
+        5,
+        8,
+        7,
+        1,
+        6
+      ],
+      "closeRanking": [
+        0,
+        1,
+        5,
+        8,
+        4,
+        9
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "490",
+      "closePanel": "248",
+      "actualOpen": 3,
+      "actualClose": 4,
+      "openRanking": [
+        4,
+        2,
+        5,
+        1,
+        3,
+        8
+      ],
+      "closeRanking": [
+        6,
+        2,
+        0,
+        3,
+        8,
+        7
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "270",
+      "closePanel": "120",
+      "actualOpen": 9,
+      "actualClose": 3,
+      "openRanking": [
+        6,
+        8,
+        5,
+        9,
+        0,
+        4
+      ],
+      "closeRanking": [
+        1,
+        2,
+        6,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "238",
+      "closePanel": "689",
+      "actualOpen": 3,
+      "actualClose": 3,
+      "openRanking": [
+        4,
+        0,
+        6,
+        3,
+        9,
+        2
+      ],
+      "closeRanking": [
+        9,
+        2,
+        8,
+        1,
+        7,
+        6
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "250",
+      "closePanel": "446",
+      "actualOpen": 7,
+      "actualClose": 4,
+      "openRanking": [
+        0,
+        2,
+        7,
+        5,
+        6,
+        8
+      ],
+      "closeRanking": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        0
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "336",
+      "closePanel": "300",
+      "actualOpen": 2,
+      "actualClose": 3,
+      "openRanking": [
+        1,
+        5,
+        2,
+        3,
+        6,
+        9
+      ],
+      "closeRanking": [
+        4,
+        8,
+        3,
+        5,
+        7,
+        6
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "135",
+      "closePanel": "170",
+      "actualOpen": 9,
+      "actualClose": 8,
+      "openRanking": [
+        7,
+        0,
+        5,
+        6,
+        9,
+        2
+      ],
+      "closeRanking": [
+        1,
+        3,
+        7,
+        8,
+        2,
+        4
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "240",
+      "closePanel": "226",
+      "actualOpen": 6,
+      "actualClose": 0,
+      "openRanking": [
+        4,
+        8,
+        0,
+        2,
+        3,
+        7
+      ],
+      "closeRanking": [
+        7,
+        2,
+        9,
+        8,
+        0,
+        4
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "180",
+      "closePanel": "456",
+      "actualOpen": 9,
+      "actualClose": 5,
+      "openRanking": [
+        8,
+        3,
+        5,
+        4,
+        9,
+        0
+      ],
+      "closeRanking": [
+        1,
+        8,
+        0,
+        3,
+        9,
+        5
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "135",
+      "closePanel": "279",
+      "actualOpen": 9,
+      "actualClose": 8,
+      "openRanking": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        3
+      ],
+      "closeRanking": [
+        1,
+        2,
+        8,
+        0,
+        7,
+        6
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "233",
+      "closePanel": "567",
+      "actualOpen": 8,
+      "actualClose": 8,
+      "openRanking": [
+        9,
+        1,
+        4,
+        8,
+        0,
+        2
+      ],
+      "closeRanking": [
+        7,
+        0,
+        2,
+        9,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "400",
+      "closePanel": "338",
+      "actualOpen": 4,
+      "actualClose": 4,
+      "openRanking": [
+        8,
+        1,
+        6,
+        0,
+        2,
+        3
+      ],
+      "closeRanking": [
+        3,
+        7,
+        0,
+        1,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "268",
+      "closePanel": "157",
+      "actualOpen": 6,
+      "actualClose": 3,
+      "openRanking": [
+        6,
+        5,
+        7,
+        0,
+        1,
+        3
+      ],
+      "closeRanking": [
+        4,
+        3,
+        0,
+        8,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "290",
+      "closePanel": "460",
+      "actualOpen": 1,
+      "actualClose": 0,
+      "openRanking": [
+        1,
+        0,
+        5,
+        6,
+        8,
+        2
+      ],
+      "closeRanking": [
+        8,
+        0,
+        2,
+        3,
+        1,
+        6
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "479",
+      "closePanel": "667",
+      "actualOpen": 0,
+      "actualClose": 9,
+      "openRanking": [
+        1,
+        4,
+        5,
+        0,
+        6,
+        9
+      ],
+      "closeRanking": [
+        4,
+        9,
+        3,
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "900",
+      "closePanel": "470",
+      "actualOpen": 9,
+      "actualClose": 1,
+      "openRanking": [
+        0,
+        3,
+        1,
+        6,
+        8,
+        2
+      ],
+      "closeRanking": [
+        5,
+        0,
+        6,
+        2,
+        9,
+        1
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "590",
+      "closePanel": "118",
+      "actualOpen": 4,
+      "actualClose": 0,
+      "openRanking": [
+        8,
+        0,
+        1,
+        3,
+        4,
+        2
+      ],
+      "closeRanking": [
+        6,
+        4,
+        3,
+        0,
+        5,
+        9
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "299",
+      "closePanel": "346",
+      "actualOpen": 0,
+      "actualClose": 3,
+      "openRanking": [
+        0,
+        7,
+        5,
+        1,
+        3,
+        4
+      ],
+      "closeRanking": [
+        0,
+        8,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "990",
+      "closePanel": "118",
+      "actualOpen": 8,
+      "actualClose": 0,
+      "openRanking": [
+        9,
+        8,
+        2,
+        3,
+        6,
+        7
+      ],
+      "closeRanking": [
+        3,
+        5,
+        8,
+        0,
+        9,
+        1
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "380",
+      "closePanel": "145",
+      "actualOpen": 1,
+      "actualClose": 0,
+      "openRanking": [
+        3,
+        0,
+        1,
+        8,
+        4,
+        6
+      ],
+      "closeRanking": [
+        5,
+        7,
+        0,
+        4,
+        6,
+        1
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "678",
+      "closePanel": "268",
+      "actualOpen": 1,
+      "actualClose": 6,
+      "openRanking": [
+        0,
+        2,
+        6,
+        4,
+        9,
+        1
+      ],
+      "closeRanking": [
+        9,
+        4,
+        3,
+        1,
+        6,
+        5
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "234",
+      "closePanel": "450",
+      "actualOpen": 9,
+      "actualClose": 9,
+      "openRanking": [
+        5,
+        0,
+        3,
+        4,
+        7,
+        1
+      ],
+      "closeRanking": [
+        1,
+        5,
+        9,
+        0,
+        6,
+        7
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "559",
+      "closePanel": "269",
+      "actualOpen": 9,
+      "actualClose": 7,
+      "openRanking": [
+        4,
+        2,
+        5,
+        8,
+        9,
+        0
+      ],
+      "closeRanking": [
+        5,
+        7,
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "350",
+      "closePanel": "236",
+      "actualOpen": 8,
+      "actualClose": 1,
+      "openRanking": [
+        0,
+        2,
+        6,
+        8,
+        4,
+        1
+      ],
+      "closeRanking": [
+        4,
+        0,
+        9,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "388",
+      "closePanel": "370",
+      "actualOpen": 9,
+      "actualClose": 0,
+      "openRanking": [
+        1,
+        2,
+        5,
+        4,
+        8,
+        9
+      ],
+      "closeRanking": [
+        3,
+        8,
+        9,
+        7,
+        1,
+        0
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "990",
+      "closePanel": "577",
+      "actualOpen": 8,
+      "actualClose": 9,
+      "openRanking": [
+        3,
+        4,
+        5,
+        8,
+        0,
+        2
+      ],
+      "closeRanking": [
+        8,
+        9,
+        1,
+        6,
+        0,
+        4
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "237",
+      "closePanel": "235",
+      "actualOpen": 2,
+      "actualClose": 0,
+      "openRanking": [
+        2,
+        5,
+        8,
+        4,
+        7,
+        9
+      ],
+      "closeRanking": [
+        9,
+        0,
+        2,
+        3,
+        1,
+        5
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "445",
+      "closePanel": "257",
+      "actualOpen": 3,
+      "actualClose": 4,
+      "openRanking": [
+        4,
+        7,
+        8,
+        2,
+        3,
+        0
+      ],
+      "closeRanking": [
+        0,
+        1,
+        6,
+        8,
+        5,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-07",
+      "day": "Sunday",
+      "openPanel": "170",
+      "closePanel": "356",
+      "actualOpen": 8,
+      "actualClose": 4,
+      "openRanking": [
+        0,
+        8,
+        4,
+        5,
+        2,
+        7
+      ],
+      "closeRanking": [
+        0,
+        1,
+        6,
+        8,
+        5,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "150",
+      "closePanel": "146",
+      "actualOpen": 6,
+      "actualClose": 1,
+      "openRanking": [
+        3,
+        9,
+        0,
+        2,
+        7,
+        8
+      ],
+      "closeRanking": [
+        6,
+        0,
+        1,
+        8,
+        5,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "690",
+      "closePanel": "234",
+      "actualOpen": 5,
+      "actualClose": 9,
+      "openRanking": [
+        5,
+        7,
+        8,
+        6,
+        0,
+        3
+      ],
+      "closeRanking": [
+        6,
+        0,
+        8,
+        9,
+        1,
+        5
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "258",
+      "closePanel": "257",
+      "actualOpen": 5,
+      "actualClose": 4,
+      "openRanking": [
+        4,
+        1,
+        3,
+        9,
+        5,
+        0
+      ],
+      "closeRanking": [
+        6,
+        0,
+        8,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "778",
+      "closePanel": "239",
+      "actualOpen": 2,
+      "actualClose": 4,
+      "openRanking": [
+        8,
+        2,
+        0,
+        9,
+        7,
+        1
+      ],
+      "closeRanking": [
+        6,
+        0,
+        8,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "134",
+      "closePanel": "690",
+      "actualOpen": 8,
+      "actualClose": 5,
+      "openRanking": [
+        6,
+        7,
+        5,
+        0,
+        2,
+        1
+      ],
+      "closeRanking": [
+        6,
+        0,
+        8,
+        9,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "338",
+      "closePanel": "128",
+      "actualOpen": 4,
+      "actualClose": 1,
+      "openRanking": [
+        5,
+        8,
+        7,
+        0,
+        9,
+        4
+      ],
+      "closeRanking": [
+        6,
+        0,
+        8,
+        9,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-14",
+      "day": "Sunday",
+      "openPanel": "135",
+      "closePanel": "567",
+      "actualOpen": 9,
+      "actualClose": 8,
+      "openRanking": [
+        9,
+        1,
+        7,
+        2,
+        5,
+        0
+      ],
+      "closeRanking": [
+        6,
+        0,
+        2,
+        8,
+        9,
+        3
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "560",
+      "closePanel": "138",
+      "actualOpen": 1,
+      "actualClose": 2,
+      "openRanking": [
+        0,
+        3,
+        1,
+        4,
+        5,
+        6
+      ],
+      "closeRanking": [
+        6,
+        0,
+        2,
+        3,
+        9,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "689",
+      "closePanel": "340",
+      "actualOpen": 3,
+      "actualClose": 7,
+      "openRanking": [
+        1,
+        4,
+        5,
+        6,
+        8,
+        3
+      ],
+      "closeRanking": [
+        6,
+        0,
+        3,
+        9,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "168",
+      "closePanel": "345",
+      "actualOpen": 5,
+      "actualClose": 2,
+      "openRanking": [
+        0,
+        4,
+        6,
+        9,
+        5,
+        2
+      ],
+      "closeRanking": [
+        6,
+        0,
+        3,
+        9,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "156",
+      "closePanel": "589",
+      "actualOpen": 2,
+      "actualClose": 2,
+      "openRanking": [
+        3,
+        1,
+        0,
+        5,
+        7,
+        2
+      ],
+      "closeRanking": [
+        6,
+        0,
+        3,
+        8,
+        9,
+        1
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "259",
+      "closePanel": "368",
+      "actualOpen": 6,
+      "actualClose": 7,
+      "openRanking": [
+        3,
+        0,
+        2,
+        6,
+        1,
+        7
+      ],
+      "closeRanking": [
+        6,
+        0,
+        3,
+        8,
+        9,
+        1
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "880",
+      "closePanel": "560",
+      "actualOpen": 6,
+      "actualClose": 1,
+      "openRanking": [
+        9,
+        1,
+        3,
+        8,
+        2,
+        7
+      ],
+      "closeRanking": [
+        6,
+        0,
+        3,
+        8,
+        9,
+        1
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-21",
+      "day": "Sunday",
+      "openPanel": "399",
+      "closePanel": "569",
+      "actualOpen": 1,
+      "actualClose": 0,
+      "openRanking": [
+        9,
+        1,
+        6,
+        2,
+        8,
+        3
+      ],
+      "closeRanking": [
+        6,
+        3,
+        0,
+        8,
+        9,
+        1
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "233",
+      "closePanel": "600",
+      "actualOpen": 8,
+      "actualClose": 6,
+      "openRanking": [
+        3,
+        2,
+        5,
+        9,
+        8,
+        6
+      ],
+      "closeRanking": [
+        6,
+        3,
+        8,
+        9,
+        0,
+        1
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "225",
+      "closePanel": "234",
+      "actualOpen": 9,
+      "actualClose": 9,
+      "openRanking": [
+        1,
+        2,
+        3,
+        5,
+        4,
+        9
+      ],
+      "closeRanking": [
+        3,
+        6,
+        8,
+        9,
+        0,
+        1
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "117",
+      "closePanel": "116",
+      "actualOpen": 9,
+      "actualClose": 8,
+      "openRanking": [
+        0,
+        4,
+        1,
+        2,
+        6,
+        7
+      ],
+      "closeRanking": [
+        3,
+        6,
+        8,
+        0,
+        1,
+        9
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "880",
+      "closePanel": "159",
+      "actualOpen": 6,
+      "actualClose": 5,
+      "openRanking": [
+        2,
+        6,
+        9,
+        1,
+        7,
+        4
+      ],
+      "closeRanking": [
+        3,
+        6,
+        8,
+        0,
+        1,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "339",
+      "closePanel": "459",
+      "actualOpen": 5,
+      "actualClose": 8,
+      "openRanking": [
+        0,
+        8,
+        6,
+        7,
+        3,
+        5
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        8,
+        0,
+        1
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "679",
+      "closePanel": "345",
+      "actualOpen": 2,
+      "actualClose": 2,
+      "openRanking": [
+        6,
+        0,
+        1,
+        3,
+        5,
+        4
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-28",
+      "day": "Sunday",
+      "openPanel": "380",
+      "closePanel": "000",
+      "actualOpen": 1,
+      "actualClose": 0,
+      "openRanking": [
+        0,
+        2,
+        7,
+        9,
+        5,
+        8
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "148",
+      "closePanel": "466",
+      "actualOpen": 3,
+      "actualClose": 6,
+      "openRanking": [
+        3,
+        4,
+        7,
+        8,
+        0,
+        5
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        1,
+        8,
+        9
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "290",
+      "closePanel": "230",
+      "actualOpen": 1,
+      "actualClose": 5,
+      "openRanking": [
+        6,
+        0,
+        1,
+        2,
+        5,
+        9
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        1,
+        5,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "144",
+      "closePanel": "339",
+      "actualOpen": 9,
+      "actualClose": 5,
+      "openRanking": [
+        2,
+        0,
+        7,
+        3,
+        4,
+        6
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        9,
+        1,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "180",
+      "closePanel": "335",
+      "actualOpen": 9,
+      "actualClose": 1,
+      "openRanking": [
+        3,
+        9,
+        5,
+        7,
+        2,
+        1
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        9,
+        1,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "160",
+      "closePanel": "459",
+      "actualOpen": 7,
+      "actualClose": 8,
+      "openRanking": [
+        1,
+        9,
+        2,
+        4,
+        7,
+        5
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        9,
+        8,
+        0
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "356",
+      "closePanel": "290",
+      "actualOpen": 4,
+      "actualClose": 1,
+      "openRanking": [
+        2,
+        4,
+        5,
+        7,
+        9,
+        0
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        9,
+        0,
+        1
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "isoDate": "2026-07-05",
+      "day": "Sunday",
+      "openPanel": "135",
+      "closePanel": "780",
+      "actualOpen": 9,
+      "actualClose": 5,
+      "openRanking": [
+        7,
+        6,
+        3,
+        0,
+        9,
+        4
+      ],
+      "closeRanking": [
+        3,
+        6,
+        7,
+        9,
+        0,
+        2
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "477",
+      "closePanel": "123",
+      "actualOpen": 8,
+      "actualClose": 6,
+      "openRanking": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "closeRanking": [
+        7,
+        1,
+        2,
+        9,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "778",
+      "closePanel": "180",
+      "actualOpen": 2,
+      "actualClose": 9,
+      "openRanking": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "closeRanking": [
+        1,
+        7,
+        3,
+        9,
+        8,
+        0
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "168",
+      "closePanel": "167",
+      "actualOpen": 5,
+      "actualClose": 4,
+      "openRanking": [
+        8,
+        9,
+        7,
+        0,
+        6,
+        1
+      ],
+      "closeRanking": [
+        1,
+        7,
+        3,
+        2,
+        6,
+        5
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "267",
+      "closePanel": "779",
+      "actualOpen": 5,
+      "actualClose": 3,
+      "openRanking": [
+        8,
+        7,
+        9,
+        6,
+        0,
+        2
+      ],
+      "closeRanking": [
+        7,
+        1,
+        3,
+        9,
+        4,
+        5
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "458",
+      "closePanel": "779",
+      "actualOpen": 7,
+      "actualClose": 3,
+      "openRanking": [
+        8,
+        7,
+        0,
+        6,
+        9,
+        1
+      ],
+      "closeRanking": [
+        1,
+        7,
+        3,
+        8,
+        9,
+        0
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "458",
+      "closePanel": "490",
+      "actualOpen": 7,
+      "actualClose": 3,
+      "openRanking": [
+        5,
+        1,
+        2,
+        3,
+        4,
+        8
+      ],
+      "closeRanking": [
+        1,
+        7,
+        3,
+        2,
+        9,
+        8
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "360",
+      "closePanel": "678",
+      "actualOpen": 9,
+      "actualClose": 1,
+      "openRanking": [
+        1,
+        5,
+        2,
+        4,
+        3,
+        7
+      ],
+      "closeRanking": [
+        1,
+        7,
+        3,
+        0,
+        9,
+        5
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "140",
+      "closePanel": "112",
+      "actualOpen": 5,
+      "actualClose": 4,
+      "openRanking": [
+        5,
+        1,
+        2,
+        4,
+        3,
+        7
+      ],
+      "closeRanking": [
+        2,
+        7,
+        3,
+        8,
+        6,
+        5
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "567",
+      "closePanel": "227",
+      "actualOpen": 8,
+      "actualClose": 1,
+      "openRanking": [
+        7,
+        8,
+        9,
+        0,
+        6,
+        5
+      ],
+      "closeRanking": [
+        2,
+        7,
+        8,
+        3,
+        6,
+        1
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "370",
+      "closePanel": "145",
+      "actualOpen": 0,
+      "actualClose": 0,
+      "openRanking": [
+        5,
+        2,
+        4,
+        1,
+        3,
+        7
+      ],
+      "closeRanking": [
+        7,
+        8,
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "566",
+      "closePanel": "688",
+      "actualOpen": 7,
+      "actualClose": 2,
+      "openRanking": [
+        5,
+        1,
+        2,
+        4,
+        3,
+        7
+      ],
+      "closeRanking": [
+        2,
+        7,
+        8,
+        9,
+        6,
+        3
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "380",
+      "closePanel": "268",
+      "actualOpen": 1,
+      "actualClose": 6,
+      "openRanking": [
+        5,
+        2,
+        3,
+        4,
+        1,
+        7
+      ],
+      "closeRanking": [
+        7,
+        8,
+        9,
+        3,
+        6,
+        2
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "138",
+      "closePanel": "390",
+      "actualOpen": 2,
+      "actualClose": 2,
+      "openRanking": [
+        7,
+        8,
+        0,
+        9,
+        6,
+        2
+      ],
+      "closeRanking": [
+        7,
+        8,
+        5,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "233",
+      "closePanel": "370",
+      "actualOpen": 8,
+      "actualClose": 0,
+      "openRanking": [
+        7,
+        8,
+        6,
+        0,
+        9,
+        2
+      ],
+      "closeRanking": [
+        7,
+        8,
+        5,
+        0,
+        6,
+        1
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "789",
+      "closePanel": "116",
+      "actualOpen": 4,
+      "actualClose": 8,
+      "openRanking": [
+        2,
+        1,
+        5,
+        4,
+        3,
+        8
+      ],
+      "closeRanking": [
+        7,
+        8,
+        0,
+        9,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "790",
+      "closePanel": "157",
+      "actualOpen": 6,
+      "actualClose": 3,
+      "openRanking": [
+        7,
+        8,
+        9,
+        6,
+        0,
+        2
+      ],
+      "closeRanking": [
+        7,
+        5,
+        0,
+        8,
+        4,
+        3
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "449",
+      "closePanel": "700",
+      "actualOpen": 7,
+      "actualClose": 7,
+      "openRanking": [
+        1,
+        2,
+        5,
+        3,
+        4,
+        7
+      ],
+      "closeRanking": [
+        7,
+        5,
+        0,
+        8,
+        3,
+        2
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "670",
+      "closePanel": "146",
+      "actualOpen": 3,
+      "actualClose": 1,
+      "openRanking": [
+        5,
+        2,
+        3,
+        1,
+        4,
+        7
+      ],
+      "closeRanking": [
+        5,
+        7,
+        9,
+        0,
+        1,
+        6
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "127",
+      "closePanel": "158",
+      "actualOpen": 0,
+      "actualClose": 4,
+      "openRanking": [
+        7,
+        8,
+        0,
+        9,
+        6,
+        2
+      ],
+      "closeRanking": [
+        5,
+        7,
+        9,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "389",
+      "closePanel": "235",
+      "actualOpen": 0,
+      "actualClose": 0,
+      "openRanking": [
+        2,
+        5,
+        3,
+        4,
+        1,
+        7
+      ],
+      "closeRanking": [
+        5,
+        7,
+        9,
+        0,
+        6,
+        8
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "677",
+      "closePanel": "389",
+      "actualOpen": 0,
+      "actualClose": 0,
+      "openRanking": [
+        2,
+        5,
+        1,
+        3,
+        4,
+        8
+      ],
+      "closeRanking": [
+        5,
+        9,
+        7,
+        8,
+        1,
+        0
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "557",
+      "closePanel": "669",
+      "actualOpen": 7,
+      "actualClose": 1,
+      "openRanking": [
+        5,
+        2,
+        3,
+        4,
+        1,
+        7
+      ],
+      "closeRanking": [
+        5,
+        9,
+        7,
+        8,
+        0,
+        1
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "223",
+      "closePanel": "668",
+      "actualOpen": 7,
+      "actualClose": 0,
+      "openRanking": [
+        5,
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "closeRanking": [
+        5,
+        9,
+        7,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "179",
+      "closePanel": "890",
+      "actualOpen": 7,
+      "actualClose": 7,
+      "openRanking": [
+        5,
+        3,
+        2,
+        1,
+        4,
+        7
+      ],
+      "closeRanking": [
+        5,
+        9,
+        7,
+        2,
+        6,
+        1
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "356",
+      "closePanel": "779",
+      "actualOpen": 4,
+      "actualClose": 3,
+      "openRanking": [
+        5,
+        2,
+        3,
+        1,
+        4,
+        7
+      ],
+      "closeRanking": [
+        5,
+        9,
+        7,
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "450",
+      "closePanel": "149",
+      "actualOpen": 9,
+      "actualClose": 4,
+      "openRanking": [
+        7,
+        0,
+        8,
+        6,
+        9,
+        5
+      ],
+      "closeRanking": [
+        5,
+        9,
+        8,
+        7,
+        6,
+        1
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "599",
+      "closePanel": "167",
+      "actualOpen": 3,
+      "actualClose": 4,
+      "openRanking": [
+        2,
+        1,
+        6,
+        7,
+        3,
+        9
+      ],
+      "closeRanking": [
+        9,
+        5,
+        7,
+        0,
+        3,
+        8
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "369",
+      "closePanel": "778",
+      "actualOpen": 8,
+      "actualClose": 2,
+      "openRanking": [
+        7,
+        5,
+        0,
+        4,
+        6,
+        9
+      ],
+      "closeRanking": [
+        2,
+        0,
+        8,
+        3,
+        6,
+        1
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "580",
+      "closePanel": "169",
+      "actualOpen": 3,
+      "actualClose": 6,
+      "openRanking": [
+        6,
+        3,
+        7,
+        0,
+        4,
+        9
+      ],
+      "closeRanking": [
+        0,
+        6,
+        8,
+        1,
+        4,
+        9
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "467",
+      "closePanel": "460",
+      "actualOpen": 7,
+      "actualClose": 0,
+      "openRanking": [
+        9,
+        0,
+        1,
+        5,
+        2,
+        3
+      ],
+      "closeRanking": [
+        4,
+        0,
+        2,
+        5,
+        8,
+        3
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "224",
+      "closePanel": "330",
+      "actualOpen": 8,
+      "actualClose": 6,
+      "openRanking": [
+        5,
+        8,
+        0,
+        2,
+        3,
+        4
+      ],
+      "closeRanking": [
+        8,
+        4,
+        6,
+        9,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "125",
+      "closePanel": "146",
+      "actualOpen": 8,
+      "actualClose": 1,
+      "openRanking": [
+        1,
+        9,
+        0,
+        4,
+        6,
+        2
+      ],
+      "closeRanking": [
+        4,
+        0,
+        2,
+        5,
+        8,
+        3
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "100",
+      "closePanel": "120",
+      "actualOpen": 1,
+      "actualClose": 3,
+      "openRanking": [
+        5,
+        2,
+        3,
+        9,
+        1,
+        7
+      ],
+      "closeRanking": [
+        9,
+        5,
+        7,
+        0,
+        3,
+        8
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "290",
+      "closePanel": "113",
+      "actualOpen": 1,
+      "actualClose": 5,
+      "openRanking": [
+        1,
+        0,
+        5,
+        7,
+        8,
+        2
+      ],
+      "closeRanking": [
+        1,
+        7,
+        9,
+        2,
+        5,
+        0
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "349",
+      "closePanel": "126",
+      "actualOpen": 6,
+      "actualClose": 9,
+      "openRanking": [
+        0,
+        2,
+        7,
+        6,
+        8,
+        1
+      ],
+      "closeRanking": [
+        3,
+        9,
+        1,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "159",
+      "closePanel": "780",
+      "actualOpen": 5,
+      "actualClose": 5,
+      "openRanking": [
+        0,
+        4,
+        3,
+        1,
+        2,
+        9
+      ],
+      "closeRanking": [
+        7,
+        3,
+        5,
+        8,
+        1,
+        6
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "169",
+      "closePanel": "700",
+      "actualOpen": 6,
+      "actualClose": 7,
+      "openRanking": [
+        6,
+        7,
+        4,
+        1,
+        5,
+        0
+      ],
+      "closeRanking": [
+        3,
+        9,
+        1,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "199",
+      "closePanel": "469",
+      "actualOpen": 9,
+      "actualClose": 9,
+      "openRanking": [
+        0,
+        1,
+        4,
+        5,
+        7,
+        2
+      ],
+      "closeRanking": [
+        5,
+        1,
+        3,
+        6,
+        9,
+        4
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "167",
+      "closePanel": "257",
+      "actualOpen": 4,
+      "actualClose": 4,
+      "openRanking": [
+        2,
+        8,
+        4,
+        5,
+        6,
+        7
+      ],
+      "closeRanking": [
+        7,
+        3,
+        5,
+        1,
+        8,
+        6
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "277",
+      "closePanel": "246",
+      "actualOpen": 6,
+      "actualClose": 2,
+      "openRanking": [
+        9,
+        1,
+        7,
+        0,
+        3,
+        6
+      ],
+      "closeRanking": [
+        2,
+        8,
+        0,
+        3,
+        6,
+        1
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "129",
+      "closePanel": "890",
+      "actualOpen": 2,
+      "actualClose": 7,
+      "openRanking": [
+        5,
+        6,
+        7,
+        2,
+        4,
+        9
+      ],
+      "closeRanking": [
+        0,
+        6,
+        8,
+        1,
+        4,
+        9
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "390",
+      "closePanel": "456",
+      "actualOpen": 2,
+      "actualClose": 5,
+      "openRanking": [
+        5,
+        2,
+        4,
+        6,
+        0,
+        1
+      ],
+      "closeRanking": [
+        5,
+        1,
+        3,
+        6,
+        9,
+        4
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "190",
+      "closePanel": "370",
+      "actualOpen": 0,
+      "actualClose": 0,
+      "openRanking": [
+        0,
+        8,
+        1,
+        5,
+        6,
+        7
+      ],
+      "closeRanking": [
+        3,
+        9,
+        1,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "289",
+      "closePanel": "500",
+      "actualOpen": 9,
+      "actualClose": 5,
+      "openRanking": [
+        5,
+        3,
+        7,
+        4,
+        8,
+        9
+      ],
+      "closeRanking": [
+        8,
+        4,
+        6,
+        2,
+        9,
+        7
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "150",
+      "closePanel": "680",
+      "actualOpen": 6,
+      "actualClose": 4,
+      "openRanking": [
+        9,
+        1,
+        3,
+        4,
+        5,
+        0
+      ],
+      "closeRanking": [
+        3,
+        9,
+        1,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "447",
+      "closePanel": "235",
+      "actualOpen": 5,
+      "actualClose": 0,
+      "openRanking": [
+        9,
+        6,
+        0,
+        5,
+        4,
+        2
+      ],
+      "closeRanking": [
+        2,
+        8,
+        0,
+        3,
+        6,
+        1
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "349",
+      "closePanel": "358",
+      "actualOpen": 6,
+      "actualClose": 6,
+      "openRanking": [
+        1,
+        6,
+        0,
+        2,
+        5,
+        8
+      ],
+      "closeRanking": [
+        8,
+        4,
+        6,
+        9,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "688",
+      "closePanel": "280",
+      "actualOpen": 2,
+      "actualClose": 0,
+      "openRanking": [
+        7,
+        8,
+        1,
+        2,
+        6,
+        9
+      ],
+      "closeRanking": [
+        4,
+        2,
+        0,
+        5,
+        8,
+        3
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "590",
+      "closePanel": "589",
+      "actualOpen": 4,
+      "actualClose": 2,
+      "openRanking": [
+        2,
+        8,
+        1,
+        4,
+        6,
+        0
+      ],
+      "closeRanking": [
+        8,
+        4,
+        6,
+        9,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "679",
+      "closePanel": "357",
+      "actualOpen": 2,
+      "actualClose": 5,
+      "openRanking": [
+        1,
+        0,
+        2,
+        3,
+        6,
+        4
+      ],
+      "closeRanking": [
+        0,
+        6,
+        8,
+        1,
+        4,
+        9
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "245",
+      "closePanel": "389",
+      "actualOpen": 1,
+      "actualClose": 0,
+      "openRanking": [
+        1,
+        4,
+        5,
+        3,
+        6,
+        7
+      ],
+      "closeRanking": [
+        3,
+        1,
+        9,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "489",
+      "closePanel": "570",
+      "actualOpen": 1,
+      "actualClose": 2,
+      "openRanking": [
+        3,
+        9,
+        1,
+        4,
+        5,
+        8
+      ],
+      "closeRanking": [
+        8,
+        4,
+        6,
+        2,
+        9,
+        7
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "459",
+      "closePanel": "479",
+      "actualOpen": 8,
+      "actualClose": 0,
+      "openRanking": [
+        1,
+        8,
+        9,
+        5,
+        7,
+        3
+      ],
+      "closeRanking": [
+        2,
+        0,
+        3,
+        4,
+        5,
+        1
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "456",
+      "closePanel": "280",
+      "actualOpen": 5,
+      "actualClose": 0,
+      "openRanking": [
+        1,
+        9,
+        5,
+        7,
+        8,
+        3
+      ],
+      "closeRanking": [
+        4,
+        1,
+        0,
+        2,
+        9,
+        8
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "450",
+      "closePanel": "679",
+      "actualOpen": 9,
+      "actualClose": 2,
+      "openRanking": [
+        5,
+        9,
+        0,
+        1,
+        8,
+        7
+      ],
+      "closeRanking": [
+        4,
+        6,
+        1,
+        8,
+        3,
+        2
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "240",
+      "closePanel": "390",
+      "actualOpen": 6,
+      "actualClose": 2,
+      "openRanking": [
+        9,
+        0,
+        5,
+        1,
+        8,
+        7
+      ],
+      "closeRanking": [
+        1,
+        4,
+        7,
+        8,
+        6,
+        9
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "225",
+      "closePanel": "456",
+      "actualOpen": 9,
+      "actualClose": 5,
+      "openRanking": [
+        4,
+        9,
+        5,
+        1,
+        8,
+        3
+      ],
+      "closeRanking": [
+        1,
+        4,
+        9,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "788",
+      "closePanel": "677",
+      "actualOpen": 3,
+      "actualClose": 0,
+      "openRanking": [
+        9,
+        5,
+        1,
+        8,
+        3,
+        0
+      ],
+      "closeRanking": [
+        0,
+        1,
+        8,
+        3,
+        9,
+        7
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "250",
+      "closePanel": "468",
+      "actualOpen": 7,
+      "actualClose": 8,
+      "openRanking": [
+        8,
+        1,
+        9,
+        5,
+        3,
+        0
+      ],
+      "closeRanking": [
+        1,
+        7,
+        4,
+        3,
+        6,
+        5
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "579",
+      "closePanel": "449",
+      "actualOpen": 1,
+      "actualClose": 7,
+      "openRanking": [
+        1,
+        9,
+        5,
+        7,
+        8,
+        3
+      ],
+      "closeRanking": [
+        0,
+        5,
+        1,
+        8,
+        9,
+        7
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "159",
+      "closePanel": "280",
+      "actualOpen": 5,
+      "actualClose": 0,
+      "openRanking": [
+        5,
+        9,
+        0,
+        1,
+        8,
+        3
+      ],
+      "closeRanking": [
+        5,
+        4,
+        9,
+        3,
+        0,
+        8
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "345",
+      "closePanel": "689",
+      "actualOpen": 2,
+      "actualClose": 3,
+      "openRanking": [
+        9,
+        0,
+        5,
+        1,
+        8,
+        2
+      ],
+      "closeRanking": [
+        8,
+        2,
+        3,
+        5,
+        9,
+        7
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "127",
+      "closePanel": "778",
+      "actualOpen": 0,
+      "actualClose": 2,
+      "openRanking": [
+        4,
+        9,
+        5,
+        1,
+        2,
+        3
+      ],
+      "closeRanking": [
+        2,
+        1,
+        3,
+        5,
+        4,
+        6
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "380",
+      "closePanel": "157",
+      "actualOpen": 1,
+      "actualClose": 3,
+      "openRanking": [
+        3,
+        5,
+        9,
+        1,
+        2,
+        7
+      ],
+      "closeRanking": [
+        5,
+        6,
+        9,
+        8,
+        7,
+        4
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "559",
+      "closePanel": "169",
+      "actualOpen": 9,
+      "actualClose": 6,
+      "openRanking": [
+        1,
+        8,
+        5,
+        9,
+        2,
+        3
+      ],
+      "closeRanking": [
+        0,
+        3,
+        4,
+        5,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "469",
+      "closePanel": "156",
+      "actualOpen": 9,
+      "actualClose": 2,
+      "openRanking": [
+        1,
+        9,
+        5,
+        2,
+        3,
+        6
+      ],
+      "closeRanking": [
+        3,
+        4,
+        1,
+        2,
+        0,
+        9
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "479",
+      "closePanel": "260",
+      "actualOpen": 0,
+      "actualClose": 8,
+      "openRanking": [
+        9,
+        5,
+        0,
+        2,
+        1,
+        3
+      ],
+      "closeRanking": [
+        0,
+        1,
+        2,
+        3,
+        9,
+        8
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "120",
+      "closePanel": "167",
+      "actualOpen": 3,
+      "actualClose": 4,
+      "openRanking": [
+        9,
+        2,
+        5,
+        1,
+        0,
+        3
+      ],
+      "closeRanking": [
+        3,
+        4,
+        9,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "456",
+      "closePanel": "890",
+      "actualOpen": 5,
+      "actualClose": 7,
+      "openRanking": [
+        0,
+        9,
+        2,
+        5,
+        1,
+        4
+      ],
+      "closeRanking": [
+        1,
+        3,
+        9,
+        4,
+        0,
+        2
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "228",
+      "closePanel": "588",
+      "actualOpen": 2,
+      "actualClose": 1,
+      "openRanking": [
+        3,
+        0,
+        9,
+        5,
+        2,
+        1
+      ],
+      "closeRanking": [
+        2,
+        1,
+        9,
+        0,
+        8,
+        7
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "225",
+      "closePanel": "120",
+      "actualOpen": 9,
+      "actualClose": 3,
+      "openRanking": [
+        1,
+        8,
+        0,
+        9,
+        5,
+        2
+      ],
+      "closeRanking": [
+        0,
+        1,
+        6,
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "135",
+      "closePanel": "566",
+      "actualOpen": 9,
+      "actualClose": 7,
+      "openRanking": [
+        1,
+        0,
+        9,
+        5,
+        2,
+        7
+      ],
+      "closeRanking": [
+        9,
+        1,
+        2,
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "256",
+      "closePanel": "248",
+      "actualOpen": 3,
+      "actualClose": 4,
+      "openRanking": [
+        0,
+        9,
+        5,
+        2,
+        1,
+        7
+      ],
+      "closeRanking": [
+        1,
+        8,
+        0,
+        4,
+        9,
+        7
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "226",
+      "closePanel": "880",
+      "actualOpen": 0,
+      "actualClose": 6,
+      "openRanking": [
+        9,
+        5,
+        2,
+        0,
+        1,
+        7
+      ],
+      "closeRanking": [
+        5,
+        9,
+        2,
+        6,
+        0,
+        8
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "289",
+      "closePanel": "446",
+      "actualOpen": 9,
+      "actualClose": 4,
+      "openRanking": [
+        0,
+        9,
+        5,
+        2,
+        1,
+        4
+      ],
+      "closeRanking": [
+        3,
+        4,
+        8,
+        9,
+        7,
+        0
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "389",
+      "closePanel": "448",
+      "actualOpen": 0,
+      "actualClose": 6,
+      "openRanking": [
+        0,
+        9,
+        2,
+        5,
+        1,
+        7
+      ],
+      "closeRanking": [
+        2,
+        8,
+        6,
+        1,
+        9,
+        0
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "145",
+      "closePanel": "120",
+      "actualOpen": 0,
+      "actualClose": 3,
+      "openRanking": [
+        1,
+        8,
+        0,
+        5,
+        2,
+        7
+      ],
+      "closeRanking": [
+        1,
+        0,
+        5,
+        8,
+        9,
+        7
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "347",
+      "closePanel": "117",
+      "actualOpen": 4,
+      "actualClose": 9,
+      "openRanking": [
+        1,
+        0,
+        5,
+        2,
+        7,
+        9
+      ],
+      "closeRanking": [
+        2,
+        1,
+        3,
+        5,
+        4,
+        0
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "568",
+      "closePanel": "235",
+      "actualOpen": 9,
+      "actualClose": 0,
+      "openRanking": [
+        4,
+        8,
+        0,
+        7,
+        3,
+        5
+      ],
+      "closeRanking": [
+        1,
+        0,
+        6,
+        9,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-07",
+      "day": "Sunday",
+      "openPanel": "457",
+      "closePanel": "369",
+      "actualOpen": 6,
+      "actualClose": 8,
+      "openRanking": [
+        2,
+        1,
+        6,
+        7,
+        4,
+        0
+      ],
+      "closeRanking": [
+        1,
+        9,
+        0,
+        6,
+        8,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "234",
+      "closePanel": "780",
+      "actualOpen": 9,
+      "actualClose": 5,
+      "openRanking": [
+        0,
+        9,
+        2,
+        3,
+        1,
+        4
+      ],
+      "closeRanking": [
+        1,
+        9,
+        0,
+        6,
+        4,
+        5
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "126",
+      "closePanel": "299",
+      "actualOpen": 9,
+      "actualClose": 0,
+      "openRanking": [
+        5,
+        2,
+        9,
+        1,
+        8,
+        0
+      ],
+      "closeRanking": [
+        1,
+        9,
+        0,
+        6,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "158",
+      "closePanel": "257",
+      "actualOpen": 4,
+      "actualClose": 4,
+      "openRanking": [
+        3,
+        7,
+        5,
+        6,
+        4,
+        0
+      ],
+      "closeRanking": [
+        1,
+        9,
+        6,
+        0,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "260",
+      "closePanel": "789",
+      "actualOpen": 8,
+      "actualClose": 4,
+      "openRanking": [
+        6,
+        8,
+        0,
+        4,
+        7,
+        3
+      ],
+      "closeRanking": [
+        1,
+        9,
+        6,
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "580",
+      "closePanel": "458",
+      "actualOpen": 3,
+      "actualClose": 7,
+      "openRanking": [
+        3,
+        1,
+        2,
+        9,
+        5,
+        8
+      ],
+      "closeRanking": [
+        1,
+        9,
+        6,
+        7,
+        8,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "266",
+      "closePanel": "128",
+      "actualOpen": 4,
+      "actualClose": 1,
+      "openRanking": [
+        5,
+        0,
+        4,
+        2,
+        1,
+        7
+      ],
+      "closeRanking": [
+        1,
+        9,
+        6,
+        0,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-14",
+      "day": "Sunday",
+      "openPanel": "135",
+      "closePanel": "127",
+      "actualOpen": 9,
+      "actualClose": 0,
+      "openRanking": [
+        0,
+        7,
+        8,
+        9,
+        1,
+        4
+      ],
+      "closeRanking": [
+        1,
+        9,
+        6,
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "366",
+      "closePanel": "345",
+      "actualOpen": 5,
+      "actualClose": 2,
+      "openRanking": [
+        2,
+        7,
+        0,
+        3,
+        5,
+        8
+      ],
+      "closeRanking": [
+        1,
+        9,
+        6,
+        3,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "580",
+      "closePanel": "459",
+      "actualOpen": 3,
+      "actualClose": 8,
+      "openRanking": [
+        5,
+        7,
+        1,
+        3,
+        0,
+        6
+      ],
+      "closeRanking": [
+        1,
+        9,
+        6,
+        3,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "688",
+      "closePanel": "150",
+      "actualOpen": 2,
+      "actualClose": 6,
+      "openRanking": [
+        7,
+        0,
+        1,
+        6,
+        2,
+        5
+      ],
+      "closeRanking": [
+        1,
+        9,
+        5,
+        6,
+        8,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "338",
+      "closePanel": "118",
+      "actualOpen": 4,
+      "actualClose": 0,
+      "openRanking": [
+        3,
+        0,
+        1,
+        4,
+        2,
+        5
+      ],
+      "closeRanking": [
+        1,
+        9,
+        5,
+        3,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "255",
+      "closePanel": "788",
+      "actualOpen": 2,
+      "actualClose": 3,
+      "openRanking": [
+        0,
+        6,
+        5,
+        9,
+        7,
+        3
+      ],
+      "closeRanking": [
+        1,
+        9,
+        5,
+        3,
+        8,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "330",
+      "closePanel": "169",
+      "actualOpen": 6,
+      "actualClose": 6,
+      "openRanking": [
+        2,
+        9,
+        4,
+        5,
+        1,
+        7
+      ],
+      "closeRanking": [
+        1,
+        9,
+        5,
+        8,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-21",
+      "day": "Sunday",
+      "openPanel": "148",
+      "closePanel": "278",
+      "actualOpen": 3,
+      "actualClose": 7,
+      "openRanking": [
+        9,
+        0,
+        4,
+        7,
+        3,
+        6
+      ],
+      "closeRanking": [
+        1,
+        9,
+        5,
+        8,
+        7,
+        2
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "158",
+      "closePanel": "389",
+      "actualOpen": 4,
+      "actualClose": 0,
+      "openRanking": [
+        4,
+        7,
+        3,
+        8,
+        6,
+        9
+      ],
+      "closeRanking": [
+        1,
+        9,
+        4,
+        5,
+        0,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "390",
+      "closePanel": "589",
+      "actualOpen": 2,
+      "actualClose": 2,
+      "openRanking": [
+        0,
+        3,
+        6,
+        1,
+        9,
+        2
+      ],
+      "closeRanking": [
+        1,
+        9,
+        4,
+        5,
+        6,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "455",
+      "closePanel": "379",
+      "actualOpen": 4,
+      "actualClose": 9,
+      "openRanking": [
+        2,
+        1,
+        4,
+        7,
+        8,
+        9
+      ],
+      "closeRanking": [
+        9,
+        1,
+        4,
+        5,
+        0,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "159",
+      "closePanel": "448",
+      "actualOpen": 5,
+      "actualClose": 6,
+      "openRanking": [
+        3,
+        4,
+        6,
+        9,
+        5,
+        8
+      ],
+      "closeRanking": [
+        1,
+        9,
+        4,
+        5,
+        8,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "267",
+      "closePanel": "357",
+      "actualOpen": 5,
+      "actualClose": 5,
+      "openRanking": [
+        4,
+        9,
+        3,
+        1,
+        8,
+        7
+      ],
+      "closeRanking": [
+        1,
+        9,
+        4,
+        5,
+        6,
+        3
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "489",
+      "closePanel": "369",
+      "actualOpen": 1,
+      "actualClose": 8,
+      "openRanking": [
+        1,
+        9,
+        3,
+        6,
+        2,
+        5
+      ],
+      "closeRanking": [
+        1,
+        9,
+        4,
+        8,
+        2,
+        7
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-28",
+      "day": "Sunday",
+      "openPanel": "379",
+      "closePanel": "130",
+      "actualOpen": 9,
+      "actualClose": 4,
+      "openRanking": [
+        3,
+        0,
+        4,
+        6,
+        9,
+        1
+      ],
+      "closeRanking": [
+        1,
+        9,
+        3,
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "117",
+      "closePanel": "258",
+      "actualOpen": 9,
+      "actualClose": 5,
+      "openRanking": [
+        5,
+        7,
+        1,
+        2,
+        6,
+        9
+      ],
+      "closeRanking": [
+        1,
+        9,
+        3,
+        5,
+        4,
+        0
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "660",
+      "closePanel": "119",
+      "actualOpen": 2,
+      "actualClose": 1,
+      "openRanking": [
+        5,
+        4,
+        1,
+        2,
+        8,
+        6
+      ],
+      "closeRanking": [
+        1,
+        9,
+        3,
+        7,
+        8,
+        6
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "279",
+      "closePanel": "568",
+      "actualOpen": 8,
+      "actualClose": 9,
+      "openRanking": [
+        5,
+        0,
+        8,
+        4,
+        1,
+        6
+      ],
+      "closeRanking": [
+        9,
+        1,
+        3,
+        7,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "230",
+      "closePanel": "140",
+      "actualOpen": 5,
+      "actualClose": 5,
+      "openRanking": [
+        0,
+        1,
+        5,
+        7,
+        4,
+        2
+      ],
+      "closeRanking": [
+        3,
+        1,
+        7,
+        9,
+        0,
+        4
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "125",
+      "closePanel": "260",
+      "actualOpen": 8,
+      "actualClose": 8,
+      "openRanking": [
+        6,
+        4,
+        1,
+        3,
+        8,
+        7
+      ],
+      "closeRanking": [
+        3,
+        1,
+        7,
+        9,
+        6,
+        8
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "446",
+      "closePanel": "589",
+      "actualOpen": 4,
+      "actualClose": 2,
+      "openRanking": [
+        1,
+        3,
+        7,
+        2,
+        4,
+        0
+      ],
+      "closeRanking": [
+        3,
+        1,
+        7,
+        9,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "isoDate": "2026-07-05",
+      "day": "Sunday",
+      "openPanel": "778",
+      "closePanel": "356",
+      "actualOpen": 2,
+      "actualClose": 4,
+      "openRanking": [
+        4,
+        9,
+        2,
+        7,
+        5,
+        8
+      ],
+      "closeRanking": [
+        3,
+        1,
+        7,
+        9,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-04",
+      "day": "Thursday",
+      "openPanel": "133",
+      "closePanel": "679",
+      "actualOpen": 7,
+      "actualClose": 2,
+      "openRanking": [
+        4,
+        8,
+        2,
+        6,
+        0,
+        1
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "150",
+      "closePanel": "578",
+      "actualOpen": 6,
+      "actualClose": 0,
+      "openRanking": [
+        2,
+        4,
+        0,
+        6,
+        1,
+        3
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        1,
+        8,
+        2
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "250",
+      "closePanel": "155",
+      "actualOpen": 7,
+      "actualClose": 1,
+      "openRanking": [
+        0,
+        7,
+        6,
+        9,
+        3,
+        5
+      ],
+      "closeRanking": [
+        7,
+        1,
+        3,
+        4,
+        8,
+        2
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "170",
+      "closePanel": "335",
+      "actualOpen": 8,
+      "actualClose": 1,
+      "openRanking": [
+        0,
+        3,
+        2,
+        5,
+        6,
+        7
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        1,
+        8,
+        2
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "157",
+      "closePanel": "470",
+      "actualOpen": 3,
+      "actualClose": 1,
+      "openRanking": [
+        0,
+        4,
+        1,
+        2,
+        3,
+        8
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        8,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "233",
+      "closePanel": "590",
+      "actualOpen": 8,
+      "actualClose": 4,
+      "openRanking": [
+        9,
+        5,
+        1,
+        2,
+        4,
+        0
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        8,
+        2,
+        5
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "390",
+      "closePanel": "350",
+      "actualOpen": 2,
+      "actualClose": 8,
+      "openRanking": [
+        3,
+        5,
+        6,
+        1,
+        2,
+        0
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        8,
+        2,
+        5
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "589",
+      "closePanel": "169",
+      "actualOpen": 2,
+      "actualClose": 6,
+      "openRanking": [
+        6,
+        1,
+        3,
+        5,
+        2,
+        4
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        5,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "388",
+      "closePanel": "589",
+      "actualOpen": 9,
+      "actualClose": 2,
+      "openRanking": [
+        2,
+        7,
+        9,
+        3,
+        8,
+        0
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        5,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "148",
+      "closePanel": "237",
+      "actualOpen": 3,
+      "actualClose": 2,
+      "openRanking": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "156",
+      "closePanel": "144",
+      "actualOpen": 2,
+      "actualClose": 9,
+      "openRanking": [
+        1,
+        9,
+        0,
+        2,
+        3,
+        4
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "457",
+      "closePanel": "680",
+      "actualOpen": 6,
+      "actualClose": 4,
+      "openRanking": [
+        7,
+        0,
+        3,
+        4,
+        8,
+        1
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "189",
+      "closePanel": "239",
+      "actualOpen": 8,
+      "actualClose": 4,
+      "openRanking": [
+        4,
+        8,
+        1,
+        6,
+        7,
+        5
+      ],
+      "closeRanking": [
+        7,
+        3,
+        4,
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "169",
+      "closePanel": "480",
+      "actualOpen": 6,
+      "actualClose": 2,
+      "openRanking": [
+        3,
+        5,
+        1,
+        4,
+        9,
+        0
+      ],
+      "closeRanking": [
+        7,
+        3,
+        5,
+        8,
+        4,
+        9
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "479",
+      "closePanel": "356",
+      "actualOpen": 0,
+      "actualClose": 4,
+      "openRanking": [
+        3,
+        1,
+        0,
+        2,
+        4,
+        5
+      ],
+      "closeRanking": [
+        7,
+        3,
+        5,
+        8,
+        9,
+        4
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "466",
+      "closePanel": "117",
+      "actualOpen": 6,
+      "actualClose": 9,
+      "openRanking": [
+        2,
+        7,
+        8,
+        4,
+        0,
+        3
+      ],
+      "closeRanking": [
+        7,
+        3,
+        5,
+        8,
+        9,
+        0
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "130",
+      "closePanel": "125",
+      "actualOpen": 4,
+      "actualClose": 8,
+      "openRanking": [
+        8,
+        3,
+        9,
+        0,
+        4,
+        6
+      ],
+      "closeRanking": [
+        7,
+        3,
+        5,
+        8,
+        9,
+        0
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "558",
+      "closePanel": "338",
+      "actualOpen": 8,
+      "actualClose": 4,
+      "openRanking": [
+        1,
+        6,
+        8,
+        7,
+        0,
+        2
+      ],
+      "closeRanking": [
+        7,
+        3,
+        5,
+        9,
+        8,
+        0
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "158",
+      "closePanel": "299",
+      "actualOpen": 4,
+      "actualClose": 0,
+      "openRanking": [
+        5,
+        7,
+        0,
+        3,
+        6,
+        1
+      ],
+      "closeRanking": [
+        7,
+        3,
+        5,
+        9,
+        8,
+        0
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "268",
+      "closePanel": "160",
+      "actualOpen": 6,
+      "actualClose": 7,
+      "openRanking": [
+        3,
+        5,
+        2,
+        1,
+        0,
+        9
+      ],
+      "closeRanking": [
+        9,
+        1,
+        3,
+        5,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "370",
+      "closePanel": "379",
+      "actualOpen": 0,
+      "actualClose": 9,
+      "openRanking": [
+        6,
+        8,
+        0,
+        2,
+        1,
+        3
+      ],
+      "closeRanking": [
+        9,
+        1,
+        3,
+        5,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "133",
+      "closePanel": "159",
+      "actualOpen": 7,
+      "actualClose": 5,
+      "openRanking": [
+        1,
+        6,
+        5,
+        4,
+        7,
+        0
+      ],
+      "closeRanking": [
+        1,
+        9,
+        3,
+        5,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "250",
+      "closePanel": "156",
+      "actualOpen": 7,
+      "actualClose": 2,
+      "openRanking": [
+        7,
+        9,
+        6,
+        1,
+        8,
+        3
+      ],
+      "closeRanking": [
+        1,
+        3,
+        9,
+        8,
+        2,
+        5
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "788",
+      "closePanel": "289",
+      "actualOpen": 3,
+      "actualClose": 9,
+      "openRanking": [
+        5,
+        6,
+        7,
+        0,
+        2,
+        1
+      ],
+      "closeRanking": [
+        1,
+        3,
+        9,
+        8,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "139",
+      "closePanel": "279",
+      "actualOpen": 3,
+      "actualClose": 8,
+      "openRanking": [
+        3,
+        0,
+        9,
+        6,
+        2,
+        7
+      ],
+      "closeRanking": [
+        1,
+        3,
+        8,
+        9,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "478",
+      "closePanel": "370",
+      "actualOpen": 9,
+      "actualClose": 0,
+      "openRanking": [
+        6,
+        9,
+        7,
+        0,
+        4,
+        8
+      ],
+      "closeRanking": [
+        1,
+        3,
+        9,
+        2,
+        6,
+        4
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "599",
+      "closePanel": "200",
+      "actualOpen": 3,
+      "actualClose": 2,
+      "openRanking": [
+        6,
+        4,
+        8,
+        7,
+        0,
+        9
+      ],
+      "closeRanking": [
+        1,
+        3,
+        5,
+        9,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "189",
+      "closePanel": "270",
+      "actualOpen": 8,
+      "actualClose": 9,
+      "openRanking": [
+        3,
+        6,
+        7,
+        5,
+        2,
+        4
+      ],
+      "closeRanking": [
+        1,
+        3,
+        5,
+        9,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "335",
+      "closePanel": "278",
+      "actualOpen": 1,
+      "actualClose": 7,
+      "openRanking": [
+        1,
+        5,
+        9,
+        4,
+        2,
+        7
+      ],
+      "closeRanking": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        9
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "337",
+      "closePanel": "469",
+      "actualOpen": 3,
+      "actualClose": 9,
+      "openRanking": [
+        1,
+        0,
+        2,
+        7,
+        3,
+        4
+      ],
+      "closeRanking": [
+        1,
+        3,
+        4,
+        5,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "467",
+      "closePanel": "400",
+      "actualOpen": 7,
+      "actualClose": 4,
+      "openRanking": [
+        7,
+        1,
+        4,
+        8,
+        5,
+        9
+      ],
+      "closeRanking": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        0
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "147",
+      "closePanel": "440",
+      "actualOpen": 2,
+      "actualClose": 8,
+      "openRanking": [
+        1,
+        2,
+        9,
+        8,
+        3,
+        5
+      ],
+      "closeRanking": [
+        1,
+        3,
+        5,
+        2,
+        8,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "688",
+      "closePanel": "348",
+      "actualOpen": 2,
+      "actualClose": 5,
+      "openRanking": [
+        1,
+        3,
+        6,
+        0,
+        4,
+        2
+      ],
+      "closeRanking": [
+        1,
+        3,
+        5,
+        0,
+        6,
+        9
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "278",
+      "closePanel": "590",
+      "actualOpen": 7,
+      "actualClose": 4,
+      "openRanking": [
+        9,
+        8,
+        2,
+        6,
+        1,
+        5
+      ],
+      "closeRanking": [
+        1,
+        3,
+        0,
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "169",
+      "closePanel": "146",
+      "actualOpen": 6,
+      "actualClose": 1,
+      "openRanking": [
+        0,
+        9,
+        3,
+        2,
+        7,
+        5
+      ],
+      "closeRanking": [
+        1,
+        3,
+        6,
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "478",
+      "closePanel": "566",
+      "actualOpen": 9,
+      "actualClose": 7,
+      "openRanking": [
+        6,
+        7,
+        2,
+        8,
+        4,
+        9
+      ],
+      "closeRanking": [
+        3,
+        1,
+        5,
+        6,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "569",
+      "closePanel": "189",
+      "actualOpen": 0,
+      "actualClose": 8,
+      "openRanking": [
+        9,
+        6,
+        3,
+        4,
+        0,
+        2
+      ],
+      "closeRanking": [
+        3,
+        1,
+        5,
+        6,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "450",
+      "closePanel": "149",
+      "actualOpen": 9,
+      "actualClose": 4,
+      "openRanking": [
+        4,
+        7,
+        3,
+        1,
+        9,
+        8
+      ],
+      "closeRanking": [
+        3,
+        6,
+        1,
+        5,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "560",
+      "closePanel": "139",
+      "actualOpen": 1,
+      "actualClose": 3,
+      "openRanking": [
+        1,
+        4,
+        8,
+        2,
+        7,
+        3
+      ],
+      "closeRanking": [
+        1,
+        3,
+        6,
+        5,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "158",
+      "closePanel": "135",
+      "actualOpen": 4,
+      "actualClose": 9,
+      "openRanking": [
+        9,
+        7,
+        5,
+        6,
+        4,
+        8
+      ],
+      "closeRanking": [
+        1,
+        6,
+        0,
+        3,
+        9,
+        2
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "122",
+      "closePanel": "168",
+      "actualOpen": 5,
+      "actualClose": 5,
+      "openRanking": [
+        0,
+        7,
+        8,
+        3,
+        5,
+        1
+      ],
+      "closeRanking": [
+        1,
+        6,
+        0,
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "160",
+      "closePanel": "345",
+      "actualOpen": 7,
+      "actualClose": 2,
+      "openRanking": [
+        0,
+        7,
+        9,
+        1,
+        8,
+        4
+      ],
+      "closeRanking": [
+        1,
+        3,
+        6,
+        0,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "268",
+      "closePanel": "140",
+      "actualOpen": 6,
+      "actualClose": 5,
+      "openRanking": [
+        1,
+        7,
+        2,
+        3,
+        4,
+        6
+      ],
+      "closeRanking": [
+        0,
+        1,
+        3,
+        6,
+        5,
+        8
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "190",
+      "closePanel": "370",
+      "actualOpen": 0,
+      "actualClose": 0,
+      "openRanking": [
+        6,
+        7,
+        1,
+        2,
+        0,
+        3
+      ],
+      "closeRanking": [
+        0,
+        1,
+        3,
+        6,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "168",
+      "closePanel": "700",
+      "actualOpen": 5,
+      "actualClose": 7,
+      "openRanking": [
+        6,
+        5,
+        3,
+        1,
+        4,
+        7
+      ],
+      "closeRanking": [
+        6,
+        1,
+        3,
+        0,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "330",
+      "closePanel": "158",
+      "actualOpen": 6,
+      "actualClose": 4,
+      "openRanking": [
+        6,
+        8,
+        2,
+        4,
+        3,
+        0
+      ],
+      "closeRanking": [
+        7,
+        9,
+        5,
+        0,
+        3,
+        6
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-06",
+      "day": "Saturday",
+      "openPanel": "450",
+      "closePanel": "120",
+      "actualOpen": 9,
+      "actualClose": 3,
+      "openRanking": [
+        0,
+        5,
+        9,
+        2,
+        3,
+        6
+      ],
+      "closeRanking": [
+        7,
+        9,
+        5,
+        0,
+        4,
+        3
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "245",
+      "closePanel": "570",
+      "actualOpen": 1,
+      "actualClose": 2,
+      "openRanking": [
+        6,
+        1,
+        2,
+        3,
+        0,
+        7
+      ],
+      "closeRanking": [
+        7,
+        9,
+        5,
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "359",
+      "closePanel": "269",
+      "actualOpen": 7,
+      "actualClose": 7,
+      "openRanking": [
+        6,
+        4,
+        2,
+        3,
+        0,
+        7
+      ],
+      "closeRanking": [
+        7,
+        9,
+        5,
+        0,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "368",
+      "closePanel": "566",
+      "actualOpen": 7,
+      "actualClose": 7,
+      "openRanking": [
+        0,
+        7,
+        1,
+        2,
+        3,
+        6
+      ],
+      "closeRanking": [
+        9,
+        5,
+        7,
+        0,
+        4,
+        3
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "134",
+      "closePanel": "455",
+      "actualOpen": 8,
+      "actualClose": 4,
+      "openRanking": [
+        7,
+        0,
+        6,
+        1,
+        3,
+        2
+      ],
+      "closeRanking": [
+        9,
+        5,
+        0,
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "368",
+      "closePanel": "680",
+      "actualOpen": 7,
+      "actualClose": 4,
+      "openRanking": [
+        8,
+        7,
+        0,
+        1,
+        3,
+        6
+      ],
+      "closeRanking": [
+        9,
+        5,
+        0,
+        1,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-13",
+      "day": "Saturday",
+      "openPanel": "240",
+      "closePanel": "169",
+      "actualOpen": 6,
+      "actualClose": 6,
+      "openRanking": [
+        2,
+        6,
+        0,
+        1,
+        7,
+        8
+      ],
+      "closeRanking": [
+        9,
+        5,
+        0,
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "480",
+      "closePanel": "578",
+      "actualOpen": 2,
+      "actualClose": 0,
+      "openRanking": [
+        4,
+        8,
+        0,
+        2,
+        6,
+        7
+      ],
+      "closeRanking": [
+        9,
+        5,
+        0,
+        1,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "360",
+      "closePanel": "250",
+      "actualOpen": 9,
+      "actualClose": 7,
+      "openRanking": [
+        7,
+        0,
+        2,
+        3,
+        6,
+        8
+      ],
+      "closeRanking": [
+        9,
+        5,
+        1,
+        2,
+        7,
+        0
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "350",
+      "closePanel": "234",
+      "actualOpen": 8,
+      "actualClose": 9,
+      "openRanking": [
+        8,
+        3,
+        7,
+        0,
+        2,
+        6
+      ],
+      "closeRanking": [
+        9,
+        5,
+        1,
+        2,
+        8,
+        3
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "346",
+      "closePanel": "247",
+      "actualOpen": 3,
+      "actualClose": 3,
+      "openRanking": [
+        5,
+        0,
+        9,
+        4,
+        2,
+        6
+      ],
+      "closeRanking": [
+        5,
+        9,
+        1,
+        2,
+        8,
+        3
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "557",
+      "closePanel": "469",
+      "actualOpen": 7,
+      "actualClose": 9,
+      "openRanking": [
+        8,
+        5,
+        6,
+        1,
+        2,
+        0
+      ],
+      "closeRanking": [
+        2,
+        5,
+        9,
+        1,
+        7,
+        0
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-20",
+      "day": "Saturday",
+      "openPanel": "567",
+      "closePanel": "356",
+      "actualOpen": 8,
+      "actualClose": 4,
+      "openRanking": [
+        5,
+        4,
+        0,
+        1,
+        2,
+        6
+      ],
+      "closeRanking": [
+        2,
+        5,
+        1,
+        9,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "880",
+      "closePanel": "579",
+      "actualOpen": 6,
+      "actualClose": 1,
+      "openRanking": [
+        9,
+        0,
+        5,
+        6,
+        3,
+        2
+      ],
+      "closeRanking": [
+        2,
+        5,
+        1,
+        9,
+        6,
+        7
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "346",
+      "closePanel": "190",
+      "actualOpen": 3,
+      "actualClose": 0,
+      "openRanking": [
+        0,
+        4,
+        9,
+        3,
+        6,
+        2
+      ],
+      "closeRanking": [
+        2,
+        5,
+        9,
+        0,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "378",
+      "closePanel": "168",
+      "actualOpen": 8,
+      "actualClose": 5,
+      "openRanking": [
+        0,
+        2,
+        8,
+        3,
+        6,
+        7
+      ],
+      "closeRanking": [
+        2,
+        5,
+        1,
+        9,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "590",
+      "closePanel": "115",
+      "actualOpen": 4,
+      "actualClose": 7,
+      "openRanking": [
+        9,
+        8,
+        4,
+        5,
+        3,
+        0
+      ],
+      "closeRanking": [
+        2,
+        1,
+        5,
+        8,
+        4,
+        6
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "277",
+      "closePanel": "799",
+      "actualOpen": 6,
+      "actualClose": 5,
+      "openRanking": [
+        0,
+        4,
+        1,
+        6,
+        3,
+        2
+      ],
+      "closeRanking": [
+        2,
+        1,
+        3,
+        5,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-27",
+      "day": "Saturday",
+      "openPanel": "259",
+      "closePanel": "567",
+      "actualOpen": 6,
+      "actualClose": 8,
+      "openRanking": [
+        1,
+        4,
+        7,
+        2,
+        3,
+        6
+      ],
+      "closeRanking": [
+        2,
+        1,
+        3,
+        8,
+        5,
+        7
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "167",
+      "closePanel": "779",
+      "actualOpen": 4,
+      "actualClose": 3,
+      "openRanking": [
+        2,
+        3,
+        4,
+        8,
+        6,
+        0
+      ],
+      "closeRanking": [
+        2,
+        1,
+        3,
+        9,
+        6,
+        5
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "135",
+      "closePanel": "255",
+      "actualOpen": 9,
+      "actualClose": 2,
+      "openRanking": [
+        4,
+        9,
+        0,
+        1,
+        2,
+        6
+      ],
+      "closeRanking": [
+        2,
+        1,
+        9,
+        3,
+        5,
+        8
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "389",
+      "closePanel": "779",
+      "actualOpen": 0,
+      "actualClose": 3,
+      "openRanking": [
+        2,
+        5,
+        3,
+        6,
+        0,
+        7
+      ],
+      "closeRanking": [
+        1,
+        2,
+        8,
+        9,
+        5,
+        4
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "240",
+      "closePanel": "239",
+      "actualOpen": 6,
+      "actualClose": 4,
+      "openRanking": [
+        1,
+        0,
+        3,
+        5,
+        6,
+        2
+      ],
+      "closeRanking": [
+        1,
+        2,
+        8,
+        9,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "256",
+      "closePanel": "128",
+      "actualOpen": 3,
+      "actualClose": 1,
+      "openRanking": [
+        1,
+        9,
+        0,
+        2,
+        3,
+        6
+      ],
+      "closeRanking": [
+        1,
+        2,
+        6,
+        8,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "isoDate": "2026-07-04",
+      "day": "Saturday",
+      "openPanel": "690",
+      "closePanel": "146",
+      "actualOpen": 5,
+      "actualClose": 1,
+      "openRanking": [
+        6,
+        0,
+        2,
+        3,
+        7,
+        8
+      ],
+      "closeRanking": [
+        2,
+        5,
+        6,
+        8,
+        1,
+        4
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-04",
+      "day": "Thursday",
+      "openPanel": "128",
+      "closePanel": "290",
+      "actualOpen": 1,
+      "actualClose": 1,
+      "openRanking": [
+        1,
+        2,
+        7,
+        5,
+        6,
+        4
+      ],
+      "closeRanking": [
+        0,
+        2,
+        3,
+        4,
+        7,
+        6
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "590",
+      "closePanel": "134",
+      "actualOpen": 4,
+      "actualClose": 8,
+      "openRanking": [
+        1,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "closeRanking": [
+        0,
+        2,
+        3,
+        4,
+        7,
+        6
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "456",
+      "closePanel": "123",
+      "actualOpen": 5,
+      "actualClose": 6,
+      "openRanking": [
+        4,
+        6,
+        9,
+        1,
+        2,
+        5
+      ],
+      "closeRanking": [
+        0,
+        2,
+        3,
+        4,
+        7,
+        6
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "556",
+      "closePanel": "188",
+      "actualOpen": 6,
+      "actualClose": 7,
+      "openRanking": [
+        8,
+        0,
+        1,
+        6,
+        9,
+        5
+      ],
+      "closeRanking": [
+        3,
+        0,
+        2,
+        4,
+        7,
+        5
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "458",
+      "closePanel": "466",
+      "actualOpen": 7,
+      "actualClose": 6,
+      "openRanking": [
+        5,
+        1,
+        4,
+        7,
+        8,
+        0
+      ],
+      "closeRanking": [
+        3,
+        0,
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "240",
+      "closePanel": "379",
+      "actualOpen": 6,
+      "actualClose": 9,
+      "openRanking": [
+        2,
+        5,
+        0,
+        6,
+        8,
+        9
+      ],
+      "closeRanking": [
+        3,
+        0,
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "689",
+      "closePanel": "139",
+      "actualOpen": 3,
+      "actualClose": 3,
+      "openRanking": [
+        4,
+        3,
+        0,
+        2,
+        1,
+        5
+      ],
+      "closeRanking": [
+        3,
+        0,
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "119",
+      "closePanel": "249",
+      "actualOpen": 1,
+      "actualClose": 5,
+      "openRanking": [
+        3,
+        8,
+        5,
+        7,
+        0,
+        4
+      ],
+      "closeRanking": [
+        0,
+        2,
+        3,
+        4,
+        7,
+        5
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "348",
+      "closePanel": "136",
+      "actualOpen": 5,
+      "actualClose": 0,
+      "openRanking": [
+        4,
+        5,
+        7,
+        8,
+        6,
+        0
+      ],
+      "closeRanking": [
+        0,
+        2,
+        3,
+        4,
+        7,
+        1
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "158",
+      "closePanel": "390",
+      "actualOpen": 4,
+      "actualClose": 2,
+      "openRanking": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        0
+      ],
+      "closeRanking": [
+        4,
+        2,
+        3,
+        7,
+        0,
+        1
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "257",
+      "closePanel": "245",
+      "actualOpen": 4,
+      "actualClose": 1,
+      "openRanking": [
+        4,
+        9,
+        0,
+        3,
+        7,
+        8
+      ],
+      "closeRanking": [
+        4,
+        3,
+        7,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "126",
+      "closePanel": "677",
+      "actualOpen": 9,
+      "actualClose": 0,
+      "openRanking": [
+        0,
+        1,
+        6,
+        7,
+        9,
+        2
+      ],
+      "closeRanking": [
+        4,
+        3,
+        7,
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "336",
+      "closePanel": "245",
+      "actualOpen": 2,
+      "actualClose": 1,
+      "openRanking": [
+        4,
+        9,
+        0,
+        5,
+        8,
+        1
+      ],
+      "closeRanking": [
+        4,
+        3,
+        7,
+        2,
+        5,
+        8
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "118",
+      "closePanel": "158",
+      "actualOpen": 0,
+      "actualClose": 4,
+      "openRanking": [
+        7,
+        3,
+        5,
+        8,
+        0,
+        1
+      ],
+      "closeRanking": [
+        4,
+        3,
+        7,
+        2,
+        5,
+        8
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "689",
+      "closePanel": "779",
+      "actualOpen": 3,
+      "actualClose": 3,
+      "openRanking": [
+        5,
+        4,
+        3,
+        6,
+        1,
+        2
+      ],
+      "closeRanking": [
+        4,
+        3,
+        7,
+        2,
+        5,
+        8
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "168",
+      "closePanel": "249",
+      "actualOpen": 5,
+      "actualClose": 5,
+      "openRanking": [
+        4,
+        8,
+        1,
+        0,
+        3,
+        5
+      ],
+      "closeRanking": [
+        4,
+        7,
+        8,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "579",
+      "closePanel": "289",
+      "actualOpen": 1,
+      "actualClose": 9,
+      "openRanking": [
+        0,
+        2,
+        5,
+        3,
+        4,
+        9
+      ],
+      "closeRanking": [
+        4,
+        7,
+        8,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "144",
+      "closePanel": "249",
+      "actualOpen": 9,
+      "actualClose": 5,
+      "openRanking": [
+        3,
+        6,
+        8,
+        0,
+        1,
+        4
+      ],
+      "closeRanking": [
+        4,
+        7,
+        8,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "127",
+      "closePanel": "789",
+      "actualOpen": 0,
+      "actualClose": 4,
+      "openRanking": [
+        3,
+        2,
+        7,
+        9,
+        1,
+        4
+      ],
+      "closeRanking": [
+        4,
+        7,
+        8,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "257",
+      "closePanel": "269",
+      "actualOpen": 4,
+      "actualClose": 7,
+      "openRanking": [
+        1,
+        2,
+        6,
+        0,
+        4,
+        7
+      ],
+      "closeRanking": [
+        4,
+        7,
+        8,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "157",
+      "closePanel": "266",
+      "actualOpen": 3,
+      "actualClose": 4,
+      "openRanking": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "closeRanking": [
+        2,
+        4,
+        8,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "255",
+      "closePanel": "679",
+      "actualOpen": 2,
+      "actualClose": 2,
+      "openRanking": [
+        0,
+        1,
+        5,
+        6,
+        2,
+        3
+      ],
+      "closeRanking": [
+        2,
+        8,
+        0,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-04",
+      "day": "Thursday",
+      "openPanel": "778",
+      "closePanel": "124",
+      "actualOpen": 2,
+      "actualClose": 7,
+      "openRanking": [
+        2,
+        8,
+        9,
+        6,
+        1,
+        7
+      ],
+      "closeRanking": [
+        9,
+        6,
+        7,
+        2,
+        5,
+        8
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-05",
+      "day": "Friday",
+      "openPanel": "267",
+      "closePanel": "579",
+      "actualOpen": 5,
+      "actualClose": 1,
+      "openRanking": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "closeRanking": [
+        7,
+        9,
+        0,
+        4,
+        3,
+        6
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-08",
+      "day": "Monday",
+      "openPanel": "130",
+      "closePanel": "670",
+      "actualOpen": 4,
+      "actualClose": 3,
+      "openRanking": [
+        4,
+        0,
+        7,
+        1,
+        3,
+        5
+      ],
+      "closeRanking": [
+        5,
+        7,
+        6,
+        0,
+        3,
+        9
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-09",
+      "day": "Tuesday",
+      "openPanel": "588",
+      "closePanel": "459",
+      "actualOpen": 1,
+      "actualClose": 8,
+      "openRanking": [
+        9,
+        6,
+        1,
+        4,
+        5,
+        0
+      ],
+      "closeRanking": [
+        8,
+        2,
+        6,
+        0,
+        7,
+        3
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-10",
+      "day": "Wednesday",
+      "openPanel": "277",
+      "closePanel": "480",
+      "actualOpen": 6,
+      "actualClose": 2,
+      "openRanking": [
+        0,
+        2,
+        8,
+        7,
+        9,
+        3
+      ],
+      "closeRanking": [
+        0,
+        8,
+        5,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-11",
+      "day": "Thursday",
+      "openPanel": "680",
+      "closePanel": "166",
+      "actualOpen": 4,
+      "actualClose": 3,
+      "openRanking": [
+        2,
+        7,
+        9,
+        1,
+        4,
+        5
+      ],
+      "closeRanking": [
+        7,
+        3,
+        6,
+        1,
+        9,
+        2
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-12",
+      "day": "Friday",
+      "openPanel": "133",
+      "closePanel": "459",
+      "actualOpen": 7,
+      "actualClose": 8,
+      "openRanking": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        0
+      ],
+      "closeRanking": [
+        3,
+        6,
+        1,
+        9,
+        2,
+        5
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-15",
+      "day": "Monday",
+      "openPanel": "146",
+      "closePanel": "245",
+      "actualOpen": 1,
+      "actualClose": 1,
+      "openRanking": [
+        4,
+        0,
+        2,
+        3,
+        5,
+        6
+      ],
+      "closeRanking": [
+        9,
+        1,
+        7,
+        5,
+        2,
+        8
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-16",
+      "day": "Tuesday",
+      "openPanel": "125",
+      "closePanel": "257",
+      "actualOpen": 8,
+      "actualClose": 4,
+      "openRanking": [
+        1,
+        6,
+        8,
+        3,
+        7,
+        0
+      ],
+      "closeRanking": [
+        3,
+        1,
+        2,
+        0,
+        8,
+        4
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-17",
+      "day": "Wednesday",
+      "openPanel": "467",
+      "closePanel": "160",
+      "actualOpen": 7,
+      "actualClose": 7,
+      "openRanking": [
+        2,
+        4,
+        0,
+        1,
+        6,
+        8
+      ],
+      "closeRanking": [
+        9,
+        5,
+        4,
+        6,
+        7,
+        0
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-18",
+      "day": "Thursday",
+      "openPanel": "478",
+      "closePanel": "790",
+      "actualOpen": 9,
+      "actualClose": 6,
+      "openRanking": [
+        1,
+        7,
+        2,
+        4,
+        5,
+        6
+      ],
+      "closeRanking": [
+        3,
+        1,
+        4,
+        0,
+        6,
+        9
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-19",
+      "day": "Friday",
+      "openPanel": "590",
+      "closePanel": "247",
+      "actualOpen": 4,
+      "actualClose": 3,
+      "openRanking": [
+        6,
+        7,
+        0,
+        1,
+        3,
+        4
+      ],
+      "closeRanking": [
+        1,
+        3,
+        6,
+        8,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-22",
+      "day": "Monday",
+      "openPanel": "445",
+      "closePanel": "379",
+      "actualOpen": 3,
+      "actualClose": 9,
+      "openRanking": [
+        2,
+        4,
+        6,
+        7,
+        9,
+        1
+      ],
+      "closeRanking": [
+        0,
+        8,
+        6,
+        1,
+        9,
+        2
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-23",
+      "day": "Tuesday",
+      "openPanel": "156",
+      "closePanel": "360",
+      "actualOpen": 2,
+      "actualClose": 9,
+      "openRanking": [
+        5,
+        3,
+        4,
+        7,
+        2,
+        8
+      ],
+      "closeRanking": [
+        1,
+        9,
+        8,
+        5,
+        4,
+        7
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-24",
+      "day": "Wednesday",
+      "openPanel": "149",
+      "closePanel": "460",
+      "actualOpen": 4,
+      "actualClose": 0,
+      "openRanking": [
+        9,
+        4,
+        8,
+        1,
+        2,
+        3
+      ],
+      "closeRanking": [
+        0,
+        3,
+        1,
+        2,
+        6,
+        9
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-25",
+      "day": "Thursday",
+      "openPanel": "460",
+      "closePanel": "125",
+      "actualOpen": 0,
+      "actualClose": 8,
+      "openRanking": [
+        8,
+        0,
+        3,
+        5,
+        1,
+        2
+      ],
+      "closeRanking": [
+        7,
+        2,
+        3,
+        9,
+        8,
+        1
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-26",
+      "day": "Friday",
+      "openPanel": "178",
+      "closePanel": "258",
+      "actualOpen": 6,
+      "actualClose": 5,
+      "openRanking": [
+        1,
+        8,
+        9,
+        0,
+        4,
+        6
+      ],
+      "closeRanking": [
+        3,
+        7,
+        9,
+        4,
+        1,
+        0
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-29",
+      "day": "Monday",
+      "openPanel": "238",
+      "closePanel": "666",
+      "actualOpen": 3,
+      "actualClose": 8,
+      "openRanking": [
+        0,
+        5,
+        6,
+        7,
+        8,
+        2
+      ],
+      "closeRanking": [
+        7,
+        4,
+        6,
+        1,
+        9,
+        2
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-06-30",
+      "day": "Tuesday",
+      "openPanel": "337",
+      "closePanel": "178",
+      "actualOpen": 3,
+      "actualClose": 6,
+      "openRanking": [
+        0,
+        4,
+        3,
+        6,
+        1,
+        2
+      ],
+      "closeRanking": [
+        3,
+        7,
+        6,
+        2,
+        9,
+        5
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-07-01",
+      "day": "Wednesday",
+      "openPanel": "258",
+      "closePanel": "789",
+      "actualOpen": 5,
+      "actualClose": 4,
+      "openRanking": [
+        1,
+        8,
+        6,
+        0,
+        2,
+        4
+      ],
+      "closeRanking": [
+        3,
+        7,
+        4,
+        8,
+        1,
+        9
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-07-02",
+      "day": "Thursday",
+      "openPanel": "238",
+      "closePanel": "249",
+      "actualOpen": 3,
+      "actualClose": 5,
+      "openRanking": [
+        1,
+        3,
+        6,
+        5,
+        9,
+        0
+      ],
+      "closeRanking": [
+        6,
+        7,
+        1,
+        4,
+        9,
+        2
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "isoDate": "2026-07-03",
+      "day": "Friday",
+      "openPanel": "500",
+      "closePanel": "478",
+      "actualOpen": 5,
+      "actualClose": 9,
+      "openRanking": [
+        1,
+        4,
+        6,
+        2,
+        3,
+        8
+      ],
+      "closeRanking": [
+        1,
+        7,
+        2,
+        8,
+        4,
+        9
+      ]
+    }
+  ]
+}

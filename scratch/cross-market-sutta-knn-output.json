@@ -1,0 +1,822 @@
+{
+  "generatedAt": "2026-07-11T12:48:30.524881+05:30",
+  "results": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "family": "previous_sutta",
+      "neighbors": 20,
+      "shrink": 0.6,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 151,
+        "baseline": 96,
+        "candidate": 101,
+        "delta": 5
+      },
+      "validation": {
+        "n": 181,
+        "baseline": 115,
+        "candidate": 116,
+        "delta": 1
+      },
+      "holdout30": {
+        "n": 30,
+        "baseline": 18,
+        "candidate": 17,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        6,
+        0,
+        2,
+        2,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "family": "temporal",
+      "neighbors": 10,
+      "shrink": 0.35,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 151,
+        "baseline": 75,
+        "candidate": 81,
+        "delta": 6
+      },
+      "validation": {
+        "n": 181,
+        "baseline": 103,
+        "candidate": 103,
+        "delta": 0
+      },
+      "holdout30": {
+        "n": 30,
+        "baseline": 19,
+        "candidate": 18,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        -3,
+        2,
+        4,
+        -1,
+        4,
+        0,
+        2
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "family": "all_sutta",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 121,
+        "baseline": 75,
+        "candidate": 82,
+        "delta": 7
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 105,
+        "candidate": 94,
+        "delta": -11
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 21,
+        "candidate": 17,
+        "delta": -4
+      },
+      "rolling90Deltas": [
+        1,
+        1,
+        2,
+        2,
+        -6,
+        -6
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "family": "same_day_sutta",
+      "neighbors": 80,
+      "shrink": 0.35,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 121,
+        "baseline": 75,
+        "candidate": 79,
+        "delta": 4
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 85,
+        "candidate": 86,
+        "delta": 1
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 20,
+        "candidate": 19,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        -1,
+        4,
+        5,
+        4,
+        -1,
+        -2
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "family": "temporal",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 141,
+        "baseline": 74,
+        "candidate": 90,
+        "delta": 16
+      },
+      "validation": {
+        "n": 181,
+        "baseline": 127,
+        "candidate": 123,
+        "delta": -4
+      },
+      "holdout30": {
+        "n": 30,
+        "baseline": 18,
+        "candidate": 15,
+        "delta": -3
+      },
+      "rolling90Deltas": [
+        5,
+        -11,
+        1,
+        15,
+        -4,
+        1,
+        -2
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "family": "same_day_sutta",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 141,
+        "baseline": 91,
+        "candidate": 101,
+        "delta": 10
+      },
+      "validation": {
+        "n": 181,
+        "baseline": 117,
+        "candidate": 115,
+        "delta": -2
+      },
+      "holdout30": {
+        "n": 30,
+        "baseline": 19,
+        "candidate": 18,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        -7,
+        0,
+        -2,
+        7,
+        12,
+        -4,
+        -4
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "family": "temporal",
+      "neighbors": 20,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 122,
+        "baseline": 69,
+        "candidate": 74,
+        "delta": 5
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 86,
+        "candidate": 85,
+        "delta": -1
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 20,
+        "candidate": 18,
+        "delta": -2
+      },
+      "rolling90Deltas": [
+        -2,
+        0,
+        -3,
+        8,
+        -5,
+        -1
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "family": "temporal",
+      "neighbors": 80,
+      "shrink": 0.35,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 122,
+        "baseline": 82,
+        "candidate": 84,
+        "delta": 2
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 108,
+        "candidate": 102,
+        "delta": -6
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 18,
+        "candidate": 17,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        -5,
+        1,
+        -7,
+        10,
+        -7,
+        -3
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "family": "all",
+      "neighbors": 20,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 121,
+        "baseline": 68,
+        "candidate": 80,
+        "delta": 12
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 93,
+        "candidate": 92,
+        "delta": -1
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 19,
+        "candidate": 11,
+        "delta": -8
+      },
+      "rolling90Deltas": [
+        2,
+        4,
+        4,
+        9,
+        -6,
+        -7
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "family": "temporal",
+      "neighbors": 20,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 121,
+        "baseline": 65,
+        "candidate": 74,
+        "delta": 9
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 88,
+        "candidate": 87,
+        "delta": -1
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 17,
+        "candidate": 19,
+        "delta": 2
+      },
+      "rolling90Deltas": [
+        -3,
+        -6,
+        1,
+        10,
+        -1,
+        -3
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "family": "temporal",
+      "neighbors": 20,
+      "shrink": 0.6,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 122,
+        "baseline": 79,
+        "candidate": 81,
+        "delta": 2
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 91,
+        "candidate": 94,
+        "delta": 3
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 21,
+        "candidate": 18,
+        "delta": -3
+      },
+      "rolling90Deltas": [
+        0,
+        -6,
+        5,
+        -1,
+        3,
+        -1
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "family": "all_sutta",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 122,
+        "baseline": 73,
+        "candidate": 76,
+        "delta": 3
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 102,
+        "candidate": 93,
+        "delta": -9
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 17,
+        "candidate": 15,
+        "delta": -2
+      },
+      "rolling90Deltas": [
+        -2,
+        -2,
+        0,
+        -3,
+        -7,
+        -1
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "family": "all",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 151,
+        "baseline": 90,
+        "candidate": 89,
+        "delta": -1
+      },
+      "validation": {
+        "n": 181,
+        "baseline": 107,
+        "candidate": 113,
+        "delta": 6
+      },
+      "holdout30": {
+        "n": 30,
+        "baseline": 24,
+        "candidate": 22,
+        "delta": -2
+      },
+      "rolling90Deltas": [
+        1,
+        0,
+        -7,
+        4,
+        -4,
+        13,
+        -9
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "family": "temporal",
+      "neighbors": 80,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 151,
+        "baseline": 102,
+        "candidate": 105,
+        "delta": 3
+      },
+      "validation": {
+        "n": 181,
+        "baseline": 113,
+        "candidate": 112,
+        "delta": -1
+      },
+      "holdout30": {
+        "n": 30,
+        "baseline": 20,
+        "candidate": 19,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        3,
+        3,
+        -1,
+        1,
+        -2,
+        1,
+        2
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "family": "temporal",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 100,
+        "baseline": 62,
+        "candidate": 62,
+        "delta": 0
+      },
+      "validation": {
+        "n": 129,
+        "baseline": 93,
+        "candidate": 78,
+        "delta": -15
+      },
+      "holdout30": {
+        "n": 19,
+        "baseline": 12,
+        "candidate": 10,
+        "delta": -2
+      },
+      "rolling90Deltas": [
+        -11,
+        0,
+        1,
+        -10,
+        -8
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "family": "previous_sutta",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 100,
+        "baseline": 60,
+        "candidate": 69,
+        "delta": 9
+      },
+      "validation": {
+        "n": 129,
+        "baseline": 73,
+        "candidate": 64,
+        "delta": -9
+      },
+      "holdout30": {
+        "n": 19,
+        "baseline": 14,
+        "candidate": 8,
+        "delta": -6
+      },
+      "rolling90Deltas": [
+        -7,
+        10,
+        2,
+        -7,
+        -10
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "family": "all",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 122,
+        "baseline": 74,
+        "candidate": 78,
+        "delta": 4
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 85,
+        "candidate": 93,
+        "delta": 8
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 20,
+        "candidate": 13,
+        "delta": -7
+      },
+      "rolling90Deltas": [
+        -1,
+        7,
+        -3,
+        12,
+        -5,
+        0
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "family": "temporal",
+      "neighbors": 80,
+      "shrink": 0.35,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 122,
+        "baseline": 72,
+        "candidate": 82,
+        "delta": 10
+      },
+      "validation": {
+        "n": 155,
+        "baseline": 90,
+        "candidate": 95,
+        "delta": 5
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 18,
+        "candidate": 13,
+        "delta": -5
+      },
+      "rolling90Deltas": [
+        -4,
+        -2,
+        6,
+        7,
+        -1,
+        -1
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "family": "all",
+      "neighbors": 20,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 119,
+        "baseline": 70,
+        "candidate": 78,
+        "delta": 8
+      },
+      "validation": {
+        "n": 154,
+        "baseline": 98,
+        "candidate": 84,
+        "delta": -14
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 18,
+        "candidate": 17,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        0,
+        6,
+        6,
+        -4,
+        -7,
+        -3
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "family": "same_day_sutta",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 119,
+        "baseline": 71,
+        "candidate": 78,
+        "delta": 7
+      },
+      "validation": {
+        "n": 154,
+        "baseline": 101,
+        "candidate": 101,
+        "delta": 0
+      },
+      "holdout30": {
+        "n": 26,
+        "baseline": 17,
+        "candidate": 18,
+        "delta": 1
+      },
+      "rolling90Deltas": [
+        3,
+        0,
+        4,
+        -1,
+        1,
+        3
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "family": "same_day_sutta",
+      "neighbors": 10,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 102,
+        "baseline": 55,
+        "candidate": 67,
+        "delta": 12
+      },
+      "validation": {
+        "n": 129,
+        "baseline": 86,
+        "candidate": 82,
+        "delta": -4
+      },
+      "holdout30": {
+        "n": 22,
+        "baseline": 17,
+        "candidate": 14,
+        "delta": -3
+      },
+      "rolling90Deltas": [
+        -3,
+        7,
+        7,
+        -7,
+        -2
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "family": "temporal",
+      "neighbors": 20,
+      "shrink": 0.85,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 102,
+        "baseline": 66,
+        "candidate": 61,
+        "delta": -5
+      },
+      "validation": {
+        "n": 129,
+        "baseline": 81,
+        "candidate": 70,
+        "delta": -11
+      },
+      "holdout30": {
+        "n": 22,
+        "baseline": 17,
+        "candidate": 12,
+        "delta": -5
+      },
+      "rolling90Deltas": [
+        -9,
+        -9,
+        -4,
+        -14,
+        -3
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "family": "temporal",
+      "neighbors": 40,
+      "shrink": 0.35,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 102,
+        "baseline": 68,
+        "candidate": 69,
+        "delta": 1
+      },
+      "validation": {
+        "n": 128,
+        "baseline": 76,
+        "candidate": 77,
+        "delta": 1
+      },
+      "holdout30": {
+        "n": 22,
+        "baseline": 13,
+        "candidate": 12,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        0,
+        -2,
+        3,
+        -2,
+        0
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "family": "previous_sutta",
+      "neighbors": 20,
+      "shrink": 0.35,
+      "decision": "revert_to_baseline",
+      "development": {
+        "n": 102,
+        "baseline": 61,
+        "candidate": 68,
+        "delta": 7
+      },
+      "validation": {
+        "n": 128,
+        "baseline": 76,
+        "candidate": 76,
+        "delta": 0
+      },
+      "holdout30": {
+        "n": 22,
+        "baseline": 13,
+        "candidate": 12,
+        "delta": -1
+      },
+      "rolling90Deltas": [
+        3,
+        5,
+        0,
+        2,
+        -3
+      ]
+    }
+  ],
+  "selective90": []
+}
