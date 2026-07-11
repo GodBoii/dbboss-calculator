@@ -144,7 +144,16 @@ const CLOSE_SUTTA_MARKET_STRATEGY: Record<string, CountAwareMarketStrategy<Close
 }
 
 type SourceFormulaSide = "open" | "close"
-type SourceFormulaOrigin = "previousDraw" | "sameDay"
+type SourceFormulaOrigin =
+  | "previousDraw"
+  | "lag2"
+  | "lag3"
+  | "lag4"
+  | "lag5"
+  | "lag7"
+  | "previousWeekday"
+  | "previousMonthDay"
+  | "sameDay"
 type SourceFormulaName =
   | "source"
   | "opposite"
@@ -153,6 +162,7 @@ type SourceFormulaName =
   | "oppositeNearTwo"
   | "nearTwoOpposite"
   | "addThreeCycle"
+  | "subtractThreeCycle"
   | "houseLowFirst"
 type SourceFormulaFeature =
   | "openSutta"
@@ -162,54 +172,117 @@ type SourceFormulaFeature =
   | "openPanel.last"
   | "openPanel.outerSum"
   | "openPanel.outerDiff"
+  | "openPanel.innerRightSum"
+  | "openPanel.span"
   | "closePanel.first"
   | "closePanel.middle"
   | "closePanel.last"
   | "closePanel.outerSum"
   | "closePanel.outerDiff"
+  | "closePanel.product"
+  | "jodi.sum"
+  | "jodi.diff"
 
 interface SourceHybridRule {
   sourceMarket: string
   sourceFeature: SourceFormulaFeature
   origin: SourceFormulaOrigin
   formula: SourceFormulaName
+  preserveCount?: 2 | 3 | 4
 }
 
 const OPEN_SOURCE_HYBRID_RULES: Partial<Record<string, SourceHybridRule | SourceHybridRule[]>> = {
-  "Madhur Day": { sourceMarket: "Milan Day", sourceFeature: "openSutta", origin: "previousDraw", formula: "sourceOpposite" },
-  "Milan Day": { sourceMarket: "Rajdhani Night", sourceFeature: "openPanel.middle", origin: "previousDraw", formula: "addThreeCycle" },
-  Kalyan: { sourceMarket: "Sridevi", sourceFeature: "openPanel.last", origin: "sameDay", formula: "addThreeCycle" },
-  Sridevi: { sourceMarket: "Milan Night", sourceFeature: "closeSutta", origin: "previousDraw", formula: "mirrorOpposite" },
+  "Madhur Day": [
+    { sourceMarket: "Milan Day", sourceFeature: "openSutta", origin: "previousDraw", formula: "sourceOpposite" },
+    { sourceMarket: "Time Bazar", sourceFeature: "closePanel.first", origin: "lag2", formula: "opposite" },
+  ],
+  "Milan Day": [
+    { sourceMarket: "Rajdhani Night", sourceFeature: "openPanel.middle", origin: "previousDraw", formula: "addThreeCycle" },
+    { sourceMarket: "Main Bazar", sourceFeature: "closePanel.first", origin: "previousDraw", formula: "source" },
+  ],
+  Kalyan: [
+    { sourceMarket: "Sridevi", sourceFeature: "openPanel.last", origin: "sameDay", formula: "addThreeCycle" },
+    { sourceMarket: "Time Bazar", sourceFeature: "openPanel.outerSum", origin: "sameDay", formula: "opposite" },
+  ],
+  Sridevi: [
+    { sourceMarket: "Milan Night", sourceFeature: "closeSutta", origin: "previousDraw", formula: "mirrorOpposite" },
+    { sourceMarket: "Kalyan", sourceFeature: "openPanel.middle", origin: "previousWeekday", formula: "sourceOpposite" },
+  ],
   "Sridevi Night": [
     { sourceMarket: "Madhur Day", sourceFeature: "closeSutta", origin: "sameDay", formula: "addThreeCycle" },
     { sourceMarket: "Main Bazar", sourceFeature: "openPanel.outerSum", origin: "previousDraw", formula: "source" },
+    { sourceMarket: "Rajdhani Day", sourceFeature: "openPanel.first", origin: "previousDraw", formula: "opposite" },
   ],
-  "Kalyan Night": { sourceMarket: "Madhur Day", sourceFeature: "closePanel.outerDiff", origin: "sameDay", formula: "houseLowFirst" },
-  "Madhur Night": { sourceMarket: "Kalyan Night", sourceFeature: "closePanel.outerSum", origin: "previousDraw", formula: "opposite" },
+  "Kalyan Night": [
+    { sourceMarket: "Madhur Day", sourceFeature: "closePanel.outerDiff", origin: "sameDay", formula: "houseLowFirst" },
+    { sourceMarket: "Kalyan Night", sourceFeature: "openSutta", origin: "lag2", formula: "source" },
+  ],
+  "Madhur Night": [
+    { sourceMarket: "Kalyan Night", sourceFeature: "closePanel.outerSum", origin: "previousDraw", formula: "opposite" },
+    { sourceMarket: "Milan Night", sourceFeature: "openPanel.outerDiff", origin: "lag3", formula: "source" },
+  ],
   "Milan Night": { sourceMarket: "Madhur Night", sourceFeature: "openSutta", origin: "sameDay", formula: "sourceOpposite" },
-  "Rajdhani Day": { sourceMarket: "Time Bazar", sourceFeature: "openPanel.outerSum", origin: "sameDay", formula: "mirrorOpposite" },
-  "Main Bazar": { sourceMarket: "Madhur Day", sourceFeature: "openPanel.first", origin: "previousDraw", formula: "source" },
+  "Rajdhani Day": [
+    { sourceMarket: "Time Bazar", sourceFeature: "openPanel.outerSum", origin: "sameDay", formula: "mirrorOpposite" },
+    { sourceMarket: "Sridevi", sourceFeature: "openPanel.outerDiff", origin: "previousDraw", formula: "source" },
+  ],
+  "Rajdhani Night": { sourceMarket: "Main Bazar", sourceFeature: "openPanel.last", origin: "lag3", formula: "sourceOpposite" },
+  "Main Bazar": [
+    { sourceMarket: "Madhur Day", sourceFeature: "openPanel.first", origin: "previousDraw", formula: "source" },
+    { sourceMarket: "Milan Night", sourceFeature: "closeSutta", origin: "previousWeekday", formula: "source" },
+  ],
+  "Time Bazar": { sourceMarket: "Madhur Night", sourceFeature: "closePanel.middle", origin: "previousWeekday", formula: "source" },
 }
 
 const CLOSE_SOURCE_HYBRID_RULES: Partial<Record<string, SourceHybridRule | SourceHybridRule[]>> = {
   Sridevi: [
     { sourceMarket: "Kalyan", sourceFeature: "openSutta", origin: "previousDraw", formula: "mirrorOpposite" },
     { sourceMarket: "Milan Night", sourceFeature: "openPanel.outerDiff", origin: "previousDraw", formula: "opposite" },
+    { sourceMarket: "Time Bazar", sourceFeature: "closeSutta", origin: "lag4", formula: "source" },
   ],
-  "Time Bazar": { sourceMarket: "Sridevi", sourceFeature: "openSutta", origin: "sameDay", formula: "oppositeNearTwo" },
-  "Madhur Day": { sourceMarket: "Main Bazar", sourceFeature: "closePanel.first", origin: "previousDraw", formula: "mirrorOpposite" },
-  "Milan Day": { sourceMarket: "Madhur Day", sourceFeature: "closeSutta", origin: "sameDay", formula: "oppositeNearTwo" },
-  Kalyan: { sourceMarket: "Time Bazar", sourceFeature: "openSutta", origin: "sameDay", formula: "nearTwoOpposite" },
-  "Sridevi Night": { sourceMarket: "Sridevi", sourceFeature: "closeSutta", origin: "previousDraw", formula: "mirrorOpposite" },
-  "Madhur Night": { sourceMarket: "Sridevi Night", sourceFeature: "openSutta", origin: "sameDay", formula: "addThreeCycle" },
+  "Time Bazar": [
+    { sourceMarket: "Sridevi", sourceFeature: "openSutta", origin: "sameDay", formula: "oppositeNearTwo" },
+    { sourceMarket: "Time Bazar", sourceFeature: "jodi.diff", origin: "previousWeekday", formula: "opposite" },
+  ],
+  "Madhur Day": [
+    { sourceMarket: "Main Bazar", sourceFeature: "closePanel.first", origin: "previousDraw", formula: "mirrorOpposite" },
+    { sourceMarket: "Milan Night", sourceFeature: "jodi.diff", origin: "lag5", formula: "source" },
+  ],
+  "Milan Day": [
+    { sourceMarket: "Madhur Day", sourceFeature: "closeSutta", origin: "sameDay", formula: "oppositeNearTwo" },
+    { sourceMarket: "Madhur Day", sourceFeature: "openPanel.last", origin: "previousMonthDay", formula: "opposite" },
+  ],
+  Kalyan: [
+    { sourceMarket: "Time Bazar", sourceFeature: "openSutta", origin: "sameDay", formula: "nearTwoOpposite" },
+    { sourceMarket: "Main Bazar", sourceFeature: "jodi.sum", origin: "previousDraw", formula: "opposite" },
+  ],
+  "Sridevi Night": [
+    { sourceMarket: "Sridevi", sourceFeature: "closeSutta", origin: "previousDraw", formula: "mirrorOpposite" },
+    { sourceMarket: "Madhur Day", sourceFeature: "openPanel.innerRightSum", origin: "lag7", formula: "opposite" },
+  ],
+  "Madhur Night": [
+    { sourceMarket: "Sridevi Night", sourceFeature: "openSutta", origin: "sameDay", formula: "addThreeCycle" },
+    { sourceMarket: "Madhur Night", sourceFeature: "openPanel.span", origin: "lag7", formula: "opposite" },
+  ],
   "Milan Night": [
     { sourceMarket: "Madhur Day", sourceFeature: "closeSutta", origin: "sameDay", formula: "addThreeCycle" },
     { sourceMarket: "Sridevi", sourceFeature: "closePanel.first", origin: "sameDay", formula: "source" },
+    { sourceMarket: "Madhur Day", sourceFeature: "closePanel.outerSum", origin: "previousDraw", formula: "source" },
   ],
   "Main Bazar": [
     { sourceMarket: "Time Bazar", sourceFeature: "openSutta", origin: "sameDay", formula: "addThreeCycle" },
     { sourceMarket: "Milan Day", sourceFeature: "openPanel.outerSum", origin: "sameDay", formula: "opposite" },
+    { sourceMarket: "Time Bazar", sourceFeature: "openPanel.innerRightSum", origin: "lag4", formula: "opposite" },
   ],
+  "Rajdhani Day": { sourceMarket: "Madhur Day", sourceFeature: "closePanel.product", origin: "sameDay", formula: "source" },
+  "Kalyan Night": { sourceMarket: "Sridevi Night", sourceFeature: "openSutta", origin: "sameDay", formula: "sourceOpposite" },
+  "Rajdhani Night": {
+    sourceMarket: "Madhur Night",
+    sourceFeature: "closePanel.middle",
+    origin: "lag2",
+    formula: "subtractThreeCycle",
+    preserveCount: 2,
+  },
 }
 
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
@@ -469,6 +542,9 @@ function sourceFormulaDigits(formula: SourceFormulaName, sourceSutta: number) {
   if (formula === "addThreeCycle") {
     return [sourceSutta, sourceSutta + 3, sourceSutta + 6, sourceSutta + 9, sourceSutta + 1, sourceSutta + 5].map(mod10)
   }
+  if (formula === "subtractThreeCycle") {
+    return [sourceSutta, sourceSutta - 3, sourceSutta - 6, sourceSutta - 9, sourceSutta - 1, sourceSutta + 5].map(mod10)
+  }
   if (formula === "houseLowFirst") {
     return [sourceSutta, sourceSutta + 5, 1, 2, 3, 4].map(mod10)
   }
@@ -496,6 +572,21 @@ function panelOuterDiff(panel: string | undefined) {
   return digits ? mod10(digits[0] - digits[2]) : null
 }
 
+function panelInnerRightSum(panel: string | undefined) {
+  const digits = panelDigits(panel)
+  return digits ? mod10(digits[1] + digits[2]) : null
+}
+
+function panelProduct(panel: string | undefined) {
+  const digits = panelDigits(panel)
+  return digits ? mod10(digits[0] * digits[1] * digits[2]) : null
+}
+
+function panelSpan(panel: string | undefined) {
+  const digits = panelDigits(panel)
+  return digits ? Math.max(...digits) - Math.min(...digits) : null
+}
+
 function sourceFeatureValue(record: PanelRecord, feature: SourceFormulaFeature) {
   if (feature === "openSutta") return record.openSutta >= 0 && record.openSutta <= 9 ? record.openSutta : null
   if (feature === "closeSutta") return record.closeSutta >= 0 && record.closeSutta <= 9 ? record.closeSutta : null
@@ -504,11 +595,17 @@ function sourceFeatureValue(record: PanelRecord, feature: SourceFormulaFeature) 
   if (feature === "openPanel.last") return panelDigit(record.openPanel, 2)
   if (feature === "openPanel.outerSum") return panelOuterSum(record.openPanel)
   if (feature === "openPanel.outerDiff") return panelOuterDiff(record.openPanel)
+  if (feature === "openPanel.innerRightSum") return panelInnerRightSum(record.openPanel)
+  if (feature === "openPanel.span") return panelSpan(record.openPanel)
   if (feature === "closePanel.first") return panelDigit(record.closePanel, 0)
   if (feature === "closePanel.middle") return panelDigit(record.closePanel, 1)
   if (feature === "closePanel.last") return panelDigit(record.closePanel, 2)
   if (feature === "closePanel.outerSum") return panelOuterSum(record.closePanel)
-  return panelOuterDiff(record.closePanel)
+  if (feature === "closePanel.outerDiff") return panelOuterDiff(record.closePanel)
+  if (feature === "closePanel.product") return panelProduct(record.closePanel)
+  if (record.openSutta < 0 || record.openSutta > 9 || record.closeSutta < 0 || record.closeSutta > 9) return null
+  if (feature === "jodi.sum") return mod10(record.openSutta + record.closeSutta)
+  return mod10(record.openSutta - record.closeSutta)
 }
 
 function findSourceRecord(
@@ -523,9 +620,33 @@ function findSourceRecord(
     .sort((a, b) => a.isoDate.localeCompare(b.isoDate))
 
   if (origin === "sameDay") return dated.find((item) => item.isoDate === targetISO)?.record ?? null
-  return dated
-    .filter((item) => item.isoDate < targetISO)
-    .at(-1)?.record ?? null
+
+  const previous = dated.filter((item) => item.isoDate < targetISO)
+  if (origin === "previousWeekday") {
+    const targetWeekday = new Date(`${targetISO}T00:00:00Z`).getUTCDay()
+    return previous
+      .filter((item) => new Date(`${item.isoDate}T00:00:00Z`).getUTCDay() === targetWeekday)
+      .at(-1)?.record ?? null
+  }
+  if (origin === "previousMonthDay") {
+    const targetDayOfMonth = Number.parseInt(targetISO.slice(8, 10), 10)
+    return previous
+      .filter((item) => Number.parseInt(item.isoDate.slice(8, 10), 10) === targetDayOfMonth)
+      .at(-1)?.record ?? null
+  }
+
+  const lag = origin === "lag2"
+    ? 2
+    : origin === "lag3"
+      ? 3
+      : origin === "lag4"
+        ? 4
+        : origin === "lag5"
+          ? 5
+          : origin === "lag7"
+            ? 7
+            : 1
+  return previous.at(-lag)?.record ?? null
 }
 
 function applySourceHybridPromotion(input: {
@@ -549,7 +670,7 @@ function applySourceHybridPromotion(input: {
     const sourceSutta = sourceFeatureValue(sourceRecord, rule.sourceFeature)
     if (sourceSutta === null) continue
 
-    const order = current.slice(0, 4).map((pick) => pick.sutta)
+    const order = current.slice(0, rule.preserveCount ?? 4).map((pick) => pick.sutta)
     for (const sutta of sourceFormulaDigits(rule.formula, sourceSutta)) {
       if (order.length >= count) break
       if (!order.includes(sutta)) order.push(sutta)
