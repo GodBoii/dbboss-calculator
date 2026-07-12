@@ -285,6 +285,17 @@ const CLOSE_SOURCE_HYBRID_RULES: Partial<Record<string, SourceHybridRule | Sourc
   },
 }
 
+export function getSuttaSourceMarketNames(marketName: string) {
+  const configurations = [OPEN_SOURCE_HYBRID_RULES[marketName], CLOSE_SOURCE_HYBRID_RULES[marketName]]
+  const names = new Set<string>()
+  for (const configuration of configurations) {
+    const rules = Array.isArray(configuration) ? configuration : configuration ? [configuration] : []
+    for (const rule of rules) names.add(rule.sourceMarket)
+  }
+  names.delete(marketName)
+  return [...names]
+}
+
 const clampCopyCount = (value: number) => Math.max(1, Math.min(10, Math.trunc(value) || 1))
 function compareCopySuttaPicks(a: CopySuttaPick, b: CopySuttaPick) {
   return (
@@ -1251,7 +1262,7 @@ export function AnalysisTabs({
       ? result.openPicks
       : effectivePicksSubTab === "jodi" && jodiResult
         ? jodiResult.adjustedClosePicks
-        : result.closePicks
+        : result.closePanelPicks
   const activeSequenceRate =
     effectivePicksSubTab === "open" ? result.stats.openSequenceRate : result.stats.closeSequenceRate
   const activeTripleRate =
@@ -1379,12 +1390,12 @@ export function AnalysisTabs({
                             onClick={() =>
                               handleCopy(
                                 "close",
-                                formatPicksForCopy(result.closePicks, `${selectedMarket} — Close Picks`)
+                                formatPicksForCopy(result.closePanelPicks, `${selectedMarket} — Close Picks`)
                               )
                             }
                           />
                         </div>
-                        <PicksList picks={result.closePicks} getScoreColor={getScoreColor} />
+                        <PicksList picks={result.closePanelPicks} getScoreColor={getScoreColor} />
                         <DpFocusSection
                           title="Close DP Focus"
                           copyLabel="Copy Close DP"

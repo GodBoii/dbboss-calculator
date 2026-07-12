@@ -28,8 +28,10 @@ import {
   buildJodis,
   buildOpenSuttaRanking,
   buildOpenSuttaSet,
+  getSuttaSourceMarketNames,
 } from "./analysis/AnalysisTabs"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
+import { APP_VERSION } from "@/lib/app-version"
 
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
@@ -51,6 +53,44 @@ const MARKET_URLS: Record<string, string> = {
 
 const DAY_MARKETS   = ['Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan']
 const NIGHT_MARKETS = ['Sridevi Night', 'Kalyan Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar']
+
+type ScrapedPanel = {
+  market: string
+  dateRangeStart: string
+  dateRangeEnd: string
+  day: string
+  openPanel: string
+  openSutta: number
+  jodi: string
+  closePanel: string
+  closeSutta: number
+}
+
+function recordsAreFresh(records: PanelRecord[]) {
+  const newestSavedAt = records.reduce((max, record) => Math.max(max, record.savedAt ?? 0), 0)
+  return records.length > 50 && newestSavedAt > 0 && Date.now() - newestSavedAt < 6 * 60 * 60 * 1000
+}
+
+async function fetchMarketHistory(marketName: string) {
+  const url = MARKET_URLS[marketName]
+  if (!url) throw new Error(`No panel-chart URL configured for ${marketName}.`)
+  const apiUrl = `/api/scrape?url=${encodeURIComponent(url)}&market=${encodeURIComponent(marketName)}`
+  const response = await fetch(apiUrl)
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({ error: response.statusText }))
+    throw new Error(body.error ?? `Unable to refresh ${marketName} (HTTP ${response.status}).`)
+  }
+  const body = await response.json()
+  const panels = body.panels as ScrapedPanel[]
+  if (!panels?.length) throw new Error(`No ${marketName} draws were parsed from the source site.`)
+  const savedAt = Date.now()
+  await saveRecords(panels.map((panel) => ({
+    id: `${panel.market}|${panel.dateRangeStart}|${panel.day}`,
+    ...panel,
+    savedAt,
+  })))
+  return getRecordsByMarket(marketName)
+}
 
 
 
@@ -106,7 +146,7 @@ function accuracyMetric(correct: number, total: number) {
   }
 }
 
-function buildSuttaAccuracyReport(
+export function buildSuttaAccuracyReport(
   marketName: string,
   records: PanelRecord[],
   allMarketsRecords: Record<string, PanelRecord[]>,
@@ -358,8 +398,7 @@ export default function AnalysisSection() {
         }
 
         const cached = await getRecordsByMarket(selectedMarket)
-        const newestCachedAt = cached.reduce((max, record) => Math.max(max, record.savedAt ?? 0), 0)
-        const cacheIsFresh = newestCachedAt > 0 && Date.now() - newestCachedAt < 6 * 60 * 60 * 1000
+        const cacheIsFresh = recordsAreFresh(cached)
 
         if (cached.length > 50 && cacheIsFresh && !forceRefresh) {
           // We have enough cached data — skip scraping
@@ -426,6 +465,24 @@ export default function AnalysisSection() {
         }
 
         // ── Step 5: Run predictor ──────────────────────────────────────────
+        const requiredSourceMarkets = getSuttaSourceMarketNames(selectedMarket)
+        if (requiredSourceMarkets.length > 0) {
+          setLoadingMessage(`Refreshing ${requiredSourceMarkets.length} required Sutta source markets…`)
+          const refreshedSources = await Promise.all(requiredSourceMarkets.map(async (marketName) => {
+            const cachedSource = allMarketsRecords[marketName] ?? []
+            const sourceRecords = recordsAreFresh(cachedSource)
+              ? cachedSource
+              : await fetchMarketHistory(marketName)
+            if (sourceRecords.length <= 50) {
+              throw new Error(`${marketName} does not have enough history for the production Sutta model.`)
+            }
+            return [marketName, sourceRecords] as const
+          }))
+          for (const [marketName, sourceRecords] of refreshedSources) {
+            allMarketsRecords[marketName] = sourceRecords
+          }
+        }
+
         cachedRecordsRef.current = records
         allMarketsRecordsRef.current = allMarketsRecords
         setCachedRecords(records)
@@ -915,6 +972,11 @@ export default function AnalysisSection() {
                   <span className="status-value">
                     {suttaAccuracyReport.startDate}–{suttaAccuracyReport.endDate} · {suttaAccuracyReport.drawsTested} draws
                   </span>
+                </div>
+                <div className="status-divider" />
+                <div className="status-item">
+                  <span className="status-label">Sutta model</span>
+                  <span className="status-value">Production v{APP_VERSION}</span>
                 </div>
               </div>
             )}
