@@ -10,7 +10,7 @@ import {
 import { isSequential, isTriple } from "./panel-utils";
 import { computeSuttaDroughts, countSuttaSignals, getSuttaSignal } from "./sutta-signals";
 import { flattenRecords } from "./data";
-import { rerankOpenPanelsByProfile } from "./panel-profile";
+import { rerankOpenPanelsByProfile, rerankPanelsByProfile } from "./panel-profile";
 import { computeStats } from "./stats";
 import { computeDpKindContext } from "./dp-kind-context";
 import {
@@ -28,6 +28,14 @@ import {
   scoreDoublePanelsForPosition,
   scorePanelsForPosition,
 } from "./scoring";
+
+const CLOSE_LAG3_PROFILE_MARKETS = new Set([
+  "Milan Day",
+  "Rajdhani Day",
+  "Kalyan",
+  "Sridevi Night",
+  "Main Bazar",
+]);
 
 export function analyzeMarket(
   marketName: string,
@@ -207,12 +215,16 @@ export function analyzeMarket(
   const openPicks = options.useOpenPanelProfile === false
     ? scoredOpenPicks
     : rerankOpenPanelsByProfile(scoredOpenPicks, openEntries);
-  const closePicks = scorePanelsForPosition(
+  const scoredClosePicks = scorePanelsForPosition(
     closeEntries,
     closeCtx,
     undefined,
     CLOSE_SCORE_TUNING,
   );
+  const closePicks = scoredClosePicks;
+  const closePanelPicks = CLOSE_LAG3_PROFILE_MARKETS.has(marketName)
+    ? rerankPanelsByProfile(scoredClosePicks, closeEntries, 3)
+    : scoredClosePicks;
   const openDpPicks = boostDoublePanelFocusPicks(
     scoreDoublePanelsForPosition(
       openEntries,
@@ -264,7 +276,7 @@ export function analyzeMarket(
     allMarketsRecords,
     analysisDate,
     basePrediction: buildKindPrediction(
-      closePicks,
+      scoredClosePicks,
       closeDpKindContext,
       1.3,
     ),
@@ -294,6 +306,7 @@ export function analyzeMarket(
     topPicks: topPicks.slice(0, 30),
     openPicks: openPicks.slice(0, 30),
     closePicks: closePicks.slice(0, 30),
+    closePanelPicks: closePanelPicks.slice(0, 30),
     openDpPicks: openDpPicks.slice(0, 30),
     closeDpPicks: closeDpPicks.slice(0, 30),
     openDpDigitFocus: buildDpDigitFocus(openDpPicks),

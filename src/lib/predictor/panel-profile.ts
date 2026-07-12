@@ -11,9 +11,10 @@ function increment<K>(counts: Map<K, number>, key: K): void {
  * previous Open panel. This is intentionally Open-only: the equivalent Close
  * model failed the final chronological holdout.
  */
-export function rerankOpenPanelsByProfile(
+export function rerankPanelsByProfile(
   picks: PanelPick[],
   entries: FlatEntry[],
+  sourceLag = 1,
 ): PanelPick[] {
   if (picks.length === 0 || entries.length === 0) return picks;
 
@@ -36,7 +37,7 @@ export function rerankOpenPanelsByProfile(
     increment(kindCounts, getPanelKind(panel));
   }
 
-  const previousPanel = entries.at(-1)?.panel ?? "";
+  const previousPanel = entries.at(-sourceLag)?.panel ?? "";
   const scored = picks.map((pick) => {
     const panel = pick.panel;
     const longCount = panelCounts.get(panel) ?? 0;
@@ -82,3 +83,9 @@ export function rerankOpenPanelsByProfile(
   }));
 }
 
+export function rerankOpenPanelsByProfile(
+  picks: PanelPick[],
+  entries: FlatEntry[],
+): PanelPick[] {
+  return rerankPanelsByProfile(picks, entries, 1);
+}
