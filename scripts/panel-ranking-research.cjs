@@ -23,6 +23,19 @@ const OUTPUT = path.join(__dirname, '..', 'scratch', 'panel-ranking-research-out
 const MIN_TRAINING = 50
 const HOLDOUT_DAYS = 30
 const VALIDATION_DAYS = 183
+const SAME_DAY_SOURCE = {
+  'Time Bazar': 'Sridevi',
+  'Madhur Day': 'Sridevi',
+  'Milan Day': 'Madhur Day',
+  'Rajdhani Day': 'Madhur Day',
+  Kalyan: 'Madhur Day',
+  'Sridevi Night': 'Kalyan',
+  'Kalyan Night': 'Sridevi Night',
+  'Madhur Night': 'Sridevi Night',
+  'Milan Night': 'Sridevi Night',
+  'Rajdhani Night': 'Sridevi Night',
+  'Main Bazar': 'Sridevi Night',
+}
 
 function dated(records) {
   return records
@@ -44,7 +57,7 @@ function countBy(items, keyFn) {
   return counts
 }
 
-function rankPanels(history, targetDay, targetDate) {
+function rankPanels(history, targetDay, targetDate, contexts = {}) {
   const recent = (n) => history.slice(-n)
   const longCounts = countBy(history, (row) => row.panel)
   const r30 = countBy(recent(30), (row) => row.panel)
@@ -60,6 +73,30 @@ function rankPanels(history, targetDay, targetDate) {
   const suttaCounts = countBy(history, (row) => row.sutta)
   const kindCounts = countBy(history, (row) => getPanelKind(row.panel))
   const last = history.at(-1)
+  const lagPanels = [1, 2, 3, 5, 7].map((lag) => history.at(-lag)?.panel || '')
+  const sameDayPanels = contexts.sameDayPanels || []
+  const previousNightPanels = contexts.previousNightPanels || []
+
+  const relation = (panel, sources) => {
+    let overlap = 0
+    let opposite = 0
+    let sameSutta = 0
+    let oppositeSutta = 0
+    let sameHouseDigits = 0
+    const panelSutta = calculateSutta(panel)
+    for (const source of sources) {
+      overlap += new Set(panel.split('').filter((digit) => source.includes(digit))).size
+      opposite += new Set(panel.split('').filter((digit) => source.includes(String((Number(digit) + 5) % 10)))).size
+      const sourceSutta = calculateSutta(source)
+      sameSutta += panelSutta === sourceSutta ? 1 : 0
+      oppositeSutta += panelSutta === (sourceSutta + 5) % 10 ? 1 : 0
+      sameHouseDigits += panel.split('').filter((digit) => {
+        const low = Number(digit) < 5
+        return source.split('').some((sourceDigit) => (Number(sourceDigit) < 5) === low)
+      }).length
+    }
+    return { overlap, opposite, sameSutta, oppositeSutta, sameHouseDigits }
+  }
 
   const features = ALL_PANELS.map((panel) => {
     const long = longCounts.get(panel) || 0
@@ -74,6 +111,9 @@ function rankPanels(history, targetDay, targetDate) {
     const oppositeOverlap = last
       ? new Set(panel.split('').filter((digit) => last.panel.includes(String((Number(digit) + 5) % 10)))).size
       : 0
+    const lagRelations = lagPanels.map((source) => relation(panel, source ? [source] : []))
+    const sameDayRelation = relation(panel, sameDayPanels)
+    const previousNightRelation = relation(panel, previousNightPanels)
     return {
       panel,
       long,
@@ -85,6 +125,9 @@ function rankPanels(history, targetDay, targetDate) {
       profile: Math.log(long + 1.5) + 0.45 * pos + 0.25 * pairs + 0.25 * Math.log((suttaCounts.get(sutta) || 0) + 2) + 0.2 * Math.log((kindCounts.get(kind) || 0) + 2),
       overlap,
       oppositeOverlap,
+      lagRelations,
+      sameDayRelation,
+      previousNightRelation,
     }
   })
 
@@ -104,6 +147,19 @@ function rankPanels(history, targetDay, targetDate) {
     oppositeDigits035: (f) => f.profile + 0.35 * f.oppositeOverlap,
     oppositeDigits050: (f) => f.profile + 0.5 * f.oppositeOverlap,
     oppositeDigits075: (f) => f.profile + 0.75 * f.oppositeOverlap,
+    lag2Opposite: (f) => f.profile + 0.35 * f.lagRelations[1].opposite,
+    lag3Opposite: (f) => f.profile + 0.35 * f.lagRelations[2].opposite,
+    lag5Opposite: (f) => f.profile + 0.35 * f.lagRelations[3].opposite,
+    lag7Opposite: (f) => f.profile + 0.35 * f.lagRelations[4].opposite,
+    sameDayOverlap: (f) => f.profile + 0.25 * f.sameDayRelation.overlap,
+    sameDayOpposite: (f) => f.profile + 0.25 * f.sameDayRelation.opposite,
+    sameDaySutta: (f) => f.profile + 0.4 * f.sameDayRelation.sameSutta,
+    sameDayOppositeSutta: (f) => f.profile + 0.4 * f.sameDayRelation.oppositeSutta,
+    sameDayHouse: (f) => f.profile + 0.08 * f.sameDayRelation.sameHouseDigits,
+    previousNightOverlap: (f) => f.profile + 0.25 * f.previousNightRelation.overlap,
+    previousNightOpposite: (f) => f.profile + 0.25 * f.previousNightRelation.opposite,
+    previousNightSutta: (f) => f.profile + 0.4 * f.previousNightRelation.sameSutta,
+    previousNightOppositeSutta: (f) => f.profile + 0.4 * f.previousNightRelation.oppositeSutta,
   }
 
   return Object.fromEntries(Object.entries(formulas).map(([name, score]) => [
@@ -118,7 +174,7 @@ function hybrid(baseline, challenger, frozen) {
 }
 
 function emptyMetrics() {
-  return { n: 0, top3: 0, top10: 0, top30: 0, rankSum: 0 }
+  return { n: 0, top3: 0, top6: 0, top10: 0, top30: 0, rankSum: 0 }
 }
 
 function add(metrics, picks, actual) {
@@ -126,6 +182,7 @@ function add(metrics, picks, actual) {
   metrics.n++
   if (rank > 0) metrics.rankSum += rank
   if (rank > 0 && rank <= 3) metrics.top3++
+  if (rank > 0 && rank <= 6) metrics.top6++
   if (rank > 0 && rank <= 10) metrics.top10++
   if (rank > 0 && rank <= 30) metrics.top30++
 }
@@ -134,6 +191,7 @@ function summarize(metrics) {
   return {
     ...metrics,
     top3Pct: metrics.n ? 100 * metrics.top3 / metrics.n : 0,
+    top6Pct: metrics.n ? 100 * metrics.top6 / metrics.n : 0,
     top10Pct: metrics.n ? 100 * metrics.top10 / metrics.n : 0,
     top30Pct: metrics.n ? 100 * metrics.top30 / metrics.n : 0,
     averageRankWhenHit: metrics.top30 ? metrics.rankSum / metrics.top30 : null,
@@ -191,7 +249,20 @@ async function main() {
           day: row.record.day,
           isoDate: row.isoDate,
         })).filter((row) => row.panel)
-        const challengers = rankPanels(history, target.record.day, target.isoDate)
+        const sameDayMarket = SAME_DAY_SOURCE[market]
+        const sameDayRecord = sameDayMarket
+          ? datedByMarket[sameDayMarket]?.find((row) => row.isoDate === target.isoDate)?.record
+          : null
+        const previousNightRecord = datedByMarket['Main Bazar']
+          ?.filter((row) => row.isoDate < target.isoDate)
+          .at(-1)?.record
+        const panelsFrom = (record) => record
+          ? [record.openPanel, record.closePanel].filter((panel) => panel?.length === 3)
+          : []
+        const challengers = rankPanels(history, target.record.day, target.isoDate, {
+          sameDayPanels: panelsFrom(sameDayRecord),
+          previousNightPanels: panelsFrom(previousNightRecord),
+        })
         const models = { baseline }
         for (const [name, challenger] of Object.entries(challengers)) {
           models[`${name}:0`] = challenger.slice(0, 30)
@@ -217,6 +288,9 @@ async function main() {
           hits: {
             baseline: models.baseline.includes(actual),
             'oppositeDigits035:0': models['oppositeDigits035:0'].includes(actual),
+            'lag3Opposite:0': models['lag3Opposite:0'].includes(actual),
+            'lag5Opposite:0': models['lag5Opposite:0'].includes(actual),
+            'sameDayOppositeSutta:0': models['sameDayOppositeSutta:0'].includes(actual),
           },
         })
       }
@@ -245,7 +319,17 @@ async function main() {
         publishedMetrics[block][market][side] = market === 'ALL' && !block.startsWith('rolling')
           ? models
           : Object.fromEntries(
-            ['baseline', 'panelProfile:0', 'oppositeDigits035:0']
+            [
+              'baseline',
+              'panelProfile:0',
+              'oppositeDigits035:0',
+              'oppositeDigits075:0',
+              'lag3Opposite:0',
+              'lag5Opposite:0',
+              'sameDayOppositeSutta:0',
+              'previousNightOverlap:0',
+              'previousNightOpposite:0',
+            ]
               .filter((model) => models[model])
               .map((model) => [model, models[model]]),
           )
