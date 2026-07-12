@@ -12,9 +12,11 @@ import {
 export interface BacktestBucket {
   n: number
   panelTop3: number
+  panelTop6: number
   panelTop10: number
   panelTop30: number
   suttaTop3: number
+  suttaTop6: number
   suttaTop10: number
   suttaTop30: number
   kindCorrect: number
@@ -61,9 +63,11 @@ function emptyBucket(): MutableBucket {
   return {
     n: 0,
     panelTop3: 0,
+    panelTop6: 0,
     panelTop10: 0,
     panelTop30: 0,
     suttaTop3: 0,
+    suttaTop6: 0,
     suttaTop10: 0,
     suttaTop30: 0,
     kindCorrect: 0,
@@ -81,9 +85,11 @@ function finalizeBucket(bucket: MutableBucket): BacktestBucket {
   return {
     n: bucket.n,
     panelTop3: bucket.panelTop3,
+    panelTop6: bucket.panelTop6,
     panelTop10: bucket.panelTop10,
     panelTop30: bucket.panelTop30,
     suttaTop3: bucket.suttaTop3,
+    suttaTop6: bucket.suttaTop6,
     suttaTop10: bucket.suttaTop10,
     suttaTop30: bucket.suttaTop30,
     kindCorrect: bucket.kindCorrect,
@@ -148,6 +154,7 @@ function evaluatePickSet(
 
   for (const [key, size] of [
     ['Top3', 3],
+    ['Top6', 6],
     ['Top10', 10],
     ['Top30', 30],
   ] as const) {
@@ -219,7 +226,7 @@ export function runMarketBacktest(
     )
     evaluatePickSet(
       close,
-      prediction.closePicks,
+      prediction.closePanelPicks,
       record.closePanel,
       record.closeSutta,
       prediction.closeSuttaDroughts[String(record.closeSutta)] ?? 1000,

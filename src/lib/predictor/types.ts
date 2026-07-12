@@ -21,6 +21,7 @@ export interface PredictionResult {
   topPicks: PanelPick[];
   openPicks: PanelPick[];
   closePicks: PanelPick[];
+  closePanelPicks: PanelPick[];
   openDpPicks: PanelPick[];
   closeDpPicks: PanelPick[];
   openDpDigitFocus: DpDigitFocus | null;
