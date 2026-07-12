@@ -1,4 +1,4 @@
-import type { PanelRecord } from "../db";
+import { getRecordISODate, type PanelRecord } from "../db";
 import type { PredictionResult } from "./types";
 import { getMarketCalibration } from "./calibration";
 import {
@@ -36,6 +36,40 @@ const CLOSE_LAG3_PROFILE_MARKETS = new Set([
   "Sridevi Night",
   "Main Bazar",
 ]);
+
+const OPEN_PANEL_PROFILE_CONFIG: Record<
+  string,
+  | { sourceLag: number; oppositeWeight?: number }
+  | { previousNightRelation: "overlap" | "opposite" }
+> = {
+  Sridevi: { sourceLag: 5 },
+  "Time Bazar": { sourceLag: 1, oppositeWeight: 0.75 },
+  "Madhur Day": { previousNightRelation: "opposite" },
+  "Rajdhani Day": { sourceLag: 5 },
+  Kalyan: { sourceLag: 1, oppositeWeight: 0 },
+  "Sridevi Night": { previousNightRelation: "overlap" },
+  "Madhur Night": { sourceLag: 5 },
+  "Milan Night": { sourceLag: 3 },
+  "Rajdhani Night": { sourceLag: 3 },
+  "Main Bazar": { previousNightRelation: "overlap" },
+};
+
+function previousMainBazarPanels(
+  allMarketsRecords: Record<string, PanelRecord[]>,
+  analysisDate: Date,
+): string[] {
+  const targetISO = analysisDate.toISOString().slice(0, 10);
+  const previous = (allMarketsRecords["Main Bazar"] ?? [])
+    .map((record) => ({ record, isoDate: getRecordISODate(record) }))
+    .filter((item): item is { record: PanelRecord; isoDate: string } =>
+      Boolean(item.isoDate && item.isoDate < targetISO),
+    )
+    .sort((a, b) => a.isoDate.localeCompare(b.isoDate))
+    .at(-1)?.record;
+  return previous
+    ? [previous.openPanel, previous.closePanel].filter((panel) => panel?.length === 3)
+    : [];
+}
 
 export function analyzeMarket(
   marketName: string,
@@ -215,6 +249,16 @@ export function analyzeMarket(
   const openPicks = options.useOpenPanelProfile === false
     ? scoredOpenPicks
     : rerankOpenPanelsByProfile(scoredOpenPicks, openEntries);
+  const openPanelConfig = OPEN_PANEL_PROFILE_CONFIG[marketName];
+  const openPanelPicks = !openPanelConfig
+    ? openPicks
+    : "previousNightRelation" in openPanelConfig
+      ? rerankPanelsByProfile(scoredOpenPicks, openEntries, {
+          externalPanels: previousMainBazarPanels(allMarketsRecords, analysisDate),
+          externalRelation: openPanelConfig.previousNightRelation,
+          oppositeWeight: 0.25,
+        })
+      : rerankPanelsByProfile(scoredOpenPicks, openEntries, openPanelConfig);
   const scoredClosePicks = scorePanelsForPosition(
     closeEntries,
     closeCtx,
@@ -223,7 +267,7 @@ export function analyzeMarket(
   );
   const closePicks = scoredClosePicks;
   const closePanelPicks = CLOSE_LAG3_PROFILE_MARKETS.has(marketName)
-    ? rerankPanelsByProfile(scoredClosePicks, closeEntries, 3)
+    ? rerankPanelsByProfile(scoredClosePicks, closeEntries, { sourceLag: 3 })
     : scoredClosePicks;
   const openDpPicks = boostDoublePanelFocusPicks(
     scoreDoublePanelsForPosition(
@@ -305,6 +349,7 @@ export function analyzeMarket(
     suttaSignalCounts: countSuttaSignals(closeSuttaDroughts),
     topPicks: topPicks.slice(0, 30),
     openPicks: openPicks.slice(0, 30),
+    openPanelPicks: openPanelPicks.slice(0, 30),
     closePicks: closePicks.slice(0, 30),
     closePanelPicks: closePanelPicks.slice(0, 30),
     openDpPicks: openDpPicks.slice(0, 30),

@@ -14,7 +14,12 @@ function increment<K>(counts: Map<K, number>, key: K): void {
 export function rerankPanelsByProfile(
   picks: PanelPick[],
   entries: FlatEntry[],
-  sourceLag = 1,
+  options: {
+    sourceLag?: number;
+    oppositeWeight?: number;
+    externalPanels?: string[];
+    externalRelation?: "overlap" | "opposite";
+  } = {},
 ): PanelPick[] {
   if (picks.length === 0 || entries.length === 0) return picks;
 
@@ -37,6 +42,12 @@ export function rerankPanelsByProfile(
     increment(kindCounts, getPanelKind(panel));
   }
 
+  const {
+    sourceLag = 1,
+    oppositeWeight = 0.35,
+    externalPanels = [],
+    externalRelation = "opposite",
+  } = options;
   const previousPanel = entries.at(-sourceLag)?.panel ?? "";
   const scored = picks.map((pick) => {
     const panel = pick.panel;
@@ -56,13 +67,31 @@ export function rerankPanelsByProfile(
         .split("")
         .filter((digit) => previousPanel.includes(String((Number(digit) + 5) % 10))),
     ).size;
+    const externalOverlap = externalPanels.reduce(
+      (sum, sourcePanel) =>
+        sum + new Set(panel.split("").filter((digit) => sourcePanel.includes(digit))).size,
+      0,
+    );
+    const externalOpposite = externalPanels.reduce(
+      (sum, sourcePanel) =>
+        sum +
+        new Set(
+          panel
+            .split("")
+            .filter((digit) => sourcePanel.includes(String((Number(digit) + 5) % 10))),
+        ).size,
+      0,
+    );
+    const relationScore = externalPanels.length > 0
+      ? externalRelation === "overlap" ? externalOverlap : externalOpposite
+      : oppositeOverlap;
     const profileScore =
       Math.log(longCount + 1.5) +
       0.45 * positionProfile +
       0.25 * pairProfile +
       0.25 * suttaProfile +
       0.2 * kindProfile +
-      0.35 * oppositeOverlap;
+      oppositeWeight * relationScore;
 
     return { pick, longCount, profileScore };
   });
@@ -87,5 +116,5 @@ export function rerankOpenPanelsByProfile(
   picks: PanelPick[],
   entries: FlatEntry[],
 ): PanelPick[] {
-  return rerankPanelsByProfile(picks, entries, 1);
+  return rerankPanelsByProfile(picks, entries);
 }
