@@ -20,6 +20,7 @@ export interface PredictionResult {
   suttaSignalCounts: Record<SuttaSignalState, number>;
   topPicks: PanelPick[];
   openPicks: PanelPick[];
+  openPanelPicks: PanelPick[];
   closePicks: PanelPick[];
   closePanelPicks: PanelPick[];
   openDpPicks: PanelPick[];

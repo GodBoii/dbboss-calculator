@@ -218,7 +218,7 @@ export function runMarketBacktest(
 
     evaluatePickSet(
       open,
-      prediction.openPicks,
+      prediction.openPanelPicks,
       record.openPanel,
       record.openSutta,
       prediction.combinedSuttaDroughts[String(record.openSutta)] ?? 1000,
