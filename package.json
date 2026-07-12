@@ -8,6 +8,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint src next.config.ts eslint.config.mjs",
+    "research:panel-ranking": "node scripts/panel-ranking-research.cjs",
     "verify:sutta-ranking": "node scripts/verify-sutta-ranking.cjs"
   },
   "dependencies": {
