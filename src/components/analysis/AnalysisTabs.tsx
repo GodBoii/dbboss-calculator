@@ -1259,7 +1259,7 @@ export function AnalysisTabs({
     effectivePicksSubTab === "open" ? "Open" : effectivePicksSubTab === "jodi" ? "Jodi Close" : "Close"
   const activeBreakdownPicks =
     effectivePicksSubTab === "open"
-      ? result.openPicks
+      ? result.openPanelPicks
       : effectivePicksSubTab === "jodi" && jodiResult
         ? jodiResult.adjustedClosePicks
         : result.closePanelPicks
@@ -1333,12 +1333,12 @@ export function AnalysisTabs({
                             onClick={() =>
                               handleCopy(
                                 "open",
-                                formatPicksForCopy(result.openPicks, `${selectedMarket} — Open Picks`)
+                                formatPicksForCopy(result.openPanelPicks, `${selectedMarket} — Open Picks`)
                               )
                             }
                           />
                         </div>
-                        <PicksList picks={result.openPicks} getScoreColor={getScoreColor} />
+                        <PicksList picks={result.openPanelPicks} getScoreColor={getScoreColor} />
                         <DpFocusSection
                           title="Open DP Focus"
                           copyLabel="Copy Open DP"
