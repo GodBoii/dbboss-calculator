@@ -10,6 +10,7 @@ import {
 import { isSequential, isTriple } from "./panel-utils";
 import { computeSuttaDroughts, countSuttaSignals, getSuttaSignal } from "./sutta-signals";
 import { flattenRecords } from "./data";
+import { rerankOpenPanelsByProfile } from "./panel-profile";
 import { computeStats } from "./stats";
 import { computeDpKindContext } from "./dp-kind-context";
 import {
@@ -33,6 +34,7 @@ export function analyzeMarket(
   records: PanelRecord[],
   allMarketsRecords: Record<string, PanelRecord[]>,
   analysisDate = new Date(),
+  options: { useOpenPanelProfile?: boolean } = {},
 ): PredictionResult | null {
   if (records.length === 0) return null;
 
@@ -196,12 +198,15 @@ export function analyzeMarket(
     operatorPanelAdjustments: closeOperatorContext.panelAdjustments,
   };
 
-  const openPicks = scorePanelsForPosition(
+  const scoredOpenPicks = scorePanelsForPosition(
     openEntries,
     openCtx,
     undefined,
     OPEN_SCORE_TUNING,
   );
+  const openPicks = options.useOpenPanelProfile === false
+    ? scoredOpenPicks
+    : rerankOpenPanelsByProfile(scoredOpenPicks, openEntries);
   const closePicks = scorePanelsForPosition(
     closeEntries,
     closeCtx,
