@@ -1,4 +1,4 @@
-const APP_VERSION = "1.0.8";
+const APP_VERSION = "1.0.9";
 const CACHE_PREFIX = "lakshmi-boss";
 const LEGACY_CACHE_PREFIXES = ["dbboss"];
 const SHELL_CACHE = `${CACHE_PREFIX}-shell-${APP_VERSION}`;
