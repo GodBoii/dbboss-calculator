@@ -10,7 +10,12 @@ import {
 import { isSequential, isTriple } from "./panel-utils";
 import { computeSuttaDroughts, countSuttaSignals, getSuttaSignal } from "./sutta-signals";
 import { flattenRecords } from "./data";
-import { rerankOpenPanelsByProfile, rerankPanelsByProfile } from "./panel-profile";
+import {
+  preservePanelPrefix,
+  rerankOpenPanelsByProfile,
+  rerankPanelsByFrequencyBlend,
+  rerankPanelsByProfile,
+} from "./panel-profile";
 import { computeStats } from "./stats";
 import { computeDpKindContext } from "./dp-kind-context";
 import {
@@ -36,23 +41,6 @@ const CLOSE_LAG3_PROFILE_MARKETS = new Set([
   "Sridevi Night",
   "Main Bazar",
 ]);
-
-const OPEN_PANEL_PROFILE_CONFIG: Record<
-  string,
-  | { sourceLag: number; oppositeWeight?: number }
-  | { previousNightRelation: "overlap" | "opposite" }
-> = {
-  Sridevi: { sourceLag: 5 },
-  "Time Bazar": { sourceLag: 1, oppositeWeight: 0.75 },
-  "Madhur Day": { previousNightRelation: "opposite" },
-  "Rajdhani Day": { sourceLag: 5 },
-  Kalyan: { sourceLag: 1, oppositeWeight: 0 },
-  "Sridevi Night": { previousNightRelation: "overlap" },
-  "Madhur Night": { sourceLag: 5 },
-  "Milan Night": { sourceLag: 3 },
-  "Rajdhani Night": { sourceLag: 3 },
-  "Main Bazar": { previousNightRelation: "overlap" },
-};
 
 function previousMainBazarPanels(
   allMarketsRecords: Record<string, PanelRecord[]>,
@@ -249,16 +237,29 @@ export function analyzeMarket(
   const openPicks = options.useOpenPanelProfile === false
     ? scoredOpenPicks
     : rerankOpenPanelsByProfile(scoredOpenPicks, openEntries);
-  const openPanelConfig = OPEN_PANEL_PROFILE_CONFIG[marketName];
-  const openPanelPicks = !openPanelConfig
-    ? openPicks
-    : "previousNightRelation" in openPanelConfig
-      ? rerankPanelsByProfile(scoredOpenPicks, openEntries, {
-          externalPanels: previousMainBazarPanels(allMarketsRecords, analysisDate),
-          externalRelation: openPanelConfig.previousNightRelation,
-          oppositeWeight: 0.25,
-        })
-      : rerankPanelsByProfile(scoredOpenPicks, openEntries, openPanelConfig);
+  let openPanelPicks = openPicks;
+  if (marketName === "Sridevi") {
+    openPanelPicks = rerankPanelsByProfile(scoredOpenPicks, openEntries, {
+      externalPanels: previousMainBazarPanels(allMarketsRecords, analysisDate),
+      externalRelation: "overlap",
+      oppositeWeight: 0.25,
+    });
+  } else if (marketName === "Sridevi Night") {
+    openPanelPicks = rerankPanelsByProfile(scoredOpenPicks, openEntries, {
+      oppositeWeight: 0.5,
+    });
+  } else if (marketName === "Madhur Night") {
+    openPanelPicks = preservePanelPrefix(
+      openPicks,
+      rerankPanelsByProfile(scoredOpenPicks, openEntries, { oppositeWeight: 0.75 }),
+      3,
+    );
+  } else if (marketName === "Milan Night") {
+    openPanelPicks = rerankPanelsByProfile(scoredOpenPicks, openEntries, {
+      sourceRelation: "overlap",
+      oppositeWeight: -0.35,
+    });
+  }
   const scoredClosePicks = scorePanelsForPosition(
     closeEntries,
     closeCtx,
@@ -266,9 +267,38 @@ export function analyzeMarket(
     CLOSE_SCORE_TUNING,
   );
   const closePicks = scoredClosePicks;
-  const closePanelPicks = CLOSE_LAG3_PROFILE_MARKETS.has(marketName)
+  let closePanelPicks = CLOSE_LAG3_PROFILE_MARKETS.has(marketName)
     ? rerankPanelsByProfile(scoredClosePicks, closeEntries, { sourceLag: 3 })
     : scoredClosePicks;
+  if (marketName === "Sridevi") {
+    closePanelPicks = rerankPanelsByProfile(scoredClosePicks, closeEntries, {
+      oppositeWeight: 0,
+      structureWeight: 0.35,
+      transitionWeight: 0.45,
+    });
+  } else if (marketName === "Time Bazar") {
+    closePanelPicks = preservePanelPrefix(
+      scoredClosePicks,
+      rerankPanelsByFrequencyBlend(scoredClosePicks, closeEntries),
+      10,
+    );
+  } else if (marketName === "Milan Day") {
+    closePanelPicks = rerankPanelsByProfile(scoredClosePicks, closeEntries, {
+      sourceRelation: "overlap",
+    });
+  } else if (marketName === "Madhur Night") {
+    closePanelPicks = preservePanelPrefix(
+      scoredClosePicks,
+      rerankPanelsByProfile(scoredClosePicks, closeEntries, { sourceLag: 7 }),
+      3,
+    );
+  } else if (marketName === "Rajdhani Night") {
+    closePanelPicks = preservePanelPrefix(
+      scoredClosePicks,
+      rerankPanelsByProfile(scoredClosePicks, closeEntries, { sourceLag: 3 }),
+      3,
+    );
+  }
   const openDpPicks = boostDoublePanelFocusPicks(
     scoreDoublePanelsForPosition(
       openEntries,
