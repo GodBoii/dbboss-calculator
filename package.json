@@ -1,6 +1,6 @@
 {
   "name": "lakshmi-boss-calculator",
-  "version": "1.0.9",
+  "version": "1.0.12",
   "private": true,
   "scripts": {
     "prebuild": "node verify-pwa-assets.cjs",
@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint src next.config.ts eslint.config.mjs",
     "research:panel-ranking": "node scripts/panel-ranking-research.cjs",
-    "verify:sutta-ranking": "node scripts/verify-sutta-ranking.cjs"
+    "verify:sutta-ranking": "node scripts/verify-sutta-ranking.cjs",
+    "verify:sutta-above90": "node scripts/verify-above-90-regression.cjs"
   },
   "dependencies": {
     "next": "16.2.6",
