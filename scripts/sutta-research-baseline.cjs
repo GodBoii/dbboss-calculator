@@ -2,6 +2,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const crypto = require('crypto')
 const Module = require('module')
 const ts = require('typescript')
 
@@ -29,6 +30,7 @@ for (const ext of ['.ts', '.tsx']) {
 }
 
 const { GET } = require('../src/app/api/scrape/route.ts')
+const { SUTTA_MODEL_VERSION } = require('../src/lib/app-version.ts')
 const {
   analyzeMarket,
   buildContextFromResult,
@@ -39,7 +41,7 @@ const {
   buildCloseSuttaSet,
   buildJodis,
   buildOpenSuttaSet,
-} = require('../src/components/analysis/AnalysisTabs.tsx')
+} = require('../src/lib/sutta-model/production.ts')
 
 const MARKET_URLS = {
   Sridevi: 'https://dpbossss.boston/panel-chart-record/sridevi.php',
@@ -222,8 +224,10 @@ async function main() {
 
   const report = {
     generatedAt: new Date().toISOString(),
+    modelVersion: SUTTA_MODEL_VERSION,
     days,
     sourceCache: CACHE,
+    sourceCacheSha256: crypto.createHash('sha256').update(fs.readFileSync(CACHE)).digest('hex'),
     dateRanges,
     totals,
     byMarket,

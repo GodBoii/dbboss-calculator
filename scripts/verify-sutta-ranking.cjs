@@ -38,7 +38,7 @@ const {
   buildOpenSuttaSet,
   buildCloseSuttaSet,
   buildJodis,
-} = require("../src/components/analysis/AnalysisTabs.tsx")
+} = require("../src/lib/sutta-model/production.ts")
 
 const marketOrder = [
   "Sridevi",
