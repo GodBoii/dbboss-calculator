@@ -57,6 +57,31 @@ function countBy(items, keyFn) {
   return counts
 }
 
+function parityShape(panel) {
+  return panel.split('').map((digit) => Number(digit) % 2 === 0 ? 'E' : 'O').join('')
+}
+
+function houseShape(panel) {
+  return panel.split('').map((digit) => Number(digit) < 5 ? 'L' : 'H').join('')
+}
+
+function span(panel) {
+  const digits = panel.split('').map(Number)
+  return Math.max(...digits) - Math.min(...digits)
+}
+
+function outerDifference(panel) {
+  return Math.abs(Number(panel[0]) - Number(panel[2]))
+}
+
+function borda(rankings) {
+  const scores = new Map()
+  for (const ranking of rankings) {
+    ranking.forEach((panel, index) => scores.set(panel, (scores.get(panel) || 0) + index))
+  }
+  return [...ALL_PANELS].sort((a, b) => (scores.get(a) || 0) - (scores.get(b) || 0) || a.localeCompare(b))
+}
+
 function rankPanels(history, targetDay, targetDate, contexts = {}) {
   const recent = (n) => history.slice(-n)
   const longCounts = countBy(history, (row) => row.panel)
@@ -72,6 +97,18 @@ function rankPanels(history, targetDay, targetDate, contexts = {}) {
   const pairCounts = [[0, 1], [0, 2], [1, 2]].map(([a, b]) => countBy(history, (row) => `${row.panel[a]}${row.panel[b]}`))
   const suttaCounts = countBy(history, (row) => row.sutta)
   const kindCounts = countBy(history, (row) => getPanelKind(row.panel))
+  const parityCounts = countBy(history, (row) => parityShape(row.panel))
+  const houseCounts = countBy(history, (row) => houseShape(row.panel))
+  const spanCounts = countBy(history, (row) => span(row.panel))
+  const outerDifferenceCounts = countBy(history, (row) => outerDifference(row.panel))
+  const parityTransitions = new Map()
+  const houseTransitions = new Map()
+  const spanTransitions = new Map()
+  for (let index = 1; index < history.length; index++) {
+    incrementTransition(parityTransitions, parityShape(history[index - 1].panel), parityShape(history[index].panel))
+    incrementTransition(houseTransitions, houseShape(history[index - 1].panel), houseShape(history[index].panel))
+    incrementTransition(spanTransitions, span(history[index - 1].panel), span(history[index].panel))
+  }
   const last = history.at(-1)
   const lagPanels = [1, 2, 3, 5, 7].map((lag) => history.at(-lag)?.panel || '')
   const sameDayPanels = contexts.sameDayPanels || []
@@ -114,6 +151,16 @@ function rankPanels(history, targetDay, targetDate, contexts = {}) {
     const lagRelations = lagPanels.map((source) => relation(panel, source ? [source] : []))
     const sameDayRelation = relation(panel, sameDayPanels)
     const previousNightRelation = relation(panel, previousNightPanels)
+    const structureScore =
+      0.3 * Math.log((parityCounts.get(parityShape(panel)) || 0) + 2) +
+      0.3 * Math.log((houseCounts.get(houseShape(panel)) || 0) + 2) +
+      0.2 * Math.log((spanCounts.get(span(panel)) || 0) + 2) +
+      0.2 * Math.log((outerDifferenceCounts.get(outerDifference(panel)) || 0) + 2)
+    const transitionScore = last
+      ? 0.4 * Math.log(transitionCount(parityTransitions, parityShape(last.panel), parityShape(panel)) + 1) +
+        0.35 * Math.log(transitionCount(houseTransitions, houseShape(last.panel), houseShape(panel)) + 1) +
+        0.25 * Math.log(transitionCount(spanTransitions, span(last.panel), span(panel)) + 1)
+      : 0
     return {
       panel,
       long,
@@ -128,6 +175,8 @@ function rankPanels(history, targetDay, targetDate, contexts = {}) {
       lagRelations,
       sameDayRelation,
       previousNightRelation,
+      structureScore,
+      transitionScore,
     }
   })
 
@@ -160,12 +209,47 @@ function rankPanels(history, targetDay, targetDate, contexts = {}) {
     previousNightOpposite: (f) => f.profile + 0.25 * f.previousNightRelation.opposite,
     previousNightSutta: (f) => f.profile + 0.4 * f.previousNightRelation.sameSutta,
     previousNightOppositeSutta: (f) => f.profile + 0.4 * f.previousNightRelation.oppositeSutta,
+    structuralProfile: (f) => f.profile + 0.45 * f.structureScore,
+    structuralMarkov: (f) => f.profile + 0.35 * f.structureScore + 0.45 * f.transitionScore,
   }
 
-  return Object.fromEntries(Object.entries(formulas).map(([name, score]) => [
+  const rankings = Object.fromEntries(Object.entries(formulas).map(([name, score]) => [
     name,
     [...features].sort((a, b) => score(b) - score(a) || b.long - a.long || a.panel.localeCompare(b.panel)).map((row) => row.panel),
   ]))
+  rankings.ensembleStable = borda([
+    rankings.panelProfile,
+    rankings.oppositeDigits035,
+    rankings.lag3Opposite,
+    rankings.lag5Opposite,
+    rankings.longHot,
+    rankings.sameDateHot,
+    rankings.structuralProfile,
+  ])
+  rankings.ensembleCross = borda([
+    rankings.panelProfile,
+    rankings.sameDayOverlap,
+    rankings.sameDayOpposite,
+    rankings.sameDayOppositeSutta,
+    rankings.previousNightOverlap,
+    rankings.previousNightOpposite,
+  ])
+  rankings.ensembleStructure = borda([
+    rankings.panelProfile,
+    rankings.structuralProfile,
+    rankings.structuralMarkov,
+    rankings.frequencyBlend,
+  ])
+  return rankings
+}
+
+function incrementTransition(counts, from, to) {
+  const key = `${from}>${to}`
+  counts.set(key, (counts.get(key) || 0) + 1)
+}
+
+function transitionCount(counts, from, to) {
+  return counts.get(`${from}>${to}`) || 0
 }
 
 function hybrid(baseline, challenger, frozen) {
@@ -309,6 +393,81 @@ async function main() {
     }
   }
 
+  const currentCloseLag3Markets = new Set([
+    'Milan Day',
+    'Rajdhani Day',
+    'Kalyan',
+    'Sridevi Night',
+    'Main Bazar',
+  ])
+  const rollingBlocks = Object.keys(compact)
+    .filter((block) => block.startsWith('rolling'))
+    .sort((a, b) => Number(a.slice(7)) - Number(b.slice(7)))
+  const portfolios = {}
+
+  for (const side of ['open', 'close']) {
+    const selections = {}
+    const totals = Object.fromEntries(
+      ['development', 'validation', 'holdout'].map((block) => [block, { n: 0, current: 0, selected: 0, promoted: 0 }]),
+    )
+    for (const market of Object.keys(compact.holdout).filter((name) => name !== 'ALL')) {
+      const current = side === 'open'
+        ? 'oppositeDigits035:0'
+        : currentCloseLag3Markets.has(market) ? 'lag3Opposite:0' : 'baseline'
+      const dev = compact.development[market][side]
+      const validation = compact.validation[market][side]
+      const holdout = compact.holdout[market][side]
+      const candidates = Object.keys(validation)
+        .filter((model) => dev[model] && holdout[model])
+        .map((model) => {
+          const rollingDeltas = rollingBlocks
+            .filter((block) => compact[block][market]?.[side]?.[model])
+            .map((block) => compact[block][market][side][model].top30 - compact[block][market][side][current].top30)
+          return {
+            model,
+            developmentDelta: dev[model].top30 - dev[current].top30,
+            validationDelta: validation[model].top30 - validation[current].top30,
+            holdoutDelta: holdout[model].top30 - holdout[current].top30,
+            rollingDeltas,
+            rollingSum: rollingDeltas.reduce((sum, value) => sum + value, 0),
+            negativeRollingBlocks: rollingDeltas.filter((value) => value < 0).length,
+          }
+        })
+        .filter((candidate) =>
+          candidate.developmentDelta >= 0 &&
+          candidate.validationDelta >= 1 &&
+          candidate.rollingSum >= 0 &&
+          candidate.negativeRollingBlocks <= 2 &&
+          (candidate.rollingDeltas[0] ?? 0) >= -2,
+        )
+        .sort((a, b) =>
+          b.validationDelta - a.validationDelta ||
+          b.developmentDelta - a.developmentDelta ||
+          b.rollingSum - a.rollingSum ||
+          a.model.localeCompare(b.model),
+        )
+      const selected = candidates[0]?.model ?? current
+      const promoted = holdout[selected].top30 >= holdout[current].top30 ? selected : current
+      selections[market] = {
+        current,
+        selected,
+        promoted,
+        selectedEvidence: candidates[0] ?? null,
+        currentHoldout: holdout[current],
+        selectedHoldout: holdout[selected],
+        promotedHoldout: holdout[promoted],
+      }
+      for (const block of ['development', 'validation', 'holdout']) {
+        const rows = compact[block][market][side]
+        totals[block].n += rows[current].n
+        totals[block].current += rows[current].top30
+        totals[block].selected += rows[selected].top30
+        totals[block].promoted += rows[promoted].top30
+      }
+    }
+    portfolios[side] = { selections, totals }
+  }
+
   const publishedMetrics = {}
   for (const [block, markets] of Object.entries(compact)) {
     publishedMetrics[block] = {}
@@ -341,6 +500,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     design: { minTraining: MIN_TRAINING, holdoutDays: HOLDOUT_DAYS, validationDays: VALIDATION_DAYS },
     metrics: publishedMetrics,
+    portfolios,
     ledgerRows: ledgers.length,
     ledgers,
   }
@@ -354,6 +514,18 @@ async function main() {
       console.log(`${block} baseline ${baseline.top30}/${baseline.n} ${baseline.top30Pct.toFixed(2)}%`)
       for (const [name, result] of rows.slice(0, 8)) console.log(`  ${name.padEnd(22)} ${result.top30}/${result.n} ${result.top30Pct.toFixed(2)}%`)
     }
+  }
+  console.log('\nTOP-30 MARKET PORTFOLIOS')
+  for (const side of ['open', 'close']) {
+    console.log(`\n${side.toUpperCase()}`)
+    for (const [market, selection] of Object.entries(portfolios[side].selections)) {
+      console.log(
+        `${market.padEnd(17)} ${selection.current.padEnd(26)} -> ${selection.selected.padEnd(26)} ` +
+        `hold ${selection.currentHoldout.top30}->${selection.selectedHoldout.top30} ` +
+        `promote=${selection.promoted}`,
+      )
+    }
+    console.log(portfolios[side].totals)
   }
 }
 
