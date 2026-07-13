@@ -21,17 +21,17 @@ import {
   type PanelRecord,
 } from "@/lib/db"
 import {
-  AnalysisTabs,
-  BetCopyDesk,
   buildCloseSuttaRanking,
   buildCloseSuttaSet,
   buildJodis,
   buildOpenSuttaRanking,
   buildOpenSuttaSet,
   getSuttaSourceMarketNames,
-} from "./analysis/AnalysisTabs"
+} from "@/lib/sutta-model"
+import { AnalysisTabs } from "./analysis/AnalysisTabs"
+import { BetCopyDesk } from "./analysis/BetCopyDesk"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
-import { APP_VERSION } from "@/lib/app-version"
+import { SUTTA_MODEL_VERSION } from "@/lib/app-version"
 
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
@@ -976,7 +976,7 @@ export default function AnalysisSection() {
                 <div className="status-divider" />
                 <div className="status-item">
                   <span className="status-label">Sutta model</span>
-                  <span className="status-value">Production v{APP_VERSION}</span>
+                  <span className="status-value">Production v{SUTTA_MODEL_VERSION}</span>
                 </div>
               </div>
             )}
