@@ -234,27 +234,29 @@ export function analyzeMarket(
     undefined,
     OPEN_SCORE_TUNING,
   );
-  const openPicks = options.useOpenPanelProfile === false
+  // Keep the Sutta input ranking frozen to the scorer used by the Above-90
+  // model. Panel-profile research is displayed through openPanelPicks only.
+  const openPicks = scoredOpenPicks;
+  let openPanelPicks = options.useOpenPanelProfile === false
     ? scoredOpenPicks
     : rerankOpenPanelsByProfile(scoredOpenPicks, openEntries);
-  let openPanelPicks = openPicks;
-  if (marketName === "Sridevi") {
+  if (options.useOpenPanelProfile !== false && marketName === "Sridevi") {
     openPanelPicks = rerankPanelsByProfile(scoredOpenPicks, openEntries, {
       externalPanels: previousMainBazarPanels(allMarketsRecords, analysisDate),
       externalRelation: "overlap",
       oppositeWeight: 0.25,
     });
-  } else if (marketName === "Sridevi Night") {
+  } else if (options.useOpenPanelProfile !== false && marketName === "Sridevi Night") {
     openPanelPicks = rerankPanelsByProfile(scoredOpenPicks, openEntries, {
       oppositeWeight: 0.5,
     });
-  } else if (marketName === "Madhur Night") {
+  } else if (options.useOpenPanelProfile !== false && marketName === "Madhur Night") {
     openPanelPicks = preservePanelPrefix(
       openPicks,
       rerankPanelsByProfile(scoredOpenPicks, openEntries, { oppositeWeight: 0.75 }),
       3,
     );
-  } else if (marketName === "Milan Night") {
+  } else if (options.useOpenPanelProfile !== false && marketName === "Milan Night") {
     openPanelPicks = rerankPanelsByProfile(scoredOpenPicks, openEntries, {
       sourceRelation: "overlap",
       oppositeWeight: -0.35,
