@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import ProfilePanel from "@/components/ProfilePanel";
 
@@ -14,7 +14,17 @@ const AnalysisSection = dynamic(() => import("@/components/AnalysisSection"), {
   ),
 });
 
-type Tab = "calculator" | "analysis";
+const LiveResultsSection = dynamic(() => import("@/components/LiveResultsSection"), {
+  ssr: false,
+  loading: () => (
+    <div className="loading-placeholder">
+      <div className="loading-placeholder-spinner" />
+      <span>Loading Market Results…</span>
+    </div>
+  ),
+});
+
+type Tab = "calculator" | "analysis" | "live-results";
 type CalcMode = "SP" | "DP" | "TP" | "MPSP" | "MPDP";
 type PanelKind = "SP" | "DP" | "TP";
 
@@ -66,6 +76,15 @@ const isMultiPanelMode = (mode: CalcMode) => mode === "MPSP" || mode === "MPDP";
 export default function LakshmiBossApp() {
   const [activeTab, setActiveTab] = useState<Tab>("calculator");
   const [profileOpen, setProfileOpen] = useState(false);
+
+  useEffect(() => {
+    const openLinkedTab = () => {
+      if (window.location.hash === "#live-results") setActiveTab("live-results");
+    };
+    openLinkedTab();
+    window.addEventListener("hashchange", openLinkedTab);
+    return () => window.removeEventListener("hashchange", openLinkedTab);
+  }, []);
 
   const haptic = (ms = 8) => {
     if (typeof navigator !== "undefined" && "vibrate" in navigator) navigator.vibrate(ms);
@@ -119,12 +138,24 @@ export default function LakshmiBossApp() {
           </svg>
           Analysis
         </button>
+        <button
+          id="tab-live-results"
+          className={`app-tab-btn ${activeTab === "live-results" ? "app-tab-btn--active" : ""}`}
+          onClick={() => { haptic(); setActiveTab("live-results"); }}
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="app-tab-icon">
+            <path d="M2 4.5h12M2 8h12M2 11.5h12" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+            <circle cx="5" cy="4.5" r="1.4" fill="currentColor"/><circle cx="10.5" cy="8" r="1.4" fill="currentColor"/><circle cx="7" cy="11.5" r="1.4" fill="currentColor"/>
+          </svg>
+          Results
+        </button>
       </nav>
 
       {/* ── Scrollable Content ──────────────────────────────────────── */}
       <main className="app-content">
         {activeTab === "calculator" && <CalculatorSection />}
         {activeTab === "analysis" && <AnalysisSection />}
+        {activeTab === "live-results" && <LiveResultsSection />}
       </main>
 
       {/* ── Profile Side Panel ──────────────────────────────────────── */}

@@ -1,0 +1,50 @@
+.live-page { padding-bottom: 18px; }
+.live-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin: 4px 2px 18px; }
+.live-heading h1 { margin: 3px 0 3px; color: #fff; font-family: "Outfit", sans-serif; font-size: 25px; line-height: 1.1; }
+.live-heading p { margin: 0; color: rgba(255, 255, 255, 0.48); font-size: 12px; }
+.live-eyebrow { color: var(--gold); font-family: "Outfit", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.live-refresh { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; background: rgba(255, 255, 255, 0.05); color: rgba(255, 255, 255, 0.7); }
+.live-refresh svg { width: 18px; height: 18px; }
+.live-refresh:active { transform: scale(0.94); }
+.live-refresh:disabled { opacity: 0.45; }
+
+.live-notice-card { display: flex; align-items: center; gap: 11px; padding: 14px; border-color: rgba(232, 160, 32, 0.2); background: linear-gradient(135deg, rgba(232, 160, 32, 0.1), rgba(255, 255, 255, 0.035)); }
+.live-notice-icon { display: grid; width: 34px; height: 34px; flex: 0 0 auto; place-items: center; border-radius: 11px; background: var(--gold-dim); color: var(--gold); font: 700 15px "Outfit", sans-serif; }
+.live-notice-copy { display: flex; min-width: 0; flex: 1; flex-direction: column; }
+.live-notice-copy strong { color: #fff; font: 600 12px "Outfit", sans-serif; }
+.live-notice-copy span { margin-top: 2px; color: rgba(255, 255, 255, 0.48); font-size: 9.5px; line-height: 1.35; }
+.live-notice-copy small { margin-top: 4px; color: #fca5a5; font-size: 9px; }
+.live-notice-copy .live-notice-success { color: #6ee7b7; }
+.live-notice-actions { display: flex; flex: 0 0 auto; flex-direction: column; gap: 5px; }
+.live-notice-button { flex: 0 0 auto; padding: 8px 11px; border: 0; border-radius: 10px; background: var(--gold); color: #160e02; font: 700 10px "Outfit", sans-serif; }
+.live-notice-button--off { background: rgba(255, 255, 255, 0.09); color: rgba(255, 255, 255, 0.64); }
+.live-notice-button:disabled { opacity: 0.6; }
+.live-notice-test { padding: 5px 9px; border: 1px solid var(--gold-border); border-radius: 8px; background: transparent; color: var(--gold); font: 700 9px "Outfit", sans-serif; }
+
+.live-summary { display: flex; align-items: center; gap: 7px; margin: 2px 3px 12px; color: rgba(255, 255, 255, 0.4); font-size: 10px; }
+.live-summary strong { color: rgba(255, 255, 255, 0.82); }
+.live-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255, 255, 255, 0.24); }
+.live-error { margin-bottom: 12px; padding: 10px 12px; border: 1px solid rgba(248, 113, 113, 0.22); border-radius: 12px; background: rgba(248, 113, 113, 0.07); color: #fca5a5; font-size: 10px; line-height: 1.45; }
+.live-grid { display: grid; gap: 10px; }
+.live-market { padding: 14px; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 17px; background: rgba(255, 255, 255, 0.035); }
+.live-market--ready { border-color: rgba(52, 211, 153, 0.2); background: linear-gradient(145deg, rgba(52, 211, 153, 0.055), rgba(255, 255, 255, 0.03)); }
+.live-market-top, .live-market-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.live-market h2 { margin: 0; color: #fff; font: 600 14px "Outfit", sans-serif; }
+.live-market-top div > span { display: block; margin-top: 2px; color: rgba(255, 255, 255, 0.36); font-size: 9px; }
+.live-session { padding: 4px 7px; border-radius: 7px; font: 700 8px "Outfit", sans-serif; letter-spacing: 0.06em; text-transform: uppercase; }
+.live-session--day { background: var(--gold-dim); color: var(--gold); }
+.live-session--night { background: var(--night-dim); color: var(--night-color); }
+.live-result-value, .live-pending { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 7px; margin: 14px 0; text-align: center; }
+.live-result-value span, .live-pending span { padding: 8px 5px; border-radius: 10px; background: rgba(255, 255, 255, 0.055); color: #fff; font: 700 20px/1 "Outfit", sans-serif; letter-spacing: 0.08em; }
+.live-result-value b, .live-pending b { color: var(--gold); font: 700 18px/1 "Outfit", sans-serif; letter-spacing: 0.08em; }
+.live-pending { opacity: 0.25; }
+.live-market-bottom { padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.06); color: rgba(255, 255, 255, 0.35); font-size: 9px; }
+.live-market-bottom a { color: rgba(255, 255, 255, 0.48); text-decoration: none; }
+.live-status-ready { color: #6ee7b7; }
+
+@media (min-width: 390px) {
+  .live-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .live-market { padding: 13px; }
+  .live-result-value span, .live-pending span { font-size: 16px; }
+  .live-result-value b, .live-pending b { font-size: 15px; }
+}

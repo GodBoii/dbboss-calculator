@@ -1,4 +1,4 @@
-import type { Dispatch, SetStateAction } from "react"
+import type { Dispatch, ReactNode, SetStateAction } from "react"
 import type { JodiAnalysis, PredictionResult } from "@/lib/predictor"
 import type { BacktestReport } from "@/lib/backtest"
 import {
@@ -25,6 +25,24 @@ export type { CopySuttaPick } from "@/lib/sutta-model/production"
 
 type ActiveTab = "picks" | "stats" | "intel"
 type PicksSubTab = "open" | "close" | "jodi"
+type AnalysisIconKind = "predictions" | "stats" | "breakdown" | "open" | "close" | "jodi"
+
+function AnalysisIcon({ kind, size = 16 }: { kind: AnalysisIconKind; size?: number }) {
+  const paths: Record<AnalysisIconKind, ReactNode> = {
+    predictions: <path d="M5 2h6v2.2A3 3 0 0 1 8 7.3a3 3 0 0 1-3-3.1V2Zm0 1H2.5v1.2A2.8 2.8 0 0 0 5.4 7M11 3h2.5v1.2A2.8 2.8 0 0 1 10.6 7M8 7.5V11m-2 2h4m-5 1h6" />,
+    stats: <path d="M2.5 13.5h11M4 11V7m4 4V3m4 8V5" />,
+    breakdown: <><circle cx="4" cy="4" r="1.5" /><circle cx="12" cy="5" r="1.5" /><circle cx="7" cy="12" r="1.5" /><path d="m5.4 4.3 5.1.5M4.8 5.3l1.5 5.3m4.8-4.2-3 4.4" /></>,
+    open: <path d="M3 11 8 6l3 3 2-2M9 4h4v4" />,
+    close: <path d="m3 5 5 5 3-3 2 2M9 12h4V8" />,
+    jodi: <><circle cx="8" cy="8" r="5.5" /><circle cx="8" cy="8" r="2.5" /><path d="M8 1v2m0 10v2M1 8h2m10 0h2" /></>,
+  }
+
+  return (
+    <svg className="analysis-tab-icon" width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {paths[kind]}
+    </svg>
+  )
+}
 
 interface AnalysisTabsProps {
   result: PredictionResult
@@ -85,9 +103,9 @@ export function AnalysisTabs({
                       className={`tab-btn ${activeTab === tab ? "active" : ""}`}
                       onClick={() => setActiveTab(tab)}
                     >
-                      {tab === "picks" && "ðŸ† Predictions"}
-                      {tab === "stats" && "ðŸ“Š Stats"}
-                      {tab === "intel" && "ðŸ§  Breakdown"}
+                      {tab === "picks" && <><AnalysisIcon kind="predictions" /> Predictions</>}
+                      {tab === "stats" && <><AnalysisIcon kind="stats" /> Stats</>}
+                      {tab === "intel" && <><AnalysisIcon kind="breakdown" /> Breakdown</>}
                     </button>
                   ))}
                 </div>
@@ -101,12 +119,12 @@ export function AnalysisTabs({
                         className={`tab-btn ${picksSubTab === "open" ? "active" : ""}`}
                         onClick={() => setPicksSubTab("open")}
                         style={{ fontSize: "12px", padding: "6px 12px" }}
-                      >ðŸ“ˆ Open</button>
+                      ><AnalysisIcon kind="open" /> Open</button>
                       <button
                         className={`tab-btn ${picksSubTab === "close" ? "active" : ""}`}
                         onClick={() => setPicksSubTab("close")}
                         style={{ fontSize: "12px", padding: "6px 12px" }}
-                      >ðŸ“‰ Close</button>
+                      ><AnalysisIcon kind="close" /> Close</button>
                       <button
                         className={`tab-btn ${picksSubTab === "jodi" ? "active" : ""}`}
                         onClick={() => setPicksSubTab("jodi")}
@@ -115,7 +133,7 @@ export function AnalysisTabs({
                           opacity: jodiResult ? 1 : 0.4,
                         }}
                         disabled={!jodiResult}
-                      >ðŸŽ¯ Jodi Close</button>
+                      ><AnalysisIcon kind="jodi" /> Jodi Close</button>
                     </div>
 
                     {/* â”€â”€ Open Picks â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
@@ -124,7 +142,7 @@ export function AnalysisTabs({
                         <KindForecastCard label="Open Kind Forecast" prediction={result.openKindPrediction} />
                         <div className="picks-hint-row">
                           <p className="picks-hint" style={{ margin: 0 }}>
-                            Open panel predictions â€” scored against Open-position history only
+                            Open panel predictions - scored against Open-position history only
                           </p>
                           <p className="picks-hint picks-hint-calibration">
                             Panel {result.calibration.open.panel30.toFixed(1)}% / Sutta {result.calibration.open.sutta30.toFixed(1)}%
@@ -135,7 +153,7 @@ export function AnalysisTabs({
                             onClick={() =>
                               handleCopy(
                                 "open",
-                                formatPicksForCopy(result.openPanelPicks, `${selectedMarket} â€” Open Picks`)
+                                formatPicksForCopy(result.openPanelPicks, `${selectedMarket} - Open Picks`)
                               )
                             }
                           />
@@ -150,7 +168,7 @@ export function AnalysisTabs({
                           onCopy={() =>
                             handleCopy(
                               "open-dp",
-                              formatPicksForCopy(result.openDpPicks, `${selectedMarket} â€” Open DP Picks`)
+                              formatPicksForCopy(result.openDpPicks, `${selectedMarket} - Open DP Picks`)
                             )
                           }
                           getScoreColor={getScoreColor}
@@ -167,7 +185,7 @@ export function AnalysisTabs({
                               "open-dp-numbers",
                               formatDpDigitFocusForCopy(
                                 result.openDpDigitFocus,
-                                `${selectedMarket} Ã¢â‚¬â€ Open DP Numbers`
+                                `${selectedMarket} - Open DP Numbers`
                               )
                             )
                           }
@@ -181,7 +199,7 @@ export function AnalysisTabs({
                         <KindForecastCard label="Close Kind Forecast" prediction={result.closeKindPrediction} />
                         <div className="picks-hint-row">
                           <p className="picks-hint" style={{ margin: 0 }}>
-                            Close panel predictions â€” scored against Close-position history only
+                            Close panel predictions - scored against Close-position history only
                           </p>
                           <p className="picks-hint picks-hint-calibration">
                             Panel {result.calibration.close.panel30.toFixed(1)}% / Sutta {result.calibration.close.sutta30.toFixed(1)}%
@@ -192,7 +210,7 @@ export function AnalysisTabs({
                             onClick={() =>
                               handleCopy(
                                 "close",
-                                formatPicksForCopy(result.closePanelPicks, `${selectedMarket} â€” Close Picks`)
+                                formatPicksForCopy(result.closePanelPicks, `${selectedMarket} - Close Picks`)
                               )
                             }
                           />
@@ -207,7 +225,7 @@ export function AnalysisTabs({
                           onCopy={() =>
                             handleCopy(
                               "close-dp",
-                              formatPicksForCopy(result.closeDpPicks, `${selectedMarket} â€” Close DP Picks`)
+                              formatPicksForCopy(result.closeDpPicks, `${selectedMarket} - Close DP Picks`)
                             )
                           }
                           getScoreColor={getScoreColor}
@@ -224,7 +242,7 @@ export function AnalysisTabs({
                               "close-dp-numbers",
                               formatDpDigitFocusForCopy(
                                 result.closeDpDigitFocus,
-                                `${selectedMarket} Ã¢â‚¬â€ Close DP Numbers`
+                                `${selectedMarket} - Close DP Numbers`
                               )
                             )
                           }
@@ -317,7 +335,7 @@ export function AnalysisTabs({
                                 "jodi",
                                 formatPicksForCopy(
                                   jodiResult.adjustedClosePicks,
-                                  `${selectedMarket} â€” Jodi Close (Open Sutta=${jodiResult.openSutta})`
+                                  `${selectedMarket} - Jodi Close (Open Sutta=${jodiResult.openSutta})`
                                 )
                               )
                             }
@@ -336,7 +354,7 @@ export function AnalysisTabs({
                               "jodi-dp",
                               formatDpDigitFocusForCopy(
                                 jodiResult.adjustedCloseDpDigitFocus,
-                                `${selectedMarket} â€” Jodi Close DP (Open Sutta=${jodiResult.openSutta})`
+                                `${selectedMarket} - Jodi Close DP (Open Sutta=${jodiResult.openSutta})`
                               )
                             )
                           }
@@ -347,7 +365,7 @@ export function AnalysisTabs({
     
                     {picksSubTab === "jodi" && !jodiResult && (
                       <div style={{ textAlign: "center", padding: "30px 16px", color: "rgba(255,255,255,0.4)" }}>
-                        <p style={{ fontSize: "32px", marginBottom: "8px" }}>ðŸŽ¯</p>
+                        <p style={{ marginBottom: "8px", display: "flex", justifyContent: "center" }}><AnalysisIcon kind="jodi" size={32} /></p>
                         <p>Enter today&apos;s Open result above to unlock Jodi-adjusted Close predictions</p>
                       </div>
                     )}
@@ -482,7 +500,7 @@ export function AnalysisTabs({
                       {result.stats.topOpenPanels.map(({ panel, count }) => (
                         <div key={panel} className="freq-item">
                           <span className="freq-panel">{panel}</span>
-                          <span className="freq-count">{count}Ã—</span>
+                          <span className="freq-count">{count}&times;</span>
                         </div>
                       ))}
                     </div>
@@ -493,7 +511,7 @@ export function AnalysisTabs({
                       {result.stats.topClosePanels.map(({ panel, count }) => (
                         <div key={panel} className="freq-item">
                           <span className="freq-panel">{panel}</span>
-                          <span className="freq-count">{count}Ã—</span>
+                          <span className="freq-count">{count}&times;</span>
                         </div>
                       ))}
                     </div>
@@ -506,7 +524,7 @@ export function AnalysisTabs({
                           {result.stats.topJodis.map(({ jodi, count }) => (
                             <div key={jodi} className="freq-item">
                               <span className="freq-panel">{jodi}</span>
-                              <span className="freq-count">{count}Ã—</span>
+                              <span className="freq-count">{count}&times;</span>
                             </div>
                           ))}
                         </div>
