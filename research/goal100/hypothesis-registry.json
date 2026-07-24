@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "createdDate": "2026-07-15",
+  "purpose": "Prevent retesting inspected hypotheses as if they were new independent evidence.",
+  "historicalEvidenceStatus": "contaminated-for-selection-but-usable-for-reproduction-and-falsification",
+  "families": [
+    {
+      "id": "above90-rank-promotions",
+      "status": "rejected-as-forward-accuracy-claim",
+      "reason": "The selected 30-day window was reused during rule selection; the next frozen week fell to 56.9% Open, 61.1% Close, and 31.9% Jodi."
+    },
+    {
+      "id": "rank56-source-hybrids",
+      "status": "exhaustively-searched-retrospective",
+      "reason": "Hundreds of own-lag, calendar-lag, cross-market, panel arithmetic, opposite, mirror, house, near, add3, and sub3 variants were searched. Existing same-day ordering also requires field-time correction."
+    },
+    {
+      "id": "causal-statistical-formulas",
+      "status": "searched-no-stable-challenger",
+      "reason": "Frequency, drought, calendar, transition, modular, echo, gap, entropy, and known-Open conditional families were evaluated; small pockets did not reproduce."
+    },
+    {
+      "id": "joint-6x6-rectangle",
+      "status": "rejected",
+      "reason": "Development winners for individual markets failed validation; no reproducible challenger survived."
+    },
+    {
+      "id": "adaptive-expert-ensembles",
+      "status": "rejected",
+      "reason": "Development lift regressed on validation and holdout; no forward advantage reproduced."
+    },
+    {
+      "id": "categorical-and-rolling-ml",
+      "status": "rejected",
+      "reason": "Shared additive/MLP and block-retrained variants materially regressed historical validation/holdout and showed no stable forward lift."
+    },
+    {
+      "id": "production-rule-ablation",
+      "status": "rejected",
+      "reason": "No one-at-a-time removal among 48 promotions passed all historical non-regression gates."
+    },
+    {
+      "id": "top3-panel-ml-confidence-pockets",
+      "status": "rejected-or-monitor-only",
+      "reason": "Panel token/structure, factorization, digit targets, abstention, context pockets, and market selection failed; small 100% pockets collapsed."
+    },
+    {
+      "id": "external-pre-draw-information",
+      "status": "unavailable-new-feature-family",
+      "reason": "Operator, liability, order-flow, or other genuinely pre-draw external information has not been supplied and is the clearest untested information class."
+    },
+    {
+      "id": "field-timestamped-nested-causal-ensemble",
+      "status": "rejected-v1",
+      "reason": "A market-specific ridge ranker over fixed causal frequency, drought, calendar, transition, lag-transform, same-day earlier-market, and known-Open features was tuned only inside development. Its apparent development lift reversed on validation (-52 Jodi hits), holdout (-74), and recent frozen (-191), with statistically significant recent regression."
+    },
+    {
+      "id": "baseline-miss-coverage-gate",
+      "status": "rejected",
+      "reason": "A nested development search over 25 miss-gate variants per side and 625 Open/Close pairs found no all-market non-regressive gate. The deterministic winner was the no-gate baseline control, yielding zero changes in every later block."
+    },
+    {
+      "id": "genuinely-new-predraw-information",
+      "status": "eligible-but-data-unavailable",
+      "reason": "Outcome-history-only statistical, rule, ML, sequence, panel, pocket, and nested causal families have failed stable gates. The remaining materially distinct route is causally prior information not contained in result histories, followed by a new sealed cohort."
+    }
+  ]
+}

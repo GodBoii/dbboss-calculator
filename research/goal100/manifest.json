@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "createdDate": "2026-07-15",
+  "timezone": "Asia/Calcutta",
+  "objective": "100% Top-6 Open, Close, and 6x6 Jodi coverage for every market under sealed forward validation",
+  "productionBoundary": {
+    "algorithm": "sha256",
+    "digest": "d8f09a304bc2eb0a35df2394b850fea0bf932fbb3983196bb53bd3575ba13d8b",
+    "fileCount": 74,
+    "roots": [
+      "src",
+      "public",
+      "package.json",
+      "package-lock.json",
+      "next.config.ts",
+      "tsconfig.json",
+      "postcss.config.mjs",
+      "vercel.json",
+      "verify-pwa-assets.cjs"
+    ]
+  },
+  "baselineData": {
+    "path": "scratch/sutta-research-records.json",
+    "sha256": "8674f471f4056ce2c2eb18508952604834f5c1d94577bef11cde7e7d7f1318c3",
+    "bytes": 1736904,
+    "markets": 12,
+    "rows": 7287
+  },
+  "constraints": {
+    "openDigits": 6,
+    "closeDigits": 6,
+    "jodiCount": 36,
+    "minimumSealedForwardDrawsPerMarket": 30,
+    "productionPromotionAllowed": false
+  },
+  "researchArtifacts": {
+    "causalAudit": {
+      "path": "research/goal100/artifacts/causal-audit-all-blocks.json",
+      "sha256": "21675bcb6b1764098b916c0f34f57b3139b17aa49956b1406c374cc693f62d24",
+      "scoredRows": 6558
+    },
+    "nestedCausalRidge": {
+      "path": "research/goal100/artifacts/nested-causal-ridge-v1.json",
+      "sha256": "f7253eae92fe1e20a2bfead131e2683707223a59abf48b64b398a3aabc9808c5",
+      "decision": "rejected"
+    },
+    "coverageGate": {
+      "path": "research/goal100/artifacts/coverage-gate-research.json",
+      "sha256": "4c543a8a1931434d464e7e6016e60d4b11d37bd75d77f64799d97f674b60a109",
+      "decision": "rejected"
+    },
+    "forwardComparator": {
+      "path": "research/goal100/forward/registry-2026-07-14T22-37-28-484Z.json",
+      "fileSha256": "7ed98c72f103be8c018fb167c13dde39cbcd974873d509f0303fa2b5df6e9dd4",
+      "registrySealSha256": "9633b19954f21023f6c37300f9124b1ff1f52fb0c4d8eb3485f36b62393af9a3",
+      "entries": 12,
+      "status": "pending-baseline-comparator-only"
+    }
+  }
+}

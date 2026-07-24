@@ -1,0 +1,2412 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-14T22:49:52.749Z",
+  "sourceArtifact": "causal-audit-all-blocks.json",
+  "sourceArtifactSha256": "21675bcb6b1764098b916c0f34f57b3139b17aa49956b1406c374cc693f62d24",
+  "evaluationType": "retrospective-nominal-schedule-causal-audit-not-sealed-forward",
+  "exactVersusCausalChangedRankings": {
+    "open": 0,
+    "close": 0,
+    "jodi": 0
+  },
+  "statisticalCaveat": "Circular-shift results diagnose alignment only. They do not correct for the extensive historical model selection already performed.",
+  "aggregates": {
+    "development": {
+      "open": {
+        "n": 2929,
+        "hits": 1854,
+        "misses": 1075,
+        "microAccuracy": 0.6329805394332537,
+        "macroAccuracy": 0.632772362985137,
+        "worstMarket": "Madhur Night",
+        "worstMarketAccuracy": 0.5371900826446281,
+        "wilson95": [
+          0.6153612669661654,
+          0.6502514412005491
+        ],
+        "dateBlockBootstrap95": [
+          0.6162908111746886,
+          0.6504347826086957
+        ],
+        "circularShift": {
+          "observedHits": 1854,
+          "n": 2929,
+          "nullMeanHits": 1796.149,
+          "nullSdHits": 27.638545329282348,
+          "null95Hits": [
+            1744,
+            1852
+          ],
+          "oneSidedP": 0.022497750224977502,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "close": {
+        "n": 2929,
+        "hits": 1876,
+        "misses": 1053,
+        "microAccuracy": 0.6404916353704336,
+        "macroAccuracy": 0.6409415573768767,
+        "worstMarket": "Milan Night",
+        "worstMarketAccuracy": 0.5679012345679012,
+        "wilson95": [
+          0.6229397088312788,
+          0.6576755143024902
+        ],
+        "dateBlockBootstrap95": [
+          0.6231835079418723,
+          0.6584433634468381
+        ],
+        "circularShift": {
+          "observedHits": 1876,
+          "n": 2929,
+          "nullMeanHits": 1763.6223,
+          "nullSdHits": 33.1288906401876,
+          "null95Hits": [
+            1696,
+            1826
+          ],
+          "oneSidedP": 0.00019998000199980003,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "jodi": {
+        "n": 2929,
+        "hits": 1183,
+        "misses": 1746,
+        "microAccuracy": 0.40389211334926595,
+        "macroAccuracy": 0.40399880830156065,
+        "worstMarket": "Milan Night",
+        "worstMarketAccuracy": 0.30864197530864196,
+        "wilson95": [
+          0.3862590297744832,
+          0.42177697189706975
+        ],
+        "dateBlockBootstrap95": [
+          0.3850120316259883,
+          0.4245183887915937
+        ],
+        "circularShift": {
+          "observedHits": 1183,
+          "n": 2929,
+          "nullMeanHits": 1080.7782,
+          "nullSdHits": 29.002967468385012,
+          "null95Hits": [
+            1024,
+            1138
+          ],
+          "oneSidedP": 0.00019998000199980003,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      }
+    },
+    "validation": {
+      "open": {
+        "n": 1174,
+        "hits": 715,
+        "misses": 459,
+        "microAccuracy": 0.6090289608177172,
+        "macroAccuracy": 0.6095203897548671,
+        "worstMarket": "Rajdhani Day",
+        "worstMarketAccuracy": 0.5567010309278351,
+        "wilson95": [
+          0.580803210138129,
+          0.6365435026966019
+        ],
+        "dateBlockBootstrap95": [
+          0.5768608414239482,
+          0.640506329113924
+        ],
+        "circularShift": {
+          "observedHits": 715,
+          "n": 1174,
+          "nullMeanHits": 712.1494,
+          "nullSdHits": 16.531866497797214,
+          "null95Hits": [
+            679,
+            744
+          ],
+          "oneSidedP": 0.44715528447155284,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "close": {
+        "n": 1174,
+        "hits": 787,
+        "misses": 387,
+        "microAccuracy": 0.6703577512776832,
+        "macroAccuracy": 0.6711946856577549,
+        "worstMarket": "Milan Day",
+        "worstMarketAccuracy": 0.59375,
+        "wilson95": [
+          0.642949888446525,
+          0.696654350357742
+        ],
+        "dateBlockBootstrap95": [
+          0.6483427647534358,
+          0.693051890941073
+        ],
+        "circularShift": {
+          "observedHits": 787,
+          "n": 1174,
+          "nullMeanHits": 705.98,
+          "nullSdHits": 19.42594493798623,
+          "null95Hits": [
+            667,
+            743
+          ],
+          "oneSidedP": 0.00009999000099990002,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "jodi": {
+        "n": 1174,
+        "hits": 492,
+        "misses": 682,
+        "microAccuracy": 0.4190800681431005,
+        "macroAccuracy": 0.42040142530873975,
+        "worstMarket": "Sridevi Night",
+        "worstMarketAccuracy": 0.371900826446281,
+        "wilson95": [
+          0.39116416664446996,
+          0.44752381992350326
+        ],
+        "dateBlockBootstrap95": [
+          0.3959677419354839,
+          0.44315352697095434
+        ],
+        "circularShift": {
+          "observedHits": 492,
+          "n": 1174,
+          "nullMeanHits": 427.6013,
+          "nullSdHits": 17.076167540165066,
+          "null95Hits": [
+            394,
+            461
+          ],
+          "oneSidedP": 0.00009999000099990002,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      }
+    },
+    "holdout": {
+      "open": {
+        "n": 1233,
+        "hits": 807,
+        "misses": 426,
+        "microAccuracy": 0.6545012165450121,
+        "macroAccuracy": 0.6564153816866553,
+        "worstMarket": "Rajdhani Day",
+        "worstMarketAccuracy": 0.5145631067961165,
+        "wilson95": [
+          0.6275150641962675,
+          0.6805276148339333
+        ],
+        "dateBlockBootstrap95": [
+          0.6300813008130082,
+          0.6820388349514563
+        ],
+        "circularShift": {
+          "observedHits": 807,
+          "n": 1233,
+          "nullMeanHits": 747.5056,
+          "nullSdHits": 17.312242489464065,
+          "null95Hits": [
+            713,
+            781
+          ],
+          "oneSidedP": 0.0004999500049995,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "close": {
+        "n": 1233,
+        "hits": 790,
+        "misses": 443,
+        "microAccuracy": 0.6407137064071371,
+        "macroAccuracy": 0.6415837775239547,
+        "worstMarket": "Sridevi",
+        "worstMarketAccuracy": 0.525,
+        "wilson95": [
+          0.6135336997349012,
+          0.6670196063634707
+        ],
+        "dateBlockBootstrap95": [
+          0.6176706827309237,
+          0.6618589743589743
+        ],
+        "circularShift": {
+          "observedHits": 790,
+          "n": 1233,
+          "nullMeanHits": 743.4269,
+          "nullSdHits": 20.93609057056346,
+          "null95Hits": [
+            702,
+            783
+          ],
+          "oneSidedP": 0.011898810118988102,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "jodi": {
+        "n": 1233,
+        "hits": 520,
+        "misses": 713,
+        "microAccuracy": 0.42173560421735606,
+        "macroAccuracy": 0.4247088965035853,
+        "worstMarket": "Rajdhani Day",
+        "worstMarketAccuracy": 0.32038834951456313,
+        "wilson95": [
+          0.3944554659960295,
+          0.4495019170674121
+        ],
+        "dateBlockBootstrap95": [
+          0.3988673139158576,
+          0.4444444444444444
+        ],
+        "circularShift": {
+          "observedHits": 520,
+          "n": 1233,
+          "nullMeanHits": 450.3357,
+          "nullSdHits": 17.872776760338926,
+          "null95Hits": [
+            416,
+            486
+          ],
+          "oneSidedP": 0.00029997000299970003,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      }
+    },
+    "recentFrozen": {
+      "open": {
+        "n": 1222,
+        "hits": 852,
+        "misses": 370,
+        "microAccuracy": 0.6972176759410802,
+        "macroAccuracy": 0.6955562412922989,
+        "worstMarket": "Madhur Night",
+        "worstMarketAccuracy": 0.5980392156862745,
+        "wilson95": [
+          0.6708711719598305,
+          0.7223280798847798
+        ],
+        "dateBlockBootstrap95": [
+          0.6420966420966421,
+          0.7559183673469387
+        ],
+        "circularShift": {
+          "observedHits": 852,
+          "n": 1222,
+          "nullMeanHits": 735.0846,
+          "nullSdHits": 17.2856507604493,
+          "null95Hits": [
+            701,
+            768
+          ],
+          "oneSidedP": 0.00009999000099990002,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "close": {
+        "n": 1222,
+        "hits": 879,
+        "misses": 343,
+        "microAccuracy": 0.7193126022913257,
+        "macroAccuracy": 0.718253476428807,
+        "worstMarket": "Rajdhani Night",
+        "worstMarketAccuracy": 0.6941176470588235,
+        "wilson95": [
+          0.6934617990884363,
+          0.7437888212200929
+        ],
+        "dateBlockBootstrap95": [
+          0.6674876847290641,
+          0.7757920389926889
+        ],
+        "circularShift": {
+          "observedHits": 879,
+          "n": 1222,
+          "nullMeanHits": 720.4476,
+          "nullSdHits": 20.789085425946098,
+          "null95Hits": [
+            678,
+            760
+          ],
+          "oneSidedP": 0.00009999000099990002,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "jodi": {
+        "n": 1222,
+        "hits": 631,
+        "misses": 591,
+        "microAccuracy": 0.516366612111293,
+        "macroAccuracy": 0.5142467262200704,
+        "worstMarket": "Madhur Night",
+        "worstMarketAccuracy": 0.45098039215686275,
+        "wilson95": [
+          0.48833988733188877,
+          0.5442907559747179
+        ],
+        "dateBlockBootstrap95": [
+          0.43506493506493504,
+          0.6039279869067103
+        ],
+        "circularShift": {
+          "observedHits": 631,
+          "n": 1222,
+          "nullMeanHits": 435.0318,
+          "nullSdHits": 17.71497024488228,
+          "null95Hits": [
+            401,
+            470
+          ],
+          "oneSidedP": 0.00009999000099990002,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      }
+    },
+    "overall": {
+      "open": {
+        "n": 6558,
+        "hits": 4228,
+        "misses": 2330,
+        "microAccuracy": 0.6447087526684965,
+        "macroAccuracy": 0.6447495894857042,
+        "worstMarket": "Madhur Night",
+        "worstMarketAccuracy": 0.5808823529411765,
+        "wilson95": [
+          0.6330434923055414,
+          0.6562045748834013
+        ],
+        "dateBlockBootstrap95": [
+          0.6286153846153846,
+          0.661828520125692
+        ],
+        "circularShift": {
+          "observedHits": 4228,
+          "n": 6558,
+          "nullMeanHits": 3977.4925,
+          "nullSdHits": 42.505672762252644,
+          "null95Hits": [
+            3897,
+            4063
+          ],
+          "oneSidedP": 0.00009999000099990002,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "close": {
+        "n": 6558,
+        "hits": 4332,
+        "misses": 2226,
+        "microAccuracy": 0.6605672461116194,
+        "macroAccuracy": 0.6608786861449822,
+        "worstMarket": "Milan Day",
+        "worstMarketAccuracy": 0.6268382352941176,
+        "wilson95": [
+          0.6490156545552104,
+          0.6719308309558084
+        ],
+        "dateBlockBootstrap95": [
+          0.6467661691542289,
+          0.676923076923077
+        ],
+        "circularShift": {
+          "observedHits": 4332,
+          "n": 6558,
+          "nullMeanHits": 3948.4625,
+          "nullSdHits": 51.8888835818813,
+          "null95Hits": [
+            3836,
+            4043
+          ],
+          "oneSidedP": 0.00009999000099990002,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      },
+      "jodi": {
+        "n": 6558,
+        "hits": 2826,
+        "misses": 3732,
+        "microAccuracy": 0.4309240622140897,
+        "macroAccuracy": 0.4313906828578222,
+        "worstMarket": "Madhur Night",
+        "worstMarketAccuracy": 0.4025735294117647,
+        "wilson95": [
+          0.4189824515741563,
+          0.44294655323449367
+        ],
+        "dateBlockBootstrap95": [
+          0.41174689676052073,
+          0.4535829369341722
+        ],
+        "circularShift": {
+          "observedHits": 2826,
+          "n": 6558,
+          "nullMeanHits": 2394.7094,
+          "nullSdHits": 45.387878972207574,
+          "null95Hits": [
+            2306,
+            2486
+          ],
+          "oneSidedP": 0.00009999000099990002,
+          "method": "10000 market-wise independent circular shifts; offsets within 13 rows excluded when support permits"
+        }
+      }
+    }
+  },
+  "byMarket": {
+    "Sridevi": {
+      "development": {
+        "open": {
+          "n": 292,
+          "hits": 186,
+          "misses": 106,
+          "accuracy": 0.636986301369863,
+          "wilson95": [
+            0.5803821018448945,
+            0.6900328769816126
+          ]
+        },
+        "close": {
+          "n": 292,
+          "hits": 181,
+          "misses": 111,
+          "accuracy": 0.6198630136986302,
+          "wilson95": [
+            0.5629694739108859,
+            0.6736436325623079
+          ]
+        },
+        "jodi": {
+          "n": 292,
+          "hits": 110,
+          "misses": 182,
+          "accuracy": 0.3767123287671233,
+          "wilson95": [
+            0.3230726967612864,
+            0.43355382229485717
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 121,
+          "hits": 82,
+          "misses": 39,
+          "accuracy": 0.6776859504132231,
+          "wilson95": [
+            0.5900518902701183,
+            0.7543845796245322
+          ]
+        },
+        "close": {
+          "n": 121,
+          "hits": 80,
+          "misses": 41,
+          "accuracy": 0.6611570247933884,
+          "wilson95": [
+            0.5730213220975752,
+            0.7393745459464102
+          ]
+        },
+        "jodi": {
+          "n": 121,
+          "hits": 54,
+          "misses": 67,
+          "accuracy": 0.4462809917355372,
+          "wilson95": [
+            0.3607165818368641,
+            0.535151462148474
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 120,
+          "hits": 75,
+          "misses": 45,
+          "accuracy": 0.625,
+          "wilson95": [
+            0.5357678452838708,
+            0.7064770869521468
+          ]
+        },
+        "close": {
+          "n": 120,
+          "hits": 63,
+          "misses": 57,
+          "accuracy": 0.525,
+          "wilson95": [
+            0.4362683592400492,
+            0.6121806272071545
+          ]
+        },
+        "jodi": {
+          "n": 120,
+          "hits": 40,
+          "misses": 80,
+          "accuracy": 0.3333333333333333,
+          "wilson95": [
+            0.255316102227993,
+            0.4216906547906502
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 120,
+          "hits": 84,
+          "misses": 36,
+          "accuracy": 0.7,
+          "wilson95": [
+            0.6128469049643513,
+            0.7747449866132767
+          ]
+        },
+        "close": {
+          "n": 120,
+          "hits": 87,
+          "misses": 33,
+          "accuracy": 0.725,
+          "wilson95": [
+            0.6390686764395933,
+            0.7969722015852384
+          ]
+        },
+        "jodi": {
+          "n": 120,
+          "hits": 62,
+          "misses": 58,
+          "accuracy": 0.5166666666666667,
+          "wilson95": [
+            0.42813421852868033,
+            0.6041651057694555
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 653,
+          "hits": 427,
+          "misses": 226,
+          "accuracy": 0.6539050535987749,
+          "wilson95": [
+            0.6166122817504472,
+            0.6893975690263611
+          ]
+        },
+        "close": {
+          "n": 653,
+          "hits": 411,
+          "misses": 242,
+          "accuracy": 0.6294027565084227,
+          "wilson95": [
+            0.5917029193706052,
+            0.6655889452128805
+          ]
+        },
+        "jodi": {
+          "n": 653,
+          "hits": 266,
+          "misses": 387,
+          "accuracy": 0.40735068912710565,
+          "wilson95": [
+            0.3703127959907089,
+            0.4454723187157896
+          ]
+        }
+      }
+    },
+    "Time Bazar": {
+      "development": {
+        "open": {
+          "n": 243,
+          "hits": 159,
+          "misses": 84,
+          "accuracy": 0.654320987654321,
+          "wilson95": [
+            0.5925400852759064,
+            0.7112984897454838
+          ]
+        },
+        "close": {
+          "n": 243,
+          "hits": 167,
+          "misses": 76,
+          "accuracy": 0.6872427983539094,
+          "wilson95": [
+            0.6264183848492186,
+            0.7422390861767348
+          ]
+        },
+        "jodi": {
+          "n": 243,
+          "hits": 112,
+          "misses": 131,
+          "accuracy": 0.4609053497942387,
+          "wilson95": [
+            0.39932585534228904,
+            0.5237017056522919
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 96,
+          "hits": 57,
+          "misses": 39,
+          "accuracy": 0.59375,
+          "wilson95": [
+            0.49373701577265144,
+            0.6865485565739455
+          ]
+        },
+        "close": {
+          "n": 96,
+          "hits": 63,
+          "misses": 33,
+          "accuracy": 0.65625,
+          "wilson95": [
+            0.5568784424044507,
+            0.7435975115065443
+          ]
+        },
+        "jodi": {
+          "n": 96,
+          "hits": 37,
+          "misses": 59,
+          "accuracy": 0.3854166666666667,
+          "wilson95": [
+            0.29425614956558316,
+            0.48539481756635394
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "hits": 70,
+          "misses": 33,
+          "accuracy": 0.6796116504854369,
+          "wilson95": [
+            0.5844362166569979,
+            0.7618708397704612
+          ]
+        },
+        "close": {
+          "n": 103,
+          "hits": 65,
+          "misses": 38,
+          "accuracy": 0.6310679611650486,
+          "wilson95": [
+            0.5347390366684421,
+            0.7179715180218659
+          ]
+        },
+        "jodi": {
+          "n": 103,
+          "hits": 45,
+          "misses": 58,
+          "accuracy": 0.4368932038834951,
+          "wilson95": [
+            0.34508271727975537,
+            0.5332418304619483
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "hits": 71,
+          "misses": 31,
+          "accuracy": 0.696078431372549,
+          "wilson95": [
+            0.6010461339670155,
+            0.7768771022652411
+          ]
+        },
+        "close": {
+          "n": 102,
+          "hits": 71,
+          "misses": 31,
+          "accuracy": 0.696078431372549,
+          "wilson95": [
+            0.6010461339670155,
+            0.7768771022652411
+          ]
+        },
+        "jodi": {
+          "n": 102,
+          "hits": 50,
+          "misses": 52,
+          "accuracy": 0.49019607843137253,
+          "wilson95": [
+            0.39531235331103515,
+            0.585791484877352
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 544,
+          "hits": 357,
+          "misses": 187,
+          "accuracy": 0.65625,
+          "wilson95": [
+            0.6153665930153855,
+            0.6949420801485362
+          ]
+        },
+        "close": {
+          "n": 544,
+          "hits": 366,
+          "misses": 178,
+          "accuracy": 0.6727941176470589,
+          "wilson95": [
+            0.632273927952894,
+            0.7108909576636785
+          ]
+        },
+        "jodi": {
+          "n": 544,
+          "hits": 244,
+          "misses": 300,
+          "accuracy": 0.4485294117647059,
+          "wilson95": [
+            0.4072416298052087,
+            0.4905390425643229
+          ]
+        }
+      }
+    },
+    "Madhur Day": {
+      "development": {
+        "open": {
+          "n": 282,
+          "hits": 182,
+          "misses": 100,
+          "accuracy": 0.6453900709219859,
+          "wilson95": [
+            0.5879416642636431,
+            0.6989305054975115
+          ]
+        },
+        "close": {
+          "n": 282,
+          "hits": 179,
+          "misses": 103,
+          "accuracy": 0.6347517730496454,
+          "wilson95": [
+            0.5770914501821092,
+            0.6887900730111558
+          ]
+        },
+        "jodi": {
+          "n": 282,
+          "hits": 119,
+          "misses": 163,
+          "accuracy": 0.4219858156028369,
+          "wilson95": [
+            0.3657699457367816,
+            0.4802986460986965
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 111,
+          "hits": 65,
+          "misses": 46,
+          "accuracy": 0.5855855855855856,
+          "wilson95": [
+            0.49257834953891355,
+            0.672866924647444
+          ]
+        },
+        "close": {
+          "n": 111,
+          "hits": 74,
+          "misses": 37,
+          "accuracy": 0.6666666666666666,
+          "wilson95": [
+            0.5746929345584374,
+            0.7474899678044694
+          ]
+        },
+        "jodi": {
+          "n": 111,
+          "hits": 44,
+          "misses": 67,
+          "accuracy": 0.3963963963963964,
+          "wilson95": [
+            0.31033119486484406,
+            0.4893929469095652
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 120,
+          "hits": 80,
+          "misses": 40,
+          "accuracy": 0.6666666666666666,
+          "wilson95": [
+            0.5783093452093498,
+            0.7446838977720069
+          ]
+        },
+        "close": {
+          "n": 120,
+          "hits": 77,
+          "misses": 43,
+          "accuracy": 0.6416666666666667,
+          "wilson95": [
+            0.5527036937000395,
+            0.7218405628341139
+          ]
+        },
+        "jodi": {
+          "n": 120,
+          "hits": 50,
+          "misses": 70,
+          "accuracy": 0.4166666666666667,
+          "wilson95": [
+            0.33238206535330334,
+            0.5061213131560184
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 120,
+          "hits": 87,
+          "misses": 33,
+          "accuracy": 0.725,
+          "wilson95": [
+            0.6390686764395933,
+            0.7969722015852384
+          ]
+        },
+        "close": {
+          "n": 120,
+          "hits": 90,
+          "misses": 30,
+          "accuracy": 0.75,
+          "wilson95": [
+            0.6655869783172575,
+            0.8189028861547777
+          ]
+        },
+        "jodi": {
+          "n": 120,
+          "hits": 67,
+          "misses": 53,
+          "accuracy": 0.5583333333333333,
+          "wilson95": [
+            0.4690436082030291,
+            0.6440040268404459
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 633,
+          "hits": 414,
+          "misses": 219,
+          "accuracy": 0.6540284360189573,
+          "wilson95": [
+            0.616142340595376,
+            0.6900562494464806
+          ]
+        },
+        "close": {
+          "n": 633,
+          "hits": 420,
+          "misses": 213,
+          "accuracy": 0.6635071090047393,
+          "wilson95": [
+            0.6258088031690126,
+            0.6992327770292659
+          ]
+        },
+        "jodi": {
+          "n": 633,
+          "hits": 280,
+          "misses": 353,
+          "accuracy": 0.4423380726698262,
+          "wilson95": [
+            0.40410959588548445,
+            0.48126221399628205
+          ]
+        }
+      }
+    },
+    "Milan Day": {
+      "development": {
+        "open": {
+          "n": 243,
+          "hits": 159,
+          "misses": 84,
+          "accuracy": 0.654320987654321,
+          "wilson95": [
+            0.5925400852759064,
+            0.7112984897454838
+          ]
+        },
+        "close": {
+          "n": 243,
+          "hits": 151,
+          "misses": 92,
+          "accuracy": 0.6213991769547325,
+          "wilson95": [
+            0.5589709279086243,
+            0.6800487511082025
+          ]
+        },
+        "jodi": {
+          "n": 243,
+          "hits": 99,
+          "misses": 144,
+          "accuracy": 0.4074074074074074,
+          "wilson95": [
+            0.34753445693380197,
+            0.47016239805336374
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 96,
+          "hits": 57,
+          "misses": 39,
+          "accuracy": 0.59375,
+          "wilson95": [
+            0.49373701577265144,
+            0.6865485565739455
+          ]
+        },
+        "close": {
+          "n": 96,
+          "hits": 57,
+          "misses": 39,
+          "accuracy": 0.59375,
+          "wilson95": [
+            0.49373701577265144,
+            0.6865485565739455
+          ]
+        },
+        "jodi": {
+          "n": 96,
+          "hits": 36,
+          "misses": 60,
+          "accuracy": 0.375,
+          "wilson95": [
+            0.2847245670539583,
+            0.47489466981724576
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "hits": 61,
+          "misses": 42,
+          "accuracy": 0.5922330097087378,
+          "wilson95": [
+            0.4956743541105068,
+            0.6821589991900802
+          ]
+        },
+        "close": {
+          "n": 103,
+          "hits": 61,
+          "misses": 42,
+          "accuracy": 0.5922330097087378,
+          "wilson95": [
+            0.4956743541105068,
+            0.6821589991900802
+          ]
+        },
+        "jodi": {
+          "n": 103,
+          "hits": 38,
+          "misses": 65,
+          "accuracy": 0.36893203883495146,
+          "wilson95": [
+            0.2820284819781343,
+            0.4652609633315579
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "hits": 72,
+          "misses": 30,
+          "accuracy": 0.7058823529411765,
+          "wilson95": [
+            0.6112816903971267,
+            0.7855377076467428
+          ]
+        },
+        "close": {
+          "n": 102,
+          "hits": 72,
+          "misses": 30,
+          "accuracy": 0.7058823529411765,
+          "wilson95": [
+            0.6112816903971267,
+            0.7855377076467428
+          ]
+        },
+        "jodi": {
+          "n": 102,
+          "hits": 53,
+          "misses": 49,
+          "accuracy": 0.5196078431372549,
+          "wilson95": [
+            0.4237095616178417,
+            0.614082762005384
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 544,
+          "hits": 349,
+          "misses": 195,
+          "accuracy": 0.6415441176470589,
+          "wilson95": [
+            0.6003824566913528,
+            0.6807206942924353
+          ]
+        },
+        "close": {
+          "n": 544,
+          "hits": 341,
+          "misses": 203,
+          "accuracy": 0.6268382352941176,
+          "wilson95": [
+            0.5854390629588186,
+            0.6664585658448355
+          ]
+        },
+        "jodi": {
+          "n": 544,
+          "hits": 226,
+          "misses": 318,
+          "accuracy": 0.41544117647058826,
+          "wilson95": [
+            0.374763381886738,
+            0.45730486557749256
+          ]
+        }
+      }
+    },
+    "Rajdhani Day": {
+      "development": {
+        "open": {
+          "n": 243,
+          "hits": 162,
+          "misses": 81,
+          "accuracy": 0.6666666666666666,
+          "wilson95": [
+            0.6052070833165916,
+            0.7229385777065097
+          ]
+        },
+        "close": {
+          "n": 243,
+          "hits": 162,
+          "misses": 81,
+          "accuracy": 0.6666666666666666,
+          "wilson95": [
+            0.6052070833165916,
+            0.7229385777065097
+          ]
+        },
+        "jodi": {
+          "n": 243,
+          "hits": 104,
+          "misses": 139,
+          "accuracy": 0.4279835390946502,
+          "wilson95": [
+            0.3673686472196328,
+            0.490840017770385
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 97,
+          "hits": 54,
+          "misses": 43,
+          "accuracy": 0.5567010309278351,
+          "wilson95": [
+            0.45755626177249387,
+            0.6515257044001969
+          ]
+        },
+        "close": {
+          "n": 97,
+          "hits": 68,
+          "misses": 29,
+          "accuracy": 0.7010309278350515,
+          "wilson95": [
+            0.6036901803954189,
+            0.783054972398666
+          ]
+        },
+        "jodi": {
+          "n": 97,
+          "hits": 39,
+          "misses": 58,
+          "accuracy": 0.4020618556701031,
+          "wilson95": [
+            0.31002040253768065,
+            0.5015652922549447
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "hits": 53,
+          "misses": 50,
+          "accuracy": 0.5145631067961165,
+          "wilson95": [
+            0.4192678734230651,
+            0.6088110770980802
+          ]
+        },
+        "close": {
+          "n": 103,
+          "hits": 69,
+          "misses": 34,
+          "accuracy": 0.6699029126213593,
+          "wilson95": [
+            0.5744161092063891,
+            0.7531716468736397
+          ]
+        },
+        "jodi": {
+          "n": 103,
+          "hits": 33,
+          "misses": 70,
+          "accuracy": 0.32038834951456313,
+          "wilson95": [
+            0.23812916022953898,
+            0.4155637833430022
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "hits": 74,
+          "misses": 28,
+          "accuracy": 0.7254901960784313,
+          "wilson95": [
+            0.631892554573945,
+            0.8027191670931499
+          ]
+        },
+        "close": {
+          "n": 102,
+          "hits": 76,
+          "misses": 26,
+          "accuracy": 0.7450980392156863,
+          "wilson95": [
+            0.6526994490651,
+            0.8197045962252206
+          ]
+        },
+        "jodi": {
+          "n": 102,
+          "hits": 59,
+          "misses": 43,
+          "accuracy": 0.5784313725490197,
+          "wilson95": [
+            0.4814636178527271,
+            0.6697056766401757
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 545,
+          "hits": 343,
+          "misses": 202,
+          "accuracy": 0.6293577981651376,
+          "wilson95": [
+            0.5880350148230017,
+            0.6688697096002199
+          ]
+        },
+        "close": {
+          "n": 545,
+          "hits": 375,
+          "misses": 170,
+          "accuracy": 0.6880733944954128,
+          "wilson95": [
+            0.6479753114239312,
+            0.7255386496169228
+          ]
+        },
+        "jodi": {
+          "n": 545,
+          "hits": 235,
+          "misses": 310,
+          "accuracy": 0.43119266055045874,
+          "wilson95": [
+            0.3902380512657591,
+            0.473110499572953
+          ]
+        }
+      }
+    },
+    "Kalyan": {
+      "development": {
+        "open": {
+          "n": 243,
+          "hits": 159,
+          "misses": 84,
+          "accuracy": 0.654320987654321,
+          "wilson95": [
+            0.5925400852759064,
+            0.7112984897454838
+          ]
+        },
+        "close": {
+          "n": 243,
+          "hits": 163,
+          "misses": 80,
+          "accuracy": 0.6707818930041153,
+          "wilson95": [
+            0.6094392559609363,
+            0.7268087670627356
+          ]
+        },
+        "jodi": {
+          "n": 243,
+          "hits": 103,
+          "misses": 140,
+          "accuracy": 0.42386831275720166,
+          "wilson95": [
+            0.3633931620095668,
+            0.4867131409798806
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 97,
+          "hits": 57,
+          "misses": 40,
+          "accuracy": 0.5876288659793815,
+          "wilson95": [
+            0.4881528773280669,
+            0.6804283431206368
+          ]
+        },
+        "close": {
+          "n": 97,
+          "hits": 65,
+          "misses": 32,
+          "accuracy": 0.6701030927835051,
+          "wilson95": [
+            0.5716254106722979,
+            0.7556204878457738
+          ]
+        },
+        "jodi": {
+          "n": 97,
+          "hits": 37,
+          "misses": 60,
+          "accuracy": 0.38144329896907214,
+          "wilson95": [
+            0.291045123554349,
+            0.4808744017209342
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "hits": 65,
+          "misses": 38,
+          "accuracy": 0.6310679611650486,
+          "wilson95": [
+            0.5347390366684421,
+            0.7179715180218659
+          ]
+        },
+        "close": {
+          "n": 103,
+          "hits": 70,
+          "misses": 33,
+          "accuracy": 0.6796116504854369,
+          "wilson95": [
+            0.5844362166569979,
+            0.7618708397704612
+          ]
+        },
+        "jodi": {
+          "n": 103,
+          "hits": 42,
+          "misses": 61,
+          "accuracy": 0.4077669902912621,
+          "wilson95": [
+            0.3178410008099198,
+            0.5043256458894932
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "hits": 74,
+          "misses": 28,
+          "accuracy": 0.7254901960784313,
+          "wilson95": [
+            0.631892554573945,
+            0.8027191670931499
+          ]
+        },
+        "close": {
+          "n": 102,
+          "hits": 77,
+          "misses": 25,
+          "accuracy": 0.7549019607843137,
+          "wilson95": [
+            0.6631806109217161,
+            0.8281195961802175
+          ]
+        },
+        "jodi": {
+          "n": 102,
+          "hits": 56,
+          "misses": 46,
+          "accuracy": 0.5490196078431373,
+          "wilson95": [
+            0.4524253919116267,
+            0.6420554171464375
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 545,
+          "hits": 355,
+          "misses": 190,
+          "accuracy": 0.6513761467889908,
+          "wilson95": [
+            0.6104342796743627,
+            0.690198908480471
+          ]
+        },
+        "close": {
+          "n": 545,
+          "hits": 375,
+          "misses": 170,
+          "accuracy": 0.6880733944954128,
+          "wilson95": [
+            0.6479753114239312,
+            0.7255386496169228
+          ]
+        },
+        "jodi": {
+          "n": 545,
+          "hits": 238,
+          "misses": 307,
+          "accuracy": 0.43669724770642204,
+          "wilson95": [
+            0.39564316313402226,
+            0.4786375036375929
+          ]
+        }
+      }
+    },
+    "Sridevi Night": {
+      "development": {
+        "open": {
+          "n": 292,
+          "hits": 194,
+          "misses": 98,
+          "accuracy": 0.6643835616438356,
+          "wilson95": [
+            0.6083973457744748,
+            0.7161006288173338
+          ]
+        },
+        "close": {
+          "n": 292,
+          "hits": 190,
+          "misses": 102,
+          "accuracy": 0.6506849315068494,
+          "wilson95": [
+            0.5943654174631409,
+            0.7030910592460171
+          ]
+        },
+        "jodi": {
+          "n": 292,
+          "hits": 127,
+          "misses": 165,
+          "accuracy": 0.4349315068493151,
+          "wilson95": [
+            0.3792780616169705,
+            0.49227482344043866
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 121,
+          "hits": 69,
+          "misses": 52,
+          "accuracy": 0.5702479338842975,
+          "wilson95": [
+            0.4812198903675137,
+            0.6549526674978131
+          ]
+        },
+        "close": {
+          "n": 121,
+          "hits": 75,
+          "misses": 46,
+          "accuracy": 0.6198347107438017,
+          "wilson95": [
+            0.5309142514560631,
+            0.7013801119612595
+          ]
+        },
+        "jodi": {
+          "n": 121,
+          "hits": 45,
+          "misses": 76,
+          "accuracy": 0.371900826446281,
+          "wilson95": [
+            0.29096899703222084,
+            0.460716338625124
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 120,
+          "hits": 85,
+          "misses": 35,
+          "accuracy": 0.7083333333333334,
+          "wilson95": [
+            0.6215559807865156,
+            0.7821855729401805
+          ]
+        },
+        "close": {
+          "n": 120,
+          "hits": 81,
+          "misses": 39,
+          "accuracy": 0.675,
+          "wilson95": [
+            0.586900169218779,
+            0.7522427359116458
+          ]
+        },
+        "jodi": {
+          "n": 120,
+          "hits": 56,
+          "misses": 64,
+          "accuracy": 0.4666666666666667,
+          "wilson95": [
+            0.37982764246169837,
+            0.5555737089420304
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 120,
+          "hits": 88,
+          "misses": 32,
+          "accuracy": 0.7333333333333333,
+          "wilson95": [
+            0.6478739437150142,
+            0.8043165964588854
+          ]
+        },
+        "close": {
+          "n": 120,
+          "hits": 84,
+          "misses": 36,
+          "accuracy": 0.7,
+          "wilson95": [
+            0.6128469049643513,
+            0.7747449866132767
+          ]
+        },
+        "jodi": {
+          "n": 120,
+          "hits": 63,
+          "misses": 57,
+          "accuracy": 0.525,
+          "wilson95": [
+            0.4362683592400492,
+            0.6121806272071545
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 653,
+          "hits": 436,
+          "misses": 217,
+          "accuracy": 0.667687595712098,
+          "wilson95": [
+            0.6306700302779638,
+            0.7027436877325887
+          ]
+        },
+        "close": {
+          "n": 653,
+          "hits": 430,
+          "misses": 223,
+          "accuracy": 0.6584992343032159,
+          "wilson95": [
+            0.6212944271470281,
+            0.6938500460410281
+          ]
+        },
+        "jodi": {
+          "n": 653,
+          "hits": 291,
+          "misses": 362,
+          "accuracy": 0.445635528330781,
+          "wilson95": [
+            0.40794079985644,
+            0.48396616827712524
+          ]
+        }
+      }
+    },
+    "Kalyan Night": {
+      "development": {
+        "open": {
+          "n": 202,
+          "hits": 132,
+          "misses": 70,
+          "accuracy": 0.6534653465346535,
+          "wilson95": [
+            0.5855290836377073,
+            0.7156733943842281
+          ]
+        },
+        "close": {
+          "n": 202,
+          "hits": 131,
+          "misses": 71,
+          "accuracy": 0.6485148514851485,
+          "wilson95": [
+            0.5804609407131883,
+            0.7110253283402975
+          ]
+        },
+        "jodi": {
+          "n": 202,
+          "hits": 86,
+          "misses": 116,
+          "accuracy": 0.42574257425742573,
+          "wilson95": [
+            0.3595656185022828,
+            0.49469124697097444
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 80,
+          "hits": 51,
+          "misses": 29,
+          "accuracy": 0.6375,
+          "wilson95": [
+            0.5281059097698363,
+            0.7342936627574055
+          ]
+        },
+        "close": {
+          "n": 80,
+          "hits": 51,
+          "misses": 29,
+          "accuracy": 0.6375,
+          "wilson95": [
+            0.5281059097698363,
+            0.7342936627574055
+          ]
+        },
+        "jodi": {
+          "n": 80,
+          "hits": 32,
+          "misses": 48,
+          "accuracy": 0.4,
+          "wilson95": [
+            0.29961659273441493,
+            0.5095473545185001
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 85,
+          "hits": 60,
+          "misses": 25,
+          "accuracy": 0.7058823529411765,
+          "wilson95": [
+            0.6018134825817979,
+            0.7921461039182202
+          ]
+        },
+        "close": {
+          "n": 85,
+          "hits": 47,
+          "misses": 38,
+          "accuracy": 0.5529411764705883,
+          "wilson95": [
+            0.44723871211307475,
+            0.6540651815583585
+          ]
+        },
+        "jodi": {
+          "n": 85,
+          "hits": 37,
+          "misses": 48,
+          "accuracy": 0.43529411764705883,
+          "wilson95": [
+            0.33495605811400164,
+            0.5412280718431356
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 82,
+          "hits": 58,
+          "misses": 24,
+          "accuracy": 0.7073170731707317,
+          "wilson95": [
+            0.6013403571873552,
+            0.7947380010911484
+          ]
+        },
+        "close": {
+          "n": 82,
+          "hits": 57,
+          "misses": 25,
+          "accuracy": 0.6951219512195121,
+          "wilson95": [
+            0.5886121722656341,
+            0.7841674590553105
+          ]
+        },
+        "jodi": {
+          "n": 82,
+          "hits": 40,
+          "misses": 42,
+          "accuracy": 0.4878048780487805,
+          "wilson95": [
+            0.3826071216079986,
+            0.5940941514344423
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 449,
+          "hits": 301,
+          "misses": 148,
+          "accuracy": 0.6703786191536748,
+          "wilson95": [
+            0.6256128344388192,
+            0.7122536513257395
+          ]
+        },
+        "close": {
+          "n": 449,
+          "hits": 286,
+          "misses": 163,
+          "accuracy": 0.6369710467706013,
+          "wilson95": [
+            0.5915030517380614,
+            0.680115103484427
+          ]
+        },
+        "jodi": {
+          "n": 449,
+          "hits": 195,
+          "misses": 254,
+          "accuracy": 0.43429844097995546,
+          "wilson95": [
+            0.389199257348034,
+            0.480512359252561
+          ]
+        }
+      }
+    },
+    "Madhur Night": {
+      "development": {
+        "open": {
+          "n": 242,
+          "hits": 130,
+          "misses": 112,
+          "accuracy": 0.5371900826446281,
+          "wilson95": [
+            0.4742767202451537,
+            0.5989411566316645
+          ]
+        },
+        "close": {
+          "n": 242,
+          "hits": 154,
+          "misses": 88,
+          "accuracy": 0.6363636363636364,
+          "wilson95": [
+            0.5740617765468916,
+            0.694403772001442
+          ]
+        },
+        "jodi": {
+          "n": 242,
+          "hits": 83,
+          "misses": 159,
+          "accuracy": 0.34297520661157027,
+          "wilson95": [
+            0.28603779622922304,
+            0.40482005695754447
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 97,
+          "hits": 60,
+          "misses": 37,
+          "accuracy": 0.6185567010309279,
+          "wilson95": [
+            0.5191255982790659,
+            0.7089548764456509
+          ]
+        },
+        "close": {
+          "n": 97,
+          "hits": 77,
+          "misses": 20,
+          "accuracy": 0.7938144329896907,
+          "wilson95": [
+            0.7028688883296543,
+            0.8623740272924698
+          ]
+        },
+        "jodi": {
+          "n": 97,
+          "hits": 49,
+          "misses": 48,
+          "accuracy": 0.5051546391752577,
+          "wilson95": [
+            0.40737305891143216,
+            0.6025434834679033
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "hits": 65,
+          "misses": 38,
+          "accuracy": 0.6310679611650486,
+          "wilson95": [
+            0.5347390366684421,
+            0.7179715180218659
+          ]
+        },
+        "close": {
+          "n": 103,
+          "hits": 67,
+          "misses": 36,
+          "accuracy": 0.6504854368932039,
+          "wilson95": [
+            0.5544984775703553,
+            0.7356506778148132
+          ]
+        },
+        "jodi": {
+          "n": 103,
+          "hits": 41,
+          "misses": 62,
+          "accuracy": 0.39805825242718446,
+          "wilson95": [
+            0.3088324252600616,
+            0.49461492109192123
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "hits": 61,
+          "misses": 41,
+          "accuracy": 0.5980392156862745,
+          "wilson95": [
+            0.5010049524706779,
+            0.6879566656454503
+          ]
+        },
+        "close": {
+          "n": 102,
+          "hits": 72,
+          "misses": 30,
+          "accuracy": 0.7058823529411765,
+          "wilson95": [
+            0.6112816903971267,
+            0.7855377076467428
+          ]
+        },
+        "jodi": {
+          "n": 102,
+          "hits": 46,
+          "misses": 56,
+          "accuracy": 0.45098039215686275,
+          "wilson95": [
+            0.3579445828535625,
+            0.5475746080883734
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 544,
+          "hits": 316,
+          "misses": 228,
+          "accuracy": 0.5808823529411765,
+          "wilson95": [
+            0.5389931658351739,
+            0.6216372061555623
+          ]
+        },
+        "close": {
+          "n": 544,
+          "hits": 370,
+          "misses": 174,
+          "accuracy": 0.6801470588235294,
+          "wilson95": [
+            0.6398058362230198,
+            0.7179618104836195
+          ]
+        },
+        "jodi": {
+          "n": 544,
+          "hits": 219,
+          "misses": 325,
+          "accuracy": 0.4025735294117647,
+          "wilson95": [
+            0.3621839851450478,
+            0.4443294304115657
+          ]
+        }
+      }
+    },
+    "Milan Night": {
+      "development": {
+        "open": {
+          "n": 243,
+          "hits": 131,
+          "misses": 112,
+          "accuracy": 0.5390946502057613,
+          "wilson95": [
+            0.47629829434770793,
+            0.6006741446577109
+          ]
+        },
+        "close": {
+          "n": 243,
+          "hits": 138,
+          "misses": 105,
+          "accuracy": 0.5679012345679012,
+          "wilson95": [
+            0.5050373958837684,
+            0.6286515771256432
+          ]
+        },
+        "jodi": {
+          "n": 243,
+          "hits": 75,
+          "misses": 168,
+          "accuracy": 0.30864197530864196,
+          "wilson95": [
+            0.2539161974588741,
+            0.3693239695146019
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 94,
+          "hits": 61,
+          "misses": 33,
+          "accuracy": 0.648936170212766,
+          "wilson95": [
+            0.5483301998756748,
+            0.7378466410590605
+          ]
+        },
+        "close": {
+          "n": 94,
+          "hits": 67,
+          "misses": 27,
+          "accuracy": 0.7127659574468085,
+          "wilson95": [
+            0.6143663617863795,
+            0.7944576966918138
+          ]
+        },
+        "jodi": {
+          "n": 94,
+          "hits": 45,
+          "misses": 49,
+          "accuracy": 0.4787234042553192,
+          "wilson95": [
+            0.3805699633124236,
+            0.5785476308397571
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "hits": 72,
+          "misses": 31,
+          "accuracy": 0.6990291262135923,
+          "wilson95": [
+            0.6046036532800894,
+            0.7791420038422301
+          ]
+        },
+        "close": {
+          "n": 103,
+          "hits": 75,
+          "misses": 28,
+          "accuracy": 0.7281553398058253,
+          "wilson95": [
+            0.6351896398284613,
+            0.8047139183361488
+          ]
+        },
+        "jodi": {
+          "n": 103,
+          "hits": 54,
+          "misses": 49,
+          "accuracy": 0.5242718446601942,
+          "wilson95": [
+            0.4286965005488069,
+            0.6181017503197686
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 101,
+          "hits": 70,
+          "misses": 31,
+          "accuracy": 0.693069306930693,
+          "wilson95": [
+            0.5974246891219428,
+            0.7745650554069464
+          ]
+        },
+        "close": {
+          "n": 101,
+          "hits": 74,
+          "misses": 27,
+          "accuracy": 0.7326732673267327,
+          "wilson95": [
+            0.6390037155312416,
+            0.8092916176189583
+          ]
+        },
+        "jodi": {
+          "n": 101,
+          "hits": 53,
+          "misses": 48,
+          "accuracy": 0.5247524752475248,
+          "wilson95": [
+            0.42824811910483207,
+            0.6194428737834872
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 541,
+          "hits": 334,
+          "misses": 207,
+          "accuracy": 0.6173752310536045,
+          "wilson95": [
+            0.5757277893902362,
+            0.6573674808681289
+          ]
+        },
+        "close": {
+          "n": 541,
+          "hits": 354,
+          "misses": 187,
+          "accuracy": 0.6543438077634011,
+          "wilson95": [
+            0.6133064231615557,
+            0.6932046802490501
+          ]
+        },
+        "jodi": {
+          "n": 541,
+          "hits": 227,
+          "misses": 314,
+          "accuracy": 0.4195933456561922,
+          "wilson95": [
+            0.3787181511926363,
+            0.4616024117012396
+          ]
+        }
+      }
+    },
+    "Rajdhani Night": {
+      "development": {
+        "open": {
+          "n": 202,
+          "hits": 133,
+          "misses": 69,
+          "accuracy": 0.6584158415841584,
+          "wilson95": [
+            0.5906048271166547,
+            0.7203138598737302
+          ]
+        },
+        "close": {
+          "n": 202,
+          "hits": 126,
+          "misses": 76,
+          "accuracy": 0.6237623762376238,
+          "wilson95": [
+            0.5552317946879096,
+            0.6876734295233285
+          ]
+        },
+        "jodi": {
+          "n": 202,
+          "hits": 82,
+          "misses": 120,
+          "accuracy": 0.40594059405940597,
+          "wilson95": [
+            0.34058646841015555,
+            0.4748055611893036
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 82,
+          "hits": 46,
+          "misses": 36,
+          "accuracy": 0.5609756097560976,
+          "wilson95": [
+            0.45322727057239914,
+            0.6632663642153962
+          ]
+        },
+        "close": {
+          "n": 82,
+          "hits": 55,
+          "misses": 27,
+          "accuracy": 0.6707317073170732,
+          "wilson95": [
+            0.5633818520351263,
+            0.7628003253707004
+          ]
+        },
+        "jodi": {
+          "n": 82,
+          "hits": 33,
+          "misses": 49,
+          "accuracy": 0.4024390243902439,
+          "wilson95": [
+            0.30297275905176574,
+            0.510637425287762
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 85,
+          "hits": 63,
+          "misses": 22,
+          "accuracy": 0.7411764705882353,
+          "wilson95": [
+            0.6390752485008677,
+            0.8224202671134392
+          ]
+        },
+        "close": {
+          "n": 85,
+          "hits": 56,
+          "misses": 29,
+          "accuracy": 0.6588235294117647,
+          "wilson95": [
+            0.5531293986319203,
+            0.7507822823823792
+          ]
+        },
+        "jodi": {
+          "n": 85,
+          "hits": 48,
+          "misses": 37,
+          "accuracy": 0.5647058823529412,
+          "wilson95": [
+            0.45877192815686446,
+            0.6650439418859984
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 85,
+          "hits": 59,
+          "misses": 26,
+          "accuracy": 0.6941176470588235,
+          "wilson95": [
+            0.5895400497870746,
+            0.7819075603415137
+          ]
+        },
+        "close": {
+          "n": 85,
+          "hits": 59,
+          "misses": 26,
+          "accuracy": 0.6941176470588235,
+          "wilson95": [
+            0.5895400497870746,
+            0.7819075603415137
+          ]
+        },
+        "jodi": {
+          "n": 85,
+          "hits": 43,
+          "misses": 42,
+          "accuracy": 0.5058823529411764,
+          "wilson95": [
+            0.40166252134606184,
+            0.609593466839653
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 454,
+          "hits": 301,
+          "misses": 153,
+          "accuracy": 0.6629955947136564,
+          "wilson95": [
+            0.6183079866418358,
+            0.7049479167098911
+          ]
+        },
+        "close": {
+          "n": 454,
+          "hits": 296,
+          "misses": 158,
+          "accuracy": 0.6519823788546255,
+          "wilson95": [
+            0.6070553202283561,
+            0.6943589680320378
+          ]
+        },
+        "jodi": {
+          "n": 454,
+          "hits": 206,
+          "misses": 248,
+          "accuracy": 0.45374449339207046,
+          "wilson95": [
+            0.4085270505932466,
+            0.4997381660231552
+          ]
+        }
+      }
+    },
+    "Main Bazar": {
+      "development": {
+        "open": {
+          "n": 202,
+          "hits": 127,
+          "misses": 75,
+          "accuracy": 0.6287128712871287,
+          "wilson95": [
+            0.5602629636721574,
+            0.6923584695075303
+          ]
+        },
+        "close": {
+          "n": 202,
+          "hits": 134,
+          "misses": 68,
+          "accuracy": 0.6633663366336634,
+          "wilson95": [
+            0.595688247934644,
+            0.7249466480241904
+          ]
+        },
+        "jodi": {
+          "n": 202,
+          "hits": 83,
+          "misses": 119,
+          "accuracy": 0.41089108910891087,
+          "wilson95": [
+            0.34532095478654695,
+            0.4797872837813616
+          ]
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 82,
+          "hits": 56,
+          "misses": 26,
+          "accuracy": 0.6829268292682927,
+          "wilson95": [
+            0.5759601026622791,
+            0.7735208017011066
+          ]
+        },
+        "close": {
+          "n": 82,
+          "hits": 55,
+          "misses": 27,
+          "accuracy": 0.6707317073170732,
+          "wilson95": [
+            0.5633818520351263,
+            0.7628003253707004
+          ]
+        },
+        "jodi": {
+          "n": 82,
+          "hits": 41,
+          "misses": 41,
+          "accuracy": 0.5,
+          "wilson95": [
+            0.39422642728441165,
+            0.6057735727155883
+          ]
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 85,
+          "hits": 58,
+          "misses": 27,
+          "accuracy": 0.6823529411764706,
+          "wilson95": [
+            0.5773362018838148,
+            0.771599431873344
+          ]
+        },
+        "close": {
+          "n": 85,
+          "hits": 59,
+          "misses": 26,
+          "accuracy": 0.6941176470588235,
+          "wilson95": [
+            0.5895400497870746,
+            0.7819075603415137
+          ]
+        },
+        "jodi": {
+          "n": 85,
+          "hits": 36,
+          "misses": 49,
+          "accuracy": 0.4235294117647059,
+          "wilson95": [
+            0.32403373018846293,
+            0.5296384233972448
+          ]
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 84,
+          "hits": 54,
+          "misses": 30,
+          "accuracy": 0.6428571428571429,
+          "wilson95": [
+            0.5362111603479549,
+            0.7370079067000043
+          ]
+        },
+        "close": {
+          "n": 84,
+          "hits": 60,
+          "misses": 24,
+          "accuracy": 0.7142857142857143,
+          "wilson95": [
+            0.6099775866784931,
+            0.7998510138934455
+          ]
+        },
+        "jodi": {
+          "n": 84,
+          "hits": 39,
+          "misses": 45,
+          "accuracy": 0.4642857142857143,
+          "wilson95": [
+            0.36154050446577934,
+            0.5701547287722308
+          ]
+        }
+      },
+      "overall": {
+        "open": {
+          "n": 453,
+          "hits": 295,
+          "misses": 158,
+          "accuracy": 0.6512141280353201,
+          "wilson95": [
+            0.6062207307300471,
+            0.6936643935668645
+          ]
+        },
+        "close": {
+          "n": 453,
+          "hits": 308,
+          "misses": 145,
+          "accuracy": 0.6799116997792495,
+          "wilson95": [
+            0.6355926995347603,
+            0.7212049301031712
+          ]
+        },
+        "jodi": {
+          "n": 453,
+          "hits": 199,
+          "misses": 254,
+          "accuracy": 0.4392935982339956,
+          "wilson95": [
+            0.3942900015624619,
+            0.4853181602161502
+          ]
+        }
+      }
+    }
+  },
+  "feasibilityDiagnostic": {
+    "recentFrozenJodiRate": 0.516366612111293,
+    "empiricalGoalRowsAtThirtyPerMarket": 360,
+    "stationaryIndependentAllSuccessExtrapolation": 4.6231203745790454e-104,
+    "caveat": "This extrapolation is descriptive, assumes stationarity and independence, and is not a formal probability forecast."
+  }
+}

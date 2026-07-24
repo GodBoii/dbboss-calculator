@@ -1,0 +1,1644 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-14T22:54:55.822440+00:00",
+  "researchOnly": true,
+  "evaluationType": "nested-development-selection-retrospective-evaluation",
+  "input": "research/goal100/artifacts/causal-audit-all-blocks.json",
+  "inputSha256": "21675bcb6b1764098b916c0f34f57b3139b17aa49956b1406c374cc693f62d24",
+  "seed": 100615,
+  "design": {
+    "predictionSet": "baseline top2 plus all four excluded digits when gated; otherwise baseline top6",
+    "innerSplit": {
+      "trainDates": [
+        "2024-09-23",
+        "2025-03-18"
+      ],
+      "selectionDates": [
+        "2025-03-19",
+        "2025-07-13"
+      ],
+      "trainRows": 1729,
+      "selectionRows": 1200
+    },
+    "features": "market, weekday, cyclical calendar, ordered causal baseline Top6, set mask, own actual lags 1/2/7, prior hit indicators, rolling hit rates, miss streak, and trailing actual-digit frequencies",
+    "model": "fixed-epoch L2 logistic miss classifier",
+    "laterBlocks": [
+      "validation",
+      "holdout",
+      "recentFrozen"
+    ],
+    "noLaterTuning": true
+  },
+  "selection": {
+    "sideVariantCount": 25,
+    "pairCount": 625,
+    "qualifyingPairs": 1,
+    "score": [
+      0,
+      0,
+      0
+    ],
+    "open": "baseline-no-gate",
+    "close": "baseline-no-gate",
+    "innerSelectionMarketDeltas": {
+      "Sridevi": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Time Bazar": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Madhur Day": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Milan Day": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Rajdhani Day": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Kalyan": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Sridevi Night": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Kalyan Night": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Madhur Night": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Milan Night": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Rajdhani Night": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      },
+      "Main Bazar": {
+        "open": 0,
+        "close": 0,
+        "jodi": 0
+      }
+    }
+  },
+  "aggregate": {
+    "development": {
+      "open": {
+        "n": 2929,
+        "baselineHits": 1854,
+        "candidateHits": 1854,
+        "delta": 0,
+        "baselineAccuracy": 0.6329805394332537,
+        "candidateAccuracy": 0.6329805394332537,
+        "gateCount": 0
+      },
+      "close": {
+        "n": 2929,
+        "baselineHits": 1876,
+        "candidateHits": 1876,
+        "delta": 0,
+        "baselineAccuracy": 0.6404916353704336,
+        "candidateAccuracy": 0.6404916353704336,
+        "gateCount": 0
+      },
+      "jodi": {
+        "n": 2929,
+        "baselineHits": 1183,
+        "candidateHits": 1183,
+        "delta": 0,
+        "baselineAccuracy": 0.40389211334926595,
+        "candidateAccuracy": 0.40389211334926595,
+        "gateCount": 0
+      }
+    },
+    "validation": {
+      "open": {
+        "n": 1174,
+        "baselineHits": 715,
+        "candidateHits": 715,
+        "delta": 0,
+        "baselineAccuracy": 0.6090289608177172,
+        "candidateAccuracy": 0.6090289608177172,
+        "gateCount": 0
+      },
+      "close": {
+        "n": 1174,
+        "baselineHits": 787,
+        "candidateHits": 787,
+        "delta": 0,
+        "baselineAccuracy": 0.6703577512776832,
+        "candidateAccuracy": 0.6703577512776832,
+        "gateCount": 0
+      },
+      "jodi": {
+        "n": 1174,
+        "baselineHits": 492,
+        "candidateHits": 492,
+        "delta": 0,
+        "baselineAccuracy": 0.4190800681431005,
+        "candidateAccuracy": 0.4190800681431005,
+        "gateCount": 0
+      }
+    },
+    "holdout": {
+      "open": {
+        "n": 1233,
+        "baselineHits": 807,
+        "candidateHits": 807,
+        "delta": 0,
+        "baselineAccuracy": 0.6545012165450121,
+        "candidateAccuracy": 0.6545012165450121,
+        "gateCount": 0
+      },
+      "close": {
+        "n": 1233,
+        "baselineHits": 790,
+        "candidateHits": 790,
+        "delta": 0,
+        "baselineAccuracy": 0.6407137064071371,
+        "candidateAccuracy": 0.6407137064071371,
+        "gateCount": 0
+      },
+      "jodi": {
+        "n": 1233,
+        "baselineHits": 520,
+        "candidateHits": 520,
+        "delta": 0,
+        "baselineAccuracy": 0.42173560421735606,
+        "candidateAccuracy": 0.42173560421735606,
+        "gateCount": 0
+      }
+    },
+    "recentFrozen": {
+      "open": {
+        "n": 1222,
+        "baselineHits": 852,
+        "candidateHits": 852,
+        "delta": 0,
+        "baselineAccuracy": 0.6972176759410802,
+        "candidateAccuracy": 0.6972176759410802,
+        "gateCount": 0
+      },
+      "close": {
+        "n": 1222,
+        "baselineHits": 879,
+        "candidateHits": 879,
+        "delta": 0,
+        "baselineAccuracy": 0.7193126022913257,
+        "candidateAccuracy": 0.7193126022913257,
+        "gateCount": 0
+      },
+      "jodi": {
+        "n": 1222,
+        "baselineHits": 631,
+        "candidateHits": 631,
+        "delta": 0,
+        "baselineAccuracy": 0.516366612111293,
+        "candidateAccuracy": 0.516366612111293,
+        "gateCount": 0
+      }
+    }
+  },
+  "byMarket": {
+    "Sridevi": {
+      "development": {
+        "open": {
+          "n": 292,
+          "baselineHits": 186,
+          "candidateHits": 186,
+          "delta": 0,
+          "baselineAccuracy": 0.636986301369863,
+          "candidateAccuracy": 0.636986301369863,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 292,
+          "baselineHits": 181,
+          "candidateHits": 181,
+          "delta": 0,
+          "baselineAccuracy": 0.6198630136986302,
+          "candidateAccuracy": 0.6198630136986302,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 292,
+          "baselineHits": 110,
+          "candidateHits": 110,
+          "delta": 0,
+          "baselineAccuracy": 0.3767123287671233,
+          "candidateAccuracy": 0.3767123287671233,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 121,
+          "baselineHits": 82,
+          "candidateHits": 82,
+          "delta": 0,
+          "baselineAccuracy": 0.6776859504132231,
+          "candidateAccuracy": 0.6776859504132231,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 121,
+          "baselineHits": 80,
+          "candidateHits": 80,
+          "delta": 0,
+          "baselineAccuracy": 0.6611570247933884,
+          "candidateAccuracy": 0.6611570247933884,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 121,
+          "baselineHits": 54,
+          "candidateHits": 54,
+          "delta": 0,
+          "baselineAccuracy": 0.4462809917355372,
+          "candidateAccuracy": 0.4462809917355372,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 120,
+          "baselineHits": 75,
+          "candidateHits": 75,
+          "delta": 0,
+          "baselineAccuracy": 0.625,
+          "candidateAccuracy": 0.625,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 120,
+          "baselineHits": 63,
+          "candidateHits": 63,
+          "delta": 0,
+          "baselineAccuracy": 0.525,
+          "candidateAccuracy": 0.525,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 120,
+          "baselineHits": 40,
+          "candidateHits": 40,
+          "delta": 0,
+          "baselineAccuracy": 0.3333333333333333,
+          "candidateAccuracy": 0.3333333333333333,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 120,
+          "baselineHits": 84,
+          "candidateHits": 84,
+          "delta": 0,
+          "baselineAccuracy": 0.7,
+          "candidateAccuracy": 0.7,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 120,
+          "baselineHits": 87,
+          "candidateHits": 87,
+          "delta": 0,
+          "baselineAccuracy": 0.725,
+          "candidateAccuracy": 0.725,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 120,
+          "baselineHits": 62,
+          "candidateHits": 62,
+          "delta": 0,
+          "baselineAccuracy": 0.5166666666666667,
+          "candidateAccuracy": 0.5166666666666667,
+          "gateCount": 0
+        }
+      }
+    },
+    "Time Bazar": {
+      "development": {
+        "open": {
+          "n": 243,
+          "baselineHits": 159,
+          "candidateHits": 159,
+          "delta": 0,
+          "baselineAccuracy": 0.654320987654321,
+          "candidateAccuracy": 0.654320987654321,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 243,
+          "baselineHits": 167,
+          "candidateHits": 167,
+          "delta": 0,
+          "baselineAccuracy": 0.6872427983539094,
+          "candidateAccuracy": 0.6872427983539094,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 243,
+          "baselineHits": 112,
+          "candidateHits": 112,
+          "delta": 0,
+          "baselineAccuracy": 0.4609053497942387,
+          "candidateAccuracy": 0.4609053497942387,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 96,
+          "baselineHits": 57,
+          "candidateHits": 57,
+          "delta": 0,
+          "baselineAccuracy": 0.59375,
+          "candidateAccuracy": 0.59375,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 96,
+          "baselineHits": 63,
+          "candidateHits": 63,
+          "delta": 0,
+          "baselineAccuracy": 0.65625,
+          "candidateAccuracy": 0.65625,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 96,
+          "baselineHits": 37,
+          "candidateHits": 37,
+          "delta": 0,
+          "baselineAccuracy": 0.3854166666666667,
+          "candidateAccuracy": 0.3854166666666667,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "baselineHits": 70,
+          "candidateHits": 70,
+          "delta": 0,
+          "baselineAccuracy": 0.6796116504854369,
+          "candidateAccuracy": 0.6796116504854369,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 103,
+          "baselineHits": 65,
+          "candidateHits": 65,
+          "delta": 0,
+          "baselineAccuracy": 0.6310679611650486,
+          "candidateAccuracy": 0.6310679611650486,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 103,
+          "baselineHits": 45,
+          "candidateHits": 45,
+          "delta": 0,
+          "baselineAccuracy": 0.4368932038834951,
+          "candidateAccuracy": 0.4368932038834951,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "baselineHits": 71,
+          "candidateHits": 71,
+          "delta": 0,
+          "baselineAccuracy": 0.696078431372549,
+          "candidateAccuracy": 0.696078431372549,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 102,
+          "baselineHits": 71,
+          "candidateHits": 71,
+          "delta": 0,
+          "baselineAccuracy": 0.696078431372549,
+          "candidateAccuracy": 0.696078431372549,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 102,
+          "baselineHits": 50,
+          "candidateHits": 50,
+          "delta": 0,
+          "baselineAccuracy": 0.49019607843137253,
+          "candidateAccuracy": 0.49019607843137253,
+          "gateCount": 0
+        }
+      }
+    },
+    "Madhur Day": {
+      "development": {
+        "open": {
+          "n": 282,
+          "baselineHits": 182,
+          "candidateHits": 182,
+          "delta": 0,
+          "baselineAccuracy": 0.6453900709219859,
+          "candidateAccuracy": 0.6453900709219859,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 282,
+          "baselineHits": 179,
+          "candidateHits": 179,
+          "delta": 0,
+          "baselineAccuracy": 0.6347517730496454,
+          "candidateAccuracy": 0.6347517730496454,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 282,
+          "baselineHits": 119,
+          "candidateHits": 119,
+          "delta": 0,
+          "baselineAccuracy": 0.4219858156028369,
+          "candidateAccuracy": 0.4219858156028369,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 111,
+          "baselineHits": 65,
+          "candidateHits": 65,
+          "delta": 0,
+          "baselineAccuracy": 0.5855855855855856,
+          "candidateAccuracy": 0.5855855855855856,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 111,
+          "baselineHits": 74,
+          "candidateHits": 74,
+          "delta": 0,
+          "baselineAccuracy": 0.6666666666666666,
+          "candidateAccuracy": 0.6666666666666666,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 111,
+          "baselineHits": 44,
+          "candidateHits": 44,
+          "delta": 0,
+          "baselineAccuracy": 0.3963963963963964,
+          "candidateAccuracy": 0.3963963963963964,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 120,
+          "baselineHits": 80,
+          "candidateHits": 80,
+          "delta": 0,
+          "baselineAccuracy": 0.6666666666666666,
+          "candidateAccuracy": 0.6666666666666666,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 120,
+          "baselineHits": 77,
+          "candidateHits": 77,
+          "delta": 0,
+          "baselineAccuracy": 0.6416666666666667,
+          "candidateAccuracy": 0.6416666666666667,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 120,
+          "baselineHits": 50,
+          "candidateHits": 50,
+          "delta": 0,
+          "baselineAccuracy": 0.4166666666666667,
+          "candidateAccuracy": 0.4166666666666667,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 120,
+          "baselineHits": 87,
+          "candidateHits": 87,
+          "delta": 0,
+          "baselineAccuracy": 0.725,
+          "candidateAccuracy": 0.725,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 120,
+          "baselineHits": 90,
+          "candidateHits": 90,
+          "delta": 0,
+          "baselineAccuracy": 0.75,
+          "candidateAccuracy": 0.75,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 120,
+          "baselineHits": 67,
+          "candidateHits": 67,
+          "delta": 0,
+          "baselineAccuracy": 0.5583333333333333,
+          "candidateAccuracy": 0.5583333333333333,
+          "gateCount": 0
+        }
+      }
+    },
+    "Milan Day": {
+      "development": {
+        "open": {
+          "n": 243,
+          "baselineHits": 159,
+          "candidateHits": 159,
+          "delta": 0,
+          "baselineAccuracy": 0.654320987654321,
+          "candidateAccuracy": 0.654320987654321,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 243,
+          "baselineHits": 151,
+          "candidateHits": 151,
+          "delta": 0,
+          "baselineAccuracy": 0.6213991769547325,
+          "candidateAccuracy": 0.6213991769547325,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 243,
+          "baselineHits": 99,
+          "candidateHits": 99,
+          "delta": 0,
+          "baselineAccuracy": 0.4074074074074074,
+          "candidateAccuracy": 0.4074074074074074,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 96,
+          "baselineHits": 57,
+          "candidateHits": 57,
+          "delta": 0,
+          "baselineAccuracy": 0.59375,
+          "candidateAccuracy": 0.59375,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 96,
+          "baselineHits": 57,
+          "candidateHits": 57,
+          "delta": 0,
+          "baselineAccuracy": 0.59375,
+          "candidateAccuracy": 0.59375,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 96,
+          "baselineHits": 36,
+          "candidateHits": 36,
+          "delta": 0,
+          "baselineAccuracy": 0.375,
+          "candidateAccuracy": 0.375,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "baselineHits": 61,
+          "candidateHits": 61,
+          "delta": 0,
+          "baselineAccuracy": 0.5922330097087378,
+          "candidateAccuracy": 0.5922330097087378,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 103,
+          "baselineHits": 61,
+          "candidateHits": 61,
+          "delta": 0,
+          "baselineAccuracy": 0.5922330097087378,
+          "candidateAccuracy": 0.5922330097087378,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 103,
+          "baselineHits": 38,
+          "candidateHits": 38,
+          "delta": 0,
+          "baselineAccuracy": 0.36893203883495146,
+          "candidateAccuracy": 0.36893203883495146,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "baselineHits": 72,
+          "candidateHits": 72,
+          "delta": 0,
+          "baselineAccuracy": 0.7058823529411765,
+          "candidateAccuracy": 0.7058823529411765,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 102,
+          "baselineHits": 72,
+          "candidateHits": 72,
+          "delta": 0,
+          "baselineAccuracy": 0.7058823529411765,
+          "candidateAccuracy": 0.7058823529411765,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 102,
+          "baselineHits": 53,
+          "candidateHits": 53,
+          "delta": 0,
+          "baselineAccuracy": 0.5196078431372549,
+          "candidateAccuracy": 0.5196078431372549,
+          "gateCount": 0
+        }
+      }
+    },
+    "Rajdhani Day": {
+      "development": {
+        "open": {
+          "n": 243,
+          "baselineHits": 162,
+          "candidateHits": 162,
+          "delta": 0,
+          "baselineAccuracy": 0.6666666666666666,
+          "candidateAccuracy": 0.6666666666666666,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 243,
+          "baselineHits": 162,
+          "candidateHits": 162,
+          "delta": 0,
+          "baselineAccuracy": 0.6666666666666666,
+          "candidateAccuracy": 0.6666666666666666,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 243,
+          "baselineHits": 104,
+          "candidateHits": 104,
+          "delta": 0,
+          "baselineAccuracy": 0.4279835390946502,
+          "candidateAccuracy": 0.4279835390946502,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 97,
+          "baselineHits": 54,
+          "candidateHits": 54,
+          "delta": 0,
+          "baselineAccuracy": 0.5567010309278351,
+          "candidateAccuracy": 0.5567010309278351,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 97,
+          "baselineHits": 68,
+          "candidateHits": 68,
+          "delta": 0,
+          "baselineAccuracy": 0.7010309278350515,
+          "candidateAccuracy": 0.7010309278350515,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 97,
+          "baselineHits": 39,
+          "candidateHits": 39,
+          "delta": 0,
+          "baselineAccuracy": 0.4020618556701031,
+          "candidateAccuracy": 0.4020618556701031,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "baselineHits": 53,
+          "candidateHits": 53,
+          "delta": 0,
+          "baselineAccuracy": 0.5145631067961165,
+          "candidateAccuracy": 0.5145631067961165,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 103,
+          "baselineHits": 69,
+          "candidateHits": 69,
+          "delta": 0,
+          "baselineAccuracy": 0.6699029126213593,
+          "candidateAccuracy": 0.6699029126213593,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 103,
+          "baselineHits": 33,
+          "candidateHits": 33,
+          "delta": 0,
+          "baselineAccuracy": 0.32038834951456313,
+          "candidateAccuracy": 0.32038834951456313,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "baselineHits": 74,
+          "candidateHits": 74,
+          "delta": 0,
+          "baselineAccuracy": 0.7254901960784313,
+          "candidateAccuracy": 0.7254901960784313,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 102,
+          "baselineHits": 76,
+          "candidateHits": 76,
+          "delta": 0,
+          "baselineAccuracy": 0.7450980392156863,
+          "candidateAccuracy": 0.7450980392156863,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 102,
+          "baselineHits": 59,
+          "candidateHits": 59,
+          "delta": 0,
+          "baselineAccuracy": 0.5784313725490197,
+          "candidateAccuracy": 0.5784313725490197,
+          "gateCount": 0
+        }
+      }
+    },
+    "Kalyan": {
+      "development": {
+        "open": {
+          "n": 243,
+          "baselineHits": 159,
+          "candidateHits": 159,
+          "delta": 0,
+          "baselineAccuracy": 0.654320987654321,
+          "candidateAccuracy": 0.654320987654321,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 243,
+          "baselineHits": 163,
+          "candidateHits": 163,
+          "delta": 0,
+          "baselineAccuracy": 0.6707818930041153,
+          "candidateAccuracy": 0.6707818930041153,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 243,
+          "baselineHits": 103,
+          "candidateHits": 103,
+          "delta": 0,
+          "baselineAccuracy": 0.42386831275720166,
+          "candidateAccuracy": 0.42386831275720166,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 97,
+          "baselineHits": 57,
+          "candidateHits": 57,
+          "delta": 0,
+          "baselineAccuracy": 0.5876288659793815,
+          "candidateAccuracy": 0.5876288659793815,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 97,
+          "baselineHits": 65,
+          "candidateHits": 65,
+          "delta": 0,
+          "baselineAccuracy": 0.6701030927835051,
+          "candidateAccuracy": 0.6701030927835051,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 97,
+          "baselineHits": 37,
+          "candidateHits": 37,
+          "delta": 0,
+          "baselineAccuracy": 0.38144329896907214,
+          "candidateAccuracy": 0.38144329896907214,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "baselineHits": 65,
+          "candidateHits": 65,
+          "delta": 0,
+          "baselineAccuracy": 0.6310679611650486,
+          "candidateAccuracy": 0.6310679611650486,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 103,
+          "baselineHits": 70,
+          "candidateHits": 70,
+          "delta": 0,
+          "baselineAccuracy": 0.6796116504854369,
+          "candidateAccuracy": 0.6796116504854369,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 103,
+          "baselineHits": 42,
+          "candidateHits": 42,
+          "delta": 0,
+          "baselineAccuracy": 0.4077669902912621,
+          "candidateAccuracy": 0.4077669902912621,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "baselineHits": 74,
+          "candidateHits": 74,
+          "delta": 0,
+          "baselineAccuracy": 0.7254901960784313,
+          "candidateAccuracy": 0.7254901960784313,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 102,
+          "baselineHits": 77,
+          "candidateHits": 77,
+          "delta": 0,
+          "baselineAccuracy": 0.7549019607843137,
+          "candidateAccuracy": 0.7549019607843137,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 102,
+          "baselineHits": 56,
+          "candidateHits": 56,
+          "delta": 0,
+          "baselineAccuracy": 0.5490196078431373,
+          "candidateAccuracy": 0.5490196078431373,
+          "gateCount": 0
+        }
+      }
+    },
+    "Sridevi Night": {
+      "development": {
+        "open": {
+          "n": 292,
+          "baselineHits": 194,
+          "candidateHits": 194,
+          "delta": 0,
+          "baselineAccuracy": 0.6643835616438356,
+          "candidateAccuracy": 0.6643835616438356,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 292,
+          "baselineHits": 190,
+          "candidateHits": 190,
+          "delta": 0,
+          "baselineAccuracy": 0.6506849315068494,
+          "candidateAccuracy": 0.6506849315068494,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 292,
+          "baselineHits": 127,
+          "candidateHits": 127,
+          "delta": 0,
+          "baselineAccuracy": 0.4349315068493151,
+          "candidateAccuracy": 0.4349315068493151,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 121,
+          "baselineHits": 69,
+          "candidateHits": 69,
+          "delta": 0,
+          "baselineAccuracy": 0.5702479338842975,
+          "candidateAccuracy": 0.5702479338842975,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 121,
+          "baselineHits": 75,
+          "candidateHits": 75,
+          "delta": 0,
+          "baselineAccuracy": 0.6198347107438017,
+          "candidateAccuracy": 0.6198347107438017,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 121,
+          "baselineHits": 45,
+          "candidateHits": 45,
+          "delta": 0,
+          "baselineAccuracy": 0.371900826446281,
+          "candidateAccuracy": 0.371900826446281,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 120,
+          "baselineHits": 85,
+          "candidateHits": 85,
+          "delta": 0,
+          "baselineAccuracy": 0.7083333333333334,
+          "candidateAccuracy": 0.7083333333333334,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 120,
+          "baselineHits": 81,
+          "candidateHits": 81,
+          "delta": 0,
+          "baselineAccuracy": 0.675,
+          "candidateAccuracy": 0.675,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 120,
+          "baselineHits": 56,
+          "candidateHits": 56,
+          "delta": 0,
+          "baselineAccuracy": 0.4666666666666667,
+          "candidateAccuracy": 0.4666666666666667,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 120,
+          "baselineHits": 88,
+          "candidateHits": 88,
+          "delta": 0,
+          "baselineAccuracy": 0.7333333333333333,
+          "candidateAccuracy": 0.7333333333333333,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 120,
+          "baselineHits": 84,
+          "candidateHits": 84,
+          "delta": 0,
+          "baselineAccuracy": 0.7,
+          "candidateAccuracy": 0.7,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 120,
+          "baselineHits": 63,
+          "candidateHits": 63,
+          "delta": 0,
+          "baselineAccuracy": 0.525,
+          "candidateAccuracy": 0.525,
+          "gateCount": 0
+        }
+      }
+    },
+    "Kalyan Night": {
+      "development": {
+        "open": {
+          "n": 202,
+          "baselineHits": 132,
+          "candidateHits": 132,
+          "delta": 0,
+          "baselineAccuracy": 0.6534653465346535,
+          "candidateAccuracy": 0.6534653465346535,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 202,
+          "baselineHits": 131,
+          "candidateHits": 131,
+          "delta": 0,
+          "baselineAccuracy": 0.6485148514851485,
+          "candidateAccuracy": 0.6485148514851485,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 202,
+          "baselineHits": 86,
+          "candidateHits": 86,
+          "delta": 0,
+          "baselineAccuracy": 0.42574257425742573,
+          "candidateAccuracy": 0.42574257425742573,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 80,
+          "baselineHits": 51,
+          "candidateHits": 51,
+          "delta": 0,
+          "baselineAccuracy": 0.6375,
+          "candidateAccuracy": 0.6375,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 80,
+          "baselineHits": 51,
+          "candidateHits": 51,
+          "delta": 0,
+          "baselineAccuracy": 0.6375,
+          "candidateAccuracy": 0.6375,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 80,
+          "baselineHits": 32,
+          "candidateHits": 32,
+          "delta": 0,
+          "baselineAccuracy": 0.4,
+          "candidateAccuracy": 0.4,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 85,
+          "baselineHits": 60,
+          "candidateHits": 60,
+          "delta": 0,
+          "baselineAccuracy": 0.7058823529411765,
+          "candidateAccuracy": 0.7058823529411765,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 85,
+          "baselineHits": 47,
+          "candidateHits": 47,
+          "delta": 0,
+          "baselineAccuracy": 0.5529411764705883,
+          "candidateAccuracy": 0.5529411764705883,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 85,
+          "baselineHits": 37,
+          "candidateHits": 37,
+          "delta": 0,
+          "baselineAccuracy": 0.43529411764705883,
+          "candidateAccuracy": 0.43529411764705883,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 82,
+          "baselineHits": 58,
+          "candidateHits": 58,
+          "delta": 0,
+          "baselineAccuracy": 0.7073170731707317,
+          "candidateAccuracy": 0.7073170731707317,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 82,
+          "baselineHits": 57,
+          "candidateHits": 57,
+          "delta": 0,
+          "baselineAccuracy": 0.6951219512195121,
+          "candidateAccuracy": 0.6951219512195121,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 82,
+          "baselineHits": 40,
+          "candidateHits": 40,
+          "delta": 0,
+          "baselineAccuracy": 0.4878048780487805,
+          "candidateAccuracy": 0.4878048780487805,
+          "gateCount": 0
+        }
+      }
+    },
+    "Madhur Night": {
+      "development": {
+        "open": {
+          "n": 242,
+          "baselineHits": 130,
+          "candidateHits": 130,
+          "delta": 0,
+          "baselineAccuracy": 0.5371900826446281,
+          "candidateAccuracy": 0.5371900826446281,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 242,
+          "baselineHits": 154,
+          "candidateHits": 154,
+          "delta": 0,
+          "baselineAccuracy": 0.6363636363636364,
+          "candidateAccuracy": 0.6363636363636364,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 242,
+          "baselineHits": 83,
+          "candidateHits": 83,
+          "delta": 0,
+          "baselineAccuracy": 0.34297520661157027,
+          "candidateAccuracy": 0.34297520661157027,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 97,
+          "baselineHits": 60,
+          "candidateHits": 60,
+          "delta": 0,
+          "baselineAccuracy": 0.6185567010309279,
+          "candidateAccuracy": 0.6185567010309279,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 97,
+          "baselineHits": 77,
+          "candidateHits": 77,
+          "delta": 0,
+          "baselineAccuracy": 0.7938144329896907,
+          "candidateAccuracy": 0.7938144329896907,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 97,
+          "baselineHits": 49,
+          "candidateHits": 49,
+          "delta": 0,
+          "baselineAccuracy": 0.5051546391752577,
+          "candidateAccuracy": 0.5051546391752577,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "baselineHits": 65,
+          "candidateHits": 65,
+          "delta": 0,
+          "baselineAccuracy": 0.6310679611650486,
+          "candidateAccuracy": 0.6310679611650486,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 103,
+          "baselineHits": 67,
+          "candidateHits": 67,
+          "delta": 0,
+          "baselineAccuracy": 0.6504854368932039,
+          "candidateAccuracy": 0.6504854368932039,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 103,
+          "baselineHits": 41,
+          "candidateHits": 41,
+          "delta": 0,
+          "baselineAccuracy": 0.39805825242718446,
+          "candidateAccuracy": 0.39805825242718446,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 102,
+          "baselineHits": 61,
+          "candidateHits": 61,
+          "delta": 0,
+          "baselineAccuracy": 0.5980392156862745,
+          "candidateAccuracy": 0.5980392156862745,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 102,
+          "baselineHits": 72,
+          "candidateHits": 72,
+          "delta": 0,
+          "baselineAccuracy": 0.7058823529411765,
+          "candidateAccuracy": 0.7058823529411765,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 102,
+          "baselineHits": 46,
+          "candidateHits": 46,
+          "delta": 0,
+          "baselineAccuracy": 0.45098039215686275,
+          "candidateAccuracy": 0.45098039215686275,
+          "gateCount": 0
+        }
+      }
+    },
+    "Milan Night": {
+      "development": {
+        "open": {
+          "n": 243,
+          "baselineHits": 131,
+          "candidateHits": 131,
+          "delta": 0,
+          "baselineAccuracy": 0.5390946502057613,
+          "candidateAccuracy": 0.5390946502057613,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 243,
+          "baselineHits": 138,
+          "candidateHits": 138,
+          "delta": 0,
+          "baselineAccuracy": 0.5679012345679012,
+          "candidateAccuracy": 0.5679012345679012,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 243,
+          "baselineHits": 75,
+          "candidateHits": 75,
+          "delta": 0,
+          "baselineAccuracy": 0.30864197530864196,
+          "candidateAccuracy": 0.30864197530864196,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 94,
+          "baselineHits": 61,
+          "candidateHits": 61,
+          "delta": 0,
+          "baselineAccuracy": 0.648936170212766,
+          "candidateAccuracy": 0.648936170212766,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 94,
+          "baselineHits": 67,
+          "candidateHits": 67,
+          "delta": 0,
+          "baselineAccuracy": 0.7127659574468085,
+          "candidateAccuracy": 0.7127659574468085,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 94,
+          "baselineHits": 45,
+          "candidateHits": 45,
+          "delta": 0,
+          "baselineAccuracy": 0.4787234042553192,
+          "candidateAccuracy": 0.4787234042553192,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 103,
+          "baselineHits": 72,
+          "candidateHits": 72,
+          "delta": 0,
+          "baselineAccuracy": 0.6990291262135923,
+          "candidateAccuracy": 0.6990291262135923,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 103,
+          "baselineHits": 75,
+          "candidateHits": 75,
+          "delta": 0,
+          "baselineAccuracy": 0.7281553398058253,
+          "candidateAccuracy": 0.7281553398058253,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 103,
+          "baselineHits": 54,
+          "candidateHits": 54,
+          "delta": 0,
+          "baselineAccuracy": 0.5242718446601942,
+          "candidateAccuracy": 0.5242718446601942,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 101,
+          "baselineHits": 70,
+          "candidateHits": 70,
+          "delta": 0,
+          "baselineAccuracy": 0.693069306930693,
+          "candidateAccuracy": 0.693069306930693,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 101,
+          "baselineHits": 74,
+          "candidateHits": 74,
+          "delta": 0,
+          "baselineAccuracy": 0.7326732673267327,
+          "candidateAccuracy": 0.7326732673267327,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 101,
+          "baselineHits": 53,
+          "candidateHits": 53,
+          "delta": 0,
+          "baselineAccuracy": 0.5247524752475248,
+          "candidateAccuracy": 0.5247524752475248,
+          "gateCount": 0
+        }
+      }
+    },
+    "Rajdhani Night": {
+      "development": {
+        "open": {
+          "n": 202,
+          "baselineHits": 133,
+          "candidateHits": 133,
+          "delta": 0,
+          "baselineAccuracy": 0.6584158415841584,
+          "candidateAccuracy": 0.6584158415841584,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 202,
+          "baselineHits": 126,
+          "candidateHits": 126,
+          "delta": 0,
+          "baselineAccuracy": 0.6237623762376238,
+          "candidateAccuracy": 0.6237623762376238,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 202,
+          "baselineHits": 82,
+          "candidateHits": 82,
+          "delta": 0,
+          "baselineAccuracy": 0.40594059405940597,
+          "candidateAccuracy": 0.40594059405940597,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 82,
+          "baselineHits": 46,
+          "candidateHits": 46,
+          "delta": 0,
+          "baselineAccuracy": 0.5609756097560976,
+          "candidateAccuracy": 0.5609756097560976,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 82,
+          "baselineHits": 55,
+          "candidateHits": 55,
+          "delta": 0,
+          "baselineAccuracy": 0.6707317073170732,
+          "candidateAccuracy": 0.6707317073170732,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 82,
+          "baselineHits": 33,
+          "candidateHits": 33,
+          "delta": 0,
+          "baselineAccuracy": 0.4024390243902439,
+          "candidateAccuracy": 0.4024390243902439,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 85,
+          "baselineHits": 63,
+          "candidateHits": 63,
+          "delta": 0,
+          "baselineAccuracy": 0.7411764705882353,
+          "candidateAccuracy": 0.7411764705882353,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 85,
+          "baselineHits": 56,
+          "candidateHits": 56,
+          "delta": 0,
+          "baselineAccuracy": 0.6588235294117647,
+          "candidateAccuracy": 0.6588235294117647,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 85,
+          "baselineHits": 48,
+          "candidateHits": 48,
+          "delta": 0,
+          "baselineAccuracy": 0.5647058823529412,
+          "candidateAccuracy": 0.5647058823529412,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 85,
+          "baselineHits": 59,
+          "candidateHits": 59,
+          "delta": 0,
+          "baselineAccuracy": 0.6941176470588235,
+          "candidateAccuracy": 0.6941176470588235,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 85,
+          "baselineHits": 59,
+          "candidateHits": 59,
+          "delta": 0,
+          "baselineAccuracy": 0.6941176470588235,
+          "candidateAccuracy": 0.6941176470588235,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 85,
+          "baselineHits": 43,
+          "candidateHits": 43,
+          "delta": 0,
+          "baselineAccuracy": 0.5058823529411764,
+          "candidateAccuracy": 0.5058823529411764,
+          "gateCount": 0
+        }
+      }
+    },
+    "Main Bazar": {
+      "development": {
+        "open": {
+          "n": 202,
+          "baselineHits": 127,
+          "candidateHits": 127,
+          "delta": 0,
+          "baselineAccuracy": 0.6287128712871287,
+          "candidateAccuracy": 0.6287128712871287,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 202,
+          "baselineHits": 134,
+          "candidateHits": 134,
+          "delta": 0,
+          "baselineAccuracy": 0.6633663366336634,
+          "candidateAccuracy": 0.6633663366336634,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 202,
+          "baselineHits": 83,
+          "candidateHits": 83,
+          "delta": 0,
+          "baselineAccuracy": 0.41089108910891087,
+          "candidateAccuracy": 0.41089108910891087,
+          "gateCount": 0
+        }
+      },
+      "validation": {
+        "open": {
+          "n": 82,
+          "baselineHits": 56,
+          "candidateHits": 56,
+          "delta": 0,
+          "baselineAccuracy": 0.6829268292682927,
+          "candidateAccuracy": 0.6829268292682927,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 82,
+          "baselineHits": 55,
+          "candidateHits": 55,
+          "delta": 0,
+          "baselineAccuracy": 0.6707317073170732,
+          "candidateAccuracy": 0.6707317073170732,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 82,
+          "baselineHits": 41,
+          "candidateHits": 41,
+          "delta": 0,
+          "baselineAccuracy": 0.5,
+          "candidateAccuracy": 0.5,
+          "gateCount": 0
+        }
+      },
+      "holdout": {
+        "open": {
+          "n": 85,
+          "baselineHits": 58,
+          "candidateHits": 58,
+          "delta": 0,
+          "baselineAccuracy": 0.6823529411764706,
+          "candidateAccuracy": 0.6823529411764706,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 85,
+          "baselineHits": 59,
+          "candidateHits": 59,
+          "delta": 0,
+          "baselineAccuracy": 0.6941176470588235,
+          "candidateAccuracy": 0.6941176470588235,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 85,
+          "baselineHits": 36,
+          "candidateHits": 36,
+          "delta": 0,
+          "baselineAccuracy": 0.4235294117647059,
+          "candidateAccuracy": 0.4235294117647059,
+          "gateCount": 0
+        }
+      },
+      "recentFrozen": {
+        "open": {
+          "n": 84,
+          "baselineHits": 54,
+          "candidateHits": 54,
+          "delta": 0,
+          "baselineAccuracy": 0.6428571428571429,
+          "candidateAccuracy": 0.6428571428571429,
+          "gateCount": 0
+        },
+        "close": {
+          "n": 84,
+          "baselineHits": 60,
+          "candidateHits": 60,
+          "delta": 0,
+          "baselineAccuracy": 0.7142857142857143,
+          "candidateAccuracy": 0.7142857142857143,
+          "gateCount": 0
+        },
+        "jodi": {
+          "n": 84,
+          "baselineHits": 39,
+          "candidateHits": 39,
+          "delta": 0,
+          "baselineAccuracy": 0.4642857142857143,
+          "candidateAccuracy": 0.4642857142857143,
+          "gateCount": 0
+        }
+      }
+    }
+  },
+  "promotableToSealedForwardResearch": false,
+  "decision": "REJECT: nested development found no all-market non-regressive gated pair better than the baseline; the deterministic selection therefore froze the no-gate control."
+}
