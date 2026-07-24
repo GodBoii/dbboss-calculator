@@ -1,5 +1,32 @@
 const fs = require("fs");
 
+const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
+const packageLock = JSON.parse(fs.readFileSync("package-lock.json", "utf8"));
+const manifest = JSON.parse(fs.readFileSync("public/manifest.json", "utf8"));
+const serviceWorker = fs.readFileSync("public/sw.js", "utf8");
+const appVersionSource = fs.readFileSync("src/lib/app-version.ts", "utf8");
+const expectedVersion = packageJson.version;
+const versions = {
+  "package-lock.json": packageLock.version,
+  "package-lock root package": packageLock.packages?.[""]?.version,
+  "public/manifest.json": manifest.version,
+};
+
+for (const [source, version] of Object.entries(versions)) {
+  if (version !== expectedVersion) {
+    throw new Error(
+      `Version mismatch: package.json=${expectedVersion}, ${source}=${version}.`,
+    );
+  }
+}
+
+if (!serviceWorker.includes(`const APP_VERSION = "${expectedVersion}";`)) {
+  throw new Error(`public/sw.js does not use app version ${expectedVersion}.`);
+}
+if (!appVersionSource.includes(`APP_VERSION = "${expectedVersion}"`)) {
+  throw new Error(`src/lib/app-version.ts does not use app version ${expectedVersion}.`);
+}
+
 const requiredPngs = [
   { file: "public/lakshmi-boss-192.png", width: 192, height: 192 },
   { file: "public/lakshmi-boss-512.png", width: 512, height: 512 },
@@ -32,4 +59,4 @@ for (const asset of requiredPngs) {
   }
 }
 
-console.log("PWA assets verified.");
+console.log(`PWA assets and version ${expectedVersion} verified.`);
