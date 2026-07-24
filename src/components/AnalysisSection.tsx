@@ -7,10 +7,13 @@ import {
   computeJodiAnalysis,
   buildContextFromResult,
   calculateSutta,
-  type PanelPick,
   type PredictionResult,
   type JodiAnalysis,
 } from "@/lib/predictor"
+import {
+  buildAbsentDigitsPredictionFromPanels,
+  type AbsentDigitSidePrediction,
+} from "@/lib/absent-digits"
 import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
 import {
   saveRecords,
@@ -95,17 +98,6 @@ async function fetchMarketHistory(marketName: string) {
 
 
 type LoadingState = "idle" | "fetching" | "analyzing" | "done" | "error"
-type AvoidDigitPick = {
-  digit: number
-  exposure: number
-  exposurePct: number
-}
-
-type AvoidDigitCall = {
-  digits: AvoidDigitPick[]
-  isCallable: boolean
-  confidenceLabel: string
-}
 
 type SuttaAccuracyReport = {
   drawsTested: number
@@ -257,64 +249,83 @@ export function buildSuttaAccuracyReport(
   }
 }
 
-function buildAvoidDigits(picks: PanelPick[], count = 2): AvoidDigitPick[] {
-  const exposure = Array(10).fill(0) as number[]
-
-  picks.slice(0, 30).forEach((pick, index) => {
-    const rankWeight = Math.max(1, 30 - index)
-    const scoreWeight = Math.max(1, pick.score)
-    const uniqueDigits = new Set(
-      pick.panel
-        .split("")
-        .map(Number)
-        .filter((digit) => Number.isInteger(digit)),
+function AvoidDigitColumn({
+  label,
+  prediction,
+}: {
+  label: string
+  prediction: AbsentDigitSidePrediction | null
+}) {
+  if (!prediction) {
+    return (
+      <div className="avoid-digit-column avoid-digit-column--blocked">
+        <div className="avoid-digit-column-head">
+          <span className="avoid-digit-label">{label}</span>
+          <span className="avoid-digit-meta avoid-digit-meta--blocked">
+            Insufficient history
+          </span>
+        </div>
+        <p className="avoid-digit-status">
+          At least 180 completed draws are required.
+        </p>
+      </div>
     )
-
-    uniqueDigits.forEach((digit) => {
-      if (digit >= 0 && digit <= 9) exposure[digit] += rankWeight * scoreWeight
-    })
-  })
-
-  const maxExposure = Math.max(...exposure, 1)
-
-  return exposure
-    .map((value, digit) => ({
-      digit,
-      exposure: value,
-      exposurePct: Math.round((value / maxExposure) * 100),
-    }))
-    .sort((a, b) => a.exposure - b.exposure || a.digit - b.digit)
-    .slice(0, count)
-}
-
-function buildAvoidDigitCall(picks: PanelPick[]): AvoidDigitCall {
-  return {
-    digits: buildAvoidDigits(picks, 2),
-    isCallable: false,
-    confidenceLabel: "No safe call",
   }
-}
 
-function AvoidDigitColumn({ label, call }: { label: string; call: AvoidDigitCall }) {
+  const isCallable = prediction.status === "CALL"
+  const probabilityByDigit = new Map(
+    prediction.digitProbabilities.map((item) => [item.digit, item]),
+  )
+  const percent = (value: number) => `${(value * 100).toFixed(1)}%`
+
   return (
-    <div className={`avoid-digit-column ${call.isCallable ? "avoid-digit-column--call" : "avoid-digit-column--blocked"}`}>
+    <div className={`avoid-digit-column ${isCallable ? "avoid-digit-column--call" : "avoid-digit-column--blocked"}`}>
       <div className="avoid-digit-column-head">
         <span className="avoid-digit-label">{label}</span>
-        <span className={`avoid-digit-meta ${call.isCallable ? "avoid-digit-meta--call" : "avoid-digit-meta--blocked"}`}>
-          {call.confidenceLabel}
+        <span className={`avoid-digit-meta ${isCallable ? "avoid-digit-meta--call" : "avoid-digit-meta--blocked"}`}>
+          {isCallable ? "Research gate passed" : "No safe call"}
         </span>
       </div>
       <div className="avoid-digit-row">
-        {call.digits.map((item) => (
-          <div key={`${label}-${item.digit}`} className="avoid-digit-chip">
-            <span className="avoid-digit-number">{item.digit}</span>
-            <span className="avoid-digit-pressure">{item.exposurePct}% seen</span>
+        {prediction.candidateAvoidDigits.map((digit) => (
+          <div key={`${label}-${digit}`} className="avoid-digit-chip">
+            <span className="avoid-digit-number">{digit}</span>
+            <span className="avoid-digit-pressure">
+              {percent(probabilityByDigit.get(digit)?.absenceProbability ?? 0)} marginal absent
+            </span>
           </div>
         ))}
       </div>
-      {!call.isCallable && (
+      <div className="avoid-digit-evidence">
+        <span>
+          Trailing strict: {percent(prediction.historicalReliability)} ({prediction.reliabilitySample} draws)
+        </span>
+        <span>
+          95% range: {percent(prediction.wilson95[0])}–{percent(prediction.wilson95[1])}
+        </span>
+        <span>
+          Families: {prediction.familyAgreement ? "agree" : "disagree"}
+        </span>
+      </div>
+      <div className="avoid-digit-probabilities" aria-label={`${label} digit appearance probabilities`}>
+        {prediction.digitProbabilities.map((item) => (
+          <div key={`${label}-probability-${item.digit}`} className="avoid-digit-probability">
+            <span>{item.digit}</span>
+            <strong>{percent(item.appearanceProbability)}</strong>
+          </div>
+        ))}
+      </div>
+      <p className="avoid-digit-likely">
+        Most likely present: {prediction.mostLikelyDigits.join(" · ")}
+      </p>
+      <p className="avoid-digit-models">
+        {prediction.supportingModels
+          .map((model) => `${model.name.replace(/^(appearance|absence)_/, "")} ${percent(model.weight)}`)
+          .join(" · ")}
+      </p>
+      {!isCallable && (
         <p className="avoid-digit-status">
-          Research gate blocked this avoid pair.
+          Blocked: the 95% lower bound is below the verified 80% threshold.
         </p>
       )}
     </div>
@@ -576,13 +587,15 @@ export default function AnalysisSection() {
     () => buildJodis(openCopySuttas, closeCopySuttas),
     [openCopySuttas, closeCopySuttas],
   )
-  const openAvoidCall = useMemo(
-    () => (result ? buildAvoidDigitCall(result.openPicks) : { digits: [], isCallable: false, confidenceLabel: "No safe call" }),
-    [result],
-  )
-  const closeAvoidCall = useMemo(
-    () => (result ? buildAvoidDigitCall(jodiResult?.adjustedClosePicks ?? result.closePicks) : { digits: [], isCallable: false, confidenceLabel: "No safe call" }),
-    [result, jodiResult],
+  const absentDigitsPrediction = useMemo(
+    () => result
+      ? buildAbsentDigitsPredictionFromPanels(
+          selectedMarket,
+          cachedRecords,
+          new Date(result.analysisDateISO),
+        )
+      : null,
+    [result, selectedMarket, cachedRecords],
   )
   const suttaAccuracyReport = useMemo(
     () => result
@@ -1030,12 +1043,12 @@ export default function AnalysisSection() {
             </div>
 
             <div className="avoid-digit-grid">
-              <AvoidDigitColumn label="Open" call={openAvoidCall} />
-              <AvoidDigitColumn label={jodiResult ? "Close (Jodi adjusted)" : "Close"} call={closeAvoidCall} />
+              <AvoidDigitColumn label="Open" prediction={absentDigitsPrediction?.open ?? null} />
+              <AvoidDigitColumn label="Close (pre-Open)" prediction={absentDigitsPrediction?.close ?? null} />
             </div>
 
             <p className="avoid-digit-note">
-              The pair is actionable only when both digits clear the strict research gate. Current research blocks calls below the verified threshold.
+              Marginal digit probabilities come from the adaptive appearance family. The strict pair gate uses out-of-sample reliability; a raw marginal is never treated as call confidence.
             </p>
           </div>
           </div>

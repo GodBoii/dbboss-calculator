@@ -1168,6 +1168,61 @@
   line-height: 1.35;
 }
 
+.avoid-digit-evidence {
+  display: grid;
+  gap: 3px;
+  margin-top: 10px;
+  color: rgba(255,255,255,0.5);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.avoid-digit-probabilities {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.avoid-digit-probability {
+  min-width: 0;
+  padding: 5px 2px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.045);
+  text-align: center;
+}
+
+.avoid-digit-probability span,
+.avoid-digit-probability strong {
+  display: block;
+}
+
+.avoid-digit-probability span {
+  color: rgba(255,255,255,0.82);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.avoid-digit-probability strong {
+  margin-top: 1px;
+  color: rgba(255,255,255,0.42);
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.avoid-digit-likely,
+.avoid-digit-models {
+  margin: 8px 0 0;
+  color: rgba(255,255,255,0.52);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.avoid-digit-models {
+  color: rgba(255,255,255,0.34);
+}
+
 .avoid-digit-note {
   margin: 12px 0 0;
   color: rgba(255,255,255,0.42);
