@@ -277,9 +277,6 @@ function AvoidDigitColumn({
   }
 
   const isCallable = prediction.status === "CALL"
-  const probabilityByDigit = new Map(
-    prediction.digitProbabilities.map((item) => [item.digit, item]),
-  )
   const percent = (value: number) => `${(value * 100).toFixed(1)}%`
 
   return (
@@ -294,55 +291,14 @@ function AvoidDigitColumn({
         {prediction.candidateAvoidDigits.map((digit) => (
           <div key={`${label}-${digit}`} className="avoid-digit-chip">
             <span className="avoid-digit-number">{digit}</span>
-            <span className="avoid-digit-pressure">
-              {percent(probabilityByDigit.get(digit)?.absenceProbability ?? 0)} marginal absent
-            </span>
           </div>
         ))}
       </div>
-      <div className="avoid-digit-evidence">
-        <span>
-          Calibrated confidence: {percent(prediction.confidence)} ({prediction.confidenceSample} draws)
-        </span>
-        <span>
-          Trailing strict: {percent(prediction.historicalReliability)} ({prediction.reliabilitySample} draws)
-        </span>
-        <span>
-          95% range: {percent(prediction.wilson95[0])}–{percent(prediction.wilson95[1])}
-        </span>
-        <span>
-          Families: {prediction.familyAgreement ? "agree" : "disagree"}
-        </span>
-        <span>
-          Route: {prediction.routeModelApplied
-            ? prediction.routeModel.replace(/_/g, " ")
-            : "V2 fallback"}
-          {prediction.routeModel !== "baseline_v2"
-            ? ` (${prediction.routeGuard.netHits >= 0 ? "+" : ""}${prediction.routeGuard.netHits} / ${prediction.routeGuard.historySample})`
-            : ""}
-        </span>
-      </div>
-      <div className="avoid-digit-probabilities" aria-label={`${label} digit appearance probabilities`}>
-        {prediction.digitProbabilities.map((item) => (
-          <div key={`${label}-probability-${item.digit}`} className="avoid-digit-probability">
-            <span>{item.digit}</span>
-            <strong>{percent(item.appearanceProbability)}</strong>
-          </div>
-        ))}
-      </div>
-      <p className="avoid-digit-likely">
-        Most likely present: {prediction.mostLikelyDigits.join(" · ")}
+      <p className="digit-panel-summary">
+        Recent accuracy {percent(prediction.historicalReliability)}
+        <span aria-hidden="true"> · </span>
+        {prediction.reliabilitySample} draws
       </p>
-      <p className="avoid-digit-models">
-        {prediction.supportingModels
-          .map((model) => `${model.family === "appearance" ? "A" : "B"}:${model.name.replace(/^(appearance|absence)_/, "")} ${percent(model.weight)}`)
-          .join(" · ")}
-      </p>
-      {!isCallable && (
-        <p className="avoid-digit-status">
-          Blocked: the 95% lower bound is below the verified 80% threshold.
-        </p>
-      )}
     </div>
   )
 }
@@ -368,9 +324,6 @@ function PresentDigitColumn({
 
   const targetReached = prediction.status === "TARGET_REACHED"
   const percent = (value: number) => `${(value * 100).toFixed(1)}%`
-  const probabilityByDigit = new Map(
-    prediction.digitProbabilities.map((item) => [item.digit, item]),
-  )
 
   return (
     <div className={`avoid-digit-column ${targetReached ? "avoid-digit-column--call" : "avoid-digit-column--blocked"}`}>
@@ -384,29 +337,20 @@ function PresentDigitColumn({
         {prediction.predictedDigits.map((digit) => (
           <div key={`${label}-present-${digit}`} className="avoid-digit-chip present-digit-chip">
             <span className="avoid-digit-number">{digit}</span>
-            <span className="avoid-digit-pressure">
-              {percent(probabilityByDigit.get(digit)?.appearanceProbability ?? 0)} marginal present
-            </span>
           </div>
         ))}
       </div>
-      <div className="avoid-digit-evidence">
-        <span>Estimated joint rate: {percent(prediction.jointProbability)}</span>
-        <span>Trailing strict: {percent(prediction.historicalReliability)} ({prediction.reliabilitySample} draws)</span>
-        <span>95% range: {percent(prediction.wilson95[0])}–{percent(prediction.wilson95[1])}</span>
-        <span>Selected: 180-draw joint co-appearance</span>
-      </div>
-      <p className="avoid-digit-models">Tested signals: avoid · panel · sutta · jodi · SP/DP</p>
-      {!targetReached && (
-        <p className="avoid-digit-status">
-          Below the 70% safety target. Digits are shown for research comparison, not as a validated call.
-        </p>
-      )}
+      <p className="digit-panel-summary">
+        Recent accuracy {percent(prediction.historicalReliability)}
+        <span aria-hidden="true"> · </span>
+        {prediction.reliabilitySample} draws
+      </p>
     </div>
   )
 }
 // ─── Component ────────────────────────────────────────────────────────────────
 type Session = "day" | "night"
+type DigitPanelMode = "present" | "absent"
 
 export default function AnalysisSection() {
   // Auto-detect session: night if hour >= 18 (6pm IST)
@@ -426,6 +370,7 @@ export default function AnalysisSection() {
   const [activeTab, setActiveTab] = useState<"picks" | "stats" | "intel">("picks")
   const [picksSubTab, setPicksSubTab] = useState<"open" | "close" | "jodi">("open")
   const [suttaSignalView, setSuttaSignalView] = useState<"open" | "close">("open")
+  const [digitPanelMode, setDigitPanelMode] = useState<DigitPanelMode>("present")
   const [suttaCopyExpanded, setSuttaCopyExpanded] = useState(false)
   const [copyCount, setCopyCount] = useState(6)
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
@@ -1111,44 +1056,49 @@ export default function AnalysisSection() {
             )}
           </div>
 
-          <div className="glass-panel avoid-digit-panel present-digit-panel">
-            <div className="section-header">
-              <span className="section-icon">🔎</span>
-              <div>
-                <h3 className="section-title">2-Digit Present Research Model</h3>
-                <p className="section-subtitle">Strict: both digits must appear in the same panel</p>
+          <div className={`glass-panel avoid-digit-panel digit-panel ${digitPanelMode === "present" ? "present-digit-panel" : ""}`}>
+            <div className="digit-panel-toolbar">
+              <div className="section-header digit-panel-heading">
+                <span className="section-icon" aria-hidden="true">
+                  {digitPanelMode === "present" ? "✓" : "−"}
+                </span>
+                <div>
+                  <h3 className="section-title">2-Digit Panel</h3>
+                  <p className="section-subtitle">
+                    {digitPanelMode === "present"
+                      ? "Both digits may appear"
+                      : "Both digits may stay absent"}
+                  </p>
+                </div>
               </div>
+
+              <select
+                className="digit-panel-select"
+                aria-label="Choose two-digit prediction"
+                value={digitPanelMode}
+                onChange={(event) => {
+                  haptic()
+                  setDigitPanelMode(event.target.value as DigitPanelMode)
+                }}
+              >
+                <option value="present">2 digits that will come</option>
+                <option value="absent">2 digits that will not come</option>
+              </select>
             </div>
 
             <div className="avoid-digit-grid">
-              <PresentDigitColumn label="Open" prediction={presentDigitsPrediction?.open ?? null} />
-              <PresentDigitColumn label="Close (pre-Open)" prediction={presentDigitsPrediction?.close ?? null} />
+              {digitPanelMode === "present" ? (
+                <>
+                  <PresentDigitColumn label="Open" prediction={presentDigitsPrediction?.open ?? null} />
+                  <PresentDigitColumn label="Close" prediction={presentDigitsPrediction?.close ?? null} />
+                </>
+              ) : (
+                <>
+                  <AvoidDigitColumn label="Open" prediction={absentDigitsPrediction?.open ?? null} />
+                  <AvoidDigitColumn label="Close" prediction={absentDigitsPrediction?.close ?? null} />
+                </>
+              )}
             </div>
-
-            <p className="avoid-digit-note">
-              Walk-forward testing rejected borrowed avoid, panel-recency, sutta, jodi and SP/DP signals because they did not improve the 180-day strict result. The strongest model remains visible for continued measurement but cannot pass the 70% safety target.
-            </p>
-          </div>
-          {/* ── Jodi Dependency Model Input ────────────────────────────────── */}
-          <div className="glass-panel avoid-digit-panel">
-            <div className="section-header">
-              <span className="section-icon">🚫</span>
-              <div>
-                <h3 className="section-title">2-Digit Avoid Safety Gate</h3>
-                <p className="section-subtitle">
-                  Strict all-clear check for {selectedMarket}
-                </p>
-              </div>
-            </div>
-
-            <div className="avoid-digit-grid">
-              <AvoidDigitColumn label="Open" prediction={absentDigitsPrediction?.open ?? null} />
-              <AvoidDigitColumn label="Close (pre-Open)" prediction={absentDigitsPrediction?.close ?? null} />
-            </div>
-
-            <p className="avoid-digit-note">
-              V3 applies a market-side feature only while its causal 80-result guard stays positive; otherwise it falls back to V2. Point confidence is a strongly shrunk 240-draw reliability estimate, and actionability still requires the 120-draw Wilson safety gate.
-            </p>
           </div>
           </div>
 
