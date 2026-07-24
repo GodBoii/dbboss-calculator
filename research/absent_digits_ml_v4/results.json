@@ -1,0 +1,3175 @@
+{
+  "candidateConfigurations": 48,
+  "enabledMarketSides": [
+    "Kalyan Night|close",
+    "Kalyan Night|open",
+    "Madhur Day|close",
+    "Madhur Night|close",
+    "Main Bazar|open",
+    "Milan Day|open",
+    "Milan Night|close",
+    "Milan Night|open",
+    "Rajdhani Day|open",
+    "Rajdhani Night|close",
+    "Rajdhani Night|open",
+    "Sridevi Night|open"
+  ],
+  "events": {
+    "confirmation": 7490,
+    "development": 34980,
+    "innerSelection": 2136,
+    "innerTrain": 32844
+  },
+  "featureCount": 47,
+  "featureImportance": {
+    "marketSideTopFeatures": {
+      "Kalyan Night|close": [
+        {
+          "feature": "rate_730",
+          "importance": 0.12035876738736
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.1140779028151463
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.028682781701689614
+        },
+        {
+          "feature": "rate_7",
+          "importance": 0.02764502887538075
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.023794407195799425
+        },
+        {
+          "feature": "present_lag_1",
+          "importance": 0.023058049274971893
+        },
+        {
+          "feature": "previous_present",
+          "importance": 0.023058049274969968
+        },
+        {
+          "feature": "appearance_gap",
+          "importance": 0.021754226225115695
+        },
+        {
+          "feature": "rate_2",
+          "importance": 0.016891586583855697
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.015396902874715861
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.014868072431973458
+        },
+        {
+          "feature": "rate_5",
+          "importance": 0.013723788424018689
+        },
+        {
+          "feature": "momentum_5_30",
+          "importance": 0.013401705811990168
+        },
+        {
+          "feature": "present_lag_3",
+          "importance": 0.012908917871756753
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.012557342309636272
+        }
+      ],
+      "Kalyan Night|open": [
+        {
+          "feature": "rate_730",
+          "importance": 0.11040085219131941
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.10170448013919216
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.0757612486258385
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.07438530310989042
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.063972443648324
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.03864401802619163
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.03635641701767821
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.03540938400419583
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.026144130928497156
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.021546469619047808
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.020392865862906614
+        },
+        {
+          "feature": "rate_2",
+          "importance": 0.01942960488001685
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.017504569035371488
+        },
+        {
+          "feature": "digit_3",
+          "importance": 0.016980828608681976
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.01652742130357452
+        }
+      ],
+      "Kalyan|close": [
+        {
+          "feature": "long_rate",
+          "importance": 0.11753620218196975
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.0815678884390016
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.06862337598962191
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.04917101338883621
+        },
+        {
+          "feature": "rate_7",
+          "importance": 0.0434720571586156
+        },
+        {
+          "feature": "rate_5",
+          "importance": 0.037643943270193256
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.03752970541781089
+        },
+        {
+          "feature": "weekday_rate",
+          "importance": 0.03721465822102097
+        },
+        {
+          "feature": "rate_30",
+          "importance": 0.029304192083968554
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.028974810772157147
+        },
+        {
+          "feature": "momentum_30_180",
+          "importance": 0.02444131249349477
+        },
+        {
+          "feature": "present_lag_30",
+          "importance": 0.023877286474297484
+        },
+        {
+          "feature": "rate_10",
+          "importance": 0.023488672808975604
+        },
+        {
+          "feature": "rate_2",
+          "importance": 0.02087834680284298
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.01941918176391528
+        }
+      ],
+      "Kalyan|open": [
+        {
+          "feature": "long_rate",
+          "importance": 0.19520880863096848
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.10653658038221611
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.09051650977221797
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.0671326118610013
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.06569741181929149
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.0541752028455171
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.04551317907782861
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.04516222157040835
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.04223688721720949
+        },
+        {
+          "feature": "rate_2",
+          "importance": 0.04142458123656775
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.023916247873406352
+        },
+        {
+          "feature": "present_lag_3",
+          "importance": 0.023790415676257684
+        },
+        {
+          "feature": "rate_365",
+          "importance": 0.02348586255244221
+        },
+        {
+          "feature": "rate_3",
+          "importance": 0.022291163208723142
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.020586280301898015
+        }
+      ],
+      "Madhur Day|close": [
+        {
+          "feature": "digit_0",
+          "importance": 0.050208111539698445
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.04102001287995355
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.03466548674986519
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.03290493031988075
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.03010135557441902
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.030002953801875523
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.02495812048723677
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.024400423879009498
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.017937174952374773
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.01734439574523946
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.016767975435990234
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.01575109875487487
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.012690389151548492
+        },
+        {
+          "feature": "digit_3",
+          "importance": 0.0121866392514172
+        },
+        {
+          "feature": "rate_5",
+          "importance": 0.011228891866182497
+        }
+      ],
+      "Madhur Day|open": [
+        {
+          "feature": "position_2_long",
+          "importance": 0.064187082485807
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.04452657805186438
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.031620741146953894
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.028893672591311988
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.02221986847731741
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.020439603287602633
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.01978507884017174
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.01860605248650292
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.01799559366975599
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.017303561497806628
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.017225551531670488
+        },
+        {
+          "feature": "rate_7",
+          "importance": 0.015193162417371411
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.01496889735102187
+        },
+        {
+          "feature": "appearance_gap",
+          "importance": 0.012733110266007982
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.011434096179392445
+        }
+      ],
+      "Madhur Night|close": [
+        {
+          "feature": "position_2_long",
+          "importance": 0.06065890328877141
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.04233410435854779
+        },
+        {
+          "feature": "digit_3",
+          "importance": 0.027182077926432815
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.025712257918628727
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.02559252984716727
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.020647065453715262
+        },
+        {
+          "feature": "appearance_gap",
+          "importance": 0.019521322052653105
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.01755219331368922
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.013366339585119076
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.012870979494110394
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.012673816051170924
+        },
+        {
+          "feature": "appearance_streak",
+          "importance": 0.012202277386700662
+        },
+        {
+          "feature": "digit_5",
+          "importance": 0.010025361285280221
+        },
+        {
+          "feature": "present_lag_1",
+          "importance": 0.009680112564435827
+        },
+        {
+          "feature": "previous_present",
+          "importance": 0.009680112564435812
+        }
+      ],
+      "Madhur Night|open": [
+        {
+          "feature": "position_2_long",
+          "importance": 0.041366732940874125
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.03555738537734557
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.034981162160759194
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.03230674425963525
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.027419781628853467
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.02449899206151453
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.022997401245113056
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.019873665953829712
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.018802085330456797
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.01847099107297669
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.017793081942903258
+        },
+        {
+          "feature": "digit_5",
+          "importance": 0.014771804265934463
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.014248197202528257
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.013020366300998737
+        },
+        {
+          "feature": "appearance_gap",
+          "importance": 0.012649438326187265
+        }
+      ],
+      "Main Bazar|close": [
+        {
+          "feature": "digit_1",
+          "importance": 0.08143978152648963
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.06888251714863784
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.060999128445589454
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.05419565507358625
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.050091110879737985
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.04661330599150784
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.04181508414003981
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.04177426861989667
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.03511532892931678
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.02668560951556104
+        },
+        {
+          "feature": "rate_365",
+          "importance": 0.024890527051793978
+        },
+        {
+          "feature": "appearance_gap",
+          "importance": 0.02407495025622384
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.023168196830235105
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.02092671706415563
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.019264962209872265
+        }
+      ],
+      "Main Bazar|open": [
+        {
+          "feature": "long_rate",
+          "importance": 0.07643920907745144
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.054453464351719584
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.04853998110484162
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.04158676492804594
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.030925364982059358
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.029753756866513967
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.02972297706439352
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.02268181888991953
+        },
+        {
+          "feature": "rate_7",
+          "importance": 0.021010507044568593
+        },
+        {
+          "feature": "rate_10",
+          "importance": 0.01565417381096767
+        },
+        {
+          "feature": "equals_previous_sutta",
+          "importance": 0.015049056529383868
+        },
+        {
+          "feature": "rate_180",
+          "importance": 0.013556349849772617
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.012767059943244261
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.012025082465198669
+        },
+        {
+          "feature": "present_lag_5",
+          "importance": 0.011893850567311955
+        }
+      ],
+      "Milan Day|close": [
+        {
+          "feature": "position_1_long",
+          "importance": 0.12193358576195362
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.12049278102959167
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.10023509351258751
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.08936702397570899
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.08575650536879631
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.05989840306566851
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.05884521395770428
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.05692755427072587
+        },
+        {
+          "feature": "digit_5",
+          "importance": 0.055935449343840586
+        },
+        {
+          "feature": "digit_3",
+          "importance": 0.03283464154210906
+        },
+        {
+          "feature": "rate_365",
+          "importance": 0.026494273005982834
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.02644759652812941
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.022165774917503926
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.020972405803358886
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.020835844288366503
+        }
+      ],
+      "Milan Day|open": [
+        {
+          "feature": "long_rate",
+          "importance": 0.15969503139166874
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.11359662357408015
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.08736348334619405
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.06219593580691788
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.06198625018909508
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.05317453279720751
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.052450468253146615
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.04967835568468976
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.04939431896047199
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.04089984999353404
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.04088765180909828
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.03920082827784894
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.038473385189752685
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.03614161426955423
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.03189233282521088
+        }
+      ],
+      "Milan Night|close": [
+        {
+          "feature": "position_1_long",
+          "importance": 0.09142800909721696
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.08419112096276028
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.05093919018318408
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.03664261037031191
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.03411526573305422
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.03253321098428203
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.02826487940935606
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.027741161447159646
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.02386976963117842
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.0236706200050551
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.023657974408469326
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.02345997602661706
+        },
+        {
+          "feature": "rate_60",
+          "importance": 0.020872228503505005
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.018863850834842738
+        },
+        {
+          "feature": "momentum_15_90",
+          "importance": 0.014577443373368859
+        }
+      ],
+      "Milan Night|open": [
+        {
+          "feature": "long_rate",
+          "importance": 0.09316452237979313
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.0781301620897215
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.0745898057045639
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.06104461480425214
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.040288569416182494
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.03683975023467931
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.03507319512723837
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.028903522344427272
+        },
+        {
+          "feature": "digit_3",
+          "importance": 0.027294576843869333
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.02497125380462672
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.024921061633131007
+        },
+        {
+          "feature": "digit_5",
+          "importance": 0.023341112260402686
+        },
+        {
+          "feature": "rate_5",
+          "importance": 0.02322729304164775
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.021763332522522844
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.02045795362153517
+        }
+      ],
+      "Rajdhani Day|close": [
+        {
+          "feature": "position_2_long",
+          "importance": 0.1391096530444232
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.08970433069212905
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.07020650417329173
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.06231350245588412
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.05718818010154042
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.04658035579996737
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.04105546581878371
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.03802613026548693
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.025168649093826347
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.02297953688368975
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.021980848739610006
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.021773880640498778
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.021324310073951937
+        },
+        {
+          "feature": "rate_2",
+          "importance": 0.020453323134906123
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.018217274849217396
+        }
+      ],
+      "Rajdhani Day|open": [
+        {
+          "feature": "position_2_90",
+          "importance": 0.04969310350731346
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.04213325202950256
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.03018000355636197
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.019505651638065235
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.016983105571309214
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.015840211266045092
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.014252044680779515
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.011920812277572043
+        },
+        {
+          "feature": "rate_60",
+          "importance": 0.008770419881620917
+        },
+        {
+          "feature": "digit_3",
+          "importance": 0.008759570978303176
+        },
+        {
+          "feature": "appearance_streak",
+          "importance": 0.008399604717564289
+        },
+        {
+          "feature": "momentum_15_90",
+          "importance": 0.007314386246203688
+        },
+        {
+          "feature": "weekday_rate",
+          "importance": 0.006774247987635396
+        },
+        {
+          "feature": "previous_panel_unique",
+          "importance": 0.006715569828942711
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.00640972154955615
+        }
+      ],
+      "Rajdhani Night|close": [
+        {
+          "feature": "long_rate",
+          "importance": 0.12283264405048565
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.09486726520985418
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.08153884401082746
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.07705248828369783
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.048940324281543636
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.04360935520689674
+        },
+        {
+          "feature": "appearance_gap",
+          "importance": 0.042975322667361864
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.041296736797432176
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.04119208528225417
+        },
+        {
+          "feature": "rate_365",
+          "importance": 0.041120819677735926
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.0374499248392309
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.03673088777748689
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.029957170869785815
+        },
+        {
+          "feature": "rate_7",
+          "importance": 0.027850294243454435
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.027021417080550142
+        }
+      ],
+      "Rajdhani Night|open": [
+        {
+          "feature": "long_rate",
+          "importance": 0.1407167779349054
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.1146447643198372
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.11307751673474496
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.07124581643695119
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.06886024422289515
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.04980825244005952
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.04200801028465262
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.03943274860121106
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.03705863050787728
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.02996724493508648
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.02785182449711941
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.023781434042529307
+        },
+        {
+          "feature": "digit_3",
+          "importance": 0.02306142972506417
+        },
+        {
+          "feature": "rate_2",
+          "importance": 0.022624964245151997
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.018691202273351613
+        }
+      ],
+      "Sridevi Night|close": [
+        {
+          "feature": "long_rate",
+          "importance": 0.08269349369389065
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.057713505613575654
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.044568026665769145
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.035020663534678045
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.03356057666381979
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.0321628210283398
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.03191621184260443
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.030757547662688095
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.02765363029695492
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.024297219640597445
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.020898562681050965
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.017286207685558826
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.01655310676259717
+        },
+        {
+          "feature": "digit_5",
+          "importance": 0.01627689644809399
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.01586564002847959
+        }
+      ],
+      "Sridevi Night|open": [
+        {
+          "feature": "long_rate",
+          "importance": 0.053156746231927635
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.04433815030077825
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.043925317009658106
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.042947191957236903
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.04278878695439561
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.02903353118900155
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.019147446071421232
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.0139728203534663
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.013550634707982083
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.011183859276536397
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.011093860675460648
+        },
+        {
+          "feature": "rate_7",
+          "importance": 0.010660117327265288
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.010419839217563658
+        },
+        {
+          "feature": "digit_5",
+          "importance": 0.009954184636825134
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.009573746067211886
+        }
+      ],
+      "Sridevi|close": [
+        {
+          "feature": "position_1_long",
+          "importance": 0.13941742984060887
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.09118420486229224
+        },
+        {
+          "feature": "digit_0",
+          "importance": 0.07566877219156971
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.061369761136637
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.043914880925937115
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.04086320727072878
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.04067055454964448
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.03710275986667322
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.031225617631092283
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.03026083392345272
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.02966825694704889
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.028251262797872302
+        },
+        {
+          "feature": "position_0_90",
+          "importance": 0.027709098540999347
+        },
+        {
+          "feature": "digit_5",
+          "importance": 0.02473870094937776
+        },
+        {
+          "feature": "rate_10",
+          "importance": 0.019241028601352492
+        }
+      ],
+      "Sridevi|open": [
+        {
+          "feature": "position_2_long",
+          "importance": 0.16558435536566335
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.08482859116384471
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.07394310674030645
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.05308177563156095
+        },
+        {
+          "feature": "digit_9",
+          "importance": 0.05198252435569337
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.048352361977915016
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.04604134638190973
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.03847445363692029
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.03342266815184057
+        },
+        {
+          "feature": "digit_7",
+          "importance": 0.030055194036286575
+        },
+        {
+          "feature": "digit_3",
+          "importance": 0.026786177484803275
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.02352926893487324
+        },
+        {
+          "feature": "position_2_90",
+          "importance": 0.02296430918566775
+        },
+        {
+          "feature": "digit_6",
+          "importance": 0.021660638720930592
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.02046492443013063
+        }
+      ],
+      "Time Bazar|close": [
+        {
+          "feature": "rate_730",
+          "importance": 0.16563418765111446
+        },
+        {
+          "feature": "long_rate",
+          "importance": 0.1508837808344576
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.08107377054192684
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.06189123843711194
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.026089635933090292
+        },
+        {
+          "feature": "rate_2",
+          "importance": 0.023006555126840834
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.022329454010459757
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.02193564109730523
+        },
+        {
+          "feature": "rate_90",
+          "importance": 0.017828022166223735
+        },
+        {
+          "feature": "digit_8",
+          "importance": 0.017591014720428805
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.015982680970100503
+        },
+        {
+          "feature": "previous_present",
+          "importance": 0.014716199607968354
+        },
+        {
+          "feature": "present_lag_1",
+          "importance": 0.014716199607966409
+        },
+        {
+          "feature": "rate_7",
+          "importance": 0.014656991870127449
+        },
+        {
+          "feature": "rate_3",
+          "importance": 0.013770641702843537
+        }
+      ],
+      "Time Bazar|open": [
+        {
+          "feature": "long_rate",
+          "importance": 0.16797296898818587
+        },
+        {
+          "feature": "rate_730",
+          "importance": 0.13702570762188135
+        },
+        {
+          "feature": "position_1_long",
+          "importance": 0.04398397322513888
+        },
+        {
+          "feature": "present_lag_2",
+          "importance": 0.027959314824487727
+        },
+        {
+          "feature": "position_2_long",
+          "importance": 0.025759349473455494
+        },
+        {
+          "feature": "position_1_90",
+          "importance": 0.022254914549031165
+        },
+        {
+          "feature": "rate_2",
+          "importance": 0.021452879941865323
+        },
+        {
+          "feature": "v2_probability",
+          "importance": 0.02054863893730977
+        },
+        {
+          "feature": "digit_1",
+          "importance": 0.01919217279593889
+        },
+        {
+          "feature": "rate_7",
+          "importance": 0.017355764570715186
+        },
+        {
+          "feature": "weekday_rate",
+          "importance": 0.014700497436862208
+        },
+        {
+          "feature": "digit_2",
+          "importance": 0.014549635923923025
+        },
+        {
+          "feature": "digit_5",
+          "importance": 0.014469362904387084
+        },
+        {
+          "feature": "position_0_long",
+          "importance": 0.01351426661663144
+        },
+        {
+          "feature": "digit_4",
+          "importance": 0.013508484155792103
+        }
+      ]
+    },
+    "pooledTopFeatures": [
+      {
+        "feature": "long_rate",
+        "importance": 0.02375034302252487
+      },
+      {
+        "feature": "rate_730",
+        "importance": 0.020795778494455176
+      },
+      {
+        "feature": "position_2_long",
+        "importance": 0.016722380177681438
+      },
+      {
+        "feature": "position_2_90",
+        "importance": 0.013859132767937658
+      },
+      {
+        "feature": "digit_0",
+        "importance": 0.009303302998183199
+      },
+      {
+        "feature": "v2_probability",
+        "importance": 0.008475897223624173
+      },
+      {
+        "feature": "position_0_90",
+        "importance": 0.008448678595322452
+      },
+      {
+        "feature": "position_1_90",
+        "importance": 0.005969652449828711
+      },
+      {
+        "feature": "rate_2",
+        "importance": 0.005527984925007207
+      },
+      {
+        "feature": "digit_9",
+        "importance": 0.005254097174395802
+      },
+      {
+        "feature": "weekday_rate",
+        "importance": 0.0046563716976812134
+      },
+      {
+        "feature": "digit_4",
+        "importance": 0.004517232298934568
+      },
+      {
+        "feature": "rate_60",
+        "importance": 0.004506797660243381
+      },
+      {
+        "feature": "digit_1",
+        "importance": 0.004479733454378992
+      },
+      {
+        "feature": "rate_90",
+        "importance": 0.004379874480306441
+      },
+      {
+        "feature": "digit_6",
+        "importance": 0.00414817183159634
+      },
+      {
+        "feature": "digit_8",
+        "importance": 0.003863515102512229
+      },
+      {
+        "feature": "rate_3",
+        "importance": 0.0038620100688490583
+      },
+      {
+        "feature": "present_lag_2",
+        "importance": 0.0032602957853020463
+      },
+      {
+        "feature": "appearance_streak",
+        "importance": 0.002923932563513989
+      },
+      {
+        "feature": "equals_previous_sutta",
+        "importance": 0.002894238430912277
+      },
+      {
+        "feature": "rate_180",
+        "importance": 0.0026940282062231486
+      },
+      {
+        "feature": "rate_7",
+        "importance": 0.002691887512508211
+      },
+      {
+        "feature": "digit_2",
+        "importance": 0.0026804382066455685
+      },
+      {
+        "feature": "momentum_15_90",
+        "importance": 0.002042783100827959
+      }
+    ]
+  },
+  "featureNames": [
+    "v2_probability",
+    "long_rate",
+    "rate_2",
+    "rate_3",
+    "rate_5",
+    "rate_7",
+    "rate_10",
+    "rate_15",
+    "rate_30",
+    "rate_60",
+    "rate_90",
+    "rate_180",
+    "rate_365",
+    "rate_730",
+    "momentum_5_30",
+    "momentum_15_90",
+    "momentum_30_180",
+    "present_lag_1",
+    "present_lag_2",
+    "present_lag_3",
+    "present_lag_5",
+    "present_lag_7",
+    "present_lag_10",
+    "present_lag_15",
+    "present_lag_30",
+    "present_lag_60",
+    "present_lag_90",
+    "opposite_present_lag_1",
+    "opposite_present_lag_2",
+    "opposite_present_lag_3",
+    "opposite_present_lag_5",
+    "opposite_present_lag_7",
+    "appearance_gap",
+    "appearance_streak",
+    "weekday_rate",
+    "month_rate",
+    "previous_present",
+    "previous_opposite_present",
+    "equals_previous_sutta",
+    "previous_sutta_distance",
+    "previous_panel_unique",
+    "position_0_long",
+    "position_1_long",
+    "position_2_long",
+    "position_0_90",
+    "position_1_90",
+    "position_2_90"
+  ],
+  "generatedAt": "2026-07-24T17:23:26.632145+00:00",
+  "hashes": {
+    "protocolSha256": "6f37ec2587d074f548b0096b78e64c94067ab865ac03a58f2eb0253f6b7f89b6"
+  },
+  "marketGatedCandidate": {
+    "blocks": {
+      "holdout": {
+        "accuracy": 0.5068937550689375,
+        "baselineAccuracy": 0.505271695052717,
+        "baselineDigitBrier": 0.19992752885660667,
+        "baselineHits": 1246,
+        "baselineOnly": 102,
+        "candidateOnly": 106,
+        "digitBrier": 0.1997358678188138,
+        "hits": 1250,
+        "liftPoints": 0.16220600162205612,
+        "n": 2466,
+        "pairedPValue": 0.8352818537973729
+      },
+      "independent_extension": {
+        "accuracy": 0.5681818181818182,
+        "baselineAccuracy": 0.6022727272727273,
+        "baselineDigitBrier": 0.19397576479695255,
+        "baselineHits": 53,
+        "baselineOnly": 8,
+        "candidateOnly": 5,
+        "digitBrier": 0.193856580454071,
+        "hits": 50,
+        "liftPoints": -3.409090909090906,
+        "n": 88,
+        "pairedPValue": 0.5810546875
+      },
+      "post_cache": {
+        "accuracy": 0.4618055555555556,
+        "baselineAccuracy": 0.4583333333333333,
+        "baselineDigitBrier": 0.20169553897701667,
+        "baselineHits": 132,
+        "baselineOnly": 11,
+        "candidateOnly": 12,
+        "digitBrier": 0.20162009920987745,
+        "hits": 133,
+        "liftPoints": 0.34722222222222654,
+        "n": 288,
+        "pairedPValue": 1.0
+      },
+      "recent": {
+        "accuracy": 0.5282608695652173,
+        "baselineAccuracy": 0.518695652173913,
+        "baselineDigitBrier": 0.19904195027013444,
+        "baselineHits": 1193,
+        "baselineOnly": 105,
+        "candidateOnly": 127,
+        "digitBrier": 0.19886401516611735,
+        "hits": 1215,
+        "liftPoints": 0.9565217391304337,
+        "n": 2300,
+        "pairedPValue": 0.16784467595124825
+      },
+      "validation": {
+        "accuracy": 0.5276831345826235,
+        "baselineAccuracy": 0.5212947189097104,
+        "baselineDigitBrier": 0.19995504388947735,
+        "baselineHits": 1224,
+        "baselineOnly": 94,
+        "candidateOnly": 109,
+        "digitBrier": 0.19979380534254051,
+        "hits": 1239,
+        "liftPoints": 0.638841567291315,
+        "n": 2348,
+        "pairedPValue": 0.3258088562761061
+      }
+    },
+    "marketSides": {
+      "Kalyan Night|close": {
+        "accuracy": 0.515625,
+        "baselineAccuracy": 0.4921875,
+        "baselineDigitBrier": 0.20155787769169287,
+        "baselineHits": 126,
+        "baselineOnly": 21,
+        "candidateOnly": 27,
+        "digitBrier": 0.20122020340829927,
+        "hits": 132,
+        "liftPoints": 2.34375,
+        "n": 256,
+        "pairedPValue": 0.4708790136217118
+      },
+      "Kalyan Night|open": {
+        "accuracy": 0.5625,
+        "baselineAccuracy": 0.515625,
+        "baselineDigitBrier": 0.1989061453053899,
+        "baselineHits": 132,
+        "baselineOnly": 18,
+        "candidateOnly": 30,
+        "digitBrier": 0.19862446754624768,
+        "hits": 144,
+        "liftPoints": 4.6875,
+        "n": 256,
+        "pairedPValue": 0.11140289106101875
+      },
+      "Kalyan|close": {
+        "accuracy": 0.4775641025641026,
+        "baselineAccuracy": 0.4775641025641026,
+        "baselineDigitBrier": 0.2015635899417664,
+        "baselineHits": 149,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.2015635899417664,
+        "hits": 149,
+        "liftPoints": 0.0,
+        "n": 312,
+        "pairedPValue": 1.0
+      },
+      "Kalyan|open": {
+        "accuracy": 0.5288461538461539,
+        "baselineAccuracy": 0.5288461538461539,
+        "baselineDigitBrier": 0.2003459088821296,
+        "baselineHits": 165,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.2003459088821296,
+        "hits": 165,
+        "liftPoints": 0.0,
+        "n": 312,
+        "pairedPValue": 1.0
+      },
+      "Madhur Day|close": {
+        "accuracy": 0.4889502762430939,
+        "baselineAccuracy": 0.5,
+        "baselineDigitBrier": 0.2007362790620534,
+        "baselineHits": 181,
+        "baselineOnly": 28,
+        "candidateOnly": 24,
+        "digitBrier": 0.20046208929174017,
+        "hits": 177,
+        "liftPoints": -1.1049723756906105,
+        "n": 362,
+        "pairedPValue": 0.6778086391424605
+      },
+      "Madhur Day|open": {
+        "accuracy": 0.5331491712707183,
+        "baselineAccuracy": 0.5331491712707183,
+        "baselineDigitBrier": 0.19713958192343387,
+        "baselineHits": 193,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.19713958192343387,
+        "hits": 193,
+        "liftPoints": 0.0,
+        "n": 362,
+        "pairedPValue": 1.0
+      },
+      "Madhur Night|close": {
+        "accuracy": 0.4935897435897436,
+        "baselineAccuracy": 0.532051282051282,
+        "baselineDigitBrier": 0.20174423773397793,
+        "baselineHits": 166,
+        "baselineOnly": 34,
+        "candidateOnly": 22,
+        "digitBrier": 0.20142739150722788,
+        "hits": 154,
+        "liftPoints": -3.8461538461538436,
+        "n": 312,
+        "pairedPValue": 0.14089542359848076
+      },
+      "Madhur Night|open": {
+        "accuracy": 0.5384615384615384,
+        "baselineAccuracy": 0.5384615384615384,
+        "baselineDigitBrier": 0.19891804691287163,
+        "baselineHits": 168,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.19891804691287163,
+        "hits": 168,
+        "liftPoints": 0.0,
+        "n": 312,
+        "pairedPValue": 1.0
+      },
+      "Main Bazar|close": {
+        "accuracy": 0.5115384615384615,
+        "baselineAccuracy": 0.5115384615384615,
+        "baselineDigitBrier": 0.19844216273638793,
+        "baselineHits": 133,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.19844216273638793,
+        "hits": 133,
+        "liftPoints": 0.0,
+        "n": 260,
+        "pairedPValue": 1.0
+      },
+      "Main Bazar|open": {
+        "accuracy": 0.4576923076923077,
+        "baselineAccuracy": 0.47692307692307695,
+        "baselineDigitBrier": 0.1987194780421506,
+        "baselineHits": 124,
+        "baselineOnly": 31,
+        "candidateOnly": 26,
+        "digitBrier": 0.1981272428801158,
+        "hits": 119,
+        "liftPoints": -1.9230769230769273,
+        "n": 260,
+        "pairedPValue": 0.5966417603730826
+      },
+      "Milan Day|close": {
+        "accuracy": 0.5401929260450161,
+        "baselineAccuracy": 0.5401929260450161,
+        "baselineDigitBrier": 0.19731670391116857,
+        "baselineHits": 168,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.19731670391116857,
+        "hits": 168,
+        "liftPoints": 0.0,
+        "n": 311,
+        "pairedPValue": 1.0
+      },
+      "Milan Day|open": {
+        "accuracy": 0.5176848874598071,
+        "baselineAccuracy": 0.5080385852090032,
+        "baselineDigitBrier": 0.19923988264262124,
+        "baselineHits": 158,
+        "baselineOnly": 39,
+        "candidateOnly": 42,
+        "digitBrier": 0.19876471421417655,
+        "hits": 161,
+        "liftPoints": 0.9646302250803873,
+        "n": 311,
+        "pairedPValue": 0.8243132151052077
+      },
+      "Milan Night|close": {
+        "accuracy": 0.5324675324675324,
+        "baselineAccuracy": 0.5097402597402597,
+        "baselineDigitBrier": 0.2012667770270786,
+        "baselineHits": 157,
+        "baselineOnly": 17,
+        "candidateOnly": 24,
+        "digitBrier": 0.20102355943372607,
+        "hits": 164,
+        "liftPoints": 2.2727272727272707,
+        "n": 308,
+        "pairedPValue": 0.34888887944907765
+      },
+      "Milan Night|open": {
+        "accuracy": 0.487012987012987,
+        "baselineAccuracy": 0.45454545454545453,
+        "baselineDigitBrier": 0.19979746809225835,
+        "baselineHits": 140,
+        "baselineOnly": 43,
+        "candidateOnly": 53,
+        "digitBrier": 0.19936586755329053,
+        "hits": 150,
+        "liftPoints": 3.246753246753248,
+        "n": 308,
+        "pairedPValue": 0.3583976321916262
+      },
+      "Rajdhani Day|close": {
+        "accuracy": 0.5064935064935064,
+        "baselineAccuracy": 0.5064935064935064,
+        "baselineDigitBrier": 0.20002336893517111,
+        "baselineHits": 156,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.20002336893517111,
+        "hits": 156,
+        "liftPoints": 0.0,
+        "n": 308,
+        "pairedPValue": 1.0
+      },
+      "Rajdhani Day|open": {
+        "accuracy": 0.5746753246753247,
+        "baselineAccuracy": 0.5487012987012987,
+        "baselineDigitBrier": 0.19827428352579235,
+        "baselineHits": 169,
+        "baselineOnly": 14,
+        "candidateOnly": 22,
+        "digitBrier": 0.19811009005519362,
+        "hits": 177,
+        "liftPoints": 2.5974025974025983,
+        "n": 308,
+        "pairedPValue": 0.2429849540349096
+      },
+      "Rajdhani Night|close": {
+        "accuracy": 0.48659003831417624,
+        "baselineAccuracy": 0.49808429118773945,
+        "baselineDigitBrier": 0.19916541780936767,
+        "baselineHits": 130,
+        "baselineOnly": 30,
+        "candidateOnly": 27,
+        "digitBrier": 0.19863926634912166,
+        "hits": 127,
+        "liftPoints": -1.1494252873563204,
+        "n": 261,
+        "pairedPValue": 0.7913664277791806
+      },
+      "Rajdhani Night|open": {
+        "accuracy": 0.6091954022988506,
+        "baselineAccuracy": 0.5670498084291188,
+        "baselineDigitBrier": 0.19847124084353743,
+        "baselineHits": 148,
+        "baselineOnly": 14,
+        "candidateOnly": 25,
+        "digitBrier": 0.19803617166593743,
+        "hits": 159,
+        "liftPoints": 4.214559386973182,
+        "n": 261,
+        "pairedPValue": 0.10812902140605729
+      },
+      "Sridevi Night|close": {
+        "accuracy": 0.48655913978494625,
+        "baselineAccuracy": 0.48655913978494625,
+        "baselineDigitBrier": 0.2025505926242894,
+        "baselineHits": 181,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.2025505926242894,
+        "hits": 181,
+        "liftPoints": 0.0,
+        "n": 372,
+        "pairedPValue": 1.0
+      },
+      "Sridevi Night|open": {
+        "accuracy": 0.5053763440860215,
+        "baselineAccuracy": 0.489247311827957,
+        "baselineDigitBrier": 0.19841862516635447,
+        "baselineHits": 182,
+        "baselineOnly": 31,
+        "candidateOnly": 37,
+        "digitBrier": 0.19808268345744812,
+        "hits": 188,
+        "liftPoints": 1.6129032258064502,
+        "n": 372,
+        "pairedPValue": 0.5446122234192591
+      },
+      "Sridevi|close": {
+        "accuracy": 0.5295698924731183,
+        "baselineAccuracy": 0.5295698924731183,
+        "baselineDigitBrier": 0.2003553327212776,
+        "baselineHits": 197,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.2003553327212776,
+        "hits": 197,
+        "liftPoints": 0.0,
+        "n": 372,
+        "pairedPValue": 1.0
+      },
+      "Sridevi|open": {
+        "accuracy": 0.5483870967741935,
+        "baselineAccuracy": 0.5483870967741935,
+        "baselineDigitBrier": 0.20062868844401718,
+        "baselineHits": 204,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.20062868844401718,
+        "hits": 204,
+        "liftPoints": 0.0,
+        "n": 372,
+        "pairedPValue": 1.0
+      },
+      "Time Bazar|close": {
+        "accuracy": 0.5241157556270096,
+        "baselineAccuracy": 0.5241157556270096,
+        "baselineDigitBrier": 0.19856042275541852,
+        "baselineHits": 163,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.19856042275541852,
+        "hits": 163,
+        "liftPoints": 0.0,
+        "n": 311,
+        "pairedPValue": 1.0
+      },
+      "Time Bazar|open": {
+        "accuracy": 0.5080385852090032,
+        "baselineAccuracy": 0.5080385852090032,
+        "baselineDigitBrier": 0.19891156142283217,
+        "baselineHits": 158,
+        "baselineOnly": 0,
+        "candidateOnly": 0,
+        "digitBrier": 0.19891156142283217,
+        "hits": 158,
+        "liftPoints": 0.0,
+        "n": 311,
+        "pairedPValue": 1.0
+      }
+    },
+    "promoted": false,
+    "promotionGates": {
+      "brierNonDegrading": true,
+      "confirmationPairedP": false,
+      "confirmationRowsPresent": true,
+      "holdoutNonDegrading": true,
+      "laterNonDegrading": false,
+      "recentNonDegrading": true,
+      "stableMonths": false,
+      "validationImproves": true,
+      "worstRoute": false
+    },
+    "stableMonthRate": 0.5555555555555556,
+    "worstRouteLiftPoints": -6.532663316582915
+  },
+  "productionChanged": false,
+  "rawCandidate": {
+    "blocks": {
+      "holdout": {
+        "accuracy": 0.5218978102189781,
+        "baselineAccuracy": 0.505271695052717,
+        "baselineDigitBrier": 0.19992752885660667,
+        "baselineHits": 1246,
+        "baselineOnly": 195,
+        "candidateOnly": 236,
+        "digitBrier": 0.19957553508883102,
+        "hits": 1287,
+        "liftPoints": 1.6626115166261113,
+        "n": 2466,
+        "pairedPValue": 0.05388686274760237
+      },
+      "independent_extension": {
+        "accuracy": 0.5454545454545454,
+        "baselineAccuracy": 0.6022727272727273,
+        "baselineDigitBrier": 0.19397576479695255,
+        "baselineHits": 53,
+        "baselineOnly": 14,
+        "candidateOnly": 9,
+        "digitBrier": 0.19367667922611975,
+        "hits": 48,
+        "liftPoints": -5.681818181818188,
+        "n": 88,
+        "pairedPValue": 0.4048728942871094
+      },
+      "post_cache": {
+        "accuracy": 0.4861111111111111,
+        "baselineAccuracy": 0.4583333333333333,
+        "baselineDigitBrier": 0.20169553897701667,
+        "baselineHits": 132,
+        "baselineOnly": 19,
+        "candidateOnly": 27,
+        "digitBrier": 0.2013418174717453,
+        "hits": 140,
+        "liftPoints": 2.777777777777779,
+        "n": 288,
+        "pairedPValue": 0.3019956131896606
+      },
+      "recent": {
+        "accuracy": 0.5260869565217391,
+        "baselineAccuracy": 0.518695652173913,
+        "baselineDigitBrier": 0.19904195027013444,
+        "baselineHits": 1193,
+        "baselineOnly": 228,
+        "candidateOnly": 245,
+        "digitBrier": 0.19872549868918682,
+        "hits": 1210,
+        "liftPoints": 0.7391304347826089,
+        "n": 2300,
+        "pairedPValue": 0.46196142484699315
+      },
+      "validation": {
+        "accuracy": 0.5259795570698467,
+        "baselineAccuracy": 0.5212947189097104,
+        "baselineDigitBrier": 0.19995504388947735,
+        "baselineHits": 1224,
+        "baselineOnly": 191,
+        "candidateOnly": 202,
+        "digitBrier": 0.19966245538384395,
+        "hits": 1235,
+        "liftPoints": 0.46848381601363176,
+        "n": 2348,
+        "pairedPValue": 0.6140132485277391
+      }
+    },
+    "marketSides": {
+      "Kalyan Night|close": {
+        "accuracy": 0.515625,
+        "baselineAccuracy": 0.4921875,
+        "baselineDigitBrier": 0.20155787769169287,
+        "baselineHits": 126,
+        "baselineOnly": 21,
+        "candidateOnly": 27,
+        "digitBrier": 0.20122020340829927,
+        "hits": 132,
+        "liftPoints": 2.34375,
+        "n": 256,
+        "pairedPValue": 0.4708790136217118
+      },
+      "Kalyan Night|open": {
+        "accuracy": 0.5625,
+        "baselineAccuracy": 0.515625,
+        "baselineDigitBrier": 0.1989061453053899,
+        "baselineHits": 132,
+        "baselineOnly": 18,
+        "candidateOnly": 30,
+        "digitBrier": 0.19862446754624768,
+        "hits": 144,
+        "liftPoints": 4.6875,
+        "n": 256,
+        "pairedPValue": 0.11140289106101875
+      },
+      "Kalyan|close": {
+        "accuracy": 0.4423076923076923,
+        "baselineAccuracy": 0.4775641025641026,
+        "baselineDigitBrier": 0.2015635899417664,
+        "baselineHits": 149,
+        "baselineOnly": 52,
+        "candidateOnly": 41,
+        "digitBrier": 0.2013833305765614,
+        "hits": 138,
+        "liftPoints": -3.52564102564103,
+        "n": 312,
+        "pairedPValue": 0.2997316968970305
+      },
+      "Kalyan|open": {
+        "accuracy": 0.5256410256410257,
+        "baselineAccuracy": 0.5288461538461539,
+        "baselineDigitBrier": 0.2003459088821296,
+        "baselineHits": 165,
+        "baselineOnly": 24,
+        "candidateOnly": 23,
+        "digitBrier": 0.20013174763379615,
+        "hits": 164,
+        "liftPoints": -0.3205128205128194,
+        "n": 312,
+        "pairedPValue": 1.0
+      },
+      "Madhur Day|close": {
+        "accuracy": 0.4889502762430939,
+        "baselineAccuracy": 0.5,
+        "baselineDigitBrier": 0.2007362790620534,
+        "baselineHits": 181,
+        "baselineOnly": 28,
+        "candidateOnly": 24,
+        "digitBrier": 0.20046208929174017,
+        "hits": 177,
+        "liftPoints": -1.1049723756906105,
+        "n": 362,
+        "pairedPValue": 0.6778086391424605
+      },
+      "Madhur Day|open": {
+        "accuracy": 0.5469613259668509,
+        "baselineAccuracy": 0.5331491712707183,
+        "baselineDigitBrier": 0.19713958192343387,
+        "baselineHits": 193,
+        "baselineOnly": 27,
+        "candidateOnly": 32,
+        "digitBrier": 0.19690666499042295,
+        "hits": 198,
+        "liftPoints": 1.3812154696132617,
+        "n": 362,
+        "pairedPValue": 0.6029232012571503
+      },
+      "Madhur Night|close": {
+        "accuracy": 0.4935897435897436,
+        "baselineAccuracy": 0.532051282051282,
+        "baselineDigitBrier": 0.20174423773397793,
+        "baselineHits": 166,
+        "baselineOnly": 34,
+        "candidateOnly": 22,
+        "digitBrier": 0.20142739150722788,
+        "hits": 154,
+        "liftPoints": -3.8461538461538436,
+        "n": 312,
+        "pairedPValue": 0.14089542359848076
+      },
+      "Madhur Night|open": {
+        "accuracy": 0.5352564102564102,
+        "baselineAccuracy": 0.5384615384615384,
+        "baselineDigitBrier": 0.19891804691287163,
+        "baselineHits": 168,
+        "baselineOnly": 28,
+        "candidateOnly": 27,
+        "digitBrier": 0.19861177256873533,
+        "hits": 167,
+        "liftPoints": -0.3205128205128194,
+        "n": 312,
+        "pairedPValue": 1.0
+      },
+      "Main Bazar|close": {
+        "accuracy": 0.5423076923076923,
+        "baselineAccuracy": 0.5115384615384615,
+        "baselineDigitBrier": 0.19844216273638793,
+        "baselineHits": 133,
+        "baselineOnly": 22,
+        "candidateOnly": 30,
+        "digitBrier": 0.19814521875296048,
+        "hits": 141,
+        "liftPoints": 3.076923076923077,
+        "n": 260,
+        "pairedPValue": 0.3317497633694906
+      },
+      "Main Bazar|open": {
+        "accuracy": 0.4576923076923077,
+        "baselineAccuracy": 0.47692307692307695,
+        "baselineDigitBrier": 0.1987194780421506,
+        "baselineHits": 124,
+        "baselineOnly": 31,
+        "candidateOnly": 26,
+        "digitBrier": 0.1981272428801158,
+        "hits": 119,
+        "liftPoints": -1.9230769230769273,
+        "n": 260,
+        "pairedPValue": 0.5966417603730826
+      },
+      "Milan Day|close": {
+        "accuracy": 0.5305466237942122,
+        "baselineAccuracy": 0.5401929260450161,
+        "baselineDigitBrier": 0.19731670391116857,
+        "baselineHits": 168,
+        "baselineOnly": 25,
+        "candidateOnly": 22,
+        "digitBrier": 0.19705574898416892,
+        "hits": 165,
+        "liftPoints": -0.9646302250803873,
+        "n": 311,
+        "pairedPValue": 0.7708669945730264
+      },
+      "Milan Day|open": {
+        "accuracy": 0.5176848874598071,
+        "baselineAccuracy": 0.5080385852090032,
+        "baselineDigitBrier": 0.19923988264262124,
+        "baselineHits": 158,
+        "baselineOnly": 39,
+        "candidateOnly": 42,
+        "digitBrier": 0.19876471421417655,
+        "hits": 161,
+        "liftPoints": 0.9646302250803873,
+        "n": 311,
+        "pairedPValue": 0.8243132151052077
+      },
+      "Milan Night|close": {
+        "accuracy": 0.5324675324675324,
+        "baselineAccuracy": 0.5097402597402597,
+        "baselineDigitBrier": 0.2012667770270786,
+        "baselineHits": 157,
+        "baselineOnly": 17,
+        "candidateOnly": 24,
+        "digitBrier": 0.20102355943372607,
+        "hits": 164,
+        "liftPoints": 2.2727272727272707,
+        "n": 308,
+        "pairedPValue": 0.34888887944907765
+      },
+      "Milan Night|open": {
+        "accuracy": 0.487012987012987,
+        "baselineAccuracy": 0.45454545454545453,
+        "baselineDigitBrier": 0.19979746809225835,
+        "baselineHits": 140,
+        "baselineOnly": 43,
+        "candidateOnly": 53,
+        "digitBrier": 0.19936586755329053,
+        "hits": 150,
+        "liftPoints": 3.246753246753248,
+        "n": 308,
+        "pairedPValue": 0.3583976321916262
+      },
+      "Rajdhani Day|close": {
+        "accuracy": 0.5357142857142857,
+        "baselineAccuracy": 0.5064935064935064,
+        "baselineDigitBrier": 0.20002336893517111,
+        "baselineHits": 156,
+        "baselineOnly": 18,
+        "candidateOnly": 27,
+        "digitBrier": 0.1998945765704179,
+        "hits": 165,
+        "liftPoints": 2.922077922077926,
+        "n": 308,
+        "pairedPValue": 0.23269319190831084
+      },
+      "Rajdhani Day|open": {
+        "accuracy": 0.5746753246753247,
+        "baselineAccuracy": 0.5487012987012987,
+        "baselineDigitBrier": 0.19827428352579235,
+        "baselineHits": 169,
+        "baselineOnly": 14,
+        "candidateOnly": 22,
+        "digitBrier": 0.19811009005519362,
+        "hits": 177,
+        "liftPoints": 2.5974025974025983,
+        "n": 308,
+        "pairedPValue": 0.2429849540349096
+      },
+      "Rajdhani Night|close": {
+        "accuracy": 0.48659003831417624,
+        "baselineAccuracy": 0.49808429118773945,
+        "baselineDigitBrier": 0.19916541780936767,
+        "baselineHits": 130,
+        "baselineOnly": 30,
+        "candidateOnly": 27,
+        "digitBrier": 0.19863926634912166,
+        "hits": 127,
+        "liftPoints": -1.1494252873563204,
+        "n": 261,
+        "pairedPValue": 0.7913664277791806
+      },
+      "Rajdhani Night|open": {
+        "accuracy": 0.6091954022988506,
+        "baselineAccuracy": 0.5670498084291188,
+        "baselineDigitBrier": 0.19847124084353743,
+        "baselineHits": 148,
+        "baselineOnly": 14,
+        "candidateOnly": 25,
+        "digitBrier": 0.19803617166593743,
+        "hits": 159,
+        "liftPoints": 4.214559386973182,
+        "n": 261,
+        "pairedPValue": 0.10812902140605729
+      },
+      "Sridevi Night|close": {
+        "accuracy": 0.49731182795698925,
+        "baselineAccuracy": 0.48655913978494625,
+        "baselineDigitBrier": 0.2025505926242894,
+        "baselineHits": 181,
+        "baselineOnly": 47,
+        "candidateOnly": 51,
+        "digitBrier": 0.2020762048354595,
+        "hits": 185,
+        "liftPoints": 1.0752688172043001,
+        "n": 372,
+        "pairedPValue": 0.7620362195292433
+      },
+      "Sridevi Night|open": {
+        "accuracy": 0.5053763440860215,
+        "baselineAccuracy": 0.489247311827957,
+        "baselineDigitBrier": 0.19841862516635447,
+        "baselineHits": 182,
+        "baselineOnly": 31,
+        "candidateOnly": 37,
+        "digitBrier": 0.19808268345744812,
+        "hits": 188,
+        "liftPoints": 1.6129032258064502,
+        "n": 372,
+        "pairedPValue": 0.5446122234192591
+      },
+      "Sridevi|close": {
+        "accuracy": 0.543010752688172,
+        "baselineAccuracy": 0.5295698924731183,
+        "baselineDigitBrier": 0.2003553327212776,
+        "baselineHits": 197,
+        "baselineOnly": 21,
+        "candidateOnly": 26,
+        "digitBrier": 0.20001217966233908,
+        "hits": 202,
+        "liftPoints": 1.3440860215053752,
+        "n": 372,
+        "pairedPValue": 0.5600646295802107
+      },
+      "Sridevi|open": {
+        "accuracy": 0.5645161290322581,
+        "baselineAccuracy": 0.5483870967741935,
+        "baselineDigitBrier": 0.20062868844401718,
+        "baselineHits": 204,
+        "baselineOnly": 21,
+        "candidateOnly": 27,
+        "digitBrier": 0.20024927537292003,
+        "hits": 210,
+        "liftPoints": 1.6129032258064613,
+        "n": 372,
+        "pairedPValue": 0.4708790136217118
+      },
+      "Time Bazar|close": {
+        "accuracy": 0.5530546623794212,
+        "baselineAccuracy": 0.5241157556270096,
+        "baselineDigitBrier": 0.19856042275541852,
+        "baselineHits": 163,
+        "baselineOnly": 18,
+        "candidateOnly": 27,
+        "digitBrier": 0.19827158189241118,
+        "hits": 172,
+        "liftPoints": 2.893890675241162,
+        "n": 311,
+        "pairedPValue": 0.23269319190831084
+      },
+      "Time Bazar|open": {
+        "accuracy": 0.5176848874598071,
+        "baselineAccuracy": 0.5080385852090032,
+        "baselineDigitBrier": 0.19891156142283217,
+        "baselineHits": 158,
+        "baselineOnly": 24,
+        "candidateOnly": 27,
+        "digitBrier": 0.19864694736608204,
+        "hits": 161,
+        "liftPoints": 0.9646302250803873,
+        "n": 311,
+        "pairedPValue": 0.7797679305530743
+      }
+    },
+    "promoted": false,
+    "promotionGates": {
+      "brierNonDegrading": true,
+      "confirmationPairedP": false,
+      "confirmationRowsPresent": true,
+      "holdoutNonDegrading": true,
+      "laterNonDegrading": true,
+      "recentNonDegrading": true,
+      "stableMonths": true,
+      "validationImproves": true,
+      "worstRoute": false
+    },
+    "stableMonthRate": 0.7777777777777778,
+    "worstRouteLiftPoints": -6.532663316582915
+  },
+  "schemaVersion": 1,
+  "selectedConfig": "hierarchical_ridge10p0_blend0p25",
+  "selectionLeaderboard": [
+    {
+      "accuracy": 0.5308988764044944,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 160,
+      "candidateOnly": 187,
+      "config": "hierarchical_ridge10p0_blend0p25",
+      "digitBrier": 0.2000449823964266,
+      "hits": 1134,
+      "liftPoints": 1.2640449438202306,
+      "n": 2136,
+      "pairedPValue": 0.16269328673232195
+    },
+    {
+      "accuracy": 0.5304307116104869,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 167,
+      "candidateOnly": 193,
+      "config": "hierarchical_ridge0p1_blend0p25",
+      "digitBrier": 0.20003170786800997,
+      "hits": 1133,
+      "liftPoints": 1.2172284644194842,
+      "n": 2136,
+      "pairedPValue": 0.18755735871258475
+    },
+    {
+      "accuracy": 0.5290262172284644,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 166,
+      "candidateOnly": 189,
+      "config": "hierarchical_ridge1p0_blend0p25",
+      "digitBrier": 0.20003536194578786,
+      "hits": 1130,
+      "liftPoints": 1.0767790262172339,
+      "n": 2136,
+      "pairedPValue": 0.24291265369056528
+    },
+    {
+      "accuracy": 0.528558052434457,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 156,
+      "candidateOnly": 178,
+      "config": "hierarchical_ridge100p0_blend0p25",
+      "digitBrier": 0.20005427812521331,
+      "hits": 1129,
+      "liftPoints": 1.0299625468164875,
+      "n": 2136,
+      "pairedPValue": 0.25049010764107205
+    },
+    {
+      "accuracy": 0.525749063670412,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 168,
+      "candidateOnly": 184,
+      "config": "pooled_ridge10p0_blend0p5",
+      "digitBrier": 0.19987969559719146,
+      "hits": 1123,
+      "liftPoints": 0.7490636704119868,
+      "n": 2136,
+      "pairedPValue": 0.42403901780625
+    },
+    {
+      "accuracy": 0.525749063670412,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 168,
+      "candidateOnly": 184,
+      "config": "pooled_ridge1p0_blend0p5",
+      "digitBrier": 0.1998800743046769,
+      "hits": 1123,
+      "liftPoints": 0.7490636704119868,
+      "n": 2136,
+      "pairedPValue": 0.42403901780625
+    },
+    {
+      "accuracy": 0.525749063670412,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 168,
+      "candidateOnly": 184,
+      "config": "pooled_ridge0p1_blend0p5",
+      "digitBrier": 0.1998801148116151,
+      "hits": 1123,
+      "liftPoints": 0.7490636704119868,
+      "n": 2136,
+      "pairedPValue": 0.42403901780625
+    },
+    {
+      "accuracy": 0.524812734082397,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 169,
+      "candidateOnly": 183,
+      "config": "pooled_ridge100p0_blend0p5",
+      "digitBrier": 0.1998774456427346,
+      "hits": 1121,
+      "liftPoints": 0.655430711610494,
+      "n": 2136,
+      "pairedPValue": 0.4884247986925206
+    },
+    {
+      "accuracy": 0.5205992509363296,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 130,
+      "candidateOnly": 135,
+      "config": "pooled_ridge1p0_blend0p25",
+      "digitBrier": 0.20008091179657467,
+      "hits": 1112,
+      "liftPoints": 0.23408239700375422,
+      "n": 2136,
+      "pairedPValue": 0.805957032998993
+    },
+    {
+      "accuracy": 0.5205992509363296,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 130,
+      "candidateOnly": 135,
+      "config": "pooled_ridge0p1_blend0p25",
+      "digitBrier": 0.20008093655481446,
+      "hits": 1112,
+      "liftPoints": 0.23408239700375422,
+      "n": 2136,
+      "pairedPValue": 0.805957032998993
+    },
+    {
+      "accuracy": 0.5201310861423221,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 131,
+      "candidateOnly": 135,
+      "config": "pooled_ridge10p0_blend0p25",
+      "digitBrier": 0.2000806805195559,
+      "hits": 1111,
+      "liftPoints": 0.1872659176029967,
+      "n": 2136,
+      "pairedPValue": 0.85410303233007
+    },
+    {
+      "accuracy": 0.5196629213483146,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 231,
+      "candidateOnly": 234,
+      "config": "market_side_ridge1p0_blend0p25",
+      "digitBrier": 0.20004950660282883,
+      "hits": 1110,
+      "liftPoints": 0.1404494382022503,
+      "n": 2136,
+      "pairedPValue": 0.9261170702875079
+    },
+    {
+      "accuracy": 0.5187265917602997,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 132,
+      "candidateOnly": 133,
+      "config": "pooled_ridge100p0_blend0p25",
+      "digitBrier": 0.2000793175301457,
+      "hits": 1108,
+      "liftPoints": 0.046816479400757505,
+      "n": 2136,
+      "pairedPValue": 1.0
+    },
+    {
+      "accuracy": 0.5182584269662921,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 234,
+      "candidateOnly": 234,
+      "config": "market_side_ridge0p1_blend0p25",
+      "digitBrier": 0.2000459489560629,
+      "hits": 1107,
+      "liftPoints": 0.0,
+      "n": 2136,
+      "pairedPValue": 1.0
+    },
+    {
+      "accuracy": 0.5173220973782772,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 269,
+      "candidateOnly": 267,
+      "config": "hierarchical_ridge100p0_blend0p5",
+      "digitBrier": 0.1998825375767886,
+      "hits": 1105,
+      "liftPoints": -0.0936329588014928,
+      "n": 2136,
+      "pairedPValue": 0.9655527066059704
+    },
+    {
+      "accuracy": 0.5159176029962547,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 236,
+      "candidateOnly": 231,
+      "config": "market_side_ridge10p0_blend0p25",
+      "digitBrier": 0.2000615615610441,
+      "hits": 1102,
+      "liftPoints": -0.23408239700374311,
+      "n": 2136,
+      "pairedPValue": 0.8531773269117711
+    },
+    {
+      "accuracy": 0.5149812734082397,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 495,
+      "candidateOnly": 488,
+      "config": "hierarchical_ridge0p1_blend1p0",
+      "digitBrier": 0.2000135062735678,
+      "hits": 1100,
+      "liftPoints": -0.3277153558052359,
+      "n": 2136,
+      "pairedPValue": 0.848247765699723
+    },
+    {
+      "accuracy": 0.5149812734082397,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 220,
+      "candidateOnly": 213,
+      "config": "market_side_ridge100p0_blend0p25",
+      "digitBrier": 0.20007065598217152,
+      "hits": 1100,
+      "liftPoints": -0.3277153558052359,
+      "n": 2136,
+      "pairedPValue": 0.7731243517929203
+    },
+    {
+      "accuracy": 0.5140449438202247,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 443,
+      "candidateOnly": 434,
+      "config": "pooled_ridge100p0_blend1p0",
+      "digitBrier": 0.19969946776596859,
+      "hits": 1098,
+      "liftPoints": -0.4213483146067398,
+      "n": 2136,
+      "pairedPValue": 0.7870702690039898
+    },
+    {
+      "accuracy": 0.5131086142322098,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 352,
+      "candidateOnly": 341,
+      "config": "market_side_ridge100p0_blend0p5",
+      "digitBrier": 0.20005329855840495,
+      "hits": 1096,
+      "liftPoints": -0.5149812734082326,
+      "n": 2136,
+      "pairedPValue": 0.7040720533490057
+    },
+    {
+      "accuracy": 0.5131086142322098,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 368,
+      "candidateOnly": 357,
+      "config": "market_side_ridge10p0_blend0p5",
+      "digitBrier": 0.20008102085717241,
+      "hits": 1096,
+      "liftPoints": -0.5149812734082326,
+      "n": 2136,
+      "pairedPValue": 0.7103740385521501
+    },
+    {
+      "accuracy": 0.5126404494382022,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 402,
+      "candidateOnly": 390,
+      "config": "hierarchical_ridge100p0_blend0p75",
+      "digitBrier": 0.19984122307163465,
+      "hits": 1095,
+      "liftPoints": -0.5617977528089901,
+      "n": 2136,
+      "pairedPValue": 0.6959206355090447
+    },
+    {
+      "accuracy": 0.5117041198501873,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 495,
+      "candidateOnly": 481,
+      "config": "hierarchical_ridge1p0_blend1p0",
+      "digitBrier": 0.19999231203617204,
+      "hits": 1093,
+      "liftPoints": -0.6554307116104829,
+      "n": 2136,
+      "pairedPValue": 0.6773438328019316
+    },
+    {
+      "accuracy": 0.5107677902621723,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 414,
+      "candidateOnly": 398,
+      "config": "hierarchical_ridge10p0_blend0p75",
+      "digitBrier": 0.19984890848269388,
+      "hits": 1091,
+      "liftPoints": -0.7490636704119757,
+      "n": 2136,
+      "pairedPValue": 0.5986397317625053
+    },
+    {
+      "accuracy": 0.5107677902621723,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 287,
+      "candidateOnly": 271,
+      "config": "hierarchical_ridge10p0_blend0p5",
+      "digitBrier": 0.19987580365168828,
+      "hits": 1091,
+      "liftPoints": -0.7490636704119757,
+      "n": 2136,
+      "pairedPValue": 0.5254650738917694
+    },
+    {
+      "accuracy": 0.5098314606741573,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 444,
+      "candidateOnly": 426,
+      "config": "pooled_ridge10p0_blend1p0",
+      "digitBrier": 0.1997020635774281,
+      "hits": 1089,
+      "liftPoints": -0.8426966292134797,
+      "n": 2136,
+      "pairedPValue": 0.564400922375042
+    },
+    {
+      "accuracy": 0.5098314606741573,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 383,
+      "candidateOnly": 365,
+      "config": "market_side_ridge1p0_blend0p5",
+      "digitBrier": 0.20009399487721696,
+      "hits": 1089,
+      "liftPoints": -0.8426966292134797,
+      "n": 2136,
+      "pairedPValue": 0.5342450875282624
+    },
+    {
+      "accuracy": 0.5093632958801498,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 415,
+      "candidateOnly": 396,
+      "config": "hierarchical_ridge1p0_blend0p75",
+      "digitBrier": 0.19985329560541948,
+      "hits": 1088,
+      "liftPoints": -0.8895131086142261,
+      "n": 2136,
+      "pairedPValue": 0.5273696453578556
+    },
+    {
+      "accuracy": 0.5088951310861424,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 445,
+      "candidateOnly": 425,
+      "config": "pooled_ridge1p0_blend1p0",
+      "digitBrier": 0.19970248560619072,
+      "hits": 1087,
+      "liftPoints": -0.9363295880149725,
+      "n": 2136,
+      "pairedPValue": 0.5194949467203969
+    },
+    {
+      "accuracy": 0.5088951310861424,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 445,
+      "candidateOnly": 425,
+      "config": "pooled_ridge0p1_blend1p0",
+      "digitBrier": 0.19970253058190124,
+      "hits": 1087,
+      "liftPoints": -0.9363295880149725,
+      "n": 2136,
+      "pairedPValue": 0.5194949467203969
+    },
+    {
+      "accuracy": 0.5084269662921348,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 422,
+      "candidateOnly": 401,
+      "config": "hierarchical_ridge0p1_blend0p75",
+      "digitBrier": 0.19986023864633948,
+      "hits": 1086,
+      "liftPoints": -0.98314606741573,
+      "n": 2136,
+      "pairedPValue": 0.4857278440965469
+    },
+    {
+      "accuracy": 0.5084269662921348,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 295,
+      "candidateOnly": 274,
+      "config": "hierarchical_ridge1p0_blend0p5",
+      "digitBrier": 0.19986764557529144,
+      "hits": 1086,
+      "liftPoints": -0.98314606741573,
+      "n": 2136,
+      "pairedPValue": 0.4018022493043974
+    },
+    {
+      "accuracy": 0.5084269662921348,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 496,
+      "candidateOnly": 475,
+      "config": "hierarchical_ridge10p0_blend1p0",
+      "digitBrier": 0.19996429688944342,
+      "hits": 1086,
+      "liftPoints": -0.98314606741573,
+      "n": 2136,
+      "pairedPValue": 0.5210043035753106
+    },
+    {
+      "accuracy": 0.5074906367041199,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 460,
+      "candidateOnly": 437,
+      "config": "market_side_ridge10p0_blend0p75",
+      "digitBrier": 0.20041482260529378,
+      "hits": 1084,
+      "liftPoints": -1.0767790262172228,
+      "n": 2136,
+      "pairedPValue": 0.4626275563670933
+    },
+    {
+      "accuracy": 0.5070224719101124,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 491,
+      "candidateOnly": 467,
+      "config": "hierarchical_ridge100p0_blend1p0",
+      "digitBrier": 0.19993033460975154,
+      "hits": 1083,
+      "liftPoints": -1.1235955056179692,
+      "n": 2136,
+      "pairedPValue": 0.4574409804125787
+    },
+    {
+      "accuracy": 0.5070224719101124,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 387,
+      "candidateOnly": 363,
+      "config": "market_side_ridge0p1_blend0p5",
+      "digitBrier": 0.2001063759767883,
+      "hits": 1083,
+      "liftPoints": -1.1235955056179692,
+      "n": 2136,
+      "pairedPValue": 0.40101291688657054
+    },
+    {
+      "accuracy": 0.5056179775280899,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 302,
+      "candidateOnly": 275,
+      "config": "hierarchical_ridge0p1_blend0p5",
+      "digitBrier": 0.19986630584448684,
+      "hits": 1080,
+      "liftPoints": -1.2640449438202195,
+      "n": 2136,
+      "pairedPValue": 0.2790656535590297
+    },
+    {
+      "accuracy": 0.5056179775280899,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 513,
+      "candidateOnly": 486,
+      "config": "market_side_ridge10p0_blend1p0",
+      "digitBrier": 0.20106296680540814,
+      "hits": 1080,
+      "liftPoints": -1.2640449438202195,
+      "n": 2136,
+      "pairedPValue": 0.4107461291206456
+    },
+    {
+      "accuracy": 0.5042134831460674,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 515,
+      "candidateOnly": 485,
+      "config": "market_side_ridge1p0_blend1p0",
+      "digitBrier": 0.2012372505913975,
+      "hits": 1077,
+      "liftPoints": -1.4044943820224698,
+      "n": 2136,
+      "pairedPValue": 0.359117348690753
+    },
+    {
+      "accuracy": 0.5037453183520599,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 526,
+      "candidateOnly": 495,
+      "config": "market_side_ridge0p1_blend1p0",
+      "digitBrier": 0.20133999836295285,
+      "hits": 1076,
+      "liftPoints": -1.4513108614232162,
+      "n": 2136,
+      "pairedPValue": 0.34779896591457776
+    },
+    {
+      "accuracy": 0.5032771535580525,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 507,
+      "candidateOnly": 475,
+      "config": "market_side_ridge100p0_blend1p0",
+      "digitBrier": 0.2008238776437839,
+      "hits": 1075,
+      "liftPoints": -1.4981273408239626,
+      "n": 2136,
+      "pairedPValue": 0.3225418950344003
+    },
+    {
+      "accuracy": 0.5028089887640449,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 473,
+      "candidateOnly": 440,
+      "config": "market_side_ridge1p0_blend0p75",
+      "digitBrier": 0.20048990954007315,
+      "hits": 1074,
+      "liftPoints": -1.54494382022472,
+      "n": 2136,
+      "pairedPValue": 0.2895737992417561
+    },
+    {
+      "accuracy": 0.5028089887640449,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 478,
+      "candidateOnly": 445,
+      "config": "market_side_ridge0p1_blend0p75",
+      "digitBrier": 0.20053772577908494,
+      "hits": 1074,
+      "liftPoints": -1.54494382022472,
+      "n": 2136,
+      "pairedPValue": 0.29220209503301503
+    },
+    {
+      "accuracy": 0.5014044943820225,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 461,
+      "candidateOnly": 425,
+      "config": "market_side_ridge100p0_blend0p75",
+      "digitBrier": 0.20030437244560909,
+      "hits": 1071,
+      "liftPoints": -1.6853932584269593,
+      "n": 2136,
+      "pairedPValue": 0.23963876382793148
+    },
+    {
+      "accuracy": 0.5004681647940075,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 300,
+      "candidateOnly": 262,
+      "config": "pooled_ridge100p0_blend0p75",
+      "digitBrier": 0.19975082905467556,
+      "hits": 1069,
+      "liftPoints": -1.7790262172284632,
+      "n": 2136,
+      "pairedPValue": 0.11850412812887662
+    },
+    {
+      "accuracy": 0.5004681647940075,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 301,
+      "candidateOnly": 263,
+      "config": "pooled_ridge10p0_blend0p75",
+      "digitBrier": 0.19975348994981554,
+      "hits": 1069,
+      "liftPoints": -1.7790262172284632,
+      "n": 2136,
+      "pairedPValue": 0.11915985895582264
+    },
+    {
+      "accuracy": 0.5,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 301,
+      "candidateOnly": 262,
+      "config": "pooled_ridge1p0_blend0p75",
+      "digitBrier": 0.1997539322412156,
+      "hits": 1068,
+      "liftPoints": -1.8258426966292096,
+      "n": 2136,
+      "pairedPValue": 0.10918211691337375
+    },
+    {
+      "accuracy": 0.5,
+      "baselineAccuracy": 0.5182584269662921,
+      "baselineDigitBrier": 0.2003564447169088,
+      "baselineHits": 1107,
+      "baselineOnly": 301,
+      "candidateOnly": 262,
+      "config": "pooled_ridge0p1_blend0p75",
+      "digitBrier": 0.19975397948731066,
+      "hits": 1068,
+      "liftPoints": -1.8258426966292096,
+      "n": 2136,
+      "pairedPValue": 0.10918211691337375
+    }
+  ],
+  "source": {
+    "counts": {
+      "Kalyan": 1141,
+      "Kalyan Night": 1861,
+      "Madhur Day": 2985,
+      "Madhur Night": 2555,
+      "Main Bazar": 1157,
+      "Milan Day": 1196,
+      "Milan Night": 1379,
+      "Rajdhani Day": 3981,
+      "Rajdhani Night": 1409,
+      "Sridevi": 2009,
+      "Sridevi Night": 1994,
+      "Time Bazar": 1728
+    },
+    "extendedGeneratedAt": "2026-07-23T19:56:39.598Z",
+    "independentGeneratedAt": "2026-07-23T20:00:18.492Z",
+    "latest": {
+      "Kalyan": "2026-07-23",
+      "Kalyan Night": "2026-07-23",
+      "Madhur Day": "2026-07-23",
+      "Madhur Night": "2026-07-23",
+      "Main Bazar": "2026-07-23",
+      "Milan Day": "2026-07-23",
+      "Milan Night": "2026-07-23",
+      "Rajdhani Day": "2026-07-18",
+      "Rajdhani Night": "2026-07-23",
+      "Sridevi": "2026-07-23",
+      "Sridevi Night": "2026-07-23",
+      "Time Bazar": "2026-07-23"
+    }
+  },
+  "study": "nested chronological ridge absent-digit research"
+}
