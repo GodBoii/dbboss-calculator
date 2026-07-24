@@ -1,0 +1,27 @@
+{
+  "frozenAt": "2026-07-24T01:25:29.962520+05:30",
+  "topK": 60,
+  "frozenCacheCutoffs": {
+    "Sridevi": "2026-07-05",
+    "Time Bazar": "2026-07-04",
+    "Madhur Day": "2026-07-05",
+    "Milan Day": "2026-06-27",
+    "Rajdhani Day": "2026-07-04",
+    "Kalyan": "2026-07-04",
+    "Sridevi Night": "2026-07-05",
+    "Kalyan Night": "2026-07-03",
+    "Madhur Night": "2026-07-04",
+    "Milan Night": "2026-07-04",
+    "Rajdhani Night": "2026-07-03",
+    "Main Bazar": "2026-07-03"
+  },
+  "strategies": {
+    "open": "fixed:learned:learned_mass:8x7+4",
+    "close_preopen": "flat:learned"
+  },
+  "promotionStatus": {
+    "open": "watchlist-only: terminal block did not confirm",
+    "close_preopen": "baseline retained"
+  },
+  "rule": "Do not modify the strategy before scoring genuinely later rows."
+}
