@@ -298,6 +298,9 @@ function AvoidDigitColumn({
       </div>
       <div className="avoid-digit-evidence">
         <span>
+          Calibrated confidence: {percent(prediction.confidence)} ({prediction.confidenceSample} draws)
+        </span>
+        <span>
           Trailing strict: {percent(prediction.historicalReliability)} ({prediction.reliabilitySample} draws)
         </span>
         <span>
@@ -305,6 +308,14 @@ function AvoidDigitColumn({
         </span>
         <span>
           Families: {prediction.familyAgreement ? "agree" : "disagree"}
+        </span>
+        <span>
+          Route: {prediction.routeModelApplied
+            ? prediction.routeModel.replace(/_/g, " ")
+            : "V2 fallback"}
+          {prediction.routeModel !== "baseline_v2"
+            ? ` (${prediction.routeGuard.netHits >= 0 ? "+" : ""}${prediction.routeGuard.netHits} / ${prediction.routeGuard.historySample})`
+            : ""}
         </span>
       </div>
       <div className="avoid-digit-probabilities" aria-label={`${label} digit appearance probabilities`}>
@@ -320,7 +331,7 @@ function AvoidDigitColumn({
       </p>
       <p className="avoid-digit-models">
         {prediction.supportingModels
-          .map((model) => `${model.name.replace(/^(appearance|absence)_/, "")} ${percent(model.weight)}`)
+          .map((model) => `${model.family === "appearance" ? "A" : "B"}:${model.name.replace(/^(appearance|absence)_/, "")} ${percent(model.weight)}`)
           .join(" · ")}
       </p>
       {!isCallable && (
@@ -1048,7 +1059,7 @@ export default function AnalysisSection() {
             </div>
 
             <p className="avoid-digit-note">
-              Marginal digit probabilities come from the adaptive appearance family. The strict pair gate uses out-of-sample reliability; a raw marginal is never treated as call confidence.
+              V3 applies a market-side feature only while its causal 80-result guard stays positive; otherwise it falls back to V2. Point confidence is a strongly shrunk 240-draw reliability estimate, and actionability still requires the 120-draw Wilson safety gate.
             </p>
           </div>
           </div>
