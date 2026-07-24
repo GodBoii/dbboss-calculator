@@ -1,6 +1,6 @@
 {
   "name": "lakshmi-boss-calculator",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "private": true,
   "scripts": {
     "prebuild": "node verify-pwa-assets.cjs",
@@ -9,6 +9,10 @@
     "start": "next start",
     "lint": "eslint src next.config.ts eslint.config.mjs",
     "research:panel-ranking": "node scripts/panel-ranking-research.cjs",
+    "research:absent-digits": "python research/absent_digits_v2/run_research.py",
+    "score:absent-digits": "python research/absent_digits_v2/score_forward.py",
+    "verify:absent-digits": "python research/absent_digits_v2/verify_research.py",
+    "verify:absent-digits-runtime": "node scripts/verify-absent-digits-runtime.cjs",
     "verify:sutta-ranking": "node scripts/verify-sutta-ranking.cjs",
     "verify:sutta-above90": "node scripts/verify-above-90-regression.cjs"
   },
