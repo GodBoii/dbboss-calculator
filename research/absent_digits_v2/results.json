@@ -1,0 +1,2400 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-24T11:43:11.387676+00:00",
+  "modelId": "absent-digits-complementary-online-v2",
+  "sourceHash": "6790fc62b0b622e159af81d777bc1a798e4935fdf8e5adc38b6bd9464521ac64",
+  "codeHash": "55ebc352beb6165aacdff32f9df22ab546de056e45e99777c92609e7d0c964d4",
+  "sourceMeta": {
+    "extendedGeneratedAt": "2026-07-23T19:56:39.598Z",
+    "independentGeneratedAt": "2026-07-23T20:00:18.492Z",
+    "counts": {
+      "Sridevi": 2009,
+      "Time Bazar": 1728,
+      "Madhur Day": 2985,
+      "Milan Day": 1196,
+      "Rajdhani Day": 3981,
+      "Kalyan": 1141,
+      "Sridevi Night": 1994,
+      "Kalyan Night": 1861,
+      "Madhur Night": 2555,
+      "Milan Night": 1379,
+      "Rajdhani Night": 1409,
+      "Main Bazar": 1157
+    },
+    "latest": {
+      "Sridevi": "2026-07-23",
+      "Time Bazar": "2026-07-23",
+      "Madhur Day": "2026-07-23",
+      "Milan Day": "2026-07-23",
+      "Rajdhani Day": "2026-07-18",
+      "Kalyan": "2026-07-23",
+      "Sridevi Night": "2026-07-23",
+      "Kalyan Night": "2026-07-23",
+      "Madhur Night": "2026-07-23",
+      "Milan Night": "2026-07-23",
+      "Rajdhani Night": "2026-07-23",
+      "Main Bazar": "2026-07-23"
+    }
+  },
+  "selectedBlendAppearanceWeight": 0.75,
+  "validationGrid": {
+    "0.0": {
+      "strictAccuracy": 0.5127768313458262,
+      "avgCorrectAbsentDigits": 1.4561328790459966,
+      "hits": 1204,
+      "rows": 2348
+    },
+    "0.25": {
+      "strictAccuracy": 0.518313458262351,
+      "avgCorrectAbsentDigits": 1.462947189097104,
+      "hits": 1217,
+      "rows": 2348
+    },
+    "0.5": {
+      "strictAccuracy": 0.5174616695059625,
+      "avgCorrectAbsentDigits": 1.4663543441226576,
+      "hits": 1215,
+      "rows": 2348
+    },
+    "0.75": {
+      "strictAccuracy": 0.5212947189097104,
+      "avgCorrectAbsentDigits": 1.471039182282794,
+      "hits": 1224,
+      "rows": 2348
+    },
+    "1.0": {
+      "strictAccuracy": 0.5174616695059625,
+      "avgCorrectAbsentDigits": 1.4646507666098807,
+      "hits": 1215,
+      "rows": 2348
+    }
+  },
+  "marketRoutes": {
+    "Sridevi|open": {
+      "rows": 121,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5785123966942148,
+      "bestLocalBlend": 0.0,
+      "bestLocalAccuracy": 0.6033057851239669,
+      "improvement": 0.024793388429752095,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Sridevi|close": {
+      "rows": 121,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5289256198347108,
+      "bestLocalBlend": 0.25,
+      "bestLocalAccuracy": 0.5454545454545454,
+      "improvement": 0.016528925619834656,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Time Bazar|open": {
+      "rows": 96,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5,
+      "bestLocalBlend": 0.75,
+      "bestLocalAccuracy": 0.5,
+      "improvement": 0.0,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Time Bazar|close": {
+      "rows": 96,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.59375,
+      "bestLocalBlend": 0.5,
+      "bestLocalAccuracy": 0.6041666666666666,
+      "improvement": 0.01041666666666663,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Madhur Day|open": {
+      "rows": 111,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.4954954954954955,
+      "bestLocalBlend": 0.75,
+      "bestLocalAccuracy": 0.4954954954954955,
+      "improvement": 0.0,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Madhur Day|close": {
+      "rows": 111,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5495495495495496,
+      "bestLocalBlend": 1.0,
+      "bestLocalAccuracy": 0.5765765765765766,
+      "improvement": 0.027027027027026973,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Milan Day|open": {
+      "rows": 96,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.4895833333333333,
+      "bestLocalBlend": 0.25,
+      "bestLocalAccuracy": 0.5,
+      "improvement": 0.010416666666666685,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Milan Day|close": {
+      "rows": 96,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.53125,
+      "bestLocalBlend": 0.5,
+      "bestLocalAccuracy": 0.5833333333333334,
+      "improvement": 0.05208333333333337,
+      "selectedBlend": 0.5,
+      "routed": true
+    },
+    "Rajdhani Day|open": {
+      "rows": 97,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5567010309278351,
+      "bestLocalBlend": 0.25,
+      "bestLocalAccuracy": 0.5773195876288659,
+      "improvement": 0.020618556701030855,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Rajdhani Day|close": {
+      "rows": 97,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5051546391752577,
+      "bestLocalBlend": 1.0,
+      "bestLocalAccuracy": 0.5154639175257731,
+      "improvement": 0.010309278350515427,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Kalyan|open": {
+      "rows": 97,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5773195876288659,
+      "bestLocalBlend": 0.0,
+      "bestLocalAccuracy": 0.6185567010309279,
+      "improvement": 0.04123711340206193,
+      "selectedBlend": 0.0,
+      "routed": true
+    },
+    "Kalyan|close": {
+      "rows": 97,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5360824742268041,
+      "bestLocalBlend": 0.75,
+      "bestLocalAccuracy": 0.5360824742268041,
+      "improvement": 0.0,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Sridevi Night|open": {
+      "rows": 121,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.49586776859504134,
+      "bestLocalBlend": 0.75,
+      "bestLocalAccuracy": 0.49586776859504134,
+      "improvement": 0.0,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Sridevi Night|close": {
+      "rows": 121,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.39669421487603307,
+      "bestLocalBlend": 1.0,
+      "bestLocalAccuracy": 0.4214876033057851,
+      "improvement": 0.02479338842975204,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Kalyan Night|open": {
+      "rows": 80,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5,
+      "bestLocalBlend": 0.0,
+      "bestLocalAccuracy": 0.525,
+      "improvement": 0.025000000000000022,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Kalyan Night|close": {
+      "rows": 80,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5375,
+      "bestLocalBlend": 0.25,
+      "bestLocalAccuracy": 0.55,
+      "improvement": 0.012500000000000067,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Madhur Night|open": {
+      "rows": 97,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.6082474226804123,
+      "bestLocalBlend": 1.0,
+      "bestLocalAccuracy": 0.6288659793814433,
+      "improvement": 0.020618556701030966,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Madhur Night|close": {
+      "rows": 97,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.4948453608247423,
+      "bestLocalBlend": 0.75,
+      "bestLocalAccuracy": 0.4948453608247423,
+      "improvement": 0.0,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Milan Night|open": {
+      "rows": 94,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.44680851063829785,
+      "bestLocalBlend": 0.0,
+      "bestLocalAccuracy": 0.5,
+      "improvement": 0.05319148936170215,
+      "selectedBlend": 0.0,
+      "routed": true
+    },
+    "Milan Night|close": {
+      "rows": 94,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5425531914893617,
+      "bestLocalBlend": 0.75,
+      "bestLocalAccuracy": 0.5425531914893617,
+      "improvement": 0.0,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Rajdhani Night|open": {
+      "rows": 82,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5121951219512195,
+      "bestLocalBlend": 1.0,
+      "bestLocalAccuracy": 0.5365853658536586,
+      "improvement": 0.024390243902439046,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Rajdhani Night|close": {
+      "rows": 82,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5,
+      "bestLocalBlend": 0.75,
+      "bestLocalAccuracy": 0.5,
+      "improvement": 0.0,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Main Bazar|open": {
+      "rows": 82,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.4878048780487805,
+      "bestLocalBlend": 0.75,
+      "bestLocalAccuracy": 0.4878048780487805,
+      "improvement": 0.0,
+      "selectedBlend": 0.75,
+      "routed": false
+    },
+    "Main Bazar|close": {
+      "rows": 82,
+      "globalBlend": 0.75,
+      "globalAccuracy": 0.5609756097560976,
+      "bestLocalBlend": 0.0,
+      "bestLocalAccuracy": 0.5853658536585366,
+      "improvement": 0.024390243902438935,
+      "selectedBlend": 0.75,
+      "routed": false
+    }
+  },
+  "blocks": {
+    "validation": {
+      "rows": 2348,
+      "hits": 1224,
+      "strictAccuracy": 0.5212947189097104,
+      "avgCorrectAbsentDigits": 1.471039182282794,
+      "appearanceAccuracy": 0.5174616695059625,
+      "absenceAccuracy": 0.5127768313458262,
+      "digitBrier": 0.19995504388947735,
+      "randomReference": 0.5052053757334848,
+      "agreementRate": 0.5485519591141397,
+      "marketMacroAccuracy": 0.5219090085719188,
+      "worstMarketSideAccuracy": 0.39669421487603307,
+      "marketSides": {
+        "Sridevi|open": 0.5785123966942148,
+        "Sridevi|close": 0.5289256198347108,
+        "Time Bazar|open": 0.5,
+        "Time Bazar|close": 0.59375,
+        "Madhur Day|open": 0.4954954954954955,
+        "Madhur Day|close": 0.5495495495495496,
+        "Milan Day|open": 0.4895833333333333,
+        "Milan Day|close": 0.53125,
+        "Rajdhani Day|open": 0.5567010309278351,
+        "Rajdhani Day|close": 0.5051546391752577,
+        "Kalyan|open": 0.5773195876288659,
+        "Kalyan|close": 0.5360824742268041,
+        "Sridevi Night|open": 0.49586776859504134,
+        "Sridevi Night|close": 0.39669421487603307,
+        "Kalyan Night|open": 0.5,
+        "Kalyan Night|close": 0.5375,
+        "Madhur Night|open": 0.6082474226804123,
+        "Madhur Night|close": 0.4948453608247423,
+        "Milan Night|open": 0.44680851063829785,
+        "Milan Night|close": 0.5425531914893617,
+        "Rajdhani Night|open": 0.5121951219512195,
+        "Rajdhani Night|close": 0.5,
+        "Main Bazar|open": 0.4878048780487805,
+        "Main Bazar|close": 0.5609756097560976
+      }
+    },
+    "holdout": {
+      "rows": 2466,
+      "hits": 1246,
+      "strictAccuracy": 0.505271695052717,
+      "avgCorrectAbsentDigits": 1.454176804541768,
+      "appearanceAccuracy": 0.505271695052717,
+      "absenceAccuracy": 0.5113544201135442,
+      "digitBrier": 0.19992752885660667,
+      "randomReference": 0.5060016220600162,
+      "agreementRate": 0.5620437956204379,
+      "marketMacroAccuracy": 0.5045711974110032,
+      "worstMarketSideAccuracy": 0.4174757281553398,
+      "marketSides": {
+        "Sridevi|open": 0.5333333333333333,
+        "Sridevi|close": 0.55,
+        "Time Bazar|open": 0.5145631067961165,
+        "Time Bazar|close": 0.5145631067961165,
+        "Madhur Day|open": 0.525,
+        "Madhur Day|close": 0.48333333333333334,
+        "Milan Day|open": 0.5242718446601942,
+        "Milan Day|close": 0.5922330097087378,
+        "Rajdhani Day|open": 0.5242718446601942,
+        "Rajdhani Day|close": 0.47572815533980584,
+        "Kalyan|open": 0.4368932038834951,
+        "Kalyan|close": 0.4174757281553398,
+        "Sridevi Night|open": 0.4666666666666667,
+        "Sridevi Night|close": 0.5416666666666666,
+        "Kalyan Night|open": 0.5529411764705883,
+        "Kalyan Night|close": 0.47058823529411764,
+        "Madhur Night|open": 0.4854368932038835,
+        "Madhur Night|close": 0.5339805825242718,
+        "Milan Night|open": 0.5048543689320388,
+        "Milan Night|close": 0.4854368932038835,
+        "Rajdhani Night|open": 0.6,
+        "Rajdhani Night|close": 0.4823529411764706,
+        "Main Bazar|open": 0.4235294117647059,
+        "Main Bazar|close": 0.47058823529411764
+      }
+    },
+    "recent": {
+      "rows": 2300,
+      "hits": 1193,
+      "strictAccuracy": 0.518695652173913,
+      "avgCorrectAbsentDigits": 1.471304347826087,
+      "appearanceAccuracy": 0.5165217391304348,
+      "absenceAccuracy": 0.5065217391304347,
+      "digitBrier": 0.19904195027013447,
+      "randomReference": 0.5084637681159421,
+      "agreementRate": 0.5295652173913044,
+      "marketMacroAccuracy": 0.518397707939447,
+      "worstMarketSideAccuracy": 0.45263157894736844,
+      "marketSides": {
+        "Sridevi|open": 0.5132743362831859,
+        "Sridevi|close": 0.5221238938053098,
+        "Time Bazar|open": 0.53125,
+        "Time Bazar|close": 0.4791666666666667,
+        "Madhur Day|open": 0.5929203539823009,
+        "Madhur Day|close": 0.46017699115044247,
+        "Milan Day|open": 0.5,
+        "Milan Day|close": 0.5104166666666666,
+        "Rajdhani Day|open": 0.5625,
+        "Rajdhani Day|close": 0.5625,
+        "Kalyan|open": 0.5520833333333334,
+        "Kalyan|close": 0.4791666666666667,
+        "Sridevi Night|open": 0.504424778761062,
+        "Sridevi Night|close": 0.5486725663716814,
+        "Kalyan Night|open": 0.4805194805194805,
+        "Kalyan Night|close": 0.4675324675324675,
+        "Madhur Night|open": 0.5208333333333334,
+        "Madhur Night|close": 0.5416666666666666,
+        "Milan Night|open": 0.45263157894736844,
+        "Milan Night|close": 0.4842105263157895,
+        "Rajdhani Night|open": 0.5875,
+        "Rajdhani Night|close": 0.55,
+        "Main Bazar|open": 0.5189873417721519,
+        "Main Bazar|close": 0.5189873417721519
+      }
+    },
+    "post_cache": {
+      "rows": 288,
+      "hits": 132,
+      "strictAccuracy": 0.4583333333333333,
+      "avgCorrectAbsentDigits": 1.3888888888888888,
+      "appearanceAccuracy": 0.4861111111111111,
+      "absenceAccuracy": 0.4826388888888889,
+      "digitBrier": 0.20169553897701667,
+      "randomReference": 0.5001543209876543,
+      "agreementRate": 0.4756944444444444,
+      "marketMacroAccuracy": 0.4583333333333333,
+      "worstMarketSideAccuracy": 0.08333333333333333,
+      "marketSides": {
+        "Sridevi|open": 0.6428571428571429,
+        "Sridevi|close": 0.35714285714285715,
+        "Time Bazar|open": 0.4166666666666667,
+        "Time Bazar|close": 0.4166666666666667,
+        "Madhur Day|open": 0.35714285714285715,
+        "Madhur Day|close": 0.5714285714285714,
+        "Milan Day|open": 0.6666666666666666,
+        "Milan Day|close": 0.4166666666666667,
+        "Rajdhani Day|open": 0.5833333333333334,
+        "Rajdhani Day|close": 0.3333333333333333,
+        "Kalyan|open": 0.75,
+        "Kalyan|close": 0.4166666666666667,
+        "Sridevi Night|open": 0.35714285714285715,
+        "Sridevi Night|close": 0.21428571428571427,
+        "Kalyan Night|open": 0.5,
+        "Kalyan Night|close": 0.3,
+        "Madhur Night|open": 0.5833333333333334,
+        "Madhur Night|close": 0.6666666666666666,
+        "Milan Night|open": 0.08333333333333333,
+        "Milan Night|close": 0.6666666666666666,
+        "Rajdhani Night|open": 0.6,
+        "Rajdhani Night|close": 0.2,
+        "Main Bazar|open": 0.5,
+        "Main Bazar|close": 0.4
+      }
+    },
+    "independent_extension": {
+      "rows": 88,
+      "hits": 53,
+      "strictAccuracy": 0.6022727272727273,
+      "avgCorrectAbsentDigits": 1.5681818181818181,
+      "appearanceAccuracy": 0.5909090909090909,
+      "absenceAccuracy": 0.6363636363636364,
+      "digitBrier": 0.19397576479695255,
+      "randomReference": 0.5234848484848486,
+      "agreementRate": 0.6022727272727273,
+      "marketMacroAccuracy": 0.6022727272727273,
+      "worstMarketSideAccuracy": 0.25,
+      "marketSides": {
+        "Sridevi|open": 0.75,
+        "Sridevi|close": 0.75,
+        "Time Bazar|open": 0.25,
+        "Time Bazar|close": 0.5,
+        "Madhur Day|open": 0.75,
+        "Madhur Day|close": 0.5,
+        "Milan Day|open": 0.25,
+        "Milan Day|close": 0.5,
+        "Kalyan|open": 0.5,
+        "Kalyan|close": 0.75,
+        "Sridevi Night|open": 1.0,
+        "Sridevi Night|close": 0.75,
+        "Kalyan Night|open": 0.75,
+        "Kalyan Night|close": 1.0,
+        "Madhur Night|open": 0.5,
+        "Madhur Night|close": 0.75,
+        "Milan Night|open": 0.5,
+        "Milan Night|close": 0.5,
+        "Rajdhani Night|open": 0.5,
+        "Rajdhani Night|close": 0.5,
+        "Main Bazar|open": 0.5,
+        "Main Bazar|close": 0.5
+      }
+    }
+  },
+  "routedBlocks": {
+    "validation": {
+      "rows": 2348,
+      "hits": 1238,
+      "strictAccuracy": 0.5272572402044293,
+      "avgCorrectAbsentDigits": 1.4770017035775127,
+      "marketMacroAccuracy": 0.5280136725759647,
+      "worstMarketSideAccuracy": 0.39669421487603307,
+      "marketSides": {
+        "Sridevi|open": 0.5785123966942148,
+        "Sridevi|close": 0.5289256198347108,
+        "Time Bazar|open": 0.5,
+        "Time Bazar|close": 0.59375,
+        "Madhur Day|open": 0.4954954954954955,
+        "Madhur Day|close": 0.5495495495495496,
+        "Milan Day|open": 0.4895833333333333,
+        "Milan Day|close": 0.5833333333333334,
+        "Rajdhani Day|open": 0.5567010309278351,
+        "Rajdhani Day|close": 0.5051546391752577,
+        "Kalyan|open": 0.6185567010309279,
+        "Kalyan|close": 0.5360824742268041,
+        "Sridevi Night|open": 0.49586776859504134,
+        "Sridevi Night|close": 0.39669421487603307,
+        "Kalyan Night|open": 0.5,
+        "Kalyan Night|close": 0.5375,
+        "Madhur Night|open": 0.6082474226804123,
+        "Madhur Night|close": 0.4948453608247423,
+        "Milan Night|open": 0.5,
+        "Milan Night|close": 0.5425531914893617,
+        "Rajdhani Night|open": 0.5121951219512195,
+        "Rajdhani Night|close": 0.5,
+        "Main Bazar|open": 0.4878048780487805,
+        "Main Bazar|close": 0.5609756097560976
+      }
+    },
+    "holdout": {
+      "rows": 2466,
+      "hits": 1248,
+      "strictAccuracy": 0.5060827250608273,
+      "avgCorrectAbsentDigits": 1.4570154095701542,
+      "marketMacroAccuracy": 0.5053802588996764,
+      "worstMarketSideAccuracy": 0.4174757281553398,
+      "marketSides": {
+        "Sridevi|open": 0.5333333333333333,
+        "Sridevi|close": 0.55,
+        "Time Bazar|open": 0.5145631067961165,
+        "Time Bazar|close": 0.5145631067961165,
+        "Madhur Day|open": 0.525,
+        "Madhur Day|close": 0.48333333333333334,
+        "Milan Day|open": 0.5242718446601942,
+        "Milan Day|close": 0.6019417475728155,
+        "Rajdhani Day|open": 0.5242718446601942,
+        "Rajdhani Day|close": 0.47572815533980584,
+        "Kalyan|open": 0.4854368932038835,
+        "Kalyan|close": 0.4174757281553398,
+        "Sridevi Night|open": 0.4666666666666667,
+        "Sridevi Night|close": 0.5416666666666666,
+        "Kalyan Night|open": 0.5529411764705883,
+        "Kalyan Night|close": 0.47058823529411764,
+        "Madhur Night|open": 0.4854368932038835,
+        "Madhur Night|close": 0.5339805825242718,
+        "Milan Night|open": 0.46601941747572817,
+        "Milan Night|close": 0.4854368932038835,
+        "Rajdhani Night|open": 0.6,
+        "Rajdhani Night|close": 0.4823529411764706,
+        "Main Bazar|open": 0.4235294117647059,
+        "Main Bazar|close": 0.47058823529411764
+      }
+    },
+    "recent": {
+      "rows": 2300,
+      "hits": 1191,
+      "strictAccuracy": 0.5178260869565218,
+      "avgCorrectAbsentDigits": 1.4678260869565218,
+      "marketMacroAccuracy": 0.5175387898107919,
+      "worstMarketSideAccuracy": 0.4479166666666667,
+      "marketSides": {
+        "Sridevi|open": 0.5132743362831859,
+        "Sridevi|close": 0.5221238938053098,
+        "Time Bazar|open": 0.53125,
+        "Time Bazar|close": 0.4791666666666667,
+        "Madhur Day|open": 0.5929203539823009,
+        "Madhur Day|close": 0.46017699115044247,
+        "Milan Day|open": 0.5,
+        "Milan Day|close": 0.4479166666666667,
+        "Rajdhani Day|open": 0.5625,
+        "Rajdhani Day|close": 0.5625,
+        "Kalyan|open": 0.5729166666666666,
+        "Kalyan|close": 0.4791666666666667,
+        "Sridevi Night|open": 0.504424778761062,
+        "Sridevi Night|close": 0.5486725663716814,
+        "Kalyan Night|open": 0.4805194805194805,
+        "Kalyan Night|close": 0.4675324675324675,
+        "Madhur Night|open": 0.5208333333333334,
+        "Madhur Night|close": 0.5416666666666666,
+        "Milan Night|open": 0.47368421052631576,
+        "Milan Night|close": 0.4842105263157895,
+        "Rajdhani Night|open": 0.5875,
+        "Rajdhani Night|close": 0.55,
+        "Main Bazar|open": 0.5189873417721519,
+        "Main Bazar|close": 0.5189873417721519
+      }
+    },
+    "post_cache": {
+      "rows": 288,
+      "hits": 133,
+      "strictAccuracy": 0.4618055555555556,
+      "avgCorrectAbsentDigits": 1.3888888888888888,
+      "marketMacroAccuracy": 0.4618055555555556,
+      "worstMarketSideAccuracy": 0.08333333333333333,
+      "marketSides": {
+        "Sridevi|open": 0.6428571428571429,
+        "Sridevi|close": 0.35714285714285715,
+        "Time Bazar|open": 0.4166666666666667,
+        "Time Bazar|close": 0.4166666666666667,
+        "Madhur Day|open": 0.35714285714285715,
+        "Madhur Day|close": 0.5714285714285714,
+        "Milan Day|open": 0.6666666666666666,
+        "Milan Day|close": 0.5,
+        "Rajdhani Day|open": 0.5833333333333334,
+        "Rajdhani Day|close": 0.3333333333333333,
+        "Kalyan|open": 0.75,
+        "Kalyan|close": 0.4166666666666667,
+        "Sridevi Night|open": 0.35714285714285715,
+        "Sridevi Night|close": 0.21428571428571427,
+        "Kalyan Night|open": 0.5,
+        "Kalyan Night|close": 0.3,
+        "Madhur Night|open": 0.5833333333333334,
+        "Madhur Night|close": 0.6666666666666666,
+        "Milan Night|open": 0.08333333333333333,
+        "Milan Night|close": 0.6666666666666666,
+        "Rajdhani Night|open": 0.6,
+        "Rajdhani Night|close": 0.2,
+        "Main Bazar|open": 0.5,
+        "Main Bazar|close": 0.4
+      }
+    },
+    "independent_extension": {
+      "rows": 88,
+      "hits": 54,
+      "strictAccuracy": 0.6136363636363636,
+      "avgCorrectAbsentDigits": 1.5795454545454546,
+      "marketMacroAccuracy": 0.6136363636363636,
+      "worstMarketSideAccuracy": 0.25,
+      "marketSides": {
+        "Sridevi|open": 0.75,
+        "Sridevi|close": 0.75,
+        "Time Bazar|open": 0.25,
+        "Time Bazar|close": 0.5,
+        "Madhur Day|open": 0.75,
+        "Madhur Day|close": 0.5,
+        "Milan Day|open": 0.25,
+        "Milan Day|close": 0.5,
+        "Kalyan|open": 0.5,
+        "Kalyan|close": 0.75,
+        "Sridevi Night|open": 1.0,
+        "Sridevi Night|close": 0.75,
+        "Kalyan Night|open": 0.75,
+        "Kalyan Night|close": 1.0,
+        "Madhur Night|open": 0.5,
+        "Madhur Night|close": 0.75,
+        "Milan Night|open": 0.75,
+        "Milan Night|close": 0.5,
+        "Rajdhani Night|open": 0.5,
+        "Rajdhani Night|close": 0.5,
+        "Main Bazar|open": 0.5,
+        "Main Bazar|close": 0.5
+      }
+    }
+  },
+  "routedComparisons": {
+    "validation": {
+      "routedOnly": 23,
+      "globalOnly": 9,
+      "exactSignP": 0.020061607006937265
+    },
+    "holdout": {
+      "routedOnly": 17,
+      "globalOnly": 15,
+      "exactSignP": 0.860050065908581
+    },
+    "recent": {
+      "routedOnly": 17,
+      "globalOnly": 19,
+      "exactSignP": 0.8679394004284404
+    },
+    "post_cache": {
+      "routedOnly": 3,
+      "globalOnly": 2,
+      "exactSignP": 1.0
+    },
+    "independent_extension": {
+      "routedOnly": 1,
+      "globalOnly": 0,
+      "exactSignP": 1.0
+    }
+  },
+  "pairedComparisons": {
+    "validation": {
+      "appearance": {
+        "ensembleOnly": 60,
+        "comparatorOnly": 51,
+        "both": 1164,
+        "neither": 1073,
+        "exactSignP": 0.44780613214374804
+      },
+      "absence": {
+        "ensembleOnly": 167,
+        "comparatorOnly": 147,
+        "both": 1057,
+        "neither": 977,
+        "exactSignP": 0.28359719828723245
+      }
+    },
+    "holdout": {
+      "appearance": {
+        "ensembleOnly": 51,
+        "comparatorOnly": 51,
+        "both": 1195,
+        "neither": 1169,
+        "exactSignP": 1.0
+      },
+      "absence": {
+        "ensembleOnly": 148,
+        "comparatorOnly": 163,
+        "both": 1098,
+        "neither": 1057,
+        "exactSignP": 0.427319132680718
+      }
+    },
+    "recent": {
+      "appearance": {
+        "ensembleOnly": 63,
+        "comparatorOnly": 58,
+        "both": 1130,
+        "neither": 1049,
+        "exactSignP": 0.7162941145766412
+      },
+      "absence": {
+        "ensembleOnly": 169,
+        "comparatorOnly": 141,
+        "both": 1024,
+        "neither": 966,
+        "exactSignP": 0.12501633584465424
+      }
+    },
+    "post_cache": {
+      "appearance": {
+        "ensembleOnly": 5,
+        "comparatorOnly": 13,
+        "both": 127,
+        "neither": 143,
+        "exactSignP": 0.09625244140625
+      },
+      "absence": {
+        "ensembleOnly": 17,
+        "comparatorOnly": 24,
+        "both": 115,
+        "neither": 132,
+        "exactSignP": 0.34888887944907765
+      }
+    },
+    "independent_extension": {
+      "appearance": {
+        "ensembleOnly": 3,
+        "comparatorOnly": 2,
+        "both": 50,
+        "neither": 33,
+        "exactSignP": 1.0
+      },
+      "absence": {
+        "ensembleOnly": 4,
+        "comparatorOnly": 7,
+        "both": 49,
+        "neither": 28,
+        "exactSignP": 0.548828125
+      }
+    }
+  },
+  "latest": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        0,
+        1
+      ],
+      "strictCall": false,
+      "confidence": 0.5158461538461538,
+      "historicalReliability": 0.5166666666666667,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4281358041299209,
+        0.6041635569894558
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.24743417518556768,
+        "1": 0.2047007839517358,
+        "2": 0.25344404107601776,
+        "3": 0.2797214822018172,
+        "4": 0.29747274527707385,
+        "5": 0.2633647320312544,
+        "6": 0.2879180746700254,
+        "7": 0.311904627046081,
+        "8": 0.3105275643524439,
+        "9": 0.301978166472914
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7525658248144323,
+        "1": 0.7952992160482641,
+        "2": 0.7465559589239823,
+        "3": 0.7202785177981827,
+        "4": 0.7025272547229262,
+        "5": 0.7366352679687456,
+        "6": 0.7120819253299746,
+        "7": 0.688095372953919,
+        "8": 0.6894724356475561,
+        "9": 0.698021833527086
+      },
+      "mostLikelyDigits": [
+        7,
+        8,
+        9,
+        4,
+        6
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.21165188387875442
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.20904101494969896
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.2141126402096097
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.21311875266292035
+        }
+      ]
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        4,
+        8
+      ],
+      "strictCall": false,
+      "confidence": 0.5004615384615385,
+      "historicalReliability": 0.5,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.41193870541108385,
+        0.5880612945889161
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.26357205991475063,
+        "1": 0.28622900430488857,
+        "2": 0.24314017392701032,
+        "3": 0.2723691796016682,
+        "4": 0.2664008759159306,
+        "5": 0.30270280606941863,
+        "6": 0.3442503762880155,
+        "7": 0.31268544156942096,
+        "8": 0.22422659663511946,
+        "9": 0.26364393540270237
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7364279400852494,
+        "1": 0.7137709956951115,
+        "2": 0.7568598260729897,
+        "3": 0.7276308203983318,
+        "4": 0.7335991240840694,
+        "5": 0.6972971939305814,
+        "6": 0.6557496237119844,
+        "7": 0.6873145584305791,
+        "8": 0.7757734033648805,
+        "9": 0.7363560645972976
+      },
+      "mostLikelyDigits": [
+        6,
+        7,
+        5,
+        1,
+        3
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.20765913569661362
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.20614114456087052
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.2105835707477865
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.20552798792329693
+        }
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        1,
+        7
+      ],
+      "strictCall": false,
+      "confidence": 0.5081538461538462,
+      "historicalReliability": 0.5083333333333333,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4200253978366605,
+        0.5961242827230276
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.28834243860676734,
+        "1": 0.24329652302695565,
+        "2": 0.2927198414464063,
+        "3": 0.2668977702177746,
+        "4": 0.28562883894408253,
+        "5": 0.25823572079018803,
+        "6": 0.2595745003498051,
+        "7": 0.22502641787544542,
+        "8": 0.26790934359632285,
+        "9": 0.31815729151769184
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7116575613932327,
+        "1": 0.7567034769730443,
+        "2": 0.7072801585535937,
+        "3": 0.7331022297822254,
+        "4": 0.7143711610559175,
+        "5": 0.741764279209812,
+        "6": 0.7404254996501949,
+        "7": 0.7749735821245546,
+        "8": 0.7320906564036771,
+        "9": 0.6818427084823082
+      },
+      "mostLikelyDigits": [
+        9,
+        2,
+        0,
+        4,
+        8
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.2088016916111834
+        },
+        {
+          "name": "appearance_long",
+          "weight": 0.20596613712671505
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.20784785410832746
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.2078331080912931
+        }
+      ]
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        8,
+        9
+      ],
+      "strictCall": false,
+      "confidence": 0.4927692307692308,
+      "historicalReliability": 0.49166666666666664,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4038757172769723,
+        0.5799746021633394
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.28321388102708933,
+        "1": 0.26519307452745455,
+        "2": 0.2780705825086184,
+        "3": 0.27543425028356183,
+        "4": 0.28454006861181924,
+        "5": 0.28367007232599245,
+        "6": 0.27866962015343316,
+        "7": 0.26547287644504475,
+        "8": 0.24402209067617273,
+        "9": 0.23970692795382936
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7167861189729107,
+        "1": 0.7348069254725454,
+        "2": 0.7219294174913816,
+        "3": 0.7245657497164382,
+        "4": 0.7154599313881808,
+        "5": 0.7163299276740076,
+        "6": 0.7213303798465669,
+        "7": 0.7345271235549553,
+        "8": 0.7559779093238272,
+        "9": 0.7602930720461707
+      },
+      "mostLikelyDigits": [
+        4,
+        5,
+        0,
+        6,
+        2
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.21382156620160273
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.2113970709711333
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.21852948814494663
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21403774811886273
+        }
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        2,
+        4
+      ],
+      "strictCall": false,
+      "confidence": 0.5773846153846154,
+      "historicalReliability": 0.5833333333333334,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.49388032700164236,
+        0.6676164785952404
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.2947098338428027,
+        "1": 0.26933378825797627,
+        "2": 0.22806527915319585,
+        "3": 0.3006377963220022,
+        "4": 0.22400322402501477,
+        "5": 0.281622573242629,
+        "6": 0.2710223641921958,
+        "7": 0.2485484630199995,
+        "8": 0.2837529240641907,
+        "9": 0.2885750902967627
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7052901661571973,
+        "1": 0.7306662117420237,
+        "2": 0.7719347208468041,
+        "3": 0.6993622036779978,
+        "4": 0.7759967759749853,
+        "5": 0.718377426757371,
+        "6": 0.7289776358078042,
+        "7": 0.7514515369800006,
+        "8": 0.7162470759358093,
+        "9": 0.7114249097032372
+      },
+      "mostLikelyDigits": [
+        3,
+        0,
+        9,
+        8,
+        5
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.2053618353918596
+        },
+        {
+          "name": "appearance_90",
+          "weight": 0.20456190732573237
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.20573873044203075
+        },
+        {
+          "name": "absence_90",
+          "weight": 0.20380064307908863
+        }
+      ]
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        4,
+        7
+      ],
+      "strictCall": false,
+      "confidence": 0.4927692307692308,
+      "historicalReliability": 0.49166666666666664,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4038757172769723,
+        0.5799746021633394
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.2903129091672705,
+        "1": 0.27078948351079635,
+        "2": 0.2628037617813766,
+        "3": 0.31027886610937,
+        "4": 0.2556458666243524,
+        "5": 0.3092038818565363,
+        "6": 0.27572117062381757,
+        "7": 0.2282871995869996,
+        "8": 0.2488675725203922,
+        "9": 0.2898261493636105
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7096870908327295,
+        "1": 0.7292105164892037,
+        "2": 0.7371962382186235,
+        "3": 0.68972113389063,
+        "4": 0.7443541333756476,
+        "5": 0.6907961181434636,
+        "6": 0.7242788293761824,
+        "7": 0.7717128004130004,
+        "8": 0.7511324274796078,
+        "9": 0.7101738506363895
+      },
+      "mostLikelyDigits": [
+        3,
+        5,
+        0,
+        9,
+        6
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_90",
+          "weight": 0.20845042517478846
+        },
+        {
+          "name": "appearance_long",
+          "weight": 0.20816998190289002
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.20965025522478417
+        },
+        {
+          "name": "absence_90",
+          "weight": 0.20872861962213202
+        }
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        5,
+        9
+      ],
+      "strictCall": false,
+      "confidence": 0.5004615384615385,
+      "historicalReliability": 0.5,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.41193870541108385,
+        0.5880612945889161
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.3049132269262266,
+        "1": 0.314368495905052,
+        "2": 0.25670508351006543,
+        "3": 0.2794797413289929,
+        "4": 0.2704438886475013,
+        "5": 0.2393612738933656,
+        "6": 0.24530832371592073,
+        "7": 0.2934879497925421,
+        "8": 0.2708786340646312,
+        "9": 0.25656017743827497
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.6950867730737734,
+        "1": 0.685631504094948,
+        "2": 0.7432949164899345,
+        "3": 0.7205202586710071,
+        "4": 0.7295561113524986,
+        "5": 0.7606387261066344,
+        "6": 0.7546916762840793,
+        "7": 0.7065120502074579,
+        "8": 0.7291213659353688,
+        "9": 0.743439822561725
+      },
+      "mostLikelyDigits": [
+        1,
+        0,
+        7,
+        3,
+        8
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.20676955940736008
+        },
+        {
+          "name": "appearance_weekday",
+          "weight": 0.20670273861821092
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.20913393269668656
+        },
+        {
+          "name": "absence_weekday",
+          "weight": 0.20836138311287805
+        }
+      ]
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        5,
+        8
+      ],
+      "strictCall": false,
+      "confidence": 0.5081538461538462,
+      "historicalReliability": 0.5083333333333333,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4200253978366605,
+        0.5961242827230276
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.26619387401900524,
+        "1": 0.2717315283989808,
+        "2": 0.28751917378799524,
+        "3": 0.26498269999318136,
+        "4": 0.2652817768130071,
+        "5": 0.22707680410584496,
+        "6": 0.29295212457949915,
+        "7": 0.2837768654321619,
+        "8": 0.27187130956851296,
+        "9": 0.26093014333401426
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7338061259809947,
+        "1": 0.7282684716010193,
+        "2": 0.7124808262120048,
+        "3": 0.7350173000068186,
+        "4": 0.7347182231869929,
+        "5": 0.772923195894155,
+        "6": 0.7070478754205008,
+        "7": 0.716223134567838,
+        "8": 0.728128690431487,
+        "9": 0.7390698566659857
+      },
+      "mostLikelyDigits": [
+        6,
+        2,
+        7,
+        8,
+        1
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.21619350246790098
+        },
+        {
+          "name": "appearance_weekday",
+          "weight": 0.21186118363194664
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.2155487158875424
+        },
+        {
+          "name": "absence_weekday",
+          "weight": 0.2145310950454115
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "asOf": "2026-07-18",
+      "candidateAvoidDigits": [
+        2,
+        8
+      ],
+      "strictCall": false,
+      "confidence": 0.5543076923076923,
+      "historicalReliability": 0.5583333333333333,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4690452309131966,
+        0.6440025330046214
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.3584763523241691,
+        "1": 0.29646805116459235,
+        "2": 0.21735105758815038,
+        "3": 0.2712774854500386,
+        "4": 0.26314473603630123,
+        "5": 0.2488417391810079,
+        "6": 0.24329097648037484,
+        "7": 0.25903788933375693,
+        "8": 0.23310772796423826,
+        "9": 0.351925531768504
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.6415236476758309,
+        "1": 0.7035319488354077,
+        "2": 0.7826489424118497,
+        "3": 0.7287225145499614,
+        "4": 0.7368552639636987,
+        "5": 0.7511582608189921,
+        "6": 0.7567090235196252,
+        "7": 0.7409621106662431,
+        "8": 0.7668922720357617,
+        "9": 0.6480744682314961
+      },
+      "mostLikelyDigits": [
+        0,
+        9,
+        1,
+        3,
+        4
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.2076075017860164
+        },
+        {
+          "name": "appearance_90",
+          "weight": 0.20602381109957163
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21022642911579745
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.2095467771603736
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "asOf": "2026-07-18",
+      "candidateAvoidDigits": [
+        1,
+        9
+      ],
+      "strictCall": false,
+      "confidence": 0.5158461538461538,
+      "historicalReliability": 0.5166666666666667,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4281358041299209,
+        0.6041635569894558
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.3455525599850325,
+        "1": 0.2450090816883624,
+        "2": 0.234389484444233,
+        "3": 0.3096854605711579,
+        "4": 0.26449388461501155,
+        "5": 0.2688289347675389,
+        "6": 0.27664526648953036,
+        "7": 0.30170761166768506,
+        "8": 0.2839997432820597,
+        "9": 0.23638554363497483
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.6544474400149676,
+        "1": 0.7549909183116376,
+        "2": 0.765610515555767,
+        "3": 0.6903145394288421,
+        "4": 0.7355061153849884,
+        "5": 0.7311710652324611,
+        "6": 0.7233547335104696,
+        "7": 0.6982923883323149,
+        "8": 0.7160002567179403,
+        "9": 0.7636144563650251
+      },
+      "mostLikelyDigits": [
+        0,
+        3,
+        7,
+        8,
+        6
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.21182554610840515
+        },
+        {
+          "name": "appearance_weekday",
+          "weight": 0.2102825281152629
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.2117303473084442
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.20959514291972328
+        }
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        1,
+        3
+      ],
+      "strictCall": false,
+      "confidence": 0.5312307692307693,
+      "historicalReliability": 0.5333333333333333,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4444278926967431,
+        0.6201708295420101
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.2555318107237805,
+        "1": 0.24758393599997955,
+        "2": 0.23724462574225458,
+        "3": 0.23304889493086803,
+        "4": 0.2796296413396783,
+        "5": 0.291858742355818,
+        "6": 0.2835018256016185,
+        "7": 0.3083386319768784,
+        "8": 0.29103087058355886,
+        "9": 0.2999403461155429
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7444681892762195,
+        "1": 0.7524160640000205,
+        "2": 0.7627553742577454,
+        "3": 0.766951105069132,
+        "4": 0.7203703586603216,
+        "5": 0.708141257644182,
+        "6": 0.7164981743983815,
+        "7": 0.6916613680231216,
+        "8": 0.7089691294164411,
+        "9": 0.7000596538844571
+      },
+      "mostLikelyDigits": [
+        7,
+        9,
+        5,
+        8,
+        6
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.21210354413766233
+        },
+        {
+          "name": "appearance_long",
+          "weight": 0.21061120590907334
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21379593119279064
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.20814066855653593
+        }
+      ]
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        3,
+        4
+      ],
+      "strictCall": false,
+      "confidence": 0.4696923076923077,
+      "historicalReliability": 0.4666666666666667,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.37982917045799003,
+        0.555572107303257
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.27105551525865096,
+        "1": 0.28074885100442337,
+        "2": 0.2919088486978488,
+        "3": 0.22870002644123735,
+        "4": 0.26600375867839815,
+        "5": 0.2854082365568547,
+        "6": 0.2663270977658885,
+        "7": 0.3036086634546987,
+        "8": 0.30117184853954054,
+        "9": 0.2748257992964243
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7289444847413491,
+        "1": 0.7192511489955766,
+        "2": 0.7080911513021513,
+        "3": 0.7712999735587627,
+        "4": 0.7339962413216019,
+        "5": 0.7145917634431453,
+        "6": 0.7336729022341115,
+        "7": 0.6963913365453013,
+        "8": 0.6988281514604595,
+        "9": 0.7251742007035757
+      },
+      "mostLikelyDigits": [
+        7,
+        8,
+        2,
+        5,
+        1
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.20879534336026204
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.2083113719981442
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.2112469516727684
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.21046977612895706
+        }
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        4,
+        9
+      ],
+      "strictCall": false,
+      "confidence": 0.5081538461538462,
+      "historicalReliability": 0.5083333333333333,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4200253978366605,
+        0.5961242827230276
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.31060803219950256,
+        "1": 0.26900859440588,
+        "2": 0.27248654315021886,
+        "3": 0.2876919365117491,
+        "4": 0.2449129563362016,
+        "5": 0.280525311554124,
+        "6": 0.25855384328428277,
+        "7": 0.2703969197180585,
+        "8": 0.2555011663789955,
+        "9": 0.2500044550481654
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.6893919678004974,
+        "1": 0.73099140559412,
+        "2": 0.7275134568497812,
+        "3": 0.7123080634882508,
+        "4": 0.7550870436637984,
+        "5": 0.719474688445876,
+        "6": 0.7414461567157172,
+        "7": 0.7296030802819415,
+        "8": 0.7444988336210046,
+        "9": 0.7499955449518346
+      },
+      "mostLikelyDigits": [
+        0,
+        3,
+        5,
+        2,
+        7
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.2108492264709578
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.20943372685883122
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21396203288047336
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.2110046366865426
+        }
+      ]
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        1,
+        6
+      ],
+      "strictCall": false,
+      "confidence": 0.5158461538461538,
+      "historicalReliability": 0.5166666666666667,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4281358041299209,
+        0.6041635569894558
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.2908114528212297,
+        "1": 0.2438745118176381,
+        "2": 0.2722042247515272,
+        "3": 0.3090246362021183,
+        "4": 0.2903217685564208,
+        "5": 0.2748054038341944,
+        "6": 0.26934634728089324,
+        "7": 0.2986475493055693,
+        "8": 0.2866527081933379,
+        "9": 0.27070245205244653
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7091885471787702,
+        "1": 0.7561254881823619,
+        "2": 0.7277957752484727,
+        "3": 0.6909753637978817,
+        "4": 0.7096782314435792,
+        "5": 0.7251945961658056,
+        "6": 0.7306536527191068,
+        "7": 0.7013524506944306,
+        "8": 0.7133472918066621,
+        "9": 0.7292975479475534
+      },
+      "mostLikelyDigits": [
+        3,
+        7,
+        0,
+        4,
+        8
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.21530812690734177
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.21308232367977237
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.21608219996601297
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21606556322107384
+        }
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        0,
+        3
+      ],
+      "strictCall": false,
+      "confidence": 0.5004615384615385,
+      "historicalReliability": 0.5,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.41193870541108385,
+        0.5880612945889161
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.24402113970065156,
+        "1": 0.2960449621786549,
+        "2": 0.25713160483294556,
+        "3": 0.25744155207691527,
+        "4": 0.25682104002820816,
+        "5": 0.25902337312501716,
+        "6": 0.27505381299388404,
+        "7": 0.3134156705832302,
+        "8": 0.2866490229806289,
+        "9": 0.28595798875338546
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7559788602993485,
+        "1": 0.703955037821345,
+        "2": 0.7428683951670545,
+        "3": 0.7425584479230847,
+        "4": 0.7431789599717918,
+        "5": 0.7409766268749829,
+        "6": 0.724946187006116,
+        "7": 0.6865843294167697,
+        "8": 0.7133509770193711,
+        "9": 0.7140420112466146
+      },
+      "mostLikelyDigits": [
+        7,
+        1,
+        8,
+        9,
+        6
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.20886934552338682
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.2036301774914078
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21122082231378003
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.20552973138303565
+        }
+      ]
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        0,
+        9
+      ],
+      "strictCall": false,
+      "confidence": 0.48507692307692307,
+      "historicalReliability": 0.48333333333333334,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.3958364430105443,
+        0.5718641958700792
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.23772710520915774,
+        "1": 0.27268153259837746,
+        "2": 0.2720789964027423,
+        "3": 0.2916235215638192,
+        "4": 0.27138138129059824,
+        "5": 0.3524888340803079,
+        "6": 0.25862579345621084,
+        "7": 0.28861579711333124,
+        "8": 0.27728817623526786,
+        "9": 0.2501647103172229
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7622728947908423,
+        "1": 0.7273184674016225,
+        "2": 0.7279210035972576,
+        "3": 0.7083764784361808,
+        "4": 0.7286186187094017,
+        "5": 0.6475111659196922,
+        "6": 0.7413742065437892,
+        "7": 0.7113842028866688,
+        "8": 0.7227118237647321,
+        "9": 0.7498352896827771
+      },
+      "mostLikelyDigits": [
+        5,
+        3,
+        7,
+        8,
+        1
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.20453230041051504
+        },
+        {
+          "name": "appearance_weekday",
+          "weight": 0.20196736933644646
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.20548812810085754
+        },
+        {
+          "name": "absence_weekday",
+          "weight": 0.2032743341252858
+        }
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        2,
+        8
+      ],
+      "strictCall": false,
+      "confidence": 0.5158461538461538,
+      "historicalReliability": 0.5166666666666667,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4281358041299209,
+        0.6041635569894558
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.28518308896838795,
+        "1": 0.30134153816853454,
+        "2": 0.2531993109542829,
+        "3": 0.26420509372286294,
+        "4": 0.2774497445817036,
+        "5": 0.28160365966984713,
+        "6": 0.33389009311231793,
+        "7": 0.28848676707220433,
+        "8": 0.2315088405032856,
+        "9": 0.26186574935876644
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.714816911031612,
+        "1": 0.6986584618314655,
+        "2": 0.7468006890457171,
+        "3": 0.7357949062771371,
+        "4": 0.7225502554182964,
+        "5": 0.7183963403301529,
+        "6": 0.6661099068876821,
+        "7": 0.7115132329277957,
+        "8": 0.7684911594967144,
+        "9": 0.7381342506412336
+      },
+      "mostLikelyDigits": [
+        6,
+        1,
+        7,
+        0,
+        5
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_long",
+          "weight": 0.20803721144813964
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.20580629623148483
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21023386646825726
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.20951075724226342
+        }
+      ]
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        6,
+        8
+      ],
+      "strictCall": false,
+      "confidence": 0.538923076923077,
+      "historicalReliability": 0.5416666666666666,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4526096906236998,
+        0.6281387121747415
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.3374784914557126,
+        "1": 0.25211371334225596,
+        "2": 0.2809683087374091,
+        "3": 0.30382070996594723,
+        "4": 0.33494723609984217,
+        "5": 0.24901491353775126,
+        "6": 0.2305867157386507,
+        "7": 0.2814076059265177,
+        "8": 0.2192762102963225,
+        "9": 0.2773697694234746
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.6625215085442874,
+        "1": 0.747886286657744,
+        "2": 0.7190316912625909,
+        "3": 0.6961792900340528,
+        "4": 0.6650527639001578,
+        "5": 0.7509850864622487,
+        "6": 0.7694132842613493,
+        "7": 0.7185923940734823,
+        "8": 0.7807237897036775,
+        "9": 0.7226302305765254
+      },
+      "mostLikelyDigits": [
+        0,
+        4,
+        3,
+        7,
+        2
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.21420927246148225
+        },
+        {
+          "name": "appearance_90",
+          "weight": 0.20930613960627298
+        },
+        {
+          "name": "absence_90",
+          "weight": 0.21111288248714413
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.20892932517214444
+        }
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        8,
+        9
+      ],
+      "strictCall": false,
+      "confidence": 0.4389230769230769,
+      "historicalReliability": 0.43333333333333335,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.34810176437788437,
+        0.5227007911446095
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.29791150003798356,
+        "1": 0.2804432983183288,
+        "2": 0.28251706656677683,
+        "3": 0.2869418960086831,
+        "4": 0.28068634090106276,
+        "5": 0.27488468037793984,
+        "6": 0.27392508471762794,
+        "7": 0.30034265105672864,
+        "8": 0.25321556379539345,
+        "9": 0.2713518025106642
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7020884999620165,
+        "1": 0.7195567016816712,
+        "2": 0.7174829334332231,
+        "3": 0.7130581039913169,
+        "4": 0.7193136590989373,
+        "5": 0.7251153196220601,
+        "6": 0.726074915282372,
+        "7": 0.6996573489432714,
+        "8": 0.7467844362046065,
+        "9": 0.7286481974893357
+      },
+      "mostLikelyDigits": [
+        7,
+        0,
+        3,
+        2,
+        4
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_weekday",
+          "weight": 0.20826150881501337
+        },
+        {
+          "name": "appearance_long",
+          "weight": 0.2081267381181279
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.20906210283651244
+        },
+        {
+          "name": "absence_weekday",
+          "weight": 0.2087570247017406
+        }
+      ]
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        0,
+        3
+      ],
+      "strictCall": false,
+      "confidence": 0.4927692307692308,
+      "historicalReliability": 0.49166666666666664,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4038757172769723,
+        0.5799746021633394
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.2671084508239176,
+        "1": 0.27583424607164836,
+        "2": 0.3050060079102392,
+        "3": 0.21156120814058108,
+        "4": 0.2582014327525596,
+        "5": 0.26988722656165826,
+        "6": 0.2918378059409083,
+        "7": 0.3052547419210592,
+        "8": 0.2567882969942749,
+        "9": 0.33344045651582627
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7328915491760823,
+        "1": 0.7241657539283517,
+        "2": 0.6949939920897608,
+        "3": 0.7884387918594189,
+        "4": 0.7417985672474404,
+        "5": 0.7301127734383417,
+        "6": 0.7081621940590916,
+        "7": 0.6947452580789408,
+        "8": 0.743211703005725,
+        "9": 0.6665595434841738
+      },
+      "mostLikelyDigits": [
+        9,
+        7,
+        2,
+        6,
+        1
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_30",
+          "weight": 0.21521900781337977
+        },
+        {
+          "name": "appearance_90",
+          "weight": 0.2068740889529764
+        },
+        {
+          "name": "absence_30",
+          "weight": 0.2140274062309139
+        },
+        {
+          "name": "absence_90",
+          "weight": 0.2066902783742362
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        8,
+        9
+      ],
+      "strictCall": false,
+      "confidence": 0.5773846153846154,
+      "historicalReliability": 0.5833333333333334,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.49388032700164236,
+        0.6676164785952404
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.2896200642885716,
+        "1": 0.32948709807373766,
+        "2": 0.29745033189119063,
+        "3": 0.24808823136628663,
+        "4": 0.2479055654247893,
+        "5": 0.26949005927102754,
+        "6": 0.28492457780186936,
+        "7": 0.2515244270759461,
+        "8": 0.25135168346000986,
+        "9": 0.25775540004923064
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7103799357114284,
+        "1": 0.6705129019262623,
+        "2": 0.7025496681088094,
+        "3": 0.7519117686337133,
+        "4": 0.7520944345752107,
+        "5": 0.7305099407289725,
+        "6": 0.7150754221981306,
+        "7": 0.748475572924054,
+        "8": 0.7486483165399902,
+        "9": 0.7422445999507694
+      },
+      "mostLikelyDigits": [
+        1,
+        2,
+        0,
+        6,
+        5
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.2134915448769071
+        },
+        {
+          "name": "appearance_long",
+          "weight": 0.2105267544886488
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21357909827425164
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.20937376179262326
+        }
+      ]
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        3,
+        8
+      ],
+      "strictCall": false,
+      "confidence": 0.5158461538461538,
+      "historicalReliability": 0.5166666666666667,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4281358041299209,
+        0.6041635569894558
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.26263634556305776,
+        "1": 0.29908383415832035,
+        "2": 0.28631419364938687,
+        "3": 0.26476442903286607,
+        "4": 0.27696100617549907,
+        "5": 0.2658638944827212,
+        "6": 0.2739072577023616,
+        "7": 0.2877132122534208,
+        "8": 0.2566215699477933,
+        "9": 0.28891232409209416
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7373636544369422,
+        "1": 0.7009161658416796,
+        "2": 0.7136858063506131,
+        "3": 0.7352355709671339,
+        "4": 0.723038993824501,
+        "5": 0.7341361055172788,
+        "6": 0.7260927422976384,
+        "7": 0.7122867877465793,
+        "8": 0.7433784300522067,
+        "9": 0.7110876759079059
+      },
+      "mostLikelyDigits": [
+        1,
+        9,
+        7,
+        2,
+        4
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_weekday",
+          "weight": 0.21311480976333416
+        },
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.20848404681048413
+        },
+        {
+          "name": "absence_weekday",
+          "weight": 0.21386633993367163
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.21102034197637434
+        }
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        0,
+        6
+      ],
+      "strictCall": false,
+      "confidence": 0.4696923076923077,
+      "historicalReliability": 0.4666666666666667,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.37982917045799003,
+        0.555572107303257
+      ],
+      "familyAgreement": false,
+      "appearanceProbabilityByDigit": {
+        "0": 0.26924867433542976,
+        "1": 0.2805593233560927,
+        "2": 0.27430032963733164,
+        "3": 0.27862688600434826,
+        "4": 0.2737037528642477,
+        "5": 0.28618802317857567,
+        "6": 0.2570194271575596,
+        "7": 0.26415699250665475,
+        "8": 0.27066065151667285,
+        "9": 0.2661314540690257
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7307513256645702,
+        "1": 0.7194406766439073,
+        "2": 0.7256996703626684,
+        "3": 0.7213731139956517,
+        "4": 0.7262962471357524,
+        "5": 0.7138119768214244,
+        "6": 0.7429805728424403,
+        "7": 0.7358430074933453,
+        "8": 0.7293393484833272,
+        "9": 0.7338685459309743
+      },
+      "mostLikelyDigits": [
+        5,
+        1,
+        3,
+        2,
+        4
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.21069166999154623
+        },
+        {
+          "name": "appearance_long",
+          "weight": 0.20962373934234807
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21117832461671784
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.20741198416225792
+        }
+      ]
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "asOf": "2026-07-23",
+      "candidateAvoidDigits": [
+        3,
+        8
+      ],
+      "strictCall": false,
+      "confidence": 0.5081538461538462,
+      "historicalReliability": 0.5083333333333333,
+      "reliabilitySample": 120,
+      "wilson95": [
+        0.4200253978366605,
+        0.5961242827230276
+      ],
+      "familyAgreement": true,
+      "appearanceProbabilityByDigit": {
+        "0": 0.26335564662826244,
+        "1": 0.27806758682920735,
+        "2": 0.2688794914123289,
+        "3": 0.24508342823059337,
+        "4": 0.2918841544398497,
+        "5": 0.26318765539671773,
+        "6": 0.2676306061743622,
+        "7": 0.3009454999682237,
+        "8": 0.25283986947240095,
+        "9": 0.2957028990063727
+      },
+      "absenceProbabilityByDigit": {
+        "0": 0.7366443533717375,
+        "1": 0.7219324131707927,
+        "2": 0.7311205085876711,
+        "3": 0.7549165717694066,
+        "4": 0.7081158455601503,
+        "5": 0.7368123446032823,
+        "6": 0.7323693938256378,
+        "7": 0.6990545000317763,
+        "8": 0.747160130527599,
+        "9": 0.7042971009936273
+      },
+      "mostLikelyDigits": [
+        7,
+        9,
+        4,
+        1,
+        2
+      ],
+      "supportingModels": [
+        {
+          "name": "appearance_prev_kind",
+          "weight": 0.2097803605529346
+        },
+        {
+          "name": "appearance_long",
+          "weight": 0.20880578495283603
+        },
+        {
+          "name": "absence_long",
+          "weight": 0.21093196394541971
+        },
+        {
+          "name": "absence_transition",
+          "weight": 0.2062027720469032
+        }
+      ]
+    }
+  ],
+  "strictCalls": 0,
+  "abstentions": 24
+}

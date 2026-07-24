@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-24T12:19:00.356903+00:00",
+  "purpose": "Selection-stability audit for the validation-chosen global appearance/absence family blend.",
+  "iterations": 6000,
+  "selectedBlend": 0.75,
+  "runnerUpBlend": 0.25,
+  "selectionRobust": false,
+  "validationGrid": {
+    "0.0": {
+      "rows": 2348,
+      "hits": 1204,
+      "strictAccuracy": 0.5127768313458262,
+      "avgCorrectAbsentDigits": 1.4561328790459966
+    },
+    "0.25": {
+      "rows": 2348,
+      "hits": 1217,
+      "strictAccuracy": 0.518313458262351,
+      "avgCorrectAbsentDigits": 1.462947189097104
+    },
+    "0.5": {
+      "rows": 2348,
+      "hits": 1215,
+      "strictAccuracy": 0.5174616695059625,
+      "avgCorrectAbsentDigits": 1.4663543441226576
+    },
+    "0.75": {
+      "rows": 2348,
+      "hits": 1224,
+      "strictAccuracy": 0.5212947189097104,
+      "avgCorrectAbsentDigits": 1.471039182282794
+    },
+    "1.0": {
+      "rows": 2348,
+      "hits": 1215,
+      "strictAccuracy": 0.5174616695059625,
+      "avgCorrectAbsentDigits": 1.4646507666098807
+    }
+  },
+  "weekClusterBootstrap": {
+    "weekClusters": 18,
+    "selectionCounts": {
+      "1.0": 823,
+      "0.75": 3195,
+      "0.25": 1522,
+      "0.5": 344,
+      "0.0": 116
+    },
+    "selectionFrequencies": {
+      "0.0": 0.019333333333333334,
+      "0.25": 0.25366666666666665,
+      "0.5": 0.05733333333333333,
+      "0.75": 0.5325,
+      "1.0": 0.13716666666666666
+    },
+    "selectedVsOthers": {
+      "0.0": {
+        "meanAccuracyDifference": 0.00860242213959286,
+        "clusterBootstrap95": [
+          -0.00443906376109766,
+          0.022764227642276424
+        ],
+        "probabilitySelectedBlendBetter": 0.8928333333333334
+      },
+      "0.25": {
+        "meanAccuracyDifference": 0.0029897633750886263,
+        "clusterBootstrap95": [
+          -0.008757297748123435,
+          0.015584415584415584
+        ],
+        "probabilitySelectedBlendBetter": 0.6635
+      },
+      "0.5": {
+        "meanAccuracyDifference": 0.00381439679330247,
+        "clusterBootstrap95": [
+          -0.0040032025620496394,
+          0.01249024199843872
+        ],
+        "probabilitySelectedBlendBetter": 0.7971666666666667
+      },
+      "1.0": {
+        "meanAccuracyDifference": 0.0038137284188419726,
+        "clusterBootstrap95": [
+          -0.004508566275924256,
+          0.01230899830220713
+        ],
+        "probabilitySelectedBlendBetter": 0.7961666666666667
+      }
+    }
+  },
+  "leaveOneRouteOut": [
+    {
+      "excludedRoute": "Kalyan Night|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2268
+    },
+    {
+      "excludedRoute": "Kalyan Night|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2268
+    },
+    {
+      "excludedRoute": "Kalyan|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2251
+    },
+    {
+      "excludedRoute": "Kalyan|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2251
+    },
+    {
+      "excludedRoute": "Madhur Day|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2237
+    },
+    {
+      "excludedRoute": "Madhur Day|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2237
+    },
+    {
+      "excludedRoute": "Madhur Night|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2251
+    },
+    {
+      "excludedRoute": "Madhur Night|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2251
+    },
+    {
+      "excludedRoute": "Main Bazar|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2266
+    },
+    {
+      "excludedRoute": "Main Bazar|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2266
+    },
+    {
+      "excludedRoute": "Milan Day|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2252
+    },
+    {
+      "excludedRoute": "Milan Day|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2252
+    },
+    {
+      "excludedRoute": "Milan Night|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2254
+    },
+    {
+      "excludedRoute": "Milan Night|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2254
+    },
+    {
+      "excludedRoute": "Rajdhani Day|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2251
+    },
+    {
+      "excludedRoute": "Rajdhani Day|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2251
+    },
+    {
+      "excludedRoute": "Rajdhani Night|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2266
+    },
+    {
+      "excludedRoute": "Rajdhani Night|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2266
+    },
+    {
+      "excludedRoute": "Sridevi Night|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2227
+    },
+    {
+      "excludedRoute": "Sridevi Night|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2227
+    },
+    {
+      "excludedRoute": "Sridevi|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2227
+    },
+    {
+      "excludedRoute": "Sridevi|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2227
+    },
+    {
+      "excludedRoute": "Time Bazar|close",
+      "selectedBlend": 0.75,
+      "remainingRows": 2252
+    },
+    {
+      "excludedRoute": "Time Bazar|open",
+      "selectedBlend": 0.75,
+      "remainingRows": 2252
+    }
+  ],
+  "leaveOneRouteOutStability": 1.0,
+  "leaveOneMonthOut": [
+    {
+      "excludedMonth": "2025-07",
+      "selectedBlend": 0.75
+    },
+    {
+      "excludedMonth": "2025-08",
+      "selectedBlend": 0.75
+    },
+    {
+      "excludedMonth": "2025-09",
+      "selectedBlend": 1.0
+    },
+    {
+      "excludedMonth": "2025-10",
+      "selectedBlend": 0.75
+    },
+    {
+      "excludedMonth": "2025-11",
+      "selectedBlend": 0.25
+    }
+  ],
+  "leaveOneMonthOutStability": 0.6,
+  "descriptiveBlockGrids": {
+    "validation": {
+      "0.0": {
+        "rows": 2348,
+        "hits": 1204,
+        "strictAccuracy": 0.5127768313458262,
+        "avgCorrectAbsentDigits": 1.4561328790459966
+      },
+      "0.25": {
+        "rows": 2348,
+        "hits": 1217,
+        "strictAccuracy": 0.518313458262351,
+        "avgCorrectAbsentDigits": 1.462947189097104
+      },
+      "0.5": {
+        "rows": 2348,
+        "hits": 1215,
+        "strictAccuracy": 0.5174616695059625,
+        "avgCorrectAbsentDigits": 1.4663543441226576
+      },
+      "0.75": {
+        "rows": 2348,
+        "hits": 1224,
+        "strictAccuracy": 0.5212947189097104,
+        "avgCorrectAbsentDigits": 1.471039182282794
+      },
+      "1.0": {
+        "rows": 2348,
+        "hits": 1215,
+        "strictAccuracy": 0.5174616695059625,
+        "avgCorrectAbsentDigits": 1.4646507666098807
+      }
+    },
+    "holdout": {
+      "0.0": {
+        "rows": 2466,
+        "hits": 1261,
+        "strictAccuracy": 0.5113544201135442,
+        "avgCorrectAbsentDigits": 1.456609894566099
+      },
+      "0.25": {
+        "rows": 2466,
+        "hits": 1250,
+        "strictAccuracy": 0.5068937550689375,
+        "avgCorrectAbsentDigits": 1.4509326845093269
+      },
+      "0.5": {
+        "rows": 2466,
+        "hits": 1246,
+        "strictAccuracy": 0.505271695052717,
+        "avgCorrectAbsentDigits": 1.4501216545012166
+      },
+      "0.75": {
+        "rows": 2466,
+        "hits": 1246,
+        "strictAccuracy": 0.505271695052717,
+        "avgCorrectAbsentDigits": 1.454176804541768
+      },
+      "1.0": {
+        "rows": 2466,
+        "hits": 1246,
+        "strictAccuracy": 0.505271695052717,
+        "avgCorrectAbsentDigits": 1.4521492295214924
+      }
+    },
+    "recent": {
+      "0.0": {
+        "rows": 2300,
+        "hits": 1165,
+        "strictAccuracy": 0.5065217391304347,
+        "avgCorrectAbsentDigits": 1.4521739130434783
+      },
+      "0.25": {
+        "rows": 2300,
+        "hits": 1170,
+        "strictAccuracy": 0.508695652173913,
+        "avgCorrectAbsentDigits": 1.4556521739130435
+      },
+      "0.5": {
+        "rows": 2300,
+        "hits": 1177,
+        "strictAccuracy": 0.5117391304347826,
+        "avgCorrectAbsentDigits": 1.4617391304347827
+      },
+      "0.75": {
+        "rows": 2300,
+        "hits": 1193,
+        "strictAccuracy": 0.518695652173913,
+        "avgCorrectAbsentDigits": 1.471304347826087
+      },
+      "1.0": {
+        "rows": 2300,
+        "hits": 1188,
+        "strictAccuracy": 0.5165217391304348,
+        "avgCorrectAbsentDigits": 1.4682608695652173
+      }
+    },
+    "post_cache": {
+      "0.0": {
+        "rows": 288,
+        "hits": 139,
+        "strictAccuracy": 0.4826388888888889,
+        "avgCorrectAbsentDigits": 1.40625
+      },
+      "0.25": {
+        "rows": 288,
+        "hits": 132,
+        "strictAccuracy": 0.4583333333333333,
+        "avgCorrectAbsentDigits": 1.3854166666666667
+      },
+      "0.5": {
+        "rows": 288,
+        "hits": 128,
+        "strictAccuracy": 0.4444444444444444,
+        "avgCorrectAbsentDigits": 1.3715277777777777
+      },
+      "0.75": {
+        "rows": 288,
+        "hits": 132,
+        "strictAccuracy": 0.4583333333333333,
+        "avgCorrectAbsentDigits": 1.3888888888888888
+      },
+      "1.0": {
+        "rows": 288,
+        "hits": 140,
+        "strictAccuracy": 0.4861111111111111,
+        "avgCorrectAbsentDigits": 1.4097222222222223
+      }
+    },
+    "independent_extension": {
+      "0.0": {
+        "rows": 88,
+        "hits": 56,
+        "strictAccuracy": 0.6363636363636364,
+        "avgCorrectAbsentDigits": 1.6136363636363635
+      },
+      "0.25": {
+        "rows": 88,
+        "hits": 54,
+        "strictAccuracy": 0.6136363636363636,
+        "avgCorrectAbsentDigits": 1.5909090909090908
+      },
+      "0.5": {
+        "rows": 88,
+        "hits": 52,
+        "strictAccuracy": 0.5909090909090909,
+        "avgCorrectAbsentDigits": 1.5681818181818181
+      },
+      "0.75": {
+        "rows": 88,
+        "hits": 53,
+        "strictAccuracy": 0.6022727272727273,
+        "avgCorrectAbsentDigits": 1.5681818181818181
+      },
+      "1.0": {
+        "rows": 88,
+        "hits": 52,
+        "strictAccuracy": 0.5909090909090909,
+        "avgCorrectAbsentDigits": 1.5681818181818181
+      }
+    }
+  },
+  "descriptiveBlockOptima": {
+    "validation": 0.75,
+    "holdout": 0.0,
+    "recent": 0.75,
+    "post_cache": 1.0,
+    "independent_extension": 0.0
+  }
+}

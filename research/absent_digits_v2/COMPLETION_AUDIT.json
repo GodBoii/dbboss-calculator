@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-24T12:24:16.316672+00:00",
+  "objective": "Research, build, validate, and continuously improve a market-specific complementary absent-digits prediction engine.",
+  "completionSupported": false,
+  "implementationComplete": true,
+  "prospectiveEvidenceComplete": false,
+  "safeActionableCallsAchieved": false,
+  "currentPerformance": {
+    "validation": {
+      "rows": 2348,
+      "hits": 1224,
+      "strictAccuracy": 0.5212947189097104
+    },
+    "holdout": {
+      "rows": 2466,
+      "hits": 1246,
+      "strictAccuracy": 0.505271695052717
+    },
+    "recent": {
+      "rows": 2300,
+      "hits": 1193,
+      "strictAccuracy": 0.518695652173913
+    },
+    "post_cache": {
+      "rows": 288,
+      "hits": 132,
+      "strictAccuracy": 0.4583333333333333
+    },
+    "independent_extension": {
+      "rows": 88,
+      "hits": 53,
+      "strictAccuracy": 0.6022727272727273
+    }
+  },
+  "prospective": {
+    "journalHash": "c73be5f1b4364d851137e3616d34fcc8f2b19e2aeba05211ba635ee4b248a76f",
+    "cohorts": 1,
+    "scored": 0,
+    "hits": 0,
+    "pending": 24
+  },
+  "verification": {
+    "research": {
+      "status": "verified",
+      "modelId": "absent-digits-complementary-online-v2",
+      "codeHash": "55ebc352beb6165aacdff32f9df22ab546de056e45e99777c92609e7d0c964d4",
+      "sourceHash": "6790fc62b0b622e159af81d777bc1a798e4935fdf8e5adc38b6bd9464521ac64",
+      "registryHash": "af695c4ce644eedc2b6c9eb312001a7dcf0983a8055b75244eff8a2193c459a4",
+      "calibrationId": "local-beta-w240-s80-v1",
+      "calibrationRegistryHash": "8731634ddba1c85298e27e526af7a22be95530d1c2a053b0937341cad10e7617",
+      "weightingRegime": "dynamic_eta35_decay097",
+      "weightingChangePromoted": false,
+      "featureSet": "all_features",
+      "featureChangePromoted": false,
+      "selectiveGate": "confidence_ge_052",
+      "selectiveGatePromoted": false,
+      "familyBlendRouter": "global_075",
+      "familyBlendRoutingPromoted": false,
+      "familyBlendSelectionRobust": false,
+      "forwardJournalHash": "c73be5f1b4364d851137e3616d34fcc8f2b19e2aeba05211ba635ee4b248a76f",
+      "forwardCohorts": 1,
+      "forwardPending": 24,
+      "calls": 0,
+      "abstentions": 24
+    },
+    "runtime": {
+      "status": "verified",
+      "modelId": "absent-digits-complementary-online-v2",
+      "calibrationId": "local-beta-w240-s80-v1",
+      "registryHash": "af695c4ce644eedc2b6c9eb312001a7dcf0983a8055b75244eff8a2193c459a4",
+      "calibrationRegistryHash": "8731634ddba1c85298e27e526af7a22be95530d1c2a053b0937341cad10e7617",
+      "marketSides": 24,
+      "results": [
+        {
+          "market": "Sridevi",
+          "targetDate": "2026-07-25",
+          "historyUsed": 722,
+          "open": "01",
+          "close": "28",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Time Bazar",
+          "targetDate": "2026-07-25",
+          "historyUsed": 602,
+          "open": "17",
+          "close": "89",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Madhur Day",
+          "targetDate": "2026-07-25",
+          "historyUsed": 702,
+          "open": "24",
+          "close": "78",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Milan Day",
+          "targetDate": "2026-07-25",
+          "historyUsed": 602,
+          "open": "59",
+          "close": "45",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Rajdhani Day",
+          "targetDate": "2026-07-25",
+          "historyUsed": 600,
+          "open": "28",
+          "close": "19",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Kalyan",
+          "targetDate": "2026-07-25",
+          "historyUsed": 604,
+          "open": "13",
+          "close": "13",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Sridevi Night",
+          "targetDate": "2026-07-25",
+          "historyUsed": 722,
+          "open": "49",
+          "close": "15",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Kalyan Night",
+          "targetDate": "2026-07-27",
+          "historyUsed": 497,
+          "open": "02",
+          "close": "04",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Madhur Night",
+          "targetDate": "2026-07-25",
+          "historyUsed": 603,
+          "open": "28",
+          "close": "16",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Milan Night",
+          "targetDate": "2026-07-25",
+          "historyUsed": 599,
+          "open": "18",
+          "close": "38",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Rajdhani Night",
+          "targetDate": "2026-07-27",
+          "historyUsed": 502,
+          "open": "47",
+          "close": "08",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        },
+        {
+          "market": "Main Bazar",
+          "targetDate": "2026-07-27",
+          "historyUsed": 501,
+          "open": "06",
+          "close": "38",
+          "status": "NO_SAFE_CALL/NO_SAFE_CALL"
+        }
+      ]
+    }
+  },
+  "requirements": [
+    {
+      "id": "market_specific_open_close",
+      "requirement": "Produce two least-likely/avoid digits separately for Open and pre-Open Close for every supported market.",
+      "status": "PROVEN",
+      "finding": "The frozen registry contains 24 unique market-sides across 12 markets; runtime parity covers all of them.",
+      "evidence": [
+        {
+          "path": "FROZEN_FORWARD_REGISTRY.json",
+          "detail": "registry af695c4ce644eedc2b6c9eb312001a7dcf0983a8055b75244eff8a2193c459a4"
+        },
+        {
+          "path": "../../src/lib/absent-digits.ts",
+          "detail": "browser runtime prediction engine"
+        }
+      ]
+    },
+    {
+      "id": "complementary_model_families",
+      "requirement": "Combine appearance-derived and direct joint-absence model families.",
+      "status": "PROVEN",
+      "finding": "Model A estimates digit appearance and complements it; Model B directly estimates pair absence. The frozen blend is 75/25.",
+      "evidence": [
+        {
+          "path": "PROTOCOL.md",
+          "detail": "model-family definitions"
+        },
+        {
+          "path": "results.json",
+          "detail": "selected appearance weight 0.75"
+        }
+      ]
+    },
+    {
+      "id": "causal_walk_forward_evaluation",
+      "requirement": "Use rigorous walk-forward out-of-sample evaluation with no target or future leakage.",
+      "status": "PROVEN",
+      "finding": "Five chronological blocks are reported, every prediction uses strictly earlier rows, and runtime contamination checks pass.",
+      "evidence": [
+        {
+          "path": "PROTOCOL.md",
+          "detail": "frozen chronology and causality"
+        },
+        {
+          "path": "../../scripts/verify-absent-digits-runtime.cjs",
+          "detail": "target/future contamination and minimum-history checks"
+        }
+      ]
+    },
+    {
+      "id": "calibrated_uncertainty",
+      "requirement": "Report calibrated uncertainty separately from the actionability gate.",
+      "status": "PROVEN",
+      "finding": "`local_beta_w240_s80` was promoted for point confidence; the independent 120-draw Wilson gate is unchanged.",
+      "evidence": [
+        {
+          "path": "CALIBRATION_REPORT.md",
+          "detail": "chronological Brier audit"
+        },
+        {
+          "path": "FROZEN_CALIBRATION_REGISTRY.json",
+          "detail": "calibration 8731634ddba1c85298e27e526af7a22be95530d1c2a053b0937341cad10e7617"
+        }
+      ]
+    },
+    {
+      "id": "dynamic_ensembles",
+      "requirement": "Use dynamic expert weighting and test simpler/faster/slower alternatives.",
+      "status": "PROVEN",
+      "finding": "Exponentially weighted within-family experts are deployed. Long-only won validation narrowly but failed confirmation, so the dynamic baseline was retained.",
+      "evidence": [
+        {
+          "path": "WEIGHTING_ABLATION_REPORT.md",
+          "detail": "change promoted: False"
+        },
+        {
+          "path": "DYNAMIC_ROUTE_REPORT.md",
+          "detail": "family router: global_075"
+        }
+      ]
+    },
+    {
+      "id": "evidence_based_feature_selection",
+      "requirement": "Promote features, residual models, routes, and selective gates only when gains persist outside selection data.",
+      "status": "PROVEN",
+      "finding": "Context removal, exact-panel residual blending, local routing, and confidence/agreement gating all failed their promotion rules.",
+      "evidence": [
+        {
+          "path": "FEATURE_ABLATION_REPORT.md",
+          "detail": "feature change promoted: False"
+        },
+        {
+          "path": "PANEL_RESIDUAL_REPORT.md",
+          "detail": "residual change promoted: False"
+        },
+        {
+          "path": "SELECTIVE_GATE_REPORT.md",
+          "detail": "runtime gate promoted: False"
+        }
+      ]
+    },
+    {
+      "id": "model_selection_uncertainty",
+      "requirement": "Quantify uncertainty in the selected family blend rather than treating the validation winner as uniquely superior.",
+      "status": "PROVEN",
+      "finding": "The 75/25 blend is retained but classified selection-uncertain: 53.2% bootstrap selection frequency.",
+      "evidence": [
+        {
+          "path": "BLEND_STABILITY_REPORT.md",
+          "detail": "robust: False"
+        }
+      ]
+    },
+    {
+      "id": "runtime_research_parity",
+      "requirement": "Keep the browser runtime numerically identical to frozen research predictions and calibration.",
+      "status": "PROVEN",
+      "finding": "Exact parity passed for 24 market-sides, with both registry hashes verified.",
+      "evidence": [
+        {
+          "path": "../../scripts/verify-absent-digits-runtime.cjs",
+          "detail": "runtime registry af695c4ce644eedc2b6c9eb312001a7dcf0983a8055b75244eff8a2193c459a4"
+        }
+      ]
+    },
+    {
+      "id": "continuous_prospective_evidence",
+      "requirement": "Accumulate immutable, genuinely prospective cohorts before making empirical deployment claims.",
+      "status": "PENDING",
+      "finding": "1 hash-chained cohort exists; 0 market-sides are scored and 24 remain pending.",
+      "evidence": [
+        {
+          "path": "FORWARD_JOURNAL.json",
+          "detail": "journal c73be5f1b4364d851137e3616d34fcc8f2b19e2aeba05211ba635ee4b248a76f"
+        },
+        {
+          "path": "FORWARD_JOURNAL.md",
+          "detail": "aggregate prospective status"
+        }
+      ]
+    },
+    {
+      "id": "safe_actionable_accuracy",
+      "requirement": "Issue actionable calls only when the prequential 95% Wilson lower bound is at least 80%.",
+      "status": "NOT_ACHIEVED",
+      "finding": "The frozen cohort contains 0 calls and 24 abstentions. No market-side has empirical support for an 80% lower bound.",
+      "evidence": [
+        {
+          "path": "REPORT.md",
+          "detail": "confidence-gate decision"
+        },
+        {
+          "path": "FROZEN_FORWARD_REGISTRY.json",
+          "detail": "frozen calls and abstentions"
+        }
+      ]
+    }
+  ],
+  "remainingWork": [
+    "Observe and score all Jul 25/27 cohort-001 outcomes.",
+    "Regenerate this audit after prospective scoring.",
+    "Register cohort 002 only after cohort 001 has zero pending rows.",
+    "Continue abstaining unless a market-side reaches the frozen 80% Wilson-lower-bound gate with at least 30 comparable calls."
+  ]
+}

@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-24T12:13:41.030457+00:00",
+  "purpose": "Validation-selected causal audit of family agreement and calibrated-confidence selective gates.",
+  "selectedBlendAppearanceWeight": 0.75,
+  "confidenceMethod": "local_beta_w240_s80",
+  "minimumValidationRows": 235,
+  "gateCandidates": [
+    {
+      "name": "all",
+      "agreement": false,
+      "threshold": null
+    },
+    {
+      "name": "agreement",
+      "agreement": true,
+      "threshold": null
+    },
+    {
+      "name": "confidence_ge_050",
+      "agreement": false,
+      "threshold": 0.5
+    },
+    {
+      "name": "confidence_ge_052",
+      "agreement": false,
+      "threshold": 0.52
+    },
+    {
+      "name": "confidence_ge_054",
+      "agreement": false,
+      "threshold": 0.54
+    },
+    {
+      "name": "confidence_ge_056",
+      "agreement": false,
+      "threshold": 0.56
+    },
+    {
+      "name": "agreement_confidence_ge_050",
+      "agreement": true,
+      "threshold": 0.5
+    },
+    {
+      "name": "agreement_confidence_ge_052",
+      "agreement": true,
+      "threshold": 0.52
+    },
+    {
+      "name": "agreement_confidence_ge_054",
+      "agreement": true,
+      "threshold": 0.54
+    }
+  ],
+  "selectedGate": {
+    "name": "confidence_ge_052",
+    "agreement": false,
+    "threshold": 0.52
+  },
+  "validationGrid": {
+    "all": {
+      "rows": 2348,
+      "coverage": 1.0,
+      "hits": 1224,
+      "strictAccuracy": 0.5212947189097104,
+      "wilson95": [
+        0.501070672492781,
+        0.541449200445484
+      ],
+      "randomReference": 0.5052053757334848,
+      "excessVsRandom": 0.016089343176225568,
+      "marketMacroAccuracy": 0.5219090085719188,
+      "worstMarketSideAccuracy": 0.39669421487603307,
+      "marketSidesRepresented": 24,
+      "eligible": true
+    },
+    "agreement": {
+      "rows": 1288,
+      "coverage": 0.5485519591141397,
+      "hits": 670,
+      "strictAccuracy": 0.5201863354037267,
+      "wilson95": [
+        0.49288297111916796,
+        0.5473696462937073
+      ],
+      "randomReference": 0.5040545203588682,
+      "excessVsRandom": 0.0161318150448585,
+      "marketMacroAccuracy": 0.5159529601817816,
+      "worstMarketSideAccuracy": 0.42424242424242425,
+      "marketSidesRepresented": 24,
+      "eligible": true
+    },
+    "confidence_ge_050": {
+      "rows": 1795,
+      "coverage": 0.764480408858603,
+      "hits": 940,
+      "strictAccuracy": 0.5236768802228412,
+      "wilson95": [
+        0.500546348861377,
+        0.5467062867631793
+      ],
+      "randomReference": 0.5047725162488395,
+      "excessVsRandom": 0.018904363974001748,
+      "marketMacroAccuracy": 0.48516217133355927,
+      "worstMarketSideAccuracy": 0.16666666666666666,
+      "marketSidesRepresented": 22,
+      "eligible": true
+    },
+    "confidence_ge_052": {
+      "rows": 1245,
+      "coverage": 0.5302385008517888,
+      "hits": 670,
+      "strictAccuracy": 0.5381526104417671,
+      "wilson95": [
+        0.5103849221775242,
+        0.5656855824722097
+      ],
+      "randomReference": 0.5047389558232932,
+      "excessVsRandom": 0.0334136546184739,
+      "marketMacroAccuracy": 0.49826440442266556,
+      "worstMarketSideAccuracy": 0.1111111111111111,
+      "marketSidesRepresented": 17,
+      "eligible": true
+    },
+    "confidence_ge_054": {
+      "rows": 254,
+      "coverage": 0.10817717206132879,
+      "hits": 127,
+      "strictAccuracy": 0.5,
+      "wilson95": [
+        0.4389702317894937,
+        0.5610297682105063
+      ],
+      "randomReference": 0.4942257217847769,
+      "excessVsRandom": 0.005774278215223083,
+      "marketMacroAccuracy": 0.4480178862531804,
+      "worstMarketSideAccuracy": 0.09090909090909091,
+      "marketSidesRepresented": 9,
+      "eligible": true
+    },
+    "confidence_ge_056": {
+      "rows": 8,
+      "coverage": 0.0034071550255536627,
+      "hits": 5,
+      "strictAccuracy": 0.625,
+      "wilson95": [
+        0.30574239460262737,
+        0.8631557141764026
+      ],
+      "randomReference": 0.4666666666666667,
+      "excessVsRandom": 0.15833333333333333,
+      "marketMacroAccuracy": 0.625,
+      "worstMarketSideAccuracy": 0.625,
+      "marketSidesRepresented": 1,
+      "eligible": false
+    },
+    "agreement_confidence_ge_050": {
+      "rows": 1009,
+      "coverage": 0.4297274275979557,
+      "hits": 529,
+      "strictAccuracy": 0.5242814667988107,
+      "wilson95": [
+        0.49343289590491635,
+        0.5549458504164018
+      ],
+      "randomReference": 0.5026759167492567,
+      "excessVsRandom": 0.021605550049554,
+      "marketMacroAccuracy": 0.48331030578692585,
+      "worstMarketSideAccuracy": 0.0,
+      "marketSidesRepresented": 22,
+      "eligible": true
+    },
+    "agreement_confidence_ge_052": {
+      "rows": 740,
+      "coverage": 0.3151618398637138,
+      "hits": 394,
+      "strictAccuracy": 0.5324324324324324,
+      "wilson95": [
+        0.4964085072953597,
+        0.5681213726014942
+      ],
+      "randomReference": 0.5044144144144144,
+      "excessVsRandom": 0.028018018018018065,
+      "marketMacroAccuracy": 0.4745780152958371,
+      "worstMarketSideAccuracy": 0.0,
+      "marketSidesRepresented": 17,
+      "eligible": true
+    },
+    "agreement_confidence_ge_054": {
+      "rows": 173,
+      "coverage": 0.07367972742759796,
+      "hits": 90,
+      "strictAccuracy": 0.5202312138728323,
+      "wilson95": [
+        0.4461578091358522,
+        0.5934256688940227
+      ],
+      "randomReference": 0.4945407835581246,
+      "excessVsRandom": 0.025690430314707746,
+      "marketMacroAccuracy": 0.48955695720401604,
+      "worstMarketSideAccuracy": 0.0,
+      "marketSidesRepresented": 9,
+      "eligible": false
+    }
+  },
+  "selectedGateMetrics": {
+    "validation": {
+      "rows": 1245,
+      "coverage": 0.5302385008517888,
+      "hits": 670,
+      "strictAccuracy": 0.5381526104417671,
+      "wilson95": [
+        0.5103849221775242,
+        0.5656855824722097
+      ],
+      "randomReference": 0.5047389558232932,
+      "excessVsRandom": 0.0334136546184739,
+      "marketMacroAccuracy": 0.49826440442266556,
+      "worstMarketSideAccuracy": 0.1111111111111111,
+      "marketSidesRepresented": 17,
+      "randomExcessInference": {
+        "meanExcess": 0.033413654618473884,
+        "clusterBootstrap95": [
+          0.008319185059422743,
+          0.05962895745109901
+        ],
+        "probabilityPositive": 0.9965,
+        "weekClusters": 18
+      }
+    },
+    "holdout": {
+      "rows": 1047,
+      "coverage": 0.4245742092457421,
+      "hits": 512,
+      "strictAccuracy": 0.4890162368672397,
+      "wilson95": [
+        0.45883286764800346,
+        0.5192799106336873
+      ],
+      "randomReference": 0.5048922848349783,
+      "excessVsRandom": -0.01587604796773856,
+      "marketMacroAccuracy": 0.44475148073715715,
+      "worstMarketSideAccuracy": 0.0,
+      "marketSidesRepresented": 16,
+      "randomExcessInference": {
+        "meanExcess": -0.01587604796773852,
+        "clusterBootstrap95": [
+          -0.04519174041297936,
+          0.010946502057613161
+        ],
+        "probabilityPositive": 0.137,
+        "weekClusters": 18
+      }
+    },
+    "recent": {
+      "rows": 748,
+      "coverage": 0.32521739130434785,
+      "hits": 392,
+      "strictAccuracy": 0.5240641711229946,
+      "wilson95": [
+        0.4882423889857772,
+        0.5596400463037956
+      ],
+      "randomReference": 0.5093285799168152,
+      "excessVsRandom": 0.0147355912061794,
+      "marketMacroAccuracy": 0.4784005407880435,
+      "worstMarketSideAccuracy": 0.0,
+      "marketSidesRepresented": 14,
+      "randomExcessInference": {
+        "meanExcess": 0.014735591206179434,
+        "clusterBootstrap95": [
+          -0.01802189912044517,
+          0.051186964461300735
+        ],
+        "probabilityPositive": 0.79525,
+        "weekClusters": 17
+      }
+    },
+    "post_cache": {
+      "rows": 90,
+      "coverage": 0.3125,
+      "hits": 41,
+      "strictAccuracy": 0.45555555555555555,
+      "wilson95": [
+        0.3565961690755778,
+        0.5581536643079179
+      ],
+      "randomReference": 0.494320987654321,
+      "excessVsRandom": -0.03876543209876543,
+      "marketMacroAccuracy": 0.48457591790925125,
+      "worstMarketSideAccuracy": 0.18181818181818182,
+      "marketSidesRepresented": 9,
+      "randomExcessInference": {
+        "meanExcess": -0.038765432098765436,
+        "clusterBootstrap95": [
+          -0.07901234567901236,
+          0.0014814814814814738
+        ],
+        "probabilityPositive": 0.2415,
+        "weekClusters": 2
+      }
+    },
+    "independent_extension": {
+      "rows": 25,
+      "coverage": 0.2840909090909091,
+      "hits": 17,
+      "strictAccuracy": 0.68,
+      "wilson95": [
+        0.48410269273102247,
+        0.8279480969309202
+      ],
+      "randomReference": 0.5351111111111111,
+      "excessVsRandom": 0.14488888888888896,
+      "marketMacroAccuracy": 0.7142857142857143,
+      "worstMarketSideAccuracy": 0.5,
+      "marketSidesRepresented": 7,
+      "randomExcessInference": {
+        "meanExcess": 0.14488888888888887,
+        "clusterBootstrap95": [
+          0.14488888888888887,
+          0.14488888888888887
+        ],
+        "probabilityPositive": 1.0,
+        "weekClusters": 1
+      }
+    }
+  },
+  "allRowsMetrics": {
+    "validation": {
+      "rows": 2348,
+      "coverage": 1.0,
+      "hits": 1224,
+      "strictAccuracy": 0.5212947189097104,
+      "wilson95": [
+        0.501070672492781,
+        0.541449200445484
+      ],
+      "randomReference": 0.5052053757334848,
+      "excessVsRandom": 0.016089343176225568,
+      "marketMacroAccuracy": 0.5219090085719188,
+      "worstMarketSideAccuracy": 0.39669421487603307,
+      "marketSidesRepresented": 24,
+      "randomExcessInference": {
+        "meanExcess": 0.01608934317622562,
+        "clusterBootstrap95": [
+          -0.0017927170868347424,
+          0.036212939281992984
+        ],
+        "probabilityPositive": 0.95525,
+        "weekClusters": 18
+      }
+    },
+    "holdout": {
+      "rows": 2466,
+      "coverage": 1.0,
+      "hits": 1246,
+      "strictAccuracy": 0.505271695052717,
+      "wilson95": [
+        0.48554565045761616,
+        0.524981341024831
+      ],
+      "randomReference": 0.5060016220600162,
+      "excessVsRandom": -0.0007299270072992359,
+      "marketMacroAccuracy": 0.5045711974110032,
+      "worstMarketSideAccuracy": 0.4174757281553398,
+      "marketSidesRepresented": 24,
+      "randomExcessInference": {
+        "meanExcess": -0.0007299270072992777,
+        "clusterBootstrap95": [
+          -0.015518518518518525,
+          0.014036500268384319
+        ],
+        "probabilityPositive": 0.482,
+        "weekClusters": 18
+      }
+    },
+    "recent": {
+      "rows": 2300,
+      "coverage": 1.0,
+      "hits": 1193,
+      "strictAccuracy": 0.518695652173913,
+      "wilson95": [
+        0.4982617385688633,
+        0.5390672189732161
+      ],
+      "randomReference": 0.5084637681159421,
+      "excessVsRandom": 0.01023188405797093,
+      "marketMacroAccuracy": 0.518397707939447,
+      "worstMarketSideAccuracy": 0.45263157894736844,
+      "marketSidesRepresented": 24,
+      "randomExcessInference": {
+        "meanExcess": 0.010231884057971007,
+        "clusterBootstrap95": [
+          -0.010134180790960462,
+          0.029964282266628044
+        ],
+        "probabilityPositive": 0.8445,
+        "weekClusters": 17
+      }
+    },
+    "post_cache": {
+      "rows": 288,
+      "coverage": 1.0,
+      "hits": 132,
+      "strictAccuracy": 0.4583333333333333,
+      "wilson95": [
+        0.4017140000485507,
+        0.5160495689214581
+      ],
+      "randomReference": 0.5001543209876543,
+      "excessVsRandom": -0.04182098765432102,
+      "marketMacroAccuracy": 0.4583333333333333,
+      "worstMarketSideAccuracy": 0.08333333333333333,
+      "marketSidesRepresented": 24,
+      "randomExcessInference": {
+        "meanExcess": -0.041820987654321,
+        "clusterBootstrap95": [
+          -0.045061728395061736,
+          -0.03858024691358026
+        ],
+        "probabilityPositive": 0.0,
+        "weekClusters": 2
+      }
+    },
+    "independent_extension": {
+      "rows": 88,
+      "coverage": 1.0,
+      "hits": 53,
+      "strictAccuracy": 0.6022727272727273,
+      "wilson95": [
+        0.49780730042864657,
+        0.6981826177535346
+      ],
+      "randomReference": 0.5234848484848486,
+      "excessVsRandom": 0.07878787878787874,
+      "marketMacroAccuracy": 0.6022727272727273,
+      "worstMarketSideAccuracy": 0.25,
+      "marketSidesRepresented": 22,
+      "randomExcessInference": {
+        "meanExcess": 0.07878787878787878,
+        "clusterBootstrap95": [
+          0.07878787878787878,
+          0.07878787878787878
+        ],
+        "probabilityPositive": 1.0,
+        "weekClusters": 1
+      }
+    }
+  },
+  "confirmation": {
+    "metrics": {
+      "rows": 1795,
+      "coverage": 0.3766261015526647,
+      "hits": 904,
+      "strictAccuracy": 0.5036211699164346,
+      "wilson95": [
+        0.4805082074039482,
+        0.5267186662798076
+      ],
+      "randomReference": 0.5067409470752089,
+      "excessVsRandom": -0.0031197771587743173,
+      "marketMacroAccuracy": 0.4293223093224467,
+      "worstMarketSideAccuracy": 0.0,
+      "marketSidesRepresented": 19
+    },
+    "randomExcessInference": {
+      "meanExcess": -0.003119777158774381,
+      "clusterBootstrap95": [
+        -0.0261315741249771,
+        0.018832391713747638
+      ],
+      "probabilityPositive": 0.39625,
+      "weekClusters": 34
+    },
+    "selectedVsExcluded": {
+      "selectedRows": 1795,
+      "excludedRows": 2971,
+      "selectedAccuracy": 0.5036211699164346,
+      "excludedAccuracy": 0.5166610568832043,
+      "difference": -0.01303988696676972,
+      "z": -0.8726303354555124,
+      "twoSidedP": 0.3828646003024434
+    }
+  },
+  "laterCombined": {
+    "selected": {
+      "rows": 115,
+      "coverage": 0.3058510638297872,
+      "hits": 58,
+      "strictAccuracy": 0.5043478260869565,
+      "wilson95": [
+        0.4143158705103379,
+        0.5940987013901028
+      ],
+      "randomReference": 0.5031884057971014,
+      "excessVsRandom": 0.001159420289855051,
+      "marketMacroAccuracy": 0.5133377425044092,
+      "worstMarketSideAccuracy": 0.25,
+      "marketSidesRepresented": 9
+    },
+    "all": {
+      "rows": 376,
+      "coverage": 1.0,
+      "hits": 185,
+      "strictAccuracy": 0.4920212765957447,
+      "wilson95": [
+        0.44182579977407144,
+        0.5423781362085135
+      ],
+      "randomReference": 0.5056146572104019,
+      "excessVsRandom": -0.013593380614657202,
+      "marketMacroAccuracy": 0.49086474867724866,
+      "worstMarketSideAccuracy": 0.1875,
+      "marketSidesRepresented": 24
+    }
+  },
+  "promotionCriteria": {
+    "validationWilsonLowerImproves": true,
+    "holdoutAndRecentAccuracyNonDegradingAtTenPercentCoverage": false,
+    "confirmationSelectedBeatsExcludedAtPBelow005": false,
+    "confirmationWeekClusteredRandomExcessAboveZero": false,
+    "laterCombinedNonDegradingAtTenPercentCoverage": true
+  },
+  "retrospectiveGatePassed": false,
+  "historical80WilsonGatePassed": false,
+  "runtimePromoted": false
+}

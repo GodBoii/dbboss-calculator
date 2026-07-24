@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-24T11:58:29.883996+00:00",
+  "purpose": "Hash-frozen calibrated point-confidence addendum for the immutable absent-digits forward registry. It does not change pairs or calls.",
+  "baseRegistryContentHash": "af695c4ce644eedc2b6c9eb312001a7dcf0983a8055b75244eff8a2193c459a4",
+  "calibrationId": "local-beta-w240-s80-v1",
+  "method": {
+    "kind": "local_beta",
+    "window": 240,
+    "priorMean": 0.506,
+    "priorStrength": 80
+  },
+  "selectionEvidence": {
+    "selectedMethod": "local_beta_w240_s80",
+    "promoted": true,
+    "validationBrier": 0.24972973366295784,
+    "currentValidationBrier": 0.25069984710139814,
+    "confirmationBrierDelta": -0.0008676512245539445,
+    "confirmationBootstrap95": [
+      -0.0015680047456309383,
+      -0.00013713160074531796
+    ],
+    "laterBrierDelta": -0.001330089680231413
+  },
+  "rows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.539,
+      "calibrationHits": 132,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.5108750000000001,
+      "calibrationHits": 123,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.523375,
+      "calibrationHits": 127,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.5265000000000001,
+      "calibrationHits": 128,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.54525,
+      "calibrationHits": 134,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.49212500000000003,
+      "calibrationHits": 117,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.5202500000000001,
+      "calibrationHits": 126,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.529625,
+      "calibrationHits": 129,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-18",
+      "confidence": 0.529625,
+      "calibrationHits": 129,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-18",
+      "confidence": 0.5108750000000001,
+      "calibrationHits": 123,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.54525,
+      "calibrationHits": 134,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.45775000000000005,
+      "calibrationHits": 106,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.49212500000000003,
+      "calibrationHits": 117,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.5171250000000001,
+      "calibrationHits": 125,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "targetDate": "2026-07-27",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.5171250000000001,
+      "calibrationHits": 125,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "targetDate": "2026-07-27",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.48275000000000007,
+      "calibrationHits": 114,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.47650000000000003,
+      "calibrationHits": 112,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.4952500000000001,
+      "calibrationHits": 118,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.48275000000000007,
+      "calibrationHits": 114,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.514,
+      "calibrationHits": 124,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "targetDate": "2026-07-27",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.554625,
+      "calibrationHits": 137,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "targetDate": "2026-07-27",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.48587500000000006,
+      "calibrationHits": 115,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "targetDate": "2026-07-27",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.48275000000000007,
+      "calibrationHits": 114,
+      "calibrationSample": 240
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "targetDate": "2026-07-27",
+      "sourceCutoff": "2026-07-23",
+      "confidence": 0.5577500000000001,
+      "calibrationHits": 138,
+      "calibrationSample": 240
+    }
+  ],
+  "contentHash": "8731634ddba1c85298e27e526af7a22be95530d1c2a053b0937341cad10e7617"
+}

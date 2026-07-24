@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-24T12:24:14.231567+00:00",
+  "cohortId": "cohort-001",
+  "predictionContentHash": "6fbeea1b54211b389c57373a3172399d7bac6a107eb26e3c9ea21b473d61e63b",
+  "scored": 0,
+  "pending": 24,
+  "hits": 0,
+  "strictAccuracy": null,
+  "calibration": {
+    "id": "local-beta-w240-s80-v1",
+    "brier": null,
+    "logLoss": null
+  },
+  "rows": [
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        0,
+        1
+      ],
+      "confidence": 0.539,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        2,
+        8
+      ],
+      "confidence": 0.5108750000000001,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        1,
+        7
+      ],
+      "confidence": 0.523375,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        8,
+        9
+      ],
+      "confidence": 0.5265000000000001,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        2,
+        4
+      ],
+      "confidence": 0.54525,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        7,
+        8
+      ],
+      "confidence": 0.49212500000000003,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        5,
+        9
+      ],
+      "confidence": 0.5202500000000001,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        4,
+        5
+      ],
+      "confidence": 0.529625,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        2,
+        8
+      ],
+      "confidence": 0.529625,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        1,
+        9
+      ],
+      "confidence": 0.5108750000000001,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        1,
+        3
+      ],
+      "confidence": 0.54525,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        1,
+        3
+      ],
+      "confidence": 0.45775000000000005,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        4,
+        9
+      ],
+      "confidence": 0.49212500000000003,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        1,
+        5
+      ],
+      "confidence": 0.5171250000000001,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "targetDate": "2026-07-27",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        0,
+        2
+      ],
+      "confidence": 0.5171250000000001,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "targetDate": "2026-07-27",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        0,
+        4
+      ],
+      "confidence": 0.48275000000000007,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        2,
+        8
+      ],
+      "confidence": 0.47650000000000003,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        1,
+        6
+      ],
+      "confidence": 0.4952500000000001,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        1,
+        8
+      ],
+      "confidence": 0.48275000000000007,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "targetDate": "2026-07-25",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        3,
+        8
+      ],
+      "confidence": 0.514,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "targetDate": "2026-07-27",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        4,
+        7
+      ],
+      "confidence": 0.554625,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "targetDate": "2026-07-27",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        0,
+        8
+      ],
+      "confidence": 0.48587500000000006,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "targetDate": "2026-07-27",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        0,
+        6
+      ],
+      "confidence": 0.48275000000000007,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "targetDate": "2026-07-27",
+      "frozenStatus": "NO_SAFE_CALL",
+      "candidateAvoidDigits": [
+        3,
+        8
+      ],
+      "confidence": 0.5577500000000001,
+      "actualPanel": null,
+      "hit": null,
+      "result": "PENDING"
+    }
+  ],
+  "contentHash": "b5ffd6a488ee5ac03a8bf94924e6622dff35798c960812e992d7dfe2312598e5"
+}

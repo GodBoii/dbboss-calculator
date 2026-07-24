@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-07-24T12:21:18.854261+00:00",
+  "updatedAt": "2026-07-24T12:21:18.854261+00:00",
+  "purpose": "Append-only hash chain of genuinely prospective absent-digits prediction cohorts. Scores never alter prediction files.",
+  "cohorts": [
+    {
+      "cohortId": "cohort-001",
+      "predictionsFile": "forward_cohorts/cohort-001.predictions.json",
+      "scoreFile": "forward_cohorts/cohort-001.score.json",
+      "contentHash": "6fbeea1b54211b389c57373a3172399d7bac6a107eb26e3c9ea21b473d61e63b",
+      "previousCohortContentHash": null,
+      "modelCodeHash": "55ebc352beb6165aacdff32f9df22ab546de056e45e99777c92609e7d0c964d4",
+      "sourceHash": "6790fc62b0b622e159af81d777bc1a798e4935fdf8e5adc38b6bd9464521ac64",
+      "targets": [
+        "2026-07-25",
+        "2026-07-27"
+      ]
+    }
+  ],
+  "contentHash": "c73be5f1b4364d851137e3616d34fcc8f2b19e2aeba05211ba635ee4b248a76f"
+}

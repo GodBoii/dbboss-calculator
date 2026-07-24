@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-24T11:51:09.077607+00:00",
+  "purpose": "Test whether the exact-panel Top-30 ranker adds residual signal to the complementary digit-level engine.",
+  "sourceMeta": {
+    "extendedGeneratedAt": "2026-07-23T19:56:39.598Z",
+    "independentGeneratedAt": "2026-07-23T20:00:18.492Z",
+    "counts": {
+      "Sridevi": 2009,
+      "Time Bazar": 1728,
+      "Madhur Day": 2985,
+      "Milan Day": 1196,
+      "Rajdhani Day": 3981,
+      "Kalyan": 1141,
+      "Sridevi Night": 1994,
+      "Kalyan Night": 1861,
+      "Madhur Night": 2555,
+      "Milan Night": 1379,
+      "Rajdhani Night": 1409,
+      "Main Bazar": 1157
+    },
+    "latest": {
+      "Sridevi": "2026-07-23",
+      "Time Bazar": "2026-07-23",
+      "Madhur Day": "2026-07-23",
+      "Milan Day": "2026-07-23",
+      "Rajdhani Day": "2026-07-18",
+      "Kalyan": "2026-07-23",
+      "Sridevi Night": "2026-07-23",
+      "Kalyan Night": "2026-07-23",
+      "Madhur Night": "2026-07-23",
+      "Milan Night": "2026-07-23",
+      "Rajdhani Night": "2026-07-23",
+      "Main Bazar": "2026-07-23"
+    }
+  },
+  "alignedRows": 2104,
+  "selectionCutoff": "2026-05-19",
+  "selectedDigitEngineWeight": 0.75,
+  "selectionGrid": {
+    "0.0": {
+      "rows": 982,
+      "hits": 494,
+      "accuracy": 0.5030549898167006,
+      "avgAbsentDigits": 1.4409368635437882,
+      "macroAccuracy": 0.5042802713287828,
+      "worstMarketSide": 0.375
+    },
+    "0.25": {
+      "rows": 982,
+      "hits": 483,
+      "accuracy": 0.49185336048879835,
+      "avgAbsentDigits": 1.4358452138492872,
+      "macroAccuracy": 0.4924866264872542,
+      "worstMarketSide": 0.3541666666666667
+    },
+    "0.5": {
+      "rows": 982,
+      "hits": 486,
+      "accuracy": 0.49490835030549896,
+      "avgAbsentDigits": 1.4389002036659877,
+      "macroAccuracy": 0.4955741281176181,
+      "worstMarketSide": 0.36363636363636365
+    },
+    "0.75": {
+      "rows": 982,
+      "hits": 501,
+      "accuracy": 0.5101832993890021,
+      "avgAbsentDigits": 1.4623217922606924,
+      "macroAccuracy": 0.5119607571409939,
+      "worstMarketSide": 0.3902439024390244
+    },
+    "1.0": {
+      "rows": 982,
+      "hits": 489,
+      "accuracy": 0.4979633401221996,
+      "avgAbsentDigits": 1.4572301425661915,
+      "macroAccuracy": 0.500012001289799,
+      "worstMarketSide": 0.3902439024390244
+    }
+  },
+  "blocks": {
+    "selection": {
+      "rows": 982,
+      "hits": 501,
+      "accuracy": 0.5101832993890021,
+      "avgAbsentDigits": 1.4623217922606924,
+      "macroAccuracy": 0.5119607571409939,
+      "worstMarketSide": 0.3902439024390244
+    },
+    "confirmation": {
+      "rows": 966,
+      "hits": 524,
+      "accuracy": 0.5424430641821946,
+      "avgAbsentDigits": 1.4813664596273293,
+      "macroAccuracy": 0.5416400859124137,
+      "worstMarketSide": 0.3958333333333333
+    },
+    "prospective_forward": {
+      "rows": 156,
+      "hits": 74,
+      "accuracy": 0.47435897435897434,
+      "avgAbsentDigits": 1.435897435897436,
+      "macroAccuracy": 0.4779761904761905,
+      "worstMarketSide": 0.0
+    }
+  },
+  "pairedComparisons": {
+    "selection": {
+      "panelOnly": {
+        "selectedOnly": 195,
+        "comparatorOnly": 188,
+        "exactSignP": 0.7592049556632863
+      },
+      "digitEngineOnly": {
+        "selectedOnly": 60,
+        "comparatorOnly": 48,
+        "exactSignP": 0.28979821540506145
+      }
+    },
+    "confirmation": {
+      "panelOnly": {
+        "selectedOnly": 223,
+        "comparatorOnly": 173,
+        "exactSignP": 0.013702096709120561
+      },
+      "digitEngineOnly": {
+        "selectedOnly": 58,
+        "comparatorOnly": 39,
+        "exactSignP": 0.06705179535289083
+      }
+    },
+    "prospective_forward": {
+      "panelOnly": {
+        "selectedOnly": 33,
+        "comparatorOnly": 40,
+        "exactSignP": 0.4827885568440213
+      },
+      "digitEngineOnly": {
+        "selectedOnly": 6,
+        "comparatorOnly": 10,
+        "exactSignP": 0.454498291015625
+      }
+    }
+  },
+  "exactPairConsensus": {
+    "selection": {
+      "calls": 34,
+      "coverage": 0.034623217922606926,
+      "hits": 16,
+      "accuracy": 0.47058823529411764,
+      "wilson95": [
+        0.3145150447508847,
+        0.6326328701993107
+      ]
+    },
+    "confirmation": {
+      "calls": 41,
+      "coverage": 0.042443064182194616,
+      "hits": 23,
+      "accuracy": 0.5609756097560976,
+      "wilson95": [
+        0.4104052722210608,
+        0.7010986826344964
+      ]
+    },
+    "prospective_forward": {
+      "calls": 5,
+      "coverage": 0.03205128205128205,
+      "hits": 4,
+      "accuracy": 0.8,
+      "wilson95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ]
+    }
+  },
+  "promoted": false
+}
