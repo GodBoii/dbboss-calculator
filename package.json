@@ -1,6 +1,6 @@
 {
   "name": "lakshmi-boss-calculator",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "private": true,
   "scripts": {
     "prebuild": "node verify-pwa-assets.cjs",
@@ -15,6 +15,7 @@
     "research:absent-digits-calibration": "python research/absent_digits_v2/run_calibration_audit.py",
     "research:absent-digits-routing": "python research/absent_digits_v2/run_dynamic_route_audit.py",
     "research:absent-digits-features": "python research/absent_digits_v2/run_feature_ablation.py",
+    "research:absent-digits-ml": "python research/absent_digits_ml_v4/run_nested_ml.py",
     "research:absent-digits-residual": "python research/absent_digits_v2/run_panel_residual_audit.py",
     "research:absent-digits-selective": "python research/absent_digits_v2/run_selective_gate_audit.py",
     "research:absent-digits-weighting": "python research/absent_digits_v2/run_weighting_ablation.py",
@@ -27,6 +28,7 @@
     "verify:absent-digits-runtime": "node scripts/verify-absent-digits-runtime.cjs",
     "verify:absent-digits-v3-runtime": "node scripts/verify-absent-digits-v3-runtime.cjs",
     "verify:absent-digits-v3-backtest": "python research/absent_digits_hypotheses_v3/verify_recent_market_backtest.py",
+    "verify:absent-digits-ml": "python research/absent_digits_ml_v4/verify_nested_ml.py",
     "research:present-digits": "python research/present_digits_v1/run_backtest.py",
     "verify:present-digits": "python research/present_digits_v1/verify_backtest.py && node scripts/verify-present-digits-runtime.cjs",
     "verify:sutta-ranking": "node scripts/verify-sutta-ranking.cjs",
