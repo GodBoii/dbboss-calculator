@@ -1,5 +1,10 @@
 # Absent Digits V3 Deployment
 
+> **Status update (2026-07-25): user-directed production default.** V3 is
+> enabled as the app default in version 1.0.20. The original V2 model remains
+> available as the automatic route fallback and explicit V2 runtime. The
+> observational-evidence limitation below remains unchanged.
+
 Deployed 2026-07-24 as app/PWA version 1.0.17.
 
 ## Runtime contract
@@ -42,10 +47,10 @@ Prospective results must determine whether V3 remains enabled.
 
 ## Compatibility
 
-- `buildAbsentDigitsPrediction` is the V3 app default.
+- `buildAbsentDigitsPredictionV3` preserves the V3 research runtime.
+- `buildAbsentDigitsPrediction` is the guarded V3 app default.
 - `buildAbsentDigitsPredictionV2` preserves the original frozen V2 runtime.
 - The V2 forward registry and calibration verifier still reproduce exactly.
 - Sutta, jodi, panel, DP, and every other prediction model are unchanged.
 - The UI contract is additive: route model and guard state were added without
   removing prior fields.
-
