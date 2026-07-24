@@ -1,0 +1,1259 @@
+{
+  "generatedAt": "2026-07-24T01:33:51.554578+05:30",
+  "design": {
+    "topK": 60,
+    "strategySelection": "frozen before these outcomes",
+    "baselineWeights": "loaded from frozen research model artifacts",
+    "contextualWeights": "deterministic refit on original frozen cache only",
+    "newRows": 44,
+    "unresolvedMarket": "Rajdhani Day excluded because no matching independent series was found",
+    "promotionMinimumProspectiveRows": 100
+  },
+  "dataAudit": {
+    "source": "scratch\\open-sutta-records-cache.json",
+    "sha256": "02819f1d933f4fe2e340bb241ebcbe2d4f5859a7228b8f72682a234818056bd0",
+    "sourceRows": 7287,
+    "validRows": 7287,
+    "markets": {
+      "Sridevi": 724,
+      "Time Bazar": 604,
+      "Madhur Day": 704,
+      "Milan Day": 604,
+      "Rajdhani Day": 606,
+      "Kalyan": 606,
+      "Sridevi Night": 724,
+      "Kalyan Night": 500,
+      "Madhur Night": 605,
+      "Milan Night": 601,
+      "Rajdhani Night": 505,
+      "Main Bazar": 504
+    },
+    "invalidRows": 0,
+    "invalidExamples": [],
+    "duplicateMarketDates": 0,
+    "suttaMismatches": 0,
+    "firstDate": "2024-06-28",
+    "lastDate": "2026-07-05"
+  },
+  "primaryForwardAudit": {
+    "available": true,
+    "generatedAt": "2026-07-23T19:56:39.597Z",
+    "sha256": "0db4036c443c7bc19aa620617b238582863e41cae1ea6ff6b0c70f76c4216849",
+    "acceptedCompletedRows": 150,
+    "rejectedRows": 0,
+    "perMarket": {
+      "Sridevi": 14,
+      "Time Bazar": 12,
+      "Madhur Day": 14,
+      "Milan Day": 18,
+      "Rajdhani Day": 12,
+      "Kalyan": 12,
+      "Sridevi Night": 14,
+      "Kalyan Night": 10,
+      "Madhur Night": 12,
+      "Milan Night": 12,
+      "Rajdhani Night": 10,
+      "Main Bazar": 10
+    }
+  },
+  "independentSource": {
+    "api": "https://api.cloudsoft.one/portal/charts",
+    "host": "sattamatka.ai",
+    "note": "Timestamped result chart API discovered from the public site client bundle."
+  },
+  "independentAudit": {
+    "Sridevi": {
+      "slug": "sridevi-bazar",
+      "primaryLiveLatest": "2026-07-19",
+      "validationStart": "2026-05-20",
+      "validationOverlap": 61,
+      "validationMatches": 61,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Time Bazar": {
+      "slug": "time-bazar",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 1,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Madhur Day": {
+      "slug": "madhur-day",
+      "primaryLiveLatest": "2026-07-19",
+      "validationStart": "2026-05-20",
+      "validationOverlap": 61,
+      "validationMatches": 61,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Milan Day": {
+      "slug": "milan-day",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 1,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Kalyan": {
+      "slug": "kalyan",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Sridevi Night": {
+      "slug": "sridevi-bazar-night",
+      "primaryLiveLatest": "2026-07-19",
+      "validationStart": "2026-05-20",
+      "validationOverlap": 61,
+      "validationMatches": 61,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Kalyan Night": {
+      "slug": "kalyan-night",
+      "primaryLiveLatest": "2026-07-17",
+      "validationStart": "2026-05-18",
+      "validationOverlap": 42,
+      "validationMatches": 42,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Monday",
+        "Tuesday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Madhur Night": {
+      "slug": "madhur-night",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Milan Night": {
+      "slug": "milan-night",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Rajdhani Night": {
+      "slug": "rajdhani-night",
+      "primaryLiveLatest": "2026-07-17",
+      "validationStart": "2026-05-18",
+      "validationOverlap": 45,
+      "validationMatches": 45,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Main Bazar": {
+      "slug": "main-bazar",
+      "primaryLiveLatest": "2026-07-17",
+      "validationStart": "2026-05-18",
+      "validationOverlap": 45,
+      "validationMatches": 45,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Friday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Rajdhani Day": {
+      "identityAccepted": false,
+      "reason": "The independent source Rajdhani Day series had 0 exact matches in 42 overlapping rows.",
+      "acceptedForwardRows": 0
+    }
+  },
+  "tasks": {
+    "open": {
+      "n": 44,
+      "baseline": {
+        "n": 44,
+        "hits": 24,
+        "rate": 0.5454545454545454,
+        "wilson95": [
+          0.40066183198961974,
+          0.6829476585777909
+        ],
+        "perMarket": {
+          "Sridevi": {
+            "n": 4,
+            "hits": 2,
+            "rate": 0.5,
+            "wilson95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ]
+          },
+          "Time Bazar": {
+            "n": 4,
+            "hits": 3,
+            "rate": 0.75,
+            "wilson95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ]
+          },
+          "Madhur Day": {
+            "n": 4,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.4898908364545973
+            ]
+          },
+          "Milan Day": {
+            "n": 4,
+            "hits": 2,
+            "rate": 0.5,
+            "wilson95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ]
+          },
+          "Kalyan": {
+            "n": 4,
+            "hits": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ]
+          },
+          "Sridevi Night": {
+            "n": 4,
+            "hits": 3,
+            "rate": 0.75,
+            "wilson95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ]
+          },
+          "Kalyan Night": {
+            "n": 4,
+            "hits": 3,
+            "rate": 0.75,
+            "wilson95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ]
+          },
+          "Madhur Night": {
+            "n": 4,
+            "hits": 4,
+            "rate": 1.0,
+            "wilson95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "Milan Night": {
+            "n": 4,
+            "hits": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ]
+          },
+          "Rajdhani Night": {
+            "n": 4,
+            "hits": 3,
+            "rate": 0.75,
+            "wilson95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ]
+          },
+          "Main Bazar": {
+            "n": 4,
+            "hits": 2,
+            "rate": 0.5,
+            "wilson95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ]
+          }
+        }
+      },
+      "hierarchical": {
+        "strategy": "fixed:learned:learned_mass:8x7+4",
+        "metrics": {
+          "n": 44,
+          "hits": 19,
+          "rate": 0.4318181818181818,
+          "wilson95": [
+            0.2968272340851781,
+            0.5777585300637057
+          ],
+          "perMarket": {
+            "Sridevi": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Time Bazar": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Madhur Day": {
+              "n": 4,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "Milan Day": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Kalyan": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Sridevi Night": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Kalyan Night": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Madhur Night": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Milan Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Main Bazar": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            }
+          }
+        },
+        "vsBaseline": {
+          "modelOnlyHits": 0,
+          "baselineOnlyHits": 5,
+          "exactMcNemarP": 0.0625
+        },
+        "cumulativeWithPriorForward": {
+          "modelOnlyHits": 10,
+          "baselineOnlyHits": 10,
+          "exactMcNemarP": 1.0
+        }
+      },
+      "contextual": {
+        "strategy": "combined_coarse:lowrank_d50",
+        "metrics": {
+          "n": 44,
+          "hits": 22,
+          "rate": 0.5,
+          "wilson95": [
+            0.35831760539989393,
+            0.641682394600106
+          ],
+          "perMarket": {
+            "Sridevi": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Time Bazar": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Madhur Day": {
+              "n": 4,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "Milan Day": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Kalyan": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Sridevi Night": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Kalyan Night": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Madhur Night": {
+              "n": 4,
+              "hits": 4,
+              "rate": 1.0,
+              "wilson95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "Milan Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Main Bazar": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            }
+          }
+        },
+        "vsBaseline": {
+          "modelOnlyHits": 1,
+          "baselineOnlyHits": 3,
+          "exactMcNemarP": 0.625
+        }
+      },
+      "selective": {
+        "gate": "profile_hot_agreement:high:0.80",
+        "coverage": 0.9090909090909091,
+        "metrics": {
+          "n": 40,
+          "hits": 22,
+          "rate": 0.55,
+          "wilson95": [
+            0.39829091798932054,
+            0.6929469218909508
+          ],
+          "perMarket": {
+            "Sridevi": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Time Bazar": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Madhur Day": {
+              "n": 3,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                5.551115123125783e-17,
+                0.5614970317550454
+              ]
+            },
+            "Milan Day": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Kalyan": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Sridevi Night": {
+              "n": 3,
+              "hits": 2,
+              "rate": 0.6666666666666666,
+              "wilson95": [
+                0.2076596008020477,
+                0.9385080552796037
+              ]
+            },
+            "Kalyan Night": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Madhur Night": {
+              "n": 4,
+              "hits": 4,
+              "rate": 1.0,
+              "wilson95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "Milan Night": {
+              "n": 3,
+              "hits": 1,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.06149194472039621,
+                0.7923403991979522
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Main Bazar": {
+              "n": 3,
+              "hits": 1,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.06149194472039621,
+                0.7923403991979522
+              ]
+            }
+          }
+        }
+      },
+      "promotion": {
+        "eligible": false,
+        "reasons": [
+          "Only 44 independently sourced rows are available; minimum prospective support is 100.",
+          "The hierarchical Open challenger previously failed its terminal confirmation block.",
+          "No challenger has a paired p-value below 0.05 across confirmation blocks."
+        ]
+      }
+    },
+    "close_preopen": {
+      "n": 44,
+      "baseline": {
+        "n": 44,
+        "hits": 11,
+        "rate": 0.25,
+        "wilson95": [
+          0.14574213828964888,
+          0.3944056635895915
+        ],
+        "perMarket": {
+          "Sridevi": {
+            "n": 4,
+            "hits": 3,
+            "rate": 0.75,
+            "wilson95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ]
+          },
+          "Time Bazar": {
+            "n": 4,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.4898908364545973
+            ]
+          },
+          "Madhur Day": {
+            "n": 4,
+            "hits": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ]
+          },
+          "Milan Day": {
+            "n": 4,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.4898908364545973
+            ]
+          },
+          "Kalyan": {
+            "n": 4,
+            "hits": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ]
+          },
+          "Sridevi Night": {
+            "n": 4,
+            "hits": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ]
+          },
+          "Kalyan Night": {
+            "n": 4,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.4898908364545973
+            ]
+          },
+          "Madhur Night": {
+            "n": 4,
+            "hits": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ]
+          },
+          "Milan Night": {
+            "n": 4,
+            "hits": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ]
+          },
+          "Rajdhani Night": {
+            "n": 4,
+            "hits": 2,
+            "rate": 0.5,
+            "wilson95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ]
+          },
+          "Main Bazar": {
+            "n": 4,
+            "hits": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ]
+          }
+        }
+      },
+      "hierarchical": {
+        "strategy": "flat:learned",
+        "metrics": {
+          "n": 44,
+          "hits": 11,
+          "rate": 0.25,
+          "wilson95": [
+            0.14574213828964888,
+            0.3944056635895915
+          ],
+          "perMarket": {
+            "Sridevi": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Time Bazar": {
+              "n": 4,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "Madhur Day": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Milan Day": {
+              "n": 4,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "Kalyan": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Sridevi Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Kalyan Night": {
+              "n": 4,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "Madhur Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Milan Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Main Bazar": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            }
+          }
+        },
+        "vsBaseline": {
+          "modelOnlyHits": 0,
+          "baselineOnlyHits": 0,
+          "exactMcNemarP": 1.0
+        },
+        "cumulativeWithPriorForward": {
+          "modelOnlyHits": 0,
+          "baselineOnlyHits": 0,
+          "exactMcNemarP": 1.0
+        }
+      },
+      "contextual": {
+        "strategy": "same_day_coarse:lowrank_d50",
+        "metrics": {
+          "n": 44,
+          "hits": 12,
+          "rate": 0.2727272727272727,
+          "wilson95": [
+            0.16346381623843378,
+            0.418488730924512
+          ],
+          "perMarket": {
+            "Sridevi": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Time Bazar": {
+              "n": 4,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "Madhur Day": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Milan Day": {
+              "n": 4,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "Kalyan": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Sridevi Night": {
+              "n": 4,
+              "hits": 2,
+              "rate": 0.5,
+              "wilson95": [
+                0.15003898915214947,
+                0.8499610108478506
+              ]
+            },
+            "Kalyan Night": {
+              "n": 4,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "Madhur Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Milan Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Main Bazar": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            }
+          }
+        },
+        "vsBaseline": {
+          "modelOnlyHits": 4,
+          "baselineOnlyHits": 3,
+          "exactMcNemarP": 1.0
+        }
+      },
+      "selective": {
+        "gate": "top_selection_markets:4",
+        "coverage": 0.36363636363636365,
+        "metrics": {
+          "n": 16,
+          "hits": 6,
+          "rate": 0.375,
+          "wilson95": [
+            0.18481232558863633,
+            0.6135895945449727
+          ],
+          "perMarket": {
+            "Sridevi": {
+              "n": 4,
+              "hits": 3,
+              "rate": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ]
+            },
+            "Madhur Day": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Kalyan": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            },
+            "Sridevi Night": {
+              "n": 4,
+              "hits": 1,
+              "rate": 0.25,
+              "wilson95": [
+                0.04558726080970055,
+                0.6993581574175981
+              ]
+            }
+          }
+        }
+      },
+      "promotion": {
+        "eligible": false,
+        "reasons": [
+          "Only 44 independently sourced rows are available; minimum prospective support is 100.",
+          "The hierarchical Open challenger previously failed its terminal confirmation block.",
+          "No challenger has a paired p-value below 0.05 across confirmation blocks."
+        ]
+      }
+    }
+  }
+}

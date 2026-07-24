@@ -1,0 +1,871 @@
+{
+  "generatedAt": "2026-07-23T20:00:18.492Z",
+  "source": {
+    "api": "https://api.cloudsoft.one/portal/charts",
+    "host": "sattamatka.ai",
+    "note": "Timestamped result chart API discovered from the public site client bundle."
+  },
+  "policy": {
+    "minimumHistoricalOverlap": 20,
+    "requiredHistoricalMatchRate": 1,
+    "schedule": "Only weekdays observed in the target market series are admitted.",
+    "unresolvedMarket": "Rajdhani Day excluded."
+  },
+  "audit": {
+    "Sridevi": {
+      "slug": "sridevi-bazar",
+      "primaryLiveLatest": "2026-07-19",
+      "validationStart": "2026-05-20",
+      "validationOverlap": 61,
+      "validationMatches": 61,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Time Bazar": {
+      "slug": "time-bazar",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 1,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Madhur Day": {
+      "slug": "madhur-day",
+      "primaryLiveLatest": "2026-07-19",
+      "validationStart": "2026-05-20",
+      "validationOverlap": 61,
+      "validationMatches": 61,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Milan Day": {
+      "slug": "milan-day",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 1,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Kalyan": {
+      "slug": "kalyan",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Sridevi Night": {
+      "slug": "sridevi-bazar-night",
+      "primaryLiveLatest": "2026-07-19",
+      "validationStart": "2026-05-20",
+      "validationOverlap": 61,
+      "validationMatches": 61,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Kalyan Night": {
+      "slug": "kalyan-night",
+      "primaryLiveLatest": "2026-07-17",
+      "validationStart": "2026-05-18",
+      "validationOverlap": 42,
+      "validationMatches": 42,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Monday",
+        "Tuesday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Madhur Night": {
+      "slug": "madhur-night",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Milan Night": {
+      "slug": "milan-night",
+      "primaryLiveLatest": "2026-07-18",
+      "validationStart": "2026-05-19",
+      "validationOverlap": 53,
+      "validationMatches": 53,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Rajdhani Night": {
+      "slug": "rajdhani-night",
+      "primaryLiveLatest": "2026-07-17",
+      "validationStart": "2026-05-18",
+      "validationOverlap": 45,
+      "validationMatches": 45,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Main Bazar": {
+      "slug": "main-bazar",
+      "primaryLiveLatest": "2026-07-17",
+      "validationStart": "2026-05-18",
+      "validationOverlap": 45,
+      "validationMatches": 45,
+      "validationMatchRate": 1,
+      "identityAccepted": true,
+      "conflicts": [],
+      "targetWeekdays": [
+        "Friday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "scheduleFilteredRows": 0,
+      "invalidRows": 0,
+      "acceptedForwardRows": 4,
+      "acceptedDates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23"
+      ]
+    },
+    "Rajdhani Day": {
+      "identityAccepted": false,
+      "reason": "The independent source Rajdhani Day series had 0 exact matches in 42 overlapping rows.",
+      "acceptedForwardRows": 0
+    }
+  },
+  "forward": {
+    "Sridevi": [
+      {
+        "id": "6a5dbe5ca65365a23039b10f",
+        "market": "Sridevi",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "269",
+        "openSutta": 7,
+        "jodi": "76",
+        "closePanel": "790",
+        "closeSutta": 6,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f1032a65365a2303bffa9",
+        "market": "Sridevi",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "268",
+        "openSutta": 6,
+        "jodi": "67",
+        "closePanel": "223",
+        "closeSutta": 7,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a6061bba65365a2303dde92",
+        "market": "Sridevi",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "668",
+        "openSutta": 0,
+        "jodi": "03",
+        "closePanel": "247",
+        "closeSutta": 3,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a61b309a65365a230400bfd",
+        "market": "Sridevi",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "246",
+        "openSutta": 2,
+        "jodi": "22",
+        "closePanel": "679",
+        "closeSutta": 2,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Time Bazar": [
+      {
+        "id": "6a5dd385a65365a23039db46",
+        "market": "Time Bazar",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "169",
+        "openSutta": 6,
+        "jodi": "63",
+        "closePanel": "355",
+        "closeSutta": 3,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f244aa65365a2303c28c8",
+        "market": "Time Bazar",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "270",
+        "openSutta": 9,
+        "jodi": "93",
+        "closePanel": "337",
+        "closeSutta": 3,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a6075a7a65365a2303e06af",
+        "market": "Time Bazar",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "259",
+        "openSutta": 6,
+        "jodi": "64",
+        "closePanel": "338",
+        "closeSutta": 4,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a61c774a65365a23040370a",
+        "market": "Time Bazar",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "678",
+        "openSutta": 1,
+        "jodi": "13",
+        "closePanel": "346",
+        "closeSutta": 3,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Madhur Day": [
+      {
+        "id": "6a5dd8dca65365a23039e771",
+        "market": "Madhur Day",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "370",
+        "openSutta": 0,
+        "jodi": "05",
+        "closePanel": "267",
+        "closeSutta": 5,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f2aa5a65365a2303c3809",
+        "market": "Madhur Day",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "300",
+        "openSutta": 3,
+        "jodi": "35",
+        "closePanel": "366",
+        "closeSutta": 5,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a607b73a65365a2303e10b5",
+        "market": "Madhur Day",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "559",
+        "openSutta": 9,
+        "jodi": "92",
+        "closePanel": "570",
+        "closeSutta": 2,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a61cd26a65365a230403ebb",
+        "market": "Madhur Day",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "557",
+        "openSutta": 7,
+        "jodi": "76",
+        "closePanel": "169",
+        "closeSutta": 6,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Milan Day": [
+      {
+        "id": "6a5def38a65365a2303a1562",
+        "market": "Milan Day",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "150",
+        "openSutta": 6,
+        "jodi": "64",
+        "closePanel": "220",
+        "closeSutta": 4,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f40b3a65365a2303c5ce3",
+        "market": "Milan Day",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "125",
+        "openSutta": 8,
+        "jodi": "83",
+        "closePanel": "490",
+        "closeSutta": 3,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a6091f7a65365a2303e3ac9",
+        "market": "Milan Day",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "113",
+        "openSutta": 5,
+        "jodi": "56",
+        "closePanel": "349",
+        "closeSutta": 6,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a61e3eca65365a230406a7a",
+        "market": "Milan Day",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "279",
+        "openSutta": 8,
+        "jodi": "88",
+        "closePanel": "279",
+        "closeSutta": 8,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Kalyan": [
+      {
+        "id": "6a5dfbe9a65365a2303a368d",
+        "market": "Kalyan",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "599",
+        "openSutta": 3,
+        "jodi": "31",
+        "closePanel": "579",
+        "closeSutta": 1,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f4e85a65365a2303c78ea",
+        "market": "Kalyan",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "337",
+        "openSutta": 3,
+        "jodi": "31",
+        "closePanel": "290",
+        "closeSutta": 1,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a609f1ea65365a2303e61ab",
+        "market": "Kalyan",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "700",
+        "openSutta": 7,
+        "jodi": "78",
+        "closePanel": "260",
+        "closeSutta": 8,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a61f224a65365a230408db3",
+        "market": "Kalyan",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "578",
+        "openSutta": 0,
+        "jodi": "00",
+        "closePanel": "226",
+        "closeSutta": 0,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Sridevi Night": [
+      {
+        "id": "6a5e2a46a65365a2303a8e32",
+        "market": "Sridevi Night",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "230",
+        "openSutta": 5,
+        "jodi": "54",
+        "closePanel": "167",
+        "closeSutta": 4,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f7ba5a65365a2303cbd45",
+        "market": "Sridevi Night",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "150",
+        "openSutta": 6,
+        "jodi": "61",
+        "closePanel": "489",
+        "closeSutta": 1,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a60cd5da65365a2303ea450",
+        "market": "Sridevi Night",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "156",
+        "openSutta": 2,
+        "jodi": "22",
+        "closePanel": "237",
+        "closeSutta": 2,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a621ee4a65365a23040ef06",
+        "market": "Sridevi Night",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "288",
+        "openSutta": 8,
+        "jodi": "85",
+        "closePanel": "339",
+        "closeSutta": 5,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Kalyan Night": [
+      {
+        "id": "6a5e4b8ba65365a2303ade30",
+        "market": "Kalyan Night",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "368",
+        "openSutta": 7,
+        "jodi": "72",
+        "closePanel": "228",
+        "closeSutta": 2,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f9cc0a65365a2303cf4c2",
+        "market": "Kalyan Night",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "146",
+        "openSutta": 1,
+        "jodi": "15",
+        "closePanel": "366",
+        "closeSutta": 5,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a60ee3aa65365a2303ef9af",
+        "market": "Kalyan Night",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "378",
+        "openSutta": 8,
+        "jodi": "86",
+        "closePanel": "178",
+        "closeSutta": 6,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a623fd4a65365a230413a22",
+        "market": "Kalyan Night",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "247",
+        "openSutta": 3,
+        "jodi": "36",
+        "closePanel": "448",
+        "closeSutta": 6,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Madhur Night": [
+      {
+        "id": "6a5e3b08a65365a2303ab03c",
+        "market": "Madhur Night",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "470",
+        "openSutta": 1,
+        "jodi": "15",
+        "closePanel": "799",
+        "closeSutta": 5,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f8c64a65365a2303cd677",
+        "market": "Madhur Night",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "246",
+        "openSutta": 2,
+        "jodi": "25",
+        "closePanel": "249",
+        "closeSutta": 5,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a60de0ea65365a2303ec0e0",
+        "market": "Madhur Night",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "469",
+        "openSutta": 9,
+        "jodi": "96",
+        "closePanel": "880",
+        "closeSutta": 6,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a622faaa65365a2304116b7",
+        "market": "Madhur Night",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "369",
+        "openSutta": 8,
+        "jodi": "89",
+        "closePanel": "577",
+        "closeSutta": 9,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Milan Night": [
+      {
+        "id": "6a5e43a0a65365a2303ad264",
+        "market": "Milan Night",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "470",
+        "openSutta": 1,
+        "jodi": "14",
+        "closePanel": "239",
+        "closeSutta": 4,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f956ea65365a2303cebf8",
+        "market": "Milan Night",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "120",
+        "openSutta": 3,
+        "jodi": "37",
+        "closePanel": "179",
+        "closeSutta": 7,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a60e72ba65365a2303eebbc",
+        "market": "Milan Night",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "270",
+        "openSutta": 9,
+        "jodi": "90",
+        "closePanel": "299",
+        "closeSutta": 0,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a623807a65365a230412a63",
+        "market": "Milan Night",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "499",
+        "openSutta": 2,
+        "jodi": "25",
+        "closePanel": "113",
+        "closeSutta": 5,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Rajdhani Night": [
+      {
+        "id": "6a5e4951a65365a2303ada67",
+        "market": "Rajdhani Night",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "360",
+        "openSutta": 9,
+        "jodi": "96",
+        "closePanel": "114",
+        "closeSutta": 6,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f9aeaa65365a2303cf262",
+        "market": "Rajdhani Night",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "277",
+        "openSutta": 6,
+        "jodi": "64",
+        "closePanel": "770",
+        "closeSutta": 4,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a60ec35a65365a2303ef696",
+        "market": "Rajdhani Night",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "259",
+        "openSutta": 6,
+        "jodi": "60",
+        "closePanel": "145",
+        "closeSutta": 0,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a623dbca65365a2304134c5",
+        "market": "Rajdhani Night",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "189",
+        "openSutta": 8,
+        "jodi": "81",
+        "closePanel": "579",
+        "closeSutta": 1,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Main Bazar": [
+      {
+        "id": "6a5e4e08a65365a2303ae256",
+        "market": "Main Bazar",
+        "isoDate": "2026-07-20",
+        "day": "Monday",
+        "openPanel": "888",
+        "openSutta": 4,
+        "jodi": "42",
+        "closePanel": "390",
+        "closeSutta": 2,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a5f9f11a65365a2303cf73f",
+        "market": "Main Bazar",
+        "isoDate": "2026-07-21",
+        "day": "Tuesday",
+        "openPanel": "250",
+        "openSutta": 7,
+        "jodi": "72",
+        "closePanel": "679",
+        "closeSutta": 2,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a60f06aa65365a2303efd33",
+        "market": "Main Bazar",
+        "isoDate": "2026-07-22",
+        "day": "Wednesday",
+        "openPanel": "368",
+        "openSutta": 7,
+        "jodi": "71",
+        "closePanel": "100",
+        "closeSutta": 1,
+        "sourceUpdatedAt": null
+      },
+      {
+        "id": "6a6242b6a65365a2304140ac",
+        "market": "Main Bazar",
+        "isoDate": "2026-07-23",
+        "day": "Thursday",
+        "openPanel": "137",
+        "openSutta": 1,
+        "jodi": "13",
+        "closePanel": "139",
+        "closeSutta": 3,
+        "sourceUpdatedAt": null
+      }
+    ],
+    "Rajdhani Day": []
+  }
+}
