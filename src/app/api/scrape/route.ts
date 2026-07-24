@@ -1,4 +1,9 @@
 import { type NextRequest } from 'next/server'
+import {
+  fetchIndependentChartRows,
+  supplementPanelHistory,
+  type PanelHistoryRecord,
+} from '@/lib/panel-history-supplement'
 
 export const runtime = 'nodejs'
 // No caching - always fetch fresh data
@@ -34,6 +39,10 @@ export async function GET(request: NextRequest) {
   }
 
   try {
+    // Start both sources together. The independent request is fail-soft and
+    // cannot replace or override the primary chart.
+    const independentRowsPromise = fetchIndependentChartRows(marketName)
+      .catch(() => null)
     const response = await fetch(targetUrl, {
       cache: 'no-store',
       headers: {
@@ -55,10 +64,22 @@ export async function GET(request: NextRequest) {
     }
 
     const html = await response.text()
-    const panels = filterRecentPanels(parseHtmlForPanels(html, marketName))
+    const primaryPanels = parseHtmlForPanels(html, marketName)
+    const independentRows = await independentRowsPromise
+    const supplemented = supplementPanelHistory(primaryPanels, independentRows, marketName)
+    const panels = filterRecentPanels(supplemented.panels)
 
     return Response.json(
-      { market: marketName, panels, count: panels.length, scrapedAt: new Date().toISOString() },
+      {
+        market: marketName,
+        panels,
+        count: panels.length,
+        scrapedAt: new Date().toISOString(),
+        historySources: {
+          primary: 'dpbossss.boston',
+          independentSupplement: supplemented.audit,
+        },
+      },
       {
         headers: {
           'Cache-Control': 'no-store, max-age=0',
@@ -239,14 +260,4 @@ function filterRecentPanels(panels: ParsedPanel[]): ParsedPanel[] {
     .map((item) => item.panel)
 }
 
-export interface ParsedPanel {
-  market: string
-  dateRangeStart: string
-  dateRangeEnd: string
-  day: string
-  openPanel: string
-  openSutta: number
-  jodi: string
-  closePanel: string
-  closeSutta: number
-}
+export type ParsedPanel = PanelHistoryRecord
