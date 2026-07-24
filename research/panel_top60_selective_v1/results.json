@@ -1,0 +1,837 @@
+{
+  "generatedAt": "2026-07-24T01:20:38.206485+05:30",
+  "design": {
+    "topK": 60,
+    "minimumSelectionCoverage": 0.25,
+    "coverageLevels": [
+      0.25,
+      0.35,
+      0.5,
+      0.65,
+      0.8
+    ],
+    "ruleSelection": "maximum selection-block Wilson lower bound",
+    "terminalNote": "historical terminal block; previously inspected by other experiments",
+    "forwardNote": "post-cache block; also reused across the research program"
+  },
+  "dataAudit": {
+    "source": "scratch\\open-sutta-records-cache.json",
+    "sha256": "02819f1d933f4fe2e340bb241ebcbe2d4f5859a7228b8f72682a234818056bd0",
+    "sourceRows": 7287,
+    "validRows": 7287,
+    "markets": {
+      "Sridevi": 724,
+      "Time Bazar": 604,
+      "Madhur Day": 704,
+      "Milan Day": 604,
+      "Rajdhani Day": 606,
+      "Kalyan": 606,
+      "Sridevi Night": 724,
+      "Kalyan Night": 500,
+      "Madhur Night": 605,
+      "Milan Night": 601,
+      "Rajdhani Night": 505,
+      "Main Bazar": 504
+    },
+    "invalidRows": 0,
+    "invalidExamples": [],
+    "duplicateMarketDates": 0,
+    "suttaMismatches": 0,
+    "firstDate": "2024-06-28",
+    "lastDate": "2026-07-05"
+  },
+  "forwardAudit": {
+    "available": true,
+    "generatedAt": "2026-07-23T19:21:41.281Z",
+    "sha256": "90b199a0e833b64f1f02a1b7d35bd7333c8165cdda67cd47df461f441f55791d",
+    "acceptedCompletedRows": 150,
+    "rejectedRows": 0,
+    "perMarket": {
+      "Sridevi": 14,
+      "Time Bazar": 12,
+      "Madhur Day": 14,
+      "Milan Day": 18,
+      "Rajdhani Day": 12,
+      "Kalyan": 12,
+      "Sridevi Night": 14,
+      "Kalyan Night": 10,
+      "Madhur Night": 12,
+      "Milan Night": 12,
+      "Rajdhani Night": 10,
+      "Main Bazar": 10
+    }
+  },
+  "tasks": {
+    "open": {
+      "model": {
+        "config": {
+          "name": "dynamic_wd01",
+          "kind": "dynamic",
+          "weight_decay": 0.01,
+          "lr": 0.03,
+          "dropout": 0.0,
+          "loss": "cross_entropy"
+        },
+        "epochs": 3
+      },
+      "ungated": {
+        "selection": {
+          "n": 899,
+          "coverage": 1.0,
+          "hits": 360,
+          "rate": 0.40044493882091214,
+          "wilson95": [
+            0.36890414092970875,
+            0.4328329212630126
+          ]
+        },
+        "terminal": {
+          "n": 974,
+          "coverage": 1.0,
+          "hits": 338,
+          "rate": 0.3470225872689938,
+          "wilson95": [
+            0.31778142461938036,
+            0.3774656961568272
+          ]
+        },
+        "prospectiveForward": {
+          "n": 150,
+          "coverage": 1.0,
+          "hits": 59,
+          "rate": 0.3933333333333333,
+          "wilson95": [
+            0.318759856976774,
+            0.47323379515508224
+          ]
+        }
+      },
+      "chosenGate": {
+        "kind": "signal",
+        "name": "profile_hot_agreement:high:0.80",
+        "signal": "profile_hot_agreement",
+        "direction": "high",
+        "threshold": 0.7166666388511658,
+        "selection": {
+          "n": 773,
+          "coverage": 0.8598442714126807,
+          "hits": 322,
+          "rate": 0.4165588615782665,
+          "wilson95": [
+            0.38230183295881914,
+            0.4516411182891331
+          ]
+        },
+        "terminal": {
+          "n": 771,
+          "coverage": 0.7915811088295688,
+          "hits": 272,
+          "rate": 0.3527885862516213,
+          "wilson95": [
+            0.3198653918835201,
+            0.38717145105271994
+          ]
+        },
+        "prospectiveForward": {
+          "n": 122,
+          "coverage": 0.8133333333333334,
+          "hits": 49,
+          "rate": 0.4016393442622951,
+          "wilson95": [
+            0.31893763215740367,
+            0.49034620621420544
+          ]
+        }
+      },
+      "topSelectionRules": [
+        {
+          "kind": "signal",
+          "name": "profile_hot_agreement:high:0.80",
+          "signal": "profile_hot_agreement",
+          "direction": "high",
+          "threshold": 0.7166666388511658,
+          "selection": {
+            "n": 773,
+            "coverage": 0.8598442714126807,
+            "hits": 322,
+            "rate": 0.4165588615782665,
+            "wilson95": [
+              0.38230183295881914,
+              0.4516411182891331
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "profile_hot_agreement:high:0.65",
+          "signal": "profile_hot_agreement",
+          "direction": "high",
+          "threshold": 0.7333333492279053,
+          "selection": {
+            "n": 679,
+            "coverage": 0.7552836484983315,
+            "hits": 284,
+            "rate": 0.4182621502209131,
+            "wilson95": [
+              0.38172130864496157,
+              0.45572265647147514
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_top60_mass:low:0.80",
+          "signal": "learned_top60_mass",
+          "direction": "low",
+          "threshold": 0.4598657786846161,
+          "selection": {
+            "n": 719,
+            "coverage": 0.7997775305895439,
+            "hits": 299,
+            "rate": 0.41585535465924894,
+            "wilson95": [
+              0.38036969161829765,
+              0.4522353720184647
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:5",
+          "markets": [
+            "Kalyan",
+            "Milan Day",
+            "Kalyan Night",
+            "Madhur Night",
+            "Sridevi"
+          ],
+          "selection": {
+            "n": 375,
+            "coverage": 0.41713014460511677,
+            "hits": 161,
+            "rate": 0.42933333333333334,
+            "wilson95": [
+              0.3802013167132221,
+              0.479898472351615
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:4",
+          "markets": [
+            "Kalyan",
+            "Milan Day",
+            "Kalyan Night",
+            "Madhur Night"
+          ],
+          "selection": {
+            "n": 287,
+            "coverage": 0.3192436040044494,
+            "hits": 125,
+            "rate": 0.4355400696864111,
+            "wilson95": [
+              0.3794014143247488,
+              0.49338150957465715
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:6",
+          "markets": [
+            "Kalyan",
+            "Milan Day",
+            "Kalyan Night",
+            "Madhur Night",
+            "Sridevi",
+            "Sridevi Night"
+          ],
+          "selection": {
+            "n": 463,
+            "coverage": 0.5150166852057843,
+            "hits": 196,
+            "rate": 0.42332613390928725,
+            "wilson95": [
+              0.3791332111856498,
+              0.4687808961445866
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:7",
+          "markets": [
+            "Kalyan",
+            "Milan Day",
+            "Kalyan Night",
+            "Madhur Night",
+            "Sridevi",
+            "Sridevi Night",
+            "Milan Night"
+          ],
+          "selection": {
+            "n": 537,
+            "coverage": 0.5973303670745272,
+            "hits": 225,
+            "rate": 0.41899441340782123,
+            "wilson95": [
+              0.3779836035862348,
+              0.4611559472357312
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:8",
+          "markets": [
+            "Kalyan",
+            "Milan Day",
+            "Kalyan Night",
+            "Madhur Night",
+            "Sridevi",
+            "Sridevi Night",
+            "Milan Night",
+            "Main Bazar"
+          ],
+          "selection": {
+            "n": 599,
+            "coverage": 0.6662958843159066,
+            "hits": 249,
+            "rate": 0.41569282136894825,
+            "wilson95": [
+              0.37688465436133634,
+              0.4555754418676444
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:9",
+          "markets": [
+            "Kalyan",
+            "Milan Day",
+            "Kalyan Night",
+            "Madhur Night",
+            "Sridevi",
+            "Sridevi Night",
+            "Milan Night",
+            "Main Bazar",
+            "Time Bazar"
+          ],
+          "selection": {
+            "n": 674,
+            "coverage": 0.7497219132369299,
+            "hits": 278,
+            "rate": 0.4124629080118694,
+            "wilson95": [
+              0.3758966410834818,
+              0.45002135424643513
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_top60_mass:low:0.65",
+          "signal": "learned_top60_mass",
+          "direction": "low",
+          "threshold": 0.45019567012786865,
+          "selection": {
+            "n": 584,
+            "coverage": 0.6496106785317018,
+            "hits": 242,
+            "rate": 0.4143835616438356,
+            "wilson95": [
+              0.37511686525819155,
+              0.45476924008623865
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_profile_agreement:low:0.65",
+          "signal": "learned_profile_agreement",
+          "direction": "low",
+          "threshold": 0.5666666626930237,
+          "selection": {
+            "n": 643,
+            "coverage": 0.7152391546162402,
+            "hits": 265,
+            "rate": 0.4121306376360809,
+            "wilson95": [
+              0.37471677383444796,
+              0.4505881776972321
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:10",
+          "markets": [
+            "Kalyan",
+            "Milan Day",
+            "Kalyan Night",
+            "Madhur Night",
+            "Sridevi",
+            "Sridevi Night",
+            "Milan Night",
+            "Main Bazar",
+            "Time Bazar",
+            "Rajdhani Day"
+          ],
+          "selection": {
+            "n": 749,
+            "coverage": 0.8331479421579533,
+            "hits": 306,
+            "rate": 0.40854472630173566,
+            "wilson95": [
+              0.3738945466333655,
+              0.44412822775713257
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_entropy_confidence:low:0.80",
+          "signal": "learned_entropy_confidence",
+          "direction": "low",
+          "threshold": 0.023797249421477318,
+          "selection": {
+            "n": 719,
+            "coverage": 0.7997775305895439,
+            "hits": 294,
+            "rate": 0.4089012517385257,
+            "wilson95": [
+              0.3735422972351423,
+              0.4452284741401954
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_profile_agreement:low:0.80",
+          "signal": "learned_profile_agreement",
+          "direction": "low",
+          "threshold": 0.6000000238418579,
+          "selection": {
+            "n": 765,
+            "coverage": 0.8509454949944383,
+            "hits": 311,
+            "rate": 0.4065359477124183,
+            "wilson95": [
+              0.3722800602348623,
+              0.4417258074776515
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "three_way_min_agreement:high:0.65",
+          "signal": "three_way_min_agreement",
+          "direction": "high",
+          "threshold": 0.38333332538604736,
+          "selection": {
+            "n": 615,
+            "coverage": 0.6840934371523916,
+            "hits": 252,
+            "rate": 0.4097560975609756,
+            "wilson95": [
+              0.37156534666572866,
+              0.4490672266406411
+            ]
+          }
+        }
+      ],
+      "selectionRulesAtOrAbove80": [],
+      "candidateRuleCount": 87
+    },
+    "close_preopen": {
+      "model": {
+        "config": {
+          "name": "dynamic_wd01",
+          "kind": "dynamic",
+          "weight_decay": 0.01,
+          "lr": 0.03,
+          "dropout": 0.0,
+          "loss": "cross_entropy"
+        },
+        "epochs": 4
+      },
+      "ungated": {
+        "selection": {
+          "n": 899,
+          "coverage": 1.0,
+          "hits": 375,
+          "rate": 0.41713014460511677,
+          "wilson95": [
+            0.3853172646226724,
+            0.44964822290087775
+          ]
+        },
+        "terminal": {
+          "n": 974,
+          "coverage": 1.0,
+          "hits": 389,
+          "rate": 0.3993839835728953,
+          "wilson95": [
+            0.36907888207374756,
+            0.43047962689315405
+          ]
+        },
+        "prospectiveForward": {
+          "n": 150,
+          "coverage": 1.0,
+          "hits": 55,
+          "rate": 0.36666666666666664,
+          "wilson95": [
+            0.2937744456533283,
+            0.44621761951149214
+          ]
+        }
+      },
+      "chosenGate": {
+        "kind": "markets",
+        "name": "top_selection_markets:4",
+        "markets": [
+          "Sridevi Night",
+          "Madhur Day",
+          "Sridevi",
+          "Kalyan"
+        ],
+        "selection": {
+          "n": 339,
+          "coverage": 0.3770856507230256,
+          "hits": 157,
+          "rate": 0.4631268436578171,
+          "wilson95": [
+            0.4107562112582028,
+            0.5163237863418686
+          ]
+        },
+        "terminal": {
+          "n": 370,
+          "coverage": 0.3798767967145791,
+          "hits": 144,
+          "rate": 0.3891891891891892,
+          "wilson95": [
+            0.3408907022111049,
+            0.43976497932118414
+          ]
+        },
+        "prospectiveForward": {
+          "n": 54,
+          "coverage": 0.36,
+          "hits": 20,
+          "rate": 0.37037037037037035,
+          "wilson95": [
+            0.2542337519166028,
+            0.5037253264773334
+          ]
+        }
+      },
+      "topSelectionRules": [
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:4",
+          "markets": [
+            "Sridevi Night",
+            "Madhur Day",
+            "Sridevi",
+            "Kalyan"
+          ],
+          "selection": {
+            "n": 339,
+            "coverage": 0.3770856507230256,
+            "hits": 157,
+            "rate": 0.4631268436578171,
+            "wilson95": [
+              0.4107562112582028,
+              0.5163237863418686
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:3",
+          "markets": [
+            "Sridevi Night",
+            "Madhur Day",
+            "Sridevi"
+          ],
+          "selection": {
+            "n": 264,
+            "coverage": 0.2936596218020022,
+            "hits": 124,
+            "rate": 0.4696969696969697,
+            "wilson95": [
+              0.41036043535517774,
+              0.5299027334968439
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:5",
+          "markets": [
+            "Sridevi Night",
+            "Madhur Day",
+            "Sridevi",
+            "Kalyan",
+            "Milan Night"
+          ],
+          "selection": {
+            "n": 413,
+            "coverage": 0.4593993325917686,
+            "hits": 187,
+            "rate": 0.45278450363196127,
+            "wilson95": [
+              0.40543308148403856,
+              0.501006167360506
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:6",
+          "markets": [
+            "Sridevi Night",
+            "Madhur Day",
+            "Sridevi",
+            "Kalyan",
+            "Milan Night",
+            "Main Bazar"
+          ],
+          "selection": {
+            "n": 475,
+            "coverage": 0.5283648498331479,
+            "hits": 212,
+            "rate": 0.4463157894736842,
+            "wilson95": [
+              0.4022193332009236,
+              0.4912735984144707
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:7",
+          "markets": [
+            "Sridevi Night",
+            "Madhur Day",
+            "Sridevi",
+            "Kalyan",
+            "Milan Night",
+            "Main Bazar",
+            "Madhur Night"
+          ],
+          "selection": {
+            "n": 550,
+            "coverage": 0.6117908787541713,
+            "hits": 242,
+            "rate": 0.44,
+            "wilson95": [
+              0.3990735682201087,
+              0.4817587549134193
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:8",
+          "markets": [
+            "Sridevi Night",
+            "Madhur Day",
+            "Sridevi",
+            "Kalyan",
+            "Milan Night",
+            "Main Bazar",
+            "Madhur Night",
+            "Milan Day"
+          ],
+          "selection": {
+            "n": 625,
+            "coverage": 0.6952169076751946,
+            "hits": 272,
+            "rate": 0.4352,
+            "wilson95": [
+              0.39684404276093554,
+              0.4743476560944415
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:9",
+          "markets": [
+            "Sridevi Night",
+            "Madhur Day",
+            "Sridevi",
+            "Kalyan",
+            "Milan Night",
+            "Main Bazar",
+            "Madhur Night",
+            "Milan Day",
+            "Kalyan Night"
+          ],
+          "selection": {
+            "n": 687,
+            "coverage": 0.764182424916574,
+            "hits": 296,
+            "rate": 0.43085880640465796,
+            "wilson95": [
+              0.39431491725410395,
+              0.4681716217527323
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_sutta_concentration:high:0.65",
+          "signal": "learned_sutta_concentration",
+          "direction": "high",
+          "threshold": 0.13333334028720856,
+          "selection": {
+            "n": 829,
+            "coverage": 0.9221357063403782,
+            "hits": 353,
+            "rate": 0.42581423401688784,
+            "wilson95": [
+              0.3925729285440835,
+              0.4597398991888581
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_sutta_concentration:high:0.80",
+          "signal": "learned_sutta_concentration",
+          "direction": "high",
+          "threshold": 0.13333334028720856,
+          "selection": {
+            "n": 829,
+            "coverage": 0.9221357063403782,
+            "hits": 353,
+            "rate": 0.42581423401688784,
+            "wilson95": [
+              0.3925729285440835,
+              0.4597398991888581
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "three_way_min_agreement:low:0.35",
+          "signal": "three_way_min_agreement",
+          "direction": "low",
+          "threshold": 0.4166666567325592,
+          "selection": {
+            "n": 323,
+            "coverage": 0.3592880978865406,
+            "hits": 144,
+            "rate": 0.4458204334365325,
+            "wilson95": [
+              0.3925663650996893,
+              0.5003480768860775
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_top60_mass:low:0.65",
+          "signal": "learned_top60_mass",
+          "direction": "low",
+          "threshold": 0.4497186541557312,
+          "selection": {
+            "n": 584,
+            "coverage": 0.6496106785317018,
+            "hits": 252,
+            "rate": 0.4315068493150685,
+            "wilson95": [
+              0.39191374909241916,
+              0.4719951351831251
+            ]
+          }
+        },
+        {
+          "kind": "markets",
+          "name": "top_selection_markets:10",
+          "markets": [
+            "Sridevi Night",
+            "Madhur Day",
+            "Sridevi",
+            "Kalyan",
+            "Milan Night",
+            "Main Bazar",
+            "Madhur Night",
+            "Milan Day",
+            "Kalyan Night",
+            "Time Bazar"
+          ],
+          "selection": {
+            "n": 762,
+            "coverage": 0.8476084538375973,
+            "hits": 325,
+            "rate": 0.42650918635170604,
+            "wilson95": [
+              0.39184862316946006,
+              0.4619070090047673
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "learned_hot_agreement:high:0.80",
+          "signal": "learned_hot_agreement",
+          "direction": "high",
+          "threshold": 0.36666667461395264,
+          "selection": {
+            "n": 741,
+            "coverage": 0.8242491657397107,
+            "hits": 315,
+            "rate": 0.4251012145748988,
+            "wilson95": [
+              0.38998297088256306,
+              0.46099202697034103
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "three_way_min_agreement:high:0.80",
+          "signal": "three_way_min_agreement",
+          "direction": "high",
+          "threshold": 0.36666667461395264,
+          "selection": {
+            "n": 737,
+            "coverage": 0.8197997775305895,
+            "hits": 313,
+            "rate": 0.42469470827679784,
+            "wilson95": [
+              0.38948935044665217,
+              0.460681021799125
+            ]
+          }
+        },
+        {
+          "kind": "signal",
+          "name": "profile_hot_agreement:high:0.80",
+          "signal": "profile_hot_agreement",
+          "direction": "high",
+          "threshold": 0.7166666388511658,
+          "selection": {
+            "n": 757,
+            "coverage": 0.8420467185761957,
+            "hits": 321,
+            "rate": 0.4240422721268164,
+            "wilson95": [
+              0.38930802138062404,
+              0.459543538077965
+            ]
+          }
+        }
+      ],
+      "selectionRulesAtOrAbove80": [],
+      "candidateRuleCount": 88
+    }
+  }
+}

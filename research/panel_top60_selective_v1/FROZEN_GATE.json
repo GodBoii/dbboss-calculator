@@ -1,0 +1,85 @@
+{
+  "frozenAt": "2026-07-24T01:20:38.206485+05:30",
+  "topK": 60,
+  "selectionEnd": "2026-03-31",
+  "gates": {
+    "open": {
+      "kind": "signal",
+      "name": "profile_hot_agreement:high:0.80",
+      "signal": "profile_hot_agreement",
+      "direction": "high",
+      "threshold": 0.7166666388511658,
+      "selection": {
+        "n": 773,
+        "coverage": 0.8598442714126807,
+        "hits": 322,
+        "rate": 0.4165588615782665,
+        "wilson95": [
+          0.38230183295881914,
+          0.4516411182891331
+        ]
+      },
+      "terminal": {
+        "n": 771,
+        "coverage": 0.7915811088295688,
+        "hits": 272,
+        "rate": 0.3527885862516213,
+        "wilson95": [
+          0.3198653918835201,
+          0.38717145105271994
+        ]
+      },
+      "prospectiveForward": {
+        "n": 122,
+        "coverage": 0.8133333333333334,
+        "hits": 49,
+        "rate": 0.4016393442622951,
+        "wilson95": [
+          0.31893763215740367,
+          0.49034620621420544
+        ]
+      }
+    },
+    "close_preopen": {
+      "kind": "markets",
+      "name": "top_selection_markets:4",
+      "markets": [
+        "Sridevi Night",
+        "Madhur Day",
+        "Sridevi",
+        "Kalyan"
+      ],
+      "selection": {
+        "n": 339,
+        "coverage": 0.3770856507230256,
+        "hits": 157,
+        "rate": 0.4631268436578171,
+        "wilson95": [
+          0.4107562112582028,
+          0.5163237863418686
+        ]
+      },
+      "terminal": {
+        "n": 370,
+        "coverage": 0.3798767967145791,
+        "hits": 144,
+        "rate": 0.3891891891891892,
+        "wilson95": [
+          0.3408907022111049,
+          0.43976497932118414
+        ]
+      },
+      "prospectiveForward": {
+        "n": 54,
+        "coverage": 0.36,
+        "hits": 20,
+        "rate": 0.37037037037037035,
+        "wilson95": [
+          0.2542337519166028,
+          0.5037253264773334
+        ]
+      }
+    }
+  },
+  "status": "research-only; requires genuinely future rows before production use"
+}
