@@ -938,6 +938,21 @@ export function buildAbsentDigitsPrediction(
   )
 }
 
+export function buildAbsentDigitsPredictionV3(
+  market: string,
+  records: readonly AbsentDigitRecord[],
+  targetDate: string,
+  targetDay: string,
+) {
+  return buildAbsentDigitsPredictionInternal(
+    market,
+    records,
+    targetDate,
+    targetDay,
+    "v3",
+  )
+}
+
 export function buildAbsentDigitsPredictionV2(
   market: string,
   records: readonly AbsentDigitRecord[],

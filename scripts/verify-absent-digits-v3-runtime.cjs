@@ -21,6 +21,7 @@ const {
   ABSENT_DIGITS_MODEL_ID,
   ABSENT_DIGITS_V2_MODEL_ID,
   buildAbsentDigitsPrediction,
+  buildAbsentDigitsPredictionV3,
   buildAbsentDigitsPredictionV2,
 } = require("../src/lib/absent-digits.ts")
 
@@ -113,13 +114,19 @@ function main() {
     const targetDate = frozenByKey.get(`${market}|open`).targetDate
     const targetDay = DAY_NAMES[new Date(`${targetDate}T00:00:00Z`).getUTCDay()]
     const before = JSON.stringify(records[market])
-    const v3 = buildAbsentDigitsPrediction(
+    const v3 = buildAbsentDigitsPredictionV3(
+      market, records[market], targetDate, targetDay,
+    )
+    const defaultPrediction = buildAbsentDigitsPrediction(
       market, records[market], targetDate, targetDay,
     )
     const v2 = buildAbsentDigitsPredictionV2(
       market, records[market], targetDate, targetDay,
     )
     if (!v3 || !v2) throw new Error(`${market}: missing prediction`)
+    if (JSON.stringify(defaultPrediction) !== JSON.stringify(v3)) {
+      throw new Error(`${market}: app default does not match guarded V3`)
+    }
     if (v3.modelId !== ABSENT_DIGITS_MODEL_ID) {
       throw new Error(`${market}: V3 model ID mismatch`)
     }
@@ -130,7 +137,7 @@ function main() {
       throw new Error(`${market}: prediction mutated source records`)
     }
 
-    const contaminated = buildAbsentDigitsPrediction(
+    const contaminated = buildAbsentDigitsPredictionV3(
       market,
       [
         ...records[market],
