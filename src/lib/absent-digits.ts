@@ -1,9 +1,18 @@
 import { getRecordISODate, type PanelRecord } from "./db"
 
-export const ABSENT_DIGITS_MODEL_ID = "absent-digits-complementary-online-v2"
+export const ABSENT_DIGITS_V2_MODEL_ID = "absent-digits-complementary-online-v2"
+export const ABSENT_DIGITS_V2_CALIBRATION_ID = "local-beta-w240-s80-v1"
+export const ABSENT_DIGITS_MODEL_ID = "absent-digits-guarded-market-routing-v3"
+export const ABSENT_DIGITS_CALIBRATION_ID = "guarded-route-beta-w240-s80-v1"
 export const ABSENT_DIGITS_APPEARANCE_BLEND = 0.75
 export const ABSENT_DIGITS_MIN_HISTORY = 180
 export const ABSENT_DIGITS_HISTORY_LIMIT = 730
+export const ABSENT_DIGITS_CONFIDENCE_WINDOW = 240
+export const ABSENT_DIGITS_ROUTE_BLEND = 0.35
+export const ABSENT_DIGITS_ROUTE_WINDOW = 80
+export const ABSENT_DIGITS_ROUTE_RECENT_WINDOW = 40
+export const ABSENT_DIGITS_ROUTE_MIN_HISTORY = 60
+export const ABSENT_DIGITS_ROUTE_MIN_NET_HITS = 2
 
 const DIGITS = Array.from({ length: 10 }, (_, digit) => digit)
 const PAIRS = DIGITS.flatMap((a) =>
@@ -24,6 +33,45 @@ const RANDOM_PAIR_BASE = 0.506
 
 type Side = "open" | "close"
 type CallStatus = "CALL" | "NO_SAFE_CALL"
+type RuntimeMode = "v2" | "v3"
+type RouteModelName =
+  | "lag_panel_repeat_15"
+  | "frequency_saturation_w90"
+  | "frequency_hot_w5"
+  | "lag_opposite_7"
+  | "lag_jodi_transition_1"
+  | "position_markov"
+  | "frequency_hot_w90"
+
+interface RouteModelSpec {
+  name: RouteModelName
+}
+
+const MARKET_SIDE_ROUTE_MODELS: Record<
+  string,
+  Partial<Record<Side, RouteModelSpec>>
+> = {
+  "Time Bazar": {
+    close: { name: "lag_panel_repeat_15" },
+  },
+  "Milan Day": {
+    open: { name: "frequency_saturation_w90" },
+    close: { name: "frequency_hot_w5" },
+  },
+  "Rajdhani Day": {
+    close: { name: "lag_opposite_7" },
+  },
+  Kalyan: {
+    close: { name: "lag_jodi_transition_1" },
+  },
+  "Kalyan Night": {
+    open: { name: "position_markov" },
+    close: { name: "frequency_saturation_w90" },
+  },
+  "Main Bazar": {
+    close: { name: "frequency_hot_w90" },
+  },
+}
 
 export interface AbsentDigitRecord {
   isoDate: string
@@ -54,14 +102,25 @@ export interface AbsentDigitSidePrediction {
   digitProbabilities: AbsentDigitProbability[]
   mostLikelyDigits: number[]
   confidence: number
+  confidenceSample: number
   historicalReliability: number
   reliabilitySample: number
   wilson95: [number, number]
   supportingModels: AbsentDigitContributor[]
+  routeModel: "baseline_v2" | RouteModelName
+  routeModelApplied: boolean
+  routeGuard: {
+    historySample: number
+    netHits: number
+    recentNetHits: number
+  }
 }
 
 export interface AbsentDigitsPrediction {
-  modelId: typeof ABSENT_DIGITS_MODEL_ID
+  modelId: typeof ABSENT_DIGITS_MODEL_ID | typeof ABSENT_DIGITS_V2_MODEL_ID
+  calibrationId:
+    | typeof ABSENT_DIGITS_CALIBRATION_ID
+    | typeof ABSENT_DIGITS_V2_CALIBRATION_ID
   market: string
   targetDate: string
   appearanceBlendWeight: typeof ABSENT_DIGITS_APPEARANCE_BLEND
@@ -91,10 +150,24 @@ interface SeriesForecast {
   absencePairIndex: number
   blendPairIndex: number
   familyAgreement: boolean
+  selectedDigitProbability: number[]
+  selectedPairIndex: number
+  routeModel: "baseline_v2" | RouteModelName
+  routeModelApplied: boolean
+  routeGuard: {
+    historySample: number
+    netHits: number
+    recentNetHits: number
+  }
 }
 
 interface HistoricalForecast {
   hit: boolean
+}
+
+interface RouteHistoricalForecast {
+  baselineHit: boolean
+  candidateHit: boolean
 }
 
 function panelMask(panel: string): number {
@@ -247,9 +320,173 @@ function rankedContributors(
     .map(([name, weight]) => ({ family, name, weight }))
 }
 
+function clampProbability(value: number) {
+  return Math.max(0.01, Math.min(0.95, value))
+}
+
+function panelDigits(panel: string) {
+  return [...panel]
+    .map(Number)
+    .filter((digit) => Number.isInteger(digit) && digit >= 0 && digit <= 9)
+}
+
+function panelSutta(panel: string) {
+  return panelDigits(panel).reduce((sum, digit) => sum + digit, 0) % 10
+}
+
+function rowJodi(row: SeriesRow) {
+  return `${panelSutta(row.openPanel)}${panelSutta(row.closePanel)}`
+}
+
+function digitSet(mask: number) {
+  return new Set(DIGITS.filter((digit) => Boolean(mask & (1 << digit))))
+}
+
+function appearanceFromIndices(
+  digitMatrix: number[][],
+  indices: number[],
+  prior: number[],
+  strength: number,
+) {
+  const counts = Array(10).fill(0) as number[]
+  for (const index of indices) {
+    for (const digit of DIGITS) counts[digit] += digitMatrix[index][digit]
+  }
+  return counts.map(
+    (count, digit) =>
+      (count + prior[digit] * strength) / (indices.length + strength),
+  )
+}
+
+function anchorDigits(
+  prior: number[],
+  anchoredDigits: Set<number>,
+  bonus = 0.06,
+) {
+  return prior.map((value, digit) =>
+    clampProbability(value + (anchoredDigits.has(digit) ? bonus : 0)),
+  )
+}
+
+function pairForLowestAppearance(probabilities: number[]) {
+  const selected = [...DIGITS]
+    .sort(
+      (left, right) =>
+        probabilities[left] - probabilities[right] || left - right,
+    )
+    .slice(0, 2)
+    .sort((left, right) => left - right)
+  return PAIRS.findIndex(
+    ([left, right]) => left === selected[0] && right === selected[1],
+  )
+}
+
+function buildRouteCandidateProbability(
+  spec: RouteModelSpec,
+  rows: SeriesRow[],
+  side: Side,
+  index: number,
+  masks: number[],
+  digitMatrix: number[][],
+  digitPrefix: number[][],
+) {
+  const longStart = Math.max(0, index - ABSENT_DIGITS_HISTORY_LIMIT)
+  const long = smoothedVector(
+    digitPrefix,
+    longStart,
+    index,
+    Array(10).fill(0.27) as number[],
+    36,
+  )
+
+  const recentFrequency = (window: number) =>
+    smoothedVector(
+      digitPrefix,
+      Math.max(0, index - window),
+      index,
+      long,
+      12,
+    )
+
+  switch (spec.name) {
+    case "frequency_hot_w5":
+      return recentFrequency(5)
+    case "frequency_hot_w90":
+      return recentFrequency(90)
+    case "frequency_saturation_w90":
+      return recentFrequency(90).map((value, digit) =>
+        clampProbability(2 * long[digit] - value),
+      )
+    case "lag_panel_repeat_15": {
+      const source = digitSet(masks[index - 15])
+      return anchorDigits(long, source)
+    }
+    case "lag_opposite_7": {
+      const source = new Set(
+        [...digitSet(masks[index - 7])].map((digit) => (digit + 5) % 10),
+      )
+      return anchorDigits(long, source)
+    }
+    case "lag_jodi_transition_1": {
+      const sourceJodi = rowJodi(rows[index - 1])
+      const selected = []
+      for (let candidate = Math.max(1, longStart); candidate < index; candidate += 1) {
+        if (rowJodi(rows[candidate - 1]) === sourceJodi) selected.push(candidate)
+      }
+      return appearanceFromIndices(digitMatrix, selected, long, 45)
+    }
+    case "position_markov": {
+      const previous = panelDigits(panelFor(rows[index - 1], side))
+      const combined = Array(10).fill(0) as number[]
+      for (let position = 0; position < 3; position += 1) {
+        const selected = []
+        for (
+          let candidate = Math.max(1, longStart);
+          candidate < index;
+          candidate += 1
+        ) {
+          const candidatePrevious = panelDigits(
+            panelFor(rows[candidate - 1], side),
+          )
+          if (candidatePrevious[position] === previous[position]) {
+            selected.push(candidate)
+          }
+        }
+        const rates = appearanceFromIndices(digitMatrix, selected, long, 24)
+        for (const digit of DIGITS) combined[digit] += rates[digit] / 3
+      }
+      return combined
+    }
+  }
+}
+
+function routeGuard(history: RouteHistoricalForecast[]) {
+  const selected = history.slice(-ABSENT_DIGITS_ROUTE_WINDOW)
+  const recent = selected.slice(-ABSENT_DIGITS_ROUTE_RECENT_WINDOW)
+  const netHits = selected.reduce(
+    (sum, row) => sum + Number(row.candidateHit) - Number(row.baselineHit),
+    0,
+  )
+  const recentNetHits = recent.reduce(
+    (sum, row) => sum + Number(row.candidateHit) - Number(row.baselineHit),
+    0,
+  )
+  return {
+    applied:
+      selected.length >= ABSENT_DIGITS_ROUTE_MIN_HISTORY &&
+      netHits >= ABSENT_DIGITS_ROUTE_MIN_NET_HITS &&
+      recentNetHits >= 0,
+    historySample: selected.length,
+    netHits,
+    recentNetHits,
+  }
+}
+
 function buildSidePrediction(
   rows: SeriesRow[],
   side: Side,
+  market: string,
+  mode: RuntimeMode,
 ): AbsentDigitSidePrediction {
   const targetIndex = rows.length - 1
   const masks = rows.map((row, index) =>
@@ -338,6 +575,9 @@ function buildSidePrediction(
     },
   }
   const historical: HistoricalForecast[] = []
+  const routeHistorical: RouteHistoricalForecast[] = []
+  const routeSpec =
+    mode === "v3" ? MARKET_SIDE_ROUTE_MODELS[market]?.[side] : undefined
   let targetForecast: SeriesForecast | null = null
 
   for (let index = ABSENT_DIGITS_MIN_HISTORY; index <= targetIndex; index += 1) {
@@ -492,6 +732,37 @@ function buildSidePrediction(
         value > blendScores[best] ? pairIndex : best,
       0,
     )
+    const routeCandidateProbability = routeSpec
+      ? buildRouteCandidateProbability(
+          routeSpec,
+          rows,
+          side,
+          index,
+          masks,
+          digitMatrix,
+          digitPrefix,
+        )
+      : digitProbability
+    const adjustedRouteProbability = digitProbability.map(
+      (value, digit) =>
+        (1 - ABSENT_DIGITS_ROUTE_BLEND) * value +
+        ABSENT_DIGITS_ROUTE_BLEND * routeCandidateProbability[digit],
+    )
+    const routePairIndex = pairForLowestAppearance(adjustedRouteProbability)
+    const guard = routeSpec
+      ? routeGuard(routeHistorical)
+      : {
+          applied: false,
+          historySample: 0,
+          netHits: 0,
+          recentNetHits: 0,
+        }
+    const selectedPairIndex =
+      routeSpec && guard.applied ? routePairIndex : blendPairIndex
+    const selectedDigitProbability =
+      routeSpec && guard.applied
+        ? adjustedRouteProbability
+        : digitProbability
     const forecast: SeriesForecast = {
       digitProbability,
       appearanceWeights,
@@ -500,6 +771,15 @@ function buildSidePrediction(
       absencePairIndex,
       blendPairIndex,
       familyAgreement: appearancePairIndex === absencePairIndex,
+      selectedDigitProbability,
+      selectedPairIndex,
+      routeModel: routeSpec?.name ?? "baseline_v2",
+      routeModelApplied: Boolean(routeSpec && guard.applied),
+      routeGuard: {
+        historySample: guard.historySample,
+        netHits: guard.netHits,
+        recentNetHits: guard.recentNetHits,
+      },
     }
 
     if (index === targetIndex) {
@@ -508,7 +788,10 @@ function buildSidePrediction(
     }
 
     const actualMask = masks[index]
-    historical.push({ hit: pairHit(blendPairIndex, actualMask) })
+    const baselineHit = pairHit(blendPairIndex, actualMask)
+    const candidateHit = pairHit(routePairIndex, actualMask)
+    historical.push({ hit: pairHit(selectedPairIndex, actualMask) })
+    if (routeSpec) routeHistorical.push({ baselineHit, candidateHit })
     updateEma(
       losses.appearance,
       Object.fromEntries(
@@ -532,34 +815,42 @@ function buildSidePrediction(
   if (!targetForecast) {
     throw new Error("Unable to build absent-digits forecast")
   }
+  const confidenceRows = historical.slice(-ABSENT_DIGITS_CONFIDENCE_WINDOW)
+  const confidenceHits = confidenceRows.filter((row) => row.hit).length
+  const confidence = betaRate(
+    confidenceHits,
+    confidenceRows.length,
+    RANDOM_PAIR_BASE,
+    80,
+  )
   const reliabilityRows = historical.slice(-120)
-  const hits = reliabilityRows.filter((row) => row.hit).length
+  const reliabilityHits = reliabilityRows.filter((row) => row.hit).length
   const sample = reliabilityRows.length
-  const historicalReliability = sample ? hits / sample : 0
-  const confidence = betaRate(hits, sample, RANDOM_PAIR_BASE, 10)
-  const interval = wilson(hits, sample)
+  const historicalReliability = sample ? reliabilityHits / sample : 0
+  const interval = wilson(reliabilityHits, sample)
   const status: CallStatus =
     sample >= 30 && interval[0] >= 0.8 ? "CALL" : "NO_SAFE_CALL"
   const rankedDigits = [...DIGITS].sort(
     (left, right) =>
-      targetForecast.digitProbability[right] -
-        targetForecast.digitProbability[left] || left - right,
+      targetForecast.selectedDigitProbability[right] -
+        targetForecast.selectedDigitProbability[left] || left - right,
   )
 
   return {
     side,
     status,
-    candidateAvoidDigits: pairValue(targetForecast.blendPairIndex),
+    candidateAvoidDigits: pairValue(targetForecast.selectedPairIndex),
     appearanceFamilyPair: pairValue(targetForecast.appearancePairIndex),
     absenceFamilyPair: pairValue(targetForecast.absencePairIndex),
     familyAgreement: targetForecast.familyAgreement,
     digitProbabilities: DIGITS.map((digit) => ({
       digit,
-      appearanceProbability: targetForecast.digitProbability[digit],
-      absenceProbability: 1 - targetForecast.digitProbability[digit],
+      appearanceProbability: targetForecast.selectedDigitProbability[digit],
+      absenceProbability: 1 - targetForecast.selectedDigitProbability[digit],
     })),
     mostLikelyDigits: rankedDigits.slice(0, 5),
     confidence,
+    confidenceSample: confidenceRows.length,
     historicalReliability,
     reliabilitySample: sample,
     wilson95: interval,
@@ -567,6 +858,9 @@ function buildSidePrediction(
       ...rankedContributors("appearance", targetForecast.appearanceWeights),
       ...rankedContributors("absence", targetForecast.absenceWeights),
     ],
+    routeModel: targetForecast.routeModel,
+    routeModelApplied: targetForecast.routeModelApplied,
+    routeGuard: targetForecast.routeGuard,
   }
 }
 
@@ -590,11 +884,12 @@ function normalizeRows(
   return [...deduplicated.values()]
 }
 
-export function buildAbsentDigitsPrediction(
+function buildAbsentDigitsPredictionInternal(
   market: string,
   records: readonly AbsentDigitRecord[],
   targetDate: string,
   targetDay: string,
+  mode: RuntimeMode,
 ): AbsentDigitsPrediction | null {
   const historical = normalizeRows(records, targetDate)
   if (historical.length < ABSENT_DIGITS_MIN_HISTORY) return null
@@ -612,16 +907,50 @@ export function buildAbsentDigitsPrediction(
       closePanel: "",
     },
   ]
+  const isV3 = mode === "v3"
   return {
-    modelId: ABSENT_DIGITS_MODEL_ID,
+    modelId: isV3 ? ABSENT_DIGITS_MODEL_ID : ABSENT_DIGITS_V2_MODEL_ID,
+    calibrationId: isV3
+      ? ABSENT_DIGITS_CALIBRATION_ID
+      : ABSENT_DIGITS_V2_CALIBRATION_ID,
     market,
     targetDate,
     appearanceBlendWeight: ABSENT_DIGITS_APPEARANCE_BLEND,
     minimumHistory: ABSENT_DIGITS_MIN_HISTORY,
     historyUsed: historical.length,
-    open: buildSidePrediction(rows, "open"),
-    close: buildSidePrediction(rows, "close"),
+    open: buildSidePrediction(rows, "open", market, mode),
+    close: buildSidePrediction(rows, "close", market, mode),
   }
+}
+
+export function buildAbsentDigitsPrediction(
+  market: string,
+  records: readonly AbsentDigitRecord[],
+  targetDate: string,
+  targetDay: string,
+) {
+  return buildAbsentDigitsPredictionInternal(
+    market,
+    records,
+    targetDate,
+    targetDay,
+    "v3",
+  )
+}
+
+export function buildAbsentDigitsPredictionV2(
+  market: string,
+  records: readonly AbsentDigitRecord[],
+  targetDate: string,
+  targetDay: string,
+) {
+  return buildAbsentDigitsPredictionInternal(
+    market,
+    records,
+    targetDate,
+    targetDay,
+    "v2",
+  )
 }
 
 function istTarget(dateValue: Date) {
