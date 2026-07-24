@@ -1,0 +1,6119 @@
+{
+  "generatedAt": "2026-07-15T03:43:15.099027+05:30",
+  "seed": 20260715,
+  "researchIsolation": {
+    "productionFilesModified": false,
+    "writes": [
+      "research\\panel_top30_v2\\results.json",
+      "research\\panel_top30_v2\\holdout_ledger.csv",
+      "research\\panel_top30_v2\\REPORT.md",
+      "research\\panel_top30_v2\\models"
+    ]
+  },
+  "dataAudit": {
+    "source": "scratch\\open-sutta-records-cache.json",
+    "sha256": "02819f1d933f4fe2e340bb241ebcbe2d4f5859a7228b8f72682a234818056bd0",
+    "sourceRows": 7287,
+    "validRows": 7287,
+    "markets": {
+      "Sridevi": 724,
+      "Time Bazar": 604,
+      "Madhur Day": 704,
+      "Milan Day": 604,
+      "Rajdhani Day": 606,
+      "Kalyan": 606,
+      "Sridevi Night": 724,
+      "Kalyan Night": 500,
+      "Madhur Night": 605,
+      "Milan Night": 601,
+      "Rajdhani Night": 505,
+      "Main Bazar": 504
+    },
+    "invalidRows": 0,
+    "invalidExamples": [],
+    "duplicateMarketDates": 0,
+    "suttaMismatches": 0,
+    "firstDate": "2024-06-28",
+    "lastDate": "2026-07-05"
+  },
+  "forwardAudit": {
+    "available": true,
+    "generatedAt": "2026-07-14T21:57:57.176Z",
+    "sha256": "f48a79a74fb252875975c09a0ccff47b9d95e81e6a6ca937130b7916f862ef05",
+    "acceptedCompletedRows": 78,
+    "rejectedRows": 0,
+    "perMarket": {
+      "Sridevi": 7,
+      "Time Bazar": 6,
+      "Madhur Day": 7,
+      "Milan Day": 12,
+      "Rajdhani Day": 6,
+      "Kalyan": 6,
+      "Sridevi Night": 7,
+      "Kalyan Night": 5,
+      "Madhur Night": 6,
+      "Milan Night": 6,
+      "Rajdhani Night": 5,
+      "Main Bazar": 5
+    }
+  },
+  "design": {
+    "panelClasses": 220,
+    "topK": 30,
+    "minimumHistory": 120,
+    "trainEnd": "2025-09-30",
+    "earlyStopEnd": "2025-12-31",
+    "selectionEnd": "2026-03-31",
+    "holdoutStart": "2026-04-01"
+  },
+  "feasibility": {
+    "open": {
+      "uniformTop30Reference": 0.13636363636363635,
+      "hindsightFixedMarketTop30": 0.3091807328118567,
+      "hindsightMarketWeekdayTop30": 0.5148895292987512,
+      "medianPanelsNeededFor90PctHindsightCoverage": 141.5,
+      "rangePanelsNeededFor90PctHindsightCoverage": [
+        135,
+        153
+      ],
+      "meanEmpiricalEntropyBits": 7.347471147551751,
+      "meanEffectivePanels": 162.9795108269117,
+      "warning": "Hindsight rows use their own outcomes and are descriptive upper references, not deployable models."
+    },
+    "close": {
+      "uniformTop30Reference": 0.13636363636363635,
+      "hindsightFixedMarketTop30": 0.3164539591052559,
+      "hindsightMarketWeekdayTop30": 0.5153012213530945,
+      "medianPanelsNeededFor90PctHindsightCoverage": 138.0,
+      "rangePanelsNeededFor90PctHindsightCoverage": [
+        128,
+        149
+      ],
+      "meanEmpiricalEntropyBits": 7.319445938158204,
+      "meanEffectivePanels": 159.86005807743427,
+      "warning": "Hindsight rows use their own outcomes and are descriptive upper references, not deployable models."
+    }
+  },
+  "tasks": {
+    "open": {
+      "split": {
+        "train": {
+          "end": "2025-09-30",
+          "n": 3092
+        },
+        "earlyStop": {
+          "start": "2025-10-01",
+          "end": "2025-12-31",
+          "n": 882
+        },
+        "modelSelection": {
+          "start": "2026-01-01",
+          "end": "2026-03-31",
+          "n": 899
+        },
+        "terminalHoldout": {
+          "start": "2026-04-01",
+          "end": "2026-07-05",
+          "n": 974
+        }
+      },
+      "selection": [
+        {
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 3,
+          "earlyTop30": 0.2018140589569161,
+          "selectionTop30": 0.20800889877641823,
+          "epochsRun": 9
+        },
+        {
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 6,
+          "earlyTop30": 0.18253968253968253,
+          "selectionTop30": 0.19577308120133483,
+          "epochsRun": 12
+        },
+        {
+          "config": {
+            "name": "dynamic_wd1",
+            "kind": "dynamic",
+            "weight_decay": 0.1,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 7,
+          "earlyTop30": 0.20748299319727892,
+          "selectionTop30": 0.19132369299221358,
+          "epochsRun": 13
+        },
+        {
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 5,
+          "earlyTop30": 0.18480725623582767,
+          "selectionTop30": 0.18909899888765294,
+          "epochsRun": 11
+        },
+        {
+          "config": {
+            "name": "additive_wd1",
+            "kind": "additive",
+            "weight_decay": 0.1,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 4,
+          "earlyTop30": 0.18480725623582767,
+          "selectionTop30": 0.18242491657397109,
+          "epochsRun": 10
+        },
+        {
+          "config": {
+            "name": "lowrank_d50",
+            "kind": "lowrank",
+            "weight_decay": 0.03,
+            "lr": 0.01,
+            "dropout": 0.5,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.1836734693877551,
+          "selectionTop30": 0.1746384872080089,
+          "epochsRun": 7
+        },
+        {
+          "config": {
+            "name": "lowrank_top30",
+            "kind": "lowrank",
+            "weight_decay": 0.03,
+            "lr": 0.008,
+            "dropout": 0.5,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 3,
+          "earlyTop30": 0.20068027210884354,
+          "selectionTop30": 0.1735261401557286,
+          "epochsRun": 9
+        },
+        {
+          "config": {
+            "name": "lowrank_d25",
+            "kind": "lowrank",
+            "weight_decay": 0.01,
+            "lr": 0.01,
+            "dropout": 0.25,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.20521541950113378,
+          "selectionTop30": 0.1724137931034483,
+          "epochsRun": 7
+        },
+        {
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 9,
+          "earlyTop30": 0.17913832199546487,
+          "selectionTop30": 0.16796440489432704,
+          "epochsRun": 15
+        }
+      ],
+      "selectedConfig": {
+        "name": "dynamic_wd01",
+        "kind": "dynamic",
+        "weight_decay": 0.01,
+        "lr": 0.03,
+        "dropout": 0.0,
+        "loss": "cross_entropy"
+      },
+      "fixedEpochs": 3,
+      "blendSelection": [
+        {
+          "learnedWeight": 1.0,
+          "selectionTop30": 0.20800889877641823
+        },
+        {
+          "learnedWeight": 0.75,
+          "selectionTop30": 0.20467185761957732
+        },
+        {
+          "learnedWeight": 0.5,
+          "selectionTop30": 0.19911012235817574
+        },
+        {
+          "learnedWeight": 0.25,
+          "selectionTop30": 0.1946607341490545
+        },
+        {
+          "learnedWeight": 0.0,
+          "selectionTop30": 0.18687430478309233
+        }
+      ],
+      "chosenModel": "learned",
+      "holdout": {
+        "hot": {
+          "n": 974,
+          "top3": {
+            "hits": 15,
+            "rate": 0.015400410677618069,
+            "wilson95": [
+              0.009354749808655903,
+              0.02525357909315598
+            ]
+          },
+          "top10": {
+            "hits": 51,
+            "rate": 0.052361396303901436,
+            "wilson95": [
+              0.0400478534509444,
+              0.06819204358547507
+            ]
+          },
+          "top30": {
+            "hits": 160,
+            "rate": 0.16427104722792607,
+            "wilson95": [
+              0.14232906983187948,
+              0.18885085294543508
+            ]
+          },
+          "meanReciprocalRank": 0.03172751524691207,
+          "logLoss": 5.411476135253906,
+          "calibration": {
+            "meanTop30Mass": 0.25058579444885254,
+            "hitRate": 0.15605749486652978,
+            "ece5": 0.09452830352944759,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.23598042130470276,
+                "hitRate": 0.1641025641025641
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.24284881353378296,
+                "hitRate": 0.15897435897435896
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.25088995695114136,
+                "hitRate": 0.09278350515463918
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.25675487518310547,
+                "hitRate": 0.1641025641025641
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2664564847946167,
+                "hitRate": 0.2
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 16,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.10527382371950136,
+                0.2537099015189491
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 6,
+              "rate": 0.07317073170731707,
+              "wilson95": [
+                0.033964777256659195,
+                0.1505784380885484
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 22,
+              "rate": 0.22916666666666666,
+              "wilson95": [
+                0.1564891714560027,
+                0.3226851053002383
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 9,
+              "rate": 0.11842105263157894,
+              "wilson95": [
+                0.06356819004179068,
+                0.2099921775079194
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 22,
+              "rate": 0.2682926829268293,
+              "wilson95": [
+                0.18436120492201502,
+                0.3729622548368121
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 10,
+              "rate": 0.10416666666666667,
+              "wilson95": [
+                0.057571532417443415,
+                0.18122164130321652
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 10,
+              "rate": 0.15384615384615385,
+              "wilson95": [
+                0.08577094066988503,
+                0.26055319639978514
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 8,
+              "rate": 0.0975609756097561,
+              "wilson95": [
+                0.05026868828269794,
+                0.1808720576142121
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 12,
+              "rate": 0.17647058823529413,
+              "wilson95": [
+                0.10393587249437691,
+                0.2836044040774335
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 9,
+              "rate": 0.13432835820895522,
+              "wilson95": [
+                0.07231091664295486,
+                0.23600372261337027
+              ]
+            }
+          },
+          "macroMarketTop30": 0.15529616315000258,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 53,
+              "rate": 0.16987179487179488
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 55,
+              "rate": 0.17684887459807075
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 41,
+              "rate": 0.13355048859934854
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 3,
+              "rate": 0.06818181818181818
+            }
+          }
+        },
+        "profile": {
+          "n": 974,
+          "top3": {
+            "hits": 16,
+            "rate": 0.01642710472279261,
+            "wilson95": [
+              0.010136412639486846,
+              0.02651723759939747
+            ]
+          },
+          "top10": {
+            "hits": 59,
+            "rate": 0.060574948665297744,
+            "wilson95": [
+              0.04725017713048131,
+              0.07735229060251761
+            ]
+          },
+          "top30": {
+            "hits": 165,
+            "rate": 0.16940451745379878,
+            "wilson95": [
+              0.14715641838201818,
+              0.19425011108065857
+            ]
+          },
+          "meanReciprocalRank": 0.033863810324094176,
+          "logLoss": 5.704196453094482,
+          "calibration": {
+            "meanTop30Mass": 0.43801432847976685,
+            "hitRate": 0.16940451745379878,
+            "ece5": 0.26860980922069394,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.4052528440952301,
+                "hitRate": 0.18461538461538463
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.4249805808067322,
+                "hitRate": 0.14358974358974358
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.4387134611606598,
+                "hitRate": 0.18041237113402062
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.45110198855400085,
+                "hitRate": 0.19487179487179487
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.4700263440608978,
+                "hitRate": 0.14358974358974358
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 12,
+              "rate": 0.125,
+              "wilson95": [
+                0.07297200959924269,
+                0.20588468129401408
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 20,
+              "rate": 0.20833333333333334,
+              "wilson95": [
+                0.13910828905878492,
+                0.3000024705248593
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 12,
+              "rate": 0.15789473684210525,
+              "wilson95": [
+                0.09269497050182374,
+                0.2560143245427439
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 17,
+              "rate": 0.2073170731707317,
+              "wilson95": [
+                0.13366390372744102,
+                0.3071657296521299
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 9,
+              "rate": 0.09375,
+              "wilson95": [
+                0.050108108212146014,
+                0.1686533069222155
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 10,
+              "rate": 0.15384615384615385,
+              "wilson95": [
+                0.08577094066988503,
+                0.26055319639978514
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 19,
+              "rate": 0.23170731707317074,
+              "wilson95": [
+                0.15365463849380123,
+                0.33377252543747216
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 11,
+              "rate": 0.13414634146341464,
+              "wilson95": [
+                0.07658691429563845,
+                0.2244501274288252
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 16,
+              "rate": 0.23529411764705882,
+              "wilson95": [
+                0.15034491020295793,
+                0.3485516797194324
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 11,
+              "rate": 0.16417910447761194,
+              "wilson95": [
+                0.0942261209452312,
+                0.27055262939221025
+              ]
+            }
+          },
+          "macroMarketTop30": 0.17107763270731055,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 53,
+              "rate": 0.16987179487179488
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 46,
+              "rate": 0.14790996784565916
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 55,
+              "rate": 0.1791530944625407
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 11,
+              "rate": 0.25
+            }
+          }
+        },
+        "learned": {
+          "n": 974,
+          "top3": {
+            "hits": 13,
+            "rate": 0.013347022587268994,
+            "wilson95": [
+              0.007816456559391043,
+              0.022701229668275976
+            ]
+          },
+          "top10": {
+            "hits": 45,
+            "rate": 0.04620123203285421,
+            "wilson95": [
+              0.03470638903713832,
+              0.06126157997684655
+            ]
+          },
+          "top30": {
+            "hits": 173,
+            "rate": 0.17761806981519507,
+            "wilson95": [
+              0.15489620225192924,
+              0.20287289790732693
+            ]
+          },
+          "meanReciprocalRank": 0.030737623250714052,
+          "logLoss": 5.3886494636535645,
+          "calibration": {
+            "meanTop30Mass": 0.24017982184886932,
+            "hitRate": 0.17761806981519507,
+            "ece5": 0.06256175578191295,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.201764777302742,
+                "hitRate": 0.15897435897435896
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.23070713877677917,
+                "hitRate": 0.22564102564102564
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.2429743856191635,
+                "hitRate": 0.17010309278350516
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.25351956486701965,
+                "hitRate": 0.13846153846153847
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.27194759249687195,
+                "hitRate": 0.19487179487179487
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 11,
+              "rate": 0.13414634146341464,
+              "wilson95": [
+                0.07658691429563845,
+                0.2244501274288252
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 20,
+              "rate": 0.20833333333333334,
+              "wilson95": [
+                0.13910828905878492,
+                0.3000024705248593
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 15,
+              "rate": 0.19736842105263158,
+              "wilson95": [
+                0.12341987279754299,
+                0.3004383497418823
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 11,
+              "rate": 0.13414634146341464,
+              "wilson95": [
+                0.07658691429563845,
+                0.2244501274288252
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 13,
+              "rate": 0.15853658536585366,
+              "wilson95": [
+                0.09505590299299464,
+                0.2525786692831714
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 16,
+              "rate": 0.24615384615384617,
+              "wilson95": [
+                0.15757986855897987,
+                0.3630578319587784
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 15,
+              "rate": 0.18292682926829268,
+              "wilson95": [
+                0.1141102185364291,
+                0.2801218842914394
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 13,
+              "rate": 0.19117647058823528,
+              "wilson95": [
+                0.11527294030924928,
+                0.30010641460020604
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 9,
+              "rate": 0.13432835820895522,
+              "wilson95": [
+                0.07231091664295486,
+                0.23600372261337027
+              ]
+            }
+          },
+          "macroMarketTop30": 0.17803376206534638,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 46,
+              "rate": 0.14743589743589744
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 63,
+              "rate": 0.20257234726688103
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 59,
+              "rate": 0.19218241042345277
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 5,
+              "rate": 0.11363636363636363
+            }
+          }
+        },
+        "ensemble": {
+          "n": 974,
+          "top3": {
+            "hits": 13,
+            "rate": 0.013347022587268994,
+            "wilson95": [
+              0.007816456559391043,
+              0.022701229668275976
+            ]
+          },
+          "top10": {
+            "hits": 45,
+            "rate": 0.04620123203285421,
+            "wilson95": [
+              0.03470638903713832,
+              0.06126157997684655
+            ]
+          },
+          "top30": {
+            "hits": 173,
+            "rate": 0.17761806981519507,
+            "wilson95": [
+              0.15489620225192924,
+              0.20287289790732693
+            ]
+          },
+          "meanReciprocalRank": 0.030737623250714052,
+          "logLoss": 5.3886494636535645,
+          "calibration": {
+            "meanTop30Mass": 0.24017982184886932,
+            "hitRate": 0.17761806981519507,
+            "ece5": 0.06256175578191295,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.201764777302742,
+                "hitRate": 0.15897435897435896
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.23070713877677917,
+                "hitRate": 0.22564102564102564
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.2429743856191635,
+                "hitRate": 0.17010309278350516
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.25351956486701965,
+                "hitRate": 0.13846153846153847
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.27194759249687195,
+                "hitRate": 0.19487179487179487
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 11,
+              "rate": 0.13414634146341464,
+              "wilson95": [
+                0.07658691429563845,
+                0.2244501274288252
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 20,
+              "rate": 0.20833333333333334,
+              "wilson95": [
+                0.13910828905878492,
+                0.3000024705248593
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 15,
+              "rate": 0.19736842105263158,
+              "wilson95": [
+                0.12341987279754299,
+                0.3004383497418823
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 11,
+              "rate": 0.13414634146341464,
+              "wilson95": [
+                0.07658691429563845,
+                0.2244501274288252
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 13,
+              "rate": 0.15853658536585366,
+              "wilson95": [
+                0.09505590299299464,
+                0.2525786692831714
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 16,
+              "rate": 0.24615384615384617,
+              "wilson95": [
+                0.15757986855897987,
+                0.3630578319587784
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 15,
+              "rate": 0.18292682926829268,
+              "wilson95": [
+                0.1141102185364291,
+                0.2801218842914394
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 13,
+              "rate": 0.19117647058823528,
+              "wilson95": [
+                0.11527294030924928,
+                0.30010641460020604
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 9,
+              "rate": 0.13432835820895522,
+              "wilson95": [
+                0.07231091664295486,
+                0.23600372261337027
+              ]
+            }
+          },
+          "macroMarketTop30": 0.17803376206534638,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 46,
+              "rate": 0.14743589743589744
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 63,
+              "rate": 0.20257234726688103
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 59,
+              "rate": 0.19218241042345277
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 5,
+              "rate": 0.11363636363636363
+            }
+          }
+        }
+      },
+      "chosenVsProfile": {
+        "modelOnlyHits": 118,
+        "baselineOnlyHits": 110,
+        "exactMcNemarP": 0.6430402573271153
+      },
+      "featureImportance": [
+        {
+          "feature": "kind_profile",
+          "weight": 0.16951771080493927,
+          "absWeight": 0.16951771080493927
+        },
+        {
+          "feature": "pair_profile",
+          "weight": 0.08964221924543381,
+          "absWeight": 0.08964221924543381
+        },
+        {
+          "feature": "transition_lag1",
+          "weight": 0.08802052587270737,
+          "absWeight": 0.08802052587270737
+        },
+        {
+          "feature": "log_recent30_count",
+          "weight": 0.0751454308629036,
+          "absWeight": 0.0751454308629036
+        },
+        {
+          "feature": "log_long_count",
+          "weight": -0.048884809017181396,
+          "absWeight": 0.048884809017181396
+        },
+        {
+          "feature": "lag3_overlap",
+          "weight": 0.03531920909881592,
+          "absWeight": 0.03531920909881592
+        },
+        {
+          "feature": "lag1_overlap",
+          "weight": 0.030492965131998062,
+          "absWeight": 0.030492965131998062
+        },
+        {
+          "feature": "lag1_opposite",
+          "weight": -0.02323298528790474,
+          "absWeight": 0.02323298528790474
+        },
+        {
+          "feature": "same_day_source_overlap",
+          "weight": 0.02052123285830021,
+          "absWeight": 0.02052123285830021
+        },
+        {
+          "feature": "position_profile",
+          "weight": -0.01792503520846367,
+          "absWeight": 0.01792503520846367
+        },
+        {
+          "feature": "same_day_source_opposite",
+          "weight": 0.008072413504123688,
+          "absWeight": 0.008072413504123688
+        },
+        {
+          "feature": "log_weekday_count",
+          "weight": 0.00783545896410942,
+          "absWeight": 0.00783545896410942
+        },
+        {
+          "feature": "sutta_profile",
+          "weight": -0.006592453457415104,
+          "absWeight": 0.006592453457415104
+        },
+        {
+          "feature": "lag3_opposite",
+          "weight": -0.0057367924600839615,
+          "absWeight": 0.0057367924600839615
+        },
+        {
+          "feature": "log_recent90_count",
+          "weight": 0.004562956281006336,
+          "absWeight": 0.004562956281006336
+        },
+        {
+          "feature": "log_recent180_count",
+          "weight": 0.0014857217902317643,
+          "absWeight": 0.0014857217902317643
+        }
+      ],
+      "target90": {
+        "achieved": false,
+        "requiredHits": 877,
+        "actualHits": 173,
+        "shortfall": 704
+      },
+      "negativeControl": {
+        "method": "training labels permuted within market; holdout labels untouched",
+        "holdout": {
+          "n": 974,
+          "top3": {
+            "hits": 15,
+            "rate": 0.015400410677618069,
+            "wilson95": [
+              0.009354749808655903,
+              0.02525357909315598
+            ]
+          },
+          "top10": {
+            "hits": 50,
+            "rate": 0.0513347022587269,
+            "wilson95": [
+              0.03915372552004543,
+              0.06704085017930159
+            ]
+          },
+          "top30": {
+            "hits": 160,
+            "rate": 0.16427104722792607,
+            "wilson95": [
+              0.14232906983187948,
+              0.18885085294543508
+            ]
+          },
+          "meanReciprocalRank": 0.0325479628999338,
+          "logLoss": 5.426692485809326,
+          "calibration": {
+            "meanTop30Mass": 0.30122485756874084,
+            "hitRate": 0.16427104722792607,
+            "ece5": 0.1369538097594553,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2534131109714508,
+                "hitRate": 0.1794871794871795
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2763481140136719,
+                "hitRate": 0.18974358974358974
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.29550695419311523,
+                "hitRate": 0.14432989690721648
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.322856068611145,
+                "hitRate": 0.13846153846153847
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.3579707145690918,
+                "hitRate": 0.16923076923076924
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 16,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.10527382371950136,
+                0.2537099015189491
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 8,
+              "rate": 0.0975609756097561,
+              "wilson95": [
+                0.05026868828269794,
+                0.1808720576142121
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 20,
+              "rate": 0.20833333333333334,
+              "wilson95": [
+                0.13910828905878492,
+                0.3000024705248593
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 10,
+              "rate": 0.13157894736842105,
+              "wilson95": [
+                0.07306881567918964,
+                0.22554119436880626
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 18,
+              "rate": 0.21951219512195122,
+              "wilson95": [
+                0.1436078562786517,
+                0.32052054237677047
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 8,
+              "rate": 0.08333333333333333,
+              "wilson95": [
+                0.04283062415096722,
+                0.15589903239709585
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 8,
+              "rate": 0.12307692307692308,
+              "wilson95": [
+                0.06370467509869226,
+                0.22451494082161527
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 18,
+              "rate": 0.21951219512195122,
+              "wilson95": [
+                0.1436078562786517,
+                0.32052054237677047
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 15,
+              "rate": 0.18292682926829268,
+              "wilson95": [
+                0.1141102185364291,
+                0.2801218842914394
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 12,
+              "rate": 0.17647058823529413,
+              "wilson95": [
+                0.10393587249437691,
+                0.2836044040774335
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 13,
+              "rate": 0.19402985074626866,
+              "wilson95": [
+                0.1170517391641159,
+                0.3041911222544419
+              ]
+            }
+          },
+          "macroMarketTop30": 0.16447779543327204,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 51,
+              "rate": 0.16346153846153846
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 54,
+              "rate": 0.17363344051446947
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 48,
+              "rate": 0.1563517915309446
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 7,
+              "rate": 0.1590909090909091
+            }
+          }
+        }
+      },
+      "artifact": {
+        "path": "research\\panel_top30_v2\\models\\open.pt",
+        "sha256": "d467ae2066d20842d9b3ffceafa5502cf15138536d9f28e6206cb5950b72f28e",
+        "trainingRows": 5847,
+        "note": "Refit on the full frozen cache after terminal evaluation; research-only."
+      },
+      "prospectiveForward": {
+        "hot": {
+          "n": 78,
+          "top3": {
+            "hits": 2,
+            "rate": 0.02564102564102564,
+            "wilson95": [
+              0.007060093472759203,
+              0.08875270035675845
+            ]
+          },
+          "top10": {
+            "hits": 6,
+            "rate": 0.07692307692307693,
+            "wilson95": [
+              0.035730464002355806,
+              0.15783229806180862
+            ]
+          },
+          "top30": {
+            "hits": 12,
+            "rate": 0.15384615384615385,
+            "wilson95": [
+              0.09025504908387116,
+              0.24993266533226338
+            ]
+          },
+          "meanReciprocalRank": 0.038313333402032704,
+          "logLoss": 5.415424823760986,
+          "calibration": {
+            "meanTop30Mass": 0.24816173315048218,
+            "hitRate": 0.1794871794871795,
+            "ece5": 0.07485255446189489,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.23494106531143188,
+                "hitRate": 0.25
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.24220165610313416,
+                "hitRate": 0.2
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.2461216300725937,
+                "hitRate": 0.0625
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.2550966441631317,
+                "hitRate": 0.13333333333333333
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.26250848174095154,
+                "hitRate": 0.25
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 3,
+              "rate": 0.42857142857142855,
+              "wilson95": [
+                0.15821985525146975,
+                0.7495416354723428
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 1,
+              "rate": 0.08333333333333333,
+              "wilson95": [
+                0.014865094404917095,
+                0.35387991114111694
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            }
+          },
+          "macroMarketTop30": 0.17916666666666667,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 14,
+              "rate": 0.18421052631578946
+            }
+          }
+        },
+        "profile": {
+          "n": 78,
+          "top3": {
+            "hits": 1,
+            "rate": 0.01282051282051282,
+            "wilson95": [
+              0.0022667317538337325,
+              0.06910857001702223
+            ]
+          },
+          "top10": {
+            "hits": 7,
+            "rate": 0.08974358974358974,
+            "wilson95": [
+              0.04415300851677373,
+              0.17384724560605236
+            ]
+          },
+          "top30": {
+            "hits": 19,
+            "rate": 0.24358974358974358,
+            "wilson95": [
+              0.16185238513667277,
+              0.3493977736900935
+            ]
+          },
+          "meanReciprocalRank": 0.04327957235690646,
+          "logLoss": 5.644763946533203,
+          "calibration": {
+            "meanTop30Mass": 0.4361209273338318,
+            "hitRate": 0.24358974358974358,
+            "ece5": 0.19253118336200714,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.40477657318115234,
+                "hitRate": 0.3125
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.42402708530426025,
+                "hitRate": 0.26666666666666666
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.43948179483413696,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.44834497570991516,
+                "hitRate": 0.3333333333333333
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.46398234367370605,
+                "hitRate": 0.125
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 3,
+              "rate": 0.42857142857142855,
+              "wilson95": [
+                0.15821985525146975,
+                0.7495416354723428
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 3,
+              "rate": 0.25,
+              "wilson95": [
+                0.08894166839405471,
+                0.5323053349335657
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            }
+          },
+          "macroMarketTop30": 0.23750000000000002,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 19,
+              "rate": 0.25
+            }
+          }
+        },
+        "learned": {
+          "n": 78,
+          "top3": {
+            "hits": 2,
+            "rate": 0.02564102564102564,
+            "wilson95": [
+              0.007060093472759203,
+              0.08875270035675845
+            ]
+          },
+          "top10": {
+            "hits": 6,
+            "rate": 0.07692307692307693,
+            "wilson95": [
+              0.035730464002355806,
+              0.15783229806180862
+            ]
+          },
+          "top30": {
+            "hits": 17,
+            "rate": 0.21794871794871795,
+            "wilson95": [
+              0.1407681204113414,
+              0.32160705429810155
+            ]
+          },
+          "meanReciprocalRank": 0.040505996070034585,
+          "logLoss": 5.366339206695557,
+          "calibration": {
+            "meanTop30Mass": 0.27388671040534973,
+            "hitRate": 0.21794871794871795,
+            "ece5": 0.0994023600449929,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.23948271572589874,
+                "hitRate": 0.125
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.26204147934913635,
+                "hitRate": 0.26666666666666666
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.27339160442352295,
+                "hitRate": 0.375
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.28751152753829956,
+                "hitRate": 0.13333333333333333
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.307117223739624,
+                "hitRate": 0.1875
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 4,
+              "rate": 0.5714285714285714,
+              "wilson95": [
+                0.2504583645276572,
+                0.8417801447485302
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                5.551115123125783e-17,
+                0.35433043506668743
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 2,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.04696514218385378,
+                0.4480308622529734
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 3,
+              "rate": 0.5,
+              "wilson95": [
+                0.1876163064826506,
+                0.8123836935173494
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 3,
+              "rate": 0.6,
+              "wilson95": [
+                0.2307242812760128,
+                0.882379225767352
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 2,
+              "rate": 0.4,
+              "wilson95": [
+                0.11762077423264783,
+                0.769275718723987
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            }
+          },
+          "macroMarketTop30": 0.22619047619047616,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 17,
+              "rate": 0.2236842105263158
+            }
+          }
+        },
+        "ensemble": {
+          "n": 78,
+          "top3": {
+            "hits": 2,
+            "rate": 0.02564102564102564,
+            "wilson95": [
+              0.007060093472759203,
+              0.08875270035675845
+            ]
+          },
+          "top10": {
+            "hits": 6,
+            "rate": 0.07692307692307693,
+            "wilson95": [
+              0.035730464002355806,
+              0.15783229806180862
+            ]
+          },
+          "top30": {
+            "hits": 17,
+            "rate": 0.21794871794871795,
+            "wilson95": [
+              0.1407681204113414,
+              0.32160705429810155
+            ]
+          },
+          "meanReciprocalRank": 0.040505996070034585,
+          "logLoss": 5.366339206695557,
+          "calibration": {
+            "meanTop30Mass": 0.27388671040534973,
+            "hitRate": 0.21794871794871795,
+            "ece5": 0.0994023600449929,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.23948271572589874,
+                "hitRate": 0.125
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.26204147934913635,
+                "hitRate": 0.26666666666666666
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.27339160442352295,
+                "hitRate": 0.375
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.28751152753829956,
+                "hitRate": 0.13333333333333333
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.307117223739624,
+                "hitRate": 0.1875
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 4,
+              "rate": 0.5714285714285714,
+              "wilson95": [
+                0.2504583645276572,
+                0.8417801447485302
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                5.551115123125783e-17,
+                0.35433043506668743
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 2,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.04696514218385378,
+                0.4480308622529734
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 3,
+              "rate": 0.5,
+              "wilson95": [
+                0.1876163064826506,
+                0.8123836935173494
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 3,
+              "rate": 0.6,
+              "wilson95": [
+                0.2307242812760128,
+                0.882379225767352
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 2,
+              "rate": 0.4,
+              "wilson95": [
+                0.11762077423264783,
+                0.769275718723987
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            }
+          },
+          "macroMarketTop30": 0.22619047619047616,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 17,
+              "rate": 0.2236842105263158
+            }
+          }
+        },
+        "chosenVsProfile": {
+          "modelOnlyHits": 10,
+          "baselineOnlyHits": 12,
+          "exactMcNemarP": 0.8318119049072266
+        }
+      }
+    },
+    "close_preopen": {
+      "split": {
+        "train": {
+          "end": "2025-09-30",
+          "n": 3092
+        },
+        "earlyStop": {
+          "start": "2025-10-01",
+          "end": "2025-12-31",
+          "n": 882
+        },
+        "modelSelection": {
+          "start": "2026-01-01",
+          "end": "2026-03-31",
+          "n": 899
+        },
+        "terminalHoldout": {
+          "start": "2026-04-01",
+          "end": "2026-07-05",
+          "n": 974
+        }
+      },
+      "selection": [
+        {
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.20748299319727892,
+          "selectionTop30": 0.20689655172413793,
+          "epochsRun": 7
+        },
+        {
+          "config": {
+            "name": "additive_wd1",
+            "kind": "additive",
+            "weight_decay": 0.1,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.20748299319727892,
+          "selectionTop30": 0.20578420467185762,
+          "epochsRun": 7
+        },
+        {
+          "config": {
+            "name": "lowrank_d50",
+            "kind": "lowrank",
+            "weight_decay": 0.03,
+            "lr": 0.01,
+            "dropout": 0.5,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.22108843537414966,
+          "selectionTop30": 0.19132369299221358,
+          "epochsRun": 7
+        },
+        {
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "earlyTop30": 0.21768707482993196,
+          "selectionTop30": 0.19132369299221358,
+          "epochsRun": 8
+        },
+        {
+          "config": {
+            "name": "dynamic_wd1",
+            "kind": "dynamic",
+            "weight_decay": 0.1,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "earlyTop30": 0.21541950113378686,
+          "selectionTop30": 0.19132369299221358,
+          "epochsRun": 8
+        },
+        {
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 4,
+          "earlyTop30": 0.20975056689342403,
+          "selectionTop30": 0.19132369299221358,
+          "epochsRun": 10
+        },
+        {
+          "config": {
+            "name": "lowrank_d25",
+            "kind": "lowrank",
+            "weight_decay": 0.01,
+            "lr": 0.01,
+            "dropout": 0.25,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.21201814058956917,
+          "selectionTop30": 0.19021134593993325,
+          "epochsRun": 7
+        },
+        {
+          "config": {
+            "name": "lowrank_top30",
+            "kind": "lowrank",
+            "weight_decay": 0.03,
+            "lr": 0.008,
+            "dropout": 0.5,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 10,
+          "earlyTop30": 0.19727891156462585,
+          "selectionTop30": 0.18131256952169078,
+          "epochsRun": 16
+        },
+        {
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 3,
+          "earlyTop30": 0.20634920634920634,
+          "selectionTop30": 0.17797552836484984,
+          "epochsRun": 9
+        }
+      ],
+      "selectedConfig": {
+        "name": "additive_wd01",
+        "kind": "additive",
+        "weight_decay": 0.01,
+        "lr": 0.02,
+        "dropout": 0.0,
+        "loss": "cross_entropy"
+      },
+      "fixedEpochs": 1,
+      "blendSelection": [
+        {
+          "learnedWeight": 1.0,
+          "selectionTop30": 0.20689655172413793
+        },
+        {
+          "learnedWeight": 0.25,
+          "selectionTop30": 0.19688542825361513
+        },
+        {
+          "learnedWeight": 0.75,
+          "selectionTop30": 0.19577308120133483
+        },
+        {
+          "learnedWeight": 0.5,
+          "selectionTop30": 0.19132369299221358
+        },
+        {
+          "learnedWeight": 0.0,
+          "selectionTop30": 0.19132369299221358
+        }
+      ],
+      "chosenModel": "learned",
+      "holdout": {
+        "hot": {
+          "n": 974,
+          "top3": {
+            "hits": 14,
+            "rate": 0.014373716632443531,
+            "wilson95": [
+              0.008581160922098372,
+              0.02398184664264108
+            ]
+          },
+          "top10": {
+            "hits": 67,
+            "rate": 0.06878850102669405,
+            "wilson95": [
+              0.054528936956362184,
+              0.0864361014732162
+            ]
+          },
+          "top30": {
+            "hits": 186,
+            "rate": 0.19096509240246407,
+            "wilson95": [
+              0.1675129997776464,
+              0.21684527776355145
+            ]
+          },
+          "meanReciprocalRank": 0.03249697060566798,
+          "logLoss": 5.366367340087891,
+          "calibration": {
+            "meanTop30Mass": 0.2538489103317261,
+            "hitRate": 0.18993839835728954,
+            "ece5": 0.06391050167825432,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.23861099779605865,
+                "hitRate": 0.12307692307692308
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.24758824706077576,
+                "hitRate": 0.2153846153846154
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.2554716169834137,
+                "hitRate": 0.1958762886597938
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2617855966091156,
+                "hitRate": 0.21025641025641026
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.26579636335372925,
+                "hitRate": 0.20512820512820512
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 6,
+              "rate": 0.07317073170731707,
+              "wilson95": [
+                0.033964777256659195,
+                0.1505784380885484
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 24,
+              "rate": 0.25,
+              "wilson95": [
+                0.17413968368934074,
+                0.3450981102394971
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 9,
+              "rate": 0.11842105263157894,
+              "wilson95": [
+                0.06356819004179068,
+                0.2099921775079194
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 21,
+              "rate": 0.25609756097560976,
+              "wilson95": [
+                0.1740357615326263,
+                0.35998893295034956
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 22,
+              "rate": 0.22916666666666666,
+              "wilson95": [
+                0.1564891714560027,
+                0.3226851053002383
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 9,
+              "rate": 0.13846153846153847,
+              "wilson95": [
+                0.07459090403153719,
+                0.24268097246345166
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 22,
+              "rate": 0.2682926829268293,
+              "wilson95": [
+                0.18436120492201502,
+                0.3729622548368121
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 11,
+              "rate": 0.16176470588235295,
+              "wilson95": [
+                0.09280092222804136,
+                0.26690027600612404
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 12,
+              "rate": 0.1791044776119403,
+              "wilson95": [
+                0.10553591339881956,
+                0.28747489247918
+              ]
+            }
+          },
+          "macroMarketTop30": 0.18681722105301593,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 60,
+              "rate": 0.19230769230769232
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 65,
+              "rate": 0.2090032154340836
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 51,
+              "rate": 0.16612377850162866
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 9,
+              "rate": 0.20454545454545456
+            }
+          }
+        },
+        "profile": {
+          "n": 974,
+          "top3": {
+            "hits": 16,
+            "rate": 0.01642710472279261,
+            "wilson95": [
+              0.010136412639486846,
+              0.02651723759939747
+            ]
+          },
+          "top10": {
+            "hits": 56,
+            "rate": 0.057494866529774126,
+            "wilson95": [
+              0.04453955382321759,
+              0.07392694989856403
+            ]
+          },
+          "top30": {
+            "hits": 191,
+            "rate": 0.19609856262833675,
+            "wilson95": [
+              0.17237797105461358,
+              0.22220691317194638
+            ]
+          },
+          "meanReciprocalRank": 0.03436979476635117,
+          "logLoss": 5.627754211425781,
+          "calibration": {
+            "meanTop30Mass": 0.4548329710960388,
+            "hitRate": 0.19609856262833675,
+            "ece5": 0.2587344142812968,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.418832391500473,
+                "hitRate": 0.15897435897435896
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.4349938929080963,
+                "hitRate": 0.15897435897435896
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.45067793130874634,
+                "hitRate": 0.21649484536082475
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.4710579514503479,
+                "hitRate": 0.21025641025641026
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.4985814094543457,
+                "hitRate": 0.2358974358974359
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 10,
+              "rate": 0.12195121951219512,
+              "wilson95": [
+                0.06760853649677892,
+                0.2101297399518335
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 11,
+              "rate": 0.14473684210526316,
+              "wilson95": [
+                0.08278516269157667,
+                0.24087448985470516
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 21,
+              "rate": 0.25609756097560976,
+              "wilson95": [
+                0.1740357615326263,
+                0.35998893295034956
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 19,
+              "rate": 0.23170731707317074,
+              "wilson95": [
+                0.15365463849380123,
+                0.33377252543747216
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 19,
+              "rate": 0.19791666666666666,
+              "wilson95": [
+                0.13052733153747123,
+                0.28855166945987454
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 12,
+              "rate": 0.18461538461538463,
+              "wilson95": [
+                0.1088887198826552,
+                0.29553993833637765
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 19,
+              "rate": 0.23170731707317074,
+              "wilson95": [
+                0.15365463849380123,
+                0.33377252543747216
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 18,
+              "rate": 0.21951219512195122,
+              "wilson95": [
+                0.1436078562786517,
+                0.32052054237677047
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 17,
+              "rate": 0.25,
+              "wilson95": [
+                0.16235013970552148,
+                0.3643855285545139
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 11,
+              "rate": 0.16417910447761194,
+              "wilson95": [
+                0.0942261209452312,
+                0.27055262939221025
+              ]
+            }
+          },
+          "macroMarketTop30": 0.19638252285730753,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 55,
+              "rate": 0.1762820512820513
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 72,
+              "rate": 0.2315112540192926
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 53,
+              "rate": 0.17263843648208468
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 11,
+              "rate": 0.25
+            }
+          }
+        },
+        "learned": {
+          "n": 974,
+          "top3": {
+            "hits": 29,
+            "rate": 0.029774127310061602,
+            "wilson95": [
+              0.02080948650258918,
+              0.04243334111823677
+            ]
+          },
+          "top10": {
+            "hits": 82,
+            "rate": 0.08418891170431211,
+            "wilson95": [
+              0.06834212931583523,
+              0.10330272916982962
+            ]
+          },
+          "top30": {
+            "hits": 216,
+            "rate": 0.22176591375770022,
+            "wilson95": [
+              0.19679750140459495,
+              0.24892041624877587
+            ]
+          },
+          "meanReciprocalRank": 0.041804696341747855,
+          "logLoss": 5.324977397918701,
+          "calibration": {
+            "meanTop30Mass": 0.27183276414871216,
+            "hitRate": 0.22176591375770022,
+            "ece5": 0.050066865965326224,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.24015718698501587,
+                "hitRate": 0.2358974358974359
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.26221388578414917,
+                "hitRate": 0.17435897435897435
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.2707192301750183,
+                "hitRate": 0.18041237113402062
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2832523286342621,
+                "hitRate": 0.26153846153846155
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.3028155565261841,
+                "hitRate": 0.2564102564102564
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 20,
+              "rate": 0.20833333333333334,
+              "wilson95": [
+                0.13910828905878492,
+                0.3000024705248593
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 19,
+              "rate": 0.23170731707317074,
+              "wilson95": [
+                0.15365463849380123,
+                0.33377252543747216
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 11,
+              "rate": 0.11458333333333333,
+              "wilson95": [
+                0.06519871993416433,
+                0.19362621237279404
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 19,
+              "rate": 0.25,
+              "wilson95": [
+                0.1662892740828634,
+                0.35776751844970534
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 20,
+              "rate": 0.24390243902439024,
+              "wilson95": [
+                0.16379885088671692,
+                0.34692707832040764
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 20,
+              "rate": 0.24390243902439024,
+              "wilson95": [
+                0.16379885088671692,
+                0.34692707832040764
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 24,
+              "rate": 0.25,
+              "wilson95": [
+                0.17413968368934074,
+                0.3450981102394971
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 18,
+              "rate": 0.27692307692307694,
+              "wilson95": [
+                0.1829358381283011,
+                0.39580638353881975
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 25,
+              "rate": 0.3048780487804878,
+              "wilson95": [
+                0.21583396436990138,
+                0.4113857912164793
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 11,
+              "rate": 0.16176470588235295,
+              "wilson95": [
+                0.09280092222804136,
+                0.26690027600612404
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 13,
+              "rate": 0.19402985074626866,
+              "wilson95": [
+                0.1170517391641159,
+                0.3041911222544419
+              ]
+            }
+          },
+          "macroMarketTop30": 0.222928874611693,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 57,
+              "rate": 0.18269230769230768
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 81,
+              "rate": 0.2604501607717042
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 72,
+              "rate": 0.23452768729641693
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 6,
+              "rate": 0.13636363636363635
+            }
+          }
+        },
+        "ensemble": {
+          "n": 974,
+          "top3": {
+            "hits": 29,
+            "rate": 0.029774127310061602,
+            "wilson95": [
+              0.02080948650258918,
+              0.04243334111823677
+            ]
+          },
+          "top10": {
+            "hits": 82,
+            "rate": 0.08418891170431211,
+            "wilson95": [
+              0.06834212931583523,
+              0.10330272916982962
+            ]
+          },
+          "top30": {
+            "hits": 216,
+            "rate": 0.22176591375770022,
+            "wilson95": [
+              0.19679750140459495,
+              0.24892041624877587
+            ]
+          },
+          "meanReciprocalRank": 0.041804696341747855,
+          "logLoss": 5.324977397918701,
+          "calibration": {
+            "meanTop30Mass": 0.27183276414871216,
+            "hitRate": 0.22176591375770022,
+            "ece5": 0.050066865965326224,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.24015718698501587,
+                "hitRate": 0.2358974358974359
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.26221388578414917,
+                "hitRate": 0.17435897435897435
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.2707192301750183,
+                "hitRate": 0.18041237113402062
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2832523286342621,
+                "hitRate": 0.26153846153846155
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.3028155565261841,
+                "hitRate": 0.2564102564102564
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 20,
+              "rate": 0.20833333333333334,
+              "wilson95": [
+                0.13910828905878492,
+                0.3000024705248593
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 19,
+              "rate": 0.23170731707317074,
+              "wilson95": [
+                0.15365463849380123,
+                0.33377252543747216
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 11,
+              "rate": 0.11458333333333333,
+              "wilson95": [
+                0.06519871993416433,
+                0.19362621237279404
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 19,
+              "rate": 0.25,
+              "wilson95": [
+                0.1662892740828634,
+                0.35776751844970534
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 20,
+              "rate": 0.24390243902439024,
+              "wilson95": [
+                0.16379885088671692,
+                0.34692707832040764
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 20,
+              "rate": 0.24390243902439024,
+              "wilson95": [
+                0.16379885088671692,
+                0.34692707832040764
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 24,
+              "rate": 0.25,
+              "wilson95": [
+                0.17413968368934074,
+                0.3450981102394971
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 18,
+              "rate": 0.27692307692307694,
+              "wilson95": [
+                0.1829358381283011,
+                0.39580638353881975
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 25,
+              "rate": 0.3048780487804878,
+              "wilson95": [
+                0.21583396436990138,
+                0.4113857912164793
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 11,
+              "rate": 0.16176470588235295,
+              "wilson95": [
+                0.09280092222804136,
+                0.26690027600612404
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 13,
+              "rate": 0.19402985074626866,
+              "wilson95": [
+                0.1170517391641159,
+                0.3041911222544419
+              ]
+            }
+          },
+          "macroMarketTop30": 0.222928874611693,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 57,
+              "rate": 0.18269230769230768
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 81,
+              "rate": 0.2604501607717042
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 72,
+              "rate": 0.23452768729641693
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 6,
+              "rate": 0.13636363636363635
+            }
+          }
+        }
+      },
+      "chosenVsProfile": {
+        "modelOnlyHits": 153,
+        "baselineOnlyHits": 128,
+        "exactMcNemarP": 0.15209657630158874
+      },
+      "featureImportance": [
+        {
+          "feature": "kind_profile",
+          "weight": 0.15564611554145813,
+          "absWeight": 0.15564611554145813
+        },
+        {
+          "feature": "pair_profile",
+          "weight": 0.09084588289260864,
+          "absWeight": 0.09084588289260864
+        },
+        {
+          "feature": "transition_lag1",
+          "weight": 0.09039825201034546,
+          "absWeight": 0.09039825201034546
+        },
+        {
+          "feature": "lag3_opposite",
+          "weight": 0.06907842308282852,
+          "absWeight": 0.06907842308282852
+        },
+        {
+          "feature": "log_recent180_count",
+          "weight": -0.03665991500020027,
+          "absWeight": 0.03665991500020027
+        },
+        {
+          "feature": "lag3_overlap",
+          "weight": -0.03560837730765343,
+          "absWeight": 0.03560837730765343
+        },
+        {
+          "feature": "sutta_profile",
+          "weight": -0.03314816579222679,
+          "absWeight": 0.03314816579222679
+        },
+        {
+          "feature": "lag1_overlap",
+          "weight": 0.031494140625,
+          "absWeight": 0.031494140625
+        },
+        {
+          "feature": "same_day_source_opposite",
+          "weight": 0.024357415735721588,
+          "absWeight": 0.024357415735721588
+        },
+        {
+          "feature": "log_recent30_count",
+          "weight": -0.023237457498908043,
+          "absWeight": 0.023237457498908043
+        },
+        {
+          "feature": "log_weekday_count",
+          "weight": -0.022628409788012505,
+          "absWeight": 0.022628409788012505
+        },
+        {
+          "feature": "log_long_count",
+          "weight": -0.01766837015748024,
+          "absWeight": 0.01766837015748024
+        },
+        {
+          "feature": "lag1_opposite",
+          "weight": 0.013057777658104897,
+          "absWeight": 0.013057777658104897
+        },
+        {
+          "feature": "same_day_source_overlap",
+          "weight": -0.009758833795785904,
+          "absWeight": 0.009758833795785904
+        },
+        {
+          "feature": "position_profile",
+          "weight": 0.008130520582199097,
+          "absWeight": 0.008130520582199097
+        },
+        {
+          "feature": "log_recent90_count",
+          "weight": -0.00035874475724995136,
+          "absWeight": 0.00035874475724995136
+        }
+      ],
+      "target90": {
+        "achieved": false,
+        "requiredHits": 877,
+        "actualHits": 216,
+        "shortfall": 661
+      },
+      "negativeControl": {
+        "method": "training labels permuted within market; holdout labels untouched",
+        "holdout": {
+          "n": 974,
+          "top3": {
+            "hits": 26,
+            "rate": 0.026694045174537988,
+            "wilson95": [
+              0.018280858337349458,
+              0.038826005272259184
+            ]
+          },
+          "top10": {
+            "hits": 73,
+            "rate": 0.07494866529774127,
+            "wilson95": [
+              0.06003062127137179,
+              0.09320634518064119
+            ]
+          },
+          "top30": {
+            "hits": 194,
+            "rate": 0.19917864476386038,
+            "wilson95": [
+              0.17530010994077783,
+              0.2254207382969995
+            ]
+          },
+          "meanReciprocalRank": 0.03996007650629109,
+          "logLoss": 5.360142707824707,
+          "calibration": {
+            "meanTop30Mass": 0.2878153622150421,
+            "hitRate": 0.19917864476386038,
+            "ece5": 0.08863672819103302,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2541729509830475,
+                "hitRate": 0.19487179487179487
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.270789235830307,
+                "hitRate": 0.18461538461538463
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.28580576181411743,
+                "hitRate": 0.1958762886597938
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.30287134647369385,
+                "hitRate": 0.18974358974358974
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.32542726397514343,
+                "hitRate": 0.23076923076923078
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 16,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.10527382371950136,
+                0.2537099015189491
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 10,
+              "rate": 0.12195121951219512,
+              "wilson95": [
+                0.06760853649677892,
+                0.2101297399518335
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 22,
+              "rate": 0.22916666666666666,
+              "wilson95": [
+                0.1564891714560027,
+                0.3226851053002383
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 15,
+              "rate": 0.19736842105263158,
+              "wilson95": [
+                0.12341987279754299,
+                0.3004383497418823
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 26,
+              "rate": 0.3170731707317073,
+              "wilson95": [
+                0.2264806567040274,
+                0.42403786415820455
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 17,
+              "rate": 0.2073170731707317,
+              "wilson95": [
+                0.13366390372744102,
+                0.3071657296521299
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 20,
+              "rate": 0.20833333333333334,
+              "wilson95": [
+                0.13910828905878492,
+                0.3000024705248593
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 7,
+              "rate": 0.1076923076923077,
+              "wilson95": [
+                0.053154219531127755,
+                0.20601313581449843
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 13,
+              "rate": 0.15853658536585366,
+              "wilson95": [
+                0.09505590299299464,
+                0.2525786692831714
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 21,
+              "rate": 0.25609756097560976,
+              "wilson95": [
+                0.1740357615326263,
+                0.35998893295034956
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 12,
+              "rate": 0.17647058823529413,
+              "wilson95": [
+                0.10393587249437691,
+                0.2836044040774335
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 15,
+              "rate": 0.22388059701492538,
+              "wilson95": [
+                0.14063731129193663,
+                0.3370696612077375
+              ]
+            }
+          },
+          "macroMarketTop30": 0.1975461825348269,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 61,
+              "rate": 0.1955128205128205
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 70,
+              "rate": 0.22508038585209003
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 54,
+              "rate": 0.1758957654723127
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 9,
+              "rate": 0.20454545454545456
+            }
+          }
+        }
+      },
+      "artifact": {
+        "path": "research\\panel_top30_v2\\models\\close_preopen.pt",
+        "sha256": "964b71c482d2d9f53316c3fb5689fc19e9f559e01e3e5b9e4ccf832d16947044",
+        "trainingRows": 5847,
+        "note": "Refit on the full frozen cache after terminal evaluation; research-only."
+      },
+      "prospectiveForward": {
+        "hot": {
+          "n": 78,
+          "top3": {
+            "hits": 1,
+            "rate": 0.01282051282051282,
+            "wilson95": [
+              0.0022667317538337325,
+              0.06910857001702223
+            ]
+          },
+          "top10": {
+            "hits": 4,
+            "rate": 0.05128205128205128,
+            "wilson95": [
+              0.020121012473896145,
+              0.1245667654729449
+            ]
+          },
+          "top30": {
+            "hits": 17,
+            "rate": 0.21794871794871795,
+            "wilson95": [
+              0.1407681204113414,
+              0.32160705429810155
+            ]
+          },
+          "meanReciprocalRank": 0.034208175467271985,
+          "logLoss": 5.377621173858643,
+          "calibration": {
+            "meanTop30Mass": 0.25191056728363037,
+            "hitRate": 0.16666666666666666,
+            "ece5": 0.085243936532583,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.23382370173931122,
+                "hitRate": 0.125
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.24654242396354675,
+                "hitRate": 0.2
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.25374168157577515,
+                "hitRate": 0.25
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.2609182298183441,
+                "hitRate": 0.2
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.26475444436073303,
+                "hitRate": 0.0625
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.24249400665524085
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 2,
+              "rate": 0.4,
+              "wilson95": [
+                0.11762077423264783,
+                0.769275718723987
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            }
+          },
+          "macroMarketTop30": 0.18095238095238098,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 13,
+              "rate": 0.17105263157894737
+            }
+          }
+        },
+        "profile": {
+          "n": 78,
+          "top3": {
+            "hits": 2,
+            "rate": 0.02564102564102564,
+            "wilson95": [
+              0.007060093472759203,
+              0.08875270035675845
+            ]
+          },
+          "top10": {
+            "hits": 4,
+            "rate": 0.05128205128205128,
+            "wilson95": [
+              0.020121012473896145,
+              0.1245667654729449
+            ]
+          },
+          "top30": {
+            "hits": 14,
+            "rate": 0.1794871794871795,
+            "wilson95": [
+              0.11003915918925876,
+              0.2790235393441991
+            ]
+          },
+          "meanReciprocalRank": 0.030136931534134756,
+          "logLoss": 5.703598499298096,
+          "calibration": {
+            "meanTop30Mass": 0.4497775435447693,
+            "hitRate": 0.1794871794871795,
+            "ece5": 0.27029039920904696,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.4131093919277191,
+                "hitRate": 0.125
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.4301448464393616,
+                "hitRate": 0.3333333333333333
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.44617408514022827,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.46582120656967163,
+                "hitRate": 0.26666666666666666
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.493414044380188,
+                "hitRate": 0.0
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.24249400665524085
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 3,
+              "rate": 0.42857142857142855,
+              "wilson95": [
+                0.15821985525146975,
+                0.7495416354723428
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 2,
+              "rate": 0.4,
+              "wilson95": [
+                0.11762077423264783,
+                0.769275718723987
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            }
+          },
+          "macroMarketTop30": 0.19365079365079366,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 14,
+              "rate": 0.18421052631578946
+            }
+          }
+        },
+        "learned": {
+          "n": 78,
+          "top3": {
+            "hits": 1,
+            "rate": 0.01282051282051282,
+            "wilson95": [
+              0.0022667317538337325,
+              0.06910857001702223
+            ]
+          },
+          "top10": {
+            "hits": 6,
+            "rate": 0.07692307692307693,
+            "wilson95": [
+              0.035730464002355806,
+              0.15783229806180862
+            ]
+          },
+          "top30": {
+            "hits": 15,
+            "rate": 0.19230769230769232,
+            "wilson95": [
+              0.12015206340148435,
+              0.2933481271906353
+            ]
+          },
+          "meanReciprocalRank": 0.03192955184337297,
+          "logLoss": 5.366728782653809,
+          "calibration": {
+            "meanTop30Mass": 0.27523937821388245,
+            "hitRate": 0.19230769230769232,
+            "ece5": 0.08293170309983766,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.24994786083698273,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.26163116097450256,
+                "hitRate": 0.2
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.27571967244148254,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.28760528564453125,
+                "hitRate": 0.26666666666666666
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.30121535062789917,
+                "hitRate": 0.125
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 2,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.04696514218385378,
+                0.4480308622529734
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 3,
+              "rate": 0.5,
+              "wilson95": [
+                0.1876163064826506,
+                0.8123836935173494
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            }
+          },
+          "macroMarketTop30": 0.19484126984126984,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 1,
+              "rate": 0.5
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 14,
+              "rate": 0.18421052631578946
+            }
+          }
+        },
+        "ensemble": {
+          "n": 78,
+          "top3": {
+            "hits": 1,
+            "rate": 0.01282051282051282,
+            "wilson95": [
+              0.0022667317538337325,
+              0.06910857001702223
+            ]
+          },
+          "top10": {
+            "hits": 6,
+            "rate": 0.07692307692307693,
+            "wilson95": [
+              0.035730464002355806,
+              0.15783229806180862
+            ]
+          },
+          "top30": {
+            "hits": 15,
+            "rate": 0.19230769230769232,
+            "wilson95": [
+              0.12015206340148435,
+              0.2933481271906353
+            ]
+          },
+          "meanReciprocalRank": 0.03192955184337297,
+          "logLoss": 5.366728782653809,
+          "calibration": {
+            "meanTop30Mass": 0.27523937821388245,
+            "hitRate": 0.19230769230769232,
+            "ece5": 0.08293170309983766,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.24994786083698273,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.26163116097450256,
+                "hitRate": 0.2
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.27571967244148254,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.28760528564453125,
+                "hitRate": 0.26666666666666666
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.30121535062789917,
+                "hitRate": 0.125
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 2,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.04696514218385378,
+                0.4480308622529734
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 3,
+              "rate": 0.5,
+              "wilson95": [
+                0.1876163064826506,
+                0.8123836935173494
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            }
+          },
+          "macroMarketTop30": 0.19484126984126984,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 1,
+              "rate": 0.5
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 14,
+              "rate": 0.18421052631578946
+            }
+          }
+        },
+        "chosenVsProfile": {
+          "modelOnlyHits": 9,
+          "baselineOnlyHits": 8,
+          "exactMcNemarP": 1.0
+        }
+      }
+    },
+    "close_adjusted": {
+      "split": {
+        "train": {
+          "end": "2025-09-30",
+          "n": 3092
+        },
+        "earlyStop": {
+          "start": "2025-10-01",
+          "end": "2025-12-31",
+          "n": 882
+        },
+        "modelSelection": {
+          "start": "2026-01-01",
+          "end": "2026-03-31",
+          "n": 899
+        },
+        "terminalHoldout": {
+          "start": "2026-04-01",
+          "end": "2026-07-05",
+          "n": 974
+        }
+      },
+      "selection": [
+        {
+          "config": {
+            "name": "dynamic_wd1",
+            "kind": "dynamic",
+            "weight_decay": 0.1,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 4,
+          "earlyTop30": 0.2256235827664399,
+          "selectionTop30": 0.20578420467185762,
+          "epochsRun": 10
+        },
+        {
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 4,
+          "earlyTop30": 0.2256235827664399,
+          "selectionTop30": 0.203559510567297,
+          "epochsRun": 10
+        },
+        {
+          "config": {
+            "name": "additive_wd1",
+            "kind": "additive",
+            "weight_decay": 0.1,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "earlyTop30": 0.21201814058956917,
+          "selectionTop30": 0.20244716351501668,
+          "epochsRun": 8
+        },
+        {
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 7,
+          "earlyTop30": 0.20408163265306123,
+          "selectionTop30": 0.20133481646273638,
+          "epochsRun": 13
+        },
+        {
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "earlyTop30": 0.20861678004535147,
+          "selectionTop30": 0.20022246941045607,
+          "epochsRun": 8
+        },
+        {
+          "config": {
+            "name": "lowrank_d25",
+            "kind": "lowrank",
+            "weight_decay": 0.01,
+            "lr": 0.01,
+            "dropout": 0.25,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.23015873015873015,
+          "selectionTop30": 0.19911012235817574,
+          "epochsRun": 7
+        },
+        {
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 3,
+          "earlyTop30": 0.20408163265306123,
+          "selectionTop30": 0.1946607341490545,
+          "epochsRun": 9
+        },
+        {
+          "config": {
+            "name": "lowrank_d50",
+            "kind": "lowrank",
+            "weight_decay": 0.03,
+            "lr": 0.01,
+            "dropout": 0.5,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.2290249433106576,
+          "selectionTop30": 0.18020022246941045,
+          "epochsRun": 7
+        },
+        {
+          "config": {
+            "name": "lowrank_top30",
+            "kind": "lowrank",
+            "weight_decay": 0.03,
+            "lr": 0.008,
+            "dropout": 0.5,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 1,
+          "earlyTop30": 0.19047619047619047,
+          "selectionTop30": 0.1757508342602892,
+          "epochsRun": 7
+        }
+      ],
+      "selectedConfig": {
+        "name": "dynamic_wd1",
+        "kind": "dynamic",
+        "weight_decay": 0.1,
+        "lr": 0.03,
+        "dropout": 0.0,
+        "loss": "cross_entropy"
+      },
+      "fixedEpochs": 4,
+      "blendSelection": [
+        {
+          "learnedWeight": 1.0,
+          "selectionTop30": 0.20578420467185762
+        },
+        {
+          "learnedWeight": 0.75,
+          "selectionTop30": 0.19688542825361513
+        },
+        {
+          "learnedWeight": 0.25,
+          "selectionTop30": 0.1846496106785317
+        },
+        {
+          "learnedWeight": 0.0,
+          "selectionTop30": 0.1835372636262514
+        },
+        {
+          "learnedWeight": 0.5,
+          "selectionTop30": 0.17908787541713014
+        }
+      ],
+      "chosenModel": "learned",
+      "holdout": {
+        "hot": {
+          "n": 974,
+          "top3": {
+            "hits": 14,
+            "rate": 0.014373716632443531,
+            "wilson95": [
+              0.008581160922098372,
+              0.02398184664264108
+            ]
+          },
+          "top10": {
+            "hits": 67,
+            "rate": 0.06878850102669405,
+            "wilson95": [
+              0.054528936956362184,
+              0.0864361014732162
+            ]
+          },
+          "top30": {
+            "hits": 186,
+            "rate": 0.19096509240246407,
+            "wilson95": [
+              0.1675129997776464,
+              0.21684527776355145
+            ]
+          },
+          "meanReciprocalRank": 0.03249697060566798,
+          "logLoss": 5.366367340087891,
+          "calibration": {
+            "meanTop30Mass": 0.2538489103317261,
+            "hitRate": 0.18993839835728954,
+            "ece5": 0.06391050167825432,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.23861099779605865,
+                "hitRate": 0.12307692307692308
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.24758824706077576,
+                "hitRate": 0.2153846153846154
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.2554716169834137,
+                "hitRate": 0.1958762886597938
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2617855966091156,
+                "hitRate": 0.21025641025641026
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.26579636335372925,
+                "hitRate": 0.20512820512820512
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 6,
+              "rate": 0.07317073170731707,
+              "wilson95": [
+                0.033964777256659195,
+                0.1505784380885484
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 24,
+              "rate": 0.25,
+              "wilson95": [
+                0.17413968368934074,
+                0.3450981102394971
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 9,
+              "rate": 0.11842105263157894,
+              "wilson95": [
+                0.06356819004179068,
+                0.2099921775079194
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 21,
+              "rate": 0.25609756097560976,
+              "wilson95": [
+                0.1740357615326263,
+                0.35998893295034956
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 22,
+              "rate": 0.22916666666666666,
+              "wilson95": [
+                0.1564891714560027,
+                0.3226851053002383
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 9,
+              "rate": 0.13846153846153847,
+              "wilson95": [
+                0.07459090403153719,
+                0.24268097246345166
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 22,
+              "rate": 0.2682926829268293,
+              "wilson95": [
+                0.18436120492201502,
+                0.3729622548368121
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 11,
+              "rate": 0.16176470588235295,
+              "wilson95": [
+                0.09280092222804136,
+                0.26690027600612404
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 12,
+              "rate": 0.1791044776119403,
+              "wilson95": [
+                0.10553591339881956,
+                0.28747489247918
+              ]
+            }
+          },
+          "macroMarketTop30": 0.18681722105301593,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 60,
+              "rate": 0.19230769230769232
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 65,
+              "rate": 0.2090032154340836
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 51,
+              "rate": 0.16612377850162866
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 9,
+              "rate": 0.20454545454545456
+            }
+          }
+        },
+        "profile": {
+          "n": 974,
+          "top3": {
+            "hits": 17,
+            "rate": 0.017453798767967144,
+            "wilson95": [
+              0.010925456438676618,
+              0.02777351513728013
+            ]
+          },
+          "top10": {
+            "hits": 61,
+            "rate": 0.06262833675564682,
+            "wilson95": [
+              0.04906324974696271,
+              0.07962986066018107
+            ]
+          },
+          "top30": {
+            "hits": 189,
+            "rate": 0.19404517453798767,
+            "wilson95": [
+              0.1704311856807566,
+              0.22006305587165848
+            ]
+          },
+          "meanReciprocalRank": 0.03562236521350158,
+          "logLoss": 5.642789840698242,
+          "calibration": {
+            "meanTop30Mass": 0.46490415930747986,
+            "hitRate": 0.19404517453798767,
+            "ece5": 0.27085897482518545,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.42774564027786255,
+                "hitRate": 0.15897435897435896
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.4446479082107544,
+                "hitRate": 0.17435897435897435
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.4604099690914154,
+                "hitRate": 0.20618556701030927
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.481138676404953,
+                "hitRate": 0.21025641025641026
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.5105555057525635,
+                "hitRate": 0.2205128205128205
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 10,
+              "rate": 0.12195121951219512,
+              "wilson95": [
+                0.06760853649677892,
+                0.2101297399518335
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 19,
+              "rate": 0.19791666666666666,
+              "wilson95": [
+                0.13052733153747123,
+                0.28855166945987454
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 12,
+              "rate": 0.15789473684210525,
+              "wilson95": [
+                0.09269497050182374,
+                0.2560143245427439
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 21,
+              "rate": 0.25609756097560976,
+              "wilson95": [
+                0.1740357615326263,
+                0.35998893295034956
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 17,
+              "rate": 0.2073170731707317,
+              "wilson95": [
+                0.13366390372744102,
+                0.3071657296521299
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 21,
+              "rate": 0.21875,
+              "wilson95": [
+                0.14776345080877545,
+                0.31137906736116716
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 11,
+              "rate": 0.16923076923076924,
+              "wilson95": [
+                0.0972121812821161,
+                0.2781642163622354
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 16,
+              "rate": 0.1951219512195122,
+              "wilson95": [
+                0.12382897473181634,
+                0.29370189337190344
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 20,
+              "rate": 0.24390243902439024,
+              "wilson95": [
+                0.16379885088671692,
+                0.34692707832040764
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 15,
+              "rate": 0.22058823529411764,
+              "wilson95": [
+                0.13849012387325205,
+                0.33256738771149325
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 10,
+              "rate": 0.14925373134328357,
+              "wilson95": [
+                0.08314273433779819,
+                0.2534039604590851
+              ]
+            }
+          },
+          "macroMarketTop30": 0.19292564305105955,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 51,
+              "rate": 0.16346153846153846
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 71,
+              "rate": 0.2282958199356913
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 55,
+              "rate": 0.1791530944625407
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 12,
+              "rate": 0.2727272727272727
+            }
+          }
+        },
+        "learned": {
+          "n": 974,
+          "top3": {
+            "hits": 23,
+            "rate": 0.023613963039014373,
+            "wilson95": [
+              0.015785990370074887,
+              0.035184909228316456
+            ]
+          },
+          "top10": {
+            "hits": 83,
+            "rate": 0.08521560574948665,
+            "wilson95": [
+              0.06926960047186381,
+              0.10442057935087348
+            ]
+          },
+          "top30": {
+            "hits": 196,
+            "rate": 0.20123203285420946,
+            "wilson95": [
+              0.1772494920651215,
+              0.22756199884680064
+            ]
+          },
+          "meanReciprocalRank": 0.04061929350833498,
+          "logLoss": 5.341568470001221,
+          "calibration": {
+            "meanTop30Mass": 0.26358556747436523,
+            "hitRate": 0.20123203285420946,
+            "ece5": 0.06235352891365361,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.21527506411075592,
+                "hitRate": 0.2
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.24509093165397644,
+                "hitRate": 0.2205128205128205
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.26582562923431396,
+                "hitRate": 0.20618556701030927
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.28303655982017517,
+                "hitRate": 0.17435897435897435
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.30871111154556274,
+                "hitRate": 0.20512820512820512
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 18,
+              "rate": 0.1875,
+              "wilson95": [
+                0.12202469989311636,
+                0.27702254251793096
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 19,
+              "rate": 0.23170731707317074,
+              "wilson95": [
+                0.15365463849380123,
+                0.33377252543747216
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 14,
+              "rate": 0.14583333333333334,
+              "wilson95": [
+                0.08890205780138637,
+                0.23001815026446726
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 16,
+              "rate": 0.21052631578947367,
+              "wilson95": [
+                0.1339514670987436,
+                0.31495639793896757
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 15,
+              "rate": 0.18292682926829268,
+              "wilson95": [
+                0.1141102185364291,
+                0.2801218842914394
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 18,
+              "rate": 0.27692307692307694,
+              "wilson95": [
+                0.1829358381283011,
+                0.39580638353881975
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 27,
+              "rate": 0.32926829268292684,
+              "wilson95": [
+                0.23720116686677445,
+                0.43661611927130867
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 13,
+              "rate": 0.19117647058823528,
+              "wilson95": [
+                0.11527294030924928,
+                0.30010641460020604
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 11,
+              "rate": 0.16417910447761194,
+              "wilson95": [
+                0.0942261209452312,
+                0.27055262939221025
+              ]
+            }
+          },
+          "macroMarketTop30": 0.20321562400863338,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 56,
+              "rate": 0.1794871794871795
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 73,
+              "rate": 0.2347266881028939
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 59,
+              "rate": 0.19218241042345277
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 8,
+              "rate": 0.18181818181818182
+            }
+          }
+        },
+        "ensemble": {
+          "n": 974,
+          "top3": {
+            "hits": 23,
+            "rate": 0.023613963039014373,
+            "wilson95": [
+              0.015785990370074887,
+              0.035184909228316456
+            ]
+          },
+          "top10": {
+            "hits": 83,
+            "rate": 0.08521560574948665,
+            "wilson95": [
+              0.06926960047186381,
+              0.10442057935087348
+            ]
+          },
+          "top30": {
+            "hits": 196,
+            "rate": 0.20123203285420946,
+            "wilson95": [
+              0.1772494920651215,
+              0.22756199884680064
+            ]
+          },
+          "meanReciprocalRank": 0.04061929350833498,
+          "logLoss": 5.341568470001221,
+          "calibration": {
+            "meanTop30Mass": 0.26358556747436523,
+            "hitRate": 0.20123203285420946,
+            "ece5": 0.06235352891365361,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.21527506411075592,
+                "hitRate": 0.2
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.24509093165397644,
+                "hitRate": 0.2205128205128205
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.26582562923431396,
+                "hitRate": 0.20618556701030927
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.28303655982017517,
+                "hitRate": 0.17435897435897435
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.30871111154556274,
+                "hitRate": 0.20512820512820512
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 18,
+              "rate": 0.1875,
+              "wilson95": [
+                0.12202469989311636,
+                0.27702254251793096
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 19,
+              "rate": 0.23170731707317074,
+              "wilson95": [
+                0.15365463849380123,
+                0.33377252543747216
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 14,
+              "rate": 0.14583333333333334,
+              "wilson95": [
+                0.08890205780138637,
+                0.23001815026446726
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 16,
+              "rate": 0.21052631578947367,
+              "wilson95": [
+                0.1339514670987436,
+                0.31495639793896757
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 15,
+              "rate": 0.18292682926829268,
+              "wilson95": [
+                0.1141102185364291,
+                0.2801218842914394
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 18,
+              "rate": 0.27692307692307694,
+              "wilson95": [
+                0.1829358381283011,
+                0.39580638353881975
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 14,
+              "rate": 0.17073170731707318,
+              "wilson95": [
+                0.10451594667058835,
+                0.26641739088142896
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 27,
+              "rate": 0.32926829268292684,
+              "wilson95": [
+                0.23720116686677445,
+                0.43661611927130867
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 13,
+              "rate": 0.19117647058823528,
+              "wilson95": [
+                0.11527294030924928,
+                0.30010641460020604
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 11,
+              "rate": 0.16417910447761194,
+              "wilson95": [
+                0.0942261209452312,
+                0.27055262939221025
+              ]
+            }
+          },
+          "macroMarketTop30": 0.20321562400863338,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 56,
+              "rate": 0.1794871794871795
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 73,
+              "rate": 0.2347266881028939
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 59,
+              "rate": 0.19218241042345277
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 8,
+              "rate": 0.18181818181818182
+            }
+          }
+        }
+      },
+      "chosenVsProfile": {
+        "modelOnlyHits": 130,
+        "baselineOnlyHits": 123,
+        "exactMcNemarP": 0.7060922404424046
+      },
+      "featureImportance": [
+        {
+          "feature": "pair_profile",
+          "weight": 0.18704105913639069,
+          "absWeight": 0.18704105913639069
+        },
+        {
+          "feature": "kind_profile",
+          "weight": 0.1682826727628708,
+          "absWeight": 0.1682826727628708
+        },
+        {
+          "feature": "same_day_source_opposite",
+          "weight": 0.06582215428352356,
+          "absWeight": 0.06582215428352356
+        },
+        {
+          "feature": "lag3_opposite",
+          "weight": 0.0587790384888649,
+          "absWeight": 0.0587790384888649
+        },
+        {
+          "feature": "position_profile",
+          "weight": -0.03997514024376869,
+          "absWeight": 0.03997514024376869
+        },
+        {
+          "feature": "lag1_opposite",
+          "weight": 0.03838884457945824,
+          "absWeight": 0.03838884457945824
+        },
+        {
+          "feature": "log_long_count",
+          "weight": -0.03426990285515785,
+          "absWeight": 0.03426990285515785
+        },
+        {
+          "feature": "open_to_close_transition",
+          "weight": 0.03255177661776543,
+          "absWeight": 0.03255177661776543
+        },
+        {
+          "feature": "known_open_opposite",
+          "weight": 0.03153311461210251,
+          "absWeight": 0.03153311461210251
+        },
+        {
+          "feature": "log_recent180_count",
+          "weight": -0.028883442282676697,
+          "absWeight": 0.028883442282676697
+        },
+        {
+          "feature": "same_day_source_overlap",
+          "weight": -0.028702693060040474,
+          "absWeight": 0.028702693060040474
+        },
+        {
+          "feature": "transition_lag1",
+          "weight": 0.02164163626730442,
+          "absWeight": 0.02164163626730442
+        },
+        {
+          "feature": "known_open_jodi_profile",
+          "weight": 0.02123836986720562,
+          "absWeight": 0.02123836986720562
+        },
+        {
+          "feature": "known_open_overlap",
+          "weight": -0.01634620875120163,
+          "absWeight": 0.01634620875120163
+        },
+        {
+          "feature": "sutta_profile",
+          "weight": -0.015541363507509232,
+          "absWeight": 0.015541363507509232
+        },
+        {
+          "feature": "log_recent30_count",
+          "weight": -0.01283611636608839,
+          "absWeight": 0.01283611636608839
+        },
+        {
+          "feature": "lag3_overlap",
+          "weight": 0.011172969825565815,
+          "absWeight": 0.011172969825565815
+        },
+        {
+          "feature": "log_weekday_count",
+          "weight": 0.003718453459441662,
+          "absWeight": 0.003718453459441662
+        },
+        {
+          "feature": "log_recent90_count",
+          "weight": -0.0016694727819412947,
+          "absWeight": 0.0016694727819412947
+        },
+        {
+          "feature": "lag1_overlap",
+          "weight": -0.0005950098857283592,
+          "absWeight": 0.0005950098857283592
+        }
+      ],
+      "target90": {
+        "achieved": false,
+        "requiredHits": 877,
+        "actualHits": 196,
+        "shortfall": 681
+      },
+      "negativeControl": {
+        "method": "training labels permuted within market; holdout labels untouched",
+        "holdout": {
+          "n": 974,
+          "top3": {
+            "hits": 27,
+            "rate": 0.027720739219712527,
+            "wilson95": [
+              0.01912024798246563,
+              0.04003193696421545
+            ]
+          },
+          "top10": {
+            "hits": 70,
+            "rate": 0.07186858316221766,
+            "wilson95": [
+              0.057275548116562124,
+              0.08982545432423356
+            ]
+          },
+          "top30": {
+            "hits": 198,
+            "rate": 0.2032854209445585,
+            "wilson95": [
+              0.17919989207941991,
+              0.22970224150664706
+            ]
+          },
+          "meanReciprocalRank": 0.04113380611860964,
+          "logLoss": 5.3524017333984375,
+          "calibration": {
+            "meanTop30Mass": 0.2839619815349579,
+            "hitRate": 0.2032854209445585,
+            "ece5": 0.08067659334541591,
+            "bins": [
+              {
+                "n": 195,
+                "meanTop30Mass": 0.24216853082180023,
+                "hitRate": 0.23076923076923078
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.2626412510871887,
+                "hitRate": 0.20512820512820512
+              },
+              {
+                "n": 194,
+                "meanTop30Mass": 0.28597861528396606,
+                "hitRate": 0.15979381443298968
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.3031984269618988,
+                "hitRate": 0.21025641025641026
+              },
+              {
+                "n": 195,
+                "meanTop30Mass": 0.32583358883857727,
+                "hitRate": 0.21025641025641026
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 96,
+              "hits": 17,
+              "rate": 0.17708333333333334,
+              "wilson95": [
+                0.11360507865666794,
+                0.265410405168081
+              ]
+            },
+            "Time Bazar": {
+              "n": 82,
+              "hits": 18,
+              "rate": 0.21951219512195122,
+              "wilson95": [
+                0.1436078562786517,
+                0.32052054237677047
+              ]
+            },
+            "Madhur Day": {
+              "n": 96,
+              "hits": 22,
+              "rate": 0.22916666666666666,
+              "wilson95": [
+                0.1564891714560027,
+                0.3226851053002383
+              ]
+            },
+            "Milan Day": {
+              "n": 76,
+              "hits": 10,
+              "rate": 0.13157894736842105,
+              "wilson95": [
+                0.07306881567918964,
+                0.22554119436880626
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 82,
+              "hits": 18,
+              "rate": 0.21951219512195122,
+              "wilson95": [
+                0.1436078562786517,
+                0.32052054237677047
+              ]
+            },
+            "Kalyan": {
+              "n": 82,
+              "hits": 23,
+              "rate": 0.2804878048780488,
+              "wilson95": [
+                0.19477150045908148,
+                0.3858507245755968
+              ]
+            },
+            "Sridevi Night": {
+              "n": 96,
+              "hits": 21,
+              "rate": 0.21875,
+              "wilson95": [
+                0.14776345080877545,
+                0.31137906736116716
+              ]
+            },
+            "Kalyan Night": {
+              "n": 65,
+              "hits": 8,
+              "rate": 0.12307692307692308,
+              "wilson95": [
+                0.06370467509869226,
+                0.22451494082161527
+              ]
+            },
+            "Madhur Night": {
+              "n": 82,
+              "hits": 17,
+              "rate": 0.2073170731707317,
+              "wilson95": [
+                0.13366390372744102,
+                0.3071657296521299
+              ]
+            },
+            "Milan Night": {
+              "n": 82,
+              "hits": 18,
+              "rate": 0.21951219512195122,
+              "wilson95": [
+                0.1436078562786517,
+                0.32052054237677047
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 68,
+              "hits": 15,
+              "rate": 0.22058823529411764,
+              "wilson95": [
+                0.13849012387325205,
+                0.33256738771149325
+              ]
+            },
+            "Main Bazar": {
+              "n": 67,
+              "hits": 11,
+              "rate": 0.16417910447761194,
+              "wilson95": [
+                0.0942261209452312,
+                0.27055262939221025
+              ]
+            }
+          },
+          "macroMarketTop30": 0.20089705613597564,
+          "perMonthTop30": {
+            "2026-04": {
+              "n": 312,
+              "hits": 57,
+              "rate": 0.18269230769230768
+            },
+            "2026-05": {
+              "n": 311,
+              "hits": 71,
+              "rate": 0.2282958199356913
+            },
+            "2026-06": {
+              "n": 307,
+              "hits": 58,
+              "rate": 0.18892508143322476
+            },
+            "2026-07": {
+              "n": 44,
+              "hits": 12,
+              "rate": 0.2727272727272727
+            }
+          }
+        }
+      },
+      "artifact": {
+        "path": "research\\panel_top30_v2\\models\\close_adjusted.pt",
+        "sha256": "3c8747e3b0f5849e7a78dfc395f28f60b8049a4149a554ce13ca9ea1e5fe3604",
+        "trainingRows": 5847,
+        "note": "Refit on the full frozen cache after terminal evaluation; research-only."
+      },
+      "prospectiveForward": {
+        "hot": {
+          "n": 78,
+          "top3": {
+            "hits": 1,
+            "rate": 0.01282051282051282,
+            "wilson95": [
+              0.0022667317538337325,
+              0.06910857001702223
+            ]
+          },
+          "top10": {
+            "hits": 4,
+            "rate": 0.05128205128205128,
+            "wilson95": [
+              0.020121012473896145,
+              0.1245667654729449
+            ]
+          },
+          "top30": {
+            "hits": 17,
+            "rate": 0.21794871794871795,
+            "wilson95": [
+              0.1407681204113414,
+              0.32160705429810155
+            ]
+          },
+          "meanReciprocalRank": 0.034208175467271985,
+          "logLoss": 5.377621173858643,
+          "calibration": {
+            "meanTop30Mass": 0.25191056728363037,
+            "hitRate": 0.16666666666666666,
+            "ece5": 0.085243936532583,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.23382370173931122,
+                "hitRate": 0.125
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.24654242396354675,
+                "hitRate": 0.2
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.25374168157577515,
+                "hitRate": 0.25
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.2609182298183441,
+                "hitRate": 0.2
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.26475444436073303,
+                "hitRate": 0.0625
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.24249400665524085
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 2,
+              "rate": 0.4,
+              "wilson95": [
+                0.11762077423264783,
+                0.769275718723987
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            }
+          },
+          "macroMarketTop30": 0.18095238095238098,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 13,
+              "rate": 0.17105263157894737
+            }
+          }
+        },
+        "profile": {
+          "n": 78,
+          "top3": {
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              -3.469446951953614e-18,
+              0.04693780971219429
+            ]
+          },
+          "top10": {
+            "hits": 4,
+            "rate": 0.05128205128205128,
+            "wilson95": [
+              0.020121012473896145,
+              0.1245667654729449
+            ]
+          },
+          "top30": {
+            "hits": 15,
+            "rate": 0.19230769230769232,
+            "wilson95": [
+              0.12015206340148435,
+              0.2933481271906353
+            ]
+          },
+          "meanReciprocalRank": 0.025168015355246067,
+          "logLoss": 5.712977409362793,
+          "calibration": {
+            "meanTop30Mass": 0.45899832248687744,
+            "hitRate": 0.19230769230769232,
+            "ece5": 0.27686286049011427,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.42113131284713745,
+                "hitRate": 0.0
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.44021859765052795,
+                "hitRate": 0.4666666666666667
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.4558563530445099,
+                "hitRate": 0.125
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.47302302718162537,
+                "hitRate": 0.3333333333333333
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.5044646263122559,
+                "hitRate": 0.0625
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 1,
+              "rate": 0.14285714285714285,
+              "wilson95": [
+                0.02567962434474355,
+                0.5131278292743189
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.24249400665524085
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 4,
+              "rate": 0.5714285714285714,
+              "wilson95": [
+                0.2504583645276572,
+                0.8417801447485302
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 2,
+              "rate": 0.4,
+              "wilson95": [
+                0.11762077423264783,
+                0.769275718723987
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 1,
+              "rate": 0.2,
+              "wilson95": [
+                0.03622410863243014,
+                0.6244653702374747
+              ]
+            }
+          },
+          "macroMarketTop30": 0.20753968253968258,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 15,
+              "rate": 0.19736842105263158
+            }
+          }
+        },
+        "learned": {
+          "n": 78,
+          "top3": {
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              -3.469446951953614e-18,
+              0.04693780971219429
+            ]
+          },
+          "top10": {
+            "hits": 2,
+            "rate": 0.02564102564102564,
+            "wilson95": [
+              0.007060093472759203,
+              0.08875270035675845
+            ]
+          },
+          "top30": {
+            "hits": 10,
+            "rate": 0.1282051282051282,
+            "wilson95": [
+              0.07115322631234479,
+              0.22015950398646633
+            ]
+          },
+          "meanReciprocalRank": 0.021643808552569577,
+          "logLoss": 5.413793563842773,
+          "calibration": {
+            "meanTop30Mass": 0.25240254402160645,
+            "hitRate": 0.1282051282051282,
+            "ece5": 0.13608054491953972,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.22305071353912354,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.2357705682516098,
+                "hitRate": 0.26666666666666666
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.24611526727676392,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.2629382312297821,
+                "hitRate": 0.0
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.29375699162483215,
+                "hitRate": 0.0
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 4,
+              "rate": 0.5714285714285714,
+              "wilson95": [
+                0.2504583645276572,
+                0.8417801447485302
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.24249400665524085
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                5.551115123125783e-17,
+                0.35433043506668743
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            }
+          },
+          "macroMarketTop30": 0.12698412698412698,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 10,
+              "rate": 0.13157894736842105
+            }
+          }
+        },
+        "ensemble": {
+          "n": 78,
+          "top3": {
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              -3.469446951953614e-18,
+              0.04693780971219429
+            ]
+          },
+          "top10": {
+            "hits": 2,
+            "rate": 0.02564102564102564,
+            "wilson95": [
+              0.007060093472759203,
+              0.08875270035675845
+            ]
+          },
+          "top30": {
+            "hits": 10,
+            "rate": 0.1282051282051282,
+            "wilson95": [
+              0.07115322631234479,
+              0.22015950398646633
+            ]
+          },
+          "meanReciprocalRank": 0.021643808552569577,
+          "logLoss": 5.413793563842773,
+          "calibration": {
+            "meanTop30Mass": 0.25240254402160645,
+            "hitRate": 0.1282051282051282,
+            "ece5": 0.13608054491953972,
+            "bins": [
+              {
+                "n": 16,
+                "meanTop30Mass": 0.22305071353912354,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.2357705682516098,
+                "hitRate": 0.26666666666666666
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.24611526727676392,
+                "hitRate": 0.1875
+              },
+              {
+                "n": 15,
+                "meanTop30Mass": 0.2629382312297821,
+                "hitRate": 0.0
+              },
+              {
+                "n": 16,
+                "meanTop30Mass": 0.29375699162483215,
+                "hitRate": 0.0
+              }
+            ]
+          },
+          "perMarketTop30": {
+            "Sridevi": {
+              "n": 7,
+              "hits": 4,
+              "rate": 0.5714285714285714,
+              "wilson95": [
+                0.2504583645276572,
+                0.8417801447485302
+              ]
+            },
+            "Time Bazar": {
+              "n": 6,
+              "hits": 2,
+              "rate": 0.3333333333333333,
+              "wilson95": [
+                0.09677141110578041,
+                0.700006684861608
+              ]
+            },
+            "Madhur Day": {
+              "n": 7,
+              "hits": 2,
+              "rate": 0.2857142857142857,
+              "wilson95": [
+                0.08221892400405678,
+                0.6410655481673808
+              ]
+            },
+            "Milan Day": {
+              "n": 12,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.24249400665524085
+              ]
+            },
+            "Rajdhani Day": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Kalyan": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Sridevi Night": {
+              "n": 7,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                5.551115123125783e-17,
+                0.35433043506668743
+              ]
+            },
+            "Kalyan Night": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            },
+            "Madhur Night": {
+              "n": 6,
+              "hits": 1,
+              "rate": 0.16666666666666666,
+              "wilson95": [
+                0.030053369748306635,
+                0.5635028221864702
+              ]
+            },
+            "Milan Night": {
+              "n": 6,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "Rajdhani Night": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            },
+            "Main Bazar": {
+              "n": 5,
+              "hits": 0,
+              "rate": 0.0,
+              "wilson95": [
+                0.0,
+                0.43448246478317476
+              ]
+            }
+          },
+          "macroMarketTop30": 0.12698412698412698,
+          "perMonthTop30": {
+            "2026-06": {
+              "n": 2,
+              "hits": 0,
+              "rate": 0.0
+            },
+            "2026-07": {
+              "n": 76,
+              "hits": 10,
+              "rate": 0.13157894736842105
+            }
+          }
+        },
+        "chosenVsProfile": {
+          "modelOnlyHits": 9,
+          "baselineOnlyHits": 14,
+          "exactMcNemarP": 0.4048728942871094
+        }
+      }
+    }
+  }
+}

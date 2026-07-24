@@ -1,0 +1,1555 @@
+{
+  "generatedAt": "2026-07-15T04:09:04.482835+05:30",
+  "objective": "90% exact-panel Top-30 Open and Close accuracy",
+  "productionFilesModified": false,
+  "sourceAudit": {
+    "sha256": "9674f563d21a86d9ac2b215789995a4187287d7e0f92d80ffe2c020daded743a",
+    "rowsAfterFiltering": 23276,
+    "droppedNonCanonical": [
+      {
+        "market": "Rajdhani Day",
+        "dateRangeStart": "08/09/14",
+        "day": "Wednesday",
+        "openPanel": "575",
+        "closePanel": "366"
+      },
+      {
+        "market": "Rajdhani Day",
+        "dateRangeStart": "15/12/14",
+        "day": "Tuesday",
+        "openPanel": "130",
+        "closePanel": "242"
+      },
+      {
+        "market": "Madhur Night",
+        "dateRangeStart": "03/10/2022",
+        "day": "Thursday",
+        "openPanel": "790",
+        "closePanel": "750"
+      }
+    ],
+    "marketRows": {
+      "Sridevi": 1998,
+      "Time Bazar": 1718,
+      "Madhur Day": 2974,
+      "Milan Day": 1186,
+      "Rajdhani Day": 3973,
+      "Kalyan": 1131,
+      "Sridevi Night": 1983,
+      "Kalyan Night": 1852,
+      "Madhur Night": 2544,
+      "Milan Night": 1369,
+      "Rajdhani Night": 1400,
+      "Main Bazar": 1148
+    }
+  },
+  "trustedCacheSha256": "02819f1d933f4fe2e340bb241ebcbe2d4f5859a7228b8f72682a234818056bd0",
+  "design": {
+    "minTargetDate": "2022-01-01",
+    "historyWindows": [
+      180,
+      365,
+      730,
+      "lifetime"
+    ],
+    "trainEnd": "2025-09-30",
+    "earlyEnd": "2025-12-31",
+    "selectionEnd": "2026-03-31"
+  },
+  "tasks": {
+    "open": {
+      "trials": [
+        {
+          "window": "lifetime",
+          "model": "profile",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.21882086167800455,
+          "selectionTop30": 0.19688542825361513
+        },
+        {
+          "window": "lifetime",
+          "model": "additive_wd01",
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.1836734693877551,
+          "selectionTop30": 0.18909899888765294
+        },
+        {
+          "window": "730",
+          "model": "hot",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.17346938775510204,
+          "selectionTop30": 0.18798665183537264
+        },
+        {
+          "window": "lifetime",
+          "model": "dynamic_top30",
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 2,
+          "epochsRun": 8,
+          "earlyTop30": 0.18594104308390022,
+          "selectionTop30": 0.18798665183537264
+        },
+        {
+          "window": "730",
+          "model": "profile",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.19387755102040816,
+          "selectionTop30": 0.18687430478309233
+        },
+        {
+          "window": "730",
+          "model": "additive_wd01",
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.18140589569160998,
+          "selectionTop30": 0.18687430478309233
+        },
+        {
+          "window": "180",
+          "model": "dynamic_wd01",
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 5,
+          "epochsRun": 11,
+          "earlyTop30": 0.20975056689342403,
+          "selectionTop30": 0.185761957730812
+        },
+        {
+          "window": "365",
+          "model": "dynamic_wd01",
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 4,
+          "epochsRun": 10,
+          "earlyTop30": 0.20861678004535147,
+          "selectionTop30": 0.1846496106785317
+        },
+        {
+          "window": "lifetime",
+          "model": "hot",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.1893424036281179,
+          "selectionTop30": 0.1846496106785317
+        },
+        {
+          "window": "730",
+          "model": "dynamic_wd01",
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 4,
+          "epochsRun": 10,
+          "earlyTop30": 0.20521541950113378,
+          "selectionTop30": 0.1835372636262514
+        },
+        {
+          "window": "lifetime",
+          "model": "dynamic_wd01",
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "epochsRun": 8,
+          "earlyTop30": 0.20748299319727892,
+          "selectionTop30": 0.18131256952169078
+        },
+        {
+          "window": "180",
+          "model": "profile",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.1961451247165533,
+          "selectionTop30": 0.18020022246941045
+        },
+        {
+          "window": "180",
+          "model": "additive_wd01",
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.1893424036281179,
+          "selectionTop30": 0.18020022246941045
+        },
+        {
+          "window": "365",
+          "model": "profile",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.20294784580498867,
+          "selectionTop30": 0.18020022246941045
+        },
+        {
+          "window": "365",
+          "model": "additive_wd01",
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.1927437641723356,
+          "selectionTop30": 0.17686318131256953
+        },
+        {
+          "window": "180",
+          "model": "additive_top30",
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.19160997732426305,
+          "selectionTop30": 0.1724137931034483
+        },
+        {
+          "window": "lifetime",
+          "model": "additive_top30",
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 5,
+          "epochsRun": 11,
+          "earlyTop30": 0.18480725623582767,
+          "selectionTop30": 0.17018909899888765
+        },
+        {
+          "window": "180",
+          "model": "hot",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.15419501133786848,
+          "selectionTop30": 0.1657397107897664
+        },
+        {
+          "window": "730",
+          "model": "dynamic_top30",
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.19047619047619047,
+          "selectionTop30": 0.1646273637374861
+        },
+        {
+          "window": "730",
+          "model": "additive_top30",
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 4,
+          "epochsRun": 10,
+          "earlyTop30": 0.15419501133786848,
+          "selectionTop30": 0.1646273637374861
+        },
+        {
+          "window": "365",
+          "model": "additive_top30",
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 9,
+          "epochsRun": 15,
+          "earlyTop30": 0.20068027210884354,
+          "selectionTop30": 0.15795328142380421
+        },
+        {
+          "window": "365",
+          "model": "hot",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.17573696145124718,
+          "selectionTop30": 0.1557285873192436
+        },
+        {
+          "window": "365",
+          "model": "dynamic_top30",
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.18140589569160998,
+          "selectionTop30": 0.1546162402669633
+        },
+        {
+          "window": "180",
+          "model": "dynamic_top30",
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.1746031746031746,
+          "selectionTop30": 0.14126807563959956
+        }
+      ],
+      "selectionGate": {
+        "bestEarlyProfile": 0.21882086167800455,
+        "tolerance": 0.005
+      },
+      "selected": {
+        "window": "lifetime",
+        "model": "profile",
+        "config": null,
+        "bestEpoch": 0,
+        "earlyTop30": 0.21882086167800455,
+        "selectionTop30": 0.19688542825361513
+      },
+      "splitSizes": {
+        "train": 12794,
+        "early": 882,
+        "select": 899,
+        "terminal": 974,
+        "forward": 78,
+        "cacheAll": 15549
+      },
+      "terminal": {
+        "n": 974,
+        "top3": {
+          "hits": 18,
+          "rate": 0.018480492813141684,
+          "wilson95": [
+            0.011721283215618442,
+            0.02902300969741074
+          ]
+        },
+        "top10": {
+          "hits": 64,
+          "rate": 0.06570841889117043,
+          "wilson95": [
+            0.05179130997345702,
+            0.08303776444490407
+          ]
+        },
+        "top30": {
+          "hits": 166,
+          "rate": 0.1704312114989733,
+          "wilson95": [
+            0.14812282806623928,
+            0.19532902273350988
+          ]
+        },
+        "meanReciprocalRank": 0.035389257275136435,
+        "logLoss": 5.63983678817749,
+        "calibration": {
+          "meanTop30Mass": 0.40588805079460144,
+          "hitRate": 0.1704312114989733,
+          "ece5": 0.23545681894804663,
+          "bins": [
+            {
+              "n": 195,
+              "meanTop30Mass": 0.36654791235923767,
+              "hitRate": 0.13846153846153847
+            },
+            {
+              "n": 195,
+              "meanTop30Mass": 0.3968386948108673,
+              "hitRate": 0.2
+            },
+            {
+              "n": 194,
+              "meanTop30Mass": 0.40886008739471436,
+              "hitRate": 0.15979381443298968
+            },
+            {
+              "n": 195,
+              "meanTop30Mass": 0.4204547703266144,
+              "hitRate": 0.1641025641025641
+            },
+            {
+              "n": 195,
+              "meanTop30Mass": 0.43675392866134644,
+              "hitRate": 0.18974358974358974
+            }
+          ]
+        },
+        "perMarketTop30": {
+          "Sridevi": {
+            "n": 96,
+            "hits": 21,
+            "rate": 0.21875,
+            "wilson95": [
+              0.14776345080877545,
+              0.31137906736116716
+            ]
+          },
+          "Time Bazar": {
+            "n": 82,
+            "hits": 14,
+            "rate": 0.17073170731707318,
+            "wilson95": [
+              0.10451594667058835,
+              0.26641739088142896
+            ]
+          },
+          "Madhur Day": {
+            "n": 96,
+            "hits": 20,
+            "rate": 0.20833333333333334,
+            "wilson95": [
+              0.13910828905878492,
+              0.3000024705248593
+            ]
+          },
+          "Milan Day": {
+            "n": 76,
+            "hits": 13,
+            "rate": 0.17105263157894737,
+            "wilson95": [
+              0.10278019055272239,
+              0.27097874699013114
+            ]
+          },
+          "Rajdhani Day": {
+            "n": 82,
+            "hits": 11,
+            "rate": 0.13414634146341464,
+            "wilson95": [
+              0.07658691429563845,
+              0.2244501274288252
+            ]
+          },
+          "Kalyan": {
+            "n": 82,
+            "hits": 16,
+            "rate": 0.1951219512195122,
+            "wilson95": [
+              0.12382897473181634,
+              0.29370189337190344
+            ]
+          },
+          "Sridevi Night": {
+            "n": 96,
+            "hits": 12,
+            "rate": 0.125,
+            "wilson95": [
+              0.07297200959924269,
+              0.20588468129401408
+            ]
+          },
+          "Kalyan Night": {
+            "n": 65,
+            "hits": 10,
+            "rate": 0.15384615384615385,
+            "wilson95": [
+              0.08577094066988503,
+              0.26055319639978514
+            ]
+          },
+          "Madhur Night": {
+            "n": 82,
+            "hits": 18,
+            "rate": 0.21951219512195122,
+            "wilson95": [
+              0.1436078562786517,
+              0.32052054237677047
+            ]
+          },
+          "Milan Night": {
+            "n": 82,
+            "hits": 9,
+            "rate": 0.10975609756097561,
+            "wilson95": [
+              0.058827144761389186,
+              0.19561236641137209
+            ]
+          },
+          "Rajdhani Night": {
+            "n": 68,
+            "hits": 13,
+            "rate": 0.19117647058823528,
+            "wilson95": [
+              0.11527294030924928,
+              0.30010641460020604
+            ]
+          },
+          "Main Bazar": {
+            "n": 67,
+            "hits": 9,
+            "rate": 0.13432835820895522,
+            "wilson95": [
+              0.07231091664295486,
+              0.23600372261337027
+            ]
+          }
+        },
+        "macroMarketTop30": 0.169312936686546,
+        "perMonthTop30": {
+          "2026-04": {
+            "n": 312,
+            "hits": 54,
+            "rate": 0.17307692307692307
+          },
+          "2026-05": {
+            "n": 311,
+            "hits": 52,
+            "rate": 0.16720257234726688
+          },
+          "2026-06": {
+            "n": 307,
+            "hits": 51,
+            "rate": 0.16612377850162866
+          },
+          "2026-07": {
+            "n": 44,
+            "hits": 9,
+            "rate": 0.20454545454545456
+          }
+        }
+      },
+      "forward": {
+        "n": 78,
+        "top3": {
+          "hits": 4,
+          "rate": 0.05128205128205128,
+          "wilson95": [
+            0.020121012473896145,
+            0.1245667654729449
+          ]
+        },
+        "top10": {
+          "hits": 6,
+          "rate": 0.07692307692307693,
+          "wilson95": [
+            0.035730464002355806,
+            0.15783229806180862
+          ]
+        },
+        "top30": {
+          "hits": 18,
+          "rate": 0.23076923076923078,
+          "wilson95": [
+            0.15125508850526875,
+            0.3355575782628359
+          ]
+        },
+        "meanReciprocalRank": 0.050493870878089896,
+        "logLoss": 5.597654819488525,
+        "calibration": {
+          "meanTop30Mass": 0.40746334195137024,
+          "hitRate": 0.23076923076923078,
+          "ece5": 0.176694108125491,
+          "bins": [
+            {
+              "n": 16,
+              "meanTop30Mass": 0.36800751090049744,
+              "hitRate": 0.125
+            },
+            {
+              "n": 15,
+              "meanTop30Mass": 0.39927130937576294,
+              "hitRate": 0.26666666666666666
+            },
+            {
+              "n": 16,
+              "meanTop30Mass": 0.4081243872642517,
+              "hitRate": 0.1875
+            },
+            {
+              "n": 15,
+              "meanTop30Mass": 0.42255163192749023,
+              "hitRate": 0.4
+            },
+            {
+              "n": 16,
+              "meanTop30Mass": 0.4397928714752197,
+              "hitRate": 0.1875
+            }
+          ]
+        },
+        "perMarketTop30": {
+          "Sridevi": {
+            "n": 7,
+            "hits": 2,
+            "rate": 0.2857142857142857,
+            "wilson95": [
+              0.08221892400405678,
+              0.6410655481673808
+            ]
+          },
+          "Time Bazar": {
+            "n": 6,
+            "hits": 2,
+            "rate": 0.3333333333333333,
+            "wilson95": [
+              0.09677141110578041,
+              0.700006684861608
+            ]
+          },
+          "Madhur Day": {
+            "n": 7,
+            "hits": 3,
+            "rate": 0.42857142857142855,
+            "wilson95": [
+              0.15821985525146975,
+              0.7495416354723428
+            ]
+          },
+          "Milan Day": {
+            "n": 12,
+            "hits": 3,
+            "rate": 0.25,
+            "wilson95": [
+              0.08894166839405471,
+              0.5323053349335657
+            ]
+          },
+          "Rajdhani Day": {
+            "n": 6,
+            "hits": 1,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.030053369748306635,
+              0.5635028221864702
+            ]
+          },
+          "Kalyan": {
+            "n": 6,
+            "hits": 2,
+            "rate": 0.3333333333333333,
+            "wilson95": [
+              0.09677141110578041,
+              0.700006684861608
+            ]
+          },
+          "Sridevi Night": {
+            "n": 7,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              5.551115123125783e-17,
+              0.35433043506668743
+            ]
+          },
+          "Kalyan Night": {
+            "n": 5,
+            "hits": 1,
+            "rate": 0.2,
+            "wilson95": [
+              0.03622410863243014,
+              0.6244653702374747
+            ]
+          },
+          "Madhur Night": {
+            "n": 6,
+            "hits": 1,
+            "rate": 0.16666666666666666,
+            "wilson95": [
+              0.030053369748306635,
+              0.5635028221864702
+            ]
+          },
+          "Milan Night": {
+            "n": 6,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              2.7755575615628914e-17,
+              0.3903342879021653
+            ]
+          },
+          "Rajdhani Night": {
+            "n": 5,
+            "hits": 2,
+            "rate": 0.4,
+            "wilson95": [
+              0.11762077423264783,
+              0.769275718723987
+            ]
+          },
+          "Main Bazar": {
+            "n": 5,
+            "hits": 1,
+            "rate": 0.2,
+            "wilson95": [
+              0.03622410863243014,
+              0.6244653702374747
+            ]
+          }
+        },
+        "macroMarketTop30": 0.23035714285714284,
+        "perMonthTop30": {
+          "2026-06": {
+            "n": 2,
+            "hits": 0,
+            "rate": 0.0
+          },
+          "2026-07": {
+            "n": 76,
+            "hits": 18,
+            "rate": 0.23684210526315788
+          }
+        }
+      },
+      "previousTwoYear": {
+        "terminalTop30": {
+          "hits": 173,
+          "rate": 0.17761806981519507,
+          "wilson95": [
+            0.15489620225192924,
+            0.20287289790732693
+          ]
+        },
+        "forwardTop30": {
+          "hits": 17,
+          "rate": 0.21794871794871795,
+          "wilson95": [
+            0.1407681204113414,
+            0.32160705429810155
+          ]
+        }
+      },
+      "artifact": null,
+      "target90": {
+        "terminalAchieved": false,
+        "forwardAchieved": false,
+        "terminalRequiredHits": 877,
+        "forwardRequiredHits": 71
+      }
+    },
+    "close_preopen": {
+      "trials": [
+        {
+          "window": "lifetime",
+          "model": "hot",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.2108843537414966,
+          "selectionTop30": 0.21690767519466073
+        },
+        {
+          "window": "365",
+          "model": "dynamic_wd01",
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 7,
+          "epochsRun": 13,
+          "earlyTop30": 0.21428571428571427,
+          "selectionTop30": 0.21023359288097887
+        },
+        {
+          "window": "730",
+          "model": "dynamic_wd01",
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 5,
+          "epochsRun": 11,
+          "earlyTop30": 0.22789115646258504,
+          "selectionTop30": 0.21023359288097887
+        },
+        {
+          "window": "lifetime",
+          "model": "dynamic_wd01",
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 5,
+          "epochsRun": 11,
+          "earlyTop30": 0.2290249433106576,
+          "selectionTop30": 0.21023359288097887
+        },
+        {
+          "window": "730",
+          "model": "hot",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.20408163265306123,
+          "selectionTop30": 0.20578420467185762
+        },
+        {
+          "window": "lifetime",
+          "model": "profile",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.19160997732426305,
+          "selectionTop30": 0.20467185761957732
+        },
+        {
+          "window": "180",
+          "model": "dynamic_wd01",
+          "config": {
+            "name": "dynamic_wd01",
+            "kind": "dynamic",
+            "weight_decay": 0.01,
+            "lr": 0.03,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 5,
+          "epochsRun": 11,
+          "earlyTop30": 0.21201814058956917,
+          "selectionTop30": 0.20133481646273638
+        },
+        {
+          "window": "730",
+          "model": "profile",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.19727891156462585,
+          "selectionTop30": 0.1946607341490545
+        },
+        {
+          "window": "lifetime",
+          "model": "additive_top30",
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 9,
+          "epochsRun": 15,
+          "earlyTop30": 0.20294784580498867,
+          "selectionTop30": 0.1935483870967742
+        },
+        {
+          "window": "180",
+          "model": "additive_top30",
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 4,
+          "epochsRun": 10,
+          "earlyTop30": 0.2108843537414966,
+          "selectionTop30": 0.19021134593993325
+        },
+        {
+          "window": "lifetime",
+          "model": "dynamic_top30",
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 9,
+          "epochsRun": 15,
+          "earlyTop30": 0.1927437641723356,
+          "selectionTop30": 0.18909899888765294
+        },
+        {
+          "window": "365",
+          "model": "dynamic_top30",
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.2018140589569161,
+          "selectionTop30": 0.18798665183537264
+        },
+        {
+          "window": "180",
+          "model": "profile",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.16780045351473924,
+          "selectionTop30": 0.18687430478309233
+        },
+        {
+          "window": "730",
+          "model": "dynamic_top30",
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 9,
+          "epochsRun": 15,
+          "earlyTop30": 0.19501133786848074,
+          "selectionTop30": 0.1835372636262514
+        },
+        {
+          "window": "180",
+          "model": "dynamic_top30",
+          "config": {
+            "name": "dynamic_top30",
+            "kind": "dynamic",
+            "weight_decay": 0.03,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 1,
+          "epochsRun": 7,
+          "earlyTop30": 0.1870748299319728,
+          "selectionTop30": 0.18242491657397109
+        },
+        {
+          "window": "365",
+          "model": "profile",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.17573696145124718,
+          "selectionTop30": 0.18242491657397109
+        },
+        {
+          "window": "365",
+          "model": "additive_top30",
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 7,
+          "epochsRun": 13,
+          "earlyTop30": 0.22108843537414966,
+          "selectionTop30": 0.18020022246941045
+        },
+        {
+          "window": "lifetime",
+          "model": "additive_wd01",
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "epochsRun": 8,
+          "earlyTop30": 0.1927437641723356,
+          "selectionTop30": 0.18020022246941045
+        },
+        {
+          "window": "365",
+          "model": "additive_wd01",
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "epochsRun": 8,
+          "earlyTop30": 0.19387755102040816,
+          "selectionTop30": 0.1746384872080089
+        },
+        {
+          "window": "730",
+          "model": "additive_top30",
+          "config": {
+            "name": "additive_top30",
+            "kind": "additive",
+            "weight_decay": 0.03,
+            "lr": 0.015,
+            "dropout": 0.0,
+            "loss": "top30_margin"
+          },
+          "bestEpoch": 4,
+          "epochsRun": 10,
+          "earlyTop30": 0.19501133786848074,
+          "selectionTop30": 0.1746384872080089
+        },
+        {
+          "window": "730",
+          "model": "additive_wd01",
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "epochsRun": 8,
+          "earlyTop30": 0.1893424036281179,
+          "selectionTop30": 0.1724137931034483
+        },
+        {
+          "window": "180",
+          "model": "additive_wd01",
+          "config": {
+            "name": "additive_wd01",
+            "kind": "additive",
+            "weight_decay": 0.01,
+            "lr": 0.02,
+            "dropout": 0.0,
+            "loss": "cross_entropy"
+          },
+          "bestEpoch": 2,
+          "epochsRun": 8,
+          "earlyTop30": 0.1961451247165533,
+          "selectionTop30": 0.17130144605116795
+        },
+        {
+          "window": "365",
+          "model": "hot",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.15873015873015872,
+          "selectionTop30": 0.17018909899888765
+        },
+        {
+          "window": "180",
+          "model": "hot",
+          "config": null,
+          "bestEpoch": 0,
+          "earlyTop30": 0.17800453514739228,
+          "selectionTop30": 0.16129032258064516
+        }
+      ],
+      "selectionGate": {
+        "bestEarlyProfile": 0.19727891156462585,
+        "tolerance": 0.005
+      },
+      "selected": {
+        "window": "lifetime",
+        "model": "hot",
+        "config": null,
+        "bestEpoch": 0,
+        "earlyTop30": 0.2108843537414966,
+        "selectionTop30": 0.21690767519466073
+      },
+      "splitSizes": {
+        "train": 12794,
+        "early": 882,
+        "select": 899,
+        "terminal": 974,
+        "forward": 78,
+        "cacheAll": 15549
+      },
+      "terminal": {
+        "n": 974,
+        "top3": {
+          "hits": 15,
+          "rate": 0.015400410677618069,
+          "wilson95": [
+            0.009354749808655903,
+            0.02525357909315598
+          ]
+        },
+        "top10": {
+          "hits": 60,
+          "rate": 0.061601642710472276,
+          "wilson95": [
+            0.04815613293184985,
+            0.0784916561382215
+          ]
+        },
+        "top30": {
+          "hits": 182,
+          "rate": 0.1868583162217659,
+          "wilson95": [
+            0.16362587243002166,
+            0.2125511197628864
+          ]
+        },
+        "meanReciprocalRank": 0.031603495135539,
+        "logLoss": 5.331111907958984,
+        "calibration": {
+          "meanTop30Mass": 0.24614299833774567,
+          "hitRate": 0.18993839835728954,
+          "ece5": 0.056204605273887126,
+          "bins": [
+            {
+              "n": 195,
+              "meanTop30Mass": 0.23276546597480774,
+              "hitRate": 0.15897435897435896
+            },
+            {
+              "n": 195,
+              "meanTop30Mass": 0.2383953034877777,
+              "hitRate": 0.1794871794871795
+            },
+            {
+              "n": 194,
+              "meanTop30Mass": 0.24597512185573578,
+              "hitRate": 0.21649484536082475
+            },
+            {
+              "n": 195,
+              "meanTop30Mass": 0.25360217690467834,
+              "hitRate": 0.2205128205128205
+            },
+            {
+              "n": 195,
+              "meanTop30Mass": 0.2599760890007019,
+              "hitRate": 0.17435897435897435
+            }
+          ]
+        },
+        "perMarketTop30": {
+          "Sridevi": {
+            "n": 96,
+            "hits": 21,
+            "rate": 0.21875,
+            "wilson95": [
+              0.14776345080877545,
+              0.31137906736116716
+            ]
+          },
+          "Time Bazar": {
+            "n": 82,
+            "hits": 13,
+            "rate": 0.15853658536585366,
+            "wilson95": [
+              0.09505590299299464,
+              0.2525786692831714
+            ]
+          },
+          "Madhur Day": {
+            "n": 96,
+            "hits": 14,
+            "rate": 0.14583333333333334,
+            "wilson95": [
+              0.08890205780138637,
+              0.23001815026446726
+            ]
+          },
+          "Milan Day": {
+            "n": 76,
+            "hits": 11,
+            "rate": 0.14473684210526316,
+            "wilson95": [
+              0.08278516269157667,
+              0.24087448985470516
+            ]
+          },
+          "Rajdhani Day": {
+            "n": 82,
+            "hits": 18,
+            "rate": 0.21951219512195122,
+            "wilson95": [
+              0.1436078562786517,
+              0.32052054237677047
+            ]
+          },
+          "Kalyan": {
+            "n": 82,
+            "hits": 17,
+            "rate": 0.2073170731707317,
+            "wilson95": [
+              0.13366390372744102,
+              0.3071657296521299
+            ]
+          },
+          "Sridevi Night": {
+            "n": 96,
+            "hits": 23,
+            "rate": 0.23958333333333334,
+            "wilson95": [
+              0.1652822121585541,
+              0.33392382318398534
+            ]
+          },
+          "Kalyan Night": {
+            "n": 65,
+            "hits": 15,
+            "rate": 0.23076923076923078,
+            "wilson95": [
+              0.1451383484616103,
+              0.3464470914814666
+            ]
+          },
+          "Madhur Night": {
+            "n": 82,
+            "hits": 10,
+            "rate": 0.12195121951219512,
+            "wilson95": [
+              0.06760853649677892,
+              0.2101297399518335
+            ]
+          },
+          "Milan Night": {
+            "n": 82,
+            "hits": 14,
+            "rate": 0.17073170731707318,
+            "wilson95": [
+              0.10451594667058835,
+              0.26641739088142896
+            ]
+          },
+          "Rajdhani Night": {
+            "n": 68,
+            "hits": 16,
+            "rate": 0.23529411764705882,
+            "wilson95": [
+              0.15034491020295793,
+              0.3485516797194324
+            ]
+          },
+          "Main Bazar": {
+            "n": 67,
+            "hits": 13,
+            "rate": 0.19402985074626866,
+            "wilson95": [
+              0.1170517391641159,
+              0.3041911222544419
+            ]
+          }
+        },
+        "macroMarketTop30": 0.19058712403519107,
+        "perMonthTop30": {
+          "2026-04": {
+            "n": 312,
+            "hits": 61,
+            "rate": 0.1955128205128205
+          },
+          "2026-05": {
+            "n": 311,
+            "hits": 63,
+            "rate": 0.20257234726688103
+          },
+          "2026-06": {
+            "n": 307,
+            "hits": 55,
+            "rate": 0.1791530944625407
+          },
+          "2026-07": {
+            "n": 44,
+            "hits": 6,
+            "rate": 0.13636363636363635
+          }
+        }
+      },
+      "forward": {
+        "n": 78,
+        "top3": {
+          "hits": 0,
+          "rate": 0.0,
+          "wilson95": [
+            -3.469446951953614e-18,
+            0.04693780971219429
+          ]
+        },
+        "top10": {
+          "hits": 2,
+          "rate": 0.02564102564102564,
+          "wilson95": [
+            0.007060093472759203,
+            0.08875270035675845
+          ]
+        },
+        "top30": {
+          "hits": 10,
+          "rate": 0.1282051282051282,
+          "wilson95": [
+            0.07115322631234479,
+            0.22015950398646633
+          ]
+        },
+        "meanReciprocalRank": 0.019607143203211313,
+        "logLoss": 5.325810432434082,
+        "calibration": {
+          "meanTop30Mass": 0.24446681141853333,
+          "hitRate": 0.1282051282051282,
+          "ece5": 0.11626167538074347,
+          "bins": [
+            {
+              "n": 16,
+              "meanTop30Mass": 0.23206155002117157,
+              "hitRate": 0.1875
+            },
+            {
+              "n": 15,
+              "meanTop30Mass": 0.2366420179605484,
+              "hitRate": 0.06666666666666667
+            },
+            {
+              "n": 16,
+              "meanTop30Mass": 0.2431926727294922,
+              "hitRate": 0.1875
+            },
+            {
+              "n": 15,
+              "meanTop30Mass": 0.252449095249176,
+              "hitRate": 0.06666666666666667
+            },
+            {
+              "n": 16,
+              "meanTop30Mass": 0.257998526096344,
+              "hitRate": 0.125
+            }
+          ]
+        },
+        "perMarketTop30": {
+          "Sridevi": {
+            "n": 7,
+            "hits": 1,
+            "rate": 0.14285714285714285,
+            "wilson95": [
+              0.02567962434474355,
+              0.5131278292743189
+            ]
+          },
+          "Time Bazar": {
+            "n": 6,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              2.7755575615628914e-17,
+              0.3903342879021653
+            ]
+          },
+          "Madhur Day": {
+            "n": 7,
+            "hits": 1,
+            "rate": 0.14285714285714285,
+            "wilson95": [
+              0.02567962434474355,
+              0.5131278292743189
+            ]
+          },
+          "Milan Day": {
+            "n": 12,
+            "hits": 1,
+            "rate": 0.08333333333333333,
+            "wilson95": [
+              0.014865094404917095,
+              0.35387991114111694
+            ]
+          },
+          "Rajdhani Day": {
+            "n": 6,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              2.7755575615628914e-17,
+              0.3903342879021653
+            ]
+          },
+          "Kalyan": {
+            "n": 6,
+            "hits": 2,
+            "rate": 0.3333333333333333,
+            "wilson95": [
+              0.09677141110578041,
+              0.700006684861608
+            ]
+          },
+          "Sridevi Night": {
+            "n": 7,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              5.551115123125783e-17,
+              0.35433043506668743
+            ]
+          },
+          "Kalyan Night": {
+            "n": 5,
+            "hits": 1,
+            "rate": 0.2,
+            "wilson95": [
+              0.03622410863243014,
+              0.6244653702374747
+            ]
+          },
+          "Madhur Night": {
+            "n": 6,
+            "hits": 2,
+            "rate": 0.3333333333333333,
+            "wilson95": [
+              0.09677141110578041,
+              0.700006684861608
+            ]
+          },
+          "Milan Night": {
+            "n": 6,
+            "hits": 0,
+            "rate": 0.0,
+            "wilson95": [
+              2.7755575615628914e-17,
+              0.3903342879021653
+            ]
+          },
+          "Rajdhani Night": {
+            "n": 5,
+            "hits": 1,
+            "rate": 0.2,
+            "wilson95": [
+              0.03622410863243014,
+              0.6244653702374747
+            ]
+          },
+          "Main Bazar": {
+            "n": 5,
+            "hits": 1,
+            "rate": 0.2,
+            "wilson95": [
+              0.03622410863243014,
+              0.6244653702374747
+            ]
+          }
+        },
+        "macroMarketTop30": 0.1363095238095238,
+        "perMonthTop30": {
+          "2026-06": {
+            "n": 2,
+            "hits": 0,
+            "rate": 0.0
+          },
+          "2026-07": {
+            "n": 76,
+            "hits": 10,
+            "rate": 0.13157894736842105
+          }
+        }
+      },
+      "previousTwoYear": {
+        "terminalTop30": {
+          "hits": 216,
+          "rate": 0.22176591375770022,
+          "wilson95": [
+            0.19679750140459495,
+            0.24892041624877587
+          ]
+        },
+        "forwardTop30": {
+          "hits": 15,
+          "rate": 0.19230769230769232,
+          "wilson95": [
+            0.12015206340148435,
+            0.2933481271906353
+          ]
+        }
+      },
+      "artifact": null,
+      "target90": {
+        "terminalAchieved": false,
+        "forwardAchieved": false,
+        "terminalRequiredHits": 877,
+        "forwardRequiredHits": 71
+      }
+    }
+  }
+}

@@ -1,0 +1,7467 @@
+{
+  "generatedAt": "2026-07-15T04:16:27.155609+05:30",
+  "productionFilesModified": false,
+  "sourceAudit": {
+    "sha256": "9674f563d21a86d9ac2b215789995a4187287d7e0f92d80ffe2c020daded743a",
+    "rowsAfterFiltering": 23276,
+    "droppedNonCanonical": [
+      {
+        "market": "Rajdhani Day",
+        "dateRangeStart": "08/09/14",
+        "day": "Wednesday",
+        "openPanel": "575",
+        "closePanel": "366"
+      },
+      {
+        "market": "Rajdhani Day",
+        "dateRangeStart": "15/12/14",
+        "day": "Tuesday",
+        "openPanel": "130",
+        "closePanel": "242"
+      },
+      {
+        "market": "Madhur Night",
+        "dateRangeStart": "03/10/2022",
+        "day": "Thursday",
+        "openPanel": "790",
+        "closePanel": "750"
+      }
+    ],
+    "marketRows": {
+      "Sridevi": 1998,
+      "Time Bazar": 1718,
+      "Madhur Day": 2974,
+      "Milan Day": 1186,
+      "Rajdhani Day": 3973,
+      "Kalyan": 1131,
+      "Sridevi Night": 1983,
+      "Kalyan Night": 1852,
+      "Madhur Night": 2544,
+      "Milan Night": 1369,
+      "Rajdhani Night": 1400,
+      "Main Bazar": 1148
+    }
+  },
+  "trustedCacheSha256": "02819f1d933f4fe2e340bb241ebcbe2d4f5859a7228b8f72682a234818056bd0",
+  "design": {
+    "calendarLagsDays": [
+      7,
+      14,
+      21,
+      28,
+      35,
+      56,
+      91,
+      182,
+      364
+    ],
+    "rowLags": [
+      5,
+      10,
+      20,
+      40,
+      80,
+      160,
+      260
+    ],
+    "weights": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "candidateCount": 260,
+    "sameDayInvariant": "source Close minute < target Open minute"
+  },
+  "tasks": {
+    "open": {
+      "selected": {
+        "name": "row10:sameSutta:w0.25",
+        "early": {
+          "hits": 190,
+          "n": 882,
+          "rate": 0.21541950113378686
+        },
+        "selection": {
+          "hits": 191,
+          "n": 899,
+          "rate": 0.21245828698553948
+        },
+        "eligible": true
+      },
+      "candidates": [
+        {
+          "name": "sameDayAll:opposite:w0.5",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:sameSutta:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:opposite:w1",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:overlap:w0.25",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:opposite:w0.25",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:opposite:w0.25",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar7:opposite:w1",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:oppositeSutta:w1",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:sameSutta:w0.25",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:oppositeSutta:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:opposite:w1",
+          "early": {
+            "hits": 159,
+            "n": 882,
+            "rate": 0.18027210884353742
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:exact:w0.25",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:sameSutta:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:opposite:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:oppositeSutta:w0.25",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:exact:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:exact:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:oppositeSutta:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:exact:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:exact:w0.25",
+          "early": {
+            "hits": 193,
+            "n": 882,
+            "rate": 0.21882086167800455
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:exact:w0.25",
+          "early": {
+            "hits": 191,
+            "n": 882,
+            "rate": 0.2165532879818594
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:exact:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:exact:w0.25",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:oppositeSutta:w1",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": false
+        },
+        {
+          "name": "profile",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:exact:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:opposite:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:exact:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:exact:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:exact:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:exact:w1",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:sameSutta:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:exact:w0.5",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:overlap:w0.5",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:exact:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:exact:w1",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:sameSutta:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:oppositeSutta:w0.25",
+          "early": {
+            "hits": 196,
+            "n": 882,
+            "rate": 0.2222222222222222
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:exact:w0.5",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:sameSutta:w0.5",
+          "early": {
+            "hits": 193,
+            "n": 882,
+            "rate": 0.21882086167800455
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:exact:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:exact:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:exact:w0.5",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:exact:w0.25",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:exact:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:oppositeSutta:w0.5",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:exact:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:exact:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:oppositeSutta:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:exact:w0.25",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:exact:w0.25",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:exact:w0.5",
+          "early": {
+            "hits": 193,
+            "n": 882,
+            "rate": 0.21882086167800455
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:exact:w1",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:opposite:w0.25",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:exact:w0.25",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:sameSutta:w1",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:exact:w1",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:sameSutta:w0.25",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:exact:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:exact:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:exact:w1",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:opposite:w0.25",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:exact:w0.25",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:overlap:w0.25",
+          "early": {
+            "hits": 196,
+            "n": 882,
+            "rate": 0.2222222222222222
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:opposite:w0.5",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:exact:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:oppositeSutta:w0.25",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:exact:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:sameSutta:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:oppositeSutta:w0.25",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:overlap:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:oppositeSutta:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:exact:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:exact:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:exact:w1",
+          "early": {
+            "hits": 191,
+            "n": 882,
+            "rate": 0.2165532879818594
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:opposite:w0.25",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:exact:w0.5",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:overlap:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:oppositeSutta:w0.25",
+          "early": {
+            "hits": 191,
+            "n": 882,
+            "rate": 0.2165532879818594
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:oppositeSutta:w0.5",
+          "early": {
+            "hits": 194,
+            "n": 882,
+            "rate": 0.2199546485260771
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "rowConsensus",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayConsensus",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar7:exact:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:opposite:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:sameSutta:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:sameSutta:w1",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:exact:w1",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:sameSutta:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:exact:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:exact:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:exact:w1",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:oppositeSutta:w0.5",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:oppositeSutta:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar364:oppositeSutta:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:opposite:w0.5",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:opposite:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:exact:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:sameSutta:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:exact:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:sameSutta:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:opposite:w0.5",
+          "early": {
+            "hits": 168,
+            "n": 882,
+            "rate": 0.19047619047619047
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:opposite:w0.5",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:exact:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:opposite:w0.5",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:opposite:w0.5",
+          "early": {
+            "hits": 155,
+            "n": 882,
+            "rate": 0.17573696145124718
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:sameSutta:w0.25",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:exact:w1",
+          "early": {
+            "hits": 191,
+            "n": 882,
+            "rate": 0.2165532879818594
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:overlap:w1",
+          "early": {
+            "hits": 199,
+            "n": 882,
+            "rate": 0.2256235827664399
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:oppositeSutta:w0.25",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:exact:w1",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:overlap:w0.5",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:sameSutta:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "allConsensus",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:oppositeSutta:w0.25",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:oppositeSutta:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:overlap:w0.5",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:sameSutta:w0.25",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar364:opposite:w1",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:exact:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:oppositeSutta:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:overlap:w0.5",
+          "early": {
+            "hits": 200,
+            "n": 882,
+            "rate": 0.22675736961451248
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:sameSutta:w0.5",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:sameSutta:w1",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar7:overlap:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:oppositeSutta:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:sameSutta:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:oppositeSutta:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:overlap:w0.25",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:opposite:w0.25",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:oppositeSutta:w0.25",
+          "early": {
+            "hits": 191,
+            "n": 882,
+            "rate": 0.2165532879818594
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:overlap:w0.25",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:overlap:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:sameSutta:w0.5",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:opposite:w1",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:sameSutta:w0.25",
+          "early": {
+            "hits": 191,
+            "n": 882,
+            "rate": 0.2165532879818594
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:overlap:w1",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:oppositeSutta:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:overlap:w1",
+          "early": {
+            "hits": 164,
+            "n": 882,
+            "rate": 0.18594104308390022
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:sameSutta:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:sameSutta:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:sameSutta:w1",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:oppositeSutta:w0.5",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:opposite:w0.25",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:overlap:w0.25",
+          "early": {
+            "hits": 201,
+            "n": 882,
+            "rate": 0.22789115646258504
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:sameSutta:w0.25",
+          "early": {
+            "hits": 193,
+            "n": 882,
+            "rate": 0.21882086167800455
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:oppositeSutta:w0.25",
+          "early": {
+            "hits": 194,
+            "n": 882,
+            "rate": 0.2199546485260771
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:overlap:w0.25",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:oppositeSutta:w1",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:oppositeSutta:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:opposite:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:overlap:w0.5",
+          "early": {
+            "hits": 199,
+            "n": 882,
+            "rate": 0.2256235827664399
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:sameSutta:w0.5",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:oppositeSutta:w1",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:overlap:w1",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:opposite:w0.25",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:sameSutta:w1",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:overlap:w1",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:overlap:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:oppositeSutta:w0.5",
+          "early": {
+            "hits": 197,
+            "n": 882,
+            "rate": 0.2233560090702948
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:oppositeSutta:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:sameSutta:w1",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:oppositeSutta:w0.25",
+          "early": {
+            "hits": 193,
+            "n": 882,
+            "rate": 0.21882086167800455
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:sameSutta:w0.5",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:opposite:w1",
+          "early": {
+            "hits": 156,
+            "n": 882,
+            "rate": 0.17687074829931973
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:sameSutta:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:oppositeSutta:w0.5",
+          "early": {
+            "hits": 194,
+            "n": 882,
+            "rate": 0.2199546485260771
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:opposite:w1",
+          "early": {
+            "hits": 152,
+            "n": 882,
+            "rate": 0.17233560090702948
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:opposite:w0.25",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:oppositeSutta:w1",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:oppositeSutta:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:oppositeSutta:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:sameSutta:w0.5",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:overlap:w0.25",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:opposite:w0.5",
+          "early": {
+            "hits": 191,
+            "n": 882,
+            "rate": 0.2165532879818594
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:sameSutta:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar56:sameSutta:w0.5",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:overlap:w0.25",
+          "early": {
+            "hits": 198,
+            "n": 882,
+            "rate": 0.22448979591836735
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:overlap:w0.5",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:overlap:w0.5",
+          "early": {
+            "hits": 161,
+            "n": 882,
+            "rate": 0.18253968253968253
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:oppositeSutta:w0.5",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:overlap:w0.25",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:opposite:w0.25",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:sameSutta:w1",
+          "early": {
+            "hits": 193,
+            "n": 882,
+            "rate": 0.21882086167800455
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendarConsensus",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar7:sameSutta:w1",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:overlap:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:overlap:w0.25",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:opposite:w0.25",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:opposite:w1",
+          "early": {
+            "hits": 158,
+            "n": 882,
+            "rate": 0.17913832199546487
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:overlap:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:opposite:w1",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar364:oppositeSutta:w1",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:overlap:w0.5",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:oppositeSutta:w0.5",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:sameSutta:w0.5",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:opposite:w0.25",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:overlap:w1",
+          "early": {
+            "hits": 166,
+            "n": 882,
+            "rate": 0.18820861678004536
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:opposite:w0.5",
+          "early": {
+            "hits": 164,
+            "n": 882,
+            "rate": 0.18594104308390022
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:opposite:w0.25",
+          "early": {
+            "hits": 196,
+            "n": 882,
+            "rate": 0.2222222222222222
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:sameSutta:w0.5",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar56:opposite:w0.25",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:oppositeSutta:w0.5",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:sameSutta:w0.5",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:sameSutta:w0.5",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:overlap:w1",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:opposite:w0.5",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar364:overlap:w0.5",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:overlap:w0.25",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:sameSutta:w1",
+          "early": {
+            "hits": 189,
+            "n": 882,
+            "rate": 0.21428571428571427
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:sameSutta:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:sameSutta:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:opposite:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 170,
+            "n": 899,
+            "rate": 0.18909899888765294
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar56:sameSutta:w1",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 170,
+            "n": 899,
+            "rate": 0.18909899888765294
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:oppositeSutta:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 170,
+            "n": 899,
+            "rate": 0.18909899888765294
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:oppositeSutta:w0.5",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 170,
+            "n": 899,
+            "rate": 0.18909899888765294
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:overlap:w0.25",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 170,
+            "n": 899,
+            "rate": 0.18909899888765294
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar7:overlap:w1",
+          "early": {
+            "hits": 192,
+            "n": 882,
+            "rate": 0.21768707482993196
+          },
+          "selection": {
+            "hits": 169,
+            "n": 899,
+            "rate": 0.18798665183537264
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:sameSutta:w0.5",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 169,
+            "n": 899,
+            "rate": 0.18798665183537264
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:sameSutta:w1",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 169,
+            "n": 899,
+            "rate": 0.18798665183537264
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar56:oppositeSutta:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 169,
+            "n": 899,
+            "rate": 0.18798665183537264
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar364:sameSutta:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 169,
+            "n": 899,
+            "rate": 0.18798665183537264
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:oppositeSutta:w1",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 169,
+            "n": 899,
+            "rate": 0.18798665183537264
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:opposite:w0.5",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 169,
+            "n": 899,
+            "rate": 0.18798665183537264
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:oppositeSutta:w0.5",
+          "early": {
+            "hits": 194,
+            "n": 882,
+            "rate": 0.2199546485260771
+          },
+          "selection": {
+            "hits": 168,
+            "n": 899,
+            "rate": 0.18687430478309233
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:opposite:w1",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 168,
+            "n": 899,
+            "rate": 0.18687430478309233
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:opposite:w0.5",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 168,
+            "n": 899,
+            "rate": 0.18687430478309233
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:opposite:w0.5",
+          "early": {
+            "hits": 165,
+            "n": 882,
+            "rate": 0.1870748299319728
+          },
+          "selection": {
+            "hits": 168,
+            "n": 899,
+            "rate": 0.18687430478309233
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar56:overlap:w0.25",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 167,
+            "n": 899,
+            "rate": 0.185761957730812
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar56:overlap:w0.5",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 167,
+            "n": 899,
+            "rate": 0.185761957730812
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:overlap:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 167,
+            "n": 899,
+            "rate": 0.185761957730812
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:overlap:w0.5",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 167,
+            "n": 899,
+            "rate": 0.185761957730812
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:sameSutta:w1",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 167,
+            "n": 899,
+            "rate": 0.185761957730812
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar7:oppositeSutta:w0.5",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 166,
+            "n": 899,
+            "rate": 0.1846496106785317
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:sameSutta:w1",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 166,
+            "n": 899,
+            "rate": 0.1846496106785317
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:overlap:w1",
+          "early": {
+            "hits": 149,
+            "n": 882,
+            "rate": 0.1689342403628118
+          },
+          "selection": {
+            "hits": 166,
+            "n": 899,
+            "rate": 0.1846496106785317
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:overlap:w1",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 166,
+            "n": 899,
+            "rate": 0.1846496106785317
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:opposite:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 166,
+            "n": 899,
+            "rate": 0.1846496106785317
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar7:oppositeSutta:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 165,
+            "n": 899,
+            "rate": 0.1835372636262514
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:oppositeSutta:w1",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 165,
+            "n": 899,
+            "rate": 0.1835372636262514
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:oppositeSutta:w1",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 165,
+            "n": 899,
+            "rate": 0.1835372636262514
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:overlap:w1",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 165,
+            "n": 899,
+            "rate": 0.1835372636262514
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:oppositeSutta:w1",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 165,
+            "n": 899,
+            "rate": 0.1835372636262514
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:opposite:w1",
+          "early": {
+            "hits": 159,
+            "n": 882,
+            "rate": 0.18027210884353742
+          },
+          "selection": {
+            "hits": 164,
+            "n": 899,
+            "rate": 0.18242491657397109
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:sameSutta:w1",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 164,
+            "n": 899,
+            "rate": 0.18242491657397109
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:opposite:w1",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 164,
+            "n": 899,
+            "rate": 0.18242491657397109
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:sameSutta:w1",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 164,
+            "n": 899,
+            "rate": 0.18242491657397109
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:opposite:w0.5",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 163,
+            "n": 899,
+            "rate": 0.18131256952169078
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:overlap:w1",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 163,
+            "n": 899,
+            "rate": 0.18131256952169078
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:overlap:w1",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 162,
+            "n": 899,
+            "rate": 0.18020022246941045
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:overlap:w0.5",
+          "early": {
+            "hits": 163,
+            "n": 882,
+            "rate": 0.18480725623582767
+          },
+          "selection": {
+            "hits": 162,
+            "n": 899,
+            "rate": 0.18020022246941045
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:oppositeSutta:w1",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 162,
+            "n": 899,
+            "rate": 0.18020022246941045
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:overlap:w1",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 161,
+            "n": 899,
+            "rate": 0.17908787541713014
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:opposite:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 161,
+            "n": 899,
+            "rate": 0.17908787541713014
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:overlap:w0.5",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 159,
+            "n": 899,
+            "rate": 0.17686318131256953
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:opposite:w0.5",
+          "early": {
+            "hits": 194,
+            "n": 882,
+            "rate": 0.2199546485260771
+          },
+          "selection": {
+            "hits": 159,
+            "n": 899,
+            "rate": 0.17686318131256953
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:opposite:w1",
+          "early": {
+            "hits": 157,
+            "n": 882,
+            "rate": 0.17800453514739228
+          },
+          "selection": {
+            "hits": 159,
+            "n": 899,
+            "rate": 0.17686318131256953
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:overlap:w1",
+          "early": {
+            "hits": 156,
+            "n": 882,
+            "rate": 0.17687074829931973
+          },
+          "selection": {
+            "hits": 158,
+            "n": 899,
+            "rate": 0.1757508342602892
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:overlap:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 157,
+            "n": 899,
+            "rate": 0.1746384872080089
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:opposite:w1",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 153,
+            "n": 899,
+            "rate": 0.17018909899888765
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:overlap:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 152,
+            "n": 899,
+            "rate": 0.16907675194660735
+          },
+          "eligible": false
+        }
+      ],
+      "terminal": {
+        "hits": 158,
+        "n": 974,
+        "rate": 0.162217659137577,
+        "wilson95": [
+          0.1404003671020157,
+          0.18668891300115398
+        ]
+      },
+      "forward": {
+        "hits": 22,
+        "n": 78,
+        "rate": 0.28205128205128205,
+        "wilson95": [
+          0.19425334729674015,
+          0.39030928770601114
+        ]
+      },
+      "previous": {
+        "terminal": {
+          "hits": 173,
+          "rate": 0.17761806981519507,
+          "wilson95": [
+            0.15489620225192924,
+            0.20287289790732693
+          ]
+        },
+        "forward": {
+          "hits": 17,
+          "rate": 0.21794871794871795,
+          "wilson95": [
+            0.1407681204113414,
+            0.32160705429810155
+          ]
+        }
+      },
+      "target90": false
+    },
+    "close": {
+      "selected": {
+        "name": "row160:sameSutta:w0.5",
+        "early": {
+          "hits": 178,
+          "n": 882,
+          "rate": 0.2018140589569161
+        },
+        "selection": {
+          "hits": 202,
+          "n": 899,
+          "rate": 0.22469410456062291
+        },
+        "eligible": true
+      },
+      "candidates": [
+        {
+          "name": "row160:sameSutta:w1",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 206,
+            "n": 899,
+            "rate": 0.22914349276974416
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:sameSutta:w0.5",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 202,
+            "n": 899,
+            "rate": 0.22469410456062291
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:sameSutta:w0.5",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 201,
+            "n": 899,
+            "rate": 0.2235817575083426
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:oppositeSutta:w0.5",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 200,
+            "n": 899,
+            "rate": 0.22246941045606228
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:opposite:w1",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 200,
+            "n": 899,
+            "rate": 0.22246941045606228
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:sameSutta:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 199,
+            "n": 899,
+            "rate": 0.22135706340378197
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:opposite:w0.25",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 199,
+            "n": 899,
+            "rate": 0.22135706340378197
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:sameSutta:w0.5",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 199,
+            "n": 899,
+            "rate": 0.22135706340378197
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:oppositeSutta:w0.5",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 198,
+            "n": 899,
+            "rate": 0.22024471635150167
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:oppositeSutta:w0.25",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 198,
+            "n": 899,
+            "rate": 0.22024471635150167
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:oppositeSutta:w0.5",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 198,
+            "n": 899,
+            "rate": 0.22024471635150167
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:opposite:w0.5",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:sameSutta:w0.5",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:oppositeSutta:w0.25",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:oppositeSutta:w1",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:sameSutta:w1",
+          "early": {
+            "hits": 163,
+            "n": 882,
+            "rate": 0.18480725623582767
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:sameSutta:w0.5",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:oppositeSutta:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:oppositeSutta:w0.5",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:opposite:w0.25",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:opposite:w0.5",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:sameSutta:w0.5",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "rowConsensus",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 197,
+            "n": 899,
+            "rate": 0.21913236929922136
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:exact:w0.5",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 196,
+            "n": 899,
+            "rate": 0.21802002224694106
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:oppositeSutta:w0.25",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 196,
+            "n": 899,
+            "rate": 0.21802002224694106
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:exact:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 196,
+            "n": 899,
+            "rate": 0.21802002224694106
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:exact:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 196,
+            "n": 899,
+            "rate": 0.21802002224694106
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:oppositeSutta:w0.5",
+          "early": {
+            "hits": 163,
+            "n": 882,
+            "rate": 0.18480725623582767
+          },
+          "selection": {
+            "hits": 196,
+            "n": 899,
+            "rate": 0.21802002224694106
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:oppositeSutta:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 196,
+            "n": 899,
+            "rate": 0.21802002224694106
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:oppositeSutta:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 196,
+            "n": 899,
+            "rate": 0.21802002224694106
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:exact:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:oppositeSutta:w0.5",
+          "early": {
+            "hits": 169,
+            "n": 882,
+            "rate": 0.19160997732426305
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:exact:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:sameSutta:w0.5",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:oppositeSutta:w1",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:overlap:w0.25",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:oppositeSutta:w0.5",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:exact:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:oppositeSutta:w1",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 195,
+            "n": 899,
+            "rate": 0.21690767519466073
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:exact:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:exact:w0.5",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:sameSutta:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:exact:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:exact:w1",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:oppositeSutta:w1",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:exact:w0.5",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:oppositeSutta:w0.5",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:overlap:w0.25",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:oppositeSutta:w0.5",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:opposite:w0.25",
+          "early": {
+            "hits": 186,
+            "n": 882,
+            "rate": 0.2108843537414966
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:exact:w1",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:opposite:w0.5",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:exact:w0.25",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:exact:w0.5",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:exact:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:opposite:w0.5",
+          "early": {
+            "hits": 155,
+            "n": 882,
+            "rate": 0.17573696145124718
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:exact:w0.5",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:exact:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:sameSutta:w0.5",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:exact:w0.25",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:sameSutta:w0.5",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:oppositeSutta:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:sameSutta:w0.25",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:exact:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 194,
+            "n": 899,
+            "rate": 0.21579532814238042
+          },
+          "eligible": true
+        },
+        {
+          "name": "profile",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:oppositeSutta:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:sameSutta:w0.5",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:exact:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:exact:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:overlap:w0.5",
+          "early": {
+            "hits": 166,
+            "n": 882,
+            "rate": 0.18820861678004536
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:sameSutta:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:exact:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:sameSutta:w0.5",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:exact:w0.5",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:oppositeSutta:w0.25",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:sameSutta:w0.25",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:oppositeSutta:w0.25",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:exact:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:exact:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:oppositeSutta:w0.5",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:exact:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:exact:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:sameSutta:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:exact:w0.5",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:exact:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:sameSutta:w0.25",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 193,
+            "n": 899,
+            "rate": 0.21468298109010012
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:exact:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:exact:w0.5",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:exact:w1",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:sameSutta:w0.5",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:oppositeSutta:w0.5",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:exact:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:exact:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:opposite:w0.25",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:sameSutta:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:exact:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:exact:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:exact:w1",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:exact:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:exact:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:oppositeSutta:w0.25",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:exact:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:overlap:w0.5",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:exact:w1",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:oppositeSutta:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:exact:w1",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:oppositeSutta:w0.25",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:oppositeSutta:w0.5",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:exact:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:exact:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:sameSutta:w1",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendarConsensus",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 192,
+            "n": 899,
+            "rate": 0.2135706340378198
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:oppositeSutta:w0.5",
+          "early": {
+            "hits": 169,
+            "n": 882,
+            "rate": 0.19160997732426305
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:sameSutta:w0.25",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:sameSutta:w1",
+          "early": {
+            "hits": 162,
+            "n": 882,
+            "rate": 0.1836734693877551
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:sameSutta:w0.25",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:overlap:w0.25",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:oppositeSutta:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:exact:w0.5",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:exact:w1",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:exact:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:opposite:w1",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:sameSutta:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:oppositeSutta:w0.5",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:sameSutta:w0.5",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:oppositeSutta:w1",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:sameSutta:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:exact:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:sameSutta:w0.25",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:exact:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:exact:w0.5",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:sameSutta:w0.25",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:opposite:w0.25",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:oppositeSutta:w0.5",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 191,
+            "n": 899,
+            "rate": 0.21245828698553948
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:oppositeSutta:w0.25",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:sameSutta:w0.25",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:exact:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:sameSutta:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:sameSutta:w0.25",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:sameSutta:w1",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:opposite:w0.25",
+          "early": {
+            "hits": 165,
+            "n": 882,
+            "rate": 0.1870748299319728
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:oppositeSutta:w0.25",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:overlap:w1",
+          "early": {
+            "hits": 165,
+            "n": 882,
+            "rate": 0.1870748299319728
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:opposite:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:sameSutta:w0.5",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:oppositeSutta:w1",
+          "early": {
+            "hits": 168,
+            "n": 882,
+            "rate": 0.19047619047619047
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:sameSutta:w0.5",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:oppositeSutta:w0.25",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 190,
+            "n": 899,
+            "rate": 0.21134593993325917
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:opposite:w0.25",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:sameSutta:w0.5",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:opposite:w0.25",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:opposite:w0.5",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:opposite:w0.25",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:sameSutta:w0.25",
+          "early": {
+            "hits": 181,
+            "n": 882,
+            "rate": 0.20521541950113378
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:oppositeSutta:w0.25",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:overlap:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:overlap:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:overlap:w0.25",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "row80:sameSutta:w1",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 189,
+            "n": 899,
+            "rate": 0.21023359288097887
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:oppositeSutta:w1",
+          "early": {
+            "hits": 169,
+            "n": 882,
+            "rate": 0.19160997732426305
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:opposite:w0.5",
+          "early": {
+            "hits": 160,
+            "n": 882,
+            "rate": 0.18140589569160998
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar56:oppositeSutta:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:opposite:w0.5",
+          "early": {
+            "hits": 188,
+            "n": 882,
+            "rate": 0.21315192743764172
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:oppositeSutta:w1",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:overlap:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:sameSutta:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:oppositeSutta:w1",
+          "early": {
+            "hits": 166,
+            "n": 882,
+            "rate": 0.18820861678004536
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:opposite:w1",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": true
+        },
+        {
+          "name": "allConsensus",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 188,
+            "n": 899,
+            "rate": 0.20912124582869857
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:opposite:w0.5",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:oppositeSutta:w1",
+          "early": {
+            "hits": 168,
+            "n": 882,
+            "rate": 0.19047619047619047
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar56:overlap:w0.5",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:overlap:w1",
+          "early": {
+            "hits": 194,
+            "n": 882,
+            "rate": 0.2199546485260771
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:oppositeSutta:w0.25",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:overlap:w0.25",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:opposite:w0.25",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:sameSutta:w1",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:overlap:w0.5",
+          "early": {
+            "hits": 168,
+            "n": 882,
+            "rate": 0.19047619047619047
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:opposite:w0.25",
+          "early": {
+            "hits": 164,
+            "n": 882,
+            "rate": 0.18594104308390022
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:opposite:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 187,
+            "n": 899,
+            "rate": 0.20800889877641823
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:overlap:w1",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar56:overlap:w0.25",
+          "early": {
+            "hits": 190,
+            "n": 882,
+            "rate": 0.21541950113378686
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:overlap:w0.5",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:sameSutta:w1",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:overlap:w0.25",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:oppositeSutta:w1",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 186,
+            "n": 899,
+            "rate": 0.20689655172413793
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar7:opposite:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:opposite:w0.25",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:opposite:w0.5",
+          "early": {
+            "hits": 171,
+            "n": 882,
+            "rate": 0.19387755102040816
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:sameSutta:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:oppositeSutta:w1",
+          "early": {
+            "hits": 166,
+            "n": 882,
+            "rate": 0.18820861678004536
+          },
+          "selection": {
+            "hits": 185,
+            "n": 899,
+            "rate": 0.20578420467185762
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:opposite:w0.5",
+          "early": {
+            "hits": 163,
+            "n": 882,
+            "rate": 0.18480725623582767
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:overlap:w0.25",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:overlap:w1",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:opposite:w0.25",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:sameSutta:w1",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 184,
+            "n": 899,
+            "rate": 0.20467185761957732
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:opposite:w0.25",
+          "early": {
+            "hits": 169,
+            "n": 882,
+            "rate": 0.19160997732426305
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar182:overlap:w1",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:opposite:w1",
+          "early": {
+            "hits": 151,
+            "n": 882,
+            "rate": 0.1712018140589569
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": false
+        },
+        {
+          "name": "row5:overlap:w0.5",
+          "early": {
+            "hits": 169,
+            "n": 882,
+            "rate": 0.19160997732426305
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": false
+        },
+        {
+          "name": "row80:overlap:w1",
+          "early": {
+            "hits": 169,
+            "n": 882,
+            "rate": 0.19160997732426305
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:opposite:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:opposite:w0.5",
+          "early": {
+            "hits": 170,
+            "n": 882,
+            "rate": 0.1927437641723356
+          },
+          "selection": {
+            "hits": 183,
+            "n": 899,
+            "rate": 0.203559510567297
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar21:overlap:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:sameSutta:w1",
+          "early": {
+            "hits": 184,
+            "n": 882,
+            "rate": 0.20861678004535147
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:opposite:w1",
+          "early": {
+            "hits": 182,
+            "n": 882,
+            "rate": 0.20634920634920634
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:opposite:w1",
+          "early": {
+            "hits": 159,
+            "n": 882,
+            "rate": 0.18027210884353742
+          },
+          "selection": {
+            "hits": 182,
+            "n": 899,
+            "rate": 0.20244716351501668
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:opposite:w0.5",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:oppositeSutta:w1",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar364:overlap:w0.25",
+          "early": {
+            "hits": 168,
+            "n": 882,
+            "rate": 0.19047619047619047
+          },
+          "selection": {
+            "hits": 181,
+            "n": 899,
+            "rate": 0.20133481646273638
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:opposite:w1",
+          "early": {
+            "hits": 174,
+            "n": 882,
+            "rate": 0.19727891156462585
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:overlap:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:sameSutta:w1",
+          "early": {
+            "hits": 165,
+            "n": 882,
+            "rate": 0.1870748299319728
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:overlap:w0.5",
+          "early": {
+            "hits": 194,
+            "n": 882,
+            "rate": 0.2199546485260771
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:opposite:w0.5",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 180,
+            "n": 899,
+            "rate": 0.20022246941045607
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:overlap:w0.5",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "row10:opposite:w0.5",
+          "early": {
+            "hits": 169,
+            "n": 882,
+            "rate": 0.19160997732426305
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:sameSutta:w0.5",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:opposite:w0.5",
+          "early": {
+            "hits": 164,
+            "n": 882,
+            "rate": 0.18594104308390022
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:overlap:w0.25",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayAll:overlap:w0.5",
+          "early": {
+            "hits": 179,
+            "n": 882,
+            "rate": 0.20294784580498867
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "sameDayConsensus",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 179,
+            "n": 899,
+            "rate": 0.19911012235817574
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:overlap:w0.5",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:overlap:w0.5",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar35:overlap:w1",
+          "early": {
+            "hits": 166,
+            "n": 882,
+            "rate": 0.18820861678004536
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:sameSutta:w1",
+          "early": {
+            "hits": 165,
+            "n": 882,
+            "rate": 0.1870748299319728
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:overlap:w0.25",
+          "early": {
+            "hits": 185,
+            "n": 882,
+            "rate": 0.20975056689342403
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:opposite:w1",
+          "early": {
+            "hits": 161,
+            "n": 882,
+            "rate": 0.18253968253968253
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "sameDayAll:overlap:w1",
+          "early": {
+            "hits": 164,
+            "n": 882,
+            "rate": 0.18594104308390022
+          },
+          "selection": {
+            "hits": 178,
+            "n": 899,
+            "rate": 0.19799777530589543
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:opposite:w1",
+          "early": {
+            "hits": 175,
+            "n": 882,
+            "rate": 0.1984126984126984
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar182:oppositeSutta:w1",
+          "early": {
+            "hits": 157,
+            "n": 882,
+            "rate": 0.17800453514739228
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": false
+        },
+        {
+          "name": "row10:overlap:w1",
+          "early": {
+            "hits": 191,
+            "n": 882,
+            "rate": 0.2165532879818594
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": true
+        },
+        {
+          "name": "row20:opposite:w0.25",
+          "early": {
+            "hits": 167,
+            "n": 882,
+            "rate": 0.1893424036281179
+          },
+          "selection": {
+            "hits": 177,
+            "n": 899,
+            "rate": 0.19688542825361513
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:oppositeSutta:w1",
+          "early": {
+            "hits": 187,
+            "n": 882,
+            "rate": 0.21201814058956917
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar28:sameSutta:w1",
+          "early": {
+            "hits": 163,
+            "n": 882,
+            "rate": 0.18480725623582767
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:opposite:w0.5",
+          "early": {
+            "hits": 154,
+            "n": 882,
+            "rate": 0.1746031746031746
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:oppositeSutta:w1",
+          "early": {
+            "hits": 160,
+            "n": 882,
+            "rate": 0.18140589569160998
+          },
+          "selection": {
+            "hits": 176,
+            "n": 899,
+            "rate": 0.19577308120133483
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar28:opposite:w1",
+          "early": {
+            "hits": 155,
+            "n": 882,
+            "rate": 0.17573696145124718
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar35:opposite:w1",
+          "early": {
+            "hits": 165,
+            "n": 882,
+            "rate": 0.1870748299319728
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar91:overlap:w0.25",
+          "early": {
+            "hits": 172,
+            "n": 882,
+            "rate": 0.19501133786848074
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": true
+        },
+        {
+          "name": "row40:sameSutta:w1",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": true
+        },
+        {
+          "name": "row260:opposite:w1",
+          "early": {
+            "hits": 183,
+            "n": 882,
+            "rate": 0.20748299319727892
+          },
+          "selection": {
+            "hits": 175,
+            "n": 899,
+            "rate": 0.1946607341490545
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:overlap:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar91:overlap:w1",
+          "early": {
+            "hits": 161,
+            "n": 882,
+            "rate": 0.18253968253968253
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar364:overlap:w0.5",
+          "early": {
+            "hits": 160,
+            "n": 882,
+            "rate": 0.18140589569160998
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "row20:opposite:w1",
+          "early": {
+            "hits": 143,
+            "n": 882,
+            "rate": 0.1621315192743764
+          },
+          "selection": {
+            "hits": 174,
+            "n": 899,
+            "rate": 0.1935483870967742
+          },
+          "eligible": false
+        },
+        {
+          "name": "calendar14:overlap:w0.25",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar21:opposite:w1",
+          "early": {
+            "hits": 161,
+            "n": 882,
+            "rate": 0.18253968253968253
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:overlap:w0.25",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 173,
+            "n": 899,
+            "rate": 0.19243604004449388
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:overlap:w1",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": true
+        },
+        {
+          "name": "row5:opposite:w1",
+          "early": {
+            "hits": 163,
+            "n": 882,
+            "rate": 0.18480725623582767
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:overlap:w0.5",
+          "early": {
+            "hits": 180,
+            "n": 882,
+            "rate": 0.20408163265306123
+          },
+          "selection": {
+            "hits": 172,
+            "n": 899,
+            "rate": 0.19132369299221358
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:overlap:w0.5",
+          "early": {
+            "hits": 177,
+            "n": 882,
+            "rate": 0.20068027210884354
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar364:overlap:w1",
+          "early": {
+            "hits": 155,
+            "n": 882,
+            "rate": 0.17573696145124718
+          },
+          "selection": {
+            "hits": 171,
+            "n": 899,
+            "rate": 0.19021134593993325
+          },
+          "eligible": false
+        },
+        {
+          "name": "row260:overlap:w1",
+          "early": {
+            "hits": 160,
+            "n": 882,
+            "rate": 0.18140589569160998
+          },
+          "selection": {
+            "hits": 170,
+            "n": 899,
+            "rate": 0.18909899888765294
+          },
+          "eligible": false
+        },
+        {
+          "name": "row160:overlap:w0.5",
+          "early": {
+            "hits": 193,
+            "n": 882,
+            "rate": 0.21882086167800455
+          },
+          "selection": {
+            "hits": 168,
+            "n": 899,
+            "rate": 0.18687430478309233
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar14:overlap:w0.5",
+          "early": {
+            "hits": 173,
+            "n": 882,
+            "rate": 0.1961451247165533
+          },
+          "selection": {
+            "hits": 167,
+            "n": 899,
+            "rate": 0.185761957730812
+          },
+          "eligible": true
+        },
+        {
+          "name": "row160:overlap:w1",
+          "early": {
+            "hits": 178,
+            "n": 882,
+            "rate": 0.2018140589569161
+          },
+          "selection": {
+            "hits": 164,
+            "n": 899,
+            "rate": 0.18242491657397109
+          },
+          "eligible": true
+        },
+        {
+          "name": "calendar7:overlap:w1",
+          "early": {
+            "hits": 166,
+            "n": 882,
+            "rate": 0.18820861678004536
+          },
+          "selection": {
+            "hits": 163,
+            "n": 899,
+            "rate": 0.18131256952169078
+          },
+          "eligible": false
+        },
+        {
+          "name": "row40:opposite:w1",
+          "early": {
+            "hits": 176,
+            "n": 882,
+            "rate": 0.19954648526077098
+          },
+          "selection": {
+            "hits": 161,
+            "n": 899,
+            "rate": 0.17908787541713014
+          },
+          "eligible": true
+        }
+      ],
+      "terminal": {
+        "hits": 170,
+        "n": 974,
+        "rate": 0.17453798767967146,
+        "wilson95": [
+          0.1519915259712583,
+          0.19964161017678062
+        ]
+      },
+      "forward": {
+        "hits": 11,
+        "n": 78,
+        "rate": 0.14102564102564102,
+        "wilson95": [
+          0.08061044056387122,
+          0.23513978179360162
+        ]
+      },
+      "previous": {
+        "terminal": {
+          "hits": 216,
+          "rate": 0.22176591375770022,
+          "wilson95": [
+            0.19679750140459495,
+            0.24892041624877587
+          ]
+        },
+        "forward": {
+          "hits": 15,
+          "rate": 0.19230769230769232,
+          "wilson95": [
+            0.12015206340148435,
+            0.2933481271906353
+          ]
+        }
+      },
+      "target90": false
+    }
+  }
+}

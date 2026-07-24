@@ -1,0 +1,1947 @@
+{
+  "generatedAt": "2026-07-15T04:25:52.405998+05:30",
+  "productionFilesModified": false,
+  "sourceAudit": {
+    "sha256": "9674f563d21a86d9ac2b215789995a4187287d7e0f92d80ffe2c020daded743a",
+    "rowsAfterFiltering": 23276,
+    "droppedNonCanonical": [
+      {
+        "market": "Rajdhani Day",
+        "dateRangeStart": "08/09/14",
+        "day": "Wednesday",
+        "openPanel": "575",
+        "closePanel": "366"
+      },
+      {
+        "market": "Rajdhani Day",
+        "dateRangeStart": "15/12/14",
+        "day": "Tuesday",
+        "openPanel": "130",
+        "closePanel": "242"
+      },
+      {
+        "market": "Madhur Night",
+        "dateRangeStart": "03/10/2022",
+        "day": "Thursday",
+        "openPanel": "790",
+        "closePanel": "750"
+      }
+    ],
+    "marketRows": {
+      "Sridevi": 1998,
+      "Time Bazar": 1718,
+      "Madhur Day": 2974,
+      "Milan Day": 1186,
+      "Rajdhani Day": 3973,
+      "Kalyan": 1131,
+      "Sridevi Night": 1983,
+      "Kalyan Night": 1852,
+      "Madhur Night": 2544,
+      "Milan Night": 1369,
+      "Rajdhani Night": 1400,
+      "Main Bazar": 1148
+    }
+  },
+  "trustedCacheSha256": "02819f1d933f4fe2e340bb241ebcbe2d4f5859a7228b8f72682a234818056bd0",
+  "datasetRows": 16097,
+  "candidateCountPerSide": 49,
+  "observableFeatureFamilies": [
+    "market",
+    "market_weekday",
+    "market_month",
+    "market_dom",
+    "market_prev1_sutta",
+    "market_prev12_sutta",
+    "market_prev123_sutta",
+    "market_prev17_sutta",
+    "market_prev1_kind",
+    "market_weekday_prev1",
+    "market_month_prev1",
+    "market_last_event",
+    "market_last_event_kind",
+    "market_calendar_coarse",
+    "market_regime_coarse",
+    "event_context_knn"
+  ],
+  "informationRequirement": {
+    "panelClasses": 220,
+    "listSize": 30,
+    "uniformGeneralizedFanoLowerBoundBitsFor90Pct": 2.139177023054617,
+    "conservativeSimplifiedLowerBoundBitsFor90Pct": 1.5870222061245274,
+    "note": "Necessary mutual-information scales under a uniform-label list-decoding bound; not a dataset-specific impossibility proof.",
+    "empiricalMarketEntropyBits": {
+      "open": 7.501689190360093,
+      "close": 7.487273023535629
+    }
+  },
+  "tasks": {
+    "open": {
+      "selected": {
+        "kind": "knn",
+        "name": "event_context",
+        "parameter": 200,
+        "early": {
+          "n": 882,
+          "hits": 170,
+          "rate": 0.1927437641723356,
+          "logLossBits": 8.74530029296875
+        },
+        "selection": {
+          "n": 899,
+          "hits": 170,
+          "rate": 0.18909899888765294,
+          "logLossBits": 8.768647193908691
+        }
+      },
+      "informationSelected": {
+        "kind": "table",
+        "name": "market_prev123_sutta",
+        "parameter": 5.0,
+        "early": {
+          "n": 882,
+          "hits": 158,
+          "rate": 0.17913832199546487,
+          "logLossBits": 7.753266334533691
+        },
+        "selection": {
+          "n": 899,
+          "hits": 164,
+          "rate": 0.18242491657397109,
+          "logLossBits": 7.778924465179443
+        }
+      },
+      "trials": [
+        {
+          "kind": "knn",
+          "name": "event_context",
+          "parameter": 200,
+          "early": {
+            "n": 882,
+            "hits": 170,
+            "rate": 0.1927437641723356,
+            "logLossBits": 8.74530029296875
+          },
+          "selection": {
+            "n": 899,
+            "hits": 170,
+            "rate": 0.18909899888765294,
+            "logLossBits": 8.768647193908691
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 150,
+            "rate": 0.17006802721088435,
+            "logLossBits": 9.518765449523926
+          },
+          "selection": {
+            "n": 899,
+            "hits": 167,
+            "rate": 0.185761957730812,
+            "logLossBits": 9.572578430175781
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 150,
+            "rate": 0.17006802721088435,
+            "logLossBits": 8.801617622375488
+          },
+          "selection": {
+            "n": 899,
+            "hits": 167,
+            "rate": 0.185761957730812,
+            "logLossBits": 8.844208717346191
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 150,
+            "rate": 0.17006802721088435,
+            "logLossBits": 8.388384819030762
+          },
+          "selection": {
+            "n": 899,
+            "hits": 167,
+            "rate": 0.185761957730812,
+            "logLossBits": 8.422650337219238
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month_prev1",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 7.9195709228515625
+          },
+          "selection": {
+            "n": 899,
+            "hits": 167,
+            "rate": 0.185761957730812,
+            "logLossBits": 7.975779056549072
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month_prev1",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 7.795005798339844
+          },
+          "selection": {
+            "n": 899,
+            "hits": 167,
+            "rate": 0.185761957730812,
+            "logLossBits": 7.821961879730225
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month_prev1",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 7.768295764923096
+          },
+          "selection": {
+            "n": 899,
+            "hits": 167,
+            "rate": 0.185761957730812,
+            "logLossBits": 7.791375160217285
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday_prev1",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 8.137309074401855
+          },
+          "selection": {
+            "n": 899,
+            "hits": 166,
+            "rate": 0.1846496106785317,
+            "logLossBits": 8.175543785095215
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday_prev1",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 7.8551530838012695
+          },
+          "selection": {
+            "n": 899,
+            "hits": 166,
+            "rate": 0.1846496106785317,
+            "logLossBits": 7.881278991699219
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday_prev1",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 7.790874481201172
+          },
+          "selection": {
+            "n": 899,
+            "hits": 166,
+            "rate": 0.1846496106785317,
+            "logLossBits": 7.815003871917725
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev12_sutta",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 159,
+            "rate": 0.18027210884353742,
+            "logLossBits": 7.776395320892334
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 7.8031535148620605
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev12_sutta",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 159,
+            "rate": 0.18027210884353742,
+            "logLossBits": 7.757265567779541
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 7.7835693359375
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev12_sutta",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 159,
+            "rate": 0.18027210884353742,
+            "logLossBits": 7.7538652420043945
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 7.780031681060791
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event_kind",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 167,
+            "rate": 0.1893424036281179,
+            "logLossBits": 8.816246032714844
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 8.744330406188965
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event_kind",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 167,
+            "rate": 0.1893424036281179,
+            "logLossBits": 8.392934799194336
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 8.358325958251953
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event_kind",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 167,
+            "rate": 0.1893424036281179,
+            "logLossBits": 8.153528213500977
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 8.139201164245605
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_regime_coarse",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 7.918598651885986
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 7.945674896240234
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_regime_coarse",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 7.793430328369141
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 7.820018768310547
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_regime_coarse",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 7.766906261444092
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 7.793325424194336
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 7.894159317016602
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.834987163543701
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 7.862401962280273
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.8279008865356445
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 7.841418266296387
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.822706699371338
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev123_sutta",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 7.753266334533691
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.778924465179443
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev123_sutta",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 7.753047943115234
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.778924465179443
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev123_sutta",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 7.753000736236572
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.778924465179443
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_calendar_coarse",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 8.277824401855469
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 8.444581031799316
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_calendar_coarse",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 7.885909557342529
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.949514865875244
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_calendar_coarse",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 7.798357963562012
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.834676265716553
+          }
+        },
+        {
+          "kind": "knn",
+          "name": "event_context",
+          "parameter": 100,
+          "early": {
+            "n": 882,
+            "hits": 148,
+            "rate": 0.16780045351473924,
+            "logLossBits": 8.943136215209961
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 8.897433280944824
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 169,
+            "rate": 0.19160997732426305,
+            "logLossBits": 8.919008255004883
+          },
+          "selection": {
+            "n": 899,
+            "hits": 161,
+            "rate": 0.17908787541713014,
+            "logLossBits": 9.118911743164062
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 169,
+            "rate": 0.19160997732426305,
+            "logLossBits": 8.098549842834473
+          },
+          "selection": {
+            "n": 899,
+            "hits": 161,
+            "rate": 0.17908787541713014,
+            "logLossBits": 8.22079849243164
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 169,
+            "rate": 0.19160997732426305,
+            "logLossBits": 7.862493515014648
+          },
+          "selection": {
+            "n": 899,
+            "hits": 161,
+            "rate": 0.17908787541713014,
+            "logLossBits": 7.945770740509033
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_kind",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 166,
+            "rate": 0.18820861678004536,
+            "logLossBits": 8.794243812561035
+          },
+          "selection": {
+            "n": 899,
+            "hits": 160,
+            "rate": 0.17797552836484984,
+            "logLossBits": 8.619505882263184
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_kind",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 166,
+            "rate": 0.18820861678004536,
+            "logLossBits": 8.399473190307617
+          },
+          "selection": {
+            "n": 899,
+            "hits": 160,
+            "rate": 0.17797552836484984,
+            "logLossBits": 8.288183212280273
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_kind",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 166,
+            "rate": 0.18820861678004536,
+            "logLossBits": 8.171006202697754
+          },
+          "selection": {
+            "n": 899,
+            "hits": 160,
+            "rate": 0.17797552836484984,
+            "logLossBits": 8.097461700439453
+          }
+        },
+        {
+          "kind": "knn",
+          "name": "event_context",
+          "parameter": 50,
+          "early": {
+            "n": 882,
+            "hits": 166,
+            "rate": 0.18820861678004536,
+            "logLossBits": 8.792572021484375
+          },
+          "selection": {
+            "n": 899,
+            "hits": 159,
+            "rate": 0.17686318131256953,
+            "logLossBits": 8.754568099975586
+          }
+        },
+        {
+          "kind": "knn",
+          "name": "event_context",
+          "parameter": 25,
+          "early": {
+            "n": 882,
+            "hits": 154,
+            "rate": 0.1746031746031746,
+            "logLossBits": 8.483213424682617
+          },
+          "selection": {
+            "n": 899,
+            "hits": 154,
+            "rate": 0.17130144605116795,
+            "logLossBits": 8.509119987487793
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 9.893430709838867
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 9.96780014038086
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 8.790410995483398
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 8.921773910522461
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 158,
+            "rate": 0.17913832199546487,
+            "logLossBits": 8.255846977233887
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 8.381966590881348
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_sutta",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 159,
+            "rate": 0.18027210884353742,
+            "logLossBits": 9.154446601867676
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 9.2584867477417
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_sutta",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 159,
+            "rate": 0.18027210884353742,
+            "logLossBits": 8.219935417175293
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 8.288636207580566
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_sutta",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 159,
+            "rate": 0.18027210884353742,
+            "logLossBits": 7.93142032623291
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 7.9812211990356445
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev17_sutta",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 156,
+            "rate": 0.17687074829931973,
+            "logLossBits": 9.050437927246094
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 9.193706512451172
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev17_sutta",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 156,
+            "rate": 0.17687074829931973,
+            "logLossBits": 8.173311233520508
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 8.255364418029785
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev17_sutta",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 156,
+            "rate": 0.17687074829931973,
+            "logLossBits": 7.909350395202637
+          },
+          "selection": {
+            "n": 899,
+            "hits": 150,
+            "rate": 0.1668520578420467,
+            "logLossBits": 7.9646735191345215
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_dom",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 9.831582069396973
+          },
+          "selection": {
+            "n": 899,
+            "hits": 147,
+            "rate": 0.1635150166852058,
+            "logLossBits": 9.978880882263184
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_dom",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 8.629352569580078
+          },
+          "selection": {
+            "n": 899,
+            "hits": 147,
+            "rate": 0.1635150166852058,
+            "logLossBits": 8.73920726776123
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_dom",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 157,
+            "rate": 0.17800453514739228,
+            "logLossBits": 8.131011962890625
+          },
+          "selection": {
+            "n": 899,
+            "hits": 147,
+            "rate": 0.1635150166852058,
+            "logLossBits": 8.211054801940918
+          }
+        }
+      ],
+      "terminal": {
+        "n": 974,
+        "hits": 162,
+        "rate": 0.16632443531827515,
+        "logLossBits": 8.8871488571167
+      },
+      "forward": {
+        "n": 78,
+        "hits": 19,
+        "rate": 0.24358974358974358,
+        "logLossBits": 8.966545104980469
+      },
+      "marketMarginal": {
+        "terminal": {
+          "n": 974,
+          "hits": 177,
+          "rate": 0.18172484599589322,
+          "logLossBits": 7.880791664123535
+        },
+        "forward": {
+          "n": 78,
+          "hits": 16,
+          "rate": 0.20512820512820512,
+          "logLossBits": 7.868775367736816
+        }
+      },
+      "estimatedInformationGainBits": {
+        "terminal": 0.1006464958190918,
+        "forward": 0.04130125045776367
+      },
+      "informationEvaluation": {
+        "terminal": {
+          "n": 974,
+          "hits": 177,
+          "rate": 0.18172484599589322,
+          "logLossBits": 7.780145168304443
+        },
+        "forward": {
+          "n": 78,
+          "hits": 16,
+          "rate": 0.20512820512820512,
+          "logLossBits": 7.827474117279053
+        }
+      },
+      "previous": {
+        "terminal": {
+          "hits": 173,
+          "rate": 0.17761806981519507,
+          "wilson95": [
+            0.15489620225192924,
+            0.20287289790732693
+          ]
+        },
+        "forward": {
+          "hits": 17,
+          "rate": 0.21794871794871795,
+          "wilson95": [
+            0.1407681204113414,
+            0.32160705429810155
+          ]
+        }
+      },
+      "target90": false
+    },
+    "close": {
+      "selected": {
+        "kind": "table",
+        "name": "market_prev123_sutta",
+        "parameter": 5.0,
+        "early": {
+          "n": 882,
+          "hits": 177,
+          "rate": 0.20068027210884354,
+          "logLossBits": 7.697242259979248
+        },
+        "selection": {
+          "n": 899,
+          "hits": 198,
+          "rate": 0.22024471635150167,
+          "logLossBits": 7.708906173706055
+        }
+      },
+      "informationSelected": {
+        "kind": "table",
+        "name": "market_prev123_sutta",
+        "parameter": 5.0,
+        "early": {
+          "n": 882,
+          "hits": 177,
+          "rate": 0.20068027210884354,
+          "logLossBits": 7.697242259979248
+        },
+        "selection": {
+          "n": 899,
+          "hits": 198,
+          "rate": 0.22024471635150167,
+          "logLossBits": 7.708906173706055
+        }
+      },
+      "trials": [
+        {
+          "kind": "table",
+          "name": "market",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 177,
+            "rate": 0.20068027210884354,
+            "logLossBits": 7.804935455322266
+          },
+          "selection": {
+            "n": 899,
+            "hits": 198,
+            "rate": 0.22024471635150167,
+            "logLossBits": 7.804116249084473
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 177,
+            "rate": 0.20068027210884354,
+            "logLossBits": 7.780027866363525
+          },
+          "selection": {
+            "n": 899,
+            "hits": 198,
+            "rate": 0.22024471635150167,
+            "logLossBits": 7.784004211425781
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 177,
+            "rate": 0.20068027210884354,
+            "logLossBits": 7.76362419128418
+          },
+          "selection": {
+            "n": 899,
+            "hits": 198,
+            "rate": 0.22024471635150167,
+            "logLossBits": 7.770608901977539
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev123_sutta",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 177,
+            "rate": 0.20068027210884354,
+            "logLossBits": 7.697242259979248
+          },
+          "selection": {
+            "n": 899,
+            "hits": 198,
+            "rate": 0.22024471635150167,
+            "logLossBits": 7.708906173706055
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev123_sutta",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 177,
+            "rate": 0.20068027210884354,
+            "logLossBits": 7.697024345397949
+          },
+          "selection": {
+            "n": 899,
+            "hits": 198,
+            "rate": 0.22024471635150167,
+            "logLossBits": 7.708906173706055
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev123_sutta",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 177,
+            "rate": 0.20068027210884354,
+            "logLossBits": 7.696976661682129
+          },
+          "selection": {
+            "n": 899,
+            "hits": 198,
+            "rate": 0.22024471635150167,
+            "logLossBits": 7.708906173706055
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev12_sutta",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 175,
+            "rate": 0.1984126984126984,
+            "logLossBits": 7.725998401641846
+          },
+          "selection": {
+            "n": 899,
+            "hits": 197,
+            "rate": 0.21913236929922136,
+            "logLossBits": 7.738523483276367
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev12_sutta",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 175,
+            "rate": 0.1984126984126984,
+            "logLossBits": 7.704751014709473
+          },
+          "selection": {
+            "n": 899,
+            "hits": 197,
+            "rate": 0.21913236929922136,
+            "logLossBits": 7.716874122619629
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev12_sutta",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 175,
+            "rate": 0.1984126984126984,
+            "logLossBits": 7.700116157531738
+          },
+          "selection": {
+            "n": 899,
+            "hits": 197,
+            "rate": 0.21913236929922136,
+            "logLossBits": 7.712144374847412
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month_prev1",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 178,
+            "rate": 0.2018140589569161,
+            "logLossBits": 7.847377300262451
+          },
+          "selection": {
+            "n": 899,
+            "hits": 197,
+            "rate": 0.21913236929922136,
+            "logLossBits": 7.927643299102783
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month_prev1",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 178,
+            "rate": 0.2018140589569161,
+            "logLossBits": 7.729102611541748
+          },
+          "selection": {
+            "n": 899,
+            "hits": 197,
+            "rate": 0.21913236929922136,
+            "logLossBits": 7.765566349029541
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month_prev1",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 178,
+            "rate": 0.2018140589569161,
+            "logLossBits": 7.705999374389648
+          },
+          "selection": {
+            "n": 899,
+            "hits": 197,
+            "rate": 0.21913236929922136,
+            "logLossBits": 7.730196475982666
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_regime_coarse",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 182,
+            "rate": 0.20634920634920634,
+            "logLossBits": 7.8320231437683105
+          },
+          "selection": {
+            "n": 899,
+            "hits": 196,
+            "rate": 0.21802002224694106,
+            "logLossBits": 7.886874198913574
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_regime_coarse",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 182,
+            "rate": 0.20634920634920634,
+            "logLossBits": 7.7175469398498535
+          },
+          "selection": {
+            "n": 899,
+            "hits": 196,
+            "rate": 0.21802002224694106,
+            "logLossBits": 7.757068634033203
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_regime_coarse",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 182,
+            "rate": 0.20634920634920634,
+            "logLossBits": 7.697378635406494
+          },
+          "selection": {
+            "n": 899,
+            "hits": 196,
+            "rate": 0.21802002224694106,
+            "logLossBits": 7.727954387664795
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday_prev1",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 181,
+            "rate": 0.20521541950113378,
+            "logLossBits": 8.021284103393555
+          },
+          "selection": {
+            "n": 899,
+            "hits": 191,
+            "rate": 0.21245828698553948,
+            "logLossBits": 8.109535217285156
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday_prev1",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 181,
+            "rate": 0.20521541950113378,
+            "logLossBits": 7.760438919067383
+          },
+          "selection": {
+            "n": 899,
+            "hits": 191,
+            "rate": 0.21245828698553948,
+            "logLossBits": 7.814988613128662
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday_prev1",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 181,
+            "rate": 0.20521541950113378,
+            "logLossBits": 7.7087578773498535
+          },
+          "selection": {
+            "n": 899,
+            "hits": 191,
+            "rate": 0.21245828698553948,
+            "logLossBits": 7.748261451721191
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_calendar_coarse",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 172,
+            "rate": 0.19501133786848074,
+            "logLossBits": 8.233074188232422
+          },
+          "selection": {
+            "n": 899,
+            "hits": 190,
+            "rate": 0.21134593993325917,
+            "logLossBits": 8.340104103088379
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_calendar_coarse",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 172,
+            "rate": 0.19501133786848074,
+            "logLossBits": 7.8368330001831055
+          },
+          "selection": {
+            "n": 899,
+            "hits": 190,
+            "rate": 0.21134593993325917,
+            "logLossBits": 7.860952377319336
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_calendar_coarse",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 172,
+            "rate": 0.19501133786848074,
+            "logLossBits": 7.746691703796387
+          },
+          "selection": {
+            "n": 899,
+            "hits": 190,
+            "rate": 0.21134593993325917,
+            "logLossBits": 7.754697799682617
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 8.969632148742676
+          },
+          "selection": {
+            "n": 899,
+            "hits": 188,
+            "rate": 0.20912124582869857,
+            "logLossBits": 9.00921630859375
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 8.114188194274902
+          },
+          "selection": {
+            "n": 899,
+            "hits": 188,
+            "rate": 0.20912124582869857,
+            "logLossBits": 8.125740051269531
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 155,
+            "rate": 0.17573696145124718,
+            "logLossBits": 7.856600284576416
+          },
+          "selection": {
+            "n": 899,
+            "hits": 188,
+            "rate": 0.20912124582869857,
+            "logLossBits": 7.859320640563965
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 161,
+            "rate": 0.18253968253968253,
+            "logLossBits": 9.911240577697754
+          },
+          "selection": {
+            "n": 899,
+            "hits": 176,
+            "rate": 0.19577308120133483,
+            "logLossBits": 9.953385353088379
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 161,
+            "rate": 0.18253968253968253,
+            "logLossBits": 8.785569190979004
+          },
+          "selection": {
+            "n": 899,
+            "hits": 176,
+            "rate": 0.19577308120133483,
+            "logLossBits": 8.88463020324707
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_month",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 161,
+            "rate": 0.18253968253968253,
+            "logLossBits": 8.23640251159668
+          },
+          "selection": {
+            "n": 899,
+            "hits": 176,
+            "rate": 0.19577308120133483,
+            "logLossBits": 8.331807136535645
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event_kind",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 170,
+            "rate": 0.1927437641723356,
+            "logLossBits": 8.773666381835938
+          },
+          "selection": {
+            "n": 899,
+            "hits": 175,
+            "rate": 0.1946607341490545,
+            "logLossBits": 8.696675300598145
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event_kind",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 170,
+            "rate": 0.1927437641723356,
+            "logLossBits": 8.342209815979004
+          },
+          "selection": {
+            "n": 899,
+            "hits": 175,
+            "rate": 0.1946607341490545,
+            "logLossBits": 8.307950973510742
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_last_event_kind",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 170,
+            "rate": 0.1927437641723356,
+            "logLossBits": 8.098435401916504
+          },
+          "selection": {
+            "n": 899,
+            "hits": 175,
+            "rate": 0.1946607341490545,
+            "logLossBits": 8.086522102355957
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_dom",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 173,
+            "rate": 0.1961451247165533,
+            "logLossBits": 9.72795295715332
+          },
+          "selection": {
+            "n": 899,
+            "hits": 173,
+            "rate": 0.19243604004449388,
+            "logLossBits": 9.766321182250977
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_dom",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 173,
+            "rate": 0.1961451247165533,
+            "logLossBits": 8.549628257751465
+          },
+          "selection": {
+            "n": 899,
+            "hits": 173,
+            "rate": 0.19243604004449388,
+            "logLossBits": 8.583489418029785
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_dom",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 173,
+            "rate": 0.1961451247165533,
+            "logLossBits": 8.063776016235352
+          },
+          "selection": {
+            "n": 899,
+            "hits": 173,
+            "rate": 0.19243604004449388,
+            "logLossBits": 8.08734130859375
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 156,
+            "rate": 0.17687074829931973,
+            "logLossBits": 9.412003517150879
+          },
+          "selection": {
+            "n": 899,
+            "hits": 171,
+            "rate": 0.19021134593993325,
+            "logLossBits": 9.396273612976074
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 156,
+            "rate": 0.17687074829931973,
+            "logLossBits": 8.706670761108398
+          },
+          "selection": {
+            "n": 899,
+            "hits": 171,
+            "rate": 0.19021134593993325,
+            "logLossBits": 8.717978477478027
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_weekday",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 156,
+            "rate": 0.17687074829931973,
+            "logLossBits": 8.30168628692627
+          },
+          "selection": {
+            "n": 899,
+            "hits": 171,
+            "rate": 0.19021134593993325,
+            "logLossBits": 8.323759078979492
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_kind",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 178,
+            "rate": 0.2018140589569161,
+            "logLossBits": 8.560074806213379
+          },
+          "selection": {
+            "n": 899,
+            "hits": 171,
+            "rate": 0.19021134593993325,
+            "logLossBits": 8.716656684875488
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_kind",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 178,
+            "rate": 0.2018140589569161,
+            "logLossBits": 8.215856552124023
+          },
+          "selection": {
+            "n": 899,
+            "hits": 171,
+            "rate": 0.19021134593993325,
+            "logLossBits": 8.338597297668457
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_kind",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 178,
+            "rate": 0.2018140589569161,
+            "logLossBits": 8.019048690795898
+          },
+          "selection": {
+            "n": 899,
+            "hits": 171,
+            "rate": 0.19021134593993325,
+            "logLossBits": 8.117257118225098
+          }
+        },
+        {
+          "kind": "knn",
+          "name": "event_context",
+          "parameter": 50,
+          "early": {
+            "n": 882,
+            "hits": 163,
+            "rate": 0.18480725623582767,
+            "logLossBits": 8.722485542297363
+          },
+          "selection": {
+            "n": 899,
+            "hits": 170,
+            "rate": 0.18909899888765294,
+            "logLossBits": 8.751134872436523
+          }
+        },
+        {
+          "kind": "knn",
+          "name": "event_context",
+          "parameter": 25,
+          "early": {
+            "n": 882,
+            "hits": 140,
+            "rate": 0.15873015873015872,
+            "logLossBits": 8.486969947814941
+          },
+          "selection": {
+            "n": 899,
+            "hits": 165,
+            "rate": 0.1835372636262514,
+            "logLossBits": 8.436502456665039
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev17_sutta",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 170,
+            "rate": 0.1927437641723356,
+            "logLossBits": 8.95397663116455
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 9.188258171081543
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev17_sutta",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 170,
+            "rate": 0.1927437641723356,
+            "logLossBits": 8.091650009155273
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 8.22997760772705
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev17_sutta",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 170,
+            "rate": 0.1927437641723356,
+            "logLossBits": 7.836330890655518
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 7.926454544067383
+          }
+        },
+        {
+          "kind": "knn",
+          "name": "event_context",
+          "parameter": 100,
+          "early": {
+            "n": 882,
+            "hits": 162,
+            "rate": 0.1836734693877551,
+            "logLossBits": 8.752845764160156
+          },
+          "selection": {
+            "n": 899,
+            "hits": 164,
+            "rate": 0.18242491657397109,
+            "logLossBits": 8.923020362854004
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_sutta",
+          "parameter": 5.0,
+          "early": {
+            "n": 882,
+            "hits": 174,
+            "rate": 0.19727891156462585,
+            "logLossBits": 9.006756782531738
+          },
+          "selection": {
+            "n": 899,
+            "hits": 163,
+            "rate": 0.18131256952169078,
+            "logLossBits": 9.239045143127441
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_sutta",
+          "parameter": 20.0,
+          "early": {
+            "n": 882,
+            "hits": 174,
+            "rate": 0.19727891156462585,
+            "logLossBits": 8.10606861114502
+          },
+          "selection": {
+            "n": 899,
+            "hits": 163,
+            "rate": 0.18131256952169078,
+            "logLossBits": 8.255284309387207
+          }
+        },
+        {
+          "kind": "table",
+          "name": "market_prev1_sutta",
+          "parameter": 50.0,
+          "early": {
+            "n": 882,
+            "hits": 174,
+            "rate": 0.19727891156462585,
+            "logLossBits": 7.837274074554443
+          },
+          "selection": {
+            "n": 899,
+            "hits": 163,
+            "rate": 0.18131256952169078,
+            "logLossBits": 7.938352108001709
+          }
+        },
+        {
+          "kind": "knn",
+          "name": "event_context",
+          "parameter": 200,
+          "early": {
+            "n": 882,
+            "hits": 170,
+            "rate": 0.1927437641723356,
+            "logLossBits": 8.543082237243652
+          },
+          "selection": {
+            "n": 899,
+            "hits": 162,
+            "rate": 0.18020022246941045,
+            "logLossBits": 8.755290985107422
+          }
+        }
+      ],
+      "terminal": {
+        "n": 974,
+        "hits": 193,
+        "rate": 0.19815195071868583,
+        "logLossBits": 7.722189426422119
+      },
+      "forward": {
+        "n": 78,
+        "hits": 13,
+        "rate": 0.16666666666666666,
+        "logLossBits": 7.656260967254639
+      },
+      "marketMarginal": {
+        "terminal": {
+          "n": 974,
+          "hits": 193,
+          "rate": 0.19815195071868583,
+          "logLossBits": 7.784509658813477
+        },
+        "forward": {
+          "n": 78,
+          "hits": 13,
+          "rate": 0.16666666666666666,
+          "logLossBits": 7.660696029663086
+        }
+      },
+      "estimatedInformationGainBits": {
+        "terminal": 0.06232023239135742,
+        "forward": 0.004435062408447266
+      },
+      "informationEvaluation": {
+        "terminal": {
+          "n": 974,
+          "hits": 193,
+          "rate": 0.19815195071868583,
+          "logLossBits": 7.722189426422119
+        },
+        "forward": {
+          "n": 78,
+          "hits": 13,
+          "rate": 0.16666666666666666,
+          "logLossBits": 7.656260967254639
+        }
+      },
+      "previous": {
+        "terminal": {
+          "hits": 216,
+          "rate": 0.22176591375770022,
+          "wilson95": [
+            0.19679750140459495,
+            0.24892041624877587
+          ]
+        },
+        "forward": {
+          "hits": 15,
+          "rate": 0.19230769230769232,
+          "wilson95": [
+            0.12015206340148435,
+            0.2933481271906353
+          ]
+        }
+      },
+      "target90": false
+    }
+  }
+}
