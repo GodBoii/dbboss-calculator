@@ -60,7 +60,7 @@ const MARKET_URLS = {
 
 const MARKET_ORDER = Object.keys(MARKET_URLS)
 const CACHE = path.join(process.cwd(), 'scratch', 'sutta-research-records.json')
-const COUNTS = [4, 6]
+const COUNTS = [3, 4, 6]
 const TARGETS = ['open', 'close', 'jodi', 'adjustedClose']
 
 function dated(records) {
