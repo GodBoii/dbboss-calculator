@@ -15,10 +15,12 @@ export interface BacktestBucket {
   panelTop6: number
   panelTop10: number
   panelTop30: number
+  panelTop60: number
   suttaTop3: number
   suttaTop6: number
   suttaTop10: number
   suttaTop30: number
+  suttaTop60: number
   kindCorrect: number
   actualDp: number
   dpPredicted: number
@@ -34,6 +36,7 @@ export interface BacktestReport {
   endDate: string
   drawsTested: number
   randomTop30Baseline: number
+  randomTop60Baseline: number
   open: BacktestBucket
   close: BacktestBucket
   jodi: BacktestBucket
@@ -66,10 +69,12 @@ function emptyBucket(): MutableBucket {
     panelTop6: 0,
     panelTop10: 0,
     panelTop30: 0,
+    panelTop60: 0,
     suttaTop3: 0,
     suttaTop6: 0,
     suttaTop10: 0,
     suttaTop30: 0,
+    suttaTop60: 0,
     kindCorrect: 0,
     actualDp: 0,
     dpPredicted: 0,
@@ -88,10 +93,12 @@ function finalizeBucket(bucket: MutableBucket): BacktestBucket {
     panelTop6: bucket.panelTop6,
     panelTop10: bucket.panelTop10,
     panelTop30: bucket.panelTop30,
+    panelTop60: bucket.panelTop60,
     suttaTop3: bucket.suttaTop3,
     suttaTop6: bucket.suttaTop6,
     suttaTop10: bucket.suttaTop10,
     suttaTop30: bucket.suttaTop30,
+    suttaTop60: bucket.suttaTop60,
     kindCorrect: bucket.kindCorrect,
     actualDp: bucket.actualDp,
     dpPredicted: bucket.dpPredicted,
@@ -119,6 +126,12 @@ function addDays(date: Date, days: number): Date {
 
 function toISODate(date: Date): string {
   return date.toISOString().slice(0, 10)
+}
+
+export function getBacktestWindowStart(endDate: string, days: number): string {
+  const startDate = new Date(`${endDate}T00:00:00Z`)
+  startDate.setUTCDate(startDate.getUTCDate() - days + 1)
+  return toISODate(startDate)
 }
 
 export function getRecordISODate(record: PanelRecord): string | null {
@@ -157,6 +170,7 @@ function evaluatePickSet(
     ['Top6', 6],
     ['Top10', 10],
     ['Top30', 30],
+    ['Top60', 60],
   ] as const) {
     if (picks.slice(0, size).some((pick) => pick.panel === actualPanel)) {
       bucket[`panel${key}`]++
@@ -187,9 +201,7 @@ export function runMarketBacktest(
   if (datedRecords.length <= minTrainingRecords) return null
 
   const endDate = datedRecords[datedRecords.length - 1].isoDate
-  const startDateObj = new Date(`${endDate}T00:00:00`)
-  startDateObj.setDate(startDateObj.getDate() - days + 1)
-  const startDate = toISODate(startDateObj)
+  const startDate = getBacktestWindowStart(endDate, days)
 
   const open = emptyBucket()
   const close = emptyBucket()
@@ -269,6 +281,7 @@ export function runMarketBacktest(
     endDate,
     drawsTested,
     randomTop30Baseline: 30 / 220,
+    randomTop60Baseline: 60 / 220,
     open: finalizeBucket(open),
     close: finalizeBucket(close),
     jodi: finalizeBucket(jodi),

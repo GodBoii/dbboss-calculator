@@ -42,6 +42,8 @@ const CLOSE_LAG3_PROFILE_MARKETS = new Set([
   "Main Bazar",
 ]);
 
+export const PANEL_PREDICTION_COUNT = 60;
+
 function previousMainBazarPanels(
   allMarketsRecords: Record<string, PanelRecord[]>,
   analysisDate: Date,
@@ -381,9 +383,9 @@ export function analyzeMarket(
     suttaSignalCounts: countSuttaSignals(closeSuttaDroughts),
     topPicks: topPicks.slice(0, 30),
     openPicks: openPicks.slice(0, 30),
-    openPanelPicks: openPanelPicks.slice(0, 30),
+    openPanelPicks: openPanelPicks.slice(0, PANEL_PREDICTION_COUNT),
     closePicks: closePicks.slice(0, 30),
-    closePanelPicks: closePanelPicks.slice(0, 30),
+    closePanelPicks: closePanelPicks.slice(0, PANEL_PREDICTION_COUNT),
     openDpPicks: openDpPicks.slice(0, 30),
     closeDpPicks: closeDpPicks.slice(0, 30),
     openDpDigitFocus: buildDpDigitFocus(openDpPicks),
