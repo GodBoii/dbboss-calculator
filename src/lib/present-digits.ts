@@ -157,7 +157,7 @@ export function buildPresentDigitsPredictionFromPanels(
     .map((record) => ({ record, isoDate: getRecordISODate(record) }))
     .filter(
       (item): item is { record: PanelRecord; isoDate: string } =>
-        Boolean(item.isoDate) && item.isoDate < targetISO,
+        item.isoDate !== null && item.isoDate < targetISO,
     )
     .sort((left, right) => left.isoDate.localeCompare(right.isoDate))
     .map(({ record, isoDate }) => ({
