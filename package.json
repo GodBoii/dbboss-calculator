@@ -27,6 +27,8 @@
     "verify:absent-digits-runtime": "node scripts/verify-absent-digits-runtime.cjs",
     "verify:absent-digits-v3-runtime": "node scripts/verify-absent-digits-v3-runtime.cjs",
     "verify:absent-digits-v3-backtest": "python research/absent_digits_hypotheses_v3/verify_recent_market_backtest.py",
+    "research:present-digits": "python research/present_digits_v1/run_backtest.py",
+    "verify:present-digits": "python research/present_digits_v1/verify_backtest.py && node scripts/verify-present-digits-runtime.cjs",
     "verify:sutta-ranking": "node scripts/verify-sutta-ranking.cjs",
     "verify:sutta-above90": "node scripts/verify-above-90-regression.cjs"
   },
