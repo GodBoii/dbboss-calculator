@@ -10041,132 +10041,132 @@
       "blocks": {
         "validation": {
           "n": 2348,
-          "hits": 1185,
-          "accuracy": 0.5046848381601363,
-          "standaloneAccuracy": 0.5063884156729132,
+          "hits": 1195,
+          "accuracy": 0.5089437819420783,
+          "standaloneAccuracy": 0.5166098807495741,
           "baselineHits": 1224,
           "baselineAccuracy": 0.5212947189097104,
-          "liftPoints": -1.6609880749574106,
-          "candidateOnly": 199,
-          "baselineOnly": 238,
-          "pairedPValue": 0.06897451404167342,
+          "liftPoints": -1.2350936967632027,
+          "candidateOnly": 207,
+          "baselineOnly": 236,
+          "pairedPValue": 0.18334951352789997,
           "wilson95": [
-            0.484470502428026,
-            0.5248838696183924
+            0.48872483196576166,
+            0.5291335146683097
           ],
-          "meanSupport": 832.5634765625
+          "meanSupport": 353.8326110839844
         },
         "holdout": {
           "n": 2466,
-          "hits": 1274,
-          "accuracy": 0.5166261151662611,
-          "standaloneAccuracy": 0.5170316301703163,
+          "hits": 1265,
+          "accuracy": 0.5129764801297648,
+          "standaloneAccuracy": 0.5223033252230332,
           "baselineHits": 1246,
           "baselineAccuracy": 0.505271695052717,
-          "liftPoints": 1.1354420113544201,
-          "candidateOnly": 226,
-          "baselineOnly": 198,
-          "pairedPValue": 0.1897156258844349,
+          "liftPoints": 0.7704785077047851,
+          "candidateOnly": 245,
+          "baselineOnly": 226,
+          "pairedPValue": 0.4069063973769348,
           "wilson95": [
-            0.49689220395330735,
-            0.5363083076451794
+            0.49324398928361884,
+            0.5326686051347123
           ],
-          "meanSupport": 886.5579833984375
+          "meanSupport": 356.051513671875
         },
         "recent": {
           "n": 2300,
-          "hits": 1197,
-          "accuracy": 0.5204347826086957,
-          "standaloneAccuracy": 0.5052173913043478,
+          "hits": 1181,
+          "accuracy": 0.5134782608695653,
+          "standaloneAccuracy": 0.5104347826086957,
           "baselineHits": 1193,
           "baselineAccuracy": 0.518695652173913,
-          "liftPoints": 0.17391304347826086,
+          "liftPoints": -0.5217391304347826,
           "candidateOnly": 235,
-          "baselineOnly": 231,
-          "pairedPValue": 0.8894913444471272,
+          "baselineOnly": 247,
+          "pairedPValue": 0.6163914414677176,
           "wilson95": [
-            0.5000007455182515,
-            0.5408006731905332
+            0.4930462000640254,
+            0.5338653739779389
           ],
-          "meanSupport": 927.9291381835938
+          "meanSupport": 353.5369567871094
         },
         "post_cache": {
           "n": 288,
-          "hits": 148,
-          "accuracy": 0.5138888888888888,
-          "standaloneAccuracy": 0.5208333333333334,
+          "hits": 140,
+          "accuracy": 0.4861111111111111,
+          "standaloneAccuracy": 0.5138888888888888,
           "baselineHits": 132,
           "baselineAccuracy": 0.4583333333333333,
-          "liftPoints": 5.555555555555555,
+          "liftPoints": 2.7777777777777777,
           "candidateOnly": 34,
-          "baselineOnly": 18,
-          "pairedPValue": 0.03648340000835981,
+          "baselineOnly": 26,
+          "pairedPValue": 0.36629400670329104,
           "wilson95": [
-            0.4563632326480851,
-            0.5710489110285786
+            0.4289510889714214,
+            0.5436367673519148
           ],
-          "meanSupport": 955.0208129882812
+          "meanSupport": 355.49652099609375
         },
         "independent_extension": {
           "n": 88,
-          "hits": 48,
-          "accuracy": 0.5454545454545454,
-          "standaloneAccuracy": 0.5568181818181818,
+          "hits": 47,
+          "accuracy": 0.5340909090909091,
+          "standaloneAccuracy": 0.5340909090909091,
           "baselineHits": 53,
           "baselineAccuracy": 0.6022727272727273,
-          "liftPoints": -5.681818181818182,
-          "candidateOnly": 4,
-          "baselineOnly": 9,
-          "pairedPValue": 0.266845703125,
+          "liftPoints": -6.818181818181818,
+          "candidateOnly": 6,
+          "baselineOnly": 12,
+          "pairedPValue": 0.237884521484375,
           "wilson95": [
-            0.44170066774534067,
-            0.6454059625578509
+            0.43063465303197157,
+            0.6346953196954221
           ],
-          "meanSupport": 884.0
+          "meanSupport": 370.8409118652344
         }
       },
       "confirmation": {
         "n": 4766,
-        "hits": 2471,
-        "accuracy": 0.5184641208560637,
-        "standaloneAccuracy": 0.5113302559798574,
+        "hits": 2446,
+        "accuracy": 0.5132186319765002,
+        "standaloneAccuracy": 0.5165757448594209,
         "baselineHits": 2439,
         "baselineAccuracy": 0.5117498950902224,
-        "liftPoints": 0.6714225765841376,
-        "candidateOnly": 461,
-        "baselineOnly": 429,
-        "pairedPValue": 0.2987442873148479,
+        "liftPoints": 0.1468736886277801,
+        "candidateOnly": 480,
+        "baselineOnly": 473,
+        "pairedPValue": 0.845907564448743,
         "wilson95": [
-          0.5042694527351963,
-          0.5326290482987384
+          0.4990234734132791,
+          0.5273924989178332
         ],
-        "meanSupport": 906.5230712890625
+        "meanSupport": 354.8380126953125
       },
       "laterExtensions": {
         "n": 376,
-        "hits": 196,
-        "accuracy": 0.5212765957446809,
-        "standaloneAccuracy": 0.5292553191489362,
+        "hits": 187,
+        "accuracy": 0.4973404255319149,
+        "standaloneAccuracy": 0.5186170212765957,
         "baselineHits": 185,
         "baselineAccuracy": 0.4920212765957447,
-        "liftPoints": 2.925531914893617,
-        "candidateOnly": 38,
-        "baselineOnly": 27,
-        "pairedPValue": 0.21453919400817845,
+        "liftPoints": 0.5319148936170213,
+        "candidateOnly": 40,
+        "baselineOnly": 38,
+        "pairedPValue": 0.9099464518745243,
         "wilson95": [
-          0.47082399777889955,
-          0.5712988396008739
+          0.4470855209621372,
+          0.5476491243653911
         ],
-        "meanSupport": 938.39892578125
+        "meanSupport": 359.0877685546875
       },
-      "worstMarketSideLiftPoints": -5.527638190954774,
-      "nonnegativeMonthFraction": 0.5555555555555556,
+      "worstMarketSideLiftPoints": -6.532663316582915,
+      "nonnegativeMonthFraction": 0.4444444444444444,
       "overfitRisk": "medium",
       "confirmationFdrQValue": 0.9993452845484503,
       "gates": {
         "validationImproves": false,
         "holdoutNonDegrading": true,
-        "recentNonDegrading": true,
+        "recentNonDegrading": false,
         "confirmationFdr05": false,
         "laterNonDegrading": true,
         "worstRouteWithinTwoPoints": false,
@@ -10184,126 +10184,126 @@
       "blocks": {
         "validation": {
           "n": 2348,
-          "hits": 1205,
-          "accuracy": 0.5132027257240205,
-          "standaloneAccuracy": 0.5272572402044293,
+          "hits": 1212,
+          "accuracy": 0.5161839863713799,
+          "standaloneAccuracy": 0.5149063032367973,
           "baselineHits": 1224,
           "baselineAccuracy": 0.5212947189097104,
-          "liftPoints": -0.8091993185689949,
-          "candidateOnly": 186,
-          "baselineOnly": 205,
-          "pairedPValue": 0.3626826660876511,
+          "liftPoints": -0.5110732538330494,
+          "candidateOnly": 199,
+          "baselineOnly": 211,
+          "pairedPValue": 0.5870106575329637,
           "wilson95": [
-            0.4929806259851748,
-            0.5333816952365498
+            0.4959605535960016,
+            0.5363545498370796
           ],
-          "meanSupport": 1009.2346801757812
+          "meanSupport": 431.2363586425781
         },
         "holdout": {
           "n": 2466,
-          "hits": 1280,
-          "accuracy": 0.519059205190592,
-          "standaloneAccuracy": 0.51338199513382,
+          "hits": 1282,
+          "accuracy": 0.5198702351987023,
+          "standaloneAccuracy": 0.5024330900243309,
           "baselineHits": 1246,
           "baselineAccuracy": 0.505271695052717,
-          "liftPoints": 1.37875101378751,
-          "candidateOnly": 212,
-          "baselineOnly": 178,
-          "pairedPValue": 0.09459127467091762,
+          "liftPoints": 1.4598540145985401,
+          "candidateOnly": 218,
+          "baselineOnly": 182,
+          "pairedPValue": 0.07998845425742045,
           "wilson95": [
-            0.4993249307572956,
-            0.5387341922946283
+            0.5001359435082388,
+            0.5395427166948309
           ],
-          "meanSupport": 1075.592041015625
+          "meanSupport": 431.1788330078125
         },
         "recent": {
           "n": 2300,
-          "hits": 1209,
-          "accuracy": 0.5256521739130435,
-          "standaloneAccuracy": 0.5165217391304348,
+          "hits": 1199,
+          "accuracy": 0.5213043478260869,
+          "standaloneAccuracy": 0.5213043478260869,
           "baselineHits": 1193,
           "baselineAccuracy": 0.518695652173913,
-          "liftPoints": 0.6956521739130435,
-          "candidateOnly": 218,
+          "liftPoints": 0.2608695652173913,
+          "candidateOnly": 208,
           "baselineOnly": 202,
-          "pairedPValue": 0.4642557752667807,
+          "pairedPValue": 0.8049971524657473,
           "wilson95": [
-            0.5052192501226151,
-            0.5459995520862846
+            0.5008703416929915,
+            0.5416673075991455
           ],
-          "meanSupport": 1124.8056640625
+          "meanSupport": 429.57476806640625
         },
         "post_cache": {
           "n": 288,
-          "hits": 133,
-          "accuracy": 0.4618055555555556,
-          "standaloneAccuracy": 0.5069444444444444,
+          "hits": 132,
+          "accuracy": 0.4583333333333333,
+          "standaloneAccuracy": 0.5208333333333334,
           "baselineHits": 132,
           "baselineAccuracy": 0.4583333333333333,
-          "liftPoints": 0.3472222222222222,
-          "candidateOnly": 28,
-          "baselineOnly": 27,
+          "liftPoints": 0.0,
+          "candidateOnly": 22,
+          "baselineOnly": 22,
           "pairedPValue": 1.0,
           "wilson95": [
-            0.405109023372746,
-            0.5195075815164287
+            0.4017140000485507,
+            0.5160495689214581
           ],
-          "meanSupport": 1120.8680419921875
+          "meanSupport": 416.18402099609375
         },
         "independent_extension": {
           "n": 88,
-          "hits": 52,
-          "accuracy": 0.5909090909090909,
-          "standaloneAccuracy": 0.45454545454545453,
+          "hits": 48,
+          "accuracy": 0.5454545454545454,
+          "standaloneAccuracy": 0.5454545454545454,
           "baselineHits": 53,
           "baselineAccuracy": 0.6022727272727273,
-          "liftPoints": -1.1363636363636365,
-          "candidateOnly": 8,
-          "baselineOnly": 9,
-          "pairedPValue": 1.0,
+          "liftPoints": -5.681818181818182,
+          "candidateOnly": 6,
+          "baselineOnly": 11,
+          "pairedPValue": 0.332305908203125,
           "wilson95": [
-            0.4864808526118738,
-            0.6877324079945095
+            0.44170066774534067,
+            0.6454059625578509
           ],
-          "meanSupport": 965.9545288085938
+          "meanSupport": 396.9886474609375
         }
       },
       "confirmation": {
         "n": 4766,
-        "hits": 2489,
-        "accuracy": 0.5222408728493496,
-        "standaloneAccuracy": 0.5148971884179605,
+        "hits": 2481,
+        "accuracy": 0.5205623164078892,
+        "standaloneAccuracy": 0.5115400755350399,
         "baselineHits": 2439,
         "baselineAccuracy": 0.5117498950902224,
-        "liftPoints": 1.0490977759127151,
-        "candidateOnly": 430,
-        "baselineOnly": 380,
-        "pairedPValue": 0.08506360524046278,
+        "liftPoints": 0.8812421317666806,
+        "candidateOnly": 426,
+        "baselineOnly": 384,
+        "pairedPValue": 0.14965462856139472,
         "wilson95": [
-          0.508047525968382,
-          0.5363983957315849
+          0.5063682821901828,
+          0.5347232303248807
         ],
-        "meanSupport": 1099.341796875
+        "meanSupport": 430.4047546386719
       },
       "laterExtensions": {
         "n": 376,
-        "hits": 185,
-        "accuracy": 0.4920212765957447,
-        "standaloneAccuracy": 0.4946808510638298,
+        "hits": 180,
+        "accuracy": 0.4787234042553192,
+        "standaloneAccuracy": 0.526595744680851,
         "baselineHits": 185,
         "baselineAccuracy": 0.4920212765957447,
-        "liftPoints": 0.0,
-        "candidateOnly": 36,
-        "baselineOnly": 36,
-        "pairedPValue": 1.0,
+        "liftPoints": -1.3297872340425532,
+        "candidateOnly": 28,
+        "baselineOnly": 33,
+        "pairedPValue": 0.6089207154048287,
         "wilson95": [
-          0.44182579977407144,
-          0.5423781362085135
+          0.4287011603991261,
+          0.5291760022211005
         ],
-        "meanSupport": 1084.6116943359375
+        "meanSupport": 411.6914978027344
       },
-      "worstMarketSideLiftPoints": -4.0201005025125625,
-      "nonnegativeMonthFraction": 0.4444444444444444,
+      "worstMarketSideLiftPoints": -5.025125628140704,
+      "nonnegativeMonthFraction": 0.6666666666666666,
       "overfitRisk": "medium",
       "confirmationFdrQValue": 0.9993452845484503,
       "gates": {
@@ -10313,7 +10313,7 @@
         "confirmationFdr05": false,
         "laterNonDegrading": false,
         "worstRouteWithinTwoPoints": false,
-        "stableMonths": false
+        "stableMonths": true
       },
       "verdict": "REJECT"
     },
@@ -12329,134 +12329,134 @@
       "blocks": {
         "validation": {
           "n": 2348,
-          "hits": 1219,
-          "accuracy": 0.5191652470187393,
-          "standaloneAccuracy": 0.5221465076660988,
+          "hits": 1204,
+          "accuracy": 0.5127768313458262,
+          "standaloneAccuracy": 0.514480408858603,
           "baselineHits": 1224,
           "baselineAccuracy": 0.5212947189097104,
-          "liftPoints": -0.21294718909710392,
-          "candidateOnly": 279,
-          "baselineOnly": 284,
-          "pairedPValue": 0.866146211608888,
+          "liftPoints": -0.8517887563884157,
+          "candidateOnly": 254,
+          "baselineOnly": 274,
+          "pairedPValue": 0.408334988858309,
           "wilson95": [
-            0.4989411995792267,
-            0.5393266860652117
+            0.4925549806604587,
+            0.5329569431025004
           ],
-          "meanSupport": 28.048978805541992
+          "meanSupport": 12.113287925720215
         },
         "holdout": {
           "n": 2466,
-          "hits": 1261,
-          "accuracy": 0.5113544201135442,
-          "standaloneAccuracy": 0.5129764801297648,
+          "hits": 1241,
+          "accuracy": 0.5032441200324412,
+          "standaloneAccuracy": 0.5024330900243309,
           "baselineHits": 1246,
           "baselineAccuracy": 0.505271695052717,
-          "liftPoints": 0.6082725060827251,
-          "candidateOnly": 323,
-          "baselineOnly": 308,
-          "pairedPValue": 0.5773359414434475,
+          "liftPoints": -0.20275750202757503,
+          "candidateOnly": 271,
+          "baselineOnly": 276,
+          "pairedPValue": 0.8642219661202313,
           "wilson95": [
-            0.49162289762932987,
-            0.5310506224867099
+            0.483520549099464,
+            0.5229575995051189
           ],
-          "meanSupport": 29.689781188964844
+          "meanSupport": 11.980940818786621
         },
         "recent": {
           "n": 2300,
-          "hits": 1194,
-          "accuracy": 0.5191304347826087,
-          "standaloneAccuracy": 0.5243478260869565,
+          "hits": 1181,
+          "accuracy": 0.5134782608695653,
+          "standaloneAccuracy": 0.528695652173913,
           "baselineHits": 1193,
           "baselineAccuracy": 0.518695652173913,
-          "liftPoints": 0.043478260869565216,
-          "candidateOnly": 299,
-          "baselineOnly": 298,
-          "pairedPValue": 1.0,
+          "liftPoints": -0.5217391304347826,
+          "candidateOnly": 269,
+          "baselineOnly": 281,
+          "pairedPValue": 0.639079674969577,
           "wilson95": [
-            0.4986964671352068,
-            0.539500605698549
+            0.4930462000640254,
+            0.5338653739779389
           ],
-          "meanSupport": 31.142608642578125
+          "meanSupport": 11.974782943725586
         },
         "post_cache": {
           "n": 288,
-          "hits": 137,
-          "accuracy": 0.4756944444444444,
-          "standaloneAccuracy": 0.4756944444444444,
+          "hits": 140,
+          "accuracy": 0.4861111111111111,
+          "standaloneAccuracy": 0.4652777777777778,
           "baselineHits": 132,
           "baselineAccuracy": 0.4583333333333333,
-          "liftPoints": 1.7361111111111112,
-          "candidateOnly": 39,
-          "baselineOnly": 34,
-          "pairedPValue": 0.6399729317539424,
+          "liftPoints": 2.7777777777777777,
+          "candidateOnly": 35,
+          "baselineOnly": 27,
+          "pairedPValue": 0.3741517124047949,
           "wilson95": [
-            0.41871661522843856,
-            0.5333121333373998
+            0.4289510889714214,
+            0.5436367673519148
           ],
-          "meanSupport": 32.22916793823242
+          "meanSupport": 12.135416984558105
         },
         "independent_extension": {
           "n": 88,
-          "hits": 41,
-          "accuracy": 0.4659090909090909,
-          "standaloneAccuracy": 0.4659090909090909,
+          "hits": 49,
+          "accuracy": 0.5568181818181818,
+          "standaloneAccuracy": 0.4431818181818182,
           "baselineHits": 53,
           "baselineAccuracy": 0.6022727272727273,
-          "liftPoints": -13.636363636363637,
-          "candidateOnly": 7,
-          "baselineOnly": 19,
-          "pairedPValue": 0.028959274291992188,
+          "liftPoints": -4.545454545454546,
+          "candidateOnly": 9,
+          "baselineOnly": 13,
+          "pairedPValue": 0.5234670639038086,
           "wilson95": [
-            0.36530468030457786,
-            0.5693653469680284
+            0.4528179063718238,
+            0.6560653815071655
           ],
-          "meanSupport": 29.56818199157715
+          "meanSupport": 12.454545021057129
         }
       },
       "confirmation": {
         "n": 4766,
-        "hits": 2455,
-        "accuracy": 0.5151070079731431,
-        "standaloneAccuracy": 0.5184641208560637,
+        "hits": 2422,
+        "accuracy": 0.5081829626521192,
+        "standaloneAccuracy": 0.5151070079731431,
         "baselineHits": 2439,
         "baselineAccuracy": 0.5117498950902224,
-        "liftPoints": 0.3357112882920688,
-        "candidateOnly": 622,
-        "baselineOnly": 606,
-        "pairedPValue": 0.6686337569973405,
+        "liftPoints": -0.35669324381032314,
+        "candidateOnly": 540,
+        "baselineOnly": 557,
+        "pairedPValue": 0.6290608304633494,
         "wilson95": [
-          0.5009118459422831,
-          0.5292778367218453
+          0.4939888029243626,
+          0.5223639418520404
         ],
-        "meanSupport": 30.390893936157227
+        "meanSupport": 11.9779691696167
       },
       "laterExtensions": {
         "n": 376,
-        "hits": 178,
-        "accuracy": 0.4734042553191489,
-        "standaloneAccuracy": 0.4734042553191489,
+        "hits": 189,
+        "accuracy": 0.5026595744680851,
+        "standaloneAccuracy": 0.4601063829787234,
         "baselineHits": 185,
         "baselineAccuracy": 0.4920212765957447,
-        "liftPoints": -1.8617021276595744,
-        "candidateOnly": 46,
-        "baselineOnly": 53,
-        "pairedPValue": 0.546713483598813,
+        "liftPoints": 1.0638297872340425,
+        "candidateOnly": 44,
+        "baselineOnly": 40,
+        "pairedPValue": 0.7436441861052041,
         "wilson95": [
-          0.42346118379044967,
-          0.5238852694848335
+          0.45235087563460885,
+          0.5529144790378628
         ],
-        "meanSupport": 31.606382369995117
+        "meanSupport": 12.21010684967041
       },
-      "worstMarketSideLiftPoints": -3.658536585365854,
+      "worstMarketSideLiftPoints": -9.045226130653266,
       "nonnegativeMonthFraction": 0.5555555555555556,
       "overfitRisk": "high",
       "confirmationFdrQValue": 0.9993452845484503,
       "gates": {
         "validationImproves": false,
-        "holdoutNonDegrading": true,
-        "recentNonDegrading": true,
+        "holdoutNonDegrading": false,
+        "recentNonDegrading": false,
         "confirmationFdr05": false,
-        "laterNonDegrading": false,
+        "laterNonDegrading": true,
         "worstRouteWithinTwoPoints": false,
         "stableMonths": false
       },
@@ -12615,126 +12615,126 @@
       "blocks": {
         "validation": {
           "n": 1174,
-          "hits": 613,
-          "accuracy": 0.5221465076660988,
-          "standaloneAccuracy": 0.5119250425894378,
+          "hits": 623,
+          "accuracy": 0.530664395229983,
+          "standaloneAccuracy": 0.5255536626916525,
           "baselineHits": 611,
           "baselineAccuracy": 0.520442930153322,
-          "liftPoints": 0.17035775127768313,
-          "candidateOnly": 134,
+          "liftPoints": 1.0221465076660987,
+          "candidateOnly": 144,
           "baselineOnly": 132,
-          "pairedPValue": 0.9511245158305734,
+          "pairedPValue": 0.507965541072013,
           "wilson95": [
-            0.4935477029199963,
-            0.5506008534163248
+            0.5020634524870472,
+            0.5590653178247821
           ],
-          "meanSupport": 171.76661682128906
+          "meanSupport": 72.79898071289062
         },
         "holdout": {
           "n": 1233,
-          "hits": 618,
-          "accuracy": 0.5012165450121655,
-          "standaloneAccuracy": 0.537712895377129,
+          "hits": 611,
+          "accuracy": 0.4955393349553934,
+          "standaloneAccuracy": 0.519059205190592,
           "baselineHits": 621,
           "baselineAccuracy": 0.5036496350364964,
-          "liftPoints": -0.24330900243309003,
-          "candidateOnly": 153,
-          "baselineOnly": 156,
-          "pairedPValue": 0.9094394662840998,
+          "liftPoints": -0.8110300081103001,
+          "candidateOnly": 144,
+          "baselineOnly": 154,
+          "pairedPValue": 0.6021932385765321,
           "wilson95": [
-            0.47334771851562435,
-            0.5290778146669879
+            0.4676891643383432,
+            0.5234172139920792
           ],
-          "meanSupport": 182.94322204589844
+          "meanSupport": 72.88402557373047
         },
         "recent": {
           "n": 1150,
           "hits": 594,
           "accuracy": 0.5165217391304348,
-          "standaloneAccuracy": 0.5052173913043478,
+          "standaloneAccuracy": 0.49391304347826087,
           "baselineHits": 587,
           "baselineAccuracy": 0.5104347826086957,
           "liftPoints": 0.6086956521739131,
-          "candidateOnly": 137,
-          "baselineOnly": 130,
-          "pairedPValue": 0.7135487067229681,
+          "candidateOnly": 143,
+          "baselineOnly": 136,
+          "pairedPValue": 0.7195078635236162,
           "wilson95": [
             0.4876324883310117,
             0.5453009790093268
           ],
-          "meanSupport": 191.94000244140625
+          "meanSupport": 72.91217041015625
         },
         "post_cache": {
           "n": 144,
-          "hits": 68,
-          "accuracy": 0.4722222222222222,
-          "standaloneAccuracy": 0.4513888888888889,
+          "hits": 72,
+          "accuracy": 0.5,
+          "standaloneAccuracy": 0.4791666666666667,
           "baselineHits": 60,
           "baselineAccuracy": 0.4166666666666667,
-          "liftPoints": 5.555555555555555,
-          "candidateOnly": 21,
-          "baselineOnly": 13,
-          "pairedPValue": 0.22948101302608848,
+          "liftPoints": 8.333333333333334,
+          "candidateOnly": 23,
+          "baselineOnly": 11,
+          "pairedPValue": 0.05761267291381955,
           "wilson95": [
-            0.39246802374665823,
-            0.5534199560946216
+            0.4194027960425476,
+            0.5805972039574524
           ],
-          "meanSupport": 195.90972900390625
+          "meanSupport": 72.25694274902344
         },
         "independent_extension": {
           "n": 44,
-          "hits": 27,
-          "accuracy": 0.6136363636363636,
-          "standaloneAccuracy": 0.7272727272727273,
+          "hits": 24,
+          "accuracy": 0.5454545454545454,
+          "standaloneAccuracy": 0.5909090909090909,
           "baselineHits": 28,
           "baselineAccuracy": 0.6363636363636364,
-          "liftPoints": -2.272727272727273,
-          "candidateOnly": 4,
-          "baselineOnly": 5,
-          "pairedPValue": 1.0,
+          "liftPoints": -9.090909090909092,
+          "candidateOnly": 2,
+          "baselineOnly": 6,
+          "pairedPValue": 0.2890625,
           "wilson95": [
-            0.4662357539237828,
-            0.7427879724947443
+            0.40066183198961974,
+            0.6829476585777909
           ],
-          "meanSupport": 176.9545440673828
+          "meanSupport": 71.79545593261719
         }
       },
       "confirmation": {
         "n": 2383,
-        "hits": 1212,
-        "accuracy": 0.5086026017624843,
-        "standaloneAccuracy": 0.522031053294167,
+        "hits": 1205,
+        "accuracy": 0.5056651279899287,
+        "standaloneAccuracy": 0.5069240453210239,
         "baselineHits": 1208,
         "baselineAccuracy": 0.5069240453210239,
-        "liftPoints": 0.1678556441460344,
-        "candidateOnly": 290,
-        "baselineOnly": 286,
-        "pairedPValue": 0.9005376791770057,
+        "liftPoints": -0.1258917331095258,
+        "candidateOnly": 287,
+        "baselineOnly": 290,
+        "pairedPValue": 0.9336534576706731,
         "wilson95": [
-          0.48853285795396295,
-          0.5286446549673425
+          0.48559843299637306,
+          0.5257135877079012
         ],
-        "meanSupport": 187.28492736816406
+        "meanSupport": 72.8976058959961
       },
       "laterExtensions": {
         "n": 188,
-        "hits": 95,
-        "accuracy": 0.5053191489361702,
-        "standaloneAccuracy": 0.5159574468085106,
+        "hits": 96,
+        "accuracy": 0.5106382978723404,
+        "standaloneAccuracy": 0.5053191489361702,
         "baselineHits": 88,
         "baselineAccuracy": 0.46808510638297873,
-        "liftPoints": 3.723404255319149,
+        "liftPoints": 4.25531914893617,
         "candidateOnly": 25,
-        "baselineOnly": 18,
-        "pairedPValue": 0.3603776529357674,
+        "baselineOnly": 17,
+        "pairedPValue": 0.27995623852893914,
         "wilson95": [
-          0.43446323505471085,
-          0.5759620401297805
+          0.4396876448572595,
+          0.5811629055117232
         ],
-        "meanSupport": 191.47340393066406
+        "meanSupport": 72.14893341064453
       },
-      "worstMarketSideLiftPoints": -7.5376884422110555,
-      "nonnegativeMonthFraction": 0.3333333333333333,
+      "worstMarketSideLiftPoints": -4.522613065326633,
+      "nonnegativeMonthFraction": 0.5555555555555556,
       "overfitRisk": "medium",
       "confirmationFdrQValue": 0.9993452845484503,
       "gates": {

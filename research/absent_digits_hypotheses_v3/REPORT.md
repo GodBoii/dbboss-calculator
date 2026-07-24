@@ -23,18 +23,17 @@ Conditional Open→Close candidates are reported separately and cannot alter the
 | Hypothesis | Category | Contract | Validation lift (pp) | Holdout | Recent | Confirm p / FDR q | Later lift | Worst route | Stable months | Verdict |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | `frequency_saturation_w90` | frequency | pre_open | +0.17 | +2.27 | -0.17 | 0.1966 / 0.9993 | +2.66 | -7.54 | 55.56% | REJECT |
-| `position_order_pattern` | position | pre_open | -0.81 | +1.38 | +0.70 | 0.08506 / 0.9993 | +0.00 | -4.02 | 44.44% | REJECT |
 | `calendar_season` | calendar | pre_open | -1.15 | +1.62 | +0.30 | 0.1312 / 0.9993 | +1.86 | -7.04 | 66.67% | REJECT |
 | `frequency_saturation_w30` | frequency | pre_open | -0.77 | +1.87 | +0.04 | 0.3009 / 0.9993 | +2.13 | -8.15 | 66.67% | REJECT |
 | `sequence_two_sutta` | automatic_discovery | pre_open | -2.04 | +1.34 | +0.57 | 0.1447 / 0.9993 | +4.26 | -6.17 | 66.67% | REJECT |
 | `interaction_saturation_opposite` | interaction | pre_open | -0.21 | +1.42 | +0.43 | 0.2599 / 0.9993 | +0.27 | -4.52 | 77.78% | REJECT |
+| `position_order_pattern` | position | pre_open | -0.51 | +1.46 | +0.26 | 0.1497 / 0.9993 | -1.33 | -5.03 | 66.67% | REJECT |
 | `calendar_same_month` | calendar | pre_open | -0.13 | +1.66 | +0.00 | 0.2347 / 0.9993 | -0.27 | -4.52 | 55.56% | REJECT |
 | `lag_absence_continue_2` | previous_result | pre_open | -1.58 | +1.70 | -0.17 | 0.226 / 0.9993 | +2.13 | -3.52 | 66.67% | REJECT |
 | `lag_panel_repeat_2` | previous_result | pre_open | -1.58 | +1.70 | -0.17 | 0.226 / 0.9993 | +2.13 | -3.52 | 66.67% | REJECT |
 | `group_transition_signature` | groups_houses | pre_open | -0.64 | +1.58 | -0.13 | 0.321 / 0.9993 | +0.53 | -6.44 | 55.56% | REJECT |
 | `hmm_three_state_sutta` | automatic_discovery | pre_open | -0.17 | +1.46 | +0.00 | 0.2182 / 0.9993 | -1.06 | -5.03 | 44.44% | REJECT |
 | `lag_jodi_transition_2` | sutta_jodi | pre_open | -0.72 | +1.09 | +0.26 | 0.3089 / 0.9993 | -1.33 | -4.52 | 44.44% | REJECT |
-| `position_markov` | position | pre_open | -1.66 | +1.14 | +0.17 | 0.2987 / 0.9993 | +2.93 | -5.53 | 55.56% | REJECT |
 | `auto_warmup_cross_source_selector` | automatic_discovery | pre_open | -1.96 | +1.78 | -0.57 | 0.3301 / 0.9993 | +3.99 | -4.52 | 55.56% | REJECT |
 | `symbolic_previous_sum` | automatic_discovery | pre_open | -1.36 | +1.50 | -0.30 | 0.3182 / 0.9993 | -0.27 | -3.43 | 66.67% | REJECT |
 | `lag_absence_continue_15` | previous_result | pre_open | -0.98 | +1.46 | -0.30 | 0.3504 / 0.9993 | +2.66 | -4.52 | 44.44% | REJECT |
@@ -55,7 +54,6 @@ Conditional Open→Close candidates are reported separately and cannot alter the
 | `day_to_night_transfer` | day_to_night | pre_open | -0.45 | +1.55 | -0.83 | 0.7187 / 0.9993 | +0.00 | -5.53 | 66.67% | REJECT |
 | `lag_sutta_transition_1` | sutta_jodi | pre_open | -0.72 | +1.01 | -0.26 | 0.6071 / 0.9993 | +1.06 | -6.71 | 66.67% | REJECT |
 | `appearance_streak_reverse` | streak_pressure | pre_open | -1.62 | +1.18 | -0.52 | 0.5645 / 0.9993 | +2.13 | -4.02 | 44.44% | REJECT |
-| `interaction_weekday_previous_sutta` | interaction | pre_open | -0.21 | +0.61 | +0.04 | 0.6686 / 0.9993 | -1.86 | -3.66 | 55.56% | REJECT |
 | `association_previous_exact_mask` | automatic_discovery | pre_open | -0.30 | +0.93 | -0.39 | 0.6739 / 0.9993 | +1.86 | -7.32 | 55.56% | REJECT |
 | `lag_sutta_transition_5` | sutta_jodi | pre_open | -0.04 | +0.53 | +0.00 | 0.7304 / 0.9993 | +2.39 | -4.52 | 44.44% | REJECT |
 | `lag_absence_continue_90` | previous_result | pre_open | -0.64 | +0.89 | -0.43 | 0.7251 / 0.9993 | +0.80 | -4.88 | 44.44% | REJECT |
@@ -68,10 +66,10 @@ Conditional Open→Close candidates are reported separately and cannot alter the
 | `lag_jodi_transition_1` | sutta_jodi | pre_open | -0.51 | +0.32 | +0.04 | 0.8004 / 0.9993 | -0.53 | -6.10 | 55.56% | REJECT |
 | `cross_source_main_bazar` | cross_market | pre_open | -1.24 | +1.39 | -1.12 | 0.8098 / 0.9993 | -0.57 | -4.72 | 66.67% | REJECT |
 | `calendar_festival_holiday_window` | calendar | pre_open | -0.72 | +1.05 | -0.78 | 0.8064 / 0.9993 | +0.80 | -5.15 | 44.44% | REJECT |
-| `conditional_current_open_sutta` | open_to_close | post_open_close | +0.17 | -0.24 | +0.61 | 0.9005 / 0.9993 | +3.72 | -7.54 | 33.33% | RESEARCH_ONLY_CONDITIONAL |
 | `lag_absence_continue_7` | previous_result | pre_open | -1.06 | +0.73 | -0.48 | 0.8441 / 0.9993 | +2.39 | -6.03 | 55.56% | REJECT |
 | `lag_opposite_3` | opposite_rotation | pre_open | -2.68 | +1.26 | -1.04 | 0.8496 / 0.9993 | +0.80 | -4.02 | 33.33% | REJECT |
 | `lag_panel_repeat_7` | previous_result | pre_open | -1.06 | +0.73 | -0.48 | 0.8441 / 0.9993 | +2.39 | -6.03 | 55.56% | REJECT |
+| `position_markov` | position | pre_open | -1.24 | +0.77 | -0.52 | 0.8459 / 0.9993 | +0.53 | -6.53 | 44.44% | REJECT |
 | `previous_predicted_pair_persistence` | previous_prediction | pre_open | -1.02 | +0.65 | -0.43 | 0.8583 / 0.9993 | +0.80 | -6.53 | 66.67% | REJECT |
 | `rotation_plus_3` | opposite_rotation | pre_open | -1.70 | +0.77 | -0.61 | 0.899 / 0.9993 | -1.06 | -3.02 | 33.33% | REJECT |
 | `interaction_daynight_weekday` | interaction | pre_open | -0.09 | +1.20 | -1.11 | 0.9639 / 0.9993 | +0.54 | -6.03 | 55.56% | REJECT |
@@ -88,6 +86,7 @@ Conditional Open→Close candidates are reported separately and cannot alter the
 | `cross_source_kalyan` | cross_market | pre_open | -1.58 | +0.71 | -0.95 | 0.9181 / 0.9993 | +1.45 | -10.05 | 33.33% | REJECT |
 | `frequency_hot_w90` | frequency | pre_open | -1.19 | +0.24 | -0.48 | 0.8891 / 0.9993 | +1.33 | -4.52 | 55.56% | REJECT |
 | `balance_prime_w15` | balance | pre_open | -0.85 | -0.08 | -0.17 | 0.8745 / 0.9993 | +1.06 | -5.58 | 44.44% | REJECT |
+| `conditional_current_open_sutta` | open_to_close | post_open_close | +1.02 | -0.81 | +0.61 | 0.9337 / 0.9993 | +4.26 | -4.52 | 55.56% | RESEARCH_ONLY_CONDITIONAL |
 | `lag_opposite_30` | opposite_rotation | pre_open | -1.28 | -0.08 | -0.17 | 0.876 / 0.9993 | -0.27 | -6.44 | 55.56% | REJECT |
 | `lag_sutta_transition_2` | sutta_jodi | pre_open | -0.81 | +0.36 | -0.65 | 0.8847 / 0.9993 | +0.80 | -5.03 | 55.56% | REJECT |
 | `lag_sutta_transition_7` | sutta_jodi | pre_open | +0.00 | +0.53 | -0.83 | 0.8857 / 0.9993 | +0.80 | -3.43 | 44.44% | REJECT |
@@ -106,6 +105,7 @@ Conditional Open→Close candidates are reported separately and cannot alter the
 | `lag_panel_repeat_3` | previous_result | pre_open | -1.15 | +0.41 | -1.04 | 0.6672 / 0.9993 | -2.66 | -6.03 | 33.33% | REJECT |
 | `lag_panel_repeat_5` | previous_result | pre_open | -2.26 | +0.45 | -1.09 | 0.6699 / 0.9993 | +1.86 | -4.52 | 44.44% | REJECT |
 | `lag_opposite_90` | opposite_rotation | pre_open | -0.81 | +0.93 | -1.70 | 0.6332 / 0.9993 | +1.06 | -6.03 | 44.44% | REJECT |
+| `interaction_weekday_previous_sutta` | interaction | pre_open | -0.85 | -0.20 | -0.52 | 0.6291 / 0.9993 | +1.06 | -9.05 | 55.56% | REJECT |
 | `rotation_plus_2` | opposite_rotation | pre_open | -1.87 | +0.45 | -1.22 | 0.6117 / 0.9993 | -1.06 | -7.93 | 33.33% | REJECT |
 | `lag_opposite_1` | opposite_rotation | pre_open | -0.77 | +0.24 | -1.04 | 0.5909 / 0.9993 | -0.27 | -3.43 | 33.33% | REJECT |
 | `rotation_plus_5` | opposite_rotation | pre_open | -0.77 | +0.24 | -1.04 | 0.5909 / 0.9993 | -0.27 | -3.43 | 33.33% | REJECT |
