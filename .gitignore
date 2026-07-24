@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+/.playwright-cli/
+**/__pycache__/
+*.pyc
 
 # next.js
 /.next/
@@ -29,6 +32,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+/scratch/*.json
+/scratch/*.log
+/scratch/*.txt
 
 # env files (can opt-in for committing if needed)
 .env*
