@@ -1,0 +1,1031 @@
+{
+  "modelId": "present-digits-joint-coappearance-v1",
+  "generatedAt": "2026-07-24",
+  "latestActualDate": "2026-07-23",
+  "strictTarget": "both selected digits occur in the same panel",
+  "targetAccuracy": 0.7,
+  "minimumHistory": 180,
+  "source": {
+    "extendedGeneratedAt": "2026-07-23T19:56:39.598Z",
+    "independentGeneratedAt": "2026-07-23T20:00:18.492Z",
+    "counts": {
+      "Sridevi": 2009,
+      "Time Bazar": 1728,
+      "Madhur Day": 2985,
+      "Milan Day": 1196,
+      "Rajdhani Day": 3981,
+      "Kalyan": 1141,
+      "Sridevi Night": 1994,
+      "Kalyan Night": 1861,
+      "Madhur Night": 2555,
+      "Milan Night": 1379,
+      "Rajdhani Night": 1409,
+      "Main Bazar": 1157
+    },
+    "latest": {
+      "Sridevi": "2026-07-23",
+      "Time Bazar": "2026-07-23",
+      "Madhur Day": "2026-07-23",
+      "Milan Day": "2026-07-23",
+      "Rajdhani Day": "2026-07-18",
+      "Kalyan": "2026-07-23",
+      "Sridevi Night": "2026-07-23",
+      "Kalyan Night": "2026-07-23",
+      "Madhur Night": "2026-07-23",
+      "Milan Night": "2026-07-23",
+      "Rajdhani Night": "2026-07-23",
+      "Main Bazar": "2026-07-23"
+    }
+  },
+  "candidateModels": [
+    "joint_30",
+    "joint_90",
+    "joint_180",
+    "joint_730",
+    "avoid_appearance_marginal",
+    "panel_rank_recency",
+    "weekday_joint",
+    "sutta_conditioned",
+    "sp_dp_conditioned",
+    "jodi_transition",
+    "other_side_model_transfer"
+  ],
+  "windows": {
+    "last30": {
+      "start": "2026-06-24",
+      "end": "2026-07-23",
+      "events": 610
+    },
+    "last180": {
+      "start": "2026-01-25",
+      "end": "2026-07-23",
+      "events": 3636
+    }
+  },
+  "comparisons": {
+    "last30": {
+      "joint_30": {
+        "events": 610,
+        "hits": 27,
+        "accuracy": 0.04426229508196721
+      },
+      "joint_90": {
+        "events": 610,
+        "hits": 44,
+        "accuracy": 0.07213114754098361
+      },
+      "joint_180": {
+        "events": 610,
+        "hits": 44,
+        "accuracy": 0.07213114754098361
+      },
+      "joint_730": {
+        "events": 610,
+        "hits": 38,
+        "accuracy": 0.06229508196721312
+      },
+      "avoid_appearance_marginal": {
+        "events": 610,
+        "hits": 37,
+        "accuracy": 0.060655737704918035
+      },
+      "panel_rank_recency": {
+        "events": 610,
+        "hits": 36,
+        "accuracy": 0.05901639344262295
+      },
+      "weekday_joint": {
+        "events": 610,
+        "hits": 35,
+        "accuracy": 0.05737704918032787
+      },
+      "sutta_conditioned": {
+        "events": 610,
+        "hits": 37,
+        "accuracy": 0.060655737704918035
+      },
+      "sp_dp_conditioned": {
+        "events": 610,
+        "hits": 33,
+        "accuracy": 0.054098360655737705
+      },
+      "jodi_transition": {
+        "events": 610,
+        "hits": 32,
+        "accuracy": 0.05245901639344262
+      },
+      "other_side_model_transfer": {
+        "events": 610,
+        "hits": 31,
+        "accuracy": 0.05081967213114754
+      }
+    },
+    "last180": {
+      "joint_30": {
+        "events": 3636,
+        "hits": 176,
+        "accuracy": 0.0484048404840484
+      },
+      "joint_90": {
+        "events": 3636,
+        "hits": 219,
+        "accuracy": 0.06023102310231023
+      },
+      "joint_180": {
+        "events": 3636,
+        "hits": 226,
+        "accuracy": 0.06215621562156216
+      },
+      "joint_730": {
+        "events": 3636,
+        "hits": 208,
+        "accuracy": 0.05720572057205721
+      },
+      "avoid_appearance_marginal": {
+        "events": 3636,
+        "hits": 211,
+        "accuracy": 0.05803080308030803
+      },
+      "panel_rank_recency": {
+        "events": 3636,
+        "hits": 215,
+        "accuracy": 0.059130913091309134
+      },
+      "weekday_joint": {
+        "events": 3636,
+        "hits": 182,
+        "accuracy": 0.05005500550055005
+      },
+      "sutta_conditioned": {
+        "events": 3636,
+        "hits": 201,
+        "accuracy": 0.05528052805280528
+      },
+      "sp_dp_conditioned": {
+        "events": 3636,
+        "hits": 214,
+        "accuracy": 0.05885588558855886
+      },
+      "jodi_transition": {
+        "events": 3636,
+        "hits": 203,
+        "accuracy": 0.05583058305830583
+      },
+      "other_side_model_transfer": {
+        "events": 3636,
+        "hits": 214,
+        "accuracy": 0.05885588558855886
+      }
+    }
+  },
+  "pairedVsSelected": {
+    "last30": {
+      "joint_30": {
+        "candidateOnly": 20,
+        "baselineOnly": 37,
+        "exactSignP": 0.033143967787505446
+      },
+      "joint_90": {
+        "candidateOnly": 28,
+        "baselineOnly": 28,
+        "exactSignP": 1.0
+      },
+      "joint_730": {
+        "candidateOnly": 21,
+        "baselineOnly": 27,
+        "exactSignP": 0.4708790136217118
+      },
+      "avoid_appearance_marginal": {
+        "candidateOnly": 22,
+        "baselineOnly": 29,
+        "exactSignP": 0.4010619910279374
+      },
+      "panel_rank_recency": {
+        "candidateOnly": 9,
+        "baselineOnly": 17,
+        "exactSignP": 0.16863754391670227
+      },
+      "weekday_joint": {
+        "candidateOnly": 32,
+        "baselineOnly": 41,
+        "exactSignP": 0.3491818381705883
+      },
+      "sutta_conditioned": {
+        "candidateOnly": 31,
+        "baselineOnly": 38,
+        "exactSignP": 0.4703685318581444
+      },
+      "sp_dp_conditioned": {
+        "candidateOnly": 20,
+        "baselineOnly": 31,
+        "exactSignP": 0.16077960181198847
+      },
+      "jodi_transition": {
+        "candidateOnly": 29,
+        "baselineOnly": 41,
+        "exactSignP": 0.18821620302302766
+      },
+      "other_side_model_transfer": {
+        "candidateOnly": 27,
+        "baselineOnly": 40,
+        "exactSignP": 0.14207137942637568
+      }
+    },
+    "last180": {
+      "joint_30": {
+        "candidateOnly": 148,
+        "baselineOnly": 198,
+        "exactSignP": 0.008338407850182302
+      },
+      "joint_90": {
+        "candidateOnly": 136,
+        "baselineOnly": 143,
+        "exactSignP": 0.7195078635236162
+      },
+      "joint_730": {
+        "candidateOnly": 145,
+        "baselineOnly": 163,
+        "exactSignP": 0.3327210453187684
+      },
+      "avoid_appearance_marginal": {
+        "candidateOnly": 133,
+        "baselineOnly": 148,
+        "exactSignP": 0.4036648897829972
+      },
+      "panel_rank_recency": {
+        "candidateOnly": 93,
+        "baselineOnly": 104,
+        "exactSignP": 0.4762667150679856
+      },
+      "weekday_joint": {
+        "candidateOnly": 158,
+        "baselineOnly": 202,
+        "exactSignP": 0.02330003785079787
+      },
+      "sutta_conditioned": {
+        "candidateOnly": 168,
+        "baselineOnly": 193,
+        "exactSignP": 0.20647030847501974
+      },
+      "sp_dp_conditioned": {
+        "candidateOnly": 150,
+        "baselineOnly": 162,
+        "exactSignP": 0.5335147017233859
+      },
+      "jodi_transition": {
+        "candidateOnly": 189,
+        "baselineOnly": 212,
+        "exactSignP": 0.27191022051905434
+      },
+      "other_side_model_transfer": {
+        "candidateOnly": 196,
+        "baselineOnly": 208,
+        "exactSignP": 0.5842475392327685
+      }
+    }
+  },
+  "marketSide": {
+    "Sridevi|open": {
+      "last30": {
+        "events": 30,
+        "hits": 5,
+        "accuracy": 0.16666666666666666
+      },
+      "last180": {
+        "events": 178,
+        "hits": 19,
+        "accuracy": 0.10674157303370786
+      }
+    },
+    "Sridevi|close": {
+      "last30": {
+        "events": 30,
+        "hits": 4,
+        "accuracy": 0.13333333333333333
+      },
+      "last180": {
+        "events": 178,
+        "hits": 10,
+        "accuracy": 0.056179775280898875
+      }
+    },
+    "Time Bazar|open": {
+      "last30": {
+        "events": 26,
+        "hits": 2,
+        "accuracy": 0.07692307692307693
+      },
+      "last180": {
+        "events": 152,
+        "hits": 12,
+        "accuracy": 0.07894736842105263
+      }
+    },
+    "Time Bazar|close": {
+      "last30": {
+        "events": 26,
+        "hits": 1,
+        "accuracy": 0.038461538461538464
+      },
+      "last180": {
+        "events": 152,
+        "hits": 10,
+        "accuracy": 0.06578947368421052
+      }
+    },
+    "Madhur Day|open": {
+      "last30": {
+        "events": 30,
+        "hits": 1,
+        "accuracy": 0.03333333333333333
+      },
+      "last180": {
+        "events": 178,
+        "hits": 8,
+        "accuracy": 0.0449438202247191
+      }
+    },
+    "Madhur Day|close": {
+      "last30": {
+        "events": 30,
+        "hits": 4,
+        "accuracy": 0.13333333333333333
+      },
+      "last180": {
+        "events": 178,
+        "hits": 13,
+        "accuracy": 0.07303370786516854
+      }
+    },
+    "Milan Day|open": {
+      "last30": {
+        "events": 26,
+        "hits": 2,
+        "accuracy": 0.07692307692307693
+      },
+      "last180": {
+        "events": 152,
+        "hits": 6,
+        "accuracy": 0.039473684210526314
+      }
+    },
+    "Milan Day|close": {
+      "last30": {
+        "events": 26,
+        "hits": 1,
+        "accuracy": 0.038461538461538464
+      },
+      "last180": {
+        "events": 152,
+        "hits": 8,
+        "accuracy": 0.05263157894736842
+      }
+    },
+    "Rajdhani Day|open": {
+      "last30": {
+        "events": 22,
+        "hits": 3,
+        "accuracy": 0.13636363636363635
+      },
+      "last180": {
+        "events": 148,
+        "hits": 16,
+        "accuracy": 0.10810810810810811
+      }
+    },
+    "Rajdhani Day|close": {
+      "last30": {
+        "events": 22,
+        "hits": 1,
+        "accuracy": 0.045454545454545456
+      },
+      "last180": {
+        "events": 148,
+        "hits": 10,
+        "accuracy": 0.06756756756756757
+      }
+    },
+    "Kalyan|open": {
+      "last30": {
+        "events": 26,
+        "hits": 2,
+        "accuracy": 0.07692307692307693
+      },
+      "last180": {
+        "events": 152,
+        "hits": 14,
+        "accuracy": 0.09210526315789473
+      }
+    },
+    "Kalyan|close": {
+      "last30": {
+        "events": 26,
+        "hits": 3,
+        "accuracy": 0.11538461538461539
+      },
+      "last180": {
+        "events": 152,
+        "hits": 12,
+        "accuracy": 0.07894736842105263
+      }
+    },
+    "Sridevi Night|open": {
+      "last30": {
+        "events": 30,
+        "hits": 2,
+        "accuracy": 0.06666666666666667
+      },
+      "last180": {
+        "events": 178,
+        "hits": 7,
+        "accuracy": 0.03932584269662921
+      }
+    },
+    "Sridevi Night|close": {
+      "last30": {
+        "events": 30,
+        "hits": 3,
+        "accuracy": 0.1
+      },
+      "last180": {
+        "events": 178,
+        "hits": 9,
+        "accuracy": 0.05056179775280899
+      }
+    },
+    "Kalyan Night|open": {
+      "last30": {
+        "events": 19,
+        "hits": 1,
+        "accuracy": 0.05263157894736842
+      },
+      "last180": {
+        "events": 124,
+        "hits": 3,
+        "accuracy": 0.024193548387096774
+      }
+    },
+    "Kalyan Night|close": {
+      "last30": {
+        "events": 19,
+        "hits": 0,
+        "accuracy": 0.0
+      },
+      "last180": {
+        "events": 124,
+        "hits": 5,
+        "accuracy": 0.04032258064516129
+      }
+    },
+    "Madhur Night|open": {
+      "last30": {
+        "events": 26,
+        "hits": 2,
+        "accuracy": 0.07692307692307693
+      },
+      "last180": {
+        "events": 152,
+        "hits": 10,
+        "accuracy": 0.06578947368421052
+      }
+    },
+    "Madhur Night|close": {
+      "last30": {
+        "events": 26,
+        "hits": 1,
+        "accuracy": 0.038461538461538464
+      },
+      "last180": {
+        "events": 152,
+        "hits": 5,
+        "accuracy": 0.03289473684210526
+      }
+    },
+    "Milan Night|open": {
+      "last30": {
+        "events": 26,
+        "hits": 0,
+        "accuracy": 0.0
+      },
+      "last180": {
+        "events": 151,
+        "hits": 7,
+        "accuracy": 0.046357615894039736
+      }
+    },
+    "Milan Night|close": {
+      "last30": {
+        "events": 26,
+        "hits": 0,
+        "accuracy": 0.0
+      },
+      "last180": {
+        "events": 151,
+        "hits": 14,
+        "accuracy": 0.09271523178807947
+      }
+    },
+    "Rajdhani Night|open": {
+      "last30": {
+        "events": 22,
+        "hits": 3,
+        "accuracy": 0.13636363636363635
+      },
+      "last180": {
+        "events": 127,
+        "hits": 8,
+        "accuracy": 0.06299212598425197
+      }
+    },
+    "Rajdhani Night|close": {
+      "last30": {
+        "events": 22,
+        "hits": 0,
+        "accuracy": 0.0
+      },
+      "last180": {
+        "events": 127,
+        "hits": 3,
+        "accuracy": 0.023622047244094488
+      }
+    },
+    "Main Bazar|open": {
+      "last30": {
+        "events": 22,
+        "hits": 1,
+        "accuracy": 0.045454545454545456
+      },
+      "last180": {
+        "events": 126,
+        "hits": 3,
+        "accuracy": 0.023809523809523808
+      }
+    },
+    "Main Bazar|close": {
+      "last30": {
+        "events": 22,
+        "hits": 2,
+        "accuracy": 0.09090909090909091
+      },
+      "last180": {
+        "events": 126,
+        "hits": 14,
+        "accuracy": 0.1111111111111111
+      }
+    }
+  },
+  "routeSelection": {
+    "Sridevi|open": {
+      "trainingEvents": 362,
+      "baseline": {
+        "events": 362,
+        "hits": 18,
+        "accuracy": 0.049723756906077346
+      },
+      "bestCandidate": "other_side_model_transfer",
+      "bestCandidateMetric": {
+        "events": 362,
+        "hits": 27,
+        "accuracy": 0.07458563535911603
+      },
+      "improvementHits": 9,
+      "stableAcrossHalves": true,
+      "selected": "other_side_model_transfer"
+    },
+    "Sridevi|close": {
+      "trainingEvents": 362,
+      "baseline": {
+        "events": 362,
+        "hits": 15,
+        "accuracy": 0.04143646408839779
+      },
+      "bestCandidate": "avoid_appearance_marginal",
+      "bestCandidateMetric": {
+        "events": 362,
+        "hits": 30,
+        "accuracy": 0.08287292817679558
+      },
+      "improvementHits": 15,
+      "stableAcrossHalves": true,
+      "selected": "avoid_appearance_marginal"
+    },
+    "Time Bazar|open": {
+      "trainingEvents": 303,
+      "baseline": {
+        "events": 303,
+        "hits": 16,
+        "accuracy": 0.052805280528052806
+      },
+      "bestCandidate": "joint_90",
+      "bestCandidateMetric": {
+        "events": 303,
+        "hits": 25,
+        "accuracy": 0.08250825082508251
+      },
+      "improvementHits": 9,
+      "stableAcrossHalves": true,
+      "selected": "joint_90"
+    },
+    "Time Bazar|close": {
+      "trainingEvents": 303,
+      "baseline": {
+        "events": 303,
+        "hits": 14,
+        "accuracy": 0.0462046204620462
+      },
+      "bestCandidate": "sp_dp_conditioned",
+      "bestCandidateMetric": {
+        "events": 303,
+        "hits": 17,
+        "accuracy": 0.056105610561056105
+      },
+      "improvementHits": 3,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Madhur Day|open": {
+      "trainingEvents": 352,
+      "baseline": {
+        "events": 352,
+        "hits": 14,
+        "accuracy": 0.03977272727272727
+      },
+      "bestCandidate": "sp_dp_conditioned",
+      "bestCandidateMetric": {
+        "events": 352,
+        "hits": 22,
+        "accuracy": 0.0625
+      },
+      "improvementHits": 8,
+      "stableAcrossHalves": true,
+      "selected": "sp_dp_conditioned"
+    },
+    "Madhur Day|close": {
+      "trainingEvents": 352,
+      "baseline": {
+        "events": 352,
+        "hits": 20,
+        "accuracy": 0.056818181818181816
+      },
+      "bestCandidate": "other_side_model_transfer",
+      "bestCandidateMetric": {
+        "events": 352,
+        "hits": 23,
+        "accuracy": 0.06534090909090909
+      },
+      "improvementHits": 3,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Milan Day|open": {
+      "trainingEvents": 303,
+      "baseline": {
+        "events": 303,
+        "hits": 17,
+        "accuracy": 0.056105610561056105
+      },
+      "bestCandidate": "jodi_transition",
+      "bestCandidateMetric": {
+        "events": 303,
+        "hits": 23,
+        "accuracy": 0.07590759075907591
+      },
+      "improvementHits": 6,
+      "stableAcrossHalves": true,
+      "selected": "jodi_transition"
+    },
+    "Milan Day|close": {
+      "trainingEvents": 303,
+      "baseline": {
+        "events": 303,
+        "hits": 22,
+        "accuracy": 0.07260726072607261
+      },
+      "bestCandidate": "sp_dp_conditioned",
+      "bestCandidateMetric": {
+        "events": 303,
+        "hits": 23,
+        "accuracy": 0.07590759075907591
+      },
+      "improvementHits": 1,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Rajdhani Day|open": {
+      "trainingEvents": 304,
+      "baseline": {
+        "events": 304,
+        "hits": 13,
+        "accuracy": 0.04276315789473684
+      },
+      "bestCandidate": "sp_dp_conditioned",
+      "bestCandidateMetric": {
+        "events": 304,
+        "hits": 25,
+        "accuracy": 0.08223684210526316
+      },
+      "improvementHits": 12,
+      "stableAcrossHalves": false,
+      "selected": "joint_180"
+    },
+    "Rajdhani Day|close": {
+      "trainingEvents": 304,
+      "baseline": {
+        "events": 304,
+        "hits": 18,
+        "accuracy": 0.05921052631578947
+      },
+      "bestCandidate": "joint_90",
+      "bestCandidateMetric": {
+        "events": 304,
+        "hits": 26,
+        "accuracy": 0.08552631578947369
+      },
+      "improvementHits": 8,
+      "stableAcrossHalves": true,
+      "selected": "joint_90"
+    },
+    "Kalyan|open": {
+      "trainingEvents": 304,
+      "baseline": {
+        "events": 304,
+        "hits": 23,
+        "accuracy": 0.0756578947368421
+      },
+      "bestCandidate": "panel_rank_recency",
+      "bestCandidateMetric": {
+        "events": 304,
+        "hits": 27,
+        "accuracy": 0.08881578947368421
+      },
+      "improvementHits": 4,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Kalyan|close": {
+      "trainingEvents": 304,
+      "baseline": {
+        "events": 304,
+        "hits": 13,
+        "accuracy": 0.04276315789473684
+      },
+      "bestCandidate": "joint_90",
+      "bestCandidateMetric": {
+        "events": 304,
+        "hits": 24,
+        "accuracy": 0.07894736842105263
+      },
+      "improvementHits": 11,
+      "stableAcrossHalves": true,
+      "selected": "joint_90"
+    },
+    "Sridevi Night|open": {
+      "trainingEvents": 362,
+      "baseline": {
+        "events": 362,
+        "hits": 19,
+        "accuracy": 0.052486187845303865
+      },
+      "bestCandidate": "weekday_joint",
+      "bestCandidateMetric": {
+        "events": 362,
+        "hits": 26,
+        "accuracy": 0.0718232044198895
+      },
+      "improvementHits": 7,
+      "stableAcrossHalves": false,
+      "selected": "joint_180"
+    },
+    "Sridevi Night|close": {
+      "trainingEvents": 362,
+      "baseline": {
+        "events": 362,
+        "hits": 22,
+        "accuracy": 0.06077348066298342
+      },
+      "bestCandidate": "sutta_conditioned",
+      "bestCandidateMetric": {
+        "events": 362,
+        "hits": 23,
+        "accuracy": 0.06353591160220995
+      },
+      "improvementHits": 1,
+      "stableAcrossHalves": false,
+      "selected": "joint_180"
+    },
+    "Kalyan Night|open": {
+      "trainingEvents": 251,
+      "baseline": {
+        "events": 251,
+        "hits": 15,
+        "accuracy": 0.05976095617529881
+      },
+      "bestCandidate": "avoid_appearance_marginal",
+      "bestCandidateMetric": {
+        "events": 251,
+        "hits": 20,
+        "accuracy": 0.0796812749003984
+      },
+      "improvementHits": 5,
+      "stableAcrossHalves": true,
+      "selected": "avoid_appearance_marginal"
+    },
+    "Kalyan Night|close": {
+      "trainingEvents": 251,
+      "baseline": {
+        "events": 251,
+        "hits": 18,
+        "accuracy": 0.07171314741035857
+      },
+      "bestCandidate": "joint_30",
+      "bestCandidateMetric": {
+        "events": 251,
+        "hits": 20,
+        "accuracy": 0.0796812749003984
+      },
+      "improvementHits": 2,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Madhur Night|open": {
+      "trainingEvents": 304,
+      "baseline": {
+        "events": 304,
+        "hits": 16,
+        "accuracy": 0.05263157894736842
+      },
+      "bestCandidate": "avoid_appearance_marginal",
+      "bestCandidateMetric": {
+        "events": 304,
+        "hits": 25,
+        "accuracy": 0.08223684210526316
+      },
+      "improvementHits": 9,
+      "stableAcrossHalves": true,
+      "selected": "avoid_appearance_marginal"
+    },
+    "Madhur Night|close": {
+      "trainingEvents": 304,
+      "baseline": {
+        "events": 304,
+        "hits": 20,
+        "accuracy": 0.06578947368421052
+      },
+      "bestCandidate": "joint_180",
+      "bestCandidateMetric": {
+        "events": 304,
+        "hits": 20,
+        "accuracy": 0.06578947368421052
+      },
+      "improvementHits": 0,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Milan Night|open": {
+      "trainingEvents": 301,
+      "baseline": {
+        "events": 301,
+        "hits": 16,
+        "accuracy": 0.053156146179401995
+      },
+      "bestCandidate": "joint_180",
+      "bestCandidateMetric": {
+        "events": 301,
+        "hits": 16,
+        "accuracy": 0.053156146179401995
+      },
+      "improvementHits": 0,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Milan Night|close": {
+      "trainingEvents": 301,
+      "baseline": {
+        "events": 301,
+        "hits": 23,
+        "accuracy": 0.07641196013289037
+      },
+      "bestCandidate": "joint_730",
+      "bestCandidateMetric": {
+        "events": 301,
+        "hits": 27,
+        "accuracy": 0.08970099667774087
+      },
+      "improvementHits": 4,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Rajdhani Night|open": {
+      "trainingEvents": 253,
+      "baseline": {
+        "events": 253,
+        "hits": 13,
+        "accuracy": 0.05138339920948617
+      },
+      "bestCandidate": "joint_30",
+      "bestCandidateMetric": {
+        "events": 253,
+        "hits": 17,
+        "accuracy": 0.06719367588932806
+      },
+      "improvementHits": 4,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Rajdhani Night|close": {
+      "trainingEvents": 253,
+      "baseline": {
+        "events": 253,
+        "hits": 14,
+        "accuracy": 0.05533596837944664
+      },
+      "bestCandidate": "joint_30",
+      "bestCandidateMetric": {
+        "events": 253,
+        "hits": 15,
+        "accuracy": 0.05928853754940711
+      },
+      "improvementHits": 1,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    },
+    "Main Bazar|open": {
+      "trainingEvents": 253,
+      "baseline": {
+        "events": 253,
+        "hits": 10,
+        "accuracy": 0.039525691699604744
+      },
+      "bestCandidate": "joint_730",
+      "bestCandidateMetric": {
+        "events": 253,
+        "hits": 16,
+        "accuracy": 0.06324110671936758
+      },
+      "improvementHits": 6,
+      "stableAcrossHalves": true,
+      "selected": "joint_730"
+    },
+    "Main Bazar|close": {
+      "trainingEvents": 253,
+      "baseline": {
+        "events": 253,
+        "hits": 17,
+        "accuracy": 0.06719367588932806
+      },
+      "bestCandidate": "joint_180",
+      "bestCandidateMetric": {
+        "events": 253,
+        "hits": 17,
+        "accuracy": 0.06719367588932806
+      },
+      "improvementHits": 0,
+      "stableAcrossHalves": true,
+      "selected": "joint_180"
+    }
+  },
+  "routed": {
+    "last30": {
+      "events": 610,
+      "hits": 44,
+      "accuracy": 0.07213114754098361
+    },
+    "last180": {
+      "events": 3636,
+      "hits": 228,
+      "accuracy": 0.0627062706270627
+    }
+  },
+  "routedComparison": {
+    "last30": {
+      "routedOnly": 11,
+      "baselineOnly": 11,
+      "exactSignP": 1.0
+    },
+    "last180": {
+      "routedOnly": 73,
+      "baselineOnly": 71,
+      "exactSignP": 0.9336249535488027
+    }
+  },
+  "decision": {
+    "selectedModel": "joint_180",
+    "marketSpecificRoutesPromoted": [],
+    "observationalRouteCandidates": [
+      "Sridevi|open",
+      "Sridevi|close",
+      "Time Bazar|open",
+      "Madhur Day|open",
+      "Milan Day|open",
+      "Rajdhani Day|close",
+      "Kalyan|close",
+      "Kalyan Night|open",
+      "Madhur Night|open",
+      "Main Bazar|open"
+    ],
+    "routingConfirmed": false,
+    "targetReached": false,
+    "borrowedSignalsKept": [],
+    "reason": "The direct 180-draw joint model was strongest and most stable. Borrowed signal families did not improve the final 180-day strict result, and trained market routes added only two aggregate holdout hits."
+  }
+}
