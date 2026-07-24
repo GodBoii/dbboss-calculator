@@ -142,13 +142,13 @@ export function AnalysisTabs({
                         <KindForecastCard label="Open Kind Forecast" prediction={result.openKindPrediction} />
                         <div className="picks-hint-row">
                           <p className="picks-hint" style={{ margin: 0 }}>
-                            Open panel predictions - scored against Open-position history only
+                            Top 60 Open panels - ranked from Open-position history only
                           </p>
                           <p className="picks-hint picks-hint-calibration">
-                            Panel {result.calibration.open.panel30.toFixed(1)}% / Sutta {result.calibration.open.sutta30.toFixed(1)}%
+                            Panel@30 {result.calibration.open.panel30.toFixed(1)}% / Sutta@30 {result.calibration.open.sutta30.toFixed(1)}%
                           </p>
                           <CopyButton
-                            label="Copy Open"
+                            label="Copy Open 60"
                             isCopied={copyingKey === "open"}
                             onClick={() =>
                               handleCopy(
@@ -199,13 +199,13 @@ export function AnalysisTabs({
                         <KindForecastCard label="Close Kind Forecast" prediction={result.closeKindPrediction} />
                         <div className="picks-hint-row">
                           <p className="picks-hint" style={{ margin: 0 }}>
-                            Close panel predictions - scored against Close-position history only
+                            Top 60 Close panels - ranked from Close-position history only
                           </p>
                           <p className="picks-hint picks-hint-calibration">
-                            Panel {result.calibration.close.panel30.toFixed(1)}% / Sutta {result.calibration.close.sutta30.toFixed(1)}%
+                            Panel@30 {result.calibration.close.panel30.toFixed(1)}% / Sutta@30 {result.calibration.close.sutta30.toFixed(1)}%
                           </p>
                           <CopyButton
-                            label="Copy Close"
+                            label="Copy Close 60"
                             isCopied={copyingKey === "close"}
                             onClick={() =>
                               handleCopy(
@@ -430,6 +430,16 @@ export function AnalysisTabs({
                         <div className="stat-row">
                           <span className="stat-label">Random panel@30 baseline</span>
                           <span className="stat-value">{(backtestReport.randomTop30Baseline * 100).toFixed(1)}%</span>
+                        </div>
+                        <div className="stat-row">
+                          <span className="stat-label">Random panel@60 baseline</span>
+                          <span className="stat-value">{(backtestReport.randomTop60Baseline * 100).toFixed(1)}%</span>
+                        </div>
+                        <div className="stat-row">
+                          <span className="stat-label">Open panel@60 / Close panel@60</span>
+                          <span className="stat-value">
+                            {pct(backtestReport.open.panelTop60, backtestReport.open.n)} / {pct(backtestReport.close.panelTop60, backtestReport.close.n)}
+                          </span>
                         </div>
                         <div className="stat-row">
                           <span className="stat-label">Open panel@30 / sutta@30</span>
