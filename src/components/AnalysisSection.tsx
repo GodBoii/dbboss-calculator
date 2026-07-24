@@ -14,6 +14,10 @@ import {
   buildAbsentDigitsPredictionFromPanels,
   type AbsentDigitSidePrediction,
 } from "@/lib/absent-digits"
+import {
+  buildPresentDigitsPredictionFromPanels,
+  type PresentDigitSidePrediction,
+} from "@/lib/present-digits"
 import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
 import {
   saveRecords,
@@ -343,6 +347,64 @@ function AvoidDigitColumn({
   )
 }
 
+function PresentDigitColumn({
+  label,
+  prediction,
+}: {
+  label: string
+  prediction: PresentDigitSidePrediction | null
+}) {
+  if (!prediction) {
+    return (
+      <div className="avoid-digit-column avoid-digit-column--blocked">
+        <div className="avoid-digit-column-head">
+          <span className="avoid-digit-label">{label}</span>
+          <span className="avoid-digit-meta avoid-digit-meta--blocked">Insufficient history</span>
+        </div>
+        <p className="avoid-digit-status">At least 180 completed draws are required.</p>
+      </div>
+    )
+  }
+
+  const targetReached = prediction.status === "TARGET_REACHED"
+  const percent = (value: number) => `${(value * 100).toFixed(1)}%`
+  const probabilityByDigit = new Map(
+    prediction.digitProbabilities.map((item) => [item.digit, item]),
+  )
+
+  return (
+    <div className={`avoid-digit-column ${targetReached ? "avoid-digit-column--call" : "avoid-digit-column--blocked"}`}>
+      <div className="avoid-digit-column-head">
+        <span className="avoid-digit-label">{label}</span>
+        <span className={`avoid-digit-meta ${targetReached ? "avoid-digit-meta--call" : "avoid-digit-meta--blocked"}`}>
+          {targetReached ? "Target gate passed" : "Research only"}
+        </span>
+      </div>
+      <div className="avoid-digit-row">
+        {prediction.predictedDigits.map((digit) => (
+          <div key={`${label}-present-${digit}`} className="avoid-digit-chip present-digit-chip">
+            <span className="avoid-digit-number">{digit}</span>
+            <span className="avoid-digit-pressure">
+              {percent(probabilityByDigit.get(digit)?.appearanceProbability ?? 0)} marginal present
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="avoid-digit-evidence">
+        <span>Estimated joint rate: {percent(prediction.jointProbability)}</span>
+        <span>Trailing strict: {percent(prediction.historicalReliability)} ({prediction.reliabilitySample} draws)</span>
+        <span>95% range: {percent(prediction.wilson95[0])}–{percent(prediction.wilson95[1])}</span>
+        <span>Selected: 180-draw joint co-appearance</span>
+      </div>
+      <p className="avoid-digit-models">Tested signals: avoid · panel · sutta · jodi · SP/DP</p>
+      {!targetReached && (
+        <p className="avoid-digit-status">
+          Below the 70% safety target. Digits are shown for research comparison, not as a validated call.
+        </p>
+      )}
+    </div>
+  )
+}
 // ─── Component ────────────────────────────────────────────────────────────────
 type Session = "day" | "night"
 
@@ -604,6 +666,14 @@ export default function AnalysisSection() {
           selectedMarket,
           cachedRecords,
           new Date(result.analysisDateISO),
+        )
+      : null,
+    [result, selectedMarket, cachedRecords],
+  )
+  const presentDigitsPrediction = useMemo(
+    () => result
+      ? buildPresentDigitsPredictionFromPanels(
+          selectedMarket, cachedRecords, new Date(result.analysisDateISO),
         )
       : null,
     [result, selectedMarket, cachedRecords],
@@ -1041,6 +1111,24 @@ export default function AnalysisSection() {
             )}
           </div>
 
+          <div className="glass-panel avoid-digit-panel present-digit-panel">
+            <div className="section-header">
+              <span className="section-icon">🔎</span>
+              <div>
+                <h3 className="section-title">2-Digit Present Research Model</h3>
+                <p className="section-subtitle">Strict: both digits must appear in the same panel</p>
+              </div>
+            </div>
+
+            <div className="avoid-digit-grid">
+              <PresentDigitColumn label="Open" prediction={presentDigitsPrediction?.open ?? null} />
+              <PresentDigitColumn label="Close (pre-Open)" prediction={presentDigitsPrediction?.close ?? null} />
+            </div>
+
+            <p className="avoid-digit-note">
+              Walk-forward testing rejected borrowed avoid, panel-recency, sutta, jodi and SP/DP signals because they did not improve the 180-day strict result. The strongest model remains visible for continued measurement but cannot pass the 70% safety target.
+            </p>
+          </div>
           {/* ── Jodi Dependency Model Input ────────────────────────────────── */}
           <div className="glass-panel avoid-digit-panel">
             <div className="section-header">
