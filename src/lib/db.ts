@@ -1,3 +1,8 @@
+import {
+  HISTORICAL_LOOKBACK_MONTHS,
+  historicalCutoffISO,
+} from './prediction-contract'
+
 /**
  * IndexedDB persistence layer for DBBoss Analysis.
  *
@@ -22,7 +27,10 @@ export interface PanelRecord {
 const DB_NAME = 'dbboss_v2'
 const DB_VERSION = 1
 const STORE_NAME = 'panels'
-export const RECENT_HISTORY_DAYS = 730
+
+/** @deprecated Prefer HISTORICAL_LOOKBACK_MONTHS; retained for API compatibility. */
+export const RECENT_HISTORY_DAYS = 853
+export { HISTORICAL_LOOKBACK_MONTHS }
 
 let dbPromise: Promise<IDBDatabase> | null = null
 
@@ -89,13 +97,10 @@ export function getRecordISODate(record: Pick<PanelRecord, 'dateRangeStart' | 'd
   return toISODate(addDays(start, DAY_OFFSETS[record.day] ?? 0))
 }
 
-function cutoffISO(days: number, anchor = new Date()): string {
-  const cutoff = new Date(anchor)
-  cutoff.setUTCDate(cutoff.getUTCDate() - days + 1)
-  return toISODate(cutoff)
-}
-
-export function filterRecordsByRecentHistory(records: PanelRecord[], days = RECENT_HISTORY_DAYS): PanelRecord[] {
+export function filterRecordsByRecentHistory(
+  records: PanelRecord[],
+  months = HISTORICAL_LOOKBACK_MONTHS,
+): PanelRecord[] {
   const dated = records
     .map((record) => ({ record, isoDate: getRecordISODate(record) }))
     .filter((item): item is { record: PanelRecord; isoDate: string } => Boolean(item.isoDate))
@@ -103,8 +108,7 @@ export function filterRecordsByRecentHistory(records: PanelRecord[], days = RECE
   if (dated.length === 0) return records
 
   const newestISO = dated.reduce((max, item) => item.isoDate > max ? item.isoDate : max, dated[0].isoDate)
-  const anchor = new Date(`${newestISO}T00:00:00Z`)
-  const minISO = cutoffISO(days, anchor)
+  const minISO = historicalCutoffISO(newestISO, months)
   return dated
     .filter((item) => item.isoDate >= minISO)
     .map((item) => item.record)

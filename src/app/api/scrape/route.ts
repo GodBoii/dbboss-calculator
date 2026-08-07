@@ -4,11 +4,11 @@ import {
   supplementPanelHistory,
   type PanelHistoryRecord,
 } from '@/lib/panel-history-supplement'
+import { historicalCutoffISO } from '@/lib/prediction-contract'
 
 export const runtime = 'nodejs'
 // No caching - always fetch fresh data
 export const dynamic = 'force-dynamic'
-const RECENT_HISTORY_DAYS = 730
 
 /**
  * Thin CORS-bypass proxy for Matka panel data.
@@ -252,9 +252,7 @@ function filterRecentPanels(panels: ParsedPanel[]): ParsedPanel[] {
   if (dated.length === 0) return panels
 
   const newestISO = dated.reduce((max, item) => item.isoDate > max ? item.isoDate : max, dated[0].isoDate)
-  const cutoff = new Date(`${newestISO}T00:00:00Z`)
-  cutoff.setUTCDate(cutoff.getUTCDate() - RECENT_HISTORY_DAYS + 1)
-  const cutoffISO = cutoff.toISOString().slice(0, 10)
+  const cutoffISO = historicalCutoffISO(newestISO)
   return dated
     .filter((item) => item.isoDate >= cutoffISO)
     .map((item) => item.panel)
