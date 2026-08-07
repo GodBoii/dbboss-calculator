@@ -24,7 +24,7 @@ import {
   getRecordsByMarket,
   getRecordISODate,
   clearMarket,
-  RECENT_HISTORY_DAYS,
+  HISTORICAL_LOOKBACK_MONTHS,
   type PanelRecord,
 } from "@/lib/db"
 import {
@@ -39,6 +39,7 @@ import { AnalysisTabs } from "./analysis/AnalysisTabs"
 import { BetCopyDesk } from "./analysis/BetCopyDesk"
 import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
 import { SUTTA_MODEL_VERSION } from "@/lib/app-version"
+import { SUTTA_PREDICTION_COUNT, historicalCutoffISO } from "@/lib/prediction-contract"
 
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
@@ -75,7 +76,21 @@ type ScrapedPanel = {
 
 function recordsAreFresh(records: PanelRecord[]) {
   const newestSavedAt = records.reduce((max, record) => Math.max(max, record.savedAt ?? 0), 0)
-  return records.length > 50 && newestSavedAt > 0 && Date.now() - newestSavedAt < 6 * 60 * 60 * 1000
+  const dates = records
+    .map(getRecordISODate)
+    .filter((date): date is string => Boolean(date))
+    .sort()
+  const newestDate = dates.at(-1)
+  const requiredStart = newestDate ? historicalCutoffISO(newestDate) : null
+  const startTolerance = requiredStart ? new Date(`${requiredStart}T00:00:00Z`) : null
+  startTolerance?.setUTCDate(startTolerance.getUTCDate() + 7)
+  const coversWindow = Boolean(
+    dates[0] && startTolerance && dates[0] <= startTolerance.toISOString().slice(0, 10),
+  )
+  return records.length > 50
+    && coversWindow
+    && newestSavedAt > 0
+    && Date.now() - newestSavedAt < 6 * 60 * 60 * 1000
 }
 
 async function fetchMarketHistory(marketName: string) {
@@ -133,6 +148,27 @@ function buildPriorMarkets(
   return priorMarkets
 }
 
+function buildEventAwareSuttaMarkets(
+  marketName: string,
+  priorRecords: PanelRecord[],
+  allMarketsRecords: Record<string, PanelRecord[]>,
+  isoDate: string,
+): Record<string, PanelRecord[]> {
+  const eventAwareMarkets: Record<string, PanelRecord[]> = {}
+
+  Object.entries(allMarketsRecords).forEach(([name, marketRecords]) => {
+    eventAwareMarkets[name] = name === marketName
+      ? priorRecords
+      : marketRecords.filter((record) => {
+        const recordISO = getRecordISODate(record)
+        return recordISO !== null && recordISO <= isoDate
+      })
+  })
+
+  eventAwareMarkets[marketName] = priorRecords
+  return eventAwareMarkets
+}
+
 function accuracyMetric(correct: number, total: number) {
   const accuracy = total ? (correct / total) * 100 : 0
   return {
@@ -174,6 +210,7 @@ export function buildSuttaAccuracyReport(
 
     const targetDate = new Date(`${isoDate}T12:00:00`)
     const priorMarkets = buildPriorMarkets(marketName, priorRecords, allMarketsRecords, isoDate)
+    const eventAwareSuttaMarkets = buildEventAwareSuttaMarkets(marketName, priorRecords, allMarketsRecords, isoDate)
     const prediction = analyzeMarket(marketName, priorRecords, priorMarkets, targetDate)
     if (!prediction) continue
     drawsTested++
@@ -185,7 +222,7 @@ export function buildSuttaAccuracyReport(
       copyCount,
       marketName,
       targetDate,
-      allMarketsRecords,
+      eventAwareSuttaMarkets,
     )
     const closeSuttas = buildCloseSuttaSet(
       prediction.closePicks,
@@ -194,7 +231,7 @@ export function buildSuttaAccuracyReport(
       copyCount,
       marketName,
       null,
-      allMarketsRecords,
+      eventAwareSuttaMarkets,
       targetDate,
     )
 
@@ -222,7 +259,7 @@ export function buildSuttaAccuracyReport(
           copyCount,
           marketName,
           record.openSutta,
-          allMarketsRecords,
+          eventAwareSuttaMarkets,
           targetDate,
         )
 
@@ -372,7 +409,7 @@ export default function AnalysisSection() {
   const [suttaSignalView, setSuttaSignalView] = useState<"open" | "close">("open")
   const [digitPanelMode, setDigitPanelMode] = useState<DigitPanelMode>("present")
   const [suttaCopyExpanded, setSuttaCopyExpanded] = useState(false)
-  const [copyCount, setCopyCount] = useState(6)
+  const [copyCount] = useState(SUTTA_PREDICTION_COUNT)
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
   const [openPanelInput, setOpenPanelInput] = useState("")
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
@@ -431,7 +468,7 @@ export default function AnalysisSection() {
 
         if (cached.length > 50 && cacheIsFresh && !forceRefresh) {
           // We have enough cached data — skip scraping
-          setLoadingMessage(`Using ${cached.length} cached recent records (${RECENT_HISTORY_DAYS} days)…`)
+          setLoadingMessage(`Using ${cached.length} cached records (last ${HISTORICAL_LOOKBACK_MONTHS} months)…`)
           records = cached
         } else {
           // ── Step 2: Fetch fresh data via proxy API ─────────────────────
@@ -1045,7 +1082,6 @@ export default function AnalysisSection() {
               <div className="sutta-map-tools">
                 <BetCopyDesk
                   copyCount={copyCount}
-                  setCopyCount={setCopyCount}
                   openSuttas={openCopySuttas}
                   closeSuttas={closeCopySuttas}
                   jodis={generatedJodis}
