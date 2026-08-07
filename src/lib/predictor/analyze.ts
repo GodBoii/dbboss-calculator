@@ -1,5 +1,6 @@
 import { getRecordISODate, type PanelRecord } from "../db";
 import type { PredictionResult } from "./types";
+import { PANEL_PREDICTION_COUNT } from "../prediction-contract";
 import { getMarketCalibration } from "./calibration";
 import {
   HIGH_VOL_SET,
@@ -42,7 +43,7 @@ const CLOSE_LAG3_PROFILE_MARKETS = new Set([
   "Main Bazar",
 ]);
 
-export const PANEL_PREDICTION_COUNT = 60;
+export { PANEL_PREDICTION_COUNT } from "../prediction-contract";
 
 function previousMainBazarPanels(
   allMarketsRecords: Record<string, PanelRecord[]>,
