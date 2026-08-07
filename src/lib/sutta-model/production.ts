@@ -1,5 +1,6 @@
 import { LIQUIDITY_FLOW_MAP, type PanelPick } from "@/lib/predictor"
 import { getRecordISODate, type PanelRecord } from "@/lib/db"
+import { isMarketEventEarlier, type MarketSide } from "@/lib/market-schedule"
 import { buildAdjustedCloseTop6Model } from "./adjusted-close"
 import { buildCloseTop6Model } from "./close"
 import { buildJodiSet } from "./jodi"
@@ -582,6 +583,25 @@ function sourceFeatureValue(record: PanelRecord, feature: SourceFormulaFeature) 
   return mod10(record.openSutta - record.closeSutta)
 }
 
+function sourceFeatureSide(feature: SourceFormulaFeature): MarketSide {
+  if (feature === "openSutta" || feature.startsWith("openPanel.")) return "open"
+  return "close"
+}
+
+function isSourceRuleCausallyAvailable(
+  rule: SourceHybridRule,
+  targetMarket: string,
+  targetSide: SourceFormulaSide,
+) {
+  if (rule.origin !== "sameDay") return true
+  return isMarketEventEarlier(
+    rule.sourceMarket,
+    sourceFeatureSide(rule.sourceFeature),
+    targetMarket,
+    targetSide,
+  )
+}
+
 function findSourceRecord(
   records: PanelRecord[],
   targetDate: Date,
@@ -639,6 +659,7 @@ function applySourceHybridPromotion(input: {
 
   let current = ranking
   for (const rule of rules) {
+    if (!isSourceRuleCausallyAvailable(rule, marketName, side)) continue
     const sourceRecord = findSourceRecord(allMarketsRecords[rule.sourceMarket] ?? [], targetDate, rule.origin)
     if (!sourceRecord) continue
     const sourceSutta = sourceFeatureValue(sourceRecord, rule.sourceFeature)

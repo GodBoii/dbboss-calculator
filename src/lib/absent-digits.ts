@@ -1,4 +1,5 @@
 import { getRecordISODate, type PanelRecord } from "./db"
+import { historicalCutoffISO } from "./prediction-contract"
 
 export const ABSENT_DIGITS_V2_MODEL_ID = "absent-digits-complementary-online-v2"
 export const ABSENT_DIGITS_V2_CALIBRATION_ID = "local-beta-w240-s80-v1"
@@ -6,7 +7,9 @@ export const ABSENT_DIGITS_MODEL_ID = "absent-digits-guarded-market-routing-v3"
 export const ABSENT_DIGITS_CALIBRATION_ID = "guarded-route-beta-w240-s80-v1"
 export const ABSENT_DIGITS_APPEARANCE_BLEND = 0.75
 export const ABSENT_DIGITS_MIN_HISTORY = 180
-export const ABSENT_DIGITS_HISTORY_LIMIT = 730
+
+/** @deprecated The model now uses an exact 28-calendar-month cutoff. */
+export const ABSENT_DIGITS_HISTORY_LIMIT = 853
 export const ABSENT_DIGITS_CONFIDENCE_WINDOW = 240
 export const ABSENT_DIGITS_ROUTE_BLEND = 0.35
 export const ABSENT_DIGITS_ROUTE_WINDOW = 80
@@ -868,9 +871,7 @@ function normalizeRows(
   records: readonly AbsentDigitRecord[],
   targetDate: string,
 ) {
-  const cutoff = new Date(`${targetDate}T00:00:00Z`)
-  cutoff.setUTCDate(cutoff.getUTCDate() - ABSENT_DIGITS_HISTORY_LIMIT + 1)
-  const cutoffISO = cutoff.toISOString().slice(0, 10)
+  const cutoffISO = historicalCutoffISO(targetDate)
   const valid = records
     .filter(
       (record) =>
