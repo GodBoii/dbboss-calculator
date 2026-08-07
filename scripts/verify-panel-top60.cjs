@@ -21,6 +21,12 @@ const {
   analyzeMarket,
 } = require("../src/lib/predictor.ts")
 const { getRecordISODate } = require("../src/lib/backtest.ts")
+const {
+  HISTORICAL_LOOKBACK_MONTHS,
+  JODI_GRID_COUNT,
+  SUTTA_PREDICTION_COUNT,
+  historicalCutoffISO,
+} = require("../src/lib/prediction-contract.ts")
 
 const ROOT = path.resolve(__dirname, "..")
 const cache = JSON.parse(
@@ -47,8 +53,22 @@ const allMarkets = Object.fromEntries(
   Object.keys(cache).map((market) => [market, mergedRecords(market)]),
 )
 
-if (PANEL_PREDICTION_COUNT !== 60) {
-  throw new Error(`Expected PANEL_PREDICTION_COUNT=60, received ${PANEL_PREDICTION_COUNT}`)
+if (PANEL_PREDICTION_COUNT !== 40) {
+  throw new Error(`Expected PANEL_PREDICTION_COUNT=40, received ${PANEL_PREDICTION_COUNT}`)
+}
+if (SUTTA_PREDICTION_COUNT !== 6 || JODI_GRID_COUNT !== 36) {
+  throw new Error("Expected the Top-6 / 6x6 36-Jodi production contract")
+}
+if (HISTORICAL_LOOKBACK_MONTHS !== 28) {
+  throw new Error(`Expected 28 history months, received ${HISTORICAL_LOOKBACK_MONTHS}`)
+}
+for (const [anchor, expected] of [
+  ["2026-08-01", "2024-04-01"],
+  ["2026-06-30", "2024-02-29"],
+  ["2026-03-31", "2023-11-30"],
+]) {
+  const actual = historicalCutoffISO(anchor)
+  if (actual !== expected) throw new Error(`${anchor}: expected ${expected}, received ${actual}`)
 }
 
 for (const [market, records] of Object.entries(allMarkets)) {
@@ -62,14 +82,14 @@ for (const [market, records] of Object.entries(allMarkets)) {
     ["close", result.closePanelPicks],
   ]) {
     if (picks.length !== PANEL_PREDICTION_COUNT) {
-      throw new Error(`${market} ${side}: expected 60 picks, received ${picks.length}`)
+      throw new Error(`${market} ${side}: expected 40 picks, received ${picks.length}`)
     }
     const unique = new Set(picks.map((pick) => pick.panel))
     if (unique.size !== picks.length) {
       throw new Error(`${market} ${side}: duplicate panels in ranked output`)
     }
   }
-  console.log(`${market}: Open 60 / Close 60 verified`)
+  console.log(`${market}: Open 40 / Close 40 verified`)
 }
 
-console.log("Top-60 panel contract verified for every configured market.")
+console.log("Top-40 panel contract verified for every configured market.")

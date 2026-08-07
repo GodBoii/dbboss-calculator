@@ -240,6 +240,9 @@ def main() -> None:
 
     tasks = {}
     ledger_rows = []
+    admitted_dates = sorted(date_value.isoformat() for _, date_value in admitted)
+    admitted_start = admitted_dates[0]
+    admitted_end = admitted_dates[-1]
     for task in ("open", "close_preopen"):
         print(f"scoring frozen {task}", flush=True)
         frozen_dataset = research.build_dataset(task, frozen_rows)
@@ -300,6 +303,16 @@ def main() -> None:
             market_names,
         )
 
+        promotion_reasons = []
+        if len(admitted) < 100:
+            promotion_reasons.append(
+                f"Only {len(admitted)} independently sourced rows are available; "
+                "minimum prospective support is 100."
+            )
+        promotion_reasons.extend([
+            "The hierarchical Open challenger previously failed its terminal confirmation block.",
+            "No challenger has a paired p-value below 0.05 across confirmation blocks.",
+        ])
         tasks[task] = {
             "n": len(score_idx),
             "baseline": metric(
@@ -333,11 +346,7 @@ def main() -> None:
             },
             "promotion": {
                 "eligible": False,
-                "reasons": [
-                    "Only 44 independently sourced rows are available; minimum prospective support is 100.",
-                    "The hierarchical Open challenger previously failed its terminal confirmation block.",
-                    "No challenger has a paired p-value below 0.05 across confirmation blocks.",
-                ],
+                "reasons": promotion_reasons,
             },
         }
 
@@ -393,7 +402,7 @@ def main() -> None:
         f"Generated: {payload['generatedAt']}",
         "",
         f"The independent source added **{len(admitted)}** completed rows from "
-        "2026-07-20 through 2026-07-23 across 11 markets. Every admitted source mapping "
+        f"{admitted_start} through {admitted_end} across 11 markets. Every admitted source mapping "
         "matched 100% of at least 42-61 overlapping historical rows. Rajdhani Day was "
         "excluded after its same-named public series matched 0/42 rows.",
         "",
@@ -416,10 +425,11 @@ def main() -> None:
         "",
         "## Promotion decision",
         "",
-        "No model is promoted. Forty-four rows are useful prospective evidence but "
-        "remain below the predeclared 100-row minimum, and the Open hierarchy had already "
-        "failed terminal confirmation. These outcomes extend the frozen ledger; they do "
-        "not retune any model, threshold, allocation, or market route.",
+        f"No model is promoted. The {len(admitted)} rows meet the predeclared 100-row "
+        "prospective minimum, but neither challenger produced a statistically confirmed "
+        "improvement and the Open hierarchy had already failed terminal confirmation. "
+        "These outcomes extend the frozen ledger; they do not retune any model, threshold, "
+        "allocation, or market route.",
         "",
         "## Source-integrity note",
         "",
