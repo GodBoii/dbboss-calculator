@@ -233,7 +233,7 @@ export function PicksList({ picks, getScoreColor }: { picks: PanelPick[]; getSco
   }
   return (
     <>
-      {/* Top 3 Hero Picks */}
+      {/* Hero Picks */}
       <div className="hero-picks">
         {picks.slice(0, 3).map((pick, i) => (
           <div key={pick.panel} className={`hero-pick hero-pick-${i + 1}`}>
