@@ -1,6 +1,5 @@
 import type { CopySuttaPick } from "@/lib/sutta-model/production"
 import { CopyButton } from "./AnalysisWidgets"
-import { SUTTA_PREDICTION_COUNT } from "@/lib/prediction-contract"
 
 function formatSuttasForCopy(suttas: CopySuttaPick[]): string {
   return [...suttas]
@@ -9,8 +8,12 @@ function formatSuttasForCopy(suttas: CopySuttaPick[]): string {
     .join("-")
 }
 
+const MIN_COPY_COUNT = 1
+const MAX_COPY_COUNT = 10
+
 export function BetCopyDesk({
   copyCount,
+  onCopyCountChange,
   openSuttas,
   closeSuttas,
   jodis,
@@ -18,6 +21,7 @@ export function BetCopyDesk({
   handleCopy,
 }: {
   copyCount: number
+  onCopyCountChange: (count: number) => void
   openSuttas: CopySuttaPick[]
   closeSuttas: CopySuttaPick[]
   jodis: string[]
@@ -30,20 +34,38 @@ export function BetCopyDesk({
         <div>
           <h4 className="stat-section-title bet-copy-title">Bet Copy</h4>
           <p className="picks-hint bet-copy-hint">
-            {`Fixed Top-${SUTTA_PREDICTION_COUNT} contract, highest model score first.`}
+            {`Fixed Top-${copyCount} contract, highest model score first.`}
           </p>
         </div>
-        <div className="copy-count-control" aria-label="Fixed top sutta count">
+        <div className="copy-count-control" aria-label="Top sutta count">
+          <button
+            type="button"
+            className="copy-count-btn"
+            aria-label="Decrease count"
+            disabled={copyCount <= MIN_COPY_COUNT}
+            onClick={() => onCopyCountChange(Math.max(MIN_COPY_COUNT, copyCount - 1))}
+          >
+            −
+          </button>
           <input
             type="number"
             inputMode="numeric"
-            min={SUTTA_PREDICTION_COUNT}
-            max={SUTTA_PREDICTION_COUNT}
+            min={MIN_COPY_COUNT}
+            max={MAX_COPY_COUNT}
             value={copyCount}
             readOnly
             className="copy-count-input"
             aria-label="Top count"
           />
+          <button
+            type="button"
+            className="copy-count-btn"
+            aria-label="Increase count"
+            disabled={copyCount >= MAX_COPY_COUNT}
+            onClick={() => onCopyCountChange(Math.min(MAX_COPY_COUNT, copyCount + 1))}
+          >
+            +
+          </button>
         </div>
       </div>
 
@@ -59,7 +81,7 @@ export function BetCopyDesk({
       </div>
 
       <div className="jodi-preview">
-        <span className="jodi-preview-label">{SUTTA_PREDICTION_COUNT}x{SUTTA_PREDICTION_COUNT} Jodi grid</span>
+        <span className="jodi-preview-label">{copyCount}x{copyCount} Jodi grid</span>
         <div className="jodi-chip-row">
           {jodis.slice(0, 24).map((jodi) => (
             <span key={jodi} className="jodi-chip">{jodi}</span>
@@ -80,7 +102,7 @@ export function BetCopyDesk({
           onClick={() => handleCopy("bet-close-sutta", formatSuttasForCopy(closeSuttas))}
         />
         <CopyButton
-          label={`${SUTTA_PREDICTION_COUNT * SUTTA_PREDICTION_COUNT}-Jodi Grid`}
+          label={`${copyCount * copyCount}-Jodi Grid`}
           isCopied={copyingKey === "bet-jodi"}
           onClick={() => handleCopy("bet-jodi", jodis.join("-"))}
         />
