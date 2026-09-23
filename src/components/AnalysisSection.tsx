@@ -409,7 +409,7 @@ export default function AnalysisSection() {
   const [suttaSignalView, setSuttaSignalView] = useState<"open" | "close">("open")
   const [digitPanelMode, setDigitPanelMode] = useState<DigitPanelMode>("present")
   const [suttaCopyExpanded, setSuttaCopyExpanded] = useState(false)
-  const [copyCount] = useState(SUTTA_PREDICTION_COUNT)
+  const [copyCount, setCopyCount] = useState(SUTTA_PREDICTION_COUNT)
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
   const [openPanelInput, setOpenPanelInput] = useState("")
   const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
@@ -1082,6 +1082,7 @@ export default function AnalysisSection() {
               <div className="sutta-map-tools">
                 <BetCopyDesk
                   copyCount={copyCount}
+                  onCopyCountChange={setCopyCount}
                   openSuttas={openCopySuttas}
                   closeSuttas={closeCopySuttas}
                   jodis={generatedJodis}
