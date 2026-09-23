@@ -171,8 +171,13 @@
   padding: 0;
 }
 
-.copy-count-btn:hover {
+.copy-count-btn:hover:not(:disabled) {
   background: rgba(255,255,255,0.08);
+}
+
+.copy-count-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
 }
 
 .copy-count-input {
