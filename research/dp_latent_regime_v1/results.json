@@ -1,0 +1,43 @@
+{
+  "design": {
+    "candidateParameterSets": 300,
+    "thresholdsPerSet": 41,
+    "trainThrough": "2024-12-31",
+    "validationThrough": "2025-12-31",
+    "holdoutStarts": "2026-01-01",
+    "events": 47398,
+    "sameDayAvailability": "Only strictly earlier scheduled minutes; actual timestamps unavailable"
+  },
+  "globalTrainDpRate": 0.2441,
+  "best": {
+    "smoothing": 500,
+    "concentration": 40,
+    "todayWeight": 1,
+    "yesterdayWeight": 1,
+    "threshold": 0.46,
+    "validation": {
+      "calls": 271,
+      "hits": 90,
+      "precision": 0.3321,
+      "lower95": 0.2869,
+      "activeDays": 30,
+      "days5to10": 5,
+      "callsOnDays5to10": 37,
+      "hitsOnDays5to10": 9,
+      "perfectDays5to10": 0,
+      "daysAtLeast70Of5to10": 0
+    },
+    "holdout": {
+      "calls": 251,
+      "hits": 68,
+      "precision": 0.2709,
+      "lower95": 0.2274,
+      "activeDays": 25,
+      "days5to10": 4,
+      "callsOnDays5to10": 31,
+      "hitsOnDays5to10": 10,
+      "perfectDays5to10": 0,
+      "daysAtLeast70Of5to10": 0
+    }
+  }
+}

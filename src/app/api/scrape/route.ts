@@ -12,7 +12,7 @@ export const dynamic = 'force-dynamic'
 
 /**
  * Thin CORS-bypass proxy for Matka panel data.
- * The browser cannot directly fetch from dpbossss.boston due to CORS.
+ * The browser cannot directly fetch the chart provider due to CORS.
  * This serverless function (free on Vercel Hobby tier) acts as a middleman.
  *
  * GET /api/scrape?url=<encoded_market_url>&market=<market_name>
@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
     return Response.json({ error: 'Missing url parameter' }, { status: 400 })
   }
 
-  // Security: Only allow fetching from the trusted panel-record host.
+  // Security: Only allow the trusted chart host and its current redirect target.
   let parsedUrl: URL
   try {
     parsedUrl = new URL(targetUrl)
@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
     return Response.json({ error: 'Invalid URL' }, { status: 400 })
   }
 
-  if (parsedUrl.hostname !== 'dpbossss.boston') {
+  if (parsedUrl.hostname !== 'dpbossss.boston' && parsedUrl.hostname !== 'dpboss.tax') {
     return Response.json({ error: 'URL not allowed' }, { status: 403 })
   }
 
@@ -76,7 +76,7 @@ export async function GET(request: NextRequest) {
         count: panels.length,
         scrapedAt: new Date().toISOString(),
         historySources: {
-          primary: 'dpbossss.boston',
+          primary: new URL(response.url).hostname,
           independentSupplement: supplemented.audit,
         },
       },
@@ -124,7 +124,7 @@ function extractJodi(text: string): string | null {
 }
 
 /**
- * Parse raw HTML from dpbossss.boston panel chart pages.
+ * Parse raw HTML from the chart provider's panel pages.
  *
  * CRITICAL STRUCTURE (confirmed by live page inspection):
  * Each table row = one week. The cells are:

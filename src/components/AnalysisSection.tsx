@@ -37,26 +37,27 @@ import {
 } from "@/lib/sutta-model"
 import { AnalysisTabs } from "./analysis/AnalysisTabs"
 import { BetCopyDesk } from "./analysis/BetCopyDesk"
-import { ConfidenceBadge, KindForecastCard } from "./analysis/AnalysisWidgets"
+import { ConfidenceBadge } from "./analysis/AnalysisWidgets"
+import { getVerifiedDpCalls } from "@/lib/verified-dp-call"
 import { SUTTA_MODEL_VERSION } from "@/lib/app-version"
 import { SUTTA_PREDICTION_COUNT, historicalCutoffISO } from "@/lib/prediction-contract"
 
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
   // Day session
-  'Sridevi':        'https://dpbossss.boston/panel-chart-record/sridevi.php',
-  'Time Bazar':     'https://dpbossss.boston/panel-chart-record/time-bazar.php',
-  'Madhur Day':     'https://dpbossss.boston/panel-chart-record/madhur-day.php',
-  'Milan Day':      'https://dpbossss.boston/panel-chart-record/milan-day.php',
-  'Rajdhani Day':   'https://dpbossss.boston/panel-chart-record/rajdhani-day.php',
-  'Kalyan':         'https://dpbossss.boston/panel-chart-record/kalyan.php',
+  'Sridevi':        'https://dpboss.tax/panel-chart-record/sridevi.php',
+  'Time Bazar':     'https://dpboss.tax/panel-chart-record/time-bazar.php',
+  'Madhur Day':     'https://dpboss.tax/panel-chart-record/madhur-day.php',
+  'Milan Day':      'https://dpboss.tax/panel-chart-record/milan-day.php',
+  'Rajdhani Day':   'https://dpboss.tax/panel-chart-record/rajdhani-day.php',
+  'Kalyan':         'https://dpboss.tax/panel-chart-record/kalyan.php',
   // Night session
-  'Sridevi Night':  'https://dpbossss.boston/panel-chart-record/sridevi-night.php',
-  'Kalyan Night':   'https://dpbossss.boston/panel-chart-record/kalyan-night.php',
-  'Madhur Night':   'https://dpbossss.boston/panel-chart-record/madhur-night.php',
-  'Milan Night':    'https://dpbossss.boston/panel-chart-record/milan-night.php',
-  'Rajdhani Night': 'https://dpbossss.boston/panel-chart-record/rajdhani-night.php',
-  'Main Bazar':     'https://dpbossss.boston/panel-chart-record/main-bazar.php',
+  'Sridevi Night':  'https://dpboss.tax/panel-chart-record/sridevi-night.php',
+  'Kalyan Night':   'https://dpboss.tax/panel-chart-record/kalyan-night.php',
+  'Madhur Night':   'https://dpboss.tax/panel-chart-record/madhur-night.php',
+  'Milan Night':    'https://dpboss.tax/panel-chart-record/milan-night.php',
+  'Rajdhani Night': 'https://dpboss.tax/panel-chart-record/rajdhani-night.php',
+  'Main Bazar':     'https://dpboss.tax/panel-chart-record/main-bazar.php',
 }
 
 const DAY_MARKETS   = ['Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan']
@@ -390,6 +391,7 @@ type Session = "day" | "night"
 type DigitPanelMode = "present" | "absent"
 
 export default function AnalysisSection() {
+  const verifiedDpCalls = getVerifiedDpCalls()
   // Auto-detect session: night if hour >= 18 (6pm IST)
   const defaultSession: Session = (() => {
     const h = new Date().getHours()
@@ -852,11 +854,26 @@ export default function AnalysisSection() {
             <ConfidenceBadge label="Jodi" model={result.calibration.jodi} liveSuttaAcc={displayedJodiAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
           </div>
 
-          <div className="confidence-strip kind-forecast-strip glass-panel">
-            <KindForecastCard label="Open Kind" prediction={result.openKindPrediction} />
-            <KindForecastCard label="Close Kind" prediction={result.closeKindPrediction} />
-            {jodiResult && <KindForecastCard label="Jodi Close Kind" prediction={jodiResult.kindPrediction} />}
-          </div>
+          {(verifiedDpCalls.open || verifiedDpCalls.close) && (
+            <div className="confidence-strip kind-forecast-strip glass-panel">
+              {verifiedDpCalls.open && (
+                <div className="kind-forecast-card">
+                  <div className="kind-forecast-head">
+                    <span className="kind-forecast-label">Open</span>
+                    <span className="kind-forecast-pill">DP</span>
+                  </div>
+                </div>
+              )}
+              {verifiedDpCalls.close && (
+                <div className="kind-forecast-card">
+                  <div className="kind-forecast-head">
+                    <span className="kind-forecast-label">Close</span>
+                    <span className="kind-forecast-pill">DP</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* ── HONEY-POT ALERT ──────────────────────────────────────────── */}
           {result.honeyPotAlert && (

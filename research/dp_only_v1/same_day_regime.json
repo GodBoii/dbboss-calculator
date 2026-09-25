@@ -1,0 +1,2704 @@
+{
+  "method": "For each 12-market event, include only same-day source events scheduled strictly earlier according to current app schedule.",
+  "scheduleFile": "src/lib/market-schedule.ts",
+  "historicalScheduleAssumption": "Historical event times may differ from the current schedule.",
+  "holdoutPristine": false,
+  "holdoutReason": "Aggregate 2026 results were disclosed in earlier work.",
+  "overallPrimary12": {
+    "train": {
+      "events": 19720,
+      "dpEvents": 4677,
+      "dpRate": 0.2372,
+      "wilson95": [
+        0.2313,
+        0.2432
+      ]
+    },
+    "validation": {
+      "events": 14594,
+      "dpEvents": 3582,
+      "dpRate": 0.2454,
+      "wilson95": [
+        0.2385,
+        0.2525
+      ]
+    },
+    "holdout": {
+      "events": 5404,
+      "dpEvents": 1389,
+      "dpRate": 0.257,
+      "wilson95": [
+        0.2456,
+        0.2689
+      ]
+    }
+  },
+  "conditionalCells": [
+    {
+      "split": "train",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "no earlier events",
+      "events": 2547,
+      "dpEvents": 503,
+      "dpRate": 0.1975,
+      "wilson95": [
+        0.1825,
+        0.2134
+      ],
+      "activeDates": 2547
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "<20%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "20-29%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "30-39%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "40%+",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "<20%",
+      "events": 4067,
+      "dpEvents": 898,
+      "dpRate": 0.2208,
+      "wilson95": [
+        0.2083,
+        0.2338
+      ],
+      "activeDates": 2335
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "20-29%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "30-39%",
+      "events": 731,
+      "dpEvents": 162,
+      "dpRate": 0.2216,
+      "wilson95": [
+        0.193,
+        0.2531
+      ],
+      "activeDates": 731
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "40%+",
+      "events": 1336,
+      "dpEvents": 307,
+      "dpRate": 0.2298,
+      "wilson95": [
+        0.208,
+        0.2531
+      ],
+      "activeDates": 883
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "<20%",
+      "events": 1790,
+      "dpEvents": 426,
+      "dpRate": 0.238,
+      "wilson95": [
+        0.2188,
+        0.2583
+      ],
+      "activeDates": 836
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "20-29%",
+      "events": 1216,
+      "dpEvents": 300,
+      "dpRate": 0.2467,
+      "wilson95": [
+        0.2233,
+        0.2717
+      ],
+      "activeDates": 795
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "30-39%",
+      "events": 280,
+      "dpEvents": 81,
+      "dpRate": 0.2893,
+      "wilson95": [
+        0.2393,
+        0.345
+      ],
+      "activeDates": 280
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "40%+",
+      "events": 1083,
+      "dpEvents": 279,
+      "dpRate": 0.2576,
+      "wilson95": [
+        0.2325,
+        0.2845
+      ],
+      "activeDates": 519
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "<20%",
+      "events": 517,
+      "dpEvents": 130,
+      "dpRate": 0.2515,
+      "wilson95": [
+        0.216,
+        0.2906
+      ],
+      "activeDates": 302
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "20-29%",
+      "events": 464,
+      "dpEvents": 122,
+      "dpRate": 0.2629,
+      "wilson95": [
+        0.2249,
+        0.3048
+      ],
+      "activeDates": 324
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "30-39%",
+      "events": 365,
+      "dpEvents": 85,
+      "dpRate": 0.2329,
+      "wilson95": [
+        0.1924,
+        0.2789
+      ],
+      "activeDates": 259
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "40%+",
+      "events": 338,
+      "dpEvents": 94,
+      "dpRate": 0.2781,
+      "wilson95": [
+        0.233,
+        0.3282
+      ],
+      "activeDates": 212
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "<20%",
+      "events": 738,
+      "dpEvents": 208,
+      "dpRate": 0.2818,
+      "wilson95": [
+        0.2506,
+        0.3154
+      ],
+      "activeDates": 312
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "20-29%",
+      "events": 798,
+      "dpEvents": 211,
+      "dpRate": 0.2644,
+      "wilson95": [
+        0.235,
+        0.2961
+      ],
+      "activeDates": 381
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "30-39%",
+      "events": 563,
+      "dpEvents": 145,
+      "dpRate": 0.2575,
+      "wilson95": [
+        0.2232,
+        0.2952
+      ],
+      "activeDates": 304
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "40%+",
+      "events": 295,
+      "dpEvents": 70,
+      "dpRate": 0.2373,
+      "wilson95": [
+        0.1923,
+        0.289
+      ],
+      "activeDates": 149
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "<20%",
+      "events": 808,
+      "dpEvents": 192,
+      "dpRate": 0.2376,
+      "wilson95": [
+        0.2096,
+        0.2682
+      ],
+      "activeDates": 224
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "20-29%",
+      "events": 993,
+      "dpEvents": 255,
+      "dpRate": 0.2568,
+      "wilson95": [
+        0.2306,
+        0.2849
+      ],
+      "activeDates": 295
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "30-39%",
+      "events": 575,
+      "dpEvents": 143,
+      "dpRate": 0.2487,
+      "wilson95": [
+        0.2151,
+        0.2856
+      ],
+      "activeDates": 182
+    },
+    {
+      "split": "train",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "40%+",
+      "events": 216,
+      "dpEvents": 66,
+      "dpRate": 0.3056,
+      "wilson95": [
+        0.248,
+        0.3699
+      ],
+      "activeDates": 63
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "no earlier events",
+      "events": 725,
+      "dpEvents": 149,
+      "dpRate": 0.2055,
+      "wilson95": [
+        0.1777,
+        0.2364
+      ],
+      "activeDates": 725
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "<20%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "20-29%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "30-39%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "40%+",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "<20%",
+      "events": 1430,
+      "dpEvents": 291,
+      "dpRate": 0.2035,
+      "wilson95": [
+        0.1834,
+        0.2251
+      ],
+      "activeDates": 576
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "20-29%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "30-39%",
+      "events": 258,
+      "dpEvents": 84,
+      "dpRate": 0.3256,
+      "wilson95": [
+        0.2713,
+        0.385
+      ],
+      "activeDates": 258
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "40%+",
+      "events": 487,
+      "dpEvents": 136,
+      "dpRate": 0.2793,
+      "wilson95": [
+        0.2413,
+        0.3207
+      ],
+      "activeDates": 250
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "<20%",
+      "events": 1082,
+      "dpEvents": 274,
+      "dpRate": 0.2532,
+      "wilson95": [
+        0.2282,
+        0.28
+      ],
+      "activeDates": 401
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "20-29%",
+      "events": 698,
+      "dpEvents": 184,
+      "dpRate": 0.2636,
+      "wilson95": [
+        0.2323,
+        0.2975
+      ],
+      "activeDates": 387
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "30-39%",
+      "events": 165,
+      "dpEvents": 42,
+      "dpRate": 0.2545,
+      "wilson95": [
+        0.1942,
+        0.3261
+      ],
+      "activeDates": 165
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "40%+",
+      "events": 679,
+      "dpEvents": 196,
+      "dpRate": 0.2887,
+      "wilson95": [
+        0.2558,
+        0.3239
+      ],
+      "activeDates": 257
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "<20%",
+      "events": 852,
+      "dpEvents": 194,
+      "dpRate": 0.2277,
+      "wilson95": [
+        0.2008,
+        0.257
+      ],
+      "activeDates": 307
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "20-29%",
+      "events": 647,
+      "dpEvents": 157,
+      "dpRate": 0.2427,
+      "wilson95": [
+        0.2112,
+        0.2771
+      ],
+      "activeDates": 299
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "30-39%",
+      "events": 491,
+      "dpEvents": 132,
+      "dpRate": 0.2688,
+      "wilson95": [
+        0.2315,
+        0.3097
+      ],
+      "activeDates": 215
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "40%+",
+      "events": 438,
+      "dpEvents": 115,
+      "dpRate": 0.2626,
+      "wilson95": [
+        0.2235,
+        0.3057
+      ],
+      "activeDates": 142
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "<20%",
+      "events": 798,
+      "dpEvents": 190,
+      "dpRate": 0.2381,
+      "wilson95": [
+        0.2098,
+        0.2689
+      ],
+      "activeDates": 250
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "20-29%",
+      "events": 752,
+      "dpEvents": 196,
+      "dpRate": 0.2606,
+      "wilson95": [
+        0.2305,
+        0.2932
+      ],
+      "activeDates": 282
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "30-39%",
+      "events": 491,
+      "dpEvents": 130,
+      "dpRate": 0.2648,
+      "wilson95": [
+        0.2277,
+        0.3055
+      ],
+      "activeDates": 205
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "40%+",
+      "events": 384,
+      "dpEvents": 92,
+      "dpRate": 0.2396,
+      "wilson95": [
+        0.1996,
+        0.2847
+      ],
+      "activeDates": 144
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "<20%",
+      "events": 1356,
+      "dpEvents": 305,
+      "dpRate": 0.2249,
+      "wilson95": [
+        0.2035,
+        0.2479
+      ],
+      "activeDates": 271
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "20-29%",
+      "events": 1413,
+      "dpEvents": 346,
+      "dpRate": 0.2449,
+      "wilson95": [
+        0.2232,
+        0.268
+      ],
+      "activeDates": 320
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "30-39%",
+      "events": 1061,
+      "dpEvents": 271,
+      "dpRate": 0.2554,
+      "wilson95": [
+        0.2301,
+        0.2825
+      ],
+      "activeDates": 257
+    },
+    {
+      "split": "validation",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "40%+",
+      "events": 387,
+      "dpEvents": 98,
+      "dpRate": 0.2532,
+      "wilson95": [
+        0.2125,
+        0.2988
+      ],
+      "activeDates": 93
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "no earlier events",
+      "events": 264,
+      "dpEvents": 64,
+      "dpRate": 0.2424,
+      "wilson95": [
+        0.1947,
+        0.2976
+      ],
+      "activeDates": 264
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "<20%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "20-29%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "30-39%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "0",
+      "priorDPFractionBand": "40%+",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "<20%",
+      "events": 465,
+      "dpEvents": 123,
+      "dpRate": 0.2645,
+      "wilson95": [
+        0.2265,
+        0.3064
+      ],
+      "activeDates": 200
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "20-29%",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "30-39%",
+      "events": 106,
+      "dpEvents": 28,
+      "dpRate": 0.2642,
+      "wilson95": [
+        0.1895,
+        0.3553
+      ],
+      "activeDates": 106
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "1-3",
+      "priorDPFractionBand": "40%+",
+      "events": 221,
+      "dpEvents": 77,
+      "dpRate": 0.3484,
+      "wilson95": [
+        0.2887,
+        0.4133
+      ],
+      "activeDates": 110
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "<20%",
+      "events": 335,
+      "dpEvents": 82,
+      "dpRate": 0.2448,
+      "wilson95": [
+        0.2018,
+        0.2935
+      ],
+      "activeDates": 133
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "20-29%",
+      "events": 281,
+      "dpEvents": 64,
+      "dpRate": 0.2278,
+      "wilson95": [
+        0.1826,
+        0.2803
+      ],
+      "activeDates": 150
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "30-39%",
+      "events": 62,
+      "dpEvents": 16,
+      "dpRate": 0.2581,
+      "wilson95": [
+        0.1655,
+        0.3788
+      ],
+      "activeDates": 62
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "4-7",
+      "priorDPFractionBand": "40%+",
+      "events": 302,
+      "dpEvents": 87,
+      "dpRate": 0.2881,
+      "wilson95": [
+        0.2399,
+        0.3416
+      ],
+      "activeDates": 113
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "<20%",
+      "events": 267,
+      "dpEvents": 67,
+      "dpRate": 0.2509,
+      "wilson95": [
+        0.2027,
+        0.3062
+      ],
+      "activeDates": 100
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "20-29%",
+      "events": 252,
+      "dpEvents": 63,
+      "dpRate": 0.25,
+      "wilson95": [
+        0.2006,
+        0.3069
+      ],
+      "activeDates": 110
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "30-39%",
+      "events": 185,
+      "dpEvents": 43,
+      "dpRate": 0.2324,
+      "wilson95": [
+        0.1774,
+        0.2984
+      ],
+      "activeDates": 88
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "8-11",
+      "priorDPFractionBand": "40%+",
+      "events": 200,
+      "dpEvents": 56,
+      "dpRate": 0.28,
+      "wilson95": [
+        0.2224,
+        0.3459
+      ],
+      "activeDates": 61
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "<20%",
+      "events": 255,
+      "dpEvents": 56,
+      "dpRate": 0.2196,
+      "wilson95": [
+        0.1732,
+        0.2744
+      ],
+      "activeDates": 80
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "20-29%",
+      "events": 275,
+      "dpEvents": 62,
+      "dpRate": 0.2255,
+      "wilson95": [
+        0.18,
+        0.2784
+      ],
+      "activeDates": 103
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "30-39%",
+      "events": 206,
+      "dpEvents": 66,
+      "dpRate": 0.3204,
+      "wilson95": [
+        0.2605,
+        0.3869
+      ],
+      "activeDates": 82
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "12-15",
+      "priorDPFractionBand": "40%+",
+      "events": 169,
+      "dpEvents": 44,
+      "dpRate": 0.2604,
+      "wilson95": [
+        0.2,
+        0.3313
+      ],
+      "activeDates": 68
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "no earlier events",
+      "events": 0,
+      "dpEvents": 0,
+      "dpRate": null,
+      "wilson95": null,
+      "activeDates": 0
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "<20%",
+      "events": 431,
+      "dpEvents": 110,
+      "dpRate": 0.2552,
+      "wilson95": [
+        0.2163,
+        0.2984
+      ],
+      "activeDates": 94
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "20-29%",
+      "events": 526,
+      "dpEvents": 139,
+      "dpRate": 0.2643,
+      "wilson95": [
+        0.2284,
+        0.3036
+      ],
+      "activeDates": 115
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "30-39%",
+      "events": 401,
+      "dpEvents": 99,
+      "dpRate": 0.2469,
+      "wilson95": [
+        0.2072,
+        0.2914
+      ],
+      "activeDates": 108
+    },
+    {
+      "split": "holdout",
+      "priorEventCountBand": "16+",
+      "priorDPFractionBand": "40%+",
+      "events": 201,
+      "dpEvents": 43,
+      "dpRate": 0.2139,
+      "wilson95": [
+        0.1629,
+        0.2757
+      ],
+      "activeDates": 47
+    }
+  ],
+  "dailyHoldoutOutcomesAfterWarmup": [
+    {
+      "date": "2026-01-01",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-01-02",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-01-03",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-01-04",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-01-05",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-01-06",
+      "events": 22,
+      "dpEvents": 5,
+      "dpRate": 0.2273
+    },
+    {
+      "date": "2026-01-07",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-01-08",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-01-09",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-01-10",
+      "events": 18,
+      "dpEvents": 1,
+      "dpRate": 0.0556
+    },
+    {
+      "date": "2026-01-11",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-01-12",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-01-13",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-01-14",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-01-15",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-01-16",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-01-17",
+      "events": 18,
+      "dpEvents": 6,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-01-18",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-01-19",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-01-20",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-01-21",
+      "events": 24,
+      "dpEvents": 11,
+      "dpRate": 0.4583
+    },
+    {
+      "date": "2026-01-22",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-01-23",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-01-24",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-01-25",
+      "events": 6,
+      "dpEvents": 2,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-01-27",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-01-28",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-01-29",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-01-30",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-01-31",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-01",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-02",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-03",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-02-04",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-02-05",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-02-06",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-07",
+      "events": 18,
+      "dpEvents": 7,
+      "dpRate": 0.3889
+    },
+    {
+      "date": "2026-02-08",
+      "events": 6,
+      "dpEvents": 2,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-02-09",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-02-10",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-02-11",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-02-12",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-02-13",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-02-14",
+      "events": 18,
+      "dpEvents": 6,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-02-15",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-02-16",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-17",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-02-18",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-02-19",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-20",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-21",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-22",
+      "events": 6,
+      "dpEvents": 2,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-02-23",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-02-24",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-02-25",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-02-26",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-02-27",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-02-28",
+      "events": 18,
+      "dpEvents": 2,
+      "dpRate": 0.1111
+    },
+    {
+      "date": "2026-03-01",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-03-02",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-03-03",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-03-05",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-03-06",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-03-07",
+      "events": 18,
+      "dpEvents": 7,
+      "dpRate": 0.3889
+    },
+    {
+      "date": "2026-03-08",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-03-09",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-03-10",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-03-11",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-03-12",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-03-13",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-03-14",
+      "events": 18,
+      "dpEvents": 4,
+      "dpRate": 0.2222
+    },
+    {
+      "date": "2026-03-15",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-03-16",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-03-17",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-03-18",
+      "events": 24,
+      "dpEvents": 2,
+      "dpRate": 0.0833
+    },
+    {
+      "date": "2026-03-19",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-03-20",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-03-21",
+      "events": 16,
+      "dpEvents": 6,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-03-22",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-03-23",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-03-24",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-03-25",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-03-26",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-03-27",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-03-28",
+      "events": 18,
+      "dpEvents": 7,
+      "dpRate": 0.3889
+    },
+    {
+      "date": "2026-03-29",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-03-30",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-03-31",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-04-01",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-04-02",
+      "events": 24,
+      "dpEvents": 2,
+      "dpRate": 0.0833
+    },
+    {
+      "date": "2026-04-03",
+      "events": 22,
+      "dpEvents": 5,
+      "dpRate": 0.2273
+    },
+    {
+      "date": "2026-04-04",
+      "events": 18,
+      "dpEvents": 5,
+      "dpRate": 0.2778
+    },
+    {
+      "date": "2026-04-05",
+      "events": 6,
+      "dpEvents": 2,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-04-06",
+      "events": 24,
+      "dpEvents": 11,
+      "dpRate": 0.4583
+    },
+    {
+      "date": "2026-04-07",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-04-08",
+      "events": 24,
+      "dpEvents": 11,
+      "dpRate": 0.4583
+    },
+    {
+      "date": "2026-04-09",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-04-10",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-04-11",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-04-12",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-04-13",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-04-14",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-04-15",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-04-16",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-04-17",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-04-18",
+      "events": 18,
+      "dpEvents": 4,
+      "dpRate": 0.2222
+    },
+    {
+      "date": "2026-04-19",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-04-20",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-04-21",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-04-22",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-04-23",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-04-24",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-04-25",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-04-26",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-04-27",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-04-28",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-04-29",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-04-30",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-05-01",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-05-02",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-05-03",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-05-04",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-05-05",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-05-06",
+      "events": 22,
+      "dpEvents": 2,
+      "dpRate": 0.0909
+    },
+    {
+      "date": "2026-05-07",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-05-08",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-05-09",
+      "events": 18,
+      "dpEvents": 5,
+      "dpRate": 0.2778
+    },
+    {
+      "date": "2026-05-10",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-05-11",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-05-12",
+      "events": 24,
+      "dpEvents": 1,
+      "dpRate": 0.0417
+    },
+    {
+      "date": "2026-05-13",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-05-14",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-05-15",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-05-16",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-05-17",
+      "events": 6,
+      "dpEvents": 2,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-05-18",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-05-19",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-05-20",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-05-21",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-05-22",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-05-23",
+      "events": 18,
+      "dpEvents": 6,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-05-24",
+      "events": 6,
+      "dpEvents": 3,
+      "dpRate": 0.5
+    },
+    {
+      "date": "2026-05-25",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-05-26",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-05-27",
+      "events": 24,
+      "dpEvents": 2,
+      "dpRate": 0.0833
+    },
+    {
+      "date": "2026-05-28",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-05-29",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-05-30",
+      "events": 18,
+      "dpEvents": 5,
+      "dpRate": 0.2778
+    },
+    {
+      "date": "2026-05-31",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-06-01",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-06-02",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-06-03",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-06-04",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-06-05",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-06-06",
+      "events": 18,
+      "dpEvents": 5,
+      "dpRate": 0.2778
+    },
+    {
+      "date": "2026-06-07",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-06-08",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-06-09",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-06-10",
+      "events": 24,
+      "dpEvents": 12,
+      "dpRate": 0.5
+    },
+    {
+      "date": "2026-06-11",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-06-12",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-06-13",
+      "events": 18,
+      "dpEvents": 7,
+      "dpRate": 0.3889
+    },
+    {
+      "date": "2026-06-14",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-06-15",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-06-16",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-06-17",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-06-18",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-06-19",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-06-20",
+      "events": 18,
+      "dpEvents": 6,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-06-21",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-06-22",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-06-23",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-06-24",
+      "events": 22,
+      "dpEvents": 10,
+      "dpRate": 0.4545
+    },
+    {
+      "date": "2026-06-25",
+      "events": 22,
+      "dpEvents": 9,
+      "dpRate": 0.4091
+    },
+    {
+      "date": "2026-06-26",
+      "events": 22,
+      "dpEvents": 4,
+      "dpRate": 0.1818
+    },
+    {
+      "date": "2026-06-27",
+      "events": 18,
+      "dpEvents": 2,
+      "dpRate": 0.1111
+    },
+    {
+      "date": "2026-06-28",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-06-29",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-06-30",
+      "events": 24,
+      "dpEvents": 13,
+      "dpRate": 0.5417
+    },
+    {
+      "date": "2026-07-01",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-07-02",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-07-03",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-07-04",
+      "events": 18,
+      "dpEvents": 4,
+      "dpRate": 0.2222
+    },
+    {
+      "date": "2026-07-05",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-07-06",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-07-07",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-07-08",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-07-09",
+      "events": 24,
+      "dpEvents": 1,
+      "dpRate": 0.0417
+    },
+    {
+      "date": "2026-07-10",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-07-11",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-07-12",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-07-13",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-07-14",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-07-15",
+      "events": 24,
+      "dpEvents": 2,
+      "dpRate": 0.0833
+    },
+    {
+      "date": "2026-07-16",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-07-17",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-07-18",
+      "events": 18,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-07-19",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-07-20",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-07-21",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-07-22",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-07-23",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-07-24",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-07-25",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-07-26",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-07-27",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-07-28",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-07-29",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-07-30",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-07-31",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-08-01",
+      "events": 18,
+      "dpEvents": 2,
+      "dpRate": 0.1111
+    },
+    {
+      "date": "2026-08-02",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-08-03",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-08-04",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-08-05",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-08-06",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-08-07",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-08-08",
+      "events": 18,
+      "dpEvents": 4,
+      "dpRate": 0.2222
+    },
+    {
+      "date": "2026-08-09",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-08-10",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-08-11",
+      "events": 24,
+      "dpEvents": 9,
+      "dpRate": 0.375
+    },
+    {
+      "date": "2026-08-12",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-08-13",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-08-14",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-08-16",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-08-17",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-08-18",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-08-19",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-08-20",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-08-21",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-08-22",
+      "events": 18,
+      "dpEvents": 4,
+      "dpRate": 0.2222
+    },
+    {
+      "date": "2026-08-23",
+      "events": 6,
+      "dpEvents": 0,
+      "dpRate": 0.0
+    },
+    {
+      "date": "2026-08-24",
+      "events": 24,
+      "dpEvents": 4,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-08-25",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-08-26",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-08-27",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-08-28",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-08-29",
+      "events": 18,
+      "dpEvents": 4,
+      "dpRate": 0.2222
+    },
+    {
+      "date": "2026-08-30",
+      "events": 6,
+      "dpEvents": 3,
+      "dpRate": 0.5
+    },
+    {
+      "date": "2026-08-31",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-09-01",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-09-02",
+      "events": 24,
+      "dpEvents": 5,
+      "dpRate": 0.2083
+    },
+    {
+      "date": "2026-09-03",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-09-04",
+      "events": 24,
+      "dpEvents": 7,
+      "dpRate": 0.2917
+    },
+    {
+      "date": "2026-09-05",
+      "events": 18,
+      "dpEvents": 5,
+      "dpRate": 0.2778
+    },
+    {
+      "date": "2026-09-06",
+      "events": 6,
+      "dpEvents": 2,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-09-07",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-09-08",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-09-09",
+      "events": 24,
+      "dpEvents": 3,
+      "dpRate": 0.125
+    },
+    {
+      "date": "2026-09-10",
+      "events": 24,
+      "dpEvents": 8,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-09-11",
+      "events": 24,
+      "dpEvents": 2,
+      "dpRate": 0.0833
+    },
+    {
+      "date": "2026-09-12",
+      "events": 18,
+      "dpEvents": 2,
+      "dpRate": 0.1111
+    },
+    {
+      "date": "2026-09-13",
+      "events": 6,
+      "dpEvents": 2,
+      "dpRate": 0.3333
+    },
+    {
+      "date": "2026-09-14",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-09-15",
+      "events": 18,
+      "dpEvents": 5,
+      "dpRate": 0.2778
+    },
+    {
+      "date": "2026-09-16",
+      "events": 24,
+      "dpEvents": 11,
+      "dpRate": 0.4583
+    },
+    {
+      "date": "2026-09-17",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-09-18",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-09-19",
+      "events": 18,
+      "dpEvents": 3,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-09-20",
+      "events": 6,
+      "dpEvents": 1,
+      "dpRate": 0.1667
+    },
+    {
+      "date": "2026-09-21",
+      "events": 24,
+      "dpEvents": 6,
+      "dpRate": 0.25
+    },
+    {
+      "date": "2026-09-22",
+      "events": 24,
+      "dpEvents": 2,
+      "dpRate": 0.0833
+    },
+    {
+      "date": "2026-09-23",
+      "events": 24,
+      "dpEvents": 10,
+      "dpRate": 0.4167
+    },
+    {
+      "date": "2026-09-24",
+      "events": 18,
+      "dpEvents": 7,
+      "dpRate": 0.3889
+    }
+  ]
+}

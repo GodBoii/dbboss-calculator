@@ -1,0 +1,1309 @@
+{
+  "method": "Train-ranked signal quotas and 2/3-way intersections selected only from prior years; each selected rule is scored on the next full year.",
+  "label": "DP iff exactly two distinct digits in the three-digit panel. SP and TP are negatives.",
+  "source": {
+    "archivedDrawRows": 41475,
+    "appMarketRows": 23699,
+    "marketCountInArchive": 22,
+    "appMarkets": [
+      "Kalyan",
+      "Kalyan Night",
+      "Madhur Day",
+      "Madhur Night",
+      "Main Bazar",
+      "Milan Day",
+      "Milan Night",
+      "Rajdhani Day",
+      "Rajdhani Night",
+      "Sridevi",
+      "Sridevi Night",
+      "Time Bazar"
+    ],
+    "firstDate": "2013-05-06",
+    "lastDate": "2026-09-24",
+    "scheduleSource": "src/lib/market-schedule.ts, copied into research/dp_only_v1/extended_matrix.py",
+    "strictScheduleAssumption": "Same-day source panel is eligible only when its configured event minute is strictly earlier than the target. Chart publication timestamps and historical schedule changes are unavailable."
+  },
+  "protocol": {
+    "outerWalkForwardYears": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "finalHistoricalTrainingEnd": "2025-12-31",
+    "2026Role": "Retrospective audit only. Earlier reports already disclosed 2026 aggregate results, so this is not pristine holdout evidence.",
+    "minimumTrainingCallsPerSelectedRule": 60,
+    "minimumTrainingActiveDates": 25,
+    "minimumAtomicSignalTrainingSupport": 30,
+    "families": [
+      "market/side",
+      "calendar",
+      "lag state",
+      "rolling DP rates",
+      "prior panel digit shape",
+      "strictly earlier same-day sequence",
+      "prior-day cross-market regime"
+    ],
+    "interactions": "One-, two-, and three-signal rules. Interaction pairs are selected from training-ranked atomic signals, and triples extend training-ranked pairs.",
+    "familyQuota": 35,
+    "multipleTesting": "Every retained rule mask is included in a training-only Bonferroni diagnostic. Main performance is measured on untouched next-year folds, followed by a four-week moving-block bootstrap that clusters same-day outcomes and nearby weeks.",
+    "limits": [
+      "Configured schedule times are not archived publication timestamps.",
+      "The chart export comes from one provider and has no independent source verification.",
+      "No betting ledger, payout liability, operator rule, or operator statement is observed, so results cannot identify operator psychology or causation."
+    ],
+    "priorAuditOverlap": "Earlier project reports already examined overlapping chart history, including 2024-2025 validation. The yearly rules use only prior-year data, but this retrospective run is not a blind or preregistered holdout."
+  },
+  "nestedWalkForward": {
+    "selectedRuleByYear": [
+      {
+        "validationYear": 2021,
+        "trainingThrough": "2020-12-31",
+        "selectedRule": "(market_side == Rajdhani Day|open) AND (gap_dp_events >= 4) AND (prior_panel_spread == 5)",
+        "search": {
+          "signalPool": 214,
+          "singleMasks": 214,
+          "eligiblePairMasks": 19536,
+          "pairPoolForTriples": 100,
+          "eligibleTripleMasks": 9061,
+          "totalDistinctCandidateMasksTested": 28811,
+          "selectedTrainingCalls": 78,
+          "selectedTrainingHits": 37,
+          "selectedTrainingPrecision": 0.47435897435897434,
+          "selectedTrainingActiveDays": 78,
+          "selectedTrainingWilsonLowerOneSided95": 0.3837876631747481,
+          "trainingBaseRate": 0.21816479400749064,
+          "trainingNominalOneSidedBinomialP": 4.960047799388671e-07,
+          "trainingBonferroniP": 0.0142903937148187,
+          "trainingPValueCaveat": "Bonferroni adjusts the recorded candidate count, but the binomial null assumes independent calls and does not preserve date-level clustering. Walk-forward scores are the main check."
+        },
+        "validation": {
+          "calls": 6,
+          "hits": 5,
+          "falseCalls": 1,
+          "precision": 0.8333333333333334,
+          "oneSidedExact95Lower": 0.4181965907479741,
+          "activeDates": 6,
+          "daysAtLeast70Percent": 5,
+          "daysAtLeast90Percent": 5,
+          "perfectDays": 5,
+          "dailyCallBuckets": {
+            "1": {
+              "days": 6,
+              "calls": 6,
+              "hits": 5,
+              "precision": 0.8333333333333334,
+              "daysAtLeast70Percent": 5,
+              "perfectDays": 5
+            },
+            "2": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "3-4": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "5-10": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "11+": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            }
+          },
+          "dailyRows": [
+            {
+              "date": "2021-02-13",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2021-02-19",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2021-03-13",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2021-04-14",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2021-06-08",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2021-07-24",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            }
+          ]
+        }
+      },
+      {
+        "validationYear": 2022,
+        "trainingThrough": "2021-12-31",
+        "selectedRule": "(same_day_prior_last_market_side == Madhur Day|close) AND (gap_dp_days >= 6) AND (prior_panel_sum <= 11)",
+        "search": {
+          "signalPool": 220,
+          "singleMasks": 213,
+          "eligiblePairMasks": 19421,
+          "pairPoolForTriples": 100,
+          "eligibleTripleMasks": 7474,
+          "totalDistinctCandidateMasksTested": 27108,
+          "selectedTrainingCalls": 84,
+          "selectedTrainingHits": 40,
+          "selectedTrainingPrecision": 0.47619047619047616,
+          "selectedTrainingActiveDays": 84,
+          "selectedTrainingWilsonLowerOneSided95": 0.3887074887353709,
+          "trainingBaseRate": 0.22283482655639789,
+          "trainingNominalOneSidedBinomialP": 2.76758300003485e-07,
+          "trainingBonferroniP": 0.007502363996494471,
+          "trainingPValueCaveat": "Bonferroni adjusts the recorded candidate count, but the binomial null assumes independent calls and does not preserve date-level clustering. Walk-forward scores are the main check."
+        },
+        "validation": {
+          "calls": 16,
+          "hits": 8,
+          "falseCalls": 8,
+          "precision": 0.5,
+          "oneSidedExact95Lower": 0.2786026855021704,
+          "activeDates": 16,
+          "daysAtLeast70Percent": 8,
+          "daysAtLeast90Percent": 8,
+          "perfectDays": 8,
+          "dailyCallBuckets": {
+            "1": {
+              "days": 16,
+              "calls": 16,
+              "hits": 8,
+              "precision": 0.5,
+              "daysAtLeast70Percent": 8,
+              "perfectDays": 8
+            },
+            "2": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "3-4": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "5-10": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "11+": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            }
+          },
+          "dailyRows": [
+            {
+              "date": "2022-01-04",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2022-01-05",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2022-01-07",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2022-01-15",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2022-01-17",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2022-01-19",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2022-01-25",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2022-03-09",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2022-04-03",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2022-06-01",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2022-07-12",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2022-08-03",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2022-08-10",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2022-09-13",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2022-11-01",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2022-11-25",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            }
+          ]
+        }
+      },
+      {
+        "validationYear": 2023,
+        "trainingThrough": "2022-12-31",
+        "selectedRule": "(market_side_weekday == Rajdhani Day|open|2) AND (rate_5_minus_40 <= -0.1) AND (prior_panel_spread_rate_20 <= 5.3)",
+        "search": {
+          "signalPool": 218,
+          "singleMasks": 209,
+          "eligiblePairMasks": 17710,
+          "pairPoolForTriples": 100,
+          "eligibleTripleMasks": 6040,
+          "totalDistinctCandidateMasksTested": 23959,
+          "selectedTrainingCalls": 73,
+          "selectedTrainingHits": 40,
+          "selectedTrainingPrecision": 0.547945205479452,
+          "selectedTrainingActiveDays": 73,
+          "selectedTrainingWilsonLowerOneSided95": 0.45212960710588673,
+          "trainingBaseRate": 0.2370479704797048,
+          "trainingNominalOneSidedBinomialP": 1.0924477215202258e-08,
+          "trainingBonferroniP": 0.0002617395495990309,
+          "trainingPValueCaveat": "Bonferroni adjusts the recorded candidate count, but the binomial null assumes independent calls and does not preserve date-level clustering. Walk-forward scores are the main check."
+        },
+        "validation": {
+          "calls": 10,
+          "hits": 1,
+          "falseCalls": 9,
+          "precision": 0.1,
+          "oneSidedExact95Lower": 0.005116196891823702,
+          "activeDates": 10,
+          "daysAtLeast70Percent": 1,
+          "daysAtLeast90Percent": 1,
+          "perfectDays": 1,
+          "dailyCallBuckets": {
+            "1": {
+              "days": 10,
+              "calls": 10,
+              "hits": 1,
+              "precision": 0.1,
+              "daysAtLeast70Percent": 1,
+              "perfectDays": 1
+            },
+            "2": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "3-4": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "5-10": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "11+": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            }
+          },
+          "dailyRows": [
+            {
+              "date": "2023-01-11",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2023-06-28",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2023-08-09",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2023-09-13",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2023-10-04",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2023-10-11",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2023-10-18",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2023-10-25",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2023-11-29",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2023-12-20",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            }
+          ]
+        }
+      },
+      {
+        "validationYear": 2024,
+        "trainingThrough": "2023-12-31",
+        "selectedRule": "(market_side_weekday == Rajdhani Day|open|2) AND (gap_dp_days >= 4) AND (prev_day_other_dp_count >= 6)",
+        "search": {
+          "signalPool": 216,
+          "singleMasks": 208,
+          "eligiblePairMasks": 18107,
+          "pairPoolForTriples": 100,
+          "eligibleTripleMasks": 5921,
+          "totalDistinctCandidateMasksTested": 24236,
+          "selectedTrainingCalls": 76,
+          "selectedTrainingHits": 42,
+          "selectedTrainingPrecision": 0.5526315789473685,
+          "selectedTrainingActiveDays": 76,
+          "selectedTrainingWilsonLowerOneSided95": 0.45861643795317486,
+          "trainingBaseRate": 0.23717038539553753,
+          "trainingNominalOneSidedBinomialP": 3.4115180161576676e-09,
+          "trainingBonferroniP": 8.268155063959724e-05,
+          "trainingPValueCaveat": "Bonferroni adjusts the recorded candidate count, but the binomial null assumes independent calls and does not preserve date-level clustering. Walk-forward scores are the main check."
+        },
+        "validation": {
+          "calls": 29,
+          "hits": 10,
+          "falseCalls": 19,
+          "precision": 0.3448275862068966,
+          "oneSidedExact95Lower": 0.20049569764949945,
+          "activeDates": 29,
+          "daysAtLeast70Percent": 10,
+          "daysAtLeast90Percent": 10,
+          "perfectDays": 10,
+          "dailyCallBuckets": {
+            "1": {
+              "days": 29,
+              "calls": 29,
+              "hits": 10,
+              "precision": 0.3448275862068966,
+              "daysAtLeast70Percent": 10,
+              "perfectDays": 10
+            },
+            "2": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "3-4": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "5-10": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            },
+            "11+": {
+              "days": 0,
+              "calls": 0,
+              "hits": 0,
+              "precision": null,
+              "daysAtLeast70Percent": 0,
+              "perfectDays": 0
+            }
+          },
+          "dailyRows": [
+            {
+              "date": "2024-01-03",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-01-17",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-01-24",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-02-14",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-02-21",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-03-27",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-04-03",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-04-10",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-05-01",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-05-08",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-05-22",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-05-29",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-06-05",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-06-12",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-06-19",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-06-26",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-07-17",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-07-24",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-07-31",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-08-07",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-08-14",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-08-21",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-08-28",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            },
+            {
+              "date": "2024-10-02",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-10-09",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-11-20",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-11-27",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-12-18",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            },
+            {
+              "date": "2024-12-25",
+              "calls": 1,
+              "hits": 0,
+              "precision": 0.0
+            }
+          ]
+        }
+      }
+    ],
+    "pooledOutOfSample": {
+      "calls": 61,
+      "hits": 24,
+      "falseCalls": 37,
+      "precision": 0.39344262295081966,
+      "oneSidedExact95Lower": 0.28817928219397987,
+      "activeDates": 61,
+      "daysAtLeast70Percent": 24,
+      "daysAtLeast90Percent": 24,
+      "perfectDays": 24,
+      "dailyCallBuckets": {
+        "1": {
+          "days": 61,
+          "calls": 61,
+          "hits": 24,
+          "precision": 0.39344262295081966,
+          "daysAtLeast70Percent": 24,
+          "perfectDays": 24
+        },
+        "2": {
+          "days": 0,
+          "calls": 0,
+          "hits": 0,
+          "precision": null,
+          "daysAtLeast70Percent": 0,
+          "perfectDays": 0
+        },
+        "3-4": {
+          "days": 0,
+          "calls": 0,
+          "hits": 0,
+          "precision": null,
+          "daysAtLeast70Percent": 0,
+          "perfectDays": 0
+        },
+        "5-10": {
+          "days": 0,
+          "calls": 0,
+          "hits": 0,
+          "precision": null,
+          "daysAtLeast70Percent": 0,
+          "perfectDays": 0
+        },
+        "11+": {
+          "days": 0,
+          "calls": 0,
+          "hits": 0,
+          "precision": null,
+          "daysAtLeast70Percent": 0,
+          "perfectDays": 0
+        }
+      },
+      "dailyRows": [
+        {
+          "date": "2021-02-13",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2021-02-19",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2021-03-13",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2021-04-14",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2021-06-08",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2021-07-24",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2022-01-04",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2022-01-05",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2022-01-07",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2022-01-15",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2022-01-17",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2022-01-19",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2022-01-25",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2022-03-09",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2022-04-03",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2022-06-01",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2022-07-12",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2022-08-03",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2022-08-10",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2022-09-13",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2022-11-01",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2022-11-25",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-01-11",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-06-28",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-08-09",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-09-13",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-10-04",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-10-11",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2023-10-18",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-10-25",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-11-29",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2023-12-20",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-01-03",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-01-17",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-01-24",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-02-14",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-02-21",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-03-27",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-04-03",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-04-10",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-05-01",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-05-08",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-05-22",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-05-29",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-06-05",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-06-12",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-06-19",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-06-26",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-07-17",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-07-24",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-07-31",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-08-07",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-08-14",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-08-21",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-08-28",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2024-10-02",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-10-09",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-11-20",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-11-27",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-12-18",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2024-12-25",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        }
+      ]
+    },
+    "fourWeekMovingBlockBootstrap95": [
+      0.2926829268292683,
+      0.5
+    ]
+  },
+  "finalRuleTrainedThrough2025": {
+    "selectedRule": "(market_side_weekday == Rajdhani Day|open|5) AND (gap_dp_days >= 4) AND (same_day_prior_dp_rate >= 0.166667)",
+    "trainingSearch": {
+      "signalPool": 217,
+      "singleMasks": 217,
+      "eligiblePairMasks": 19372,
+      "pairPoolForTriples": 100,
+      "eligibleTripleMasks": 5664,
+      "totalDistinctCandidateMasksTested": 25253,
+      "selectedTrainingCalls": 71,
+      "selectedTrainingHits": 38,
+      "selectedTrainingPrecision": 0.5352112676056338,
+      "selectedTrainingActiveDays": 71,
+      "selectedTrainingWilsonLowerOneSided95": 0.4383518897881467,
+      "trainingBaseRate": 0.2406889316314041,
+      "trainingNominalOneSidedBinomialP": 9.000942084398237e-08,
+      "trainingBonferroniP": 0.0022730079045730866,
+      "trainingPValueCaveat": "Bonferroni adjusts the recorded candidate count, but the binomial null assumes independent calls and does not preserve date-level clustering. Walk-forward scores are the main check."
+    },
+    "retrospective2026Audit": {
+      "calls": 12,
+      "hits": 5,
+      "falseCalls": 7,
+      "precision": 0.4166666666666667,
+      "oneSidedExact95Lower": 0.18102475724232103,
+      "activeDates": 12,
+      "daysAtLeast70Percent": 5,
+      "daysAtLeast90Percent": 5,
+      "perfectDays": 5,
+      "dailyCallBuckets": {
+        "1": {
+          "days": 12,
+          "calls": 12,
+          "hits": 5,
+          "precision": 0.4166666666666667,
+          "daysAtLeast70Percent": 5,
+          "perfectDays": 5
+        },
+        "2": {
+          "days": 0,
+          "calls": 0,
+          "hits": 0,
+          "precision": null,
+          "daysAtLeast70Percent": 0,
+          "perfectDays": 0
+        },
+        "3-4": {
+          "days": 0,
+          "calls": 0,
+          "hits": 0,
+          "precision": null,
+          "daysAtLeast70Percent": 0,
+          "perfectDays": 0
+        },
+        "5-10": {
+          "days": 0,
+          "calls": 0,
+          "hits": 0,
+          "precision": null,
+          "daysAtLeast70Percent": 0,
+          "perfectDays": 0
+        },
+        "11+": {
+          "days": 0,
+          "calls": 0,
+          "hits": 0,
+          "precision": null,
+          "daysAtLeast70Percent": 0,
+          "perfectDays": 0
+        }
+      },
+      "dailyRows": [
+        {
+          "date": "2026-01-17",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2026-02-07",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2026-02-14",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2026-02-21",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2026-03-21",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2026-04-04",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2026-04-18",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2026-04-25",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2026-07-04",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2026-07-11",
+          "calls": 1,
+          "hits": 1,
+          "precision": 1.0
+        },
+        {
+          "date": "2026-09-05",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        },
+        {
+          "date": "2026-09-19",
+          "calls": 1,
+          "hits": 0,
+          "precision": 0.0
+        }
+      ]
+    }
+  },
+  "interpretation": "A high in-sample precision rule is not accepted as an accurate model unless the same past-only selection procedure repeats out of time with adequate daily support."
+}

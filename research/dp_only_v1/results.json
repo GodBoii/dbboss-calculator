@@ -1,0 +1,372 @@
+{
+  "design": {
+    "trainThrough": "2024-12-31",
+    "validationThrough": "2025-12-31",
+    "holdoutStarts": "2026-01-01",
+    "features": [
+      "weekday",
+      "month",
+      "day_of_month",
+      "market_id",
+      "side_id",
+      "lag_open",
+      "lag_close",
+      "lag_same",
+      "lag2_same",
+      "gap_same",
+      "rate_5",
+      "rate_10",
+      "rate_20",
+      "rate_40",
+      "rate_80",
+      "same_day_open",
+      "prev_day_other_dp",
+      "prev_day_other_count",
+      "lag_panel_sum",
+      "lag_panel_spread",
+      "lag_panel_entropy",
+      "lag_sutta"
+    ],
+    "ruleConfigurations": 1200,
+    "probabilityConfigurations": 198
+  },
+  "splits": {
+    "train": {
+      "events": 55286,
+      "dpEvents": 13463,
+      "dpRate": 0.2435,
+      "first": "2013-08-13",
+      "last": "2024-12-31"
+    },
+    "validation": {
+      "events": 13712,
+      "dpEvents": 3334,
+      "dpRate": 0.2431,
+      "first": "2025-01-01",
+      "last": "2025-12-31"
+    },
+    "holdout": {
+      "events": 10432,
+      "dpEvents": 2464,
+      "dpRate": 0.2362,
+      "first": "2026-01-01",
+      "last": "2026-09-24"
+    }
+  },
+  "bestRule": {
+    "rule": "weekday <= 0 AND rate_80 >= 0.35",
+    "train": {
+      "calls": 460,
+      "hits": 122,
+      "falseCalls": 338,
+      "precision": 0.2652,
+      "coverage": 0.00832
+    },
+    "validation": {
+      "calls": 131,
+      "hits": 54,
+      "falseCalls": 77,
+      "precision": 0.4122,
+      "coverage": 0.00955
+    },
+    "holdout": {
+      "calls": 55,
+      "hits": 12,
+      "falseCalls": 43,
+      "precision": 0.2182,
+      "coverage": 0.00527
+    },
+    "primaryHoldout": {
+      "calls": 38,
+      "hits": 10,
+      "falseCalls": 28,
+      "precision": 0.2632,
+      "coverage": 0.00703
+    }
+  },
+  "primaryHoldout": {
+    "events": 5404,
+    "dpEvents": 1389
+  },
+  "models": [
+    {
+      "model": "logistic",
+      "threshold": 0.59,
+      "validation": {
+        "calls": 267,
+        "hits": 85,
+        "falseCalls": 182,
+        "precision": 0.3184,
+        "coverage": 0.01947
+      },
+      "holdout": {
+        "calls": 117,
+        "hits": 32,
+        "falseCalls": 85,
+        "precision": 0.2735,
+        "coverage": 0.01122
+      },
+      "primaryHoldout": {
+        "calls": 50,
+        "hits": 13,
+        "falseCalls": 37,
+        "precision": 0.26,
+        "coverage": 0.00925
+      },
+      "validationAuc": 0.5494,
+      "holdoutAuc": 0.5502
+    },
+    {
+      "model": "random_forest",
+      "threshold": 0.31,
+      "validation": {
+        "calls": 93,
+        "hits": 26,
+        "falseCalls": 67,
+        "precision": 0.2796,
+        "coverage": 0.00678
+      },
+      "holdout": {
+        "calls": 81,
+        "hits": 26,
+        "falseCalls": 55,
+        "precision": 0.321,
+        "coverage": 0.00776
+      },
+      "primaryHoldout": {
+        "calls": 4,
+        "hits": 3,
+        "falseCalls": 1,
+        "precision": 0.75,
+        "coverage": 0.00074
+      },
+      "validationAuc": 0.5468,
+      "holdoutAuc": 0.5527
+    },
+    {
+      "model": "hist_gradient_boost",
+      "threshold": 0.3,
+      "validation": {
+        "calls": 793,
+        "hits": 239,
+        "falseCalls": 554,
+        "precision": 0.3014,
+        "coverage": 0.05783
+      },
+      "holdout": {
+        "calls": 534,
+        "hits": 153,
+        "falseCalls": 381,
+        "precision": 0.2865,
+        "coverage": 0.05119
+      },
+      "primaryHoldout": {
+        "calls": 116,
+        "hits": 37,
+        "falseCalls": 79,
+        "precision": 0.319,
+        "coverage": 0.02147
+      },
+      "validationAuc": 0.553,
+      "holdoutAuc": 0.558
+    }
+  ],
+  "decision": "No DP calls until a frozen rule clears 90% precision with sufficient holdout support.",
+  "sources": {
+    "Milan Day": {
+      "url": "https://dpboss.tax/panel-chart-record/milan-day.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/milan-day.php",
+      "rows": 1248,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Time Bazar": {
+      "url": "https://dpboss.tax/panel-chart-record/time-bazar.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/time-bazar.php",
+      "rows": 1780,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Sridevi": {
+      "url": "https://dpboss.tax/panel-chart-record/sridevi.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/sridevi.php",
+      "rows": 2071,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Kalyan": {
+      "url": "https://dpboss.tax/panel-chart-record/kalyan.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/kalyan.php",
+      "rows": 1194,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Madhur Day": {
+      "url": "https://dpboss.tax/panel-chart-record/madhur-day.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/madhur-day.php",
+      "rows": 3036,
+      "conflicts": 7,
+      "jodiMismatches": 4,
+      "malformedDates": 0
+    },
+    "Sridevi Night": {
+      "url": "https://dpboss.tax/panel-chart-record/sridevi-night.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/sridevi-night.php",
+      "rows": 2056,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Rajdhani Day": {
+      "url": "https://dpboss.tax/panel-chart-record/rajdhani-day.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/rajdhani-day.php",
+      "rows": 4018,
+      "conflicts": 4,
+      "jodiMismatches": 18,
+      "malformedDates": 0
+    },
+    "Kalyan Night": {
+      "url": "https://dpboss.tax/panel-chart-record/kalyan-night.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/kalyan-night.php",
+      "rows": 1613,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Milan Night": {
+      "url": "https://dpboss.tax/panel-chart-record/milan-night.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/milan-night.php",
+      "rows": 1430,
+      "conflicts": 0,
+      "jodiMismatches": 1,
+      "malformedDates": 0
+    },
+    "Rajdhani Night": {
+      "url": "https://dpboss.tax/panel-chart-record/rajdhani-night.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/rajdhani-night.php",
+      "rows": 1453,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Madhur Night": {
+      "url": "https://dpboss.tax/panel-chart-record/madhur-night.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/madhur-night.php",
+      "rows": 2599,
+      "conflicts": 0,
+      "jodiMismatches": 9,
+      "malformedDates": 0
+    },
+    "Main Bazar": {
+      "url": "https://dpboss.tax/panel-chart-record/main-bazar.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/main-bazar.php",
+      "rows": 1201,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Kalyan Morning": {
+      "url": "https://dpboss.tax/panel-chart-record/kalyan-morning.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/kalyan-morning.php",
+      "rows": 1356,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Madhuri Night": {
+      "url": "https://dpboss.tax/panel-chart-record/madhuri-night.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/madhuri-night.php",
+      "rows": 1488,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Madhuri": {
+      "url": "https://dpboss.tax/panel-chart-record/madhuri.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/madhuri.php",
+      "rows": 3073,
+      "conflicts": 26,
+      "jodiMismatches": 3,
+      "malformedDates": 0
+    },
+    "Milan Morning": {
+      "url": "https://dpboss.tax/panel-chart-record/milan-morning.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/milan-morning.php",
+      "rows": 2285,
+      "conflicts": 4,
+      "jodiMismatches": 1,
+      "malformedDates": 0
+    },
+    "Mumbai Day": {
+      "url": "https://dpboss.tax/panel-chart-record/mumbai-day.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/mumbai-day.php",
+      "rows": 567,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Madhur Morning": {
+      "url": "https://dpboss.tax/panel-chart-record/madhur-morning.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/madhur-morning.php",
+      "rows": 2742,
+      "conflicts": 1,
+      "jodiMismatches": 5,
+      "malformedDates": 0
+    },
+    "Mumbai Night": {
+      "url": "https://dpboss.tax/panel-chart-record/mumbai-night.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/mumbai-night.php",
+      "rows": 549,
+      "conflicts": 7,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Tara Mumbai Day": {
+      "url": "https://dpboss.tax/panel-chart-record/tara-mumbai-day.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/tara-mumbai-day.php",
+      "rows": 1754,
+      "conflicts": 0,
+      "jodiMismatches": 1,
+      "malformedDates": 0
+    },
+    "Supreme Day": {
+      "url": "https://dpboss.tax/panel-chart-record/supreme-day.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/supreme-day.php",
+      "rows": 1982,
+      "conflicts": 0,
+      "jodiMismatches": 0,
+      "malformedDates": 0
+    },
+    "Supreme Night": {
+      "url": "https://dpboss.tax/panel-chart-record/supreme-night.php",
+      "resolvedUrl": "https://dpboss.tax/panel-chart-record/supreme-night.php",
+      "rows": 1980,
+      "conflicts": 0,
+      "jodiMismatches": 1,
+      "malformedDates": 0
+    }
+  },
+  "data": {
+    "marketCount": 22,
+    "drawRows": 41475,
+    "first": "2013-05-06",
+    "last": "2026-09-24",
+    "panelEvents": 82950,
+    "extraMarkets": [
+      "Kalyan Morning",
+      "Milan Morning",
+      "Madhuri",
+      "Madhuri Night",
+      "Madhur Morning",
+      "Mumbai Day",
+      "Mumbai Night",
+      "Tara Mumbai Day",
+      "Supreme Day",
+      "Supreme Night"
+    ]
+  }
+}

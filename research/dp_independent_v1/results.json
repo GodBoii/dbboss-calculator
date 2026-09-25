@@ -1,0 +1,5260 @@
+{
+  "method": "Independent feature engineering and candidate search over the saved chart_rows.csv; no app files changed.",
+  "label": "DP iff a three digit panel has exactly two distinct digits; SP and TP are negatives.",
+  "sourceAudit": {
+    "source": "research\\dp_only_v1\\chart_rows.csv",
+    "rows": 41475,
+    "duplicateIdenticalRows": 0,
+    "duplicateConflictingRows": 0,
+    "malformedDates": 0,
+    "firstDate": "2013-05-06",
+    "lastDate": "2026-09-24",
+    "marketCount": 22,
+    "primaryMarketRows": 23699,
+    "extraMarketRows": 17776,
+    "openPanels": 41475,
+    "closePanels": 41475
+  },
+  "perMarketCoverageAndBaseRate": {
+    "Sridevi": {
+      "drawRows": 2071,
+      "rowsWithAnyPanel": 2071,
+      "panelEvents": 4142,
+      "dpEvents": 876,
+      "dpRate": 0.2115,
+      "first": "2021-01-04",
+      "last": "2026-09-24"
+    },
+    "Time Bazar": {
+      "drawRows": 1780,
+      "rowsWithAnyPanel": 1780,
+      "panelEvents": 3560,
+      "dpEvents": 939,
+      "dpRate": 0.2638,
+      "first": "2021-01-04",
+      "last": "2026-09-24"
+    },
+    "Madhur Day": {
+      "drawRows": 3036,
+      "rowsWithAnyPanel": 3036,
+      "panelEvents": 6072,
+      "dpEvents": 1466,
+      "dpRate": 0.2414,
+      "first": "2016-02-04",
+      "last": "2026-09-24"
+    },
+    "Milan Day": {
+      "drawRows": 1248,
+      "rowsWithAnyPanel": 1248,
+      "panelEvents": 2496,
+      "dpEvents": 723,
+      "dpRate": 0.2897,
+      "first": "2022-08-08",
+      "last": "2026-09-24"
+    },
+    "Rajdhani Day": {
+      "drawRows": 4018,
+      "rowsWithAnyPanel": 4018,
+      "panelEvents": 8036,
+      "dpEvents": 1859,
+      "dpRate": 0.2313,
+      "first": "2013-05-06",
+      "last": "2026-09-24"
+    },
+    "Kalyan": {
+      "drawRows": 1194,
+      "rowsWithAnyPanel": 1194,
+      "panelEvents": 2388,
+      "dpEvents": 572,
+      "dpRate": 0.2395,
+      "first": "2022-10-17",
+      "last": "2026-09-24"
+    },
+    "Sridevi Night": {
+      "drawRows": 2056,
+      "rowsWithAnyPanel": 2056,
+      "panelEvents": 4112,
+      "dpEvents": 1096,
+      "dpRate": 0.2665,
+      "first": "2021-01-18",
+      "last": "2026-09-24"
+    },
+    "Kalyan Night": {
+      "drawRows": 1613,
+      "rowsWithAnyPanel": 1613,
+      "panelEvents": 3226,
+      "dpEvents": 839,
+      "dpRate": 0.2601,
+      "first": "2020-03-02",
+      "last": "2026-09-23"
+    },
+    "Madhur Night": {
+      "drawRows": 2599,
+      "rowsWithAnyPanel": 2599,
+      "panelEvents": 5198,
+      "dpEvents": 1274,
+      "dpRate": 0.2451,
+      "first": "2018-01-01",
+      "last": "2026-09-24"
+    },
+    "Milan Night": {
+      "drawRows": 1430,
+      "rowsWithAnyPanel": 1430,
+      "panelEvents": 2860,
+      "dpEvents": 625,
+      "dpRate": 0.2185,
+      "first": "2021-12-27",
+      "last": "2026-09-24"
+    },
+    "Rajdhani Night": {
+      "drawRows": 1453,
+      "rowsWithAnyPanel": 1453,
+      "panelEvents": 2906,
+      "dpEvents": 730,
+      "dpRate": 0.2512,
+      "first": "2020-12-28",
+      "last": "2026-09-23"
+    },
+    "Main Bazar": {
+      "drawRows": 1201,
+      "rowsWithAnyPanel": 1201,
+      "panelEvents": 2402,
+      "dpEvents": 637,
+      "dpRate": 0.2652,
+      "first": "2021-12-27",
+      "last": "2026-09-23"
+    },
+    "Kalyan Morning": {
+      "drawRows": 1356,
+      "rowsWithAnyPanel": 1356,
+      "panelEvents": 2712,
+      "dpEvents": 326,
+      "dpRate": 0.1202,
+      "first": "2023-01-02",
+      "last": "2026-09-24"
+    },
+    "Milan Morning": {
+      "drawRows": 2285,
+      "rowsWithAnyPanel": 2285,
+      "panelEvents": 4570,
+      "dpEvents": 1051,
+      "dpRate": 0.23,
+      "first": "2020-03-02",
+      "last": "2026-09-24"
+    },
+    "Madhuri": {
+      "drawRows": 3073,
+      "rowsWithAnyPanel": 3073,
+      "panelEvents": 6146,
+      "dpEvents": 1529,
+      "dpRate": 0.2488,
+      "first": "2016-01-28",
+      "last": "2026-09-24"
+    },
+    "Madhuri Night": {
+      "drawRows": 1488,
+      "rowsWithAnyPanel": 1488,
+      "panelEvents": 2976,
+      "dpEvents": 677,
+      "dpRate": 0.2275,
+      "first": "2021-11-09",
+      "last": "2026-09-24"
+    },
+    "Madhur Morning": {
+      "drawRows": 2742,
+      "rowsWithAnyPanel": 2742,
+      "panelEvents": 5484,
+      "dpEvents": 1280,
+      "dpRate": 0.2334,
+      "first": "2018-11-19",
+      "last": "2026-09-24"
+    },
+    "Mumbai Day": {
+      "drawRows": 567,
+      "rowsWithAnyPanel": 567,
+      "panelEvents": 1134,
+      "dpEvents": 259,
+      "dpRate": 0.2284,
+      "first": "2025-02-24",
+      "last": "2026-09-24"
+    },
+    "Mumbai Night": {
+      "drawRows": 549,
+      "rowsWithAnyPanel": 549,
+      "panelEvents": 1098,
+      "dpEvents": 274,
+      "dpRate": 0.2495,
+      "first": "2025-03-03",
+      "last": "2026-09-24"
+    },
+    "Tara Mumbai Day": {
+      "drawRows": 1754,
+      "rowsWithAnyPanel": 1754,
+      "panelEvents": 3508,
+      "dpEvents": 863,
+      "dpRate": 0.246,
+      "first": "2020-12-07",
+      "last": "2026-09-24"
+    },
+    "Supreme Day": {
+      "drawRows": 1982,
+      "rowsWithAnyPanel": 1982,
+      "panelEvents": 3964,
+      "dpEvents": 1140,
+      "dpRate": 0.2876,
+      "first": "2021-04-05",
+      "last": "2026-09-24"
+    },
+    "Supreme Night": {
+      "drawRows": 1980,
+      "rowsWithAnyPanel": 1980,
+      "panelEvents": 3960,
+      "dpEvents": 1102,
+      "dpRate": 0.2783,
+      "first": "2021-04-05",
+      "last": "2026-09-23"
+    }
+  },
+  "featureBuild": {
+    "candidateEvents": 79430,
+    "primaryEvents": 45478,
+    "extraEvents": 33952,
+    "featureColumns": 86,
+    "firstEligible": "2013-08-13",
+    "lastEligible": "2026-09-24",
+    "startOfDayColumns": [
+      "date",
+      "date_text",
+      "market",
+      "side",
+      "y",
+      "weekday",
+      "month",
+      "day_of_month",
+      "quarter",
+      "week_of_month",
+      "year_index",
+      "doy_sin",
+      "doy_cos",
+      "prior_1d_market_rate",
+      "prior_1d_market_dp_count",
+      "prior_1d_market_event_count",
+      "prior_7d_market_rate",
+      "prior_14d_market_rate",
+      "prior_30d_market_rate",
+      "prior_30d_market_event_count",
+      "market_weekday",
+      "market_month",
+      "market_side",
+      "side_weekday",
+      "market_side_weekday",
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_4",
+      "lag_5",
+      "lag_6",
+      "lag_7",
+      "lag_8",
+      "lag_9",
+      "lag_10",
+      "rate_3",
+      "rate_5",
+      "rate_7",
+      "rate_10",
+      "rate_14",
+      "rate_21",
+      "rate_30",
+      "rate_45",
+      "rate_60",
+      "rate_90",
+      "rate_120",
+      "rate_180",
+      "rate_250",
+      "rate_500",
+      "gap_dp_events",
+      "gap_dp_days",
+      "streak_dp",
+      "streak_non_dp",
+      "lag_pattern_2",
+      "lag_pattern_3",
+      "runs_10",
+      "runs_30",
+      "prior_dp_count_10",
+      "prior_dp_count_30",
+      "days_since_last_event",
+      "last_digit_0",
+      "last_digit_1",
+      "last_digit_2",
+      "last_sum",
+      "last_spread",
+      "last_entropy",
+      "last_has_zero",
+      "last_even_count",
+      "last_palindrome",
+      "last_repeat_position",
+      "last_digit_pair",
+      "last_sum_mod10",
+      "last_sum_mod3",
+      "last_max_frequency",
+      "last_min_digit",
+      "last_max_digit",
+      "last_first_last_diff",
+      "last_sum_delta",
+      "last_spread_delta",
+      "last_panel_same_digits_as_prev",
+      "prior_opposite_side_dp",
+      "prior_opposite_side_age_days"
+    ],
+    "scheduleAwareColumns": [
+      "same_day_prior_dp_rate",
+      "same_day_prior_dp_count",
+      "same_day_prior_event_count",
+      "same_day_prior_open_dp_rate",
+      "same_day_prior_close_dp_rate",
+      "same_day_latest_prior_dp",
+      "same_day_same_market_open_dp",
+      "same_day_prior_weekday_event_count"
+    ],
+    "scheduleSource": "src/lib/market-schedule.ts",
+    "scheduleStrictlyEarlier": true
+  },
+  "selectionProtocol": {
+    "train": "through 2024-12-31",
+    "validation": "2025-01-01 through 2025-12-31",
+    "holdout": "2026-01-01 through latest available date; retrospective, not prospectively preregistered",
+    "candidateSelection": "2025 only; thresholds are derived from train values",
+    "ruleSupport": "at least 100 train calls, at least 30 validation calls, at least 20 validation active dates",
+    "probabilitySupport": "at least 30 validation calls and 20 active dates",
+    "confidence": "exact two-sided 95% binomial interval plus weekly block bootstrap interval",
+    "caveat": "Searching correlated rules is not independent replication. The 2026 interval is conditional on the policy selected in 2025."
+  },
+  "scenarios": [
+    {
+      "scenario": "start_of_day",
+      "scope": "12 app markets; both Open and Close targets",
+      "featureColumns": 77,
+      "featureFamilies": {
+        "calendar_and_time": [
+          "weekday",
+          "month",
+          "day_of_month",
+          "quarter",
+          "week_of_month",
+          "year_index",
+          "doy_sin",
+          "doy_cos"
+        ],
+        "market_and_side": [
+          "market_weekday",
+          "market_month",
+          "market_side",
+          "side_weekday",
+          "market_side_weekday"
+        ],
+        "state_transitions": [
+          "lag_1",
+          "lag_2",
+          "lag_3",
+          "lag_4",
+          "lag_5",
+          "lag_6",
+          "lag_7",
+          "lag_8",
+          "lag_9",
+          "lag_10",
+          "gap_dp_events",
+          "gap_dp_days",
+          "streak_dp",
+          "streak_non_dp",
+          "lag_pattern_2",
+          "lag_pattern_3",
+          "runs_10",
+          "runs_30"
+        ],
+        "rolling_frequency": [
+          "rate_3",
+          "rate_5",
+          "rate_7",
+          "rate_10",
+          "rate_14",
+          "rate_21",
+          "rate_30",
+          "rate_45",
+          "rate_60",
+          "rate_90",
+          "rate_120",
+          "rate_180",
+          "rate_250",
+          "rate_500",
+          "prior_dp_count_10",
+          "prior_dp_count_30"
+        ],
+        "prior_panel_digit_geometry": [
+          "last_digit_0",
+          "last_digit_1",
+          "last_digit_2",
+          "last_sum",
+          "last_spread",
+          "last_entropy",
+          "last_has_zero",
+          "last_even_count",
+          "last_palindrome",
+          "last_repeat_position",
+          "last_digit_pair",
+          "last_sum_mod10",
+          "last_sum_mod3",
+          "last_max_frequency",
+          "last_min_digit",
+          "last_max_digit",
+          "last_first_last_diff",
+          "last_sum_delta",
+          "last_spread_delta",
+          "last_panel_same_digits_as_prev"
+        ],
+        "same_market_other_side_history": [
+          "prior_opposite_side_dp",
+          "prior_opposite_side_age_days"
+        ],
+        "cross_market_prior_day": [
+          "prior_1d_market_rate",
+          "prior_1d_market_dp_count",
+          "prior_1d_market_event_count",
+          "prior_7d_market_rate",
+          "prior_14d_market_rate",
+          "prior_30d_market_rate",
+          "prior_30d_market_event_count"
+        ]
+      },
+      "variantCount": {
+        "singleCandidates": 2129,
+        "pairCandidates": 1387,
+        "totalRuleCandidates": 3516,
+        "distinctSingleFeatures": 77,
+        "pairPoolSize": 75,
+        "pairValidationMinCalls": 20,
+        "thresholdsPerNumericFeature": 98,
+        "trainSupportMinCallsForSingles": 100,
+        "candidateQuantilesDerivedFrom": "train only",
+        "modelFamilies": [
+          "logistic",
+          "random_forest",
+          "extra_trees",
+          "hist_gradient_boosting",
+          "naive_bayes"
+        ],
+        "probabilityThresholdsPerFamily": 80,
+        "probabilityConfigurations": 400,
+        "matrixFeatures": 645,
+        "matrixImputation": "training median",
+        "thresholdSelection": "2025 validation only",
+        "selectionMinCalls": 30,
+        "selectionMinActiveDays": 20,
+        "numericThresholdDirections": [
+          "<=",
+          ">="
+        ],
+        "featureScenarioVariantsAtLeast": 77,
+        "ruleAndModelConfigurations": 3916,
+        "matrixCategoryVocabulary": "fixed calendar/app domains or categories observed in training rows only"
+      },
+      "splits": {
+        "train": 32766,
+        "validation": "2025-01-01 through 2025-12-31",
+        "holdout": 5404,
+        "trainThrough": "2024-12-31",
+        "sealedHoldout": "2026-01-01 onward"
+      },
+      "dpBaseRates": {
+        "train": 0.2431,
+        "validation": 0.2436,
+        "holdout": 0.257
+      },
+      "bestValidationRule": {
+        "rule": "(market_month == Time Bazar|2) AND (rate_500 >= 0.24)",
+        "features": [
+          "market_month",
+          "rate_500"
+        ],
+        "train": {
+          "calls": 112,
+          "hits": 27,
+          "falseCalls": 85,
+          "precision": 0.2411,
+          "coverage": 0.00141,
+          "confidence": {
+            "exact95": [
+              0.1653,
+              0.331
+            ],
+            "wilsonOneSided95Lower": 0.1812,
+            "weekBlockBootstrap95": [
+              0.1653,
+              0.3097
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 72,
+            "daysWith5To10Calls": 0,
+            "callsPerActiveDayMean": 1.556,
+            "hitsPerActiveDayMean": 0.375,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 32,
+                "totalCalls": 32,
+                "hits": 7,
+                "dailyPrecisionMean": 0.2188,
+                "perfectDays": 7,
+                "atLeast80PercentDays": 7,
+                "atLeast70PercentDays": 7
+              },
+              "2": {
+                "days": 40,
+                "totalCalls": 80,
+                "hits": 20,
+                "dailyPrecisionMean": 0.25,
+                "perfectDays": 2,
+                "atLeast80PercentDays": 2,
+                "atLeast70PercentDays": 2
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 0,
+            "targetBucketCalls": 0,
+            "bestDay": {
+              "date": "2022-02-10 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        },
+        "validation": {
+          "calls": 42,
+          "hits": 20,
+          "falseCalls": 22,
+          "precision": 0.4762,
+          "coverage": 0.00053,
+          "confidence": {
+            "exact95": [
+              0.32,
+              0.6358
+            ],
+            "wilsonOneSided95Lower": 0.3547,
+            "weekBlockBootstrap95": [
+              0.3929,
+              0.5526
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 24,
+            "daysWith5To10Calls": 0,
+            "callsPerActiveDayMean": 1.75,
+            "hitsPerActiveDayMean": 0.833,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 6,
+                "totalCalls": 6,
+                "hits": 2,
+                "dailyPrecisionMean": 0.3333,
+                "perfectDays": 2,
+                "atLeast80PercentDays": 2,
+                "atLeast70PercentDays": 2
+              },
+              "2": {
+                "days": 18,
+                "totalCalls": 36,
+                "hits": 18,
+                "dailyPrecisionMean": 0.5,
+                "perfectDays": 3,
+                "atLeast80PercentDays": 3,
+                "atLeast70PercentDays": 3
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 0,
+            "targetBucketCalls": 0,
+            "bestDay": {
+              "date": "2025-02-06 00:00:00",
+              "calls": 2,
+              "hits": 2,
+              "precision": 1.0
+            }
+          }
+        },
+        "holdout": {
+          "calls": 31,
+          "hits": 8,
+          "falseCalls": 23,
+          "precision": 0.2581,
+          "coverage": 0.00039,
+          "confidence": {
+            "exact95": [
+              0.1186,
+              0.4461
+            ],
+            "wilsonOneSided95Lower": 0.152,
+            "weekBlockBootstrap95": [
+              0.2,
+              0.3077
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 24,
+            "daysWith5To10Calls": 0,
+            "callsPerActiveDayMean": 1.292,
+            "hitsPerActiveDayMean": 0.333,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 17,
+                "totalCalls": 17,
+                "hits": 4,
+                "dailyPrecisionMean": 0.2353,
+                "perfectDays": 4,
+                "atLeast80PercentDays": 4,
+                "atLeast70PercentDays": 4
+              },
+              "2": {
+                "days": 7,
+                "totalCalls": 14,
+                "hits": 4,
+                "dailyPrecisionMean": 0.2857,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 0,
+            "targetBucketCalls": 0,
+            "bestDay": {
+              "date": "2026-02-05 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        }
+      },
+      "dailyBalancedValidationRule": {
+        "rule": "rate_60 <= 0.166667",
+        "features": [
+          "rate_60"
+        ],
+        "train": {
+          "calls": 4480,
+          "hits": 953,
+          "falseCalls": 3527,
+          "precision": 0.2127,
+          "coverage": 0.0564,
+          "confidence": {
+            "exact95": [
+              0.2008,
+              0.225
+            ],
+            "wilsonOneSided95Lower": 0.2028,
+            "weekBlockBootstrap95": [
+              0.201,
+              0.2251
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 2593,
+            "daysWith5To10Calls": 45,
+            "callsPerActiveDayMean": 1.728,
+            "hitsPerActiveDayMean": 0.368,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 1475,
+                "totalCalls": 1475,
+                "hits": 276,
+                "dailyPrecisionMean": 0.1871,
+                "perfectDays": 276,
+                "atLeast80PercentDays": 276,
+                "atLeast70PercentDays": 276
+              },
+              "2": {
+                "days": 595,
+                "totalCalls": 1190,
+                "hits": 247,
+                "dailyPrecisionMean": 0.2076,
+                "perfectDays": 34,
+                "atLeast80PercentDays": 34,
+                "atLeast70PercentDays": 34
+              },
+              "3": {
+                "days": 336,
+                "totalCalls": 1008,
+                "hits": 247,
+                "dailyPrecisionMean": 0.245,
+                "perfectDays": 6,
+                "atLeast80PercentDays": 6,
+                "atLeast70PercentDays": 6
+              },
+              "4": {
+                "days": 142,
+                "totalCalls": 568,
+                "hits": 129,
+                "dailyPrecisionMean": 0.2271,
+                "perfectDays": 1,
+                "atLeast80PercentDays": 1,
+                "atLeast70PercentDays": 2
+              },
+              "5": {
+                "days": 33,
+                "totalCalls": 165,
+                "hits": 33,
+                "dailyPrecisionMean": 0.2,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "6": {
+                "days": 10,
+                "totalCalls": 60,
+                "hits": 17,
+                "dailyPrecisionMean": 0.2833,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "7": {
+                "days": 2,
+                "totalCalls": 14,
+                "hits": 4,
+                "dailyPrecisionMean": 0.2857,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 54,
+            "targetBucketCalls": 239,
+            "bestDay": {
+              "date": "2013-12-10 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        },
+        "validation": {
+          "calls": 870,
+          "hits": 209,
+          "falseCalls": 661,
+          "precision": 0.2402,
+          "coverage": 0.01095,
+          "confidence": {
+            "exact95": [
+              0.2122,
+              0.27
+            ],
+            "wilsonOneSided95Lower": 0.2172,
+            "weekBlockBootstrap95": [
+              0.2119,
+              0.2703
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 345,
+            "daysWith5To10Calls": 13,
+            "callsPerActiveDayMean": 2.522,
+            "hitsPerActiveDayMean": 0.606,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 68,
+                "totalCalls": 68,
+                "hits": 19,
+                "dailyPrecisionMean": 0.2794,
+                "perfectDays": 19,
+                "atLeast80PercentDays": 19,
+                "atLeast70PercentDays": 19
+              },
+              "2": {
+                "days": 107,
+                "totalCalls": 214,
+                "hits": 43,
+                "dailyPrecisionMean": 0.2009,
+                "perfectDays": 4,
+                "atLeast80PercentDays": 4,
+                "atLeast70PercentDays": 4
+              },
+              "3": {
+                "days": 111,
+                "totalCalls": 333,
+                "hits": 75,
+                "dailyPrecisionMean": 0.2252,
+                "perfectDays": 2,
+                "atLeast80PercentDays": 2,
+                "atLeast70PercentDays": 2
+              },
+              "4": {
+                "days": 46,
+                "totalCalls": 184,
+                "hits": 49,
+                "dailyPrecisionMean": 0.2663,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 4
+              },
+              "5": {
+                "days": 8,
+                "totalCalls": 40,
+                "hits": 14,
+                "dailyPrecisionMean": 0.35,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 2,
+                "atLeast70PercentDays": 2
+              },
+              "6": {
+                "days": 4,
+                "totalCalls": 24,
+                "hits": 5,
+                "dailyPrecisionMean": 0.2083,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "7": {
+                "days": 1,
+                "totalCalls": 7,
+                "hits": 4,
+                "dailyPrecisionMean": 0.5714,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 2,
+            "atLeast70Percent5To10CallDays": 2,
+            "targetBucketHits": 23,
+            "targetBucketCalls": 71,
+            "bestDay": {
+              "date": "2025-01-07 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        },
+        "holdout": {
+          "calls": 426,
+          "hits": 98,
+          "falseCalls": 328,
+          "precision": 0.23,
+          "coverage": 0.00536,
+          "confidence": {
+            "exact95": [
+              0.1909,
+              0.273
+            ],
+            "wilsonOneSided95Lower": 0.1983,
+            "weekBlockBootstrap95": [
+              0.1873,
+              0.2738
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 224,
+            "daysWith5To10Calls": 0,
+            "callsPerActiveDayMean": 1.902,
+            "hitsPerActiveDayMean": 0.438,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 75,
+                "totalCalls": 75,
+                "hits": 18,
+                "dailyPrecisionMean": 0.24,
+                "perfectDays": 18,
+                "atLeast80PercentDays": 18,
+                "atLeast70PercentDays": 18
+              },
+              "2": {
+                "days": 103,
+                "totalCalls": 206,
+                "hits": 43,
+                "dailyPrecisionMean": 0.2087,
+                "perfectDays": 4,
+                "atLeast80PercentDays": 4,
+                "atLeast70PercentDays": 4
+              },
+              "3": {
+                "days": 39,
+                "totalCalls": 117,
+                "hits": 29,
+                "dailyPrecisionMean": 0.2479,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "4": {
+                "days": 7,
+                "totalCalls": 28,
+                "hits": 8,
+                "dailyPrecisionMean": 0.2857,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 0,
+            "targetBucketCalls": 0,
+            "bestDay": {
+              "date": "2026-01-03 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        }
+      },
+      "models": [
+        {
+          "model": "logistic",
+          "selectedThreshold": 0.4,
+          "validation": {
+            "calls": 247,
+            "hits": 72,
+            "falseCalls": 175,
+            "precision": 0.2915,
+            "coverage": 0.00311,
+            "confidence": {
+              "exact95": [
+                0.2356,
+                0.3525
+              ],
+              "wilsonOneSided95Lower": 0.2464,
+              "weekBlockBootstrap95": [
+                0.2335,
+                0.3489
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 144,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.715,
+              "hitsPerActiveDayMean": 0.5,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 66,
+                  "totalCalls": 66,
+                  "hits": 16,
+                  "dailyPrecisionMean": 0.2424,
+                  "perfectDays": 16,
+                  "atLeast80PercentDays": 16,
+                  "atLeast70PercentDays": 16
+                },
+                "2": {
+                  "days": 57,
+                  "totalCalls": 114,
+                  "hits": 36,
+                  "dailyPrecisionMean": 0.3158,
+                  "perfectDays": 6,
+                  "atLeast80PercentDays": 6,
+                  "atLeast70PercentDays": 6
+                },
+                "3": {
+                  "days": 17,
+                  "totalCalls": 51,
+                  "hits": 15,
+                  "dailyPrecisionMean": 0.2941,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 4,
+                  "totalCalls": 16,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.3125,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2025-01-20 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 169,
+            "hits": 45,
+            "falseCalls": 124,
+            "precision": 0.2663,
+            "coverage": 0.00213,
+            "confidence": {
+              "exact95": [
+                0.2013,
+                0.3396
+              ],
+              "wilsonOneSided95Lower": 0.2143,
+              "weekBlockBootstrap95": [
+                0.1825,
+                0.3478
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 101,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.673,
+              "hitsPerActiveDayMean": 0.446,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 51,
+                  "totalCalls": 51,
+                  "hits": 11,
+                  "dailyPrecisionMean": 0.2157,
+                  "perfectDays": 11,
+                  "atLeast80PercentDays": 11,
+                  "atLeast70PercentDays": 11
+                },
+                "2": {
+                  "days": 35,
+                  "totalCalls": 70,
+                  "hits": 15,
+                  "dailyPrecisionMean": 0.2143,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "3": {
+                  "days": 12,
+                  "totalCalls": 36,
+                  "hits": 12,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 3,
+                  "totalCalls": 12,
+                  "hits": 7,
+                  "dailyPrecisionMean": 0.5833,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2026-01-06 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 169,
+            "hits": 45,
+            "falseCalls": 124,
+            "precision": 0.2663,
+            "coverage": 0.00213,
+            "confidence": {
+              "exact95": [
+                0.2013,
+                0.3396
+              ],
+              "wilsonOneSided95Lower": 0.2143,
+              "weekBlockBootstrap95": [
+                0.1825,
+                0.3478
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 101,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.673,
+              "hitsPerActiveDayMean": 0.446,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 51,
+                  "totalCalls": 51,
+                  "hits": 11,
+                  "dailyPrecisionMean": 0.2157,
+                  "perfectDays": 11,
+                  "atLeast80PercentDays": 11,
+                  "atLeast70PercentDays": 11
+                },
+                "2": {
+                  "days": 35,
+                  "totalCalls": 70,
+                  "hits": 15,
+                  "dailyPrecisionMean": 0.2143,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "3": {
+                  "days": 12,
+                  "totalCalls": 36,
+                  "hits": 12,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 3,
+                  "totalCalls": 12,
+                  "hits": 7,
+                  "dailyPrecisionMean": 0.5833,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2026-01-06 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.5244,
+          "holdoutAuc": 0.526
+        },
+        {
+          "model": "random_forest",
+          "selectedThreshold": 0.3,
+          "validation": {
+            "calls": 288,
+            "hits": 99,
+            "falseCalls": 189,
+            "precision": 0.3438,
+            "coverage": 0.00363,
+            "confidence": {
+              "exact95": [
+                0.289,
+                0.4017
+              ],
+              "wilsonOneSided95Lower": 0.2994,
+              "weekBlockBootstrap95": [
+                0.2852,
+                0.4026
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 182,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.582,
+              "hitsPerActiveDayMean": 0.544,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 100,
+                  "totalCalls": 100,
+                  "hits": 38,
+                  "dailyPrecisionMean": 0.38,
+                  "perfectDays": 38,
+                  "atLeast80PercentDays": 38,
+                  "atLeast70PercentDays": 38
+                },
+                "2": {
+                  "days": 62,
+                  "totalCalls": 124,
+                  "hits": 39,
+                  "dailyPrecisionMean": 0.3145,
+                  "perfectDays": 7,
+                  "atLeast80PercentDays": 7,
+                  "atLeast70PercentDays": 7
+                },
+                "3": {
+                  "days": 16,
+                  "totalCalls": 48,
+                  "hits": 18,
+                  "dailyPrecisionMean": 0.375,
+                  "perfectDays": 2,
+                  "atLeast80PercentDays": 2,
+                  "atLeast70PercentDays": 2
+                },
+                "4": {
+                  "days": 4,
+                  "totalCalls": 16,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2025-01-04 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 166,
+            "hits": 53,
+            "falseCalls": 113,
+            "precision": 0.3193,
+            "coverage": 0.00209,
+            "confidence": {
+              "exact95": [
+                0.2492,
+                0.396
+              ],
+              "wilsonOneSided95Lower": 0.2631,
+              "weekBlockBootstrap95": [
+                0.2532,
+                0.3836
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 110,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.509,
+              "hitsPerActiveDayMean": 0.482,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 66,
+                  "totalCalls": 66,
+                  "hits": 20,
+                  "dailyPrecisionMean": 0.303,
+                  "perfectDays": 20,
+                  "atLeast80PercentDays": 20,
+                  "atLeast70PercentDays": 20
+                },
+                "2": {
+                  "days": 35,
+                  "totalCalls": 70,
+                  "hits": 24,
+                  "dailyPrecisionMean": 0.3429,
+                  "perfectDays": 3,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "3": {
+                  "days": 6,
+                  "totalCalls": 18,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.2778,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 3,
+                  "totalCalls": 12,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2026-01-17 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 166,
+            "hits": 53,
+            "falseCalls": 113,
+            "precision": 0.3193,
+            "coverage": 0.00209,
+            "confidence": {
+              "exact95": [
+                0.2492,
+                0.396
+              ],
+              "wilsonOneSided95Lower": 0.2631,
+              "weekBlockBootstrap95": [
+                0.2532,
+                0.3836
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 110,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.509,
+              "hitsPerActiveDayMean": 0.482,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 66,
+                  "totalCalls": 66,
+                  "hits": 20,
+                  "dailyPrecisionMean": 0.303,
+                  "perfectDays": 20,
+                  "atLeast80PercentDays": 20,
+                  "atLeast70PercentDays": 20
+                },
+                "2": {
+                  "days": 35,
+                  "totalCalls": 70,
+                  "hits": 24,
+                  "dailyPrecisionMean": 0.3429,
+                  "perfectDays": 3,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "3": {
+                  "days": 6,
+                  "totalCalls": 18,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.2778,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 3,
+                  "totalCalls": 12,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2026-01-17 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.5425,
+          "holdoutAuc": 0.5515
+        },
+        {
+          "model": "extra_trees",
+          "selectedThreshold": 0.3,
+          "validation": {
+            "calls": 350,
+            "hits": 126,
+            "falseCalls": 224,
+            "precision": 0.36,
+            "coverage": 0.00441,
+            "confidence": {
+              "exact95": [
+                0.3097,
+                0.4127
+              ],
+              "wilsonOneSided95Lower": 0.319,
+              "weekBlockBootstrap95": [
+                0.3086,
+                0.4125
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 204,
+              "daysWith5To10Calls": 3,
+              "callsPerActiveDayMean": 1.716,
+              "hitsPerActiveDayMean": 0.618,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 106,
+                  "totalCalls": 106,
+                  "hits": 37,
+                  "dailyPrecisionMean": 0.3491,
+                  "perfectDays": 37,
+                  "atLeast80PercentDays": 37,
+                  "atLeast70PercentDays": 37
+                },
+                "2": {
+                  "days": 62,
+                  "totalCalls": 124,
+                  "hits": 48,
+                  "dailyPrecisionMean": 0.3871,
+                  "perfectDays": 7,
+                  "atLeast80PercentDays": 7,
+                  "atLeast70PercentDays": 7
+                },
+                "3": {
+                  "days": 27,
+                  "totalCalls": 81,
+                  "hits": 29,
+                  "dailyPrecisionMean": 0.358,
+                  "perfectDays": 3,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "4": {
+                  "days": 6,
+                  "totalCalls": 24,
+                  "hits": 8,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 3,
+                  "totalCalls": 15,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.2667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 4,
+              "targetBucketCalls": 15,
+              "bestDay": {
+                "date": "2025-01-04 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 315,
+            "hits": 103,
+            "falseCalls": 212,
+            "precision": 0.327,
+            "coverage": 0.00397,
+            "confidence": {
+              "exact95": [
+                0.2754,
+                0.3818
+              ],
+              "wilsonOneSided95Lower": 0.2851,
+              "weekBlockBootstrap95": [
+                0.2724,
+                0.3805
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 172,
+              "daysWith5To10Calls": 2,
+              "callsPerActiveDayMean": 1.831,
+              "hitsPerActiveDayMean": 0.599,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 77,
+                  "totalCalls": 77,
+                  "hits": 18,
+                  "dailyPrecisionMean": 0.2338,
+                  "perfectDays": 18,
+                  "atLeast80PercentDays": 18,
+                  "atLeast70PercentDays": 18
+                },
+                "2": {
+                  "days": 61,
+                  "totalCalls": 122,
+                  "hits": 43,
+                  "dailyPrecisionMean": 0.3525,
+                  "perfectDays": 7,
+                  "atLeast80PercentDays": 7,
+                  "atLeast70PercentDays": 7
+                },
+                "3": {
+                  "days": 22,
+                  "totalCalls": 66,
+                  "hits": 25,
+                  "dailyPrecisionMean": 0.3788,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 10,
+                  "totalCalls": 40,
+                  "hits": 14,
+                  "dailyPrecisionMean": 0.35,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 2,
+                  "totalCalls": 10,
+                  "hits": 3,
+                  "dailyPrecisionMean": 0.3,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 3,
+              "targetBucketCalls": 10,
+              "bestDay": {
+                "date": "2026-01-02 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 315,
+            "hits": 103,
+            "falseCalls": 212,
+            "precision": 0.327,
+            "coverage": 0.00397,
+            "confidence": {
+              "exact95": [
+                0.2754,
+                0.3818
+              ],
+              "wilsonOneSided95Lower": 0.2851,
+              "weekBlockBootstrap95": [
+                0.2724,
+                0.3805
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 172,
+              "daysWith5To10Calls": 2,
+              "callsPerActiveDayMean": 1.831,
+              "hitsPerActiveDayMean": 0.599,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 77,
+                  "totalCalls": 77,
+                  "hits": 18,
+                  "dailyPrecisionMean": 0.2338,
+                  "perfectDays": 18,
+                  "atLeast80PercentDays": 18,
+                  "atLeast70PercentDays": 18
+                },
+                "2": {
+                  "days": 61,
+                  "totalCalls": 122,
+                  "hits": 43,
+                  "dailyPrecisionMean": 0.3525,
+                  "perfectDays": 7,
+                  "atLeast80PercentDays": 7,
+                  "atLeast70PercentDays": 7
+                },
+                "3": {
+                  "days": 22,
+                  "totalCalls": 66,
+                  "hits": 25,
+                  "dailyPrecisionMean": 0.3788,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 10,
+                  "totalCalls": 40,
+                  "hits": 14,
+                  "dailyPrecisionMean": 0.35,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 2,
+                  "totalCalls": 10,
+                  "hits": 3,
+                  "dailyPrecisionMean": 0.3,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 3,
+              "targetBucketCalls": 10,
+              "bestDay": {
+                "date": "2026-01-02 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.557,
+          "holdoutAuc": 0.5647
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "selectedThreshold": 0.29,
+          "validation": {
+            "calls": 451,
+            "hits": 144,
+            "falseCalls": 307,
+            "precision": 0.3193,
+            "coverage": 0.00568,
+            "confidence": {
+              "exact95": [
+                0.2765,
+                0.3645
+              ],
+              "wilsonOneSided95Lower": 0.2843,
+              "weekBlockBootstrap95": [
+                0.2773,
+                0.3593
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 243,
+              "daysWith5To10Calls": 4,
+              "callsPerActiveDayMean": 1.856,
+              "hitsPerActiveDayMean": 0.593,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 103,
+                  "totalCalls": 103,
+                  "hits": 34,
+                  "dailyPrecisionMean": 0.3301,
+                  "perfectDays": 34,
+                  "atLeast80PercentDays": 34,
+                  "atLeast70PercentDays": 34
+                },
+                "2": {
+                  "days": 90,
+                  "totalCalls": 180,
+                  "hits": 57,
+                  "dailyPrecisionMean": 0.3167,
+                  "perfectDays": 10,
+                  "atLeast80PercentDays": 10,
+                  "atLeast70PercentDays": 10
+                },
+                "3": {
+                  "days": 38,
+                  "totalCalls": 114,
+                  "hits": 38,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 3,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "4": {
+                  "days": 8,
+                  "totalCalls": 32,
+                  "hits": 10,
+                  "dailyPrecisionMean": 0.3125,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "5": {
+                  "days": 2,
+                  "totalCalls": 10,
+                  "hits": 3,
+                  "dailyPrecisionMean": 0.3,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "6": {
+                  "days": 2,
+                  "totalCalls": 12,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.1667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 5,
+              "targetBucketCalls": 22,
+              "bestDay": {
+                "date": "2025-01-15 00:00:00",
+                "calls": 2,
+                "hits": 2,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 337,
+            "hits": 113,
+            "falseCalls": 224,
+            "precision": 0.3353,
+            "coverage": 0.00424,
+            "confidence": {
+              "exact95": [
+                0.2851,
+                0.3885
+              ],
+              "wilsonOneSided95Lower": 0.2945,
+              "weekBlockBootstrap95": [
+                0.2804,
+                0.387
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 184,
+              "daysWith5To10Calls": 3,
+              "callsPerActiveDayMean": 1.832,
+              "hitsPerActiveDayMean": 0.614,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 76,
+                  "totalCalls": 76,
+                  "hits": 24,
+                  "dailyPrecisionMean": 0.3158,
+                  "perfectDays": 24,
+                  "atLeast80PercentDays": 24,
+                  "atLeast70PercentDays": 24
+                },
+                "2": {
+                  "days": 77,
+                  "totalCalls": 154,
+                  "hits": 45,
+                  "dailyPrecisionMean": 0.2922,
+                  "perfectDays": 8,
+                  "atLeast80PercentDays": 8,
+                  "atLeast70PercentDays": 8
+                },
+                "3": {
+                  "days": 20,
+                  "totalCalls": 60,
+                  "hits": 27,
+                  "dailyPrecisionMean": 0.45,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 8,
+                  "totalCalls": 32,
+                  "hits": 11,
+                  "dailyPrecisionMean": 0.3438,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 3,
+                  "totalCalls": 15,
+                  "hits": 6,
+                  "dailyPrecisionMean": 0.4,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 6,
+              "targetBucketCalls": 15,
+              "bestDay": {
+                "date": "2026-01-02 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 337,
+            "hits": 113,
+            "falseCalls": 224,
+            "precision": 0.3353,
+            "coverage": 0.00424,
+            "confidence": {
+              "exact95": [
+                0.2851,
+                0.3885
+              ],
+              "wilsonOneSided95Lower": 0.2945,
+              "weekBlockBootstrap95": [
+                0.2804,
+                0.387
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 184,
+              "daysWith5To10Calls": 3,
+              "callsPerActiveDayMean": 1.832,
+              "hitsPerActiveDayMean": 0.614,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 76,
+                  "totalCalls": 76,
+                  "hits": 24,
+                  "dailyPrecisionMean": 0.3158,
+                  "perfectDays": 24,
+                  "atLeast80PercentDays": 24,
+                  "atLeast70PercentDays": 24
+                },
+                "2": {
+                  "days": 77,
+                  "totalCalls": 154,
+                  "hits": 45,
+                  "dailyPrecisionMean": 0.2922,
+                  "perfectDays": 8,
+                  "atLeast80PercentDays": 8,
+                  "atLeast70PercentDays": 8
+                },
+                "3": {
+                  "days": 20,
+                  "totalCalls": 60,
+                  "hits": 27,
+                  "dailyPrecisionMean": 0.45,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 8,
+                  "totalCalls": 32,
+                  "hits": 11,
+                  "dailyPrecisionMean": 0.3438,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 3,
+                  "totalCalls": 15,
+                  "hits": 6,
+                  "dailyPrecisionMean": 0.4,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 6,
+              "targetBucketCalls": 15,
+              "bestDay": {
+                "date": "2026-01-02 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.5398,
+          "holdoutAuc": 0.5551
+        },
+        {
+          "model": "naive_bayes",
+          "selectedThreshold": 0.89,
+          "validation": {
+            "calls": 5423,
+            "hits": 1380,
+            "falseCalls": 4043,
+            "precision": 0.2545,
+            "coverage": 0.06827,
+            "confidence": {
+              "exact95": [
+                0.2429,
+                0.2663
+              ],
+              "wilsonOneSided95Lower": 0.2449,
+              "weekBlockBootstrap95": [
+                0.2437,
+                0.2649
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 357,
+              "daysWith5To10Calls": 21,
+              "callsPerActiveDayMean": 15.19,
+              "hitsPerActiveDayMean": 3.866,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 10,
+                  "totalCalls": 10,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.2,
+                  "perfectDays": 2,
+                  "atLeast80PercentDays": 2,
+                  "atLeast70PercentDays": 2
+                },
+                "2": {
+                  "days": 38,
+                  "totalCalls": 76,
+                  "hits": 11,
+                  "dailyPrecisionMean": 0.1447,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "3": {
+                  "days": 4,
+                  "totalCalls": 12,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.1667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 1,
+                  "totalCalls": 4,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "7": {
+                  "days": 1,
+                  "totalCalls": 7,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.1429,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "8": {
+                  "days": 2,
+                  "totalCalls": 16,
+                  "hits": 8,
+                  "dailyPrecisionMean": 0.5,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 4,
+                  "totalCalls": 36,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.1389,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "10": {
+                  "days": 14,
+                  "totalCalls": 140,
+                  "hits": 34,
+                  "dailyPrecisionMean": 0.2429,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "11": {
+                  "days": 19,
+                  "totalCalls": 209,
+                  "hits": 51,
+                  "dailyPrecisionMean": 0.244,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 8,
+                  "totalCalls": 96,
+                  "hits": 19,
+                  "dailyPrecisionMean": 0.1979,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 3,
+                  "totalCalls": 39,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.1026,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 7,
+                  "totalCalls": 98,
+                  "hits": 23,
+                  "dailyPrecisionMean": 0.2347,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 8,
+                  "totalCalls": 120,
+                  "hits": 30,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 16,
+                  "totalCalls": 256,
+                  "hits": 74,
+                  "dailyPrecisionMean": 0.2891,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 26,
+                  "totalCalls": 442,
+                  "hits": 113,
+                  "dailyPrecisionMean": 0.2557,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "18": {
+                  "days": 45,
+                  "totalCalls": 810,
+                  "hits": 221,
+                  "dailyPrecisionMean": 0.2728,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "19": {
+                  "days": 57,
+                  "totalCalls": 1083,
+                  "hits": 261,
+                  "dailyPrecisionMean": 0.241,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "20": {
+                  "days": 40,
+                  "totalCalls": 800,
+                  "hits": 209,
+                  "dailyPrecisionMean": 0.2612,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "21": {
+                  "days": 26,
+                  "totalCalls": 546,
+                  "hits": 145,
+                  "dailyPrecisionMean": 0.2656,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "22": {
+                  "days": 21,
+                  "totalCalls": 462,
+                  "hits": 118,
+                  "dailyPrecisionMean": 0.2554,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "23": {
+                  "days": 7,
+                  "totalCalls": 161,
+                  "hits": 48,
+                  "dailyPrecisionMean": 0.2981,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 48,
+              "targetBucketCalls": 199,
+              "bestDay": {
+                "date": "2025-07-06 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 3987,
+            "hits": 1071,
+            "falseCalls": 2916,
+            "precision": 0.2686,
+            "coverage": 0.0502,
+            "confidence": {
+              "exact95": [
+                0.2549,
+                0.2827
+              ],
+              "wilsonOneSided95Lower": 0.2572,
+              "weekBlockBootstrap95": [
+                0.2547,
+                0.2824
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 261,
+              "daysWith5To10Calls": 14,
+              "callsPerActiveDayMean": 15.276,
+              "hitsPerActiveDayMean": 4.103,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 7,
+                  "totalCalls": 7,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.1429,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "2": {
+                  "days": 23,
+                  "totalCalls": 46,
+                  "hits": 9,
+                  "dailyPrecisionMean": 0.1957,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "3": {
+                  "days": 5,
+                  "totalCalls": 15,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.2667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "7": {
+                  "days": 1,
+                  "totalCalls": 7,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.1429,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "8": {
+                  "days": 1,
+                  "totalCalls": 8,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.125,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 4,
+                  "totalCalls": 36,
+                  "hits": 13,
+                  "dailyPrecisionMean": 0.3611,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "10": {
+                  "days": 8,
+                  "totalCalls": 80,
+                  "hits": 25,
+                  "dailyPrecisionMean": 0.3125,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "11": {
+                  "days": 13,
+                  "totalCalls": 143,
+                  "hits": 42,
+                  "dailyPrecisionMean": 0.2937,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 7,
+                  "totalCalls": 84,
+                  "hits": 17,
+                  "dailyPrecisionMean": 0.2024,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 6,
+                  "totalCalls": 78,
+                  "hits": 15,
+                  "dailyPrecisionMean": 0.1923,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 1,
+                  "totalCalls": 14,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.3571,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 7,
+                  "totalCalls": 105,
+                  "hits": 23,
+                  "dailyPrecisionMean": 0.219,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 18,
+                  "totalCalls": 288,
+                  "hits": 78,
+                  "dailyPrecisionMean": 0.2708,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 23,
+                  "totalCalls": 391,
+                  "hits": 96,
+                  "dailyPrecisionMean": 0.2455,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "18": {
+                  "days": 34,
+                  "totalCalls": 612,
+                  "hits": 158,
+                  "dailyPrecisionMean": 0.2582,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "19": {
+                  "days": 36,
+                  "totalCalls": 684,
+                  "hits": 188,
+                  "dailyPrecisionMean": 0.2749,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "20": {
+                  "days": 32,
+                  "totalCalls": 640,
+                  "hits": 162,
+                  "dailyPrecisionMean": 0.2531,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "21": {
+                  "days": 25,
+                  "totalCalls": 525,
+                  "hits": 161,
+                  "dailyPrecisionMean": 0.3067,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "22": {
+                  "days": 6,
+                  "totalCalls": 132,
+                  "hits": 44,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "23": {
+                  "days": 4,
+                  "totalCalls": 92,
+                  "hits": 28,
+                  "dailyPrecisionMean": 0.3043,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 40,
+              "targetBucketCalls": 131,
+              "bestDay": {
+                "date": "2026-05-31 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 3987,
+            "hits": 1071,
+            "falseCalls": 2916,
+            "precision": 0.2686,
+            "coverage": 0.0502,
+            "confidence": {
+              "exact95": [
+                0.2549,
+                0.2827
+              ],
+              "wilsonOneSided95Lower": 0.2572,
+              "weekBlockBootstrap95": [
+                0.2547,
+                0.2824
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 261,
+              "daysWith5To10Calls": 14,
+              "callsPerActiveDayMean": 15.276,
+              "hitsPerActiveDayMean": 4.103,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 7,
+                  "totalCalls": 7,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.1429,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "2": {
+                  "days": 23,
+                  "totalCalls": 46,
+                  "hits": 9,
+                  "dailyPrecisionMean": 0.1957,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "3": {
+                  "days": 5,
+                  "totalCalls": 15,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.2667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "7": {
+                  "days": 1,
+                  "totalCalls": 7,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.1429,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "8": {
+                  "days": 1,
+                  "totalCalls": 8,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.125,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 4,
+                  "totalCalls": 36,
+                  "hits": 13,
+                  "dailyPrecisionMean": 0.3611,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "10": {
+                  "days": 8,
+                  "totalCalls": 80,
+                  "hits": 25,
+                  "dailyPrecisionMean": 0.3125,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "11": {
+                  "days": 13,
+                  "totalCalls": 143,
+                  "hits": 42,
+                  "dailyPrecisionMean": 0.2937,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 7,
+                  "totalCalls": 84,
+                  "hits": 17,
+                  "dailyPrecisionMean": 0.2024,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 6,
+                  "totalCalls": 78,
+                  "hits": 15,
+                  "dailyPrecisionMean": 0.1923,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 1,
+                  "totalCalls": 14,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.3571,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 7,
+                  "totalCalls": 105,
+                  "hits": 23,
+                  "dailyPrecisionMean": 0.219,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 18,
+                  "totalCalls": 288,
+                  "hits": 78,
+                  "dailyPrecisionMean": 0.2708,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 23,
+                  "totalCalls": 391,
+                  "hits": 96,
+                  "dailyPrecisionMean": 0.2455,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "18": {
+                  "days": 34,
+                  "totalCalls": 612,
+                  "hits": 158,
+                  "dailyPrecisionMean": 0.2582,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "19": {
+                  "days": 36,
+                  "totalCalls": 684,
+                  "hits": 188,
+                  "dailyPrecisionMean": 0.2749,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "20": {
+                  "days": 32,
+                  "totalCalls": 640,
+                  "hits": 162,
+                  "dailyPrecisionMean": 0.2531,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "21": {
+                  "days": 25,
+                  "totalCalls": 525,
+                  "hits": 161,
+                  "dailyPrecisionMean": 0.3067,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "22": {
+                  "days": 6,
+                  "totalCalls": 132,
+                  "hits": 44,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "23": {
+                  "days": 4,
+                  "totalCalls": 92,
+                  "hits": 28,
+                  "dailyPrecisionMean": 0.3043,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 40,
+              "targetBucketCalls": 131,
+              "bestDay": {
+                "date": "2026-05-31 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.5253,
+          "holdoutAuc": 0.5259
+        }
+      ],
+      "holdoutReadAfterPolicySelection": "The corrected policy is selected on 2025 only. An earlier disposable run was inspected to catch and remove a same-day availability leak, so this is not a blinded preregistered test.",
+      "dailyEvaluation": {
+        "callBuckets": "per calendar date; full and grouped by exact number of calls",
+        "5To10CallDayDescriptors": [
+          "perfect",
+          "at least 80%",
+          "at least 70%"
+        ],
+        "notAnIndependentTrialCount": true
+      },
+      "validationRuleTable": "research\\dp_independent_v1\\start_of_day_rule_validation.csv"
+    },
+    {
+      "scenario": "schedule_aware",
+      "scope": "12 app markets; both Open and Close targets",
+      "featureColumns": 85,
+      "featureFamilies": {
+        "calendar_and_time": [
+          "weekday",
+          "month",
+          "day_of_month",
+          "quarter",
+          "week_of_month",
+          "year_index",
+          "doy_sin",
+          "doy_cos"
+        ],
+        "market_and_side": [
+          "market_weekday",
+          "market_month",
+          "market_side",
+          "side_weekday",
+          "market_side_weekday"
+        ],
+        "state_transitions": [
+          "lag_1",
+          "lag_2",
+          "lag_3",
+          "lag_4",
+          "lag_5",
+          "lag_6",
+          "lag_7",
+          "lag_8",
+          "lag_9",
+          "lag_10",
+          "gap_dp_events",
+          "gap_dp_days",
+          "streak_dp",
+          "streak_non_dp",
+          "lag_pattern_2",
+          "lag_pattern_3",
+          "runs_10",
+          "runs_30"
+        ],
+        "rolling_frequency": [
+          "rate_3",
+          "rate_5",
+          "rate_7",
+          "rate_10",
+          "rate_14",
+          "rate_21",
+          "rate_30",
+          "rate_45",
+          "rate_60",
+          "rate_90",
+          "rate_120",
+          "rate_180",
+          "rate_250",
+          "rate_500",
+          "prior_dp_count_10",
+          "prior_dp_count_30"
+        ],
+        "prior_panel_digit_geometry": [
+          "last_digit_0",
+          "last_digit_1",
+          "last_digit_2",
+          "last_sum",
+          "last_spread",
+          "last_entropy",
+          "last_has_zero",
+          "last_even_count",
+          "last_palindrome",
+          "last_repeat_position",
+          "last_digit_pair",
+          "last_sum_mod10",
+          "last_sum_mod3",
+          "last_max_frequency",
+          "last_min_digit",
+          "last_max_digit",
+          "last_first_last_diff",
+          "last_sum_delta",
+          "last_spread_delta",
+          "last_panel_same_digits_as_prev"
+        ],
+        "same_market_other_side_history": [
+          "prior_opposite_side_dp",
+          "prior_opposite_side_age_days"
+        ],
+        "cross_market_prior_day": [
+          "prior_1d_market_rate",
+          "prior_1d_market_dp_count",
+          "prior_1d_market_event_count",
+          "prior_7d_market_rate",
+          "prior_14d_market_rate",
+          "prior_30d_market_rate",
+          "prior_30d_market_event_count"
+        ],
+        "same_day_schedule_earlier": [
+          "same_day_prior_dp_rate",
+          "same_day_prior_dp_count",
+          "same_day_prior_event_count",
+          "same_day_prior_open_dp_rate",
+          "same_day_prior_close_dp_rate",
+          "same_day_latest_prior_dp",
+          "same_day_same_market_open_dp",
+          "same_day_prior_weekday_event_count"
+        ]
+      },
+      "variantCount": {
+        "singleCandidates": 2309,
+        "pairCandidates": 1418,
+        "totalRuleCandidates": 3727,
+        "distinctSingleFeatures": 85,
+        "pairPoolSize": 75,
+        "pairValidationMinCalls": 20,
+        "thresholdsPerNumericFeature": 98,
+        "trainSupportMinCallsForSingles": 100,
+        "candidateQuantilesDerivedFrom": "train only",
+        "modelFamilies": [
+          "logistic",
+          "random_forest",
+          "extra_trees",
+          "hist_gradient_boosting",
+          "naive_bayes"
+        ],
+        "probabilityThresholdsPerFamily": 80,
+        "probabilityConfigurations": 400,
+        "matrixFeatures": 653,
+        "matrixImputation": "training median",
+        "thresholdSelection": "2025 validation only",
+        "selectionMinCalls": 30,
+        "selectionMinActiveDays": 20,
+        "numericThresholdDirections": [
+          "<=",
+          ">="
+        ],
+        "featureScenarioVariantsAtLeast": 85,
+        "ruleAndModelConfigurations": 4127,
+        "matrixCategoryVocabulary": "fixed calendar/app domains or categories observed in training rows only"
+      },
+      "splits": {
+        "train": 32766,
+        "validation": "2025-01-01 through 2025-12-31",
+        "holdout": 5404,
+        "trainThrough": "2024-12-31",
+        "sealedHoldout": "2026-01-01 onward"
+      },
+      "dpBaseRates": {
+        "train": 0.2431,
+        "validation": 0.2436,
+        "holdout": 0.257
+      },
+      "bestValidationRule": {
+        "rule": "(market_side_weekday == Sridevi Night|open|3) AND (same_day_prior_open_dp_rate >= 0.166667)",
+        "features": [
+          "market_side_weekday",
+          "same_day_prior_open_dp_rate"
+        ],
+        "train": {
+          "calls": 147,
+          "hits": 43,
+          "falseCalls": 104,
+          "precision": 0.2925,
+          "coverage": 0.00185,
+          "confidence": {
+            "exact95": [
+              0.2205,
+              0.3731
+            ],
+            "wilsonOneSided95Lower": 0.235,
+            "weekBlockBootstrap95": [
+              0.2245,
+              0.3673
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 147,
+            "daysWith5To10Calls": 0,
+            "callsPerActiveDayMean": 1.0,
+            "hitsPerActiveDayMean": 0.293,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 147,
+                "totalCalls": 147,
+                "hits": 43,
+                "dailyPrecisionMean": 0.2925,
+                "perfectDays": 43,
+                "atLeast80PercentDays": 43,
+                "atLeast70PercentDays": 43
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 0,
+            "targetBucketCalls": 0,
+            "bestDay": {
+              "date": "2021-04-15 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        },
+        "validation": {
+          "calls": 45,
+          "hits": 21,
+          "falseCalls": 24,
+          "precision": 0.4667,
+          "coverage": 0.00057,
+          "confidence": {
+            "exact95": [
+              0.3166,
+              0.6213
+            ],
+            "wilsonOneSided95Lower": 0.3497,
+            "weekBlockBootstrap95": [
+              0.3333,
+              0.6
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 45,
+            "daysWith5To10Calls": 0,
+            "callsPerActiveDayMean": 1.0,
+            "hitsPerActiveDayMean": 0.467,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 45,
+                "totalCalls": 45,
+                "hits": 21,
+                "dailyPrecisionMean": 0.4667,
+                "perfectDays": 21,
+                "atLeast80PercentDays": 21,
+                "atLeast70PercentDays": 21
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 0,
+            "targetBucketCalls": 0,
+            "bestDay": {
+              "date": "2025-01-09 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        },
+        "holdout": {
+          "calls": 36,
+          "hits": 9,
+          "falseCalls": 27,
+          "precision": 0.25,
+          "coverage": 0.00045,
+          "confidence": {
+            "exact95": [
+              0.1212,
+              0.422
+            ],
+            "wilsonOneSided95Lower": 0.1517,
+            "weekBlockBootstrap95": [
+              0.1111,
+              0.3889
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 36,
+            "daysWith5To10Calls": 0,
+            "callsPerActiveDayMean": 1.0,
+            "hitsPerActiveDayMean": 0.25,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 36,
+                "totalCalls": 36,
+                "hits": 9,
+                "dailyPrecisionMean": 0.25,
+                "perfectDays": 9,
+                "atLeast80PercentDays": 9,
+                "atLeast70PercentDays": 9
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 0,
+            "targetBucketCalls": 0,
+            "bestDay": {
+              "date": "2026-03-19 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        }
+      },
+      "dailyBalancedValidationRule": {
+        "rule": "(prior_opposite_side_dp == 1) AND (same_day_prior_dp_rate >= 0.5)",
+        "features": [
+          "prior_opposite_side_dp",
+          "same_day_prior_dp_rate"
+        ],
+        "train": {
+          "calls": 1774,
+          "hits": 447,
+          "falseCalls": 1327,
+          "precision": 0.252,
+          "coverage": 0.02233,
+          "confidence": {
+            "exact95": [
+              0.2319,
+              0.2729
+            ],
+            "wilsonOneSided95Lower": 0.2354,
+            "weekBlockBootstrap95": [
+              0.2306,
+              0.2734
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 1049,
+            "daysWith5To10Calls": 42,
+            "callsPerActiveDayMean": 1.691,
+            "hitsPerActiveDayMean": 0.426,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 678,
+                "totalCalls": 678,
+                "hits": 69,
+                "dailyPrecisionMean": 0.1018,
+                "perfectDays": 69,
+                "atLeast80PercentDays": 69,
+                "atLeast70PercentDays": 69
+              },
+              "2": {
+                "days": 195,
+                "totalCalls": 390,
+                "hits": 106,
+                "dailyPrecisionMean": 0.2718,
+                "perfectDays": 13,
+                "atLeast80PercentDays": 13,
+                "atLeast70PercentDays": 13
+              },
+              "3": {
+                "days": 84,
+                "totalCalls": 252,
+                "hits": 85,
+                "dailyPrecisionMean": 0.3373,
+                "perfectDays": 1,
+                "atLeast80PercentDays": 1,
+                "atLeast70PercentDays": 1
+              },
+              "4": {
+                "days": 50,
+                "totalCalls": 200,
+                "hits": 77,
+                "dailyPrecisionMean": 0.385,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 4
+              },
+              "5": {
+                "days": 23,
+                "totalCalls": 115,
+                "hits": 43,
+                "dailyPrecisionMean": 0.3739,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 1,
+                "atLeast70PercentDays": 1
+              },
+              "6": {
+                "days": 6,
+                "totalCalls": 36,
+                "hits": 16,
+                "dailyPrecisionMean": 0.4444,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "7": {
+                "days": 4,
+                "totalCalls": 28,
+                "hits": 13,
+                "dailyPrecisionMean": 0.4643,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "8": {
+                "days": 7,
+                "totalCalls": 56,
+                "hits": 27,
+                "dailyPrecisionMean": 0.4821,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "9": {
+                "days": 1,
+                "totalCalls": 9,
+                "hits": 7,
+                "dailyPrecisionMean": 0.7778,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 1
+              },
+              "10": {
+                "days": 1,
+                "totalCalls": 10,
+                "hits": 4,
+                "dailyPrecisionMean": 0.4,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 1,
+            "atLeast70Percent5To10CallDays": 2,
+            "targetBucketHits": 110,
+            "targetBucketCalls": 254,
+            "bestDay": {
+              "date": "2013-09-05 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        },
+        "validation": {
+          "calls": 261,
+          "hits": 84,
+          "falseCalls": 177,
+          "precision": 0.3218,
+          "coverage": 0.00329,
+          "confidence": {
+            "exact95": [
+              0.2656,
+              0.3822
+            ],
+            "wilsonOneSided95Lower": 0.2763,
+            "weekBlockBootstrap95": [
+              0.2596,
+              0.3782
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 113,
+            "daysWith5To10Calls": 13,
+            "callsPerActiveDayMean": 2.31,
+            "hitsPerActiveDayMean": 0.743,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 52,
+                "totalCalls": 52,
+                "hits": 8,
+                "dailyPrecisionMean": 0.1538,
+                "perfectDays": 8,
+                "atLeast80PercentDays": 8,
+                "atLeast70PercentDays": 8
+              },
+              "2": {
+                "days": 25,
+                "totalCalls": 50,
+                "hits": 9,
+                "dailyPrecisionMean": 0.18,
+                "perfectDays": 1,
+                "atLeast80PercentDays": 1,
+                "atLeast70PercentDays": 1
+              },
+              "3": {
+                "days": 9,
+                "totalCalls": 27,
+                "hits": 10,
+                "dailyPrecisionMean": 0.3704,
+                "perfectDays": 1,
+                "atLeast80PercentDays": 1,
+                "atLeast70PercentDays": 1
+              },
+              "4": {
+                "days": 14,
+                "totalCalls": 56,
+                "hits": 22,
+                "dailyPrecisionMean": 0.3929,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 3
+              },
+              "5": {
+                "days": 7,
+                "totalCalls": 35,
+                "hits": 20,
+                "dailyPrecisionMean": 0.5714,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 2,
+                "atLeast70PercentDays": 2
+              },
+              "6": {
+                "days": 4,
+                "totalCalls": 24,
+                "hits": 7,
+                "dailyPrecisionMean": 0.2917,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "7": {
+                "days": 1,
+                "totalCalls": 7,
+                "hits": 3,
+                "dailyPrecisionMean": 0.4286,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "10": {
+                "days": 1,
+                "totalCalls": 10,
+                "hits": 5,
+                "dailyPrecisionMean": 0.5,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 2,
+            "atLeast70Percent5To10CallDays": 2,
+            "targetBucketHits": 35,
+            "targetBucketCalls": 76,
+            "bestDay": {
+              "date": "2025-01-13 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        },
+        "holdout": {
+          "calls": 266,
+          "hits": 84,
+          "falseCalls": 182,
+          "precision": 0.3158,
+          "coverage": 0.00335,
+          "confidence": {
+            "exact95": [
+              0.2604,
+              0.3754
+            ],
+            "wilsonOneSided95Lower": 0.271,
+            "weekBlockBootstrap95": [
+              0.2603,
+              0.3675
+            ],
+            "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+          },
+          "daily": {
+            "activeDays": 105,
+            "daysWith5To10Calls": 16,
+            "callsPerActiveDayMean": 2.533,
+            "hitsPerActiveDayMean": 0.8,
+            "dailyCallBuckets": {
+              "1": {
+                "days": 46,
+                "totalCalls": 46,
+                "hits": 4,
+                "dailyPrecisionMean": 0.087,
+                "perfectDays": 4,
+                "atLeast80PercentDays": 4,
+                "atLeast70PercentDays": 4
+              },
+              "2": {
+                "days": 22,
+                "totalCalls": 44,
+                "hits": 7,
+                "dailyPrecisionMean": 0.1591,
+                "perfectDays": 1,
+                "atLeast80PercentDays": 1,
+                "atLeast70PercentDays": 1
+              },
+              "3": {
+                "days": 9,
+                "totalCalls": 27,
+                "hits": 10,
+                "dailyPrecisionMean": 0.3704,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "4": {
+                "days": 11,
+                "totalCalls": 44,
+                "hits": 18,
+                "dailyPrecisionMean": 0.4091,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 1
+              },
+              "5": {
+                "days": 8,
+                "totalCalls": 40,
+                "hits": 14,
+                "dailyPrecisionMean": 0.35,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "6": {
+                "days": 4,
+                "totalCalls": 24,
+                "hits": 11,
+                "dailyPrecisionMean": 0.4583,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "7": {
+                "days": 3,
+                "totalCalls": 21,
+                "hits": 11,
+                "dailyPrecisionMean": 0.5238,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "9": {
+                "days": 1,
+                "totalCalls": 9,
+                "hits": 5,
+                "dailyPrecisionMean": 0.5556,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              },
+              "11": {
+                "days": 1,
+                "totalCalls": 11,
+                "hits": 4,
+                "dailyPrecisionMean": 0.3636,
+                "perfectDays": 0,
+                "atLeast80PercentDays": 0,
+                "atLeast70PercentDays": 0
+              }
+            },
+            "perfect5To10CallDays": 0,
+            "atLeast80Percent5To10CallDays": 0,
+            "atLeast70Percent5To10CallDays": 0,
+            "targetBucketHits": 41,
+            "targetBucketCalls": 94,
+            "bestDay": {
+              "date": "2026-05-04 00:00:00",
+              "calls": 1,
+              "hits": 1,
+              "precision": 1.0
+            }
+          }
+        }
+      },
+      "models": [
+        {
+          "model": "logistic",
+          "selectedThreshold": 0.28,
+          "validation": {
+            "calls": 2421,
+            "hits": 634,
+            "falseCalls": 1787,
+            "precision": 0.2619,
+            "coverage": 0.03048,
+            "confidence": {
+              "exact95": [
+                0.2445,
+                0.2799
+              ],
+              "wilsonOneSided95Lower": 0.2474,
+              "weekBlockBootstrap95": [
+                0.246,
+                0.2766
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 324,
+              "daysWith5To10Calls": 193,
+              "callsPerActiveDayMean": 7.472,
+              "hitsPerActiveDayMean": 1.957,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 18,
+                  "totalCalls": 18,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.2222,
+                  "perfectDays": 4,
+                  "atLeast80PercentDays": 4,
+                  "atLeast70PercentDays": 4
+                },
+                "2": {
+                  "days": 16,
+                  "totalCalls": 32,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.1562,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "3": {
+                  "days": 9,
+                  "totalCalls": 27,
+                  "hits": 8,
+                  "dailyPrecisionMean": 0.2963,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 19,
+                  "totalCalls": 76,
+                  "hits": 16,
+                  "dailyPrecisionMean": 0.2105,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 35,
+                  "totalCalls": 175,
+                  "hits": 38,
+                  "dailyPrecisionMean": 0.2171,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "6": {
+                  "days": 38,
+                  "totalCalls": 228,
+                  "hits": 60,
+                  "dailyPrecisionMean": 0.2632,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "7": {
+                  "days": 44,
+                  "totalCalls": 308,
+                  "hits": 73,
+                  "dailyPrecisionMean": 0.237,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "8": {
+                  "days": 37,
+                  "totalCalls": 296,
+                  "hits": 82,
+                  "dailyPrecisionMean": 0.277,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 16,
+                  "totalCalls": 144,
+                  "hits": 38,
+                  "dailyPrecisionMean": 0.2639,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "10": {
+                  "days": 23,
+                  "totalCalls": 230,
+                  "hits": 64,
+                  "dailyPrecisionMean": 0.2783,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "11": {
+                  "days": 20,
+                  "totalCalls": 220,
+                  "hits": 69,
+                  "dailyPrecisionMean": 0.3136,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 15,
+                  "totalCalls": 180,
+                  "hits": 47,
+                  "dailyPrecisionMean": 0.2611,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 9,
+                  "totalCalls": 117,
+                  "hits": 28,
+                  "dailyPrecisionMean": 0.2393,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 13,
+                  "totalCalls": 182,
+                  "hits": 55,
+                  "dailyPrecisionMean": 0.3022,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 6,
+                  "totalCalls": 90,
+                  "hits": 22,
+                  "dailyPrecisionMean": 0.2444,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 4,
+                  "totalCalls": 64,
+                  "hits": 17,
+                  "dailyPrecisionMean": 0.2656,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 2,
+                  "totalCalls": 34,
+                  "hits": 8,
+                  "dailyPrecisionMean": 0.2353,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 1,
+              "targetBucketHits": 355,
+              "targetBucketCalls": 1381,
+              "bestDay": {
+                "date": "2025-02-22 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 1706,
+            "hits": 475,
+            "falseCalls": 1231,
+            "precision": 0.2784,
+            "coverage": 0.02148,
+            "confidence": {
+              "exact95": [
+                0.2573,
+                0.3004
+              ],
+              "wilsonOneSided95Lower": 0.2609,
+              "weekBlockBootstrap95": [
+                0.255,
+                0.3009
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 230,
+              "daysWith5To10Calls": 135,
+              "callsPerActiveDayMean": 7.417,
+              "hitsPerActiveDayMean": 2.065,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 6,
+                  "totalCalls": 6,
+                  "hits": 3,
+                  "dailyPrecisionMean": 0.5,
+                  "perfectDays": 3,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "2": {
+                  "days": 11,
+                  "totalCalls": 22,
+                  "hits": 9,
+                  "dailyPrecisionMean": 0.4091,
+                  "perfectDays": 2,
+                  "atLeast80PercentDays": 2,
+                  "atLeast70PercentDays": 2
+                },
+                "3": {
+                  "days": 9,
+                  "totalCalls": 27,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.1481,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 26,
+                  "totalCalls": 104,
+                  "hits": 28,
+                  "dailyPrecisionMean": 0.2692,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 20,
+                  "totalCalls": 100,
+                  "hits": 22,
+                  "dailyPrecisionMean": 0.22,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "6": {
+                  "days": 27,
+                  "totalCalls": 162,
+                  "hits": 47,
+                  "dailyPrecisionMean": 0.2901,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "7": {
+                  "days": 25,
+                  "totalCalls": 175,
+                  "hits": 53,
+                  "dailyPrecisionMean": 0.3029,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "8": {
+                  "days": 22,
+                  "totalCalls": 176,
+                  "hits": 41,
+                  "dailyPrecisionMean": 0.233,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 27,
+                  "totalCalls": 243,
+                  "hits": 74,
+                  "dailyPrecisionMean": 0.3045,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "10": {
+                  "days": 14,
+                  "totalCalls": 140,
+                  "hits": 38,
+                  "dailyPrecisionMean": 0.2714,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "11": {
+                  "days": 16,
+                  "totalCalls": 176,
+                  "hits": 52,
+                  "dailyPrecisionMean": 0.2955,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 6,
+                  "totalCalls": 72,
+                  "hits": 18,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 7,
+                  "totalCalls": 91,
+                  "hits": 27,
+                  "dailyPrecisionMean": 0.2967,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 4,
+                  "totalCalls": 56,
+                  "hits": 19,
+                  "dailyPrecisionMean": 0.3393,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 5,
+                  "totalCalls": 75,
+                  "hits": 20,
+                  "dailyPrecisionMean": 0.2667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 4,
+                  "totalCalls": 64,
+                  "hits": 18,
+                  "dailyPrecisionMean": 0.2812,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 1,
+                  "totalCalls": 17,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.1176,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 1,
+              "atLeast80Percent5To10CallDays": 1,
+              "atLeast70Percent5To10CallDays": 3,
+              "targetBucketHits": 275,
+              "targetBucketCalls": 996,
+              "bestDay": {
+                "date": "2026-02-07 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 1706,
+            "hits": 475,
+            "falseCalls": 1231,
+            "precision": 0.2784,
+            "coverage": 0.02148,
+            "confidence": {
+              "exact95": [
+                0.2573,
+                0.3004
+              ],
+              "wilsonOneSided95Lower": 0.2609,
+              "weekBlockBootstrap95": [
+                0.255,
+                0.3009
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 230,
+              "daysWith5To10Calls": 135,
+              "callsPerActiveDayMean": 7.417,
+              "hitsPerActiveDayMean": 2.065,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 6,
+                  "totalCalls": 6,
+                  "hits": 3,
+                  "dailyPrecisionMean": 0.5,
+                  "perfectDays": 3,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "2": {
+                  "days": 11,
+                  "totalCalls": 22,
+                  "hits": 9,
+                  "dailyPrecisionMean": 0.4091,
+                  "perfectDays": 2,
+                  "atLeast80PercentDays": 2,
+                  "atLeast70PercentDays": 2
+                },
+                "3": {
+                  "days": 9,
+                  "totalCalls": 27,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.1481,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 26,
+                  "totalCalls": 104,
+                  "hits": 28,
+                  "dailyPrecisionMean": 0.2692,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 20,
+                  "totalCalls": 100,
+                  "hits": 22,
+                  "dailyPrecisionMean": 0.22,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "6": {
+                  "days": 27,
+                  "totalCalls": 162,
+                  "hits": 47,
+                  "dailyPrecisionMean": 0.2901,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "7": {
+                  "days": 25,
+                  "totalCalls": 175,
+                  "hits": 53,
+                  "dailyPrecisionMean": 0.3029,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "8": {
+                  "days": 22,
+                  "totalCalls": 176,
+                  "hits": 41,
+                  "dailyPrecisionMean": 0.233,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 27,
+                  "totalCalls": 243,
+                  "hits": 74,
+                  "dailyPrecisionMean": 0.3045,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "10": {
+                  "days": 14,
+                  "totalCalls": 140,
+                  "hits": 38,
+                  "dailyPrecisionMean": 0.2714,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "11": {
+                  "days": 16,
+                  "totalCalls": 176,
+                  "hits": 52,
+                  "dailyPrecisionMean": 0.2955,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 6,
+                  "totalCalls": 72,
+                  "hits": 18,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 7,
+                  "totalCalls": 91,
+                  "hits": 27,
+                  "dailyPrecisionMean": 0.2967,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 4,
+                  "totalCalls": 56,
+                  "hits": 19,
+                  "dailyPrecisionMean": 0.3393,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 5,
+                  "totalCalls": 75,
+                  "hits": 20,
+                  "dailyPrecisionMean": 0.2667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 4,
+                  "totalCalls": 64,
+                  "hits": 18,
+                  "dailyPrecisionMean": 0.2812,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 1,
+                  "totalCalls": 17,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.1176,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 1,
+              "atLeast80Percent5To10CallDays": 1,
+              "atLeast70Percent5To10CallDays": 3,
+              "targetBucketHits": 275,
+              "targetBucketCalls": 996,
+              "bestDay": {
+                "date": "2026-02-07 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.5262,
+          "holdoutAuc": 0.5262
+        },
+        {
+          "model": "random_forest",
+          "selectedThreshold": 0.29,
+          "validation": {
+            "calls": 366,
+            "hits": 127,
+            "falseCalls": 239,
+            "precision": 0.347,
+            "coverage": 0.00461,
+            "confidence": {
+              "exact95": [
+                0.2983,
+                0.3982
+              ],
+              "wilsonOneSided95Lower": 0.3073,
+              "weekBlockBootstrap95": [
+                0.2974,
+                0.3957
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 201,
+              "daysWith5To10Calls": 1,
+              "callsPerActiveDayMean": 1.821,
+              "hitsPerActiveDayMean": 0.632,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 86,
+                  "totalCalls": 86,
+                  "hits": 27,
+                  "dailyPrecisionMean": 0.314,
+                  "perfectDays": 27,
+                  "atLeast80PercentDays": 27,
+                  "atLeast70PercentDays": 27
+                },
+                "2": {
+                  "days": 75,
+                  "totalCalls": 150,
+                  "hits": 54,
+                  "dailyPrecisionMean": 0.36,
+                  "perfectDays": 5,
+                  "atLeast80PercentDays": 5,
+                  "atLeast70PercentDays": 5
+                },
+                "3": {
+                  "days": 32,
+                  "totalCalls": 96,
+                  "hits": 32,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 3,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "4": {
+                  "days": 7,
+                  "totalCalls": 28,
+                  "hits": 12,
+                  "dailyPrecisionMean": 0.4286,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 2
+                },
+                "6": {
+                  "days": 1,
+                  "totalCalls": 6,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 2,
+              "targetBucketCalls": 6,
+              "bestDay": {
+                "date": "2025-01-15 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 284,
+            "hits": 98,
+            "falseCalls": 186,
+            "precision": 0.3451,
+            "coverage": 0.00358,
+            "confidence": {
+              "exact95": [
+                0.2899,
+                0.4035
+              ],
+              "wilsonOneSided95Lower": 0.3003,
+              "weekBlockBootstrap95": [
+                0.2969,
+                0.3926
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 161,
+              "daysWith5To10Calls": 1,
+              "callsPerActiveDayMean": 1.764,
+              "hitsPerActiveDayMean": 0.609,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 72,
+                  "totalCalls": 72,
+                  "hits": 21,
+                  "dailyPrecisionMean": 0.2917,
+                  "perfectDays": 21,
+                  "atLeast80PercentDays": 21,
+                  "atLeast70PercentDays": 21
+                },
+                "2": {
+                  "days": 63,
+                  "totalCalls": 126,
+                  "hits": 42,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 4,
+                  "atLeast80PercentDays": 4,
+                  "atLeast70PercentDays": 4
+                },
+                "3": {
+                  "days": 20,
+                  "totalCalls": 60,
+                  "hits": 23,
+                  "dailyPrecisionMean": 0.3833,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 5,
+                  "totalCalls": 20,
+                  "hits": 9,
+                  "dailyPrecisionMean": 0.45,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "6": {
+                  "days": 1,
+                  "totalCalls": 6,
+                  "hits": 3,
+                  "dailyPrecisionMean": 0.5,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 3,
+              "targetBucketCalls": 6,
+              "bestDay": {
+                "date": "2026-01-01 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 284,
+            "hits": 98,
+            "falseCalls": 186,
+            "precision": 0.3451,
+            "coverage": 0.00358,
+            "confidence": {
+              "exact95": [
+                0.2899,
+                0.4035
+              ],
+              "wilsonOneSided95Lower": 0.3003,
+              "weekBlockBootstrap95": [
+                0.2969,
+                0.3926
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 161,
+              "daysWith5To10Calls": 1,
+              "callsPerActiveDayMean": 1.764,
+              "hitsPerActiveDayMean": 0.609,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 72,
+                  "totalCalls": 72,
+                  "hits": 21,
+                  "dailyPrecisionMean": 0.2917,
+                  "perfectDays": 21,
+                  "atLeast80PercentDays": 21,
+                  "atLeast70PercentDays": 21
+                },
+                "2": {
+                  "days": 63,
+                  "totalCalls": 126,
+                  "hits": 42,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 4,
+                  "atLeast80PercentDays": 4,
+                  "atLeast70PercentDays": 4
+                },
+                "3": {
+                  "days": 20,
+                  "totalCalls": 60,
+                  "hits": 23,
+                  "dailyPrecisionMean": 0.3833,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 5,
+                  "totalCalls": 20,
+                  "hits": 9,
+                  "dailyPrecisionMean": 0.45,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "6": {
+                  "days": 1,
+                  "totalCalls": 6,
+                  "hits": 3,
+                  "dailyPrecisionMean": 0.5,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 3,
+              "targetBucketCalls": 6,
+              "bestDay": {
+                "date": "2026-01-01 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.5483,
+          "holdoutAuc": 0.5468
+        },
+        {
+          "model": "extra_trees",
+          "selectedThreshold": 0.3,
+          "validation": {
+            "calls": 344,
+            "hits": 128,
+            "falseCalls": 216,
+            "precision": 0.3721,
+            "coverage": 0.00433,
+            "confidence": {
+              "exact95": [
+                0.3209,
+                0.4256
+              ],
+              "wilsonOneSided95Lower": 0.3304,
+              "weekBlockBootstrap95": [
+                0.3179,
+                0.4236
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 203,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.695,
+              "hitsPerActiveDayMean": 0.631,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 104,
+                  "totalCalls": 104,
+                  "hits": 40,
+                  "dailyPrecisionMean": 0.3846,
+                  "perfectDays": 40,
+                  "atLeast80PercentDays": 40,
+                  "atLeast70PercentDays": 40
+                },
+                "2": {
+                  "days": 65,
+                  "totalCalls": 130,
+                  "hits": 48,
+                  "dailyPrecisionMean": 0.3692,
+                  "perfectDays": 8,
+                  "atLeast80PercentDays": 8,
+                  "atLeast70PercentDays": 8
+                },
+                "3": {
+                  "days": 26,
+                  "totalCalls": 78,
+                  "hits": 25,
+                  "dailyPrecisionMean": 0.3205,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "4": {
+                  "days": 8,
+                  "totalCalls": 32,
+                  "hits": 15,
+                  "dailyPrecisionMean": 0.4688,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2025-01-04 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 277,
+            "hits": 87,
+            "falseCalls": 190,
+            "precision": 0.3141,
+            "coverage": 0.00349,
+            "confidence": {
+              "exact95": [
+                0.2599,
+                0.3723
+              ],
+              "wilsonOneSided95Lower": 0.2702,
+              "weekBlockBootstrap95": [
+                0.2683,
+                0.3597
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 170,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.629,
+              "hitsPerActiveDayMean": 0.512,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 84,
+                  "totalCalls": 84,
+                  "hits": 21,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 21,
+                  "atLeast80PercentDays": 21,
+                  "atLeast70PercentDays": 21
+                },
+                "2": {
+                  "days": 68,
+                  "totalCalls": 136,
+                  "hits": 41,
+                  "dailyPrecisionMean": 0.3015,
+                  "perfectDays": 5,
+                  "atLeast80PercentDays": 5,
+                  "atLeast70PercentDays": 5
+                },
+                "3": {
+                  "days": 15,
+                  "totalCalls": 45,
+                  "hits": 21,
+                  "dailyPrecisionMean": 0.4667,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 3,
+                  "totalCalls": 12,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2026-01-02 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 277,
+            "hits": 87,
+            "falseCalls": 190,
+            "precision": 0.3141,
+            "coverage": 0.00349,
+            "confidence": {
+              "exact95": [
+                0.2599,
+                0.3723
+              ],
+              "wilsonOneSided95Lower": 0.2702,
+              "weekBlockBootstrap95": [
+                0.2683,
+                0.3597
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 170,
+              "daysWith5To10Calls": 0,
+              "callsPerActiveDayMean": 1.629,
+              "hitsPerActiveDayMean": 0.512,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 84,
+                  "totalCalls": 84,
+                  "hits": 21,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 21,
+                  "atLeast80PercentDays": 21,
+                  "atLeast70PercentDays": 21
+                },
+                "2": {
+                  "days": 68,
+                  "totalCalls": 136,
+                  "hits": 41,
+                  "dailyPrecisionMean": 0.3015,
+                  "perfectDays": 5,
+                  "atLeast80PercentDays": 5,
+                  "atLeast70PercentDays": 5
+                },
+                "3": {
+                  "days": 15,
+                  "totalCalls": 45,
+                  "hits": 21,
+                  "dailyPrecisionMean": 0.4667,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 3,
+                  "totalCalls": 12,
+                  "hits": 4,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 0,
+              "targetBucketCalls": 0,
+              "bestDay": {
+                "date": "2026-01-02 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.5621,
+          "holdoutAuc": 0.5621
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "selectedThreshold": 0.29,
+          "validation": {
+            "calls": 581,
+            "hits": 194,
+            "falseCalls": 387,
+            "precision": 0.3339,
+            "coverage": 0.00731,
+            "confidence": {
+              "exact95": [
+                0.2956,
+                0.3739
+              ],
+              "wilsonOneSided95Lower": 0.3026,
+              "weekBlockBootstrap95": [
+                0.2945,
+                0.3704
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 258,
+              "daysWith5To10Calls": 11,
+              "callsPerActiveDayMean": 2.252,
+              "hitsPerActiveDayMean": 0.752,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 86,
+                  "totalCalls": 86,
+                  "hits": 28,
+                  "dailyPrecisionMean": 0.3256,
+                  "perfectDays": 28,
+                  "atLeast80PercentDays": 28,
+                  "atLeast70PercentDays": 28
+                },
+                "2": {
+                  "days": 74,
+                  "totalCalls": 148,
+                  "hits": 42,
+                  "dailyPrecisionMean": 0.2838,
+                  "perfectDays": 3,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "3": {
+                  "days": 63,
+                  "totalCalls": 189,
+                  "hits": 64,
+                  "dailyPrecisionMean": 0.3386,
+                  "perfectDays": 4,
+                  "atLeast80PercentDays": 4,
+                  "atLeast70PercentDays": 4
+                },
+                "4": {
+                  "days": 24,
+                  "totalCalls": 96,
+                  "hits": 33,
+                  "dailyPrecisionMean": 0.3438,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 1
+                },
+                "5": {
+                  "days": 8,
+                  "totalCalls": 40,
+                  "hits": 19,
+                  "dailyPrecisionMean": 0.475,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 3,
+                  "atLeast70PercentDays": 3
+                },
+                "6": {
+                  "days": 2,
+                  "totalCalls": 12,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.1667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "10": {
+                  "days": 1,
+                  "totalCalls": 10,
+                  "hits": 6,
+                  "dailyPrecisionMean": 0.6,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 1,
+              "atLeast80Percent5To10CallDays": 3,
+              "atLeast70Percent5To10CallDays": 3,
+              "targetBucketHits": 27,
+              "targetBucketCalls": 62,
+              "bestDay": {
+                "date": "2025-01-15 00:00:00",
+                "calls": 3,
+                "hits": 3,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 377,
+            "hits": 121,
+            "falseCalls": 256,
+            "precision": 0.321,
+            "coverage": 0.00475,
+            "confidence": {
+              "exact95": [
+                0.2741,
+                0.3707
+              ],
+              "wilsonOneSided95Lower": 0.2828,
+              "weekBlockBootstrap95": [
+                0.2758,
+                0.3617
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 184,
+              "daysWith5To10Calls": 6,
+              "callsPerActiveDayMean": 2.049,
+              "hitsPerActiveDayMean": 0.658,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 67,
+                  "totalCalls": 67,
+                  "hits": 14,
+                  "dailyPrecisionMean": 0.209,
+                  "perfectDays": 14,
+                  "atLeast80PercentDays": 14,
+                  "atLeast70PercentDays": 14
+                },
+                "2": {
+                  "days": 65,
+                  "totalCalls": 130,
+                  "hits": 41,
+                  "dailyPrecisionMean": 0.3154,
+                  "perfectDays": 6,
+                  "atLeast80PercentDays": 6,
+                  "atLeast70PercentDays": 6
+                },
+                "3": {
+                  "days": 35,
+                  "totalCalls": 105,
+                  "hits": 29,
+                  "dailyPrecisionMean": 0.2762,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 11,
+                  "totalCalls": 44,
+                  "hits": 23,
+                  "dailyPrecisionMean": 0.5227,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 3
+                },
+                "5": {
+                  "days": 5,
+                  "totalCalls": 25,
+                  "hits": 12,
+                  "dailyPrecisionMean": 0.48,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "6": {
+                  "days": 1,
+                  "totalCalls": 6,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 14,
+              "targetBucketCalls": 31,
+              "bestDay": {
+                "date": "2026-01-02 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 377,
+            "hits": 121,
+            "falseCalls": 256,
+            "precision": 0.321,
+            "coverage": 0.00475,
+            "confidence": {
+              "exact95": [
+                0.2741,
+                0.3707
+              ],
+              "wilsonOneSided95Lower": 0.2828,
+              "weekBlockBootstrap95": [
+                0.2758,
+                0.3617
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 184,
+              "daysWith5To10Calls": 6,
+              "callsPerActiveDayMean": 2.049,
+              "hitsPerActiveDayMean": 0.658,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 67,
+                  "totalCalls": 67,
+                  "hits": 14,
+                  "dailyPrecisionMean": 0.209,
+                  "perfectDays": 14,
+                  "atLeast80PercentDays": 14,
+                  "atLeast70PercentDays": 14
+                },
+                "2": {
+                  "days": 65,
+                  "totalCalls": 130,
+                  "hits": 41,
+                  "dailyPrecisionMean": 0.3154,
+                  "perfectDays": 6,
+                  "atLeast80PercentDays": 6,
+                  "atLeast70PercentDays": 6
+                },
+                "3": {
+                  "days": 35,
+                  "totalCalls": 105,
+                  "hits": 29,
+                  "dailyPrecisionMean": 0.2762,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 11,
+                  "totalCalls": 44,
+                  "hits": 23,
+                  "dailyPrecisionMean": 0.5227,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 3
+                },
+                "5": {
+                  "days": 5,
+                  "totalCalls": 25,
+                  "hits": 12,
+                  "dailyPrecisionMean": 0.48,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "6": {
+                  "days": 1,
+                  "totalCalls": 6,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 14,
+              "targetBucketCalls": 31,
+              "bestDay": {
+                "date": "2026-01-02 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "validationAuc": 0.5499,
+          "holdoutAuc": 0.5524
+        },
+        {
+          "model": "naive_bayes",
+          "selectedThreshold": 0.23,
+          "validation": {
+            "calls": 5539,
+            "hits": 1410,
+            "falseCalls": 4129,
+            "precision": 0.2546,
+            "coverage": 0.06973,
+            "confidence": {
+              "exact95": [
+                0.2431,
+                0.2662
+              ],
+              "wilsonOneSided95Lower": 0.2451,
+              "weekBlockBootstrap95": [
+                0.2438,
+                0.2651
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 359,
+              "daysWith5To10Calls": 19,
+              "callsPerActiveDayMean": 15.429,
+              "hitsPerActiveDayMean": 3.928,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 6,
+                  "totalCalls": 6,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.1667,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "2": {
+                  "days": 27,
+                  "totalCalls": 54,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.0926,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "3": {
+                  "days": 20,
+                  "totalCalls": 60,
+                  "hits": 10,
+                  "dailyPrecisionMean": 0.1667,
+                  "perfectDays": 1,
+                  "atLeast80PercentDays": 1,
+                  "atLeast70PercentDays": 1
+                },
+                "4": {
+                  "days": 2,
+                  "totalCalls": 8,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "7": {
+                  "days": 1,
+                  "totalCalls": 7,
+                  "hits": 1,
+                  "dailyPrecisionMean": 0.1429,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 3,
+                  "totalCalls": 27,
+                  "hits": 2,
+                  "dailyPrecisionMean": 0.0741,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "10": {
+                  "days": 15,
+                  "totalCalls": 150,
+                  "hits": 40,
+                  "dailyPrecisionMean": 0.2667,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "11": {
+                  "days": 18,
+                  "totalCalls": 198,
+                  "hits": 50,
+                  "dailyPrecisionMean": 0.2525,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 10,
+                  "totalCalls": 120,
+                  "hits": 22,
+                  "dailyPrecisionMean": 0.1833,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 4,
+                  "totalCalls": 52,
+                  "hits": 7,
+                  "dailyPrecisionMean": 0.1346,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 5,
+                  "totalCalls": 70,
+                  "hits": 17,
+                  "dailyPrecisionMean": 0.2429,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 8,
+                  "totalCalls": 120,
+                  "hits": 33,
+                  "dailyPrecisionMean": 0.275,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 13,
+                  "totalCalls": 208,
+                  "hits": 46,
+                  "dailyPrecisionMean": 0.2212,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 20,
+                  "totalCalls": 340,
+                  "hits": 91,
+                  "dailyPrecisionMean": 0.2676,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "18": {
+                  "days": 40,
+                  "totalCalls": 720,
+                  "hits": 208,
+                  "dailyPrecisionMean": 0.2889,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "19": {
+                  "days": 56,
+                  "totalCalls": 1064,
+                  "hits": 259,
+                  "dailyPrecisionMean": 0.2434,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "20": {
+                  "days": 40,
+                  "totalCalls": 800,
+                  "hits": 196,
+                  "dailyPrecisionMean": 0.245,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "21": {
+                  "days": 38,
+                  "totalCalls": 798,
+                  "hits": 220,
+                  "dailyPrecisionMean": 0.2757,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "22": {
+                  "days": 22,
+                  "totalCalls": 484,
+                  "hits": 121,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "23": {
+                  "days": 11,
+                  "totalCalls": 253,
+                  "hits": 79,
+                  "dailyPrecisionMean": 0.3123,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 43,
+              "targetBucketCalls": 184,
+              "bestDay": {
+                "date": "2025-11-09 00:00:00",
+                "calls": 1,
+                "hits": 1,
+                "precision": 1.0
+              }
+            }
+          },
+          "holdout": {
+            "calls": 4063,
+            "hits": 1091,
+            "falseCalls": 2972,
+            "precision": 0.2685,
+            "coverage": 0.05115,
+            "confidence": {
+              "exact95": [
+                0.2549,
+                0.2824
+              ],
+              "wilsonOneSided95Lower": 0.2572,
+              "weekBlockBootstrap95": [
+                0.2547,
+                0.2822
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 263,
+              "daysWith5To10Calls": 9,
+              "callsPerActiveDayMean": 15.449,
+              "hitsPerActiveDayMean": 4.148,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 5,
+                  "totalCalls": 5,
+                  "hits": 0,
+                  "dailyPrecisionMean": 0.0,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "2": {
+                  "days": 23,
+                  "totalCalls": 46,
+                  "hits": 8,
+                  "dailyPrecisionMean": 0.1739,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "3": {
+                  "days": 9,
+                  "totalCalls": 27,
+                  "hits": 6,
+                  "dailyPrecisionMean": 0.2222,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 2,
+                  "totalCalls": 18,
+                  "hits": 6,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "10": {
+                  "days": 7,
+                  "totalCalls": 70,
+                  "hits": 13,
+                  "dailyPrecisionMean": 0.1857,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "11": {
+                  "days": 16,
+                  "totalCalls": 176,
+                  "hits": 58,
+                  "dailyPrecisionMean": 0.3295,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 9,
+                  "totalCalls": 108,
+                  "hits": 27,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 6,
+                  "totalCalls": 78,
+                  "hits": 15,
+                  "dailyPrecisionMean": 0.1923,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 1,
+                  "totalCalls": 14,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.3571,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 5,
+                  "totalCalls": 75,
+                  "hits": 16,
+                  "dailyPrecisionMean": 0.2133,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 15,
+                  "totalCalls": 240,
+                  "hits": 61,
+                  "dailyPrecisionMean": 0.2542,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 19,
+                  "totalCalls": 323,
+                  "hits": 89,
+                  "dailyPrecisionMean": 0.2755,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "18": {
+                  "days": 33,
+                  "totalCalls": 594,
+                  "hits": 150,
+                  "dailyPrecisionMean": 0.2525,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "19": {
+                  "days": 35,
+                  "totalCalls": 665,
+                  "hits": 184,
+                  "dailyPrecisionMean": 0.2767,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "20": {
+                  "days": 37,
+                  "totalCalls": 740,
+                  "hits": 191,
+                  "dailyPrecisionMean": 0.2581,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "21": {
+                  "days": 27,
+                  "totalCalls": 567,
+                  "hits": 167,
+                  "dailyPrecisionMean": 0.2945,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "22": {
+                  "days": 7,
+                  "totalCalls": 154,
+                  "hits": 47,
+                  "dailyPrecisionMean": 0.3052,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "23": {
+                  "days": 5,
+                  "totalCalls": 115,
+                  "hits": 39,
+                  "dailyPrecisionMean": 0.3391,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "24": {
+                  "days": 2,
+                  "totalCalls": 48,
+                  "hits": 9,
+                  "dailyPrecisionMean": 0.1875,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 19,
+              "targetBucketCalls": 88,
+              "bestDay": {
+                "date": "2026-01-25 00:00:00",
+                "calls": 3,
+                "hits": 2,
+                "precision": 0.6667
+              }
+            }
+          },
+          "primaryHoldout": {
+            "calls": 4063,
+            "hits": 1091,
+            "falseCalls": 2972,
+            "precision": 0.2685,
+            "coverage": 0.05115,
+            "confidence": {
+              "exact95": [
+                0.2549,
+                0.2824
+              ],
+              "wilsonOneSided95Lower": 0.2572,
+              "weekBlockBootstrap95": [
+                0.2547,
+                0.2822
+              ],
+              "independentCallsAssumption": "Clopper-Pearson assumes independent calls; weekly block bootstrap groups within-week dependence."
+            },
+            "daily": {
+              "activeDays": 263,
+              "daysWith5To10Calls": 9,
+              "callsPerActiveDayMean": 15.449,
+              "hitsPerActiveDayMean": 4.148,
+              "dailyCallBuckets": {
+                "1": {
+                  "days": 5,
+                  "totalCalls": 5,
+                  "hits": 0,
+                  "dailyPrecisionMean": 0.0,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "2": {
+                  "days": 23,
+                  "totalCalls": 46,
+                  "hits": 8,
+                  "dailyPrecisionMean": 0.1739,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "3": {
+                  "days": 9,
+                  "totalCalls": 27,
+                  "hits": 6,
+                  "dailyPrecisionMean": 0.2222,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "9": {
+                  "days": 2,
+                  "totalCalls": 18,
+                  "hits": 6,
+                  "dailyPrecisionMean": 0.3333,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "10": {
+                  "days": 7,
+                  "totalCalls": 70,
+                  "hits": 13,
+                  "dailyPrecisionMean": 0.1857,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "11": {
+                  "days": 16,
+                  "totalCalls": 176,
+                  "hits": 58,
+                  "dailyPrecisionMean": 0.3295,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "12": {
+                  "days": 9,
+                  "totalCalls": 108,
+                  "hits": 27,
+                  "dailyPrecisionMean": 0.25,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "13": {
+                  "days": 6,
+                  "totalCalls": 78,
+                  "hits": 15,
+                  "dailyPrecisionMean": 0.1923,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "14": {
+                  "days": 1,
+                  "totalCalls": 14,
+                  "hits": 5,
+                  "dailyPrecisionMean": 0.3571,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "15": {
+                  "days": 5,
+                  "totalCalls": 75,
+                  "hits": 16,
+                  "dailyPrecisionMean": 0.2133,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "16": {
+                  "days": 15,
+                  "totalCalls": 240,
+                  "hits": 61,
+                  "dailyPrecisionMean": 0.2542,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "17": {
+                  "days": 19,
+                  "totalCalls": 323,
+                  "hits": 89,
+                  "dailyPrecisionMean": 0.2755,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "18": {
+                  "days": 33,
+                  "totalCalls": 594,
+                  "hits": 150,
+                  "dailyPrecisionMean": 0.2525,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "19": {
+                  "days": 35,
+                  "totalCalls": 665,
+                  "hits": 184,
+                  "dailyPrecisionMean": 0.2767,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "20": {
+                  "days": 37,
+                  "totalCalls": 740,
+                  "hits": 191,
+                  "dailyPrecisionMean": 0.2581,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "21": {
+                  "days": 27,
+                  "totalCalls": 567,
+                  "hits": 167,
+                  "dailyPrecisionMean": 0.2945,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "22": {
+                  "days": 7,
+                  "totalCalls": 154,
+                  "hits": 47,
+                  "dailyPrecisionMean": 0.3052,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "23": {
+                  "days": 5,
+                  "totalCalls": 115,
+                  "hits": 39,
+                  "dailyPrecisionMean": 0.3391,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                },
+                "24": {
+                  "days": 2,
+                  "totalCalls": 48,
+                  "hits": 9,
+                  "dailyPrecisionMean": 0.1875,
+                  "perfectDays": 0,
+                  "atLeast80PercentDays": 0,
+                  "atLeast70PercentDays": 0
+                }
+              },
+              "perfect5To10CallDays": 0,
+              "atLeast80Percent5To10CallDays": 0,
+              "atLeast70Percent5To10CallDays": 0,
+              "targetBucketHits": 19,
+              "targetBucketCalls": 88,
+              "bestDay": {
+                "date": "2026-01-25 00:00:00",
+                "calls": 3,
+                "hits": 2,
+                "precision": 0.6667
+              }
+            }
+          },
+          "validationAuc": 0.5247,
+          "holdoutAuc": 0.5256
+        }
+      ],
+      "holdoutReadAfterPolicySelection": "The corrected policy is selected on 2025 only. An earlier disposable run was inspected to catch and remove a same-day availability leak, so this is not a blinded preregistered test.",
+      "dailyEvaluation": {
+        "callBuckets": "per calendar date; full and grouped by exact number of calls",
+        "5To10CallDayDescriptors": [
+          "perfect",
+          "at least 80%",
+          "at least 70%"
+        ],
+        "notAnIndependentTrialCount": true
+      },
+      "validationRuleTable": "research\\dp_independent_v1\\schedule_aware_rule_validation.csv"
+    }
+  ]
+}
