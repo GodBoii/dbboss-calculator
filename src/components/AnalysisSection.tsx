@@ -39,8 +39,9 @@ import { AnalysisTabs } from "./analysis/AnalysisTabs"
 import { BetCopyDesk } from "./analysis/BetCopyDesk"
 import { ConfidenceBadge } from "./analysis/AnalysisWidgets"
 import { getVerifiedDpCalls } from "@/lib/verified-dp-call"
+import { isMarketHistoryFresh } from "@/lib/market-history-freshness"
 import { SUTTA_MODEL_VERSION } from "@/lib/app-version"
-import { SUTTA_PREDICTION_COUNT, historicalCutoffISO } from "@/lib/prediction-contract"
+import { SUTTA_PREDICTION_COUNT } from "@/lib/prediction-contract"
 
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
@@ -73,25 +74,6 @@ type ScrapedPanel = {
   jodi: string
   closePanel: string
   closeSutta: number
-}
-
-function recordsAreFresh(records: PanelRecord[]) {
-  const newestSavedAt = records.reduce((max, record) => Math.max(max, record.savedAt ?? 0), 0)
-  const dates = records
-    .map(getRecordISODate)
-    .filter((date): date is string => Boolean(date))
-    .sort()
-  const newestDate = dates.at(-1)
-  const requiredStart = newestDate ? historicalCutoffISO(newestDate) : null
-  const startTolerance = requiredStart ? new Date(`${requiredStart}T00:00:00Z`) : null
-  startTolerance?.setUTCDate(startTolerance.getUTCDate() + 7)
-  const coversWindow = Boolean(
-    dates[0] && startTolerance && dates[0] <= startTolerance.toISOString().slice(0, 10),
-  )
-  return records.length > 50
-    && coversWindow
-    && newestSavedAt > 0
-    && Date.now() - newestSavedAt < 6 * 60 * 60 * 1000
 }
 
 async function fetchMarketHistory(marketName: string) {
@@ -466,7 +448,7 @@ export default function AnalysisSection() {
         }
 
         const cached = await getRecordsByMarket(selectedMarket)
-        const cacheIsFresh = recordsAreFresh(cached)
+        const cacheIsFresh = isMarketHistoryFresh(cached, selectedMarket, new Date())
 
         if (cached.length > 50 && cacheIsFresh && !forceRefresh) {
           // We have enough cached data — skip scraping
@@ -538,7 +520,7 @@ export default function AnalysisSection() {
           setLoadingMessage(`Refreshing ${requiredSourceMarkets.length} required Sutta source markets…`)
           const refreshedSources = await Promise.all(requiredSourceMarkets.map(async (marketName) => {
             const cachedSource = allMarketsRecords[marketName] ?? []
-            const sourceRecords = recordsAreFresh(cachedSource)
+            const sourceRecords = isMarketHistoryFresh(cachedSource, marketName, new Date())
               ? cachedSource
               : await fetchMarketHistory(marketName)
             if (sourceRecords.length <= 50) {
