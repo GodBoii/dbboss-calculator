@@ -1,5 +1,19 @@
 # Sutta Prediction Model Notes
 
+## Current engine: v2-recency (SUTTA_MODEL_VERSION 2.0.0-recency, app 1.0.23)
+
+`src/lib/sutta-model/v2-recency.ts` now drives Open, Close and Jodi rankings for every market. The legacy market-routed strategies below are kept and can be restored by setting `SUTTA_MODEL_ENGINE = "legacy"` in `src/lib/sutta-model/production.ts`.
+
+- Open: rank digits by how recently they appeared as this market's Open.
+- Close: push the previous Close and previous Open to the bottom, rank the rest by fewest Close appearances in the last 30 draws. The same ranking is used after today's Open is known.
+- Jodi: 6 x 6 grid of the two lists.
+
+Why: walk-forward tests (scratch/sutta-v2-*.cjs) showed the legacy routing scored at the random baseline after its tuning date (about 60% Top 6, 36% Jodi). The legacy model's higher figures came from draws it was tuned on. v2 relies on three small, stable effects: Open repeats the previous Open about 11.3% of the time against 10% by chance, and Close avoids the previous Close (8.8%) and the previous Open (9.3%). Over 2+ years v2 averaged about 62.5% Open, 62.3% Close and 38.9% Jodi. On the last 90 days to 2026-10-01 it scored 61.5% / 62.6% / 37.3%, against legacy's 60.7% / 60.8% / 37.7%. These are small edges, inside one to two standard errors over 90 days.
+
+Verify with `npm run verify:sutta-v2-parity` and `npm run verify:sutta-ranking`.
+
+## Legacy engine notes
+
 This file records what we have changed so far for the sutta prediction layer and which model is currently used market-wise for three categories:
 
 1. Open sutta prediction

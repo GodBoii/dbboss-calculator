@@ -1,6 +1,6 @@
 {
   "name": "lakshmi-boss-calculator",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "private": true,
   "scripts": {
     "prebuild": "node verify-pwa-assets.cjs",
@@ -32,6 +32,7 @@
     "research:present-digits": "python research/present_digits_v1/run_backtest.py",
     "verify:present-digits": "python research/present_digits_v1/verify_backtest.py && node scripts/verify-present-digits-runtime.cjs",
     "verify:sutta-ranking": "node scripts/verify-sutta-ranking.cjs",
+    "verify:sutta-v2-parity": "node scripts/verify-sutta-v2-parity.cjs",
     "verify:sutta-above90": "node scripts/verify-above-90-regression.cjs"
   },
   "dependencies": {
