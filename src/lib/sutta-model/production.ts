@@ -7,6 +7,7 @@ import { buildJodiSet } from "./jodi"
 import { buildOpenTop6Model } from "./open"
 import { applyRankProbabilities } from "./shared"
 import type { SuttaPick } from "./types"
+import { buildV2CloseRanking, buildV2OpenRanking } from "./v2-recency"
 
 export type CopySuttaPick = SuttaPick
 
@@ -1047,6 +1048,12 @@ function canonicalizeSuttaRanking(primary: CopySuttaPick[], remainder: CopySutta
   return applyRankProbabilities(ordered)
 }
 
+/**
+ * Active sutta engine. "v2-recency" is the walk-forward-selected model in
+ * ./v2-recency.ts; set to "legacy" to restore the market-routed strategies below.
+ */
+export const SUTTA_MODEL_ENGINE: "v2-recency" | "legacy" = "v2-recency"
+
 /** One count-independent Open model ranking. UI counters only slice this list. */
 export function buildOpenSuttaRanking(
   picks: PanelPick[],
@@ -1056,6 +1063,10 @@ export function buildOpenSuttaRanking(
   targetDate = new Date(),
   allMarketsRecords: Record<string, PanelRecord[]> = {},
 ) {
+  if (SUTTA_MODEL_ENGINE === "v2-recency") {
+    const v2 = buildV2OpenRanking(records, marketName, targetDate)
+    if (v2) return applyRankProbabilities(v2)
+  }
   return canonicalizeSuttaRanking(
     buildOpenSuttaSetCore(picks, droughts, records, 6, marketName, targetDate, allMarketsRecords),
     buildOpenSuttaSetCore(picks, droughts, records, 10, marketName, targetDate, allMarketsRecords),
@@ -1077,6 +1088,12 @@ export function buildCloseSuttaRanking(
   currentOpenSutta: number | null = null, allMarketsRecords: Record<string, PanelRecord[]> = {},
   targetDate = new Date(),
 ) {
+  if (SUTTA_MODEL_ENGINE === "v2-recency") {
+    // v2 ranks Close from prior draws only; a known Open showed no reliable
+    // Close effect in research, so the pre-open ranking is kept after Open too.
+    const v2 = buildV2CloseRanking(records, marketName, targetDate)
+    if (v2) return applyRankProbabilities(v2)
+  }
   return canonicalizeSuttaRanking(
     buildCloseSuttaSetCore(picks, droughts, records, 6, marketName, currentOpenSutta, allMarketsRecords, targetDate),
     buildCloseSuttaSetCore(picks, droughts, records, 10, marketName, currentOpenSutta, allMarketsRecords, targetDate),
