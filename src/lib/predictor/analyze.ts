@@ -24,6 +24,7 @@ import {
   mergeOperatorIntoDpContext,
 } from "./operator-psychology";
 import { applyPrecisionKindOverride } from "./precision-kind-overrides";
+import { predictDpPanels } from "./dp-panel-model";
 import {
   CLOSE_SCORE_TUNING,
   CURRENT_SCORE_TUNING,
@@ -304,7 +305,10 @@ export function analyzeMarket(
       3,
     );
   }
-  const openDpPicks = boostDoublePanelFocusPicks(
+  // DP panel lists come from the v3 conditional-logit model (research/dp_panel_v3).
+  // The legacy heuristic scorer is kept only as a fallback.
+  const dpModel = predictDpPanels(marketName, records, allMarketsRecords, analysisDate);
+  const openDpPicks = dpModel?.openPicks ?? boostDoublePanelFocusPicks(
     scoreDoublePanelsForPosition(
       openEntries,
       openCtx,
@@ -313,7 +317,7 @@ export function analyzeMarket(
     ),
     openDpKindContext,
   );
-  const closeDpPicks = boostDoublePanelFocusPicks(
+  const closeDpPicks = dpModel?.closePicks ?? boostDoublePanelFocusPicks(
     scoreDoublePanelsForPosition(
       closeEntries,
       closeCtx,
@@ -389,8 +393,8 @@ export function analyzeMarket(
     closePanelPicks: closePanelPicks.slice(0, PANEL_PREDICTION_COUNT),
     openDpPicks: openDpPicks.slice(0, 30),
     closeDpPicks: closeDpPicks.slice(0, 30),
-    openDpDigitFocus: buildDpDigitFocus(openDpPicks),
-    closeDpDigitFocus: buildDpDigitFocus(closeDpPicks),
+    openDpDigitFocus: dpModel ? dpModel.openFocus : buildDpDigitFocus(openDpPicks),
+    closeDpDigitFocus: dpModel ? dpModel.closeFocus : buildDpDigitFocus(closeDpPicks),
     openKindPrediction,
     closeKindPrediction,
     openDpKindContext,
