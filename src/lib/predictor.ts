@@ -15,3 +15,4 @@ export * from "./predictor/stats";
 export * from "./predictor/operator-psychology";
 export * from "./predictor/analyze";
 export * from "./predictor/jodi";
+export * from "./predictor/panel-top10-model";

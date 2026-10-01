@@ -5,6 +5,8 @@ import type { ScoringContext } from "./scoring";
 import { VOL_MULTIPLIER } from "./market-config";
 import { isDoublePanel } from "./panel-utils";
 import { applyKnownOpenOperatorReaction } from "./operator-psychology";
+import { applyPanelOrder, rankPanelsTop10Model } from "./panel-top10-model";
+import { PANEL_PREDICTION_COUNT } from "../prediction-contract";
 import {
   JODI_SAMPLE_DENOMINATOR,
   JODI_SCORE_TUNING,
@@ -117,6 +119,13 @@ export function computeJodiAnalysis(
     openPanel,
   );
 
+  // With a declared Open panel, the displayed Close list uses the Top-10
+  // panel model (research/panel_top10_v1); Sutta-only input keeps the Jodi scorer.
+  const top10Order = openPanel
+    ? rankPanelsTop10Model(records, "close", ctx.todayDayName, openPanel)
+    : null;
+  const displayedClosePicks = applyPanelOrder(adjustedPicks, top10Order);
+
   const adjustedCloseDpPicks = adjustedPicks.filter((pick) => isDoublePanel(pick.panel));
   const adjustedCloseDpDigitFocus = buildDpDigitFocus(adjustedCloseDpPicks);
 
@@ -131,7 +140,9 @@ export function computeJodiAnalysis(
     blacklistedCloseSuttas: blacklisted,
     safeCloseSuttas: safe,
     closeSuttaPenalties,
+    // Sutta models consume this Jodi-scored order; keep it unchanged.
     adjustedClosePicks: adjustedPicks.slice(0, 30),
+    adjustedClosePanelPicks: displayedClosePicks.slice(0, PANEL_PREDICTION_COUNT),
     adjustedCloseDpPicks: adjustedCloseDpPicks.slice(0, 30),
     adjustedCloseDpDigitFocus,
     kindPrediction: buildKindPrediction(adjustedPicks, dpKindContext ?? 1.0, 1.3),

@@ -18,6 +18,11 @@ import {
   rerankPanelsByProfile,
 } from "./panel-profile";
 import { computeStats } from "./stats";
+import {
+  applyPanelOrder,
+  findDeclaredOpenPanel,
+  rankPanelsTop10Model,
+} from "./panel-top10-model";
 import { computeDpKindContext } from "./dp-kind-context";
 import {
   buildOperatorContext,
@@ -67,7 +72,13 @@ export function analyzeMarket(
   records: PanelRecord[],
   allMarketsRecords: Record<string, PanelRecord[]>,
   analysisDate = new Date(),
-  options: { useOpenPanelProfile?: boolean } = {},
+  options: {
+    useOpenPanelProfile?: boolean;
+    /** "top10" (default) uses panel-top10-v1; "legacy" keeps the old Top-40 rerankers. */
+    panelModel?: "top10" | "legacy";
+    /** Today's declared Open panel. Auto-detected from a trailing Open-only record when omitted. */
+    knownOpenPanel?: string | null;
+  } = {},
 ): PredictionResult | null {
   if (records.length === 0) return null;
 
@@ -304,6 +315,26 @@ export function analyzeMarket(
       3,
     );
   }
+  // ── Top-10 panel model (research/panel_top10_v1) ─────────────────────────
+  // Open always uses the model. Close switches to it once today's Open is
+  // declared; before that the legacy Close order is kept because the
+  // pre-Open variant did not beat it in walk-forward testing.
+  const declaredOpenPanel = options.knownOpenPanel !== undefined
+    ? options.knownOpenPanel
+    : findDeclaredOpenPanel(records);
+  let closePanelModel: PredictionResult["closePanelModel"] = "legacy-pre-open";
+  if (options.panelModel !== "legacy") {
+    const openOrder = rankPanelsTop10Model(records, "open", todayDayName);
+    if (openOrder) openPanelPicks = applyPanelOrder(scoredOpenPicks, openOrder);
+    const closeOrder = declaredOpenPanel
+      ? rankPanelsTop10Model(records, "close", todayDayName, declaredOpenPanel)
+      : null;
+    if (closeOrder) {
+      closePanelPicks = applyPanelOrder(scoredClosePicks, closeOrder);
+      closePanelModel = "top10-with-open";
+    }
+  }
+
   const openDpPicks = boostDoublePanelFocusPicks(
     scoreDoublePanelsForPosition(
       openEntries,
@@ -387,6 +418,8 @@ export function analyzeMarket(
     openPanelPicks: openPanelPicks.slice(0, PANEL_PREDICTION_COUNT),
     closePicks: closePicks.slice(0, 30),
     closePanelPicks: closePanelPicks.slice(0, PANEL_PREDICTION_COUNT),
+    closePanelModel,
+    declaredOpenPanel: declaredOpenPanel ?? null,
     openDpPicks: openDpPicks.slice(0, 30),
     closeDpPicks: closeDpPicks.slice(0, 30),
     openDpDigitFocus: buildDpDigitFocus(openDpPicks),

@@ -1,7 +1,7 @@
 export const HISTORICAL_LOOKBACK_MONTHS = 28
 export const SUTTA_PREDICTION_COUNT = 6
 export const JODI_GRID_COUNT = SUTTA_PREDICTION_COUNT ** 2
-export const PANEL_PREDICTION_COUNT = 40
+export const PANEL_PREDICTION_COUNT = 10
 
 /**
  * Return an inclusive calendar-month cutoff. Calendar months are intentional:

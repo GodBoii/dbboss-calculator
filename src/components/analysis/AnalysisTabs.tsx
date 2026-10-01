@@ -1,6 +1,7 @@
 import type { Dispatch, ReactNode, SetStateAction } from "react"
 import type { JodiAnalysis, PredictionResult } from "@/lib/predictor"
 import type { BacktestReport } from "@/lib/backtest"
+import { PANEL_PREDICTION_COUNT } from "@/lib/prediction-contract"
 import {
   CopyButton,
   DpDigitFocusSection,
@@ -81,7 +82,7 @@ export function AnalysisTabs({
     effectivePicksSubTab === "open"
       ? result.openPanelPicks
       : effectivePicksSubTab === "jodi" && jodiResult
-        ? jodiResult.adjustedClosePicks
+        ? jodiResult.adjustedClosePanelPicks
         : result.closePanelPicks
   const activeSequenceRate =
     effectivePicksSubTab === "open" ? result.stats.openSequenceRate : result.stats.closeSequenceRate
@@ -142,13 +143,10 @@ export function AnalysisTabs({
                         <KindForecastCard label="Open Kind Forecast" prediction={result.openKindPrediction} />
                         <div className="picks-hint-row">
                           <p className="picks-hint" style={{ margin: 0 }}>
-                            Top 40 Open panels - ranked from Open-position history only
-                          </p>
-                          <p className="picks-hint picks-hint-calibration">
-                            Panel@30 {result.calibration.open.panel30.toFixed(1)}% / Sutta@30 {result.calibration.open.sutta30.toFixed(1)}%
+                            Top {PANEL_PREDICTION_COUNT} Open panels - Top-10 panel model (market history only)
                           </p>
                           <CopyButton
-                            label="Copy Open 40"
+                            label={`Copy Open ${PANEL_PREDICTION_COUNT}`}
                             isCopied={copyingKey === "open"}
                             onClick={() =>
                               handleCopy(
@@ -199,13 +197,12 @@ export function AnalysisTabs({
                         <KindForecastCard label="Close Kind Forecast" prediction={result.closeKindPrediction} />
                         <div className="picks-hint-row">
                           <p className="picks-hint" style={{ margin: 0 }}>
-                            Top 40 Close panels - ranked from Close-position history only
-                          </p>
-                          <p className="picks-hint picks-hint-calibration">
-                            Panel@30 {result.calibration.close.panel30.toFixed(1)}% / Sutta@30 {result.calibration.close.sutta30.toFixed(1)}%
+                            {result.closePanelModel === "top10-with-open"
+                              ? `Top ${PANEL_PREDICTION_COUNT} Close panels - Top-10 model using today's Open ${result.declaredOpenPanel}`
+                              : `Top ${PANEL_PREDICTION_COUNT} Close panels - pre-Open ranking; refresh after Open for the Top-10 model`}
                           </p>
                           <CopyButton
-                            label="Copy Close 40"
+                            label={`Copy Close ${PANEL_PREDICTION_COUNT}`}
                             isCopied={copyingKey === "close"}
                             onClick={() =>
                               handleCopy(
@@ -334,14 +331,14 @@ export function AnalysisTabs({
                               handleCopy(
                                 "jodi",
                                 formatPicksForCopy(
-                                  jodiResult.adjustedClosePicks,
+                                  jodiResult.adjustedClosePanelPicks,
                                   `${selectedMarket} - Jodi Close (Open Sutta=${jodiResult.openSutta})`
                                 )
                               )
                             }
                           />
                         </div>
-                        <PicksList picks={jodiResult.adjustedClosePicks} getScoreColor={getScoreColor} />
+                        <PicksList picks={jodiResult.adjustedClosePanelPicks} getScoreColor={getScoreColor} />
                         <DpDigitFocusSection
                           title="Jodi Close DP Numbers"
                           copyLabel="Copy DP Numbers"
@@ -428,35 +425,19 @@ export function AnalysisTabs({
                           {backtestReport.startDate} to {backtestReport.endDate} - {backtestReport.drawsTested} draws replayed with prior history only
                         </p>
                         <div className="stat-row">
-                          <span className="stat-label">Random panel@30 baseline</span>
-                          <span className="stat-value">{(backtestReport.randomTop30Baseline * 100).toFixed(1)}%</span>
+                          <span className="stat-label">Random panel@10 baseline</span>
+                          <span className="stat-value">{(backtestReport.randomTop10Baseline * 100).toFixed(1)}%</span>
                         </div>
                         <div className="stat-row">
-                          <span className="stat-label">Random panel@40 baseline</span>
-                          <span className="stat-value">{(backtestReport.randomTop40Baseline * 100).toFixed(1)}%</span>
-                        </div>
-                        <div className="stat-row">
-                          <span className="stat-label">Open panel@40 / Close panel@40</span>
+                          <span className="stat-label">Open panel@10 / Close panel@10</span>
                           <span className="stat-value">
-                            {pct(backtestReport.open.panelTop40, backtestReport.open.n)} / {pct(backtestReport.close.panelTop40, backtestReport.close.n)}
+                            {pct(backtestReport.open.panelTop10, backtestReport.open.n)} / {pct(backtestReport.close.panelTop10, backtestReport.close.n)}
                           </span>
                         </div>
                         <div className="stat-row">
-                          <span className="stat-label">Open panel@30 / sutta@30</span>
+                          <span className="stat-label">Jodi Close panel@10</span>
                           <span className="stat-value">
-                            {pct(backtestReport.open.panelTop30, backtestReport.open.n)} / {pct(backtestReport.open.suttaTop30, backtestReport.open.n)}
-                          </span>
-                        </div>
-                        <div className="stat-row">
-                          <span className="stat-label">Close panel@30 / sutta@30</span>
-                          <span className="stat-value">
-                            {pct(backtestReport.close.panelTop30, backtestReport.close.n)} / {pct(backtestReport.close.suttaTop30, backtestReport.close.n)}
-                          </span>
-                        </div>
-                        <div className="stat-row">
-                          <span className="stat-label">Jodi panel@30 / sutta@30</span>
-                          <span className="stat-value">
-                            {pct(backtestReport.jodi.panelTop30, backtestReport.jodi.n)} / {pct(backtestReport.jodi.suttaTop30, backtestReport.jodi.n)}
+                            {pct(backtestReport.jodi.panelTop10, backtestReport.jodi.n)}
                           </span>
                         </div>
                         <div className="stat-row">

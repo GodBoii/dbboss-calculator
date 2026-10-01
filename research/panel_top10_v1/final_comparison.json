@@ -1,0 +1,139 @@
+{
+  "legacyParityDiffs": 0,
+  "windows": {
+    "7d": {
+      "n": 72,
+      "random_top10_pct": 4.55,
+      "open": {
+        "old_hits": 3,
+        "new_hits": 6,
+        "old_pct": 4.17,
+        "new_pct": 8.33
+      },
+      "close": {
+        "old_hits": 4,
+        "new_hits": 3,
+        "old_pct": 5.56,
+        "new_pct": 4.17
+      }
+    },
+    "30d": {
+      "n": 309,
+      "random_top10_pct": 4.55,
+      "open": {
+        "old_hits": 18,
+        "new_hits": 22,
+        "old_pct": 5.83,
+        "new_pct": 7.12
+      },
+      "close": {
+        "old_hits": 15,
+        "new_hits": 20,
+        "old_pct": 4.85,
+        "new_pct": 6.47
+      }
+    },
+    "90d": {
+      "n": 912,
+      "random_top10_pct": 4.55,
+      "open": {
+        "old_hits": 64,
+        "new_hits": 69,
+        "old_pct": 7.02,
+        "new_pct": 7.57
+      },
+      "close": {
+        "old_hits": 52,
+        "new_hits": 64,
+        "old_pct": 5.7,
+        "new_pct": 7.02
+      }
+    }
+  },
+  "byMarket90d": {
+    "Rajdhani Day": {
+      "n": 76,
+      "open_old": 2,
+      "open_new": 7,
+      "close_old": 5,
+      "close_new": 5
+    },
+    "Madhur Day": {
+      "n": 89,
+      "open_old": 9,
+      "open_new": 5,
+      "close_old": 4,
+      "close_new": 7
+    },
+    "Madhur Night": {
+      "n": 76,
+      "open_old": 4,
+      "open_new": 1,
+      "close_old": 9,
+      "close_new": 4
+    },
+    "Kalyan Night": {
+      "n": 64,
+      "open_old": 3,
+      "open_new": 4,
+      "close_old": 4,
+      "close_new": 2
+    },
+    "Rajdhani Night": {
+      "n": 64,
+      "open_old": 6,
+      "open_new": 6,
+      "close_old": 2,
+      "close_new": 2
+    },
+    "Sridevi": {
+      "n": 89,
+      "open_old": 5,
+      "open_new": 8,
+      "close_old": 8,
+      "close_new": 14
+    },
+    "Time Bazar": {
+      "n": 75,
+      "open_old": 10,
+      "open_new": 4,
+      "close_old": 9,
+      "close_new": 6
+    },
+    "Sridevi Night": {
+      "n": 89,
+      "open_old": 6,
+      "open_new": 7,
+      "close_old": 4,
+      "close_new": 8
+    },
+    "Main Bazar": {
+      "n": 64,
+      "open_old": 5,
+      "open_new": 10,
+      "close_old": 1,
+      "close_new": 7
+    },
+    "Milan Night": {
+      "n": 75,
+      "open_old": 4,
+      "open_new": 5,
+      "close_old": 2,
+      "close_new": 2
+    },
+    "Milan Day": {
+      "n": 75,
+      "open_old": 6,
+      "open_new": 6,
+      "close_old": 3,
+      "close_new": 1
+    },
+    "Kalyan": {
+      "n": 76,
+      "open_old": 4,
+      "open_new": 6,
+      "close_old": 1,
+      "close_new": 6
+    }
+  }
+}

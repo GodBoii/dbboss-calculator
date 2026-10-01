@@ -23,6 +23,10 @@ export interface PredictionResult {
   openPanelPicks: PanelPick[];
   closePicks: PanelPick[];
   closePanelPicks: PanelPick[];
+  /** Which ranker produced closePanelPicks. */
+  closePanelModel: "top10-with-open" | "legacy-pre-open";
+  /** Today's declared Open panel used by the Close model, if any. */
+  declaredOpenPanel: string | null;
   openDpPicks: PanelPick[];
   closeDpPicks: PanelPick[];
   openDpDigitFocus: DpDigitFocus | null;
@@ -112,6 +116,8 @@ export interface JodiAnalysis {
   safeCloseSuttas: number[];
   closeSuttaPenalties: Record<number, number>;
   adjustedClosePicks: PanelPick[];
+  /** Displayed Top-10 Close panels (Top-10 model when the Open panel is known). */
+  adjustedClosePanelPicks: PanelPick[];
   adjustedCloseDpPicks: PanelPick[];
   adjustedCloseDpDigitFocus: DpDigitFocus | null;
   kindPrediction: PanelKindPrediction;

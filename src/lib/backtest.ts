@@ -35,6 +35,7 @@ export interface BacktestReport {
   startDate: string
   endDate: string
   drawsTested: number
+  randomTop10Baseline: number
   randomTop30Baseline: number
   randomTop40Baseline: number
   open: BacktestBucket
@@ -225,7 +226,10 @@ export function runMarketBacktest(
     }
     priorAllMarkets[market] = prior
 
-    const prediction = analyzeMarket(market, prior, priorAllMarkets, new Date(`${isoDate}T12:00:00`))
+    // Close panels are scored after today's Open is declared, as the Close tab shows them.
+    const prediction = analyzeMarket(market, prior, priorAllMarkets, new Date(`${isoDate}T12:00:00`), {
+      knownOpenPanel: record.openPanel || null,
+    })
     if (!prediction) continue
 
     evaluatePickSet(
@@ -255,7 +259,7 @@ export function runMarketBacktest(
       )
       evaluatePickSet(
         jodi,
-        jodiResult.adjustedClosePicks,
+        jodiResult.adjustedClosePanelPicks,
         record.closePanel,
         record.closeSutta,
         prediction.closeSuttaDroughts[String(record.closeSutta)] ?? 1000,
@@ -280,6 +284,7 @@ export function runMarketBacktest(
     startDate,
     endDate,
     drawsTested,
+    randomTop10Baseline: 10 / 220,
     randomTop30Baseline: 30 / 220,
     randomTop40Baseline: 40 / 220,
     open: finalizeBucket(open),

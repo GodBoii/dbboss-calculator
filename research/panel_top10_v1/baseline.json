@@ -1,0 +1,59 @@
+{
+  "7d": {
+    "n": 72,
+    "openTop10": {
+      "hits": 3,
+      "rate": 4.17
+    },
+    "openTop40": {
+      "hits": 17,
+      "rate": 23.61
+    },
+    "closeTop10": {
+      "hits": 4,
+      "rate": 5.56
+    },
+    "closeTop40": {
+      "hits": 24,
+      "rate": 33.33
+    }
+  },
+  "30d": {
+    "n": 309,
+    "openTop10": {
+      "hits": 18,
+      "rate": 5.83
+    },
+    "openTop40": {
+      "hits": 82,
+      "rate": 26.54
+    },
+    "closeTop10": {
+      "hits": 15,
+      "rate": 4.85
+    },
+    "closeTop40": {
+      "hits": 80,
+      "rate": 25.89
+    }
+  },
+  "90d": {
+    "n": 912,
+    "openTop10": {
+      "hits": 64,
+      "rate": 7.02
+    },
+    "openTop40": {
+      "hits": 235,
+      "rate": 25.77
+    },
+    "closeTop10": {
+      "hits": 52,
+      "rate": 5.7
+    },
+    "closeTop40": {
+      "hits": 223,
+      "rate": 24.45
+    }
+  }
+}
