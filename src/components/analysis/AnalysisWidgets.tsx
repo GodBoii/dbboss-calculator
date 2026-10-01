@@ -151,7 +151,7 @@ export function DpFocusSection({
         <div>
           <h4 className="stat-section-title" style={{ margin: 0 }}>{title}</h4>
           <p className="picks-hint" style={{ margin: "4px 0 0" }}>
-            DP-only ranking from the same scoring model
+            DP-only ranking from the v3 DP panel model (50 = average chance)
           </p>
         </div>
         <CopyButton label={copyLabel} isCopied={isCopied} onClick={onCopy} />
