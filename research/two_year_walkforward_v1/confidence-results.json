@@ -1,0 +1,97 @@
+{
+  "inputLedgerSHA256": "7299f731f91d18e85522cf01dadd32befde55e6b1ee4189708976f33915ba1d3",
+  "method": "beta confidence bins; 120 prior predictions per bin; 20 raw-probability pseudo-observations; update after whole date; frozen candidate identities from pre-test selection",
+  "limitation": "Follow-up hypothesis conceived after inspecting the first study. This is an exploratory retrospective confidence correction, not untouched confirmation or a ranking improvement.",
+  "tasks": {
+    "openPanel": {
+      "n": 1856,
+      "candidate": "frequency_all",
+      "observed": 0.05765086206896552,
+      "rawMean": 0.13014432395279188,
+      "calibratedMean": 0.05865950626945788,
+      "rawBrier": 0.059628220185676324,
+      "calibratedBrier": 0.05434009213389572,
+      "lift": 0.005288128051780498,
+      "interval95": [
+        0.003632132589940657,
+        0.0067830451970842575
+      ],
+      "dates": 182
+    },
+    "closePanel": {
+      "n": 1856,
+      "candidate": "frequency_90",
+      "observed": 0.05549568965517242,
+      "rawMean": 0.24842721933239234,
+      "calibratedMean": 0.05621441715769202,
+      "rawBrier": 0.08965992669358414,
+      "calibratedBrier": 0.05247669503328203,
+      "lift": 0.037183231660300936,
+      "interval95": [
+        0.033129893620264736,
+        0.04106311212303915
+      ],
+      "dates": 182
+    },
+    "openSutta": {
+      "n": 1856,
+      "candidate": "decay_45",
+      "observed": 0.6050646551724138,
+      "rawMean": 0.70173140401117,
+      "calibratedMean": 0.6095156730349153,
+      "rawBrier": 0.24910230402550104,
+      "calibratedBrier": 0.23914547447276724,
+      "lift": 0.009956829552733356,
+      "interval95": [
+        0.005767410570419217,
+        0.01407217784153853
+      ],
+      "dates": 182
+    },
+    "closeSutta": {
+      "n": 1856,
+      "candidate": "pooled_50",
+      "observed": 0.5921336206896551,
+      "rawMean": 0.6402741931361943,
+      "calibratedMean": 0.5985640226695093,
+      "rawBrier": 0.2437440033730133,
+      "calibratedBrier": 0.2416002408792284,
+      "lift": 0.0021437624937845476,
+      "interval95": [
+        0.00015621975617752585,
+        0.004317993475957107
+      ],
+      "dates": 182
+    },
+    "openAvoid": {
+      "n": 1856,
+      "candidate": "frequency_180",
+      "observed": 0.5172413793103449,
+      "rawMean": 0.5919560976982647,
+      "calibratedMean": 0.5256262738862716,
+      "rawBrier": 0.2558270097622498,
+      "calibratedBrier": 0.249983370869698,
+      "lift": 0.0058436388925513305,
+      "interval95": [
+        0.002528128133175567,
+        0.009125080074914754
+      ],
+      "dates": 182
+    },
+    "closeAvoid": {
+      "n": 1856,
+      "candidate": "pooled_50",
+      "observed": 0.5005387931034483,
+      "rawMean": 0.5446516407255776,
+      "calibratedMean": 0.49761730986315866,
+      "rawBrier": 0.25201056620008644,
+      "calibratedBrier": 0.25007683456628665,
+      "lift": 0.0019337316338008338,
+      "interval95": [
+        -0.0004462864406060782,
+        0.00430212066620441
+      ],
+      "dates": 182
+    }
+  }
+}

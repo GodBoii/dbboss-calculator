@@ -30,7 +30,7 @@ The current Open Top-10 list hit 129 of 1,357 SP outcomes and zero of 493 DP out
 
 ## Next development targets
 
-1. Calibrate shortlist probabilities using only earlier replay predictions, then score later probability error separately from ranking accuracy.
+1. The first confidence correction is now implemented and audited in `CONFIDENCE_REPORT.md`. It uses only earlier prediction outcomes and reduces probability error for five of six tested shortlist tasks with positive unadjusted date intervals. Open panel mean confidence changes from 13.01% to 5.87%, against 5.77% observed hits. Close panel confidence changes from 24.84% to 5.62%, against 5.55% observed hits. Picks are unchanged. This follow-up hypothesis was conceived after inspecting the first study, so it is exploratory rather than untouched confirmation. It is a research module and does not alter production confidence.
 2. Refit a regularized panel model from this two-year dataset rather than inheriting the old panel weights. Compare within-Sutta panel ranking and DP slot allocation at the same Top-10 budget.
 3. Treat market/month breakdowns from this run as development findings. Do not change a route based on its later-window performance and describe that same window as untouched confirmation.
 
