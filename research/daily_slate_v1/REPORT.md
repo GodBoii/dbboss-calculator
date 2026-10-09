@@ -47,6 +47,10 @@ Close is more often DP after a DP Open in the same market:
 
 Rajdhani Day goes the other way (12.0% / 19.2% vs 22.2% / 25.4%). A Close DP call here would still be right only about 40% of the time.
 
+### Production feature evaluation
+
+The [Open-to-Close DP feature audit](../dp_open_close_v1/REPORT.md) compares this conditional signal with the current production predictor on 2,369 later weekday Close outcomes, keeping the 90% call threshold. The small probability-score gain has an uncertainty interval spanning zero, some markets regress, and no model makes a qualifying 90% call. Keep the learned feature out of production. The existing same-market Open heuristic and verified abstention gate remain unchanged.
+
 ## Reproduce
 
 ```

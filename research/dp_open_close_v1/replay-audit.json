@@ -1,0 +1,27 @@
+{
+  "outcomes": 9940,
+  "parityChecks": 33,
+  "productionCodeHashes": {
+    "db.ts": "590e5d73af21a3ef79a63a865c4acb2b3ae3ad8f79d4488af6b066253cecb04d",
+    "prediction-contract.ts": "a569097e5067a19976fefc055b97399f4c93f3206e0330368d8de86f542dffcf",
+    "verified-dp-call.ts": "788a171cd30608239d58e6798cc012a1a99f6b63896d1bbf2df338b5feb2a8f9",
+    "market-schedule.ts": "21cf5c07e79e4352b6afb794a0d0e5624c5170fcc862a04d627b905779b3dced",
+    "predictor/analyze.ts": "01acedc03d7bc7556541d3d312dbc4fa9899eaf7a0d656e20aa2459aed298b7f",
+    "predictor/calibration.ts": "509e60343d648a17aeaae64d5481f93016a3034fa3a121c7ac21d7e3d3778be7",
+    "predictor/data.ts": "bdccaa34db85dda83cc92d5874731c2d3055c3ca8bc31df835f19d46e5266db8",
+    "predictor/dp-kind-context.ts": "59967eff6c6923749eab177466d77021e573e9ee678250c33223794753c6d8e7",
+    "predictor/dp-panel-model.ts": "e0b93ff18e47cde1bd66c3ae143c15d5f13d5bdfb45da3271556e33855decba5",
+    "predictor/jodi.ts": "5eba37ed83a40836df24956ecc1eb58c5e2ac1e9afccb13ae94567b5b2d8ed82",
+    "predictor/market-config.ts": "dd825e49af71b411d877185c600cd2acafd217badd07cbb909746e2c344b7562",
+    "predictor/operator-psychology.ts": "dc81a0aa09ea7e9637cd910fa34c77293e4af9e2bb8c05a106b3b89799e93b22",
+    "predictor/panel-profile.ts": "e0471b97039f4f93566a2933a945f137cfe1aefa88dba4156f10e4ae45119a65",
+    "predictor/panel-top10-model.ts": "e8c3598501928487a1d70234164b42f7182e6d77f50826e7dd30348d2e611439",
+    "predictor/panel-utils.ts": "def7eaeb3879019e3f59654c3bef0539812ea154fb437fc4bb69f8838c393fbf",
+    "predictor/precision-kind-overrides.ts": "8634e098dddf0a1502ac47f2ddc7bf419a9fc7d693ed489e7c967cac8f73a5cf",
+    "predictor/scoring.ts": "5ca4f5f2df8845480f248b63ab2f15a533eb4aaba1c8e32d088b9426034b7c19",
+    "predictor/stats.ts": "052ce8beaf44c3ffa8b0508c4c5db5a98f7f74420aed8c6cef6f9db273a74204",
+    "predictor/sutta-signals.ts": "937658fe678de3c3b567f0b4d6b9aa9f37dfad387b60d369a934739ebab2f373",
+    "predictor/types.ts": "641be25df7234c4f9e583524a8b66aea7f426fb584002ebb066e54c47da2f258"
+  },
+  "verifiedGate": "always abstains"
+}
