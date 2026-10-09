@@ -1,0 +1,13 @@
+{
+  "end": "2026-10-08",
+  "rows": 23062,
+  "supplementedRows": 79,
+  "conflicts": [],
+  "conflictPolicy": "later frozen snapshot wins",
+  "sourceHash": "6f5490417f98eddcf7b2afd532e7b713cd0d554fa60ac3eff3eb16c7e5463766",
+  "inputHashes": {
+    "research/dp_only_v1/chart_rows.csv": "582826cf8d3e7dd3372017d3664b37705d8d2c7ca6704027f6d534963d701277",
+    "research/dp_panel_v3/data.json": "b390531678ab1d2e3cacb30fe1946ef25eda4b7fff5c5978875afd9502c45fc1",
+    "research/two_year_walkforward_v1/source-snapshot.json": "7592f4b19d1135f717911a770aab6c582a733c0cbf33b2804db26b73f0d9a63c"
+  }
+}
