@@ -2,6 +2,10 @@ const test = require('node:test')
 const assert = require('node:assert/strict')
 const { PANELS, NAMES, predictions, score, kind, selectWinners, pairedInterval } = require('./lib/two-year-walkforward.cjs')
 const { scopedRows, toRecord, START, END } = require('./two-year-walkforward.cjs')
+const fs = require('node:fs')
+const path = require('node:path')
+const zlib = require('node:zlib')
+const crypto = require('node:crypto')
 
 const row = (isoDate, openPanel = '123', closePanel = '112') => ({ isoDate, day: 'Monday', openPanel, closePanel })
 
@@ -66,4 +70,42 @@ test('paired bootstrap resamples dates, is reproducible, and orients Brier impro
   assert.equal(value.dates, 2)
   assert.ok(Math.abs(value.lift - 0.1) < 1e-12)
   assert.deepEqual(value, pairedInterval(rows, 'openDpBrier', 'frequency_all', 100))
+})
+
+const output = path.resolve(__dirname, '../research/two_year_walkforward_v1')
+const ledgerPath = path.join(output, 'predictions.jsonl.gz')
+test('saved replay obeys history bounds and reproduces all scores and selection', { skip: !fs.existsSync(ledgerPath) }, () => {
+  const bytes = fs.readFileSync(ledgerPath)
+  const ledger = zlib.gunzipSync(bytes).toString('utf8').trim().split('\n').map((line) => JSON.parse(line))
+  const report = JSON.parse(fs.readFileSync(path.join(output, 'results.json'), 'utf8'))
+  const snapshot = JSON.parse(fs.readFileSync(path.join(output, 'source-snapshot.json'), 'utf8'))
+  const seen = new Set()
+  for (const event of ledger) {
+    const key = `${event.market}|${event.date}`
+    assert.ok(!seen.has(key)); seen.add(key)
+    assert.ok(event.date >= START && event.date <= END)
+    const permitted = snapshot.records[event.market].filter((row) => row.isoDate < event.date)
+    assert.equal(permitted.length, event.history.count)
+    assert.equal(permitted[0].isoDate, event.history.first)
+    assert.equal(permitted.at(-1).isoDate, event.history.last)
+    assert.ok(event.history.first >= START && event.history.last < event.date && event.history.count >= 180)
+    assert.equal(event.history.pooledCount, Object.values(snapshot.records).flatMap((rows) => rows.filter((row) => row.isoDate < event.date)).length)
+    for (const [name, bundle] of Object.entries(event.predictions)) assert.deepEqual(score(event.actual, bundle), event.scores[name])
+  }
+  assert.equal(ledger.length, report.ledgerEvents)
+  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), report.ledgerSHA256)
+  assert.deepEqual(selectWinners(ledger, report.scope.selectionStart, report.scope.selectionEnd), report.winners)
+  const testRows = ledger.filter((row) => row.date >= report.scope.testStart)
+  assert.equal(testRows.length, report.confirmation.n)
+  for (const [task, name] of Object.entries(report.winners)) {
+    assert.equal(testRows.reduce((sum, event) => sum + event.scores[name][task], 0) / testRows.length, report.confirmation.tasks[task].challenger)
+  }
+  for (const market of Object.keys(snapshot.records)) {
+    const event = ledger.filter((row) => row.market === market).at(-1)
+    const prior = snapshot.records[market].filter((row) => row.isoDate < event.date)
+    const pooled = Object.values(snapshot.records).flatMap((rows) => rows.filter((row) => row.isoDate < event.date))
+    const target = snapshot.records[market].find((row) => row.isoDate === event.date)
+    const reproduced = predictions(prior, pooled, target.day, event.actual.openPanel)
+    for (const name of NAMES) assert.deepEqual(reproduced[name], event.predictions[name])
+  }
 })

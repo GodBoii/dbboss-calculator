@@ -6,7 +6,7 @@ const zlib = require('node:zlib')
 const { Worker, isMainThread, parentPort, workerData } = require('node:worker_threads')
 require('../research/dp_panel_v3/ts-loader.cjs')
 const { getRecordISODate } = require('../src/lib/db.ts')
-const { analyzeMarket, rankPanelsTop10Model } = require('../src/lib/predictor.ts')
+const { analyzeMarket, computeJodiAnalysis, buildContextFromResult } = require('../src/lib/predictor.ts')
 const { buildOpenSuttaSet, buildCloseSuttaSet } = require('../src/lib/sutta-model/production.ts')
 const { buildAbsentDigitsPrediction } = require('../src/lib/absent-digits.ts')
 const { MARKET_TIMINGS } = require('../src/lib/market-schedule.ts')
@@ -93,12 +93,12 @@ function productionPrediction(market, prior, priorRecords, allRecords, target) {
   const openSuttas = buildOpenSuttaSet(result.openPicks, result.openSuttaDroughts, priorRecords, 6, market, date, allRecords).map((pick) => pick.sutta)
   const closeSuttas = buildCloseSuttaSet(result.closePicks, result.closeSuttaDroughts, priorRecords, 6, market, null, allRecords, date).map((pick) => pick.sutta)
   // This separate stage has seen today's Open, but never today's Close.
-  const closeLivePanels = rankPanelsTop10Model(priorRecords, 'close', target.day, target.openPanel)
-  const closeLiveSuttas = buildCloseSuttaSet(result.closePicks, result.closeSuttaDroughts, priorRecords, 6, market, sutta(target.openPanel), allRecords, date).map((pick) => pick.sutta)
+  const live = computeJodiAnalysis(sutta(target.openPanel), target.openPanel, priorRecords, buildContextFromResult(result), result.closeDpKindContext)
+  const closeLiveSuttas = buildCloseSuttaSet(live.adjustedClosePicks, result.closeSuttaDroughts, priorRecords, 6, market, sutta(target.openPanel), allRecords, date).map((pick) => pick.sutta)
   return {
     open: { panels: result.openPanelPicks.map((pick) => pick.panel), suttas: openSuttas, avoid: absent.open.candidateAvoidDigits, dpProbability: result.openKindPrediction.estimatedDpRate / 100, dpCall: result.openKindPrediction.predictedKind === 'DP', avoidStatus: absent.open.status },
     close: { panels: result.closePanelPicks.map((pick) => pick.panel), suttas: closeSuttas, avoid: absent.close.candidateAvoidDigits, dpProbability: result.closeKindPrediction.estimatedDpRate / 100, dpCall: result.closeKindPrediction.predictedKind === 'DP', avoidStatus: absent.close.status },
-    closeLive: { panels: closeLivePanels.slice(0, 10), suttas: closeLiveSuttas },
+    closeLive: { panels: live.adjustedClosePanelPicks.map((pick) => pick.panel), suttas: closeLiveSuttas },
   }
 }
 
@@ -177,8 +177,27 @@ function diagnostics(rows, winners) {
       }
       return [task, { candidate: name, bins: bins.map((bin) => ({ n: bin.n, predicted: bin.n ? bin.probability / bin.n : null, observed: bin.n ? bin.hits / bin.n : null })) }]
     }))
-    return [side, { dp: { candidate: dpName, production: dp('production'), challenger: dp(dpName) }, calibration }]
+    const errors = Object.fromEntries(['production', winners[`${side}Panel`]].map((name) => {
+      const panelMisses = rows.filter((row) => !row.scores[name][`${side}Panel`])
+      return [name, {
+        panelMisses: panelMisses.length,
+        panelMissDespiteSuttaHit: panelMisses.filter((row) => row.scores[name][`${side}Sutta`]).length,
+        byActualKind: Object.fromEntries(['SP', 'DP', 'TP'].map((actualKind) => {
+          const selected = rows.filter((row) => row.actual[`${side}Kind`] === actualKind)
+          return [actualKind, { n: selected.length, hits: selected.reduce((sum, row) => sum + row.scores[name][`${side}Panel`], 0) }]
+        })),
+      }]
+    }))
+    return [side, { dp: { candidate: dpName, production: dp('production'), challenger: dp(dpName) }, calibration, errors }]
   }))
+}
+
+function modelSourceHash() {
+  const files = ['src/lib/predictor.ts', 'src/lib/absent-digits.ts', 'src/lib/db.ts', 'src/lib/prediction-contract.ts', 'src/lib/market-schedule.ts', 'src/lib/app-version.ts']
+  for (const directory of ['src/lib/predictor', 'src/lib/sutta-model']) {
+    files.push(...fs.readdirSync(path.join(ROOT, directory)).filter((file) => file.endsWith('.ts')).map((file) => `${directory}/${file}`))
+  }
+  return hash(Buffer.concat(files.sort().flatMap((file) => [Buffer.from(file), fs.readFileSync(path.join(ROOT, file))])))
 }
 
 function analyze(ledger, snapshot) {
@@ -187,7 +206,8 @@ function analyze(ledger, snapshot) {
   const report = {
     generatedAt: new Date().toISOString(), scope: { start: START, end: END, warmupDraws: 180, selectionStart: SELECTION_START, selectionEnd: SELECTION_END, testStart: TEST_START },
     versions: { app: APP_VERSION, sutta: SUTTA_MODEL_VERSION }, snapshotSHA256: hash(fs.readFileSync(path.join(OUTPUT, 'source-snapshot.json'))),
-    codeSHA256: hash(Buffer.concat(['scripts/two-year-walkforward.cjs', 'scripts/lib/two-year-walkforward.cjs'].map((file) => fs.readFileSync(path.join(ROOT, file))))),
+    codeSHA256: hash(Buffer.concat(['scripts/two-year-walkforward.cjs', 'scripts/lib/two-year-walkforward.cjs'].map((file) => fs.readFileSync(path.join(ROOT, file))))), productionCodeSHA256: modelSourceHash(),
+    ledgerSHA256: hash(fs.readFileSync(path.join(OUTPUT, 'predictions.jsonl.gz'))),
     coverage: Object.fromEntries(MARKETS.map((market) => { const rows = snapshot.records[market]; const targets = ledger.filter((row) => row.market === market); return [market, { sourceRows: rows.length, first: rows[0].isoDate, last: rows.at(-1).isoDate, firstTarget: targets[0]?.date, targets: targets.length }] })),
     winners, development: summary(ledger.filter((row) => row.date < SELECTION_START), winners), selection: summary(ledger.filter((row) => row.date >= SELECTION_START && row.date <= SELECTION_END), winners), confirmation: summary(test, winners),
     postPanelTraining: summary(test.filter((row) => row.date > '2026-07-02'), winners),
@@ -210,6 +230,7 @@ function analyze(ledger, snapshot) {
   ]
   for (const days of [30, 90, 365]) lines.push(`## Last ${days} calendar days, ${report.recent[days].n} market-days`, '', comparison(report.recent[days]), '')
   lines.push('## Confirmation by market', '', table(['Market', 'N', 'Open panel production / candidate', 'Close panel production / candidate', 'Open Sutta production / candidate', 'Close Sutta production / candidate', 'Jodi production / candidate'], Object.entries(report.markets).map(([market, section]) => [market, section.n, ...['openPanel', 'closePanel', 'openSutta', 'closeSutta', 'jodi'].map((task) => `${pct(section.tasks[task].production)} / ${pct(section.tasks[task].challenger)}`)])), '',
+    '## Panel errors by actual kind', '', table(['Side', 'Model', 'SP hits / draws', 'DP hits / draws', 'TP hits / draws', 'Panel misses despite Sutta hit'], Object.entries(report.diagnostics).flatMap(([side, values]) => Object.entries(values.errors).map(([name, errors]) => [side, name, ...['SP', 'DP', 'TP'].map((k) => `${errors.byActualKind[k].hits}/${errors.byActualKind[k].n}`), `${errors.panelMissDespiteSuttaHit}/${errors.panelMisses}`]))), '',
     '## Interpretation', '', 'A confidence interval above zero identifies a candidate worth further review, not an automatic deployment. Check month and market stability, source completeness, multiple comparisons, and the post-training panel comparison. Recent and annual windows overlap selection or confirmation and do not independently validate the winner. See results.json for all candidate scores, monthly comparisons, DP precision/coverage, and probability calibration bins.', '',
     '## Reproduce', '', '`node scripts/two-year-walkforward.cjs` refreshes validated sources and replays. `--snapshot` uses only the frozen source; `--analyze-only` recomputes summaries from predictions.jsonl.gz. `node --test scripts/verify-two-year-walkforward.cjs` checks date exclusion, causal invariants, selection isolation and scoring.', '',
     'The gzip ledger contains one JSON record per market-day with actuals, history boundaries, every model prediction and every scored task. Decompress with Node zlib.gunzipSync to inspect or analyze. Production rankings remain unchanged.', '')
