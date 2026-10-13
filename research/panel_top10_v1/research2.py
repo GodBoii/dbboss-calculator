@@ -50,10 +50,10 @@ FEATURES = [
 ]
 
 
-def build(by_market, only_side):
+def build(by_market, only_side, *, dtype: type[np.floating] = np.float32, end_date: str = END):
     all_dates = sorted({d for v in by_market.values() for d, _, _ in v})
     dpos = {d: i for i, d in enumerate(all_dates)}
-    daily = np.zeros((len(all_dates) + 1, NP), dtype=np.float32)
+    daily = np.zeros((len(all_dates) + 1, NP), dtype=dtype)
     for v in by_market.values():
         for d, o, c in v:
             daily[dpos[d] + 1, o] += 1
@@ -74,7 +74,7 @@ def build(by_market, only_side):
         cidx = np.array([r[2] for r in rows])
         wdays = np.array([date.fromisoformat(d).weekday() for d in dates])
         for i, (t, o_act, c_act) in enumerate(rows):
-            if t < START or t > END:
+            if t < START or t > end_date:
                 continue
             s = int(np.searchsorted(dates, cutoff(t)))
             n = i - s
@@ -86,31 +86,31 @@ def build(by_market, only_side):
                 own = oidx if side == "open" else cidx
                 oth = cidx if side == "open" else oidx
                 h, ho = own[s:i], oth[s:i]
-                cnt = np.bincount(h, minlength=NP).astype(np.float32)
-                cnt120 = np.bincount(h[-120:], minlength=NP).astype(np.float32)
-                cnt_o = np.bincount(ho, minlength=NP).astype(np.float32)
+                cnt = np.bincount(h, minlength=NP).astype(dtype)
+                cnt120 = np.bincount(h[-120:], minlength=NP).astype(dtype)
+                cnt_o = np.bincount(ho, minlength=NP).astype(dtype)
                 last = np.full(NP, -1)
                 np.maximum.at(last, h, np.arange(n))
-                gap = np.where(last >= 0, n - 1 - last, n + 1).astype(np.float32)
-                kinds = np.bincount(P_KIND[h], minlength=3).astype(np.float32)
+                gap = np.where(last >= 0, n - 1 - last, n + 1).astype(dtype)
+                kinds = np.bincount(P_KIND[h], minlength=3).astype(dtype)
                 kind_share = np.log((kinds[P_KIND] + 1) / (n + 3))
-                dig = np.bincount(P_DIGITS[h].ravel(), minlength=10).astype(np.float32)
+                dig = np.bincount(P_DIGITS[h].ravel(), minlength=10).astype(dtype)
                 digit_f = np.log((dig + 1) / (dig.sum() + 10))[P_DIGITS].sum(1)
-                pm = np.zeros((10, 10), dtype=np.float32)
+                pm = np.zeros((10, 10), dtype=dtype)
                 np.add.at(pm, (P_PAIR_A[h].ravel(), P_PAIR_B[h].ravel()), 1)
                 pair_f = np.log((pm[P_PAIR_A, P_PAIR_B] + 0.5) / (3 * n + 27.5)).sum(1)
-                sums = np.bincount(P_SUM[h], minlength=28).astype(np.float32)
+                sums = np.bincount(P_SUM[h], minlength=28).astype(dtype)
                 sum_f = np.log((sums + 1) / (n + 28))[P_SUM]
                 hs = P_SUTTA[h]
-                sc = np.bincount(hs, minlength=10).astype(np.float32)
+                sc = np.bincount(hs, minlength=10).astype(dtype)
                 sutta_f = np.log((sc + 1) / (n + 10))[P_SUTTA]
                 slast = np.full(10, -1)
                 np.maximum.at(slast, hs, np.arange(n))
-                sgap = np.where(slast >= 0, n - 1 - slast, n + 1)[P_SUTTA].astype(np.float32)
+                sgap = np.where(slast >= 0, n - 1 - slast, n + 1)[P_SUTTA].astype(dtype)
                 wmask = wdays[s:i] == wd
-                wsc = np.bincount(hs[wmask], minlength=10).astype(np.float32)
+                wsc = np.bincount(hs[wmask], minlength=10).astype(dtype)
                 wd_f = np.log((wsc + 1) / (wsc.sum() + 10))[P_SUTTA]
-                wd_cnt = np.bincount(h[wmask], minlength=NP).astype(np.float32)
+                wd_cnt = np.bincount(h[wmask], minlength=NP).astype(dtype)
                 prev_same = h[-1]
                 if side == "open":
                     prev_other = cidx[i - 1]
@@ -118,7 +118,7 @@ def build(by_market, only_side):
                 else:
                     prev_other = o_act  # today's Open is declared before Close
                     cond_src, cond_tgt, cond_now = P_SUTTA[oidx[s:i]], P_SUTTA[cidx[s:i]], P_SUTTA[o_act]
-                cc = np.bincount(cond_tgt[cond_src == cond_now], minlength=10).astype(np.float32)
+                cc = np.bincount(cond_tgt[cond_src == cond_now], minlength=10).astype(dtype)
                 cond_f = (np.log((cc + 2) / (cc.sum() + 20)) - np.log((sc + 1) / (n + 10)))[P_SUTTA]
                 X = np.stack([
                     (P_KIND == 1), (P_KIND == 2), P_SEQ, kind_share,
@@ -130,7 +130,7 @@ def build(by_market, only_side):
                     P_DIGITSET @ P_DIGITSET[prev_same], P_DIGITSET @ P_DIGITSET[prev_other],
                     P_DIGITSET @ P_CUTSET[prev_same], P_DIGITSET @ P_CUTSET[prev_other],
                     cond_f,
-                ], axis=1).astype(np.float32)
+                ], axis=1).astype(dtype)
                 out[side][0].append(X)
                 out[side][1].append(o_act if side == "open" else c_act)
                 out[side][2].append((market, t))
