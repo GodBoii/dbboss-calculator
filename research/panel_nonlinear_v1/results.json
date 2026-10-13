@@ -1,0 +1,677 @@
+{
+  "scope": {
+    "historyStart": "2024-10-09",
+    "end": "2026-10-08",
+    "trainEnd": "2025-12-31",
+    "fitEnd": "2026-07-02",
+    "retrospective": true
+  },
+  "sides": {
+    "open": {
+      "selected": "linear_refit",
+      "selection": {
+        "linear_refit": {
+          "hits": 132,
+          "n": 1855,
+          "rate": 0.07115902964959568
+        },
+        "boost_3": {
+          "hits": 115,
+          "n": 1855,
+          "rate": 0.06199460916442048
+        },
+        "boost_7": {
+          "hits": 118,
+          "n": 1855,
+          "rate": 0.06361185983827493
+        }
+      },
+      "featureParityEvents": 5119,
+      "later": {
+        "n": 984,
+        "dates": 97,
+        "productionHits": 69,
+        "candidateHits": 71,
+        "productionRate": 0.0701219512195122,
+        "candidateRate": 0.07215447154471545,
+        "gained": 36,
+        "lost": 34,
+        "lift": 0.0020325203252032522,
+        "interval95": [
+          -0.013252800135081894,
+          0.017763845350052248
+        ],
+        "interval975": [
+          -0.015607798564659978,
+          0.02023465595877396
+        ]
+      },
+      "septemberOctober": {
+        "n": 381,
+        "dates": 38,
+        "productionHits": 26,
+        "candidateHits": 24,
+        "productionRate": 0.06824146981627296,
+        "candidateRate": 0.06299212598425197,
+        "gained": 12,
+        "lost": 14,
+        "lift": -0.005249343832020997,
+        "interval95": [
+          -0.028871391076115485,
+          0.021505376344086023
+        ],
+        "interval975": [
+          -0.03244927692639758,
+          0.02564102564102564
+        ]
+      },
+      "recent30": {
+        "n": 297,
+        "dates": 30,
+        "productionHits": 19,
+        "candidateHits": 20,
+        "productionRate": 0.06397306397306397,
+        "candidateRate": 0.06734006734006734,
+        "gained": 11,
+        "lost": 10,
+        "lift": 0.003367003367003367,
+        "interval95": [
+          -0.023333333333333334,
+          0.034013605442176874
+        ],
+        "interval975": [
+          -0.027491408934707903,
+          0.03741544370557211
+        ]
+      },
+      "perMarket": {
+        "Kalyan": {
+          "n": 83,
+          "dates": 83,
+          "productionHits": 8,
+          "candidateHits": 7,
+          "productionRate": 0.0963855421686747,
+          "candidateRate": 0.08433734939759036,
+          "gained": 3,
+          "lost": 4,
+          "lift": -0.012048192771084338,
+          "interval95": [
+            -0.07228915662650602,
+            0.04819277108433735
+          ],
+          "interval975": [
+            -0.08433734939759036,
+            0.060240963855421686
+          ]
+        },
+        "Kalyan Night": {
+          "n": 70,
+          "dates": 70,
+          "productionHits": 4,
+          "candidateHits": 6,
+          "productionRate": 0.05714285714285714,
+          "candidateRate": 0.08571428571428572,
+          "gained": 5,
+          "lost": 3,
+          "lift": 0.02857142857142857,
+          "interval95": [
+            -0.04285714285714286,
+            0.1
+          ],
+          "interval975": [
+            -0.05714285714285714,
+            0.11428571428571428
+          ]
+        },
+        "Madhur Day": {
+          "n": 93,
+          "dates": 93,
+          "productionHits": 2,
+          "candidateHits": 5,
+          "productionRate": 0.021505376344086023,
+          "candidateRate": 0.053763440860215055,
+          "gained": 4,
+          "lost": 1,
+          "lift": 0.03225806451612903,
+          "interval95": [
+            -0.010752688172043012,
+            0.08602150537634409
+          ],
+          "interval975": [
+            -0.021505376344086023,
+            0.08602150537634409
+          ]
+        },
+        "Madhur Night": {
+          "n": 79,
+          "dates": 79,
+          "productionHits": 0,
+          "candidateHits": 4,
+          "productionRate": 0.0,
+          "candidateRate": 0.05063291139240506,
+          "gained": 4,
+          "lost": 0,
+          "lift": 0.05063291139240506,
+          "interval95": [
+            0.012658227848101266,
+            0.10126582278481013
+          ],
+          "interval975": [
+            0.0,
+            0.11392405063291139
+          ]
+        },
+        "Main Bazar": {
+          "n": 70,
+          "dates": 70,
+          "productionHits": 10,
+          "candidateHits": 9,
+          "productionRate": 0.14285714285714285,
+          "candidateRate": 0.12857142857142856,
+          "gained": 2,
+          "lost": 3,
+          "lift": -0.014285714285714285,
+          "interval95": [
+            -0.07142857142857142,
+            0.04285714285714286
+          ],
+          "interval975": [
+            -0.08571428571428572,
+            0.05714285714285714
+          ]
+        },
+        "Milan Day": {
+          "n": 82,
+          "dates": 82,
+          "productionHits": 6,
+          "candidateHits": 8,
+          "productionRate": 0.07317073170731707,
+          "candidateRate": 0.0975609756097561,
+          "gained": 4,
+          "lost": 2,
+          "lift": 0.024390243902439025,
+          "interval95": [
+            -0.036585365853658534,
+            0.08536585365853659
+          ],
+          "interval975": [
+            -0.036585365853658534,
+            0.0975609756097561
+          ]
+        },
+        "Milan Night": {
+          "n": 82,
+          "dates": 82,
+          "productionHits": 8,
+          "candidateHits": 6,
+          "productionRate": 0.0975609756097561,
+          "candidateRate": 0.07317073170731707,
+          "gained": 2,
+          "lost": 4,
+          "lift": -0.024390243902439025,
+          "interval95": [
+            -0.08536585365853659,
+            0.036585365853658534
+          ],
+          "interval975": [
+            -0.0975609756097561,
+            0.036585365853658534
+          ]
+        },
+        "Rajdhani Day": {
+          "n": 79,
+          "dates": 79,
+          "productionHits": 7,
+          "candidateHits": 7,
+          "productionRate": 0.08860759493670886,
+          "candidateRate": 0.08860759493670886,
+          "gained": 2,
+          "lost": 2,
+          "lift": 0.0,
+          "interval95": [
+            -0.05063291139240506,
+            0.05063291139240506
+          ],
+          "interval975": [
+            -0.06329113924050633,
+            0.06329113924050633
+          ]
+        },
+        "Rajdhani Night": {
+          "n": 70,
+          "dates": 70,
+          "productionHits": 5,
+          "candidateHits": 5,
+          "productionRate": 0.07142857142857142,
+          "candidateRate": 0.07142857142857142,
+          "gained": 1,
+          "lost": 1,
+          "lift": 0.0,
+          "interval95": [
+            -0.04285714285714286,
+            0.04285714285714286
+          ],
+          "interval975": [
+            -0.04285714285714286,
+            0.04285714285714286
+          ]
+        },
+        "Sridevi": {
+          "n": 97,
+          "dates": 97,
+          "productionHits": 8,
+          "candidateHits": 5,
+          "productionRate": 0.08247422680412371,
+          "candidateRate": 0.05154639175257732,
+          "gained": 3,
+          "lost": 6,
+          "lift": -0.030927835051546393,
+          "interval95": [
+            -0.09278350515463918,
+            0.030927835051546393
+          ],
+          "interval975": [
+            -0.10309278350515463,
+            0.041237113402061855
+          ]
+        },
+        "Sridevi Night": {
+          "n": 97,
+          "dates": 97,
+          "productionHits": 6,
+          "candidateHits": 4,
+          "productionRate": 0.061855670103092786,
+          "candidateRate": 0.041237113402061855,
+          "gained": 3,
+          "lost": 5,
+          "lift": -0.020618556701030927,
+          "interval95": [
+            -0.08247422680412371,
+            0.030927835051546393
+          ],
+          "interval975": [
+            -0.08247422680412371,
+            0.041237113402061855
+          ]
+        },
+        "Time Bazar": {
+          "n": 82,
+          "dates": 82,
+          "productionHits": 5,
+          "candidateHits": 5,
+          "productionRate": 0.06097560975609756,
+          "candidateRate": 0.06097560975609756,
+          "gained": 3,
+          "lost": 3,
+          "lift": 0.0,
+          "interval95": [
+            -0.06097560975609756,
+            0.06097560975609756
+          ],
+          "interval975": [
+            -0.07317073170731707,
+            0.07317073170731707
+          ]
+        }
+      },
+      "improvingMarkets": 4,
+      "decision": "REJECT"
+    },
+    "close": {
+      "selected": "boost_7",
+      "selection": {
+        "linear_refit": {
+          "hits": 108,
+          "n": 1855,
+          "rate": 0.05822102425876011
+        },
+        "boost_3": {
+          "hits": 113,
+          "n": 1855,
+          "rate": 0.06091644204851752
+        },
+        "boost_7": {
+          "hits": 116,
+          "n": 1855,
+          "rate": 0.06253369272237197
+        }
+      },
+      "featureParityEvents": 5119,
+      "later": {
+        "n": 984,
+        "dates": 97,
+        "productionHits": 57,
+        "candidateHits": 52,
+        "productionRate": 0.057926829268292686,
+        "candidateRate": 0.052845528455284556,
+        "gained": 37,
+        "lost": 42,
+        "lift": -0.00508130081300813,
+        "interval95": [
+          -0.022293082390700776,
+          0.012345679012345678
+        ],
+        "interval975": [
+          -0.024728489709174316,
+          0.014629624153046396
+        ]
+      },
+      "septemberOctober": {
+        "n": 381,
+        "dates": 38,
+        "productionHits": 23,
+        "candidateHits": 19,
+        "productionRate": 0.06036745406824147,
+        "candidateRate": 0.049868766404199474,
+        "gained": 15,
+        "lost": 19,
+        "lift": -0.010498687664041995,
+        "interval95": [
+          -0.03817002461102073,
+          0.018019763949996482
+        ],
+        "interval975": [
+          -0.042020203603829596,
+          0.021860181547215793
+        ]
+      },
+      "recent30": {
+        "n": 297,
+        "dates": 30,
+        "productionHits": 20,
+        "candidateHits": 15,
+        "productionRate": 0.06734006734006734,
+        "candidateRate": 0.050505050505050504,
+        "gained": 11,
+        "lost": 16,
+        "lift": -0.016835016835016835,
+        "interval95": [
+          -0.05079931972789116,
+          0.016835016835016835
+        ],
+        "interval975": [
+          -0.05555555555555555,
+          0.02150662086817999
+        ]
+      },
+      "perMarket": {
+        "Kalyan": {
+          "n": 83,
+          "dates": 83,
+          "productionHits": 3,
+          "candidateHits": 3,
+          "productionRate": 0.03614457831325301,
+          "candidateRate": 0.03614457831325301,
+          "gained": 2,
+          "lost": 2,
+          "lift": 0.0,
+          "interval95": [
+            -0.04819277108433735,
+            0.04819277108433735
+          ],
+          "interval975": [
+            -0.04819277108433735,
+            0.060240963855421686
+          ]
+        },
+        "Kalyan Night": {
+          "n": 70,
+          "dates": 70,
+          "productionHits": 3,
+          "candidateHits": 2,
+          "productionRate": 0.04285714285714286,
+          "candidateRate": 0.02857142857142857,
+          "gained": 2,
+          "lost": 3,
+          "lift": -0.014285714285714285,
+          "interval95": [
+            -0.07142857142857142,
+            0.04285714285714286
+          ],
+          "interval975": [
+            -0.08571428571428572,
+            0.05714285714285714
+          ]
+        },
+        "Madhur Day": {
+          "n": 93,
+          "dates": 93,
+          "productionHits": 5,
+          "candidateHits": 2,
+          "productionRate": 0.053763440860215055,
+          "candidateRate": 0.021505376344086023,
+          "gained": 1,
+          "lost": 4,
+          "lift": -0.03225806451612903,
+          "interval95": [
+            -0.07526881720430108,
+            0.010752688172043012
+          ],
+          "interval975": [
+            -0.08602150537634409,
+            0.021505376344086023
+          ]
+        },
+        "Madhur Night": {
+          "n": 79,
+          "dates": 79,
+          "productionHits": 4,
+          "candidateHits": 3,
+          "productionRate": 0.05063291139240506,
+          "candidateRate": 0.0379746835443038,
+          "gained": 3,
+          "lost": 4,
+          "lift": -0.012658227848101266,
+          "interval95": [
+            -0.0759493670886076,
+            0.05063291139240506
+          ],
+          "interval975": [
+            -0.08860759493670886,
+            0.06329113924050633
+          ]
+        },
+        "Main Bazar": {
+          "n": 70,
+          "dates": 70,
+          "productionHits": 5,
+          "candidateHits": 7,
+          "productionRate": 0.07142857142857142,
+          "candidateRate": 0.1,
+          "gained": 6,
+          "lost": 4,
+          "lift": 0.02857142857142857,
+          "interval95": [
+            -0.05714285714285714,
+            0.11428571428571428
+          ],
+          "interval975": [
+            -0.07142857142857142,
+            0.12857142857142856
+          ]
+        },
+        "Milan Day": {
+          "n": 82,
+          "dates": 82,
+          "productionHits": 0,
+          "candidateHits": 0,
+          "productionRate": 0.0,
+          "candidateRate": 0.0,
+          "gained": 0,
+          "lost": 0,
+          "lift": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval975": [
+            0.0,
+            0.0
+          ]
+        },
+        "Milan Night": {
+          "n": 82,
+          "dates": 82,
+          "productionHits": 8,
+          "candidateHits": 6,
+          "productionRate": 0.0975609756097561,
+          "candidateRate": 0.07317073170731707,
+          "gained": 3,
+          "lost": 5,
+          "lift": -0.024390243902439025,
+          "interval95": [
+            -0.0975609756097561,
+            0.036585365853658534
+          ],
+          "interval975": [
+            -0.10975609756097561,
+            0.04878048780487805
+          ]
+        },
+        "Rajdhani Day": {
+          "n": 79,
+          "dates": 79,
+          "productionHits": 6,
+          "candidateHits": 4,
+          "productionRate": 0.0759493670886076,
+          "candidateRate": 0.05063291139240506,
+          "gained": 2,
+          "lost": 4,
+          "lift": -0.02531645569620253,
+          "interval95": [
+            -0.08860759493670886,
+            0.0379746835443038
+          ],
+          "interval975": [
+            -0.10126582278481013,
+            0.0379746835443038
+          ]
+        },
+        "Rajdhani Night": {
+          "n": 70,
+          "dates": 70,
+          "productionHits": 2,
+          "candidateHits": 8,
+          "productionRate": 0.02857142857142857,
+          "candidateRate": 0.11428571428571428,
+          "gained": 7,
+          "lost": 1,
+          "lift": 0.08571428571428572,
+          "interval95": [
+            0.014285714285714285,
+            0.17142857142857143
+          ],
+          "interval975": [
+            0.0,
+            0.18571428571428572
+          ]
+        },
+        "Sridevi": {
+          "n": 97,
+          "dates": 97,
+          "productionHits": 10,
+          "candidateHits": 8,
+          "productionRate": 0.10309278350515463,
+          "candidateRate": 0.08247422680412371,
+          "gained": 5,
+          "lost": 7,
+          "lift": -0.020618556701030927,
+          "interval95": [
+            -0.09278350515463918,
+            0.05154639175257732
+          ],
+          "interval975": [
+            -0.10309278350515463,
+            0.061855670103092786
+          ]
+        },
+        "Sridevi Night": {
+          "n": 97,
+          "dates": 97,
+          "productionHits": 7,
+          "candidateHits": 6,
+          "productionRate": 0.07216494845360824,
+          "candidateRate": 0.061855670103092786,
+          "gained": 3,
+          "lost": 4,
+          "lift": -0.010309278350515464,
+          "interval95": [
+            -0.061855670103092786,
+            0.041237113402061855
+          ],
+          "interval975": [
+            -0.07216494845360824,
+            0.05154639175257732
+          ]
+        },
+        "Time Bazar": {
+          "n": 82,
+          "dates": 82,
+          "productionHits": 4,
+          "candidateHits": 3,
+          "productionRate": 0.04878048780487805,
+          "candidateRate": 0.036585365853658534,
+          "gained": 3,
+          "lost": 4,
+          "lift": -0.012195121951219513,
+          "interval95": [
+            -0.07317073170731707,
+            0.04878048780487805
+          ],
+          "interval975": [
+            -0.08536585365853659,
+            0.06097560975609756
+          ]
+        }
+      },
+      "improvingMarkets": 2,
+      "decision": "REJECT"
+    }
+  },
+  "audit": {
+    "sourceSHA256": "7592f4b19d1135f717911a770aab6c582a733c0cbf33b2804db26b73f0d9a63c",
+    "comparatorSHA256": "7299f731f91d18e85522cf01dadd32befde55e6b1ee4189708976f33915ba1d3",
+    "ledgerSHA256": "087f6b65e1d789d3e53d164a3f26d63fdea1b4b13a6bb6150d6e564110992987",
+    "features": [
+      "dp",
+      "tp",
+      "seq",
+      "kind_share",
+      "cnt",
+      "cnt120",
+      "cnt_other",
+      "gap",
+      "gap3",
+      "gap10",
+      "digit",
+      "pair",
+      "sum_share",
+      "sutta",
+      "sutta_gap",
+      "wd_sutta",
+      "wd_cnt",
+      "prev_same_ov",
+      "prev_other_ov",
+      "prev_same_cut",
+      "prev_other_cut",
+      "cond_sutta"
+    ],
+    "code": {
+      "research/panel_nonlinear_v1/run.py": "5f24929146c6ea9d44edaec1b964b214787c674e69000b5e7ec59d509087d9cb",
+      "research/panel_nonlinear_v1/PROTOCOL.md": "80cf31b1ac2938697082fdbe2488f29af32b0a48c34429eb3cb5a64d58f84de9",
+      "research/panel_top10_v1/research.py": "239f8754953602c539861a1cbd1a3bad76d587f11ffe857f8a577a354d15909b",
+      "research/panel_top10_v1/research2.py": "71ca9445d7b3d922c2eab35901851b3a3a744765634e958e86d1c707b83a50a2",
+      "src/lib/predictor/panel-top10-model.ts": "e8c3598501928487a1d70234164b42f7182e6d77f50826e7dd30348d2e611439"
+    },
+    "models": {
+      "open": "b315153247877efe173487678c00955a54830cbb94439c56d684a6afdb599bb1",
+      "close": "6e55b73732c47f72a7c131285548460d0c8f23a9b55ef557dca90e4656650f52"
+    },
+    "versions": {
+      "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+      "numpy": "2.4.5",
+      "scipy": "1.17.1",
+      "sklearn": "1.8.0"
+    }
+  }
+}
