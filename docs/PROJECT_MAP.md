@@ -122,3 +122,13 @@ The October 13 portfolio experiment tested fourteen alternatives plus production
 The next experiment will refit panel rankers using the frozen two-year source and test nonlinear interactions with a small, fixed family. Training, selection, and later evaluation must remain chronological. Open never receives a target outcome; live Close may receive only its own declared Open. Reused dates must be labeled retrospective. If a candidate produces a credible gain, implement the same feature and ranking contract in TypeScript, verify runtime parity and the UI path, then bump and verify app/PWA versions before pushing each changed file separately.
 
 Initial baseline: 25 of 26 checks passed across recency parity, Sutta ordering, calendar windows, cache freshness, absent/present runtime, two-year research/confidence, and portfolio verification. The sole failure was the frozen V2 fixture scope described above. Existing lint has seven warnings. Supabase deployment health and delivery were not exercised in this static/code review.
+
+## Completed follow-up
+
+The V2 verifier now restores the original 729-day start boundary and each frozen forecast's source cutoff. All 26 baseline checks pass. This repairs a historical verification path and does not change production predictions.
+
+The [nonlinear panel experiment](../research/panel_nonlinear_v1/REPORT.md) tested a conditional-logit refit and two fixed gradient-boosted tree configurations. Selection used 1,855 January-July-2 market-days, and the selected models were refit on 4,135 earlier targets. Later evaluation used 984 July-3-October-8 market-days. The Open refit hit 71 versus production 69, with a 97.5% paired gain interval of -1.56 to +2.02 percentage points. The live Close tree model hit 52 versus 57, with an interval of -2.47 to +1.46 points. Both models lose on the September-October slice. Neither qualifies for production.
+
+The shared research builder now accepts an explicit numeric precision and final target date. Existing callers retain float32 and September 30 defaults. The new experiment uses float64 to match JavaScript; float32 had changed one Close shortlist boundary. Double precision reproduces all 5,119 current-code Top-10 orders per side. Production TypeScript is unchanged.
+
+No app/PWA bump is made for these research and verification changes. A future qualifying model still requires production parity and the complete version/build checks described above.
