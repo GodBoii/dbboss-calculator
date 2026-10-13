@@ -1,0 +1,3428 @@
+{
+  "scope": {
+    "historyStart": "2024-10-09",
+    "end": "2026-10-08",
+    "selectionStart": "2026-07-03",
+    "selectionEnd": "2026-08-31",
+    "laterStart": "2026-09-01",
+    "panelWeightFitEnd": "2026-07-02",
+    "retrospective": true
+  },
+  "winners": {
+    "open": "sutta_penalty_5",
+    "closeLive": "sutta_6"
+  },
+  "selection": {
+    "open": {
+      "winner": "sutta_penalty_5",
+      "candidates": {
+        "production": {
+          "hits": 43,
+          "n": 603,
+          "rate": 0.07131011608623548
+        },
+        "dp_1": {
+          "hits": 40,
+          "n": 603,
+          "rate": 0.06633499170812604
+        },
+        "dp_2": {
+          "hits": 37,
+          "n": 603,
+          "rate": 0.06135986733001658
+        },
+        "dp_3": {
+          "hits": 37,
+          "n": 603,
+          "rate": 0.06135986733001658
+        },
+        "sutta_6": {
+          "hits": 42,
+          "n": 603,
+          "rate": 0.06965174129353234
+        },
+        "sutta_8": {
+          "hits": 41,
+          "n": 603,
+          "rate": 0.06799336650082918
+        },
+        "sutta_penalty_2": {
+          "hits": 46,
+          "n": 603,
+          "rate": 0.07628524046434494
+        },
+        "sutta_penalty_5": {
+          "hits": 49,
+          "n": 603,
+          "rate": 0.0812603648424544
+        },
+        "sutta_penalty_10": {
+          "hits": 48,
+          "n": 603,
+          "rate": 0.07960199004975124
+        },
+        "avoid_hard": {
+          "hits": 46,
+          "n": 603,
+          "rate": 0.07628524046434494
+        },
+        "avoid_penalty_10": {
+          "hits": 48,
+          "n": 603,
+          "rate": 0.07960199004975124
+        },
+        "overlap_2": {
+          "hits": 43,
+          "n": 603,
+          "rate": 0.07131011608623548
+        },
+        "overlap_1": {
+          "hits": 49,
+          "n": 603,
+          "rate": 0.0812603648424544
+        },
+        "sutta_6_dp_1": {
+          "hits": 41,
+          "n": 603,
+          "rate": 0.06799336650082918
+        },
+        "sutta_6_dp_2": {
+          "hits": 36,
+          "n": 603,
+          "rate": 0.05970149253731343
+        }
+      },
+      "paired": {
+        "gained": 10,
+        "lost": 4,
+        "dates": 59,
+        "lift": 0.009950248756218905,
+        "interval95": [
+          -0.0016420361247947454,
+          0.022328548644338118
+        ],
+        "interval975": [
+          -0.003284072249589491,
+          0.024271844660194174
+        ]
+      },
+      "byKind": {
+        "SP": {
+          "n": 455,
+          "productionHits": 43,
+          "candidateHits": 49
+        },
+        "DP": {
+          "n": 147,
+          "productionHits": 0,
+          "candidateHits": 0
+        },
+        "TP": {
+          "n": 1,
+          "productionHits": 0,
+          "candidateHits": 0
+        }
+      }
+    },
+    "closeLive": {
+      "winner": "sutta_6",
+      "candidates": {
+        "production": {
+          "hits": 34,
+          "n": 603,
+          "rate": 0.05638474295190713
+        },
+        "dp_1": {
+          "hits": 30,
+          "n": 603,
+          "rate": 0.04975124378109453
+        },
+        "dp_2": {
+          "hits": 31,
+          "n": 603,
+          "rate": 0.05140961857379768
+        },
+        "dp_3": {
+          "hits": 32,
+          "n": 603,
+          "rate": 0.05306799336650083
+        },
+        "sutta_6": {
+          "hits": 43,
+          "n": 603,
+          "rate": 0.07131011608623548
+        },
+        "sutta_8": {
+          "hits": 36,
+          "n": 603,
+          "rate": 0.05970149253731343
+        },
+        "sutta_penalty_2": {
+          "hits": 38,
+          "n": 603,
+          "rate": 0.06301824212271974
+        },
+        "sutta_penalty_5": {
+          "hits": 39,
+          "n": 603,
+          "rate": 0.06467661691542288
+        },
+        "sutta_penalty_10": {
+          "hits": 40,
+          "n": 603,
+          "rate": 0.06633499170812604
+        },
+        "avoid_hard": {
+          "hits": 37,
+          "n": 603,
+          "rate": 0.06135986733001658
+        },
+        "avoid_penalty_10": {
+          "hits": 35,
+          "n": 603,
+          "rate": 0.05804311774461028
+        },
+        "overlap_2": {
+          "hits": 34,
+          "n": 603,
+          "rate": 0.05638474295190713
+        },
+        "overlap_1": {
+          "hits": 36,
+          "n": 603,
+          "rate": 0.05970149253731343
+        },
+        "sutta_6_dp_1": {
+          "hits": 38,
+          "n": 603,
+          "rate": 0.06301824212271974
+        },
+        "sutta_6_dp_2": {
+          "hits": 39,
+          "n": 603,
+          "rate": 0.06467661691542288
+        }
+      },
+      "paired": {
+        "gained": 15,
+        "lost": 6,
+        "dates": 59,
+        "lift": 0.014925373134328358,
+        "interval95": [
+          0,
+          0.030303030303030304
+        ],
+        "interval975": [
+          -0.001594896331738437,
+          0.032679738562091505
+        ]
+      },
+      "byKind": {
+        "SP": {
+          "n": 455,
+          "productionHits": 34,
+          "candidateHits": 43
+        },
+        "DP": {
+          "n": 147,
+          "productionHits": 0,
+          "candidateHits": 0
+        },
+        "TP": {
+          "n": 1,
+          "productionHits": 0,
+          "candidateHits": 0
+        }
+      }
+    }
+  },
+  "later": {
+    "open": {
+      "winner": "sutta_penalty_5",
+      "candidates": {
+        "production": {
+          "hits": 26,
+          "n": 381,
+          "rate": 0.06824146981627296
+        },
+        "dp_1": {
+          "hits": 22,
+          "n": 381,
+          "rate": 0.05774278215223097
+        },
+        "dp_2": {
+          "hits": 22,
+          "n": 381,
+          "rate": 0.05774278215223097
+        },
+        "dp_3": {
+          "hits": 19,
+          "n": 381,
+          "rate": 0.049868766404199474
+        },
+        "sutta_6": {
+          "hits": 26,
+          "n": 381,
+          "rate": 0.06824146981627296
+        },
+        "sutta_8": {
+          "hits": 26,
+          "n": 381,
+          "rate": 0.06824146981627296
+        },
+        "sutta_penalty_2": {
+          "hits": 22,
+          "n": 381,
+          "rate": 0.05774278215223097
+        },
+        "sutta_penalty_5": {
+          "hits": 21,
+          "n": 381,
+          "rate": 0.05511811023622047
+        },
+        "sutta_penalty_10": {
+          "hits": 21,
+          "n": 381,
+          "rate": 0.05511811023622047
+        },
+        "avoid_hard": {
+          "hits": 27,
+          "n": 381,
+          "rate": 0.07086614173228346
+        },
+        "avoid_penalty_10": {
+          "hits": 24,
+          "n": 381,
+          "rate": 0.06299212598425197
+        },
+        "overlap_2": {
+          "hits": 26,
+          "n": 381,
+          "rate": 0.06824146981627296
+        },
+        "overlap_1": {
+          "hits": 29,
+          "n": 381,
+          "rate": 0.07611548556430446
+        },
+        "sutta_6_dp_1": {
+          "hits": 22,
+          "n": 381,
+          "rate": 0.05774278215223097
+        },
+        "sutta_6_dp_2": {
+          "hits": 22,
+          "n": 381,
+          "rate": 0.05774278215223097
+        }
+      },
+      "paired": {
+        "gained": 1,
+        "lost": 6,
+        "dates": 38,
+        "lift": -0.013123359580052493,
+        "interval95": [
+          -0.026378896882494004,
+          0
+        ],
+        "interval975": [
+          -0.028423772609819122,
+          0
+        ]
+      },
+      "byKind": {
+        "SP": {
+          "n": 280,
+          "productionHits": 26,
+          "candidateHits": 21
+        },
+        "DP": {
+          "n": 98,
+          "productionHits": 0,
+          "candidateHits": 0
+        },
+        "TP": {
+          "n": 3,
+          "productionHits": 0,
+          "candidateHits": 0
+        }
+      }
+    },
+    "closeLive": {
+      "winner": "sutta_6",
+      "candidates": {
+        "production": {
+          "hits": 23,
+          "n": 381,
+          "rate": 0.06036745406824147
+        },
+        "dp_1": {
+          "hits": 23,
+          "n": 381,
+          "rate": 0.06036745406824147
+        },
+        "dp_2": {
+          "hits": 21,
+          "n": 381,
+          "rate": 0.05511811023622047
+        },
+        "dp_3": {
+          "hits": 22,
+          "n": 381,
+          "rate": 0.05774278215223097
+        },
+        "sutta_6": {
+          "hits": 20,
+          "n": 381,
+          "rate": 0.05249343832020997
+        },
+        "sutta_8": {
+          "hits": 18,
+          "n": 381,
+          "rate": 0.047244094488188976
+        },
+        "sutta_penalty_2": {
+          "hits": 25,
+          "n": 381,
+          "rate": 0.06561679790026247
+        },
+        "sutta_penalty_5": {
+          "hits": 21,
+          "n": 381,
+          "rate": 0.05511811023622047
+        },
+        "sutta_penalty_10": {
+          "hits": 25,
+          "n": 381,
+          "rate": 0.06561679790026247
+        },
+        "avoid_hard": {
+          "hits": 27,
+          "n": 381,
+          "rate": 0.07086614173228346
+        },
+        "avoid_penalty_10": {
+          "hits": 29,
+          "n": 381,
+          "rate": 0.07611548556430446
+        },
+        "overlap_2": {
+          "hits": 23,
+          "n": 381,
+          "rate": 0.06036745406824147
+        },
+        "overlap_1": {
+          "hits": 21,
+          "n": 381,
+          "rate": 0.05511811023622047
+        },
+        "sutta_6_dp_1": {
+          "hits": 19,
+          "n": 381,
+          "rate": 0.049868766404199474
+        },
+        "sutta_6_dp_2": {
+          "hits": 19,
+          "n": 381,
+          "rate": 0.049868766404199474
+        }
+      },
+      "paired": {
+        "gained": 7,
+        "lost": 10,
+        "dates": 38,
+        "lift": -0.007874015748031496,
+        "interval95": [
+          -0.02666666666666667,
+          0.0103359173126615
+        ],
+        "interval975": [
+          -0.0291005291005291,
+          0.012919896640826873
+        ]
+      },
+      "byKind": {
+        "SP": {
+          "n": 288,
+          "productionHits": 23,
+          "candidateHits": 20
+        },
+        "DP": {
+          "n": 92,
+          "productionHits": 0,
+          "candidateHits": 0
+        },
+        "TP": {
+          "n": 1,
+          "productionHits": 0,
+          "candidateHits": 0
+        }
+      }
+    }
+  },
+  "exploratory": {
+    "postHoc": true,
+    "openDiversification": {
+      "gained": 10,
+      "lost": 7,
+      "dates": 38,
+      "lift": 0.007874015748031496,
+      "interval95": [
+        -0.011019283746556474,
+        0.02824858757062147
+      ],
+      "interval975": [
+        -0.014285714285714285,
+        0.031007751937984496
+      ]
+    },
+    "closeAvoidPenalty": {
+      "gained": 10,
+      "lost": 4,
+      "dates": 38,
+      "lift": 0.015748031496062992,
+      "interval95": [
+        -0.0026666666666666666,
+        0.03361344537815126
+      ],
+      "interval975": [
+        -0.00546448087431694,
+        0.03581267217630854
+      ]
+    }
+  },
+  "recent30": {
+    "open": {
+      "winner": "sutta_penalty_5",
+      "candidates": {
+        "production": {
+          "hits": 19,
+          "n": 297,
+          "rate": 0.06397306397306397
+        },
+        "dp_1": {
+          "hits": 16,
+          "n": 297,
+          "rate": 0.05387205387205387
+        },
+        "dp_2": {
+          "hits": 16,
+          "n": 297,
+          "rate": 0.05387205387205387
+        },
+        "dp_3": {
+          "hits": 15,
+          "n": 297,
+          "rate": 0.050505050505050504
+        },
+        "sutta_6": {
+          "hits": 19,
+          "n": 297,
+          "rate": 0.06397306397306397
+        },
+        "sutta_8": {
+          "hits": 19,
+          "n": 297,
+          "rate": 0.06397306397306397
+        },
+        "sutta_penalty_2": {
+          "hits": 16,
+          "n": 297,
+          "rate": 0.05387205387205387
+        },
+        "sutta_penalty_5": {
+          "hits": 16,
+          "n": 297,
+          "rate": 0.05387205387205387
+        },
+        "sutta_penalty_10": {
+          "hits": 17,
+          "n": 297,
+          "rate": 0.05723905723905724
+        },
+        "avoid_hard": {
+          "hits": 19,
+          "n": 297,
+          "rate": 0.06397306397306397
+        },
+        "avoid_penalty_10": {
+          "hits": 17,
+          "n": 297,
+          "rate": 0.05723905723905724
+        },
+        "overlap_2": {
+          "hits": 19,
+          "n": 297,
+          "rate": 0.06397306397306397
+        },
+        "overlap_1": {
+          "hits": 22,
+          "n": 297,
+          "rate": 0.07407407407407407
+        },
+        "sutta_6_dp_1": {
+          "hits": 16,
+          "n": 297,
+          "rate": 0.05387205387205387
+        },
+        "sutta_6_dp_2": {
+          "hits": 16,
+          "n": 297,
+          "rate": 0.05387205387205387
+        }
+      },
+      "paired": {
+        "gained": 1,
+        "lost": 4,
+        "dates": 30,
+        "lift": -0.010101010101010102,
+        "interval95": [
+          -0.024822695035460994,
+          0.003436426116838488
+        ],
+        "interval975": [
+          -0.026402640264026403,
+          0.006472491909385114
+        ]
+      },
+      "byKind": {
+        "SP": {
+          "n": 218,
+          "productionHits": 19,
+          "candidateHits": 16
+        },
+        "DP": {
+          "n": 77,
+          "productionHits": 0,
+          "candidateHits": 0
+        },
+        "TP": {
+          "n": 2,
+          "productionHits": 0,
+          "candidateHits": 0
+        }
+      }
+    },
+    "closeLive": {
+      "winner": "sutta_6",
+      "candidates": {
+        "production": {
+          "hits": 20,
+          "n": 297,
+          "rate": 0.06734006734006734
+        },
+        "dp_1": {
+          "hits": 19,
+          "n": 297,
+          "rate": 0.06397306397306397
+        },
+        "dp_2": {
+          "hits": 17,
+          "n": 297,
+          "rate": 0.05723905723905724
+        },
+        "dp_3": {
+          "hits": 18,
+          "n": 297,
+          "rate": 0.06060606060606061
+        },
+        "sutta_6": {
+          "hits": 18,
+          "n": 297,
+          "rate": 0.06060606060606061
+        },
+        "sutta_8": {
+          "hits": 17,
+          "n": 297,
+          "rate": 0.05723905723905724
+        },
+        "sutta_penalty_2": {
+          "hits": 21,
+          "n": 297,
+          "rate": 0.0707070707070707
+        },
+        "sutta_penalty_5": {
+          "hits": 19,
+          "n": 297,
+          "rate": 0.06397306397306397
+        },
+        "sutta_penalty_10": {
+          "hits": 23,
+          "n": 297,
+          "rate": 0.07744107744107744
+        },
+        "avoid_hard": {
+          "hits": 23,
+          "n": 297,
+          "rate": 0.07744107744107744
+        },
+        "avoid_penalty_10": {
+          "hits": 23,
+          "n": 297,
+          "rate": 0.07744107744107744
+        },
+        "overlap_2": {
+          "hits": 20,
+          "n": 297,
+          "rate": 0.06734006734006734
+        },
+        "overlap_1": {
+          "hits": 18,
+          "n": 297,
+          "rate": 0.06060606060606061
+        },
+        "sutta_6_dp_1": {
+          "hits": 16,
+          "n": 297,
+          "rate": 0.05387205387205387
+        },
+        "sutta_6_dp_2": {
+          "hits": 18,
+          "n": 297,
+          "rate": 0.06060606060606061
+        }
+      },
+      "paired": {
+        "gained": 5,
+        "lost": 7,
+        "dates": 30,
+        "lift": -0.006734006734006734,
+        "interval95": [
+          -0.030303030303030304,
+          0.016181229773462782
+        ],
+        "interval975": [
+          -0.034013605442176874,
+          0.0196078431372549
+        ]
+      },
+      "byKind": {
+        "SP": {
+          "n": 231,
+          "productionHits": 20,
+          "candidateHits": 18
+        },
+        "DP": {
+          "n": 66,
+          "productionHits": 0,
+          "candidateHits": 0
+        },
+        "TP": {
+          "n": 0,
+          "productionHits": 0,
+          "candidateHits": 0
+        }
+      }
+    }
+  },
+  "perMarket": {
+    "Kalyan": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 4,
+            "n": 33,
+            "rate": 0.12121212121212122
+          },
+          "dp_1": {
+            "hits": 3,
+            "n": 33,
+            "rate": 0.09090909090909091
+          },
+          "dp_2": {
+            "hits": 2,
+            "n": 33,
+            "rate": 0.06060606060606061
+          },
+          "dp_3": {
+            "hits": 2,
+            "n": 33,
+            "rate": 0.06060606060606061
+          },
+          "sutta_6": {
+            "hits": 4,
+            "n": 33,
+            "rate": 0.12121212121212122
+          },
+          "sutta_8": {
+            "hits": 4,
+            "n": 33,
+            "rate": 0.12121212121212122
+          },
+          "sutta_penalty_2": {
+            "hits": 4,
+            "n": 33,
+            "rate": 0.12121212121212122
+          },
+          "sutta_penalty_5": {
+            "hits": 4,
+            "n": 33,
+            "rate": 0.12121212121212122
+          },
+          "sutta_penalty_10": {
+            "hits": 4,
+            "n": 33,
+            "rate": 0.12121212121212122
+          },
+          "avoid_hard": {
+            "hits": 3,
+            "n": 33,
+            "rate": 0.09090909090909091
+          },
+          "avoid_penalty_10": {
+            "hits": 3,
+            "n": 33,
+            "rate": 0.09090909090909091
+          },
+          "overlap_2": {
+            "hits": 4,
+            "n": 33,
+            "rate": 0.12121212121212122
+          },
+          "overlap_1": {
+            "hits": 5,
+            "n": 33,
+            "rate": 0.15151515151515152
+          },
+          "sutta_6_dp_1": {
+            "hits": 3,
+            "n": 33,
+            "rate": 0.09090909090909091
+          },
+          "sutta_6_dp_2": {
+            "hits": 2,
+            "n": 33,
+            "rate": 0.06060606060606061
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 33,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 25,
+            "productionHits": 4,
+            "candidateHits": 4
+          },
+          "DP": {
+            "n": 8,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "dp_1": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "sutta_6": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "sutta_8": {
+            "hits": 2,
+            "n": 33,
+            "rate": 0.06060606060606061
+          },
+          "sutta_penalty_2": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "sutta_penalty_5": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "sutta_penalty_10": {
+            "hits": 0,
+            "n": 33,
+            "rate": 0
+          },
+          "avoid_hard": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "avoid_penalty_10": {
+            "hits": 2,
+            "n": 33,
+            "rate": 0.06060606060606061
+          },
+          "overlap_2": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "overlap_1": {
+            "hits": 0,
+            "n": 33,
+            "rate": 0
+          },
+          "sutta_6_dp_1": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          },
+          "sutta_6_dp_2": {
+            "hits": 1,
+            "n": 33,
+            "rate": 0.030303030303030304
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 33,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 22,
+            "productionHits": 1,
+            "candidateHits": 1
+          },
+          "DP": {
+            "n": 11,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Kalyan Night": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "dp_1": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "dp_2": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "dp_3": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_6": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "sutta_8": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "sutta_penalty_2": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_penalty_10": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "avoid_hard": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "avoid_penalty_10": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "overlap_2": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "overlap_1": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_6_dp_1": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "sutta_6_dp_2": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 1,
+          "dates": 28,
+          "lift": -0.03571428571428571,
+          "interval95": [
+            -0.10714285714285714,
+            0
+          ],
+          "interval975": [
+            -0.14285714285714285,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 19,
+            "productionHits": 3,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 9,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_1": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_6": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          },
+          "sutta_8": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_penalty_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_penalty_5": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          },
+          "sutta_penalty_10": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          },
+          "avoid_hard": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "avoid_penalty_10": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "overlap_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "overlap_1": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_6_dp_1": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          },
+          "sutta_6_dp_2": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 1,
+          "dates": 28,
+          "lift": -0.03571428571428571,
+          "interval95": [
+            -0.10714285714285714,
+            0
+          ],
+          "interval975": [
+            -0.14285714285714285,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 22,
+            "productionHits": 1,
+            "candidateHits": 0
+          },
+          "DP": {
+            "n": 6,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Madhur Day": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "dp_1": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "dp_2": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "dp_3": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_6": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_8": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_penalty_2": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_penalty_5": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_penalty_10": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "avoid_hard": {
+            "hits": 2,
+            "n": 34,
+            "rate": 0.058823529411764705
+          },
+          "avoid_penalty_10": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          },
+          "overlap_2": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 34,
+            "rate": 0.08823529411764706
+          },
+          "sutta_6_dp_1": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_6_dp_2": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 34,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 22,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "DP": {
+            "n": 10,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 2,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          },
+          "dp_1": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          },
+          "dp_3": {
+            "hits": 2,
+            "n": 34,
+            "rate": 0.058823529411764705
+          },
+          "sutta_6": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_8": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_penalty_2": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          },
+          "sutta_penalty_5": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_penalty_10": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "avoid_hard": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "avoid_penalty_10": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          },
+          "overlap_2": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          },
+          "overlap_1": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          },
+          "sutta_6_dp_1": {
+            "hits": 0,
+            "n": 34,
+            "rate": 0
+          },
+          "sutta_6_dp_2": {
+            "hits": 1,
+            "n": 34,
+            "rate": 0.029411764705882353
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 1,
+          "dates": 34,
+          "lift": -0.029411764705882353,
+          "interval95": [
+            -0.08823529411764706,
+            0
+          ],
+          "interval975": [
+            -0.11764705882352941,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 26,
+            "productionHits": 1,
+            "candidateHits": 0
+          },
+          "DP": {
+            "n": 8,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Madhur Night": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "dp_1": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "dp_2": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "dp_3": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "sutta_6": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "sutta_8": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "sutta_penalty_2": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "sutta_penalty_5": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "sutta_penalty_10": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "avoid_hard": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "avoid_penalty_10": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "overlap_2": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "overlap_1": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "sutta_6_dp_1": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "sutta_6_dp_2": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 29,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 16,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "DP": {
+            "n": 13,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "dp_1": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "sutta_6": {
+            "hits": 2,
+            "n": 29,
+            "rate": 0.06896551724137931
+          },
+          "sutta_8": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "sutta_penalty_2": {
+            "hits": 2,
+            "n": 29,
+            "rate": 0.06896551724137931
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 29,
+            "rate": 0.06896551724137931
+          },
+          "sutta_penalty_10": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "avoid_hard": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "avoid_penalty_10": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "overlap_2": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "overlap_1": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "sutta_6_dp_1": {
+            "hits": 2,
+            "n": 29,
+            "rate": 0.06896551724137931
+          },
+          "sutta_6_dp_2": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          }
+        },
+        "paired": {
+          "gained": 1,
+          "lost": 0,
+          "dates": 29,
+          "lift": 0.034482758620689655,
+          "interval95": [
+            0,
+            0.10344827586206896
+          ],
+          "interval975": [
+            0,
+            0.13793103448275862
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 18,
+            "productionHits": 1,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 11,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Main Bazar": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "dp_1": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_6": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_8": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_penalty_2": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_penalty_5": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_penalty_10": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "avoid_hard": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "avoid_penalty_10": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "overlap_2": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "overlap_1": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_6_dp_1": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_6_dp_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 1,
+          "dates": 28,
+          "lift": -0.03571428571428571,
+          "interval95": [
+            -0.10714285714285714,
+            0
+          ],
+          "interval975": [
+            -0.14285714285714285,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 22,
+            "productionHits": 2,
+            "candidateHits": 1
+          },
+          "DP": {
+            "n": 6,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "dp_1": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "dp_2": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "dp_3": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_6": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "sutta_8": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_penalty_2": {
+            "hits": 4,
+            "n": 28,
+            "rate": 0.14285714285714285
+          },
+          "sutta_penalty_5": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "sutta_penalty_10": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "avoid_hard": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "avoid_penalty_10": {
+            "hits": 4,
+            "n": 28,
+            "rate": 0.14285714285714285
+          },
+          "overlap_2": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "sutta_6_dp_1": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "sutta_6_dp_2": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          }
+        },
+        "paired": {
+          "gained": 2,
+          "lost": 1,
+          "dates": 28,
+          "lift": 0.03571428571428571,
+          "interval95": [
+            -0.07142857142857142,
+            0.17857142857142858
+          ],
+          "interval975": [
+            -0.10714285714285714,
+            0.17857142857142858
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 23,
+            "productionHits": 2,
+            "candidateHits": 3
+          },
+          "DP": {
+            "n": 5,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Milan Day": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "dp_1": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "dp_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "dp_3": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_6": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_8": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_10": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "avoid_hard": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "avoid_penalty_10": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "overlap_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_6_dp_1": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_6_dp_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 32,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 24,
+            "productionHits": 2,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 7,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 1,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "dp_1": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "dp_2": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "dp_3": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "sutta_6": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "sutta_8": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "sutta_penalty_2": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "sutta_penalty_5": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "sutta_penalty_10": {
+            "hits": 1,
+            "n": 32,
+            "rate": 0.03125
+          },
+          "avoid_hard": {
+            "hits": 1,
+            "n": 32,
+            "rate": 0.03125
+          },
+          "avoid_penalty_10": {
+            "hits": 1,
+            "n": 32,
+            "rate": 0.03125
+          },
+          "overlap_2": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "overlap_1": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "sutta_6_dp_1": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          },
+          "sutta_6_dp_2": {
+            "hits": 0,
+            "n": 32,
+            "rate": 0
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 32,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 21,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "DP": {
+            "n": 10,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 1,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Milan Night": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 4,
+            "n": 32,
+            "rate": 0.125
+          },
+          "dp_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "dp_2": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "dp_3": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_6": {
+            "hits": 4,
+            "n": 32,
+            "rate": 0.125
+          },
+          "sutta_8": {
+            "hits": 4,
+            "n": 32,
+            "rate": 0.125
+          },
+          "sutta_penalty_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_10": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "avoid_hard": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "avoid_penalty_10": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "overlap_2": {
+            "hits": 4,
+            "n": 32,
+            "rate": 0.125
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_6_dp_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_6_dp_2": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 2,
+          "dates": 32,
+          "lift": -0.0625,
+          "interval95": [
+            -0.15625,
+            0
+          ],
+          "interval975": [
+            -0.1875,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 29,
+            "productionHits": 4,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 3,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "dp_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "dp_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "dp_3": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_6": {
+            "hits": 4,
+            "n": 32,
+            "rate": 0.125
+          },
+          "sutta_8": {
+            "hits": 4,
+            "n": 32,
+            "rate": 0.125
+          },
+          "sutta_penalty_2": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_penalty_5": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_penalty_10": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "avoid_hard": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "avoid_penalty_10": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "overlap_2": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "overlap_1": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_6_dp_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_6_dp_2": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          }
+        },
+        "paired": {
+          "gained": 1,
+          "lost": 0,
+          "dates": 32,
+          "lift": 0.03125,
+          "interval95": [
+            0,
+            0.09375
+          ],
+          "interval975": [
+            0,
+            0.125
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 28,
+            "productionHits": 3,
+            "candidateHits": 4
+          },
+          "DP": {
+            "n": 4,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Rajdhani Day": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "dp_1": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "dp_2": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "dp_3": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_6": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_8": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_penalty_2": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_penalty_5": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_penalty_10": {
+            "hits": 2,
+            "n": 29,
+            "rate": 0.06896551724137931
+          },
+          "avoid_hard": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "avoid_penalty_10": {
+            "hits": 1,
+            "n": 29,
+            "rate": 0.034482758620689655
+          },
+          "overlap_2": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_6_dp_1": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_6_dp_2": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 29,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 23,
+            "productionHits": 3,
+            "candidateHits": 3
+          },
+          "DP": {
+            "n": 6,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "dp_1": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "dp_2": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "dp_3": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_6": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_8": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_penalty_2": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 29,
+            "rate": 0.06896551724137931
+          },
+          "sutta_penalty_10": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "avoid_hard": {
+            "hits": 0,
+            "n": 29,
+            "rate": 0
+          },
+          "avoid_penalty_10": {
+            "hits": 2,
+            "n": 29,
+            "rate": 0.06896551724137931
+          },
+          "overlap_2": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 29,
+            "rate": 0.10344827586206896
+          },
+          "sutta_6_dp_1": {
+            "hits": 4,
+            "n": 29,
+            "rate": 0.13793103448275862
+          },
+          "sutta_6_dp_2": {
+            "hits": 4,
+            "n": 29,
+            "rate": 0.13793103448275862
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 29,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 19,
+            "productionHits": 3,
+            "candidateHits": 3
+          },
+          "DP": {
+            "n": 10,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Rajdhani Night": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_1": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_6": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_8": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_penalty_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_penalty_10": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "avoid_hard": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "avoid_penalty_10": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "overlap_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "overlap_1": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_6_dp_1": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_6_dp_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          }
+        },
+        "paired": {
+          "gained": 1,
+          "lost": 0,
+          "dates": 28,
+          "lift": 0.03571428571428571,
+          "interval95": [
+            0,
+            0.10714285714285714
+          ],
+          "interval975": [
+            0,
+            0.14285714285714285
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 18,
+            "productionHits": 1,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 10,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_1": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_6": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "sutta_8": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          },
+          "sutta_penalty_2": {
+            "hits": 2,
+            "n": 28,
+            "rate": 0.07142857142857142
+          },
+          "sutta_penalty_5": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "sutta_penalty_10": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "avoid_hard": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "avoid_penalty_10": {
+            "hits": 3,
+            "n": 28,
+            "rate": 0.10714285714285714
+          },
+          "overlap_2": {
+            "hits": 1,
+            "n": 28,
+            "rate": 0.03571428571428571
+          },
+          "overlap_1": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          },
+          "sutta_6_dp_1": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          },
+          "sutta_6_dp_2": {
+            "hits": 0,
+            "n": 28,
+            "rate": 0
+          }
+        },
+        "paired": {
+          "gained": 1,
+          "lost": 1,
+          "dates": 28,
+          "lift": 0,
+          "interval95": [
+            -0.10714285714285714,
+            0.10714285714285714
+          ],
+          "interval975": [
+            -0.10714285714285714,
+            0.10714285714285714
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 23,
+            "productionHits": 1,
+            "candidateHits": 1
+          },
+          "DP": {
+            "n": 5,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Sridevi": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "dp_1": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          },
+          "dp_2": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          },
+          "dp_3": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          },
+          "sutta_6": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "sutta_8": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "sutta_penalty_2": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          },
+          "sutta_penalty_5": {
+            "hits": 3,
+            "n": 38,
+            "rate": 0.07894736842105263
+          },
+          "sutta_penalty_10": {
+            "hits": 3,
+            "n": 38,
+            "rate": 0.07894736842105263
+          },
+          "avoid_hard": {
+            "hits": 6,
+            "n": 38,
+            "rate": 0.15789473684210525
+          },
+          "avoid_penalty_10": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "overlap_2": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 38,
+            "rate": 0.07894736842105263
+          },
+          "sutta_6_dp_1": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          },
+          "sutta_6_dp_2": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 2,
+          "dates": 38,
+          "lift": -0.05263157894736842,
+          "interval95": [
+            -0.13157894736842105,
+            0
+          ],
+          "interval975": [
+            -0.15789473684210525,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 34,
+            "productionHits": 5,
+            "candidateHits": 3
+          },
+          "DP": {
+            "n": 4,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 6,
+            "n": 38,
+            "rate": 0.15789473684210525
+          },
+          "dp_1": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "dp_2": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "dp_3": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "sutta_6": {
+            "hits": 2,
+            "n": 38,
+            "rate": 0.05263157894736842
+          },
+          "sutta_8": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          },
+          "sutta_penalty_2": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "sutta_penalty_5": {
+            "hits": 3,
+            "n": 38,
+            "rate": 0.07894736842105263
+          },
+          "sutta_penalty_10": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "avoid_hard": {
+            "hits": 5,
+            "n": 38,
+            "rate": 0.13157894736842105
+          },
+          "avoid_penalty_10": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          },
+          "overlap_2": {
+            "hits": 6,
+            "n": 38,
+            "rate": 0.15789473684210525
+          },
+          "overlap_1": {
+            "hits": 4,
+            "n": 38,
+            "rate": 0.10526315789473684
+          },
+          "sutta_6_dp_1": {
+            "hits": 2,
+            "n": 38,
+            "rate": 0.05263157894736842
+          },
+          "sutta_6_dp_2": {
+            "hits": 2,
+            "n": 38,
+            "rate": 0.05263157894736842
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 4,
+          "dates": 38,
+          "lift": -0.10526315789473684,
+          "interval95": [
+            -0.21052631578947367,
+            -0.02631578947368421
+          ],
+          "interval975": [
+            -0.23684210526315788,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 31,
+            "productionHits": 6,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 7,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Sridevi Night": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "dp_1": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "sutta_6": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "sutta_8": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "sutta_penalty_2": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "sutta_penalty_5": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "sutta_penalty_10": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "avoid_hard": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "avoid_penalty_10": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "overlap_2": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "overlap_1": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "sutta_6_dp_1": {
+            "hits": 0,
+            "n": 38,
+            "rate": 0
+          },
+          "sutta_6_dp_2": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 38,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 24,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "DP": {
+            "n": 14,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "dp_1": {
+            "hits": 2,
+            "n": 38,
+            "rate": 0.05263157894736842
+          },
+          "dp_2": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "sutta_6": {
+            "hits": 2,
+            "n": 38,
+            "rate": 0.05263157894736842
+          },
+          "sutta_8": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "sutta_penalty_2": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 38,
+            "rate": 0.05263157894736842
+          },
+          "sutta_penalty_10": {
+            "hits": 3,
+            "n": 38,
+            "rate": 0.07894736842105263
+          },
+          "avoid_hard": {
+            "hits": 3,
+            "n": 38,
+            "rate": 0.07894736842105263
+          },
+          "avoid_penalty_10": {
+            "hits": 3,
+            "n": 38,
+            "rate": 0.07894736842105263
+          },
+          "overlap_2": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 38,
+            "rate": 0.07894736842105263
+          },
+          "sutta_6_dp_1": {
+            "hits": 2,
+            "n": 38,
+            "rate": 0.05263157894736842
+          },
+          "sutta_6_dp_2": {
+            "hits": 1,
+            "n": 38,
+            "rate": 0.02631578947368421
+          }
+        },
+        "paired": {
+          "gained": 1,
+          "lost": 0,
+          "dates": 38,
+          "lift": 0.02631578947368421,
+          "interval95": [
+            0,
+            0.07894736842105263
+          ],
+          "interval975": [
+            0,
+            0.10526315789473684
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 28,
+            "productionHits": 1,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 10,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    },
+    "Time Bazar": {
+      "open": {
+        "winner": "sutta_penalty_5",
+        "candidates": {
+          "production": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "dp_1": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "dp_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "dp_3": {
+            "hits": 1,
+            "n": 32,
+            "rate": 0.03125
+          },
+          "sutta_6": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_8": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_10": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "avoid_hard": {
+            "hits": 4,
+            "n": 32,
+            "rate": 0.125
+          },
+          "avoid_penalty_10": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "overlap_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_6_dp_1": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_6_dp_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          }
+        },
+        "paired": {
+          "gained": 0,
+          "lost": 0,
+          "dates": 32,
+          "lift": 0,
+          "interval95": [
+            0,
+            0
+          ],
+          "interval975": [
+            0,
+            0
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 24,
+            "productionHits": 2,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 8,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      },
+      "closeLive": {
+        "winner": "sutta_6",
+        "candidates": {
+          "production": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "dp_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "dp_2": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "dp_3": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_6": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_8": {
+            "hits": 1,
+            "n": 32,
+            "rate": 0.03125
+          },
+          "sutta_penalty_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_5": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_penalty_10": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "avoid_hard": {
+            "hits": 4,
+            "n": 32,
+            "rate": 0.125
+          },
+          "avoid_penalty_10": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "overlap_2": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "overlap_1": {
+            "hits": 3,
+            "n": 32,
+            "rate": 0.09375
+          },
+          "sutta_6_dp_1": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          },
+          "sutta_6_dp_2": {
+            "hits": 2,
+            "n": 32,
+            "rate": 0.0625
+          }
+        },
+        "paired": {
+          "gained": 1,
+          "lost": 2,
+          "dates": 32,
+          "lift": -0.03125,
+          "interval95": [
+            -0.15625,
+            0.0625
+          ],
+          "interval975": [
+            -0.15625,
+            0.09375
+          ]
+        },
+        "byKind": {
+          "SP": {
+            "n": 27,
+            "productionHits": 3,
+            "candidateHits": 2
+          },
+          "DP": {
+            "n": 5,
+            "productionHits": 0,
+            "candidateHits": 0
+          },
+          "TP": {
+            "n": 0,
+            "productionHits": 0,
+            "candidateHits": 0
+          }
+        }
+      }
+    }
+  },
+  "audit": {
+    "generatedAt": "2026-10-13T06:35:36.991Z",
+    "events": 984,
+    "sourceSHA256": "7592f4b19d1135f717911a770aab6c582a733c0cbf33b2804db26b73f0d9a63c",
+    "comparatorSHA256": "7299f731f91d18e85522cf01dadd32befde55e6b1ee4189708976f33915ba1d3",
+    "ledgerSHA256": "6c9f15433bbbee9bf6dd600ec0e74b5428fc422dc64914c14845f32af01e7b85",
+    "files": {
+      "scripts/panel-portfolio-research.cjs": "fc505b0c403912586c1ed08656bb3ce13aea583d1a3f9555d25240658b6cfb67",
+      "scripts/lib/panel-portfolio.cjs": "18397398ea8080c71fa4403e32dd5cd9f117b7e6d17269348a5898cb68289251",
+      "scripts/lib/two-year-walkforward.cjs": "a224f7c2a2eaf37929a8ecabc4ea3e252c305dade3e13c678c98e910c8339986",
+      "scripts/two-year-walkforward.cjs": "c5000b981814bc920a082c2f9aa1ee67f910b093652c20a3c4c546142d293042",
+      "research/panel_portfolio_v1/PROTOCOL.md": "4ae449d2e149c64e661d1b1ca0d39f34d5b412e92ff56aca43ce0d3a9effdc66",
+      "research/dp_panel_v3/ts-loader.cjs": "b940564fc76ef19649c56f4227118587c7906b17c87e51d17472b8a7bda0c33d",
+      "src/lib/db.ts": "590e5d73af21a3ef79a63a865c4acb2b3ae3ad8f79d4488af6b066253cecb04d",
+      "src/lib/prediction-contract.ts": "a569097e5067a19976fefc055b97399f4c93f3206e0330368d8de86f542dffcf",
+      "src/lib/predictor/panel-top10-model.ts": "e8c3598501928487a1d70234164b42f7182e6d77f50826e7dd30348d2e611439",
+      "src/lib/predictor/panel-utils.ts": "def7eaeb3879019e3f59654c3bef0539812ea154fb437fc4bb69f8838c393fbf",
+      "src/lib/sutta-model/v2-recency.ts": "9ab76d9bf062ecea69944f51a6cff992da26edfa9c66dffd0b888ed7b0635c1c"
+    }
+  }
+}
