@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Lakshmi Boss combines a panel calculator, market prediction analysis, and live results in an installable web app. See [the current project map](docs/PROJECT_MAP.md) for the active models, data flow, research constraints, known risks, and app/PWA release procedure. Older prediction documents describe earlier model versions.
 
 ## Getting Started
 
