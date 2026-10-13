@@ -175,6 +175,17 @@ function main() {
       throw new Error(`${market}: Open/Close target date mismatch`)
     }
     const targetDate = openFrozen.targetDate
+    // Replay the history available to the frozen forecast. Later source
+    // extensions and the app's newer 28-month window cannot enter this fixture.
+    const fixtureStart = new Date(`${targetDate}T00:00:00Z`)
+    fixtureStart.setUTCDate(fixtureStart.getUTCDate() - 729)
+    const fixtureStartISO = fixtureStart.toISOString().slice(0, 10)
+    if (openFrozen.sourceCutoff !== closeFrozen.sourceCutoff) {
+      throw new Error(`${market}: Open/Close source cutoff mismatch`)
+    }
+    records[market] = records[market].filter((row) =>
+      row.isoDate >= fixtureStartISO && row.isoDate <= openFrozen.sourceCutoff,
+    )
     const targetDay = DAY_NAMES[new Date(`${targetDate}T00:00:00Z`).getUTCDay()]
     const prediction = buildAbsentDigitsPredictionV2(
       market,
