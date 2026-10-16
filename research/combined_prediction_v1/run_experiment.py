@@ -393,7 +393,8 @@ def evaluate() -> None:
             allowed = np.arange(len(replay.panels)) if kind == "all" else np.flatnonzero(replay.kind == kind)
             for i in np.flatnonzero(replay.audit):
                 picks = allowed[np.argsort(-scores[i, allowed], kind="stable")[:k]]
-                ledger.append([replay.dates[i], replay.markets[i], channel, task, replay.panels[replay.actual(channel)[i]], int(eligible[i]), int(baseline[i]), int(candidate[i]), int(routed[i]), " ".join(replay.panels[p] for p in picks)])
+                routed_picks = allowed[np.argsort(-routed_scores[i, allowed], kind="stable")[:k]]
+                ledger.append([replay.dates[i], replay.markets[i], channel, task, replay.panels[replay.actual(channel)[i]], int(eligible[i]), int(baseline[i]), int(candidate[i]), int(routed[i]), " ".join(replay.panels[p] for p in picks), " ".join(replay.panels[p] for p in routed_picks)])
         # Freeze-derived diagnostics use the selected all30 policy; these are not
         # separately optimized on the final block.
         weights = Weights(**selection["channels"][channel]["tasks"]["all30"]["selected"])
@@ -425,7 +426,7 @@ def evaluate() -> None:
     write_json(HERE / "results.json", results)
     with (HERE / "audit_calls.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
-        writer.writerow(["date", "market", "channel", "task", "actual", "actual_kind_eligible", "baseline_hit", "global_hit", "routed_hit", "global_panels"])
+        writer.writerow(["date", "market", "channel", "task", "actual", "actual_kind_eligible", "baseline_hit", "global_hit", "routed_hit", "global_panels", "routed_panels"])
         writer.writerows(ledger)
     render_report(results, selection)
     print("Final audit saved. No model or weight was changed using audit results.", flush=True)
@@ -445,6 +446,16 @@ def render_report(results: dict, selection: dict) -> None:
             s = results["channels"][channel][task]["blocks"]["audit"]["global"]
             lo, hi = s["day_bootstrap95_pp"]
             lines.append(f"| {channel} | {task} | {s['baseline_hits']}/{s['n']} ({100*s['baseline_rate']:.1f}%) | {s['candidate_hits']}/{s['n']} ({100*s['candidate_rate']:.1f}%) | {s['candidate_hits']-s['baseline_hits']:+d} | {s['lift_pp']:+.2f} | [{lo:+.2f}, {hi:+.2f}] | {s['holm_p']:.4f} |")
+    lines += ["", "## Market-specific adjustments", "", "Only routes passing the frozen development and validation guards are applied. The table includes every task with an active route, including regressions. SP30 and all30 sometimes contain the same panels, so their gains are not independent evidence.", "", "| Channel | Task | Baseline | Global combination | With market routes | Routed lift pp | Date-bootstrap 95% pp | Paired p / Holm p |", "|---|---|---:|---:|---:|---:|---|---|"]
+    for channel in PROTOCOL["channels"]:
+        for task in PROTOCOL["panel_tasks"]:
+            row = results["channels"][channel][task]
+            if not row["routes"]:
+                continue
+            g, s = row["blocks"]["audit"]["global"], row["blocks"]["audit"]["routed"]
+            lo, hi = s["day_bootstrap95_pp"]
+            lines.append(f"| {channel} | {task} | {s['baseline_hits']}/{s['n']} | {g['candidate_hits']}/{s['n']} | {s['candidate_hits']}/{s['n']} | {s['lift_pp']:+.2f} | [{lo:+.2f}, {hi:+.2f}] | {s['paired_p']:.4f} / {s['holm_p']:.4f} |")
+    lines += ["", "## Interpretation", "", "The routed known-Open Close Top-30 policy is the strongest candidate in this run. It gains 18 development hits, 6 validation hits, and 14 final-audit hits. Final accuracy rises from 45/237 to 59/237 across all Close outcomes, and from 45/186 to 59/186 conditional on SP. Its date-bootstrap interval is positive, but the paired p-value is about .065 and no selected panel comparison survives Holm adjustment. Treat it as a candidate for a new frozen extension, not a confirmed production improvement.", "", "The same policy uses a global Sutta correction of 0.25 and appearance residual weight -0.5. Kalyan Night instead uses appearance 0.25 and an avoided-digit multiplier of 1.25. Madhur Day uses Sutta -0.125, appearance -0.5, and a present-digit multiplier of 1.25. A negative appearance residual weight reverses the adjustment relative to what the base panel model already expects; it does not assert that every likely digit should be avoided.", "", "Open combinations largely fail the final block. Known-Open Close Top-10 and DP Top-10 retain small gains. Before-Open Close DP Top-30 gains in all three blocks, but only two final DP hits. Jodi-25 conditioning loses six final hits, while the 36-pair selection retains the existing grid. Derived Close absent pairs improve, but Open absent pairs regress. There is no shared multiplier that improves every output.", "", "No production change is recommended from this experiment alone. The retained candidate is fully specified in selection.json and can be scored unchanged on later, previously unused chart dates."]
     lines += ["", "## Frozen multipliers and earlier-block results", "", "Avoid multipliers apply per distinct predicted-absent digit present in a panel. Present multipliers apply per predicted-present digit contained in a panel. Sutta/appearance/conditional weights are powers of probability ratios. DP blend 1 uses the dedicated DP distribution within the original DP mass; it does not predict that a DP will occur.", ""]
     for channel in PROTOCOL["channels"]:
         lines += [f"### {channel}", "", f"Configurations evaluated on development: {selection['channels'][channel]['searched']}.", "", "| Task | Weights | Development baseline / selected | Validation baseline / selected | Routed markets |", "|---|---|---|---|---|"]
