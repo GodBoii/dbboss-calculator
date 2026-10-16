@@ -1,0 +1,33 @@
+{
+  "study": "combined-prediction-v1",
+  "source": "research/panel_top10_v1/chart_rows.csv",
+  "history_months": 28,
+  "minimum_history": 180,
+  "start": "2026-07-04",
+  "end": "2026-09-30",
+  "development_end": "2026-08-16",
+  "validation_end": "2026-09-07",
+  "seed": 20261016,
+  "bootstrap_samples": 10000,
+  "channels": ["open", "close_pre", "close_known"],
+  "panel_tasks": {"all10": ["all", 10], "all30": ["all", 30], "sp30": ["SP", 30], "dp10": ["DP", 10], "dp20": ["DP", 20], "dp30": ["DP", 30]},
+  "coarse_grid": {
+    "sutta": [-0.5, 0, 0.25, 0.5, 1, 2],
+    "appearance": [-0.5, 0, 0.25, 0.5, 1],
+    "avoid_multiplier": [0.25, 0.5, 0.75, 1, 1.25],
+    "present_multiplier": [0.75, 1, 1.25, 1.5, 2],
+    "dp_blend": [0, 0.25, 0.5, 1],
+    "conditional_close": [0, 0.25, 0.5, 1]
+  },
+  "refinement": {"development_leaders_per_task": 3, "weight_offsets": [-0.125, 0.125], "log_multiplier_offsets": [-0.15, 0.15]},
+  "market_route": {"minimum_development_events": 20, "minimum_development_net_hits": 3, "minimum_validation_events": 10, "minimum_validation_net_hits": 1},
+  "jodi": {"counts": [25, 36], "conditional_weights": [0, 0.25, 0.5, 1, 2], "smoothing": 100},
+  "limitations": [
+    "Retrospective experiment. Historical periods have already been inspected in other studies.",
+    "Current V2 Sutta and V3 absent routes were selected using some of these outcomes; later blocks are held out only from this study's combination search.",
+    "Panel and DP model coefficient fitting ends before this study starts. Their coefficients are frozen, not refitted here.",
+    "No production files, settings, or user-facing predictions are changed.",
+    "The final block is evaluated only after selection.json is saved and hashed; it is never used to adjust multipliers or market routes.",
+    "All panels are ranked before slicing. SP means exactly three distinct digits; TP is separate. DP list accuracy is reported both conditional on actual DP and across all events."
+  ]
+}
