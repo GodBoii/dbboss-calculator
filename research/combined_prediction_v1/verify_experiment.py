@@ -71,11 +71,14 @@ def verify_saved_calls(replay: Replay) -> None:
         assert PROTOCOL["validation_end"] < row["date"] <= PROTOCOL["end"]
         kind, count = PROTOCOL["panel_tasks"][row["task"]]
         panels = row["global_panels"].split()
+        routed_panels = row["routed_panels"].split()
         assert len(panels) == len(set(panels)) == count
-        assert all(p in replay.panel_index for p in panels)
+        assert len(routed_panels) == len(set(routed_panels)) == count
+        assert all(p in replay.panel_index for p in panels + routed_panels)
         if kind != "all":
-            assert all(replay.kind[replay.panel_index[p]] == kind for p in panels)
+            assert all(replay.kind[replay.panel_index[p]] == kind for p in panels + routed_panels)
         assert int(row["global_hit"]) == int(row["actual"] in panels)
+        assert int(row["routed_hit"]) == int(row["actual"] in routed_panels)
     for channel in PROTOCOL["channels"]:
         for task in PROTOCOL["panel_tasks"]:
             spec = selection["channels"][channel]["tasks"][task]
