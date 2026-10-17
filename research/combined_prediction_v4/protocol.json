@@ -1,0 +1,40 @@
+{
+  "study": "combined-prediction-v4-probability-shrinkage",
+  "research_only": true,
+  "baseline": "Real frozen combined-weighted-v1 production policy, including market overrides",
+  "channels": ["open", "close_pre", "close_known"],
+  "endpoints": ["all10", "sp30", "dp20"],
+  "candidates_per_endpoint": 24,
+  "families": {
+    "production": "Unchanged baseline",
+    "temperature": [0.5, 2, 4],
+    "linear_pool_sources": ["uniform", "prior_global", "prior_market", "raw", "endpoint_mean"],
+    "source_fractions": [0.25, 0.5, 0.75, 1]
+  },
+  "prior": {
+    "start": "2026-07-04",
+    "global_per_panel_pseudocount": 1,
+    "market_total_pseudocount": 100,
+    "update": "Predict every event on a day, then incorporate that day's outcomes. Global and local counts never use the target day."
+  },
+  "selection": {
+    "development": ["2026-07-04", "2026-08-16"],
+    "validation": ["2026-08-17", "2026-09-07"],
+    "accuracy": "Reject development hit regressions, maximize validation hits; ties prefer production, then development hits, then label.",
+    "probability": "Reject development log-loss regressions, minimize validation log loss; ties prefer production, then label.",
+    "freeze": "Write and SHA-256 hash selection.json before calculating evaluation-block metrics. The protocol records the executed study, not a prospective preregistration."
+  },
+  "evaluation": {
+    "september": ["2026-09-08", "2026-09-30"],
+    "october": ["2026-10-01", "2026-10-15"],
+    "oct16_17_reused": ["2026-10-16", "2026-10-17"],
+    "status": "Every block was already examined in earlier studies. These are retrospective diagnostic comparisons, not untouched holdouts."
+  },
+  "metrics": ["fixed-budget panel hits", "multiclass log loss", "multiclass Brier", "Sutta6", "present2", "absent2"],
+  "statistical_limits": "Inherited paired tests and day-bootstrap intervals are descriptive. No significance claim after candidate selection or repeated historical reuse. Uniform rankings depend on panel-order tie breaking and offer no discovered predictive signal.",
+  "sources": [
+    "https://scikit-learn.org/stable/modules/calibration.html",
+    "https://scikit-learn.org/stable/modules/cross_validation.html#time-series-split",
+    "https://otexts.com/fpp3/practical.html#forecast-combinations"
+  ]
+}
