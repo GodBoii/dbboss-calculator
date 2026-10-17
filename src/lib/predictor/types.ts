@@ -23,6 +23,8 @@ export interface PredictionResult {
   openPanelPicks: PanelPick[];
   closePicks: PanelPick[];
   closePanelPicks: PanelPick[];
+  /** Opt-in full orders for combined analysis. Absent from the V1 result. */
+  panelRankings?: { open: PanelPick[]; close: PanelPick[] };
   /** Which ranker produced closePanelPicks. */
   closePanelModel: "top10-with-open" | "legacy-pre-open";
   /** Today's declared Open panel used by the Close model, if any. */
