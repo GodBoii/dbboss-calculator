@@ -136,7 +136,49 @@ def frozen_checks() -> None:
             assert all(p in replay.panel_index for p in panels)
             assert kind == "all" or all(replay.kind[replay.panel_index[p]] == kind for p in panels)
             assert int(row["hit"]) == int(row["actual"] in panels)
+        published = json.loads((HERE / "extension_results.json").read_text())
+        for channel, tasks in published["channels"].items():
+            for task, policies in tasks.items():
+                for policy, stats in policies.items():
+                    selected = [r for r in records if r["channel"] == channel and r["task"] == task and r["policy"] == policy and r["actual_kind_eligible"] == "1"]
+                    assert stats["n"] == len(selected)
+                    assert stats["baseline_hits"] == sum(int(r["baseline_hit"]) for r in selected)
+                    assert stats["candidate_hits"] == sum(int(r["hit"]) for r in selected)
         print(f"Verified {len(records)} exact October panel calls.")
+    if (HERE / "secondary_calls.csv").exists():
+        records = list(csv.DictReader((HERE / "secondary_calls.csv").open(encoding="utf-8", newline="")))
+        unique = set()
+        for row in records:
+            key = tuple(row[k] for k in ("date", "market", "channel", "task", "policy"))
+            assert key not in unique
+            unique.add(key)
+            predictions = row["predictions"].split()
+            assert len(predictions) == len(set(predictions))
+            if row["task"].startswith("sutta"):
+                assert len(predictions) == int(row["task"].removeprefix("sutta"))
+                assert all(p.isdigit() and len(p) == 1 for p in predictions)
+                hit = row["actual"] in predictions
+            elif row["task"].startswith("jodi"):
+                assert len(predictions) == int(row["task"].removeprefix("jodi"))
+                assert all(p.isdigit() and len(p) == 2 for p in predictions)
+                hit = row["actual"] in predictions
+            elif row["task"] == "kind":
+                assert len(predictions) == 1 and predictions[0] in {"SP", "DP", "TP"}
+                hit = row["actual"] in predictions
+            else:
+                assert len(predictions) == 2 and all(p.isdigit() and len(p) == 1 for p in predictions)
+                assert row["actual"] in replay.panel_index
+                hit = all(p in row["actual"] for p in predictions) if row["task"] == "present2" else all(p not in row["actual"] for p in predictions)
+            assert int(row["hit"]) == int(hit)
+        published = json.loads((HERE / "extension_results.json").read_text())
+        for channel, tasks in published["secondary"].items():
+            for task, policies in tasks.items():
+                for policy, stats in policies.items():
+                    selected = [r for r in records if r["channel"] == channel and r["task"] == task and r["policy"] == policy]
+                    assert stats["n"] == len(selected)
+                    assert stats["baseline_hits"] == sum(int(r["baseline_hit"]) for r in selected)
+                    assert stats["candidate_hits"] == sum(int(r["hit"]) for r in selected)
+        print(f"Verified {len(records)} exact secondary calls and all 231 published counts.")
 
 
 def main() -> None:
