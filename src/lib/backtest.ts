@@ -7,6 +7,8 @@ import {
   getSuttaSignal,
   type PanelKindPrediction,
   type PanelPick,
+  type PredictionResult,
+  type JodiAnalysis,
 } from './predictor'
 
 export interface BacktestBucket {
@@ -190,7 +192,12 @@ export function runMarketBacktest(
   market: string,
   records: PanelRecord[],
   allMarketsRecords: Record<string, PanelRecord[]>,
-  options: { days?: number; minTrainingRecords?: number } = {},
+  options: {
+    days?: number
+    minTrainingRecords?: number
+    predictor?: typeof analyzeMarket
+    adjustJodi?: (analysis: JodiAnalysis, prediction: PredictionResult) => JodiAnalysis
+  } = {},
 ): BacktestReport | null {
   const days = options.days ?? 30
   const minTrainingRecords = options.minTrainingRecords ?? 50
@@ -227,7 +234,7 @@ export function runMarketBacktest(
     priorAllMarkets[market] = prior
 
     // Close panels are scored after today's Open is declared, as the Close tab shows them.
-    const prediction = analyzeMarket(market, prior, priorAllMarkets, new Date(`${isoDate}T12:00:00`), {
+    const prediction = (options.predictor ?? analyzeMarket)(market, prior, priorAllMarkets, new Date(`${isoDate}T12:00:00`), {
       knownOpenPanel: record.openPanel || null,
     })
     if (!prediction) continue
@@ -250,13 +257,14 @@ export function runMarketBacktest(
     )
 
     if (record.openSutta >= 0 && record.closePanel) {
-      const jodiResult = computeJodiAnalysis(
+      const originalJodi = computeJodiAnalysis(
         record.openSutta,
         record.openPanel || null,
         prior,
         buildContextFromResult(prediction),
         prediction.closeDpKindContext,
       )
+      const jodiResult = options.adjustJodi ? options.adjustJodi(originalJodi, prediction) : originalJodi
       evaluatePickSet(
         jodi,
         jodiResult.adjustedClosePanelPicks,
