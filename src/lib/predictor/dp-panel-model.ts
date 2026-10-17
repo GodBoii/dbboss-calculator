@@ -55,6 +55,8 @@ export interface DpPanelPrediction {
   closePicks: PanelPick[];
   openFocus: DpDigitFocus | null;
   closeFocus: DpDigitFocus | null;
+  /** Full-precision probabilities, only requested by the combined engine. */
+  probabilities?: { open: number[]; close: number[] };
 }
 
 function isoAddDays(iso: string, days: number): string {
@@ -248,6 +250,7 @@ export function predictDpPanels(
   records: PanelRecord[],
   allMarketsRecords: Record<string, PanelRecord[]>,
   analysisDate = new Date(),
+  options: { includeProbabilities?: boolean } = {},
 ): DpPanelPrediction | null {
   const ownRows = datedRows(records);
   if (ownRows.length === 0) return null;
@@ -287,5 +290,6 @@ export function predictDpPanels(
     closePicks: close.picks,
     openFocus: pairFocus(open.picks, open.probs),
     closeFocus: pairFocus(close.picks, close.probs),
+    ...(options.includeProbabilities ? { probabilities: { open: open.probs, close: close.probs } } : {}),
   };
 }
