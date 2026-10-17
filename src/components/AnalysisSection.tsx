@@ -42,6 +42,9 @@ import { getVerifiedDpCalls } from "@/lib/verified-dp-call"
 import { isMarketHistoryFresh } from "@/lib/market-history-freshness"
 import { SUTTA_MODEL_VERSION } from "@/lib/app-version"
 import { SUTTA_PREDICTION_COUNT } from "@/lib/prediction-contract"
+import { useCombinedAnalysis } from "@/hooks/useCombinedAnalysis"
+import type { AnalysisVersion } from "@/lib/combined-prediction"
+import { AnalysisVersionSelector } from "./analysis/AnalysisVersionSelector"
 
 // ── Market URL Config ───────────────────────────────────────────────────
 const MARKET_URLS: Record<string, string> = {
@@ -386,7 +389,8 @@ export default function AnalysisSection() {
   )
   const [loadingState, setLoadingState] = useState<LoadingState>("idle")
   const [loadingMessage, setLoadingMessage] = useState("")
-  const [result, setResult] = useState<PredictionResult | null>(null)
+  const [baseResult, setResult] = useState<PredictionResult | null>(null)
+  const [analysisVersion, setAnalysisVersion] = useState<AnalysisVersion>("v1")
   const [errorMsg, setErrorMsg] = useState("")
   const [activeTab, setActiveTab] = useState<"picks" | "stats" | "intel">("picks")
   const [picksSubTab, setPicksSubTab] = useState<"open" | "close" | "jodi">("open")
@@ -396,12 +400,22 @@ export default function AnalysisSection() {
   const [copyCount, setCopyCount] = useState(SUTTA_PREDICTION_COUNT)
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
   const [openPanelInput, setOpenPanelInput] = useState("")
-  const [jodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
-  const [backtestReport, setBacktestReport] = useState<BacktestReport | null>(null)
+  const [baseJodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
+  const [v1BacktestReport, setBacktestReport] = useState<BacktestReport | null>(null)
   const [cachedRecords, setCachedRecords] = useState<PanelRecord[]>([])
   const [allMarketsRecords, setAllMarketsRecords] = useState<Record<string, PanelRecord[]>>({})
   const cachedRecordsRef = useRef<PanelRecord[]>([])
   const allMarketsRecordsRef = useRef<Record<string, PanelRecord[]>>({})
+  const combinedState = useCombinedAnalysis(analysisVersion, baseResult, cachedRecords, allMarketsRecords,
+    openSuttaInput, openPanelInput.length === 3 ? openPanelInput : null, copyCount)
+  const combined = combinedState.analysis?.status === "ready" ? combinedState.analysis : null
+  const result = analysisVersion === "v2" && combined ? combined.prediction : baseResult
+  const backtestReport = analysisVersion === "v2" ? combinedState.backtest : v1BacktestReport
+  const jodiResult = useMemo(() => analysisVersion === "v2" && combined && baseJodiResult ? {
+    ...baseJodiResult, adjustedClosePicks: combined.close.rankedPanels, adjustedClosePanelPicks: combined.close.panelPicks,
+    adjustedCloseDpPicks: combined.close.dpPicks, adjustedCloseDpDigitFocus: combined.prediction.closeDpDigitFocus,
+    kindPrediction: combined.prediction.closeKindPrediction,
+  } : baseJodiResult, [analysisVersion, combined, baseJodiResult])
 
   // ── Copy helpers ─────────────────────────────────────────────────────────
   const [copyingKey, setCopyingKey] = useState<string | null>(null)
@@ -417,12 +431,12 @@ export default function AnalysisSection() {
 
   // ── Jodi Model: compute when user enters Open Sutta ──────────────────────
   const runJodiModel = useCallback((sutta: number, panelStr: string | null) => {
-    if (!result) return
-    const ctx = buildContextFromResult(result)
-    const analysis = computeJodiAnalysis(sutta, panelStr, cachedRecordsRef.current, ctx, result.closeDpKindContext)
+    if (!baseResult) return
+    const ctx = buildContextFromResult(baseResult)
+    const analysis = computeJodiAnalysis(sutta, panelStr, cachedRecordsRef.current, ctx, baseResult.closeDpKindContext)
     setJodiResult(analysis)
     setPicksSubTab("jodi")
-  }, [result])
+  }, [baseResult])
 
   const fetchAndAnalyze = useCallback(
     async (forceRefresh = false) => {
@@ -595,7 +609,7 @@ export default function AnalysisSection() {
   const activeMarkets = session === "day" ? DAY_MARKETS : NIGHT_MARKETS
   const isNight = session === "night"
   const openSuttaRanking = useMemo(
-    () => result
+    () => analysisVersion === "v2" ? combined?.open.suttas ?? [] : result
       ? buildOpenSuttaRanking(
           result.openPicks,
           result.openSuttaDroughts,
@@ -605,10 +619,10 @@ export default function AnalysisSection() {
           allMarketsRecords,
         )
       : [],
-    [result, cachedRecords, selectedMarket, allMarketsRecords],
+    [analysisVersion, combined, result, cachedRecords, selectedMarket, allMarketsRecords],
   )
   const closeSuttaRanking = useMemo(
-    () => result
+    () => analysisVersion === "v2" ? combined?.close.suttas ?? [] : result
       ? buildCloseSuttaRanking(
           jodiResult?.adjustedClosePicks ?? result.closePicks,
           result.closeSuttaDroughts,
@@ -618,7 +632,7 @@ export default function AnalysisSection() {
           allMarketsRecords,
         )
       : [],
-    [result, jodiResult, cachedRecords, selectedMarket, openSuttaInput, allMarketsRecords],
+    [analysisVersion, combined, result, jodiResult, cachedRecords, selectedMarket, openSuttaInput, allMarketsRecords],
   )
   const openCopySuttas = useMemo(() => openSuttaRanking.slice(0, copyCount), [openSuttaRanking, copyCount])
   const closeCopySuttas = useMemo(() => closeSuttaRanking.slice(0, copyCount), [closeSuttaRanking, copyCount])
@@ -627,29 +641,30 @@ export default function AnalysisSection() {
     [openCopySuttas, closeCopySuttas],
   )
   const absentDigitsPrediction = useMemo(
-    () => result
+    () => analysisVersion === "v1" && result
       ? buildAbsentDigitsPredictionFromPanels(
           selectedMarket,
           cachedRecords,
           new Date(result.analysisDateISO),
         )
       : null,
-    [result, selectedMarket, cachedRecords],
+    [analysisVersion, result, selectedMarket, cachedRecords],
   )
   const presentDigitsPrediction = useMemo(
-    () => result
+    () => analysisVersion === "v1" && result
       ? buildPresentDigitsPredictionFromPanels(
           selectedMarket, cachedRecords, new Date(result.analysisDateISO),
         )
       : null,
-    [result, selectedMarket, cachedRecords],
+    [analysisVersion, result, selectedMarket, cachedRecords],
   )
-  const suttaAccuracyReport = useMemo(
-    () => result
+  const v1SuttaAccuracyReport = useMemo(
+    () => analysisVersion === "v1" && result
       ? buildSuttaAccuracyReport(selectedMarket, cachedRecords, allMarketsRecords, copyCount)
       : null,
-    [result, selectedMarket, cachedRecords, allMarketsRecords, copyCount],
+    [analysisVersion, result, selectedMarket, cachedRecords, allMarketsRecords, copyCount],
   )
+  const suttaAccuracyReport = analysisVersion === "v2" ? combinedState.accuracy : v1SuttaAccuracyReport
   const displayedCloseAccuracy = openSuttaInput === null
     ? suttaAccuracyReport?.close
     : suttaAccuracyReport?.adjustedClose
@@ -700,6 +715,8 @@ export default function AnalysisSection() {
             <p className="section-subtitle">Choose session, then pick your market</p>
           </div>
         </div>
+
+        <AnalysisVersionSelector version={analysisVersion} onChange={(version) => { setCopyingKey(null); setAnalysisVersion(version) }} disabled={loadingState === "fetching" || loadingState === "analyzing"} />
 
         {/* Session Toggle */}
         <div className="session-toggle">
@@ -803,7 +820,12 @@ export default function AnalysisSection() {
       )}
 
       {/* ── Results ──────────────────────────────────────────────────────── */}
-      {result && loadingState === "done" && (
+      {analysisVersion === "v2" && baseResult && loadingState === "done" && !combined && (
+        <div className="glass-panel" role="status">
+          {combinedState.error ?? (combinedState.analysis?.status === "unavailable" ? combinedState.analysis.reason : "Combining V2 predictions…")}
+        </div>
+      )}
+      {result && loadingState === "done" && (analysisVersion === "v1" || combined) && (
         <>
           {/* ── Status Bar ───────────────────────────────────────────────── */}
           <div className="status-bar glass-panel">
@@ -830,11 +852,15 @@ export default function AnalysisSection() {
             </div>
           </div>
 
-          <div className="confidence-strip glass-panel">
+          {analysisVersion === "v1" && <div className="confidence-strip glass-panel">
             <ConfidenceBadge label="Open" model={result.calibration.open} liveSuttaAcc={suttaAccuracyReport?.open.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
             <ConfidenceBadge label="Close" model={result.calibration.close} liveSuttaAcc={displayedCloseAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
             <ConfidenceBadge label="Jodi" model={result.calibration.jodi} liveSuttaAcc={displayedJodiAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
-          </div>
+          </div>}
+          {analysisVersion === "v2" && combined && <p className="analysis-version-description" role="status">
+            V2 combined · Target {combined.targetDate}{combinedState.pending ? " · Updating V2…" : !combinedState.accuracy && !combinedState.error ? " · Backtesting V2…" : ""}
+            {combinedState.error ? ` · ${combinedState.error}` : ""}
+          </p>}
 
           {(verifiedDpCalls.open || verifiedDpCalls.close) && (
             <div className="confidence-strip kind-forecast-strip glass-panel">
@@ -1051,7 +1077,7 @@ export default function AnalysisSection() {
                 <div className="status-divider" />
                 <div className="status-item">
                   <span className="status-label">Sutta model</span>
-                  <span className="status-value">Production v{SUTTA_MODEL_VERSION}</span>
+                  <span className="status-value">{analysisVersion === "v2" ? "V2 combined" : `Production v${SUTTA_MODEL_VERSION}`}</span>
                 </div>
               </div>
             )}
@@ -1078,7 +1104,7 @@ export default function AnalysisSection() {
             </button>
 
             {suttaCopyExpanded && (
-              <div className="sutta-map-tools">
+              <div className="sutta-map-tools" inert={analysisVersion === "v2" && combinedState.pending ? true : undefined}>
                 <BetCopyDesk
                   copyCount={copyCount}
                   onCopyCountChange={setCopyCount}
@@ -1123,7 +1149,13 @@ export default function AnalysisSection() {
             </div>
 
             <div className="avoid-digit-grid">
-              {digitPanelMode === "present" ? (
+              {analysisVersion === "v2" && combined ? (
+                <>{(["open", "close"] as const).map((side) => <div className="avoid-digit-column" key={side}>
+                  <div className="avoid-digit-column-head"><span className="avoid-digit-label">{side === "open" ? "Open" : "Close"}</span><span className="avoid-digit-meta">V2 experimental</span></div>
+                  <div className="avoid-digit-row">{(digitPanelMode === "present" ? combined[side].presentDigits : combined[side].absentDigits).map((digit) => <div key={digit} className="avoid-digit-chip"><span className="avoid-digit-number">{digit}</span></div>)}</div>
+                  <p className="digit-panel-summary">Combined panel ranking</p>
+                </div>)}</>
+              ) : digitPanelMode === "present" ? (
                 <>
                   <PresentDigitColumn label="Open" prediction={presentDigitsPrediction?.open ?? null} />
                   <PresentDigitColumn label="Close" prediction={presentDigitsPrediction?.close ?? null} />
@@ -1213,6 +1245,9 @@ export default function AnalysisSection() {
 
           {/* ── Tab Navigation ───────────────────────────────────────────── */}
           <AnalysisTabs
+            analysisVersion={analysisVersion}
+            updatingCombined={analysisVersion === "v2" && combinedState.pending}
+            combinedSpPicks={combined ? { open: combined.open.spPicks, close: combined.close.spPicks } : undefined}
             result={result}
             jodiResult={jodiResult}
             backtestReport={backtestReport}
