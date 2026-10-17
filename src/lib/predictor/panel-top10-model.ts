@@ -168,12 +168,12 @@ function lastSeenGap(values: number[], size: number): Float64Array {
  * Score all 220 panels. Returns panel strings ordered best-first, or null when
  * history is too short (< 50 complete draws) for the model.
  */
-export function rankPanelsTop10Model(
+export function scorePanelsTop10Model(
   records: PanelRecord[],
   side: "open" | "close",
   dayName: string,
   todayOpenPanel: string | null = null,
-): string[] | null {
+): Array<{ panel: string; index: number; score: number }> | null {
   const draws = completeDraws(records);
   const n = draws.length;
   if (n < 50) return null;
@@ -275,6 +275,18 @@ export function rankPanelsTop10Model(
   });
 
   scored.sort((x, y) => y.score - x.score || x.index - y.index);
+  return scored;
+}
+
+/** Preserve the existing ranking API; raw scores are available for V2 fusion. */
+export function rankPanelsTop10Model(
+  records: PanelRecord[],
+  side: "open" | "close",
+  dayName: string,
+  todayOpenPanel: string | null = null,
+): string[] | null {
+  const scored = scorePanelsTop10Model(records, side, dayName, todayOpenPanel);
+  if (!scored) return null;
   return scored.map((item) => item.panel);
 }
 
