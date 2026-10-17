@@ -79,6 +79,7 @@ export function analyzeMarket(
     panelModel?: "top10" | "legacy";
     /** Today's declared Open panel. Auto-detected from a trailing Open-only record when omitted. */
     knownOpenPanel?: string | null;
+    includeFullPanelRankings?: boolean;
   } = {},
 ): PredictionResult | null {
   if (records.length === 0) return null;
@@ -422,6 +423,7 @@ export function analyzeMarket(
     openPanelPicks: openPanelPicks.slice(0, PANEL_PREDICTION_COUNT),
     closePicks: closePicks.slice(0, 30),
     closePanelPicks: closePanelPicks.slice(0, PANEL_PREDICTION_COUNT),
+    ...(options.includeFullPanelRankings ? { panelRankings: { open: openPanelPicks, close: closePanelPicks } } : {}),
     closePanelModel,
     declaredOpenPanel: declaredOpenPanel ?? null,
     openDpPicks: openDpPicks.slice(0, 30),
