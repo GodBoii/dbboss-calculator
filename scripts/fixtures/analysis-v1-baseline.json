@@ -106,5 +106,25 @@
       "date": "2026-09-30",
       "sha256": "6909a6ec42b75547c9c1a91390d74f203fb8626b45f1724e49d36c29b943e96a"
     }
+  ],
+  "backtests": [
+    {
+      "market": "Kalyan",
+      "date": "2026-09-15",
+      "days": 7,
+      "sha256": "066b64c91ad338153b889d2fc230628f87acdf0a70a0b4841aad9c8206e4894c"
+    },
+    {
+      "market": "Madhur Day",
+      "date": "2026-09-15",
+      "days": 7,
+      "sha256": "396ccb2aca2a4d3a1d8da071d37a260056de312d4559591222866b6e47c322be"
+    },
+    {
+      "market": "Kalyan Night",
+      "date": "2026-09-15",
+      "days": 7,
+      "sha256": "51b37400829a7c3beb1a5689fb9930c5691e3d37958eca6ee938b5dd5b3333e4"
+    }
   ]
 }
