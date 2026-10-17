@@ -1,5 +1,6 @@
 import type { Dispatch, ReactNode, SetStateAction } from "react"
-import type { JodiAnalysis, PredictionResult } from "@/lib/predictor"
+import type { JodiAnalysis, PredictionResult, PanelPick } from "@/lib/predictor"
+import type { AnalysisVersion } from "@/lib/combined-prediction"
 import type { BacktestReport } from "@/lib/backtest"
 import { PANEL_PREDICTION_COUNT } from "@/lib/prediction-contract"
 import {
@@ -46,6 +47,9 @@ function AnalysisIcon({ kind, size = 16 }: { kind: AnalysisIconKind; size?: numb
 }
 
 interface AnalysisTabsProps {
+  analysisVersion?: AnalysisVersion
+  updatingCombined?: boolean
+  combinedSpPicks?: { open: PanelPick[]; close: PanelPick[] }
   result: PredictionResult
   jodiResult: JodiAnalysis | null
   backtestReport: BacktestReport | null
@@ -61,6 +65,9 @@ interface AnalysisTabsProps {
   dpPrecision: (correct: number, predicted: number) => string
 }
 export function AnalysisTabs({
+  analysisVersion = "v1",
+  updatingCombined = false,
+  combinedSpPicks,
   result,
   jodiResult,
   backtestReport,
@@ -75,6 +82,16 @@ export function AnalysisTabs({
   pct,
   dpPrecision,
 }: AnalysisTabsProps) {
+  const combinedSpSection = (side: "open" | "close") => analysisVersion === "v2" && combinedSpPicks ? (
+    <details className="combined-sp-section">
+      <summary>Top 30 {side === "open" ? "Open" : "Close"} SP panels</summary>
+      <div className="combined-sp-content">
+        <CopyButton label={`Copy ${side === "open" ? "Open" : "Close"} SP 30`} isCopied={copyingKey === `sp-${side}`}
+          onClick={() => handleCopy(`sp-${side}`, formatPicksForCopy(combinedSpPicks[side], `${selectedMarket} - V2 ${side} SP 30`))} />
+        <PicksList picks={combinedSpPicks[side]} getScoreColor={getScoreColor} />
+      </div>
+    </details>
+  ) : null
   const effectivePicksSubTab = picksSubTab === "jodi" && !jodiResult ? "close" : picksSubTab
   const activePickLabel =
     effectivePicksSubTab === "open" ? "Open" : effectivePicksSubTab === "jodi" ? "Jodi Close" : "Close"
@@ -95,7 +112,7 @@ export function AnalysisTabs({
   const maxActiveSuttaCount = Math.max(...Object.values(activeSuttaDistribution), 1)
 
   return (
-    <div className="glass-panel tab-panel">
+    <div className="glass-panel tab-panel" inert={updatingCombined ? true : undefined}>
                 <div className="tab-nav">
                   {(["picks", "stats", "intel"] as const).map((tab) => (
                     <button
@@ -143,7 +160,7 @@ export function AnalysisTabs({
                         <KindForecastCard label="Open Kind Forecast" prediction={result.openKindPrediction} />
                         <div className="picks-hint-row">
                           <p className="picks-hint" style={{ margin: 0 }}>
-                            Top {PANEL_PREDICTION_COUNT} Open panels - Top-10 panel model (market history only)
+                            {analysisVersion === "v2" ? "Top 10 Open panels - V2 combined" : `Top ${PANEL_PREDICTION_COUNT} Open panels - Top-10 panel model (market history only)`}
                           </p>
                           <CopyButton
                             label={`Copy Open ${PANEL_PREDICTION_COUNT}`}
@@ -157,8 +174,10 @@ export function AnalysisTabs({
                           />
                         </div>
                         <PicksList picks={result.openPanelPicks} getScoreColor={getScoreColor} />
+                        {combinedSpSection("open")}
                         <DpFocusSection
-                          title="Open DP Focus"
+                          title={analysisVersion === "v2" ? "Open DP Top 20" : "Open DP Focus"}
+                          description={analysisVersion === "v2" ? "V2 combined DP ranking" : undefined}
                           copyLabel="Copy Open DP"
                           copyKey="open-dp"
                           picks={result.openDpPicks}
@@ -197,7 +216,7 @@ export function AnalysisTabs({
                         <KindForecastCard label="Close Kind Forecast" prediction={result.closeKindPrediction} />
                         <div className="picks-hint-row">
                           <p className="picks-hint" style={{ margin: 0 }}>
-                            {result.closePanelModel === "top10-with-open"
+                            {analysisVersion === "v2" ? "Top 10 Close panels - V2 combined" : result.closePanelModel === "top10-with-open"
                               ? `Top ${PANEL_PREDICTION_COUNT} Close panels - Top-10 model using today's Open ${result.declaredOpenPanel}`
                               : `Top ${PANEL_PREDICTION_COUNT} Close panels - pre-Open ranking; refresh after Open for the Top-10 model`}
                           </p>
@@ -213,8 +232,10 @@ export function AnalysisTabs({
                           />
                         </div>
                         <PicksList picks={result.closePanelPicks} getScoreColor={getScoreColor} />
+                        {combinedSpSection("close")}
                         <DpFocusSection
-                          title="Close DP Focus"
+                          title={analysisVersion === "v2" ? "Close DP Top 20" : "Close DP Focus"}
+                          description={analysisVersion === "v2" ? "V2 combined DP ranking" : undefined}
                           copyLabel="Copy Close DP"
                           copyKey="close-dp"
                           picks={result.closeDpPicks}
@@ -254,9 +275,9 @@ export function AnalysisTabs({
                         <p className="picks-hint">
                           Close predictions adjusted by empirical Open-to-Close history for Open Sutta = <strong>{jodiResult.openSutta}</strong>
                         </p>
-                        <p className="picks-hint picks-hint-calibration">
+                        {analysisVersion === "v1" && <p className="picks-hint picks-hint-calibration">
                           Panel {jodiResult.calibration.panel30.toFixed(1)}% / Sutta {jodiResult.calibration.sutta30.toFixed(1)}% / Strength {(jodiResult.jodiStrength * 100).toFixed(0)}%
-                        </p>
+                        </p>}
     
                         {/* Jodi frequency chart */}
                         <div style={{ marginBottom: "16px" }}>
@@ -339,6 +360,7 @@ export function AnalysisTabs({
                           />
                         </div>
                         <PicksList picks={jodiResult.adjustedClosePanelPicks} getScoreColor={getScoreColor} />
+                        {combinedSpSection("close")}
                         <DpDigitFocusSection
                           title="Jodi Close DP Numbers"
                           copyLabel="Copy DP Numbers"
@@ -420,7 +442,7 @@ export function AnalysisTabs({
                     {backtestReport && (
                       <>
                         <div className="stat-divider" />
-                        <h4 className="stat-section-title">Last 30 Days Backtest</h4>
+                        <h4 className="stat-section-title">Last 30 Days Backtest{analysisVersion === "v2" ? " · V2" : ""}</h4>
                         <p className="picks-hint">
                           {backtestReport.startDate} to {backtestReport.endDate} - {backtestReport.drawsTested} draws replayed with prior history only
                         </p>
