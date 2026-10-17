@@ -1,3 +1,9 @@
+# Branch and deployment policy
+
+- Use `main` for all development, commits, and pushes. Do not create additional branches unless the user explicitly requests one.
+- Keep `main` as the GitHub default branch and the Vercel production branch.
+- Commit each changed file separately and preserve unrelated local changes.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
