@@ -1,0 +1,992 @@
+{
+  "close_pre_sutta6": {
+    "change": {
+      "present_soft": -2.0,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    "blocks": {
+      "development": {
+        "n": 435,
+        "baseline_hits": 248,
+        "candidate_hits": 259,
+        "baseline_rate": 0.5701149425287356,
+        "candidate_rate": 0.5954022988505747,
+        "lift_pp": 2.528735632183908,
+        "day_bootstrap95_pp": [
+          -2.28310502283105,
+          7.284940673289181
+        ],
+        "candidate_only": 56,
+        "baseline_only": 45,
+        "paired_p": 0.31972732070026577
+      },
+      "validation": {
+        "n": 228,
+        "baseline_hits": 146,
+        "candidate_hits": 155,
+        "baseline_rate": 0.6403508771929824,
+        "candidate_rate": 0.6798245614035088,
+        "lift_pp": 3.9473684210526314,
+        "day_bootstrap95_pp": [
+          -2.0080321285140563,
+          10.126582278481013
+        ],
+        "candidate_only": 31,
+        "baseline_only": 22,
+        "paired_p": 0.27167916606550335
+      },
+      "audit": {
+        "n": 237,
+        "baseline_hits": 136,
+        "candidate_hits": 144,
+        "baseline_rate": 0.5738396624472574,
+        "candidate_rate": 0.6075949367088608,
+        "lift_pp": 3.375527426160337,
+        "day_bootstrap95_pp": [
+          -2.7027027027027026,
+          9.723069105691044
+        ],
+        "candidate_only": 23,
+        "baseline_only": 15,
+        "paired_p": 0.2558750795433298
+      },
+      "extension": {
+        "n": 152,
+        "baseline_hits": 81,
+        "candidate_hits": 89,
+        "baseline_rate": 0.5328947368421053,
+        "candidate_rate": 0.5855263157894737,
+        "lift_pp": 5.263157894736842,
+        "day_bootstrap95_pp": [
+          -0.5850563909774433,
+          10.869565217391305
+        ],
+        "candidate_only": 18,
+        "baseline_only": 10,
+        "paired_p": 0.1849333420395851
+      }
+    },
+    "by_month": [
+      {
+        "group": "2026-07",
+        "n": 288,
+        "baseline_hits": 169,
+        "candidate_hits": 168,
+        "delta": -1
+      },
+      {
+        "group": "2026-08",
+        "n": 303,
+        "baseline_hits": 176,
+        "candidate_hits": 198,
+        "delta": 22
+      },
+      {
+        "group": "2026-09",
+        "n": 309,
+        "baseline_hits": 185,
+        "candidate_hits": 192,
+        "delta": 7
+      },
+      {
+        "group": "2026-10",
+        "n": 152,
+        "baseline_hits": 81,
+        "candidate_hits": 89,
+        "delta": 8
+      }
+    ],
+    "by_market": [
+      {
+        "group": "Kalyan",
+        "n": 88,
+        "baseline_hits": 49,
+        "candidate_hits": 52,
+        "delta": 3
+      },
+      {
+        "group": "Kalyan Night",
+        "n": 74,
+        "baseline_hits": 46,
+        "candidate_hits": 46,
+        "delta": 0
+      },
+      {
+        "group": "Madhur Day",
+        "n": 103,
+        "baseline_hits": 54,
+        "candidate_hits": 64,
+        "delta": 10
+      },
+      {
+        "group": "Madhur Night",
+        "n": 84,
+        "baseline_hits": 53,
+        "candidate_hits": 57,
+        "delta": 4
+      },
+      {
+        "group": "Main Bazar",
+        "n": 74,
+        "baseline_hits": 37,
+        "candidate_hits": 47,
+        "delta": 10
+      },
+      {
+        "group": "Milan Day",
+        "n": 87,
+        "baseline_hits": 51,
+        "candidate_hits": 54,
+        "delta": 3
+      },
+      {
+        "group": "Milan Night",
+        "n": 87,
+        "baseline_hits": 55,
+        "candidate_hits": 55,
+        "delta": 0
+      },
+      {
+        "group": "Rajdhani Day",
+        "n": 88,
+        "baseline_hits": 47,
+        "candidate_hits": 49,
+        "delta": 2
+      },
+      {
+        "group": "Rajdhani Night",
+        "n": 74,
+        "baseline_hits": 43,
+        "candidate_hits": 45,
+        "delta": 2
+      },
+      {
+        "group": "Sridevi",
+        "n": 103,
+        "baseline_hits": 65,
+        "candidate_hits": 57,
+        "delta": -8
+      },
+      {
+        "group": "Sridevi Night",
+        "n": 103,
+        "baseline_hits": 60,
+        "candidate_hits": 61,
+        "delta": 1
+      },
+      {
+        "group": "Time Bazar",
+        "n": 87,
+        "baseline_hits": 51,
+        "candidate_hits": 60,
+        "delta": 9
+      }
+    ],
+    "descriptive_all": {
+      "n": 1052,
+      "baseline_hits": 611,
+      "candidate_hits": 647,
+      "baseline_rate": 0.5807984790874525,
+      "candidate_rate": 0.6150190114068441,
+      "lift_pp": 3.4220532319391634,
+      "day_bootstrap95_pp": [
+        0.47388889634771253,
+        6.3725605049892495
+      ],
+      "candidate_only": 128,
+      "baseline_only": 92,
+      "paired_p": 0.018087738755796546
+    }
+  },
+  "open_sutta6": {
+    "change": {
+      "present_soft": 2.0,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    "blocks": {
+      "development": {
+        "n": 435,
+        "baseline_hits": 253,
+        "candidate_hits": 271,
+        "baseline_rate": 0.5816091954022988,
+        "candidate_rate": 0.6229885057471264,
+        "lift_pp": 4.137931034482759,
+        "day_bootstrap95_pp": [
+          0.6756756756756757,
+          7.657657657657657
+        ],
+        "candidate_only": 48,
+        "baseline_only": 30,
+        "paired_p": 0.053544392168502264
+      },
+      "validation": {
+        "n": 228,
+        "baseline_hits": 140,
+        "candidate_hits": 147,
+        "baseline_rate": 0.6140350877192983,
+        "candidate_rate": 0.6447368421052632,
+        "lift_pp": 3.070175438596491,
+        "day_bootstrap95_pp": [
+          -1.2658227848101267,
+          7.76255707762557
+        ],
+        "candidate_only": 19,
+        "baseline_only": 12,
+        "paired_p": 0.28104151505976915
+      },
+      "audit": {
+        "n": 237,
+        "baseline_hits": 144,
+        "candidate_hits": 137,
+        "baseline_rate": 0.6075949367088608,
+        "candidate_rate": 0.5780590717299579,
+        "lift_pp": -2.9535864978902953,
+        "day_bootstrap95_pp": [
+          -7.792207792207792,
+          1.82648401826484
+        ],
+        "candidate_only": 20,
+        "baseline_only": 27,
+        "paired_p": 0.38169339766321275
+      },
+      "extension": {
+        "n": 152,
+        "baseline_hits": 98,
+        "candidate_hits": 94,
+        "baseline_rate": 0.6447368421052632,
+        "candidate_rate": 0.618421052631579,
+        "lift_pp": -2.631578947368421,
+        "day_bootstrap95_pp": [
+          -9.655172413793103,
+          4.827586206896552
+        ],
+        "candidate_only": 14,
+        "baseline_only": 18,
+        "paired_p": 0.5966148958541453
+      }
+    },
+    "by_month": [
+      {
+        "group": "2026-07",
+        "n": 288,
+        "baseline_hits": 164,
+        "candidate_hits": 176,
+        "delta": 12
+      },
+      {
+        "group": "2026-08",
+        "n": 303,
+        "baseline_hits": 185,
+        "candidate_hits": 192,
+        "delta": 7
+      },
+      {
+        "group": "2026-09",
+        "n": 309,
+        "baseline_hits": 188,
+        "candidate_hits": 187,
+        "delta": -1
+      },
+      {
+        "group": "2026-10",
+        "n": 152,
+        "baseline_hits": 98,
+        "candidate_hits": 94,
+        "delta": -4
+      }
+    ],
+    "by_market": [
+      {
+        "group": "Kalyan",
+        "n": 88,
+        "baseline_hits": 53,
+        "candidate_hits": 55,
+        "delta": 2
+      },
+      {
+        "group": "Kalyan Night",
+        "n": 74,
+        "baseline_hits": 47,
+        "candidate_hits": 50,
+        "delta": 3
+      },
+      {
+        "group": "Madhur Day",
+        "n": 103,
+        "baseline_hits": 62,
+        "candidate_hits": 64,
+        "delta": 2
+      },
+      {
+        "group": "Madhur Night",
+        "n": 84,
+        "baseline_hits": 49,
+        "candidate_hits": 51,
+        "delta": 2
+      },
+      {
+        "group": "Main Bazar",
+        "n": 74,
+        "baseline_hits": 49,
+        "candidate_hits": 49,
+        "delta": 0
+      },
+      {
+        "group": "Milan Day",
+        "n": 87,
+        "baseline_hits": 60,
+        "candidate_hits": 60,
+        "delta": 0
+      },
+      {
+        "group": "Milan Night",
+        "n": 87,
+        "baseline_hits": 44,
+        "candidate_hits": 45,
+        "delta": 1
+      },
+      {
+        "group": "Rajdhani Day",
+        "n": 88,
+        "baseline_hits": 56,
+        "candidate_hits": 57,
+        "delta": 1
+      },
+      {
+        "group": "Rajdhani Night",
+        "n": 74,
+        "baseline_hits": 45,
+        "candidate_hits": 43,
+        "delta": -2
+      },
+      {
+        "group": "Sridevi",
+        "n": 103,
+        "baseline_hits": 59,
+        "candidate_hits": 66,
+        "delta": 7
+      },
+      {
+        "group": "Sridevi Night",
+        "n": 103,
+        "baseline_hits": 57,
+        "candidate_hits": 58,
+        "delta": 1
+      },
+      {
+        "group": "Time Bazar",
+        "n": 87,
+        "baseline_hits": 54,
+        "candidate_hits": 51,
+        "delta": -3
+      }
+    ],
+    "descriptive_all": {
+      "n": 1052,
+      "baseline_hits": 635,
+      "candidate_hits": 649,
+      "baseline_rate": 0.6036121673003803,
+      "candidate_rate": 0.6169201520912547,
+      "lift_pp": 1.3307984790874523,
+      "day_bootstrap95_pp": [
+        -1.0302305124743547,
+        3.6829024805828765
+      ],
+      "candidate_only": 101,
+      "baseline_only": 87,
+      "paired_p": 0.3430902789249582
+    }
+  },
+  "close_known_sutta6": {
+    "change": {
+      "present_soft": -0.5,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    "blocks": {
+      "development": {
+        "n": 435,
+        "baseline_hits": 255,
+        "candidate_hits": 260,
+        "baseline_rate": 0.5862068965517241,
+        "candidate_rate": 0.5977011494252874,
+        "lift_pp": 1.1494252873563218,
+        "day_bootstrap95_pp": [
+          -0.44150110375275936,
+          2.73972602739726
+        ],
+        "candidate_only": 8,
+        "baseline_only": 3,
+        "paired_p": 0.2265625
+      },
+      "validation": {
+        "n": 228,
+        "baseline_hits": 150,
+        "candidate_hits": 154,
+        "baseline_rate": 0.6578947368421053,
+        "candidate_rate": 0.6754385964912281,
+        "lift_pp": 1.7543859649122806,
+        "day_bootstrap95_pp": [
+          0.4166666666666667,
+          3.431372549019608
+        ],
+        "candidate_only": 4,
+        "baseline_only": 0,
+        "paired_p": 0.125
+      },
+      "audit": {
+        "n": 237,
+        "baseline_hits": 141,
+        "candidate_hits": 142,
+        "baseline_rate": 0.5949367088607594,
+        "candidate_rate": 0.5991561181434599,
+        "lift_pp": 0.42194092827004215,
+        "day_bootstrap95_pp": [
+          -1.3513513513513513,
+          2.2222222222222223
+        ],
+        "candidate_only": 3,
+        "baseline_only": 2,
+        "paired_p": 1.0
+      },
+      "extension": {
+        "n": 152,
+        "baseline_hits": 93,
+        "candidate_hits": 92,
+        "baseline_rate": 0.6118421052631579,
+        "candidate_rate": 0.6052631578947368,
+        "lift_pp": -0.6578947368421052,
+        "day_bootstrap95_pp": [
+          -2.877697841726619,
+          1.4184397163120568
+        ],
+        "candidate_only": 1,
+        "baseline_only": 2,
+        "paired_p": 1.0
+      }
+    },
+    "by_month": [
+      {
+        "group": "2026-07",
+        "n": 288,
+        "baseline_hits": 169,
+        "candidate_hits": 170,
+        "delta": 1
+      },
+      {
+        "group": "2026-08",
+        "n": 303,
+        "baseline_hits": 187,
+        "candidate_hits": 194,
+        "delta": 7
+      },
+      {
+        "group": "2026-09",
+        "n": 309,
+        "baseline_hits": 190,
+        "candidate_hits": 192,
+        "delta": 2
+      },
+      {
+        "group": "2026-10",
+        "n": 152,
+        "baseline_hits": 93,
+        "candidate_hits": 92,
+        "delta": -1
+      }
+    ],
+    "by_market": [
+      {
+        "group": "Kalyan",
+        "n": 88,
+        "baseline_hits": 56,
+        "candidate_hits": 56,
+        "delta": 0
+      },
+      {
+        "group": "Kalyan Night",
+        "n": 74,
+        "baseline_hits": 43,
+        "candidate_hits": 42,
+        "delta": -1
+      },
+      {
+        "group": "Madhur Day",
+        "n": 103,
+        "baseline_hits": 57,
+        "candidate_hits": 59,
+        "delta": 2
+      },
+      {
+        "group": "Madhur Night",
+        "n": 84,
+        "baseline_hits": 50,
+        "candidate_hits": 51,
+        "delta": 1
+      },
+      {
+        "group": "Main Bazar",
+        "n": 74,
+        "baseline_hits": 44,
+        "candidate_hits": 46,
+        "delta": 2
+      },
+      {
+        "group": "Milan Day",
+        "n": 87,
+        "baseline_hits": 54,
+        "candidate_hits": 54,
+        "delta": 0
+      },
+      {
+        "group": "Milan Night",
+        "n": 87,
+        "baseline_hits": 55,
+        "candidate_hits": 55,
+        "delta": 0
+      },
+      {
+        "group": "Rajdhani Day",
+        "n": 88,
+        "baseline_hits": 53,
+        "candidate_hits": 56,
+        "delta": 3
+      },
+      {
+        "group": "Rajdhani Night",
+        "n": 74,
+        "baseline_hits": 49,
+        "candidate_hits": 50,
+        "delta": 1
+      },
+      {
+        "group": "Sridevi",
+        "n": 103,
+        "baseline_hits": 67,
+        "candidate_hits": 70,
+        "delta": 3
+      },
+      {
+        "group": "Sridevi Night",
+        "n": 103,
+        "baseline_hits": 61,
+        "candidate_hits": 61,
+        "delta": 0
+      },
+      {
+        "group": "Time Bazar",
+        "n": 87,
+        "baseline_hits": 50,
+        "candidate_hits": 48,
+        "delta": -2
+      }
+    ],
+    "descriptive_all": {
+      "n": 1052,
+      "baseline_hits": 639,
+      "candidate_hits": 648,
+      "baseline_rate": 0.6074144486692015,
+      "candidate_rate": 0.6159695817490495,
+      "lift_pp": 0.8555133079847909,
+      "day_bootstrap95_pp": [
+        0.0,
+        1.808336438067371
+      ],
+      "candidate_only": 16,
+      "baseline_only": 7,
+      "paired_p": 0.0931396484375
+    }
+  },
+  "jodi_pre5": {
+    "blocks": {
+      "development": {
+        "n": 435,
+        "baseline_hits": 108,
+        "candidate_hits": 125,
+        "baseline_rate": 0.2482758620689655,
+        "candidate_rate": 0.28735632183908044,
+        "lift_pp": 3.9080459770114944,
+        "day_bootstrap95_pp": [
+          0.9322390572390574,
+          6.83774834437086
+        ],
+        "candidate_only": 50,
+        "baseline_only": 33,
+        "paired_p": 0.07841962481580764
+      },
+      "validation": {
+        "n": 228,
+        "baseline_hits": 68,
+        "candidate_hits": 64,
+        "baseline_rate": 0.2982456140350877,
+        "candidate_rate": 0.2807017543859649,
+        "lift_pp": -1.7543859649122806,
+        "day_bootstrap95_pp": [
+          -5.8558558558558556,
+          2.314814814814815
+        ],
+        "candidate_only": 19,
+        "baseline_only": 23,
+        "paired_p": 0.6439689563703723
+      },
+      "audit": {
+        "n": 237,
+        "baseline_hits": 58,
+        "candidate_hits": 63,
+        "baseline_rate": 0.24472573839662448,
+        "candidate_rate": 0.26582278481012656,
+        "lift_pp": 2.109704641350211,
+        "day_bootstrap95_pp": [
+          -4.814926372155288,
+          8.433734939759036
+        ],
+        "candidate_only": 28,
+        "baseline_only": 23,
+        "paired_p": 0.5758493477318467
+      },
+      "extension": {
+        "n": 152,
+        "baseline_hits": 38,
+        "candidate_hits": 45,
+        "baseline_rate": 0.25,
+        "candidate_rate": 0.29605263157894735,
+        "lift_pp": 4.605263157894736,
+        "day_bootstrap95_pp": [
+          -2.9632936507936507,
+          11.377624497839758
+        ],
+        "candidate_only": 18,
+        "baseline_only": 11,
+        "paired_p": 0.26493089646101
+      }
+    },
+    "by_month": [
+      {
+        "group": "2026-07",
+        "n": 288,
+        "baseline_hits": 74,
+        "candidate_hits": 78,
+        "delta": 4
+      },
+      {
+        "group": "2026-08",
+        "n": 303,
+        "baseline_hits": 79,
+        "candidate_hits": 91,
+        "delta": 12
+      },
+      {
+        "group": "2026-09",
+        "n": 309,
+        "baseline_hits": 81,
+        "candidate_hits": 83,
+        "delta": 2
+      },
+      {
+        "group": "2026-10",
+        "n": 152,
+        "baseline_hits": 38,
+        "candidate_hits": 45,
+        "delta": 7
+      }
+    ],
+    "by_market": [
+      {
+        "group": "Kalyan",
+        "n": 88,
+        "baseline_hits": 22,
+        "candidate_hits": 24,
+        "delta": 2
+      },
+      {
+        "group": "Kalyan Night",
+        "n": 74,
+        "baseline_hits": 17,
+        "candidate_hits": 21,
+        "delta": 4
+      },
+      {
+        "group": "Madhur Day",
+        "n": 103,
+        "baseline_hits": 24,
+        "candidate_hits": 28,
+        "delta": 4
+      },
+      {
+        "group": "Madhur Night",
+        "n": 84,
+        "baseline_hits": 21,
+        "candidate_hits": 26,
+        "delta": 5
+      },
+      {
+        "group": "Main Bazar",
+        "n": 74,
+        "baseline_hits": 16,
+        "candidate_hits": 26,
+        "delta": 10
+      },
+      {
+        "group": "Milan Day",
+        "n": 87,
+        "baseline_hits": 27,
+        "candidate_hits": 23,
+        "delta": -4
+      },
+      {
+        "group": "Milan Night",
+        "n": 87,
+        "baseline_hits": 25,
+        "candidate_hits": 26,
+        "delta": 1
+      },
+      {
+        "group": "Rajdhani Day",
+        "n": 88,
+        "baseline_hits": 20,
+        "candidate_hits": 27,
+        "delta": 7
+      },
+      {
+        "group": "Rajdhani Night",
+        "n": 74,
+        "baseline_hits": 25,
+        "candidate_hits": 16,
+        "delta": -9
+      },
+      {
+        "group": "Sridevi",
+        "n": 103,
+        "baseline_hits": 29,
+        "candidate_hits": 27,
+        "delta": -2
+      },
+      {
+        "group": "Sridevi Night",
+        "n": 103,
+        "baseline_hits": 26,
+        "candidate_hits": 24,
+        "delta": -2
+      },
+      {
+        "group": "Time Bazar",
+        "n": 87,
+        "baseline_hits": 20,
+        "candidate_hits": 29,
+        "delta": 9
+      }
+    ],
+    "descriptive_all": {
+      "n": 1052,
+      "baseline_hits": 272,
+      "candidate_hits": 297,
+      "baseline_rate": 0.2585551330798479,
+      "candidate_rate": 0.282319391634981,
+      "lift_pp": 2.376425855513308,
+      "day_bootstrap95_pp": [
+        0.0,
+        4.698048433489004
+      ],
+      "candidate_only": 115,
+      "baseline_only": 90,
+      "paired_p": 0.09345093417663439
+    }
+  },
+  "jodi_pre6": {
+    "blocks": {
+      "development": {
+        "n": 435,
+        "baseline_hits": 150,
+        "candidate_hits": 175,
+        "baseline_rate": 0.3448275862068966,
+        "candidate_rate": 0.40229885057471265,
+        "lift_pp": 5.747126436781609,
+        "day_bootstrap95_pp": [
+          1.7028544730068058,
+          9.859154929577464
+        ],
+        "candidate_only": 62,
+        "baseline_only": 37,
+        "paired_p": 0.015432364507309008
+      },
+      "validation": {
+        "n": 228,
+        "baseline_hits": 89,
+        "candidate_hits": 101,
+        "baseline_rate": 0.39035087719298245,
+        "candidate_rate": 0.44298245614035087,
+        "lift_pp": 5.263157894736842,
+        "day_bootstrap95_pp": [
+          -0.8547008547008548,
+          12.162162162162163
+        ],
+        "candidate_only": 29,
+        "baseline_only": 17,
+        "paired_p": 0.10380535550410741
+      },
+      "audit": {
+        "n": 237,
+        "baseline_hits": 83,
+        "candidate_hits": 87,
+        "baseline_rate": 0.350210970464135,
+        "candidate_rate": 0.3670886075949367,
+        "lift_pp": 1.6877637130801686,
+        "day_bootstrap95_pp": [
+          -5.092592592592593,
+          7.894736842105263
+        ],
+        "candidate_only": 27,
+        "baseline_only": 23,
+        "paired_p": 0.6718110337653656
+      },
+      "extension": {
+        "n": 152,
+        "baseline_hits": 49,
+        "candidate_hits": 53,
+        "baseline_rate": 0.3223684210526316,
+        "candidate_rate": 0.34868421052631576,
+        "lift_pp": 2.631578947368421,
+        "day_bootstrap95_pp": [
+          -3.9683853673919898,
+          8.823529411764707
+        ],
+        "candidate_only": 18,
+        "baseline_only": 14,
+        "paired_p": 0.5966148958541453
+      }
+    },
+    "by_month": [
+      {
+        "group": "2026-07",
+        "n": 288,
+        "baseline_hits": 95,
+        "candidate_hits": 108,
+        "delta": 13
+      },
+      {
+        "group": "2026-08",
+        "n": 303,
+        "baseline_hits": 115,
+        "candidate_hits": 134,
+        "delta": 19
+      },
+      {
+        "group": "2026-09",
+        "n": 309,
+        "baseline_hits": 112,
+        "candidate_hits": 121,
+        "delta": 9
+      },
+      {
+        "group": "2026-10",
+        "n": 152,
+        "baseline_hits": 49,
+        "candidate_hits": 53,
+        "delta": 4
+      }
+    ],
+    "by_market": [
+      {
+        "group": "Kalyan",
+        "n": 88,
+        "baseline_hits": 33,
+        "candidate_hits": 34,
+        "delta": 1
+      },
+      {
+        "group": "Kalyan Night",
+        "n": 74,
+        "baseline_hits": 26,
+        "candidate_hits": 28,
+        "delta": 2
+      },
+      {
+        "group": "Madhur Day",
+        "n": 103,
+        "baseline_hits": 30,
+        "candidate_hits": 42,
+        "delta": 12
+      },
+      {
+        "group": "Madhur Night",
+        "n": 84,
+        "baseline_hits": 32,
+        "candidate_hits": 36,
+        "delta": 4
+      },
+      {
+        "group": "Main Bazar",
+        "n": 74,
+        "baseline_hits": 23,
+        "candidate_hits": 31,
+        "delta": 8
+      },
+      {
+        "group": "Milan Day",
+        "n": 87,
+        "baseline_hits": 34,
+        "candidate_hits": 36,
+        "delta": 2
+      },
+      {
+        "group": "Milan Night",
+        "n": 87,
+        "baseline_hits": 34,
+        "candidate_hits": 34,
+        "delta": 0
+      },
+      {
+        "group": "Rajdhani Day",
+        "n": 88,
+        "baseline_hits": 29,
+        "candidate_hits": 34,
+        "delta": 5
+      },
+      {
+        "group": "Rajdhani Night",
+        "n": 74,
+        "baseline_hits": 30,
+        "candidate_hits": 26,
+        "delta": -4
+      },
+      {
+        "group": "Sridevi",
+        "n": 103,
+        "baseline_hits": 36,
+        "candidate_hits": 38,
+        "delta": 2
+      },
+      {
+        "group": "Sridevi Night",
+        "n": 103,
+        "baseline_hits": 34,
+        "candidate_hits": 40,
+        "delta": 6
+      },
+      {
+        "group": "Time Bazar",
+        "n": 87,
+        "baseline_hits": 30,
+        "candidate_hits": 37,
+        "delta": 7
+      }
+    ],
+    "descriptive_all": {
+      "n": 1052,
+      "baseline_hits": 371,
+      "candidate_hits": 416,
+      "baseline_rate": 0.3526615969581749,
+      "candidate_rate": 0.39543726235741444,
+      "lift_pp": 4.277566539923954,
+      "day_bootstrap95_pp": [
+        1.3618015941974237,
+        7.102803738317758
+      ],
+      "candidate_only": 136,
+      "baseline_only": 91,
+      "paired_p": 0.003405328947965173
+    }
+  }
+}

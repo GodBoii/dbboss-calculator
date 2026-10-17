@@ -1,0 +1,102 @@
+{
+  "status": "pass",
+  "sampleSize": 12,
+  "productionSourceHashes": {
+    "src/lib/absent-digits.ts": "5f280e346fe8c5d7c4b85d2d70a040b5b08baa7e157d89e48f4cce4e7de125ae",
+    "src/lib/app-version.ts": "5d73779763cfc1475005d6f33d69ed9f9fd959caaf79113c129a8aae035dfb34",
+    "src/lib/backtest.ts": "3cf68636c0ea9a47373a7f1aa294650e6c4f451727077f479d0fb781c68a0f9b",
+    "src/lib/bet-copy-format.ts": "7f15795f6df8bb39ebd397c6f5229265729731be64efd678cf8b9b8a967468c9",
+    "src/lib/combined-accuracy.ts": "78596476a16f4e7dacf4c6156f2f795c1db71c6b62248c5f8efcf57c9e4af571",
+    "src/lib/combined-analysis.worker.ts": "0444a3ceaa42ccd5edab515246cff4a931d156face000d527d1e9260d18ceb69",
+    "src/lib/combined-policy.ts": "c5b6a3b886f52becf299b7277745ee56bcd8342f7d803dae7e0a3656452a78c2",
+    "src/lib/combined-prediction.ts": "2d5643e6e7214988584cbee8b152b05a732a2f5e1dfc876e41613e620447138a",
+    "src/lib/db.ts": "590e5d73af21a3ef79a63a865c4acb2b3ae3ad8f79d4488af6b066253cecb04d",
+    "src/lib/market-history-freshness.ts": "bf30a27216a8b6e634682be9c32ec23fb25481ed1b56490606c8d85be84dd883",
+    "src/lib/market-schedule.ts": "21cf5c07e79e4352b6afb794a0d0e5624c5170fcc862a04d627b905779b3dced",
+    "src/lib/panel-history-supplement.ts": "630931078e4d5f54bca55cd72001c3b5bb8d122a1e23bdb6188e1765c5f7c78e",
+    "src/lib/prediction-contract.ts": "a569097e5067a19976fefc055b97399f4c93f3206e0330368d8de86f542dffcf",
+    "src/lib/predictor.ts": "2480705d8f29a7feaa988fb896e37538c3564b7f00ca09ef6bb2fbf44fcc38b3",
+    "src/lib/present-digits.ts": "504fd117be8f55e8eea7e2f085ab26b546bafdc6e6b5674daea84ed0fff2223b",
+    "src/lib/verified-dp-call.ts": "788a171cd30608239d58e6798cc012a1a99f6b63896d1bbf2df338b5feb2a8f9",
+    "src/lib/live-results/push-server.ts": "2efcf9eb0f9ac14995a014c1e799e46adc77f0fca8f924775980ed27b2eb7d03",
+    "src/lib/live-results/source-parser.ts": "60a51beeba6f2fe418a13b7578c05a23c3e3c1362c852f60e3c194d08310b225",
+    "src/lib/live-results/supabase-server.ts": "d134288181d999d6448389f57238f57ba8146e7a51427bd48866212abc97327b",
+    "src/lib/live-results/time.ts": "64a254aac0771e6583482685a78e2f43b62b1367e0b8b96fac441f42511d5540",
+    "src/lib/live-results/types.ts": "2c337f6eb82853e7bb6426dd1dc87a9340c1e94183032e2d9f6c133f6cd9edce",
+    "src/lib/predictor/analyze.ts": "be3789d72e0f58580f5bc8f22d0b9632ea2ef29d5ae8721f9467f20c2f9e8cef",
+    "src/lib/predictor/calibration.ts": "509e60343d648a17aeaae64d5481f93016a3034fa3a121c7ac21d7e3d3778be7",
+    "src/lib/predictor/data.ts": "bdccaa34db85dda83cc92d5874731c2d3055c3ca8bc31df835f19d46e5266db8",
+    "src/lib/predictor/dp-kind-context.ts": "59967eff6c6923749eab177466d77021e573e9ee678250c33223794753c6d8e7",
+    "src/lib/predictor/dp-panel-model.ts": "3dd12d7ac530ac56c3ca4e55c1e1db90a656b7b2c709f644cc1e8c9aa2b6238b",
+    "src/lib/predictor/jodi.ts": "5eba37ed83a40836df24956ecc1eb58c5e2ac1e9afccb13ae94567b5b2d8ed82",
+    "src/lib/predictor/market-config.ts": "dd825e49af71b411d877185c600cd2acafd217badd07cbb909746e2c344b7562",
+    "src/lib/predictor/operator-psychology.ts": "dc81a0aa09ea7e9637cd910fa34c77293e4af9e2bb8c05a106b3b89799e93b22",
+    "src/lib/predictor/panel-profile.ts": "e0471b97039f4f93566a2933a945f137cfe1aefa88dba4156f10e4ae45119a65",
+    "src/lib/predictor/panel-top10-model.ts": "f7c7fb7938db8beabc650dc025ccb2f9f0d68cfb033e554e2f3397e43503c1e8",
+    "src/lib/predictor/panel-utils.ts": "def7eaeb3879019e3f59654c3bef0539812ea154fb437fc4bb69f8838c393fbf",
+    "src/lib/predictor/precision-kind-overrides.ts": "8634e098dddf0a1502ac47f2ddc7bf419a9fc7d693ed489e7c967cac8f73a5cf",
+    "src/lib/predictor/scoring.ts": "5ca4f5f2df8845480f248b63ab2f15a533eb4aaba1c8e32d088b9426034b7c19",
+    "src/lib/predictor/stats.ts": "052ce8beaf44c3ffa8b0508c4c5db5a98f7f74420aed8c6cef6f9db273a74204",
+    "src/lib/predictor/sutta-signals.ts": "937658fe678de3c3b567f0b4d6b9aa9f37dfad387b60d369a934739ebab2f373",
+    "src/lib/predictor/types.ts": "3b589daef186f7991892aa1b4a81178210e7c3fd8a0226d904c3ed9bcf06a187",
+    "src/lib/sutta-model/adjusted-close.ts": "d0738635227e8e140d5a3d17f27453ee5c9130eee2717815e8eb36c070515cff",
+    "src/lib/sutta-model/close.ts": "a39e6e5e9608a15dbb011ee78bf91ba4ecf29a3bba08889e82446f5051b5b01c",
+    "src/lib/sutta-model/index.ts": "a76904eea9fef8d6ee7f14d1f40f02d7a02a6044f42ac6c3a4d51f81fa455275",
+    "src/lib/sutta-model/jodi.ts": "4931d59591d664586cf76223cf021fabe9af4fc26959762ef203295b79a3ef4d",
+    "src/lib/sutta-model/open.ts": "9b7d085ef153f4b4fa120f3effbe8c1f5b7f52c012eff892722bda2586a3d30f",
+    "src/lib/sutta-model/production.ts": "b26023cffe6a9b304b0e1a25de4cef5e80e899c4cd3f2c164b0859bddf082839",
+    "src/lib/sutta-model/shared.ts": "8bae20051a5ad209f685ed53f42c5b348c9237efc6aac7f4d955f0a53dd71b8e",
+    "src/lib/sutta-model/types.ts": "56528e9ace42360da568c142413052898a6ea6cb0a9b8c9d2b6fd19eaa7cda85",
+    "src/lib/sutta-model/v2-recency.ts": "9ab76d9bf062ecea69944f51a6cff992da26edfa9c66dffd0b888ed7b0635c1c"
+  },
+  "events": {
+    "Kalyan|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Kalyan Night|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Madhur Day|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Madhur Night|2026-10-06": {
+      "differences": 0,
+      "examples": []
+    },
+    "Main Bazar|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Milan Day|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Milan Night|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Rajdhani Day|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Rajdhani Night|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Sridevi|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Sridevi Night|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    },
+    "Time Bazar|2026-10-08": {
+      "differences": 0,
+      "examples": []
+    }
+  }
+}

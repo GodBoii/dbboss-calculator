@@ -1,0 +1,179 @@
+{
+  "checks": [
+    {
+      "name": "selection frozen",
+      "pass": true,
+      "detail": "selection.json changed after freezing"
+    },
+    {
+      "name": "protocol frozen",
+      "pass": true,
+      "detail": "protocol.json changed after freezing"
+    },
+    {
+      "name": "production policy source unchanged",
+      "pass": true,
+      "detail": "src/lib/combined-policy.ts changed since dump_policy.cjs"
+    },
+    {
+      "name": "V1 replay hash",
+      "pass": true,
+      "detail": "v1 replay changed"
+    },
+    {
+      "name": "V2 extension hash",
+      "pass": true,
+      "detail": "v2 extension changed"
+    },
+    {
+      "name": "sealed source hashes consistent",
+      "pass": true,
+      "detail": "v1/v2 recorded different production sources"
+    },
+    {
+      "name": "fresh csv hash chain",
+      "pass": true,
+      "detail": "fresh_rows.csv does not match its audit/metadata/parity records"
+    },
+    {
+      "name": "fresh replay hash chain",
+      "pass": true,
+      "detail": "fresh replay does not match its metadata/parity records"
+    },
+    {
+      "name": "fresh data pinned to selection",
+      "pass": true,
+      "detail": "fresh files were produced for a different selection"
+    },
+    {
+      "name": "feature parity passed",
+      "pass": true,
+      "detail": "current sources no longer reproduce the sealed feature values"
+    },
+    {
+      "name": "production sources match feature_parity",
+      "pass": true,
+      "detail": "src/lib changed since that evidence file was produced"
+    },
+    {
+      "name": "production sources match fresh_meta",
+      "pass": true,
+      "detail": "src/lib changed since that evidence file was produced"
+    },
+    {
+      "name": "production sources match october parity",
+      "pass": true,
+      "detail": "src/lib changed since that evidence file was produced"
+    },
+    {
+      "name": "production sources match fresh parity",
+      "pass": true,
+      "detail": "src/lib changed since that evidence file was produced"
+    },
+    {
+      "name": "identity gate Time Bazar",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Milan Day",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Sridevi",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Madhur Day",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Kalyan",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Rajdhani Day",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Sridevi Night",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Kalyan Night",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Madhur Night",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Milan Night",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Rajdhani Night",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "identity gate Main Bazar",
+      "pass": true,
+      "detail": "overlap 180 matched 180"
+    },
+    {
+      "name": "replay rows",
+      "pass": true,
+      "detail": "got 1052"
+    },
+    {
+      "name": "block counts",
+      "pass": true,
+      "detail": "{'development': 435, 'validation': 228, 'audit': 237, 'extension': 152} != {'development': 435, 'validation': 228, 'audit': 237, 'extension': 152}"
+    },
+    {
+      "name": "strict priors",
+      "pass": true,
+      "detail": "a replay row has future or short history"
+    },
+    {
+      "name": "selection re-derivation",
+      "pass": true,
+      "detail": "mismatched items: []"
+    },
+    {
+      "name": "October parity reconstruction",
+      "pass": true,
+      "detail": "64 list comparisons; "
+    },
+    {
+      "name": "fresh dates strictly after sealed window",
+      "pass": true,
+      "detail": "['2026-10-16', '2026-10-17']"
+    },
+    {
+      "name": "Fresh parity reconstruction",
+      "pass": true,
+      "detail": "56 list comparisons; "
+    },
+    {
+      "name": "list sizes",
+      "pass": true,
+      "detail": "a parity list has an unexpected length"
+    }
+  ],
+  "passed": 34,
+  "failed": 0,
+  "selectionSHA256": "999b925e0994e21b96cdc78fb7004e92058b5d9e59725fe86c68d08a33b2eff6",
+  "protocolSHA256": "6c483d625453d181622a417d873505a7178601c4672d6df78a6804a1fad6cd17",
+  "freshReplaySHA256": "5ecf03266bb9a5cecc97f5764d21bba07c121e8b4d284755d4594e4fd3daa5e2"
+}

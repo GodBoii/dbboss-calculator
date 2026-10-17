@@ -1,0 +1,1010 @@
+{
+  "protocolSHA256": "6c483d625453d181622a417d873505a7178601c4672d6df78a6804a1fad6cd17",
+  "replaySHA256": "e9a5c9b9e6c3cd3d408cdd89d25842f5eb38d63f1556e389033e83ddd3ceb63a",
+  "extensionSHA256": "d3e8c42ee17ac16c9ec8e78337a8c65d1c91338e84498fdceed80d64a13ca582",
+  "policySHA256": "c5b6a3b886f52becf299b7277745ee56bcd8342f7d803dae7e0a3656452a78c2",
+  "blocks": {
+    "development": 435,
+    "validation": 228,
+    "audit": 237,
+    "extension": 152
+  },
+  "candidateCount": 69,
+  "candidates": [
+    {
+      "present_soft": -2.0,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -2.0,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -2.0,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -2.0,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -2.0,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -2.0,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -2.0,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -1.0,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -1.0,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -1.0,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -1.0,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -1.0,
+      "kind_tilt": 0.0,
+      "present_soft_only": true
+    },
+    {
+      "present_soft": -1.0,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -1.0,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -1.0,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.5,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.5,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.5,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.5,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.5,
+      "kind_tilt": 0.0,
+      "present_soft_only": true
+    },
+    {
+      "present_soft": -0.5,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.5,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.5,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.25,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.25,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.25,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.25,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.25,
+      "kind_tilt": 0.0,
+      "present_soft_only": true
+    },
+    {
+      "present_soft": -0.25,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.25,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": -0.25,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.0,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.0,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.0,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.0,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.0,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.0,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.0,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.25,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.25,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.25,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.25,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.25,
+      "kind_tilt": 0.0,
+      "present_soft_only": true
+    },
+    {
+      "present_soft": 0.25,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.25,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.25,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.5,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.5,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.5,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.5,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.5,
+      "kind_tilt": 0.0,
+      "present_soft_only": true
+    },
+    {
+      "present_soft": 0.5,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.5,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 0.5,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 1.0,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 1.0,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 1.0,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 1.0,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 1.0,
+      "kind_tilt": 0.0,
+      "present_soft_only": true
+    },
+    {
+      "present_soft": 1.0,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 1.0,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 1.0,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 2.0,
+      "kind_tilt": -1.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 2.0,
+      "kind_tilt": -0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 2.0,
+      "kind_tilt": -0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 2.0,
+      "kind_tilt": 0.0,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 2.0,
+      "kind_tilt": 0.25,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 2.0,
+      "kind_tilt": 0.5,
+      "present_soft_only": false
+    },
+    {
+      "present_soft": 2.0,
+      "kind_tilt": 1.0,
+      "present_soft_only": false
+    }
+  ],
+  "items": [
+    {
+      "kind": "panel",
+      "channel": "open",
+      "endpoint": "all10",
+      "task": "all10",
+      "baseline": {
+        "development": {
+          "hits": 37,
+          "n": 435,
+          "rate": 0.08505747126436781
+        },
+        "validation": {
+          "hits": 23,
+          "n": 228,
+          "rate": 0.10087719298245613
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "production",
+        "development": {
+          "hits": 37,
+          "n": 435,
+          "rate": 0.08505747126436781
+        },
+        "validation": {
+          "hits": 23,
+          "n": 228,
+          "rate": 0.10087719298245613
+        }
+      }
+    },
+    {
+      "kind": "panel",
+      "channel": "open",
+      "endpoint": "sp30",
+      "task": "sp30",
+      "baseline": {
+        "development": {
+          "hits": 119,
+          "n": 331,
+          "rate": 0.3595166163141994
+        },
+        "validation": {
+          "hits": 57,
+          "n": 169,
+          "rate": 0.33727810650887574
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "production",
+        "development": {
+          "hits": 119,
+          "n": 331,
+          "rate": 0.3595166163141994
+        },
+        "validation": {
+          "hits": 57,
+          "n": 169,
+          "rate": 0.33727810650887574
+        }
+      }
+    },
+    {
+      "kind": "panel",
+      "channel": "open",
+      "endpoint": "dp20",
+      "task": "dp20",
+      "baseline": {
+        "development": {
+          "hits": 33,
+          "n": 103,
+          "rate": 0.32038834951456313
+        },
+        "validation": {
+          "hits": 16,
+          "n": 58,
+          "rate": 0.27586206896551724
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "production",
+        "development": {
+          "hits": 33,
+          "n": 103,
+          "rate": 0.32038834951456313
+        },
+        "validation": {
+          "hits": 16,
+          "n": 58,
+          "rate": 0.27586206896551724
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "open",
+      "endpoint": "sp30",
+      "task": "sutta6",
+      "baseline": {
+        "development": {
+          "hits": 253,
+          "n": 435,
+          "rate": 0.5816091954022988
+        },
+        "validation": {
+          "hits": 140,
+          "n": 228,
+          "rate": 0.6140350877192983
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 2.0,
+          "kind_tilt": -1.0,
+          "present_soft_only": false
+        },
+        "label": "present_soft=2;kind_tilt=-1",
+        "development": {
+          "hits": 271,
+          "n": 435,
+          "rate": 0.6229885057471264
+        },
+        "validation": {
+          "hits": 147,
+          "n": 228,
+          "rate": 0.6447368421052632
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "open",
+      "endpoint": "sp30",
+      "task": "present2",
+      "baseline": {
+        "development": {
+          "hits": 33,
+          "n": 435,
+          "rate": 0.07586206896551724
+        },
+        "validation": {
+          "hits": 14,
+          "n": 228,
+          "rate": 0.06140350877192982
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 2.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "present_soft=2",
+        "development": {
+          "hits": 35,
+          "n": 435,
+          "rate": 0.08045977011494253
+        },
+        "validation": {
+          "hits": 18,
+          "n": 228,
+          "rate": 0.07894736842105263
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "open",
+      "endpoint": "sp30",
+      "task": "absent2",
+      "baseline": {
+        "development": {
+          "hits": 228,
+          "n": 435,
+          "rate": 0.5241379310344828
+        },
+        "validation": {
+          "hits": 135,
+          "n": 228,
+          "rate": 0.5921052631578947
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": 0.25,
+          "present_soft_only": false
+        },
+        "label": "kind_tilt=0.25",
+        "development": {
+          "hits": 229,
+          "n": 435,
+          "rate": 0.5264367816091954
+        },
+        "validation": {
+          "hits": 136,
+          "n": 228,
+          "rate": 0.5964912280701754
+        }
+      }
+    },
+    {
+      "kind": "panel",
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "task": "all10",
+      "baseline": {
+        "development": {
+          "hits": 31,
+          "n": 435,
+          "rate": 0.07126436781609195
+        },
+        "validation": {
+          "hits": 17,
+          "n": 228,
+          "rate": 0.07456140350877193
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": -0.5,
+          "present_soft_only": false
+        },
+        "label": "kind_tilt=-0.5",
+        "development": {
+          "hits": 33,
+          "n": 435,
+          "rate": 0.07586206896551724
+        },
+        "validation": {
+          "hits": 18,
+          "n": 228,
+          "rate": 0.07894736842105263
+        }
+      }
+    },
+    {
+      "kind": "panel",
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "task": "sp30",
+      "baseline": {
+        "development": {
+          "hits": 87,
+          "n": 331,
+          "rate": 0.2628398791540785
+        },
+        "validation": {
+          "hits": 40,
+          "n": 164,
+          "rate": 0.24390243902439024
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "production",
+        "development": {
+          "hits": 87,
+          "n": 331,
+          "rate": 0.2628398791540785
+        },
+        "validation": {
+          "hits": 40,
+          "n": 164,
+          "rate": 0.24390243902439024
+        }
+      }
+    },
+    {
+      "kind": "panel",
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "task": "dp20",
+      "baseline": {
+        "development": {
+          "hits": 21,
+          "n": 103,
+          "rate": 0.20388349514563106
+        },
+        "validation": {
+          "hits": 17,
+          "n": 63,
+          "rate": 0.2698412698412698
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": -1.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "present_soft=-1",
+        "development": {
+          "hits": 22,
+          "n": 103,
+          "rate": 0.21359223300970873
+        },
+        "validation": {
+          "hits": 18,
+          "n": 63,
+          "rate": 0.2857142857142857
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "task": "sutta6",
+      "baseline": {
+        "development": {
+          "hits": 248,
+          "n": 435,
+          "rate": 0.5701149425287356
+        },
+        "validation": {
+          "hits": 146,
+          "n": 228,
+          "rate": 0.6403508771929824
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": -2.0,
+          "kind_tilt": -1.0,
+          "present_soft_only": false
+        },
+        "label": "present_soft=-2;kind_tilt=-1",
+        "development": {
+          "hits": 259,
+          "n": 435,
+          "rate": 0.5954022988505747
+        },
+        "validation": {
+          "hits": 155,
+          "n": 228,
+          "rate": 0.6798245614035088
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "task": "present2",
+      "baseline": {
+        "development": {
+          "hits": 24,
+          "n": 435,
+          "rate": 0.05517241379310345
+        },
+        "validation": {
+          "hits": 9,
+          "n": 228,
+          "rate": 0.039473684210526314
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": -2.0,
+          "kind_tilt": -0.25,
+          "present_soft_only": false
+        },
+        "label": "present_soft=-2;kind_tilt=-0.25",
+        "development": {
+          "hits": 27,
+          "n": 435,
+          "rate": 0.06206896551724138
+        },
+        "validation": {
+          "hits": 13,
+          "n": 228,
+          "rate": 0.05701754385964912
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "task": "absent2",
+      "baseline": {
+        "development": {
+          "hits": 216,
+          "n": 435,
+          "rate": 0.496551724137931
+        },
+        "validation": {
+          "hits": 108,
+          "n": 228,
+          "rate": 0.47368421052631576
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": -1.0,
+          "kind_tilt": 0.25,
+          "present_soft_only": false
+        },
+        "label": "present_soft=-1;kind_tilt=0.25",
+        "development": {
+          "hits": 217,
+          "n": 435,
+          "rate": 0.49885057471264366
+        },
+        "validation": {
+          "hits": 122,
+          "n": 228,
+          "rate": 0.5350877192982456
+        }
+      }
+    },
+    {
+      "kind": "panel",
+      "channel": "close_known",
+      "endpoint": "all10",
+      "task": "all10",
+      "baseline": {
+        "development": {
+          "hits": 39,
+          "n": 435,
+          "rate": 0.0896551724137931
+        },
+        "validation": {
+          "hits": 21,
+          "n": 228,
+          "rate": 0.09210526315789473
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "production",
+        "development": {
+          "hits": 39,
+          "n": 435,
+          "rate": 0.0896551724137931
+        },
+        "validation": {
+          "hits": 21,
+          "n": 228,
+          "rate": 0.09210526315789473
+        }
+      }
+    },
+    {
+      "kind": "panel",
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "task": "sp30",
+      "baseline": {
+        "development": {
+          "hits": 99,
+          "n": 331,
+          "rate": 0.2990936555891239
+        },
+        "validation": {
+          "hits": 52,
+          "n": 164,
+          "rate": 0.3170731707317073
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "production",
+        "development": {
+          "hits": 99,
+          "n": 331,
+          "rate": 0.2990936555891239
+        },
+        "validation": {
+          "hits": 52,
+          "n": 164,
+          "rate": 0.3170731707317073
+        }
+      }
+    },
+    {
+      "kind": "panel",
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "task": "dp20",
+      "baseline": {
+        "development": {
+          "hits": 24,
+          "n": 103,
+          "rate": 0.23300970873786409
+        },
+        "validation": {
+          "hits": 22,
+          "n": 63,
+          "rate": 0.3492063492063492
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 0.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "production",
+        "development": {
+          "hits": 24,
+          "n": 103,
+          "rate": 0.23300970873786409
+        },
+        "validation": {
+          "hits": 22,
+          "n": 63,
+          "rate": 0.3492063492063492
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "task": "sutta6",
+      "baseline": {
+        "development": {
+          "hits": 255,
+          "n": 435,
+          "rate": 0.5862068965517241
+        },
+        "validation": {
+          "hits": 150,
+          "n": 228,
+          "rate": 0.6578947368421053
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": -0.5,
+          "kind_tilt": 0.0,
+          "present_soft_only": false
+        },
+        "label": "present_soft=-0.5",
+        "development": {
+          "hits": 260,
+          "n": 435,
+          "rate": 0.5977011494252874
+        },
+        "validation": {
+          "hits": 154,
+          "n": 228,
+          "rate": 0.6754385964912281
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "task": "present2",
+      "baseline": {
+        "development": {
+          "hits": 27,
+          "n": 435,
+          "rate": 0.06206896551724138
+        },
+        "validation": {
+          "hits": 15,
+          "n": 228,
+          "rate": 0.06578947368421052
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": 1.0,
+          "kind_tilt": 0.0,
+          "present_soft_only": true
+        },
+        "label": "present_soft=1;present_soft_only",
+        "development": {
+          "hits": 30,
+          "n": 435,
+          "rate": 0.06896551724137931
+        },
+        "validation": {
+          "hits": 17,
+          "n": 228,
+          "rate": 0.07456140350877193
+        }
+      }
+    },
+    {
+      "kind": "derived",
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "task": "absent2",
+      "baseline": {
+        "development": {
+          "hits": 211,
+          "n": 435,
+          "rate": 0.4850574712643678
+        },
+        "validation": {
+          "hits": 131,
+          "n": 228,
+          "rate": 0.5745614035087719
+        }
+      },
+      "selected": {
+        "change": {
+          "present_soft": -0.25,
+          "kind_tilt": 1.0,
+          "present_soft_only": false
+        },
+        "label": "present_soft=-0.25;kind_tilt=1",
+        "development": {
+          "hits": 222,
+          "n": 435,
+          "rate": 0.5103448275862069
+        },
+        "validation": {
+          "hits": 133,
+          "n": 228,
+          "rate": 0.5833333333333334
+        }
+      }
+    }
+  ]
+}

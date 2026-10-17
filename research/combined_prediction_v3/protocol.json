@@ -1,0 +1,55 @@
+{
+  "study": "combined-prediction-v3",
+  "hypothesis": "The production combined model (COMBINED_POLICY, combined-weighted-v1) can be improved by two previously unused degrees of freedom: the soft present-digit probabilities from the present-digit model, and an explicit SP/DP kind-mass tilt. All candidates are evaluated against the actual frozen production policy, not a no-adjustment baseline.",
+  "source_replays": {
+    "history": "research/combined_prediction_v1/replay.jsonl.gz",
+    "history_metadata": "research/combined_prediction_v1/replay_metadata.json",
+    "extension": "research/combined_prediction_v2/extension_replay.jsonl.gz",
+    "extension_metadata": "research/combined_prediction_v2/extension_replay_metadata.json"
+  },
+  "production_policy_source": "src/lib/combined-policy.ts",
+  "blocks": {
+    "development": ["2026-07-04", "2026-08-16"],
+    "validation": ["2026-08-17", "2026-09-07"],
+    "audit": ["2026-09-08", "2026-09-30"],
+    "extension": ["2026-10-01", "2026-10-15"]
+  },
+  "minimum_history": 180,
+  "seed": 20261017,
+  "bootstrap_samples": 10000,
+  "channels": ["open", "close_pre", "close_known"],
+  "panel_tasks": {
+    "all10": ["all", 10],
+    "all30": ["all", 30],
+    "sp30": ["SP", 30],
+    "dp10": ["DP", 10],
+    "dp20": ["DP", 20],
+    "dp30": ["DP", 30]
+  },
+  "primary_panel_task": { "all10": "all10", "sp30": "sp30", "dp20": "dp20" },
+  "derived_tasks": ["sutta6", "present2", "absent2"],
+  "candidates": {
+    "present_soft_weights": [-2, -1, -0.5, -0.25, 0.25, 0.5, 1, 2],
+    "kind_tilts": [-1, -0.5, -0.25, 0.25, 0.5, 1],
+    "present_soft_only_weights": [-1, -0.5, -0.25, 0.25, 0.5, 1]
+  },
+  "selection": {
+    "step_1": "Keep candidates whose development rate is at least the production development rate for the same task.",
+    "step_2": "Among survivors, choose the highest validation rate; ties break on lower added complexity, then higher development rate.",
+    "step_3": "If no candidate survives step 1, keep production unchanged for that task.",
+    "note": "The extension block is scored only after selection.json is written and hashed. The audit block was used to select the production policy itself and is descriptive only."
+  },
+  "limitations": [
+    "Retrospective experiment on previously inspected dates. The production policy was selected on development/validation/audit blocks by combined_prediction_v1.",
+    "The October extension was used by combined_prediction_v2 to select different candidates; it is only semi-fresh for the new candidates defined here, which were never fitted or selected on it.",
+    "Panel and DP model coefficients are frozen production code; they are not refitted here.",
+    "No production files, settings, or user-facing predictions are changed.",
+    "SP/DP rates are conditional on the actual panel type; all10/all30 rates use every event.",
+    "The soft present-digit probabilities were exported by combined_prediction_v1 and never used by any candidate in v1 or v2."
+  ],
+  "verify": {
+    "replay_rows": 1052,
+    "replay_sha256": "see replay_metadata.json",
+    "extension_sha256": "see extension_replay_metadata.json"
+  }
+}
