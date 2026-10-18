@@ -45,7 +45,8 @@ function usuallyClosedThisWeekday(dates: string[], marketDate: string): boolean 
 
 /** A six-hour-old snapshot must still contain results already due today. */
 export function isMarketHistoryFresh(records: PanelRecord[], marketName: string, now: Date): boolean {
-  const newestSavedAt = records.reduce((max, record) => Math.max(max, record.savedAt ?? 0), 0)
+  // One newly saved row must not make an old or partially updated snapshot fresh.
+  const newestSavedAt = records.reduce((min, record) => Math.min(min, record.savedAt ?? 0), Infinity)
   const dates = records.map(getRecordISODate).filter((date): date is string => date !== null).sort()
   const newestDate = dates.at(-1)
   const requiredStart = newestDate ? historicalCutoffISO(newestDate) : null
@@ -54,7 +55,7 @@ export function isMarketHistoryFresh(records: PanelRecord[], marketName: string,
   const coversWindow = Boolean(
     dates[0] && startTolerance && dates[0] <= startTolerance.toISOString().slice(0, 10),
   )
-  if (records.length <= 50 || !coversWindow || newestSavedAt <= 0 || now.getTime() - newestSavedAt >= CACHE_MAX_AGE_MS) {
+  if (records.length <= 50 || !coversWindow || !Number.isFinite(newestSavedAt) || newestSavedAt <= 0 || newestSavedAt > now.getTime() + 60_000 || now.getTime() - newestSavedAt >= CACHE_MAX_AGE_MS) {
     return false
   }
 
