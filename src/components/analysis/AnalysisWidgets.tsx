@@ -1,7 +1,5 @@
 import type {
   DpDigitFocus,
-  JodiCalibration,
-  ModelCalibration,
   PanelKind,
   PanelKindPrediction,
   PanelPick,
@@ -15,46 +13,16 @@ export function formatDpDigitFocusForCopy(focus: DpDigitFocus, _header: string):
   return focus.digits.join("-")
 }
 
-function levelLabel(level: ModelCalibration["level"]) {
-  if (level === "strong") return "Strong"
-  if (level === "fair") return "Fair"
-  return "Weak"
-}
-
-export function ConfidenceBadge({
-  label,
-  model,
-  liveSuttaAcc,
-  liveSuttaLabel = "7d live",
-}: {
-  label: string
-  model: ModelCalibration | JodiCalibration
-  liveSuttaAcc?: number | null
-  liveSuttaLabel?: string
+export function ConfidenceBadge({label, panelHits, panelDraws, panelLabel = "Panel Top 10", liveSuttaAcc, liveSuttaLabel = "7d live"}: {
+  label:string; panelHits?:number; panelDraws?:number; panelLabel?:string; liveSuttaAcc?:number|null; liveSuttaLabel?:string
 }) {
-  const jodiStrength = "strength" in model ? model.strength : null
-  return (
-    <div className={`confidence-badge confidence-badge--${model.level}`}>
-      <div className="confidence-badge-head">
-        <span className="confidence-label">{label}</span>
-        <span className="confidence-level">{levelLabel(model.level)}</span>
-      </div>
-      <div className="confidence-metrics">
-        <span>Panel@30 {model.panel30.toFixed(1)}%</span>
-        {liveSuttaAcc != null ? (
-          <span style={{ color: liveSuttaAcc >= 60 ? "#4ade80" : liveSuttaAcc >= 40 ? "#facc15" : "#f87171" }}>
-            Sutta {liveSuttaAcc.toFixed(1)}%
-            <span style={{ fontSize: "9px", opacity: 0.7, marginLeft: "3px" }}>{liveSuttaLabel}</span>
-          </span>
-        ) : (
-          <span>Sutta@30 {model.sutta30.toFixed(1)}%</span>
-        )}
-      </div>
-      {jodiStrength !== null && (
-        <div className="confidence-foot">Jodi strength {(jodiStrength * 100).toFixed(0)}%</div>
-      )}
+  return <div className="confidence-badge">
+    <div className="confidence-badge-head"><span className="confidence-label">{label}</span><span className="confidence-level">Historical replay</span></div>
+    <div className="confidence-metrics">
+      <span>{panelDraws ? `${panelLabel} ${(100*(panelHits ?? 0)/panelDraws).toFixed(1)}% (${panelHits}/${panelDraws}), 30d` : "Panel replay pending"}</span>
+      <span>{liveSuttaAcc != null ? `Sutta ${liveSuttaAcc.toFixed(1)}% · ${liveSuttaLabel}` : "Sutta replay pending"}</span>
     </div>
-  )
+  </div>
 }
 
 // ─── CopyButton Component ────────────────────────────────────────────────────
