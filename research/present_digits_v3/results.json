@@ -1,0 +1,2668 @@
+{
+  "latestActualDate": "2026-10-17",
+  "strictTarget": "both selected digits occur in the same panel",
+  "candidateCount": 26,
+  "selectedChallenger": "pool_all_75",
+  "periods": {
+    "development": [
+      "2021-01-01",
+      "2023-12-31"
+    ],
+    "validation": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "confirmation": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "recent": [
+      "2026-01-01",
+      "2026-10-17"
+    ],
+    "last7": [
+      "2026-10-11",
+      "2026-10-17"
+    ],
+    "last30": [
+      "2026-09-18",
+      "2026-10-17"
+    ],
+    "last90": [
+      "2026-07-20",
+      "2026-10-17"
+    ],
+    "last180": [
+      "2026-04-21",
+      "2026-10-17"
+    ]
+  },
+  "comparisons": {
+    "development": {
+      "joint_180": {
+        "events": 15832,
+        "hits": 921,
+        "baselineHits": 921,
+        "accuracy": 0.0581733198585144,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.05262852457750828
+      },
+      "pool_side_25": {
+        "events": 15832,
+        "hits": 944,
+        "baselineHits": 921,
+        "accuracy": 0.05962607377463365,
+        "netHits": 23,
+        "candidateOnly": 155,
+        "baselineOnly": 132,
+        "pairBrier": 0.052531948423097365
+      },
+      "pool_side_50": {
+        "events": 15832,
+        "hits": 950,
+        "baselineHits": 921,
+        "accuracy": 0.06000505305709954,
+        "netHits": 29,
+        "candidateOnly": 229,
+        "baselineOnly": 200,
+        "pairBrier": 0.05246386388851994
+      },
+      "pool_side_75": {
+        "events": 15832,
+        "hits": 947,
+        "baselineHits": 921,
+        "accuracy": 0.0598155634158666,
+        "netHits": 26,
+        "candidateOnly": 440,
+        "baselineOnly": 414,
+        "pairBrier": 0.052424270973775985
+      },
+      "pool_all_25": {
+        "events": 15832,
+        "hits": 946,
+        "baselineHits": 921,
+        "accuracy": 0.05975240020212228,
+        "netHits": 25,
+        "candidateOnly": 155,
+        "baselineOnly": 130,
+        "pairBrier": 0.052529964666585695
+      },
+      "pool_all_50": {
+        "events": 15832,
+        "hits": 949,
+        "baselineHits": 921,
+        "accuracy": 0.05994188984335523,
+        "netHits": 28,
+        "candidateOnly": 213,
+        "baselineOnly": 185,
+        "pairBrier": 0.05246038051905168
+      },
+      "pool_all_75": {
+        "events": 15832,
+        "hits": 958,
+        "baselineHits": 921,
+        "accuracy": 0.060510358767054066,
+        "netHits": 37,
+        "candidateOnly": 408,
+        "baselineOnly": 371,
+        "pairBrier": 0.05241977213490622
+      },
+      "sutta_25": {
+        "events": 15832,
+        "hits": 941,
+        "baselineHits": 921,
+        "accuracy": 0.05943658413340071,
+        "netHits": 20,
+        "candidateOnly": 186,
+        "baselineOnly": 166,
+        "pairBrier": 0.05253633601020204
+      },
+      "sutta_50": {
+        "events": 15832,
+        "hits": 920,
+        "baselineHits": 921,
+        "accuracy": 0.05811015664477009,
+        "netHits": -1,
+        "candidateOnly": 399,
+        "baselineOnly": 400,
+        "pairBrier": 0.05248046165186742
+      },
+      "ridge_context_100_25": {
+        "events": 15832,
+        "hits": 934,
+        "baselineHits": 921,
+        "accuracy": 0.0589944416371905,
+        "netHits": 13,
+        "candidateOnly": 614,
+        "baselineOnly": 601,
+        "pairBrier": 0.05262500091343817
+      },
+      "ridge_context_100_50": {
+        "events": 15832,
+        "hits": 878,
+        "baselineHits": 921,
+        "accuracy": 0.05545730166750884,
+        "netHits": -43,
+        "candidateOnly": 759,
+        "baselineOnly": 802,
+        "pairBrier": 0.05292102388526682
+      },
+      "ridge_context_100_100": {
+        "events": 15832,
+        "hits": 902,
+        "baselineHits": 921,
+        "accuracy": 0.05697321879737241,
+        "netHits": -19,
+        "candidateOnly": 836,
+        "baselineOnly": 855,
+        "pairBrier": 0.05409435968525281
+      },
+      "ridge_context_1000_25": {
+        "events": 15832,
+        "hits": 904,
+        "baselineHits": 921,
+        "accuracy": 0.05709954522486104,
+        "netHits": -17,
+        "candidateOnly": 417,
+        "baselineOnly": 434,
+        "pairBrier": 0.05257985449049449
+      },
+      "ridge_context_1000_50": {
+        "events": 15832,
+        "hits": 892,
+        "baselineHits": 921,
+        "accuracy": 0.056341586659929256,
+        "netHits": -29,
+        "candidateOnly": 706,
+        "baselineOnly": 735,
+        "pairBrier": 0.052654985628054214
+      },
+      "ridge_context_1000_100": {
+        "events": 15832,
+        "hits": 908,
+        "baselineHits": 921,
+        "accuracy": 0.0573521980798383,
+        "netHits": -13,
+        "candidateOnly": 834,
+        "baselineOnly": 847,
+        "pairBrier": 0.053138481568654805
+      },
+      "ridge_context_10000_25": {
+        "events": 15832,
+        "hits": 908,
+        "baselineHits": 921,
+        "accuracy": 0.0573521980798383,
+        "netHits": -13,
+        "candidateOnly": 182,
+        "baselineOnly": 195,
+        "pairBrier": 0.05259762069485719
+      },
+      "ridge_context_10000_50": {
+        "events": 15832,
+        "hits": 900,
+        "baselineHits": 921,
+        "accuracy": 0.05684689236988378,
+        "netHits": -21,
+        "candidateOnly": 342,
+        "baselineOnly": 363,
+        "pairBrier": 0.05258772173531456
+      },
+      "ridge_context_10000_100": {
+        "events": 15832,
+        "hits": 846,
+        "baselineHits": 921,
+        "accuracy": 0.053436078827690754,
+        "netHits": -75,
+        "candidateOnly": 571,
+        "baselineOnly": 646,
+        "pairBrier": 0.052630896137650145
+      },
+      "ridge_sequence_100_25": {
+        "events": 15832,
+        "hits": 930,
+        "baselineHits": 921,
+        "accuracy": 0.05874178878221324,
+        "netHits": 9,
+        "candidateOnly": 643,
+        "baselineOnly": 634,
+        "pairBrier": 0.052652831991820144
+      },
+      "ridge_sequence_100_50": {
+        "events": 15832,
+        "hits": 881,
+        "baselineHits": 921,
+        "accuracy": 0.05564679130874179,
+        "netHits": -40,
+        "candidateOnly": 772,
+        "baselineOnly": 812,
+        "pairBrier": 0.05301746488093876
+      },
+      "ridge_sequence_100_100": {
+        "events": 15832,
+        "hits": 898,
+        "baselineHits": 921,
+        "accuracy": 0.05672056594239515,
+        "netHits": -23,
+        "candidateOnly": 836,
+        "baselineOnly": 859,
+        "pairBrier": 0.05437815978787147
+      },
+      "ridge_sequence_1000_25": {
+        "events": 15832,
+        "hits": 918,
+        "baselineHits": 921,
+        "accuracy": 0.05798383021728146,
+        "netHits": -3,
+        "candidateOnly": 468,
+        "baselineOnly": 471,
+        "pairBrier": 0.05260120433643687
+      },
+      "ridge_sequence_1000_50": {
+        "events": 15832,
+        "hits": 883,
+        "baselineHits": 921,
+        "accuracy": 0.05577311773623042,
+        "netHits": -38,
+        "candidateOnly": 711,
+        "baselineOnly": 749,
+        "pairBrier": 0.05273422404771607
+      },
+      "ridge_sequence_1000_100": {
+        "events": 15832,
+        "hits": 883,
+        "baselineHits": 921,
+        "accuracy": 0.05577311773623042,
+        "netHits": -38,
+        "candidateOnly": 816,
+        "baselineOnly": 854,
+        "pairBrier": 0.053397291755259875
+      },
+      "ridge_sequence_10000_25": {
+        "events": 15832,
+        "hits": 910,
+        "baselineHits": 921,
+        "accuracy": 0.057478524507326934,
+        "netHits": -11,
+        "candidateOnly": 225,
+        "baselineOnly": 236,
+        "pairBrier": 0.05260358528340453
+      },
+      "ridge_sequence_10000_50": {
+        "events": 15832,
+        "hits": 912,
+        "baselineHits": 921,
+        "accuracy": 0.057604850934815564,
+        "netHits": -9,
+        "candidateOnly": 407,
+        "baselineOnly": 416,
+        "pairBrier": 0.052608914849732846
+      },
+      "ridge_sequence_10000_100": {
+        "events": 15832,
+        "hits": 912,
+        "baselineHits": 921,
+        "accuracy": 0.057604850934815564,
+        "netHits": -9,
+        "candidateOnly": 663,
+        "baselineOnly": 672,
+        "pairBrier": 0.0527098264876763
+      }
+    },
+    "validation": {
+      "joint_180": {
+        "events": 7286,
+        "hits": 385,
+        "baselineHits": 385,
+        "accuracy": 0.052841065056272306,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.052686549089578184
+      },
+      "pool_side_25": {
+        "events": 7286,
+        "hits": 381,
+        "baselineHits": 385,
+        "accuracy": 0.052292066977765575,
+        "netHits": -4,
+        "candidateOnly": 55,
+        "baselineOnly": 59,
+        "pairBrier": 0.05259168596679184
+      },
+      "pool_side_50": {
+        "events": 7286,
+        "hits": 379,
+        "baselineHits": 385,
+        "accuracy": 0.05201756793851221,
+        "netHits": -6,
+        "candidateOnly": 95,
+        "baselineOnly": 101,
+        "pairBrier": 0.05252438208134608
+      },
+      "pool_side_75": {
+        "events": 7286,
+        "hits": 382,
+        "baselineHits": 385,
+        "accuracy": 0.052429316497392256,
+        "netHits": -3,
+        "candidateOnly": 215,
+        "baselineOnly": 218,
+        "pairBrier": 0.05248463743324093
+      },
+      "pool_all_25": {
+        "events": 7286,
+        "hits": 374,
+        "baselineHits": 385,
+        "accuracy": 0.05133132034037881,
+        "netHits": -11,
+        "candidateOnly": 50,
+        "baselineOnly": 61,
+        "pairBrier": 0.05259054797885905
+      },
+      "pool_all_50": {
+        "events": 7286,
+        "hits": 379,
+        "baselineHits": 385,
+        "accuracy": 0.05201756793851221,
+        "netHits": -6,
+        "candidateOnly": 83,
+        "baselineOnly": 89,
+        "pairBrier": 0.05252247771286866
+      },
+      "pool_all_75": {
+        "events": 7286,
+        "hits": 396,
+        "baselineHits": 385,
+        "accuracy": 0.054350809772165797,
+        "netHits": 11,
+        "candidateOnly": 211,
+        "baselineOnly": 200,
+        "pairBrier": 0.05248233829160701
+      },
+      "sutta_25": {
+        "events": 7286,
+        "hits": 385,
+        "baselineHits": 385,
+        "accuracy": 0.052841065056272306,
+        "netHits": 0,
+        "candidateOnly": 78,
+        "baselineOnly": 78,
+        "pairBrier": 0.05259504306428632
+      },
+      "sutta_50": {
+        "events": 7286,
+        "hits": 389,
+        "baselineHits": 385,
+        "accuracy": 0.05339006313477903,
+        "netHits": 4,
+        "candidateOnly": 199,
+        "baselineOnly": 195,
+        "pairBrier": 0.05253732746144229
+      },
+      "ridge_context_100_25": {
+        "events": 7286,
+        "hits": 397,
+        "baselineHits": 385,
+        "accuracy": 0.05448805929179248,
+        "netHits": 12,
+        "candidateOnly": 229,
+        "baselineOnly": 217,
+        "pairBrier": 0.05261784656383637
+      },
+      "ridge_context_100_50": {
+        "events": 7286,
+        "hits": 417,
+        "baselineHits": 385,
+        "accuracy": 0.057233049684326104,
+        "netHits": 32,
+        "candidateOnly": 358,
+        "baselineOnly": 326,
+        "pairBrier": 0.05268774364666652
+      },
+      "ridge_context_100_100": {
+        "events": 7286,
+        "hits": 438,
+        "baselineHits": 385,
+        "accuracy": 0.06011528959648641,
+        "netHits": 53,
+        "candidateOnly": 407,
+        "baselineOnly": 354,
+        "pairBrier": 0.05320237331282503
+      },
+      "ridge_context_1000_25": {
+        "events": 7286,
+        "hits": 387,
+        "baselineHits": 385,
+        "accuracy": 0.05311556409552567,
+        "netHits": 2,
+        "candidateOnly": 200,
+        "baselineOnly": 198,
+        "pairBrier": 0.05261447107157777
+      },
+      "ridge_context_1000_50": {
+        "events": 7286,
+        "hits": 396,
+        "baselineHits": 385,
+        "accuracy": 0.054350809772165797,
+        "netHits": 11,
+        "candidateOnly": 311,
+        "baselineOnly": 300,
+        "pairBrier": 0.05263727150297928
+      },
+      "ridge_context_1000_100": {
+        "events": 7286,
+        "hits": 415,
+        "baselineHits": 385,
+        "accuracy": 0.05695855064507274,
+        "netHits": 30,
+        "candidateOnly": 380,
+        "baselineOnly": 350,
+        "pairBrier": 0.05295598257138531
+      },
+      "ridge_context_10000_25": {
+        "events": 7286,
+        "hits": 362,
+        "baselineHits": 385,
+        "accuracy": 0.04968432610485863,
+        "netHits": -23,
+        "candidateOnly": 97,
+        "baselineOnly": 120,
+        "pairBrier": 0.05263616441742899
+      },
+      "ridge_context_10000_50": {
+        "events": 7286,
+        "hits": 379,
+        "baselineHits": 385,
+        "accuracy": 0.05201756793851221,
+        "netHits": -6,
+        "candidateOnly": 189,
+        "baselineOnly": 195,
+        "pairBrier": 0.05261079017126682
+      },
+      "ridge_context_10000_100": {
+        "events": 7286,
+        "hits": 394,
+        "baselineHits": 385,
+        "accuracy": 0.054076310732912435,
+        "netHits": 9,
+        "candidateOnly": 328,
+        "baselineOnly": 319,
+        "pairBrier": 0.05263506832515435
+      },
+      "ridge_sequence_100_25": {
+        "events": 7286,
+        "hits": 378,
+        "baselineHits": 385,
+        "accuracy": 0.05188031841888553,
+        "netHits": -7,
+        "candidateOnly": 232,
+        "baselineOnly": 239,
+        "pairBrier": 0.05262785475590426
+      },
+      "ridge_sequence_100_50": {
+        "events": 7286,
+        "hits": 435,
+        "baselineHits": 385,
+        "accuracy": 0.05970354103760637,
+        "netHits": 50,
+        "candidateOnly": 379,
+        "baselineOnly": 329,
+        "pairBrier": 0.052731851630124615
+      },
+      "ridge_sequence_100_100": {
+        "events": 7286,
+        "hits": 419,
+        "baselineHits": 385,
+        "accuracy": 0.057507548723579466,
+        "netHits": 34,
+        "candidateOnly": 394,
+        "baselineOnly": 360,
+        "pairBrier": 0.05335851769566432
+      },
+      "ridge_sequence_1000_25": {
+        "events": 7286,
+        "hits": 382,
+        "baselineHits": 385,
+        "accuracy": 0.052429316497392256,
+        "netHits": -3,
+        "candidateOnly": 206,
+        "baselineOnly": 209,
+        "pairBrier": 0.05262262685459833
+      },
+      "ridge_sequence_1000_50": {
+        "events": 7286,
+        "hits": 415,
+        "baselineHits": 385,
+        "accuracy": 0.05695855064507274,
+        "netHits": 30,
+        "candidateOnly": 341,
+        "baselineOnly": 311,
+        "pairBrier": 0.05267420230737695
+      },
+      "ridge_sequence_1000_100": {
+        "events": 7286,
+        "hits": 406,
+        "baselineHits": 385,
+        "accuracy": 0.05572330496843261,
+        "netHits": 21,
+        "candidateOnly": 384,
+        "baselineOnly": 363,
+        "pairBrier": 0.05310061066993551
+      },
+      "ridge_sequence_10000_25": {
+        "events": 7286,
+        "hits": 380,
+        "baselineHits": 385,
+        "accuracy": 0.052154817458138894,
+        "netHits": -5,
+        "candidateOnly": 115,
+        "baselineOnly": 120,
+        "pairBrier": 0.05263872732176414
+      },
+      "ridge_sequence_10000_50": {
+        "events": 7286,
+        "hits": 390,
+        "baselineHits": 385,
+        "accuracy": 0.05352731265440571,
+        "netHits": 5,
+        "candidateOnly": 227,
+        "baselineOnly": 222,
+        "pairBrier": 0.05262445158688019
+      },
+      "ridge_sequence_10000_100": {
+        "events": 7286,
+        "hits": 402,
+        "baselineHits": 385,
+        "accuracy": 0.05517430688992588,
+        "netHits": 17,
+        "candidateOnly": 342,
+        "baselineOnly": 325,
+        "pairBrier": 0.05269642240198516
+      }
+    },
+    "confirmation": {
+      "joint_180": {
+        "events": 7308,
+        "hits": 404,
+        "baselineHits": 404,
+        "accuracy": 0.055281882868089764,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.05283420817369093
+      },
+      "pool_side_25": {
+        "events": 7308,
+        "hits": 407,
+        "baselineHits": 404,
+        "accuracy": 0.05569239189928845,
+        "netHits": 3,
+        "candidateOnly": 63,
+        "baselineOnly": 60,
+        "pairBrier": 0.05273408570579935
+      },
+      "pool_side_50": {
+        "events": 7308,
+        "hits": 416,
+        "baselineHits": 404,
+        "accuracy": 0.05692391899288451,
+        "netHits": 12,
+        "candidateOnly": 100,
+        "baselineOnly": 88,
+        "pairBrier": 0.052662430914671335
+      },
+      "pool_side_75": {
+        "events": 7308,
+        "hits": 429,
+        "baselineHits": 404,
+        "accuracy": 0.05870279146141215,
+        "netHits": 25,
+        "candidateOnly": 217,
+        "baselineOnly": 192,
+        "pairBrier": 0.052619243800306886
+      },
+      "pool_all_25": {
+        "events": 7308,
+        "hits": 398,
+        "baselineHits": 404,
+        "accuracy": 0.05446086480569239,
+        "netHits": -6,
+        "candidateOnly": 52,
+        "baselineOnly": 58,
+        "pairBrier": 0.052732932077548415
+      },
+      "pool_all_50": {
+        "events": 7308,
+        "hits": 404,
+        "baselineHits": 404,
+        "accuracy": 0.055281882868089764,
+        "netHits": 0,
+        "candidateOnly": 81,
+        "baselineOnly": 81,
+        "pairBrier": 0.052660338406547894
+      },
+      "pool_all_75": {
+        "events": 7308,
+        "hits": 424,
+        "baselineHits": 404,
+        "accuracy": 0.058018609742747675,
+        "netHits": 20,
+        "candidateOnly": 202,
+        "baselineOnly": 182,
+        "pairBrier": 0.05261642716068938
+      },
+      "sutta_25": {
+        "events": 7308,
+        "hits": 392,
+        "baselineHits": 404,
+        "accuracy": 0.05363984674329502,
+        "netHits": -12,
+        "candidateOnly": 75,
+        "baselineOnly": 87,
+        "pairBrier": 0.0527375361826189
+      },
+      "sutta_50": {
+        "events": 7308,
+        "hits": 416,
+        "baselineHits": 404,
+        "accuracy": 0.05692391899288451,
+        "netHits": 12,
+        "candidateOnly": 172,
+        "baselineOnly": 160,
+        "pairBrier": 0.05267487540353605
+      },
+      "ridge_context_100_25": {
+        "events": 7308,
+        "hits": 420,
+        "baselineHits": 404,
+        "accuracy": 0.05747126436781609,
+        "netHits": 16,
+        "candidateOnly": 236,
+        "baselineOnly": 220,
+        "pairBrier": 0.05275126351269012
+      },
+      "ridge_context_100_50": {
+        "events": 7308,
+        "hits": 401,
+        "baselineHits": 404,
+        "accuracy": 0.05487137383689108,
+        "netHits": -3,
+        "candidateOnly": 343,
+        "baselineOnly": 346,
+        "pairBrier": 0.05280439754831295
+      },
+      "ridge_context_100_100": {
+        "events": 7308,
+        "hits": 409,
+        "baselineHits": 404,
+        "accuracy": 0.055966064586754245,
+        "netHits": 5,
+        "candidateOnly": 397,
+        "baselineOnly": 392,
+        "pairBrier": 0.05328653900985674
+      },
+      "ridge_context_1000_25": {
+        "events": 7308,
+        "hits": 407,
+        "baselineHits": 404,
+        "accuracy": 0.05569239189928845,
+        "netHits": 3,
+        "candidateOnly": 187,
+        "baselineOnly": 184,
+        "pairBrier": 0.052750412342665545
+      },
+      "ridge_context_1000_50": {
+        "events": 7308,
+        "hits": 416,
+        "baselineHits": 404,
+        "accuracy": 0.05692391899288451,
+        "netHits": 12,
+        "candidateOnly": 334,
+        "baselineOnly": 322,
+        "pairBrier": 0.05276422019722549
+      },
+      "ridge_context_1000_100": {
+        "events": 7308,
+        "hits": 414,
+        "baselineHits": 404,
+        "accuracy": 0.05665024630541872,
+        "netHits": 10,
+        "candidateOnly": 397,
+        "baselineOnly": 387,
+        "pairBrier": 0.05307581502224555
+      },
+      "ridge_context_10000_25": {
+        "events": 7308,
+        "hits": 415,
+        "baselineHits": 404,
+        "accuracy": 0.05678708264915162,
+        "netHits": 11,
+        "candidateOnly": 109,
+        "baselineOnly": 98,
+        "pairBrier": 0.052775606847063665
+      },
+      "ridge_context_10000_50": {
+        "events": 7308,
+        "hits": 412,
+        "baselineHits": 404,
+        "accuracy": 0.05637657361795293,
+        "netHits": 8,
+        "candidateOnly": 198,
+        "baselineOnly": 190,
+        "pairBrier": 0.05274498342858681
+      },
+      "ridge_context_10000_100": {
+        "events": 7308,
+        "hits": 411,
+        "baselineHits": 404,
+        "accuracy": 0.056239737274220034,
+        "netHits": 7,
+        "candidateOnly": 331,
+        "baselineOnly": 324,
+        "pairBrier": 0.05276766814617983
+      },
+      "ridge_sequence_100_25": {
+        "events": 7308,
+        "hits": 401,
+        "baselineHits": 404,
+        "accuracy": 0.05487137383689108,
+        "netHits": -3,
+        "candidateOnly": 229,
+        "baselineOnly": 232,
+        "pairBrier": 0.052763075408990535
+      },
+      "ridge_sequence_100_50": {
+        "events": 7308,
+        "hits": 394,
+        "baselineHits": 404,
+        "accuracy": 0.05391351943076081,
+        "netHits": -10,
+        "candidateOnly": 347,
+        "baselineOnly": 357,
+        "pairBrier": 0.052850251877416245
+      },
+      "ridge_sequence_100_100": {
+        "events": 7308,
+        "hits": 404,
+        "baselineHits": 404,
+        "accuracy": 0.055281882868089764,
+        "netHits": 0,
+        "candidateOnly": 390,
+        "baselineOnly": 390,
+        "pairBrier": 0.05344368175980097
+      },
+      "ridge_sequence_1000_25": {
+        "events": 7308,
+        "hits": 402,
+        "baselineHits": 404,
+        "accuracy": 0.055008210180623976,
+        "netHits": -2,
+        "candidateOnly": 200,
+        "baselineOnly": 202,
+        "pairBrier": 0.05276082836209178
+      },
+      "ridge_sequence_1000_50": {
+        "events": 7308,
+        "hits": 401,
+        "baselineHits": 404,
+        "accuracy": 0.05487137383689108,
+        "netHits": -3,
+        "candidateOnly": 334,
+        "baselineOnly": 337,
+        "pairBrier": 0.05280465652161632
+      },
+      "ridge_sequence_1000_100": {
+        "events": 7308,
+        "hits": 398,
+        "baselineHits": 404,
+        "accuracy": 0.05446086480569239,
+        "netHits": -6,
+        "candidateOnly": 385,
+        "baselineOnly": 391,
+        "pairBrier": 0.05322451780440143
+      },
+      "ridge_sequence_10000_25": {
+        "events": 7308,
+        "hits": 400,
+        "baselineHits": 404,
+        "accuracy": 0.05473453749315818,
+        "netHits": -4,
+        "candidateOnly": 113,
+        "baselineOnly": 117,
+        "pairBrier": 0.052780574623798766
+      },
+      "ridge_sequence_10000_50": {
+        "events": 7308,
+        "hits": 404,
+        "baselineHits": 404,
+        "accuracy": 0.055281882868089764,
+        "netHits": 0,
+        "candidateOnly": 218,
+        "baselineOnly": 218,
+        "pairBrier": 0.05276373217175802
+      },
+      "ridge_sequence_10000_100": {
+        "events": 7308,
+        "hits": 425,
+        "baselineHits": 404,
+        "accuracy": 0.05815544608648057,
+        "netHits": 21,
+        "candidateOnly": 358,
+        "baselineOnly": 337,
+        "pairBrier": 0.05284032892021906
+      }
+    },
+    "recent": {
+      "joint_180": {
+        "events": 5862,
+        "hits": 348,
+        "baselineHits": 348,
+        "accuracy": 0.0593654042988741,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.05231521219530687
+      },
+      "pool_side_25": {
+        "events": 5862,
+        "hits": 343,
+        "baselineHits": 348,
+        "accuracy": 0.05851245308768339,
+        "netHits": -5,
+        "candidateOnly": 35,
+        "baselineOnly": 40,
+        "pairBrier": 0.052218106185546904
+      },
+      "pool_side_50": {
+        "events": 5862,
+        "hits": 345,
+        "baselineHits": 348,
+        "accuracy": 0.05885363357215967,
+        "netHits": -3,
+        "candidateOnly": 65,
+        "baselineOnly": 68,
+        "pairBrier": 0.052150588484488655
+      },
+      "pool_side_75": {
+        "events": 5862,
+        "hits": 357,
+        "baselineHits": 348,
+        "accuracy": 0.0609007164790174,
+        "netHits": 9,
+        "candidateOnly": 173,
+        "baselineOnly": 164,
+        "pairBrier": 0.05211265909213215
+      },
+      "pool_all_25": {
+        "events": 5862,
+        "hits": 340,
+        "baselineHits": 348,
+        "accuracy": 0.058000682360968954,
+        "netHits": -8,
+        "candidateOnly": 32,
+        "baselineOnly": 40,
+        "pairBrier": 0.05221690654013497
+      },
+      "pool_all_50": {
+        "events": 5862,
+        "hits": 342,
+        "baselineHits": 348,
+        "accuracy": 0.05834186284544524,
+        "netHits": -6,
+        "candidateOnly": 56,
+        "baselineOnly": 62,
+        "pairBrier": 0.05214862470495809
+      },
+      "pool_all_75": {
+        "events": 5862,
+        "hits": 359,
+        "baselineHits": 348,
+        "accuracy": 0.06124189696349369,
+        "netHits": 11,
+        "candidateOnly": 167,
+        "baselineOnly": 156,
+        "pairBrier": 0.052110366689776214
+      },
+      "sutta_25": {
+        "events": 5862,
+        "hits": 354,
+        "baselineHits": 348,
+        "accuracy": 0.06038894575230297,
+        "netHits": 6,
+        "candidateOnly": 54,
+        "baselineOnly": 48,
+        "pairBrier": 0.052219421576321194
+      },
+      "sutta_50": {
+        "events": 5862,
+        "hits": 351,
+        "baselineHits": 348,
+        "accuracy": 0.059877175025588536,
+        "netHits": 3,
+        "candidateOnly": 130,
+        "baselineOnly": 127,
+        "pairBrier": 0.052158653529487876
+      },
+      "ridge_context_100_25": {
+        "events": 5862,
+        "hits": 359,
+        "baselineHits": 348,
+        "accuracy": 0.06124189696349369,
+        "netHits": 11,
+        "candidateOnly": 161,
+        "baselineOnly": 150,
+        "pairBrier": 0.052229013081939
+      },
+      "ridge_context_100_50": {
+        "events": 5862,
+        "hits": 351,
+        "baselineHits": 348,
+        "accuracy": 0.059877175025588536,
+        "netHits": 3,
+        "candidateOnly": 290,
+        "baselineOnly": 287,
+        "pairBrier": 0.05226845749482121
+      },
+      "ridge_context_100_100": {
+        "events": 5862,
+        "hits": 341,
+        "baselineHits": 348,
+        "accuracy": 0.0581712726032071,
+        "netHits": -7,
+        "candidateOnly": 322,
+        "baselineOnly": 329,
+        "pairBrier": 0.052705224152426726
+      },
+      "ridge_context_1000_25": {
+        "events": 5862,
+        "hits": 356,
+        "baselineHits": 348,
+        "accuracy": 0.06073012623677926,
+        "netHits": 8,
+        "candidateOnly": 129,
+        "baselineOnly": 121,
+        "pairBrier": 0.052228140200733165
+      },
+      "ridge_context_1000_50": {
+        "events": 5862,
+        "hits": 352,
+        "baselineHits": 348,
+        "accuracy": 0.06004776526782668,
+        "netHits": 4,
+        "candidateOnly": 263,
+        "baselineOnly": 259,
+        "pairBrier": 0.052233662398724096
+      },
+      "ridge_context_1000_100": {
+        "events": 5862,
+        "hits": 330,
+        "baselineHits": 348,
+        "accuracy": 0.05629477993858751,
+        "netHits": -18,
+        "candidateOnly": 305,
+        "baselineOnly": 323,
+        "pairBrier": 0.052517089656717225
+      },
+      "ridge_context_10000_25": {
+        "events": 5862,
+        "hits": 350,
+        "baselineHits": 348,
+        "accuracy": 0.05970658478335039,
+        "netHits": 2,
+        "candidateOnly": 71,
+        "baselineOnly": 69,
+        "pairBrier": 0.05225201134941922
+      },
+      "ridge_context_10000_50": {
+        "events": 5862,
+        "hits": 363,
+        "baselineHits": 348,
+        "accuracy": 0.06192425793244626,
+        "netHits": 15,
+        "candidateOnly": 144,
+        "baselineOnly": 129,
+        "pairBrier": 0.05221687508605929
+      },
+      "ridge_context_10000_100": {
+        "events": 5862,
+        "hits": 355,
+        "baselineHits": 348,
+        "accuracy": 0.060559535994541114,
+        "netHits": 7,
+        "candidateOnly": 279,
+        "baselineOnly": 272,
+        "pairBrier": 0.05223068245658165
+      },
+      "ridge_sequence_100_25": {
+        "events": 5862,
+        "hits": 346,
+        "baselineHits": 348,
+        "accuracy": 0.059024223814397814,
+        "netHits": -2,
+        "candidateOnly": 169,
+        "baselineOnly": 171,
+        "pairBrier": 0.052242825573566055
+      },
+      "ridge_sequence_100_50": {
+        "events": 5862,
+        "hits": 331,
+        "baselineHits": 348,
+        "accuracy": 0.056465370180825654,
+        "netHits": -17,
+        "candidateOnly": 271,
+        "baselineOnly": 288,
+        "pairBrier": 0.052317718505836046
+      },
+      "ridge_sequence_100_100": {
+        "events": 5862,
+        "hits": 323,
+        "baselineHits": 348,
+        "accuracy": 0.055100648242920505,
+        "netHits": -25,
+        "candidateOnly": 304,
+        "baselineOnly": 329,
+        "pairBrier": 0.052869352775399565
+      },
+      "ridge_sequence_1000_25": {
+        "events": 5862,
+        "hits": 350,
+        "baselineHits": 348,
+        "accuracy": 0.05970658478335039,
+        "netHits": 2,
+        "candidateOnly": 142,
+        "baselineOnly": 140,
+        "pairBrier": 0.05224042537666654
+      },
+      "ridge_sequence_1000_50": {
+        "events": 5862,
+        "hits": 327,
+        "baselineHits": 348,
+        "accuracy": 0.05578300921187308,
+        "netHits": -21,
+        "candidateOnly": 248,
+        "baselineOnly": 269,
+        "pairBrier": 0.052277261203708146
+      },
+      "ridge_sequence_1000_100": {
+        "events": 5862,
+        "hits": 326,
+        "baselineHits": 348,
+        "accuracy": 0.05561241896963494,
+        "netHits": -22,
+        "candidateOnly": 303,
+        "baselineOnly": 325,
+        "pairBrier": 0.052671252103465765
+      },
+      "ridge_sequence_10000_25": {
+        "events": 5862,
+        "hits": 352,
+        "baselineHits": 348,
+        "accuracy": 0.06004776526782668,
+        "netHits": 4,
+        "candidateOnly": 84,
+        "baselineOnly": 80,
+        "pairBrier": 0.052258073548984374
+      },
+      "ridge_sequence_10000_50": {
+        "events": 5862,
+        "hits": 345,
+        "baselineHits": 348,
+        "accuracy": 0.05885363357215967,
+        "netHits": -3,
+        "candidateOnly": 162,
+        "baselineOnly": 165,
+        "pairBrier": 0.05223764173492242
+      },
+      "ridge_sequence_10000_100": {
+        "events": 5862,
+        "hits": 324,
+        "baselineHits": 348,
+        "accuracy": 0.05527123848515865,
+        "netHits": -24,
+        "candidateOnly": 263,
+        "baselineOnly": 287,
+        "pairBrier": 0.05230659258764081
+      }
+    },
+    "last7": {
+      "joint_180": {
+        "events": 122,
+        "hits": 8,
+        "baselineHits": 8,
+        "accuracy": 0.06557377049180328,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.05250540528233151
+      },
+      "pool_side_25": {
+        "events": 122,
+        "hits": 9,
+        "baselineHits": 8,
+        "accuracy": 0.07377049180327869,
+        "netHits": 1,
+        "candidateOnly": 1,
+        "baselineOnly": 0,
+        "pairBrier": 0.052406762725574166
+      },
+      "pool_side_50": {
+        "events": 122,
+        "hits": 8,
+        "baselineHits": 8,
+        "accuracy": 0.06557377049180328,
+        "netHits": 0,
+        "candidateOnly": 1,
+        "baselineOnly": 1,
+        "pairBrier": 0.05233737177331561
+      },
+      "pool_side_75": {
+        "events": 122,
+        "hits": 11,
+        "baselineHits": 8,
+        "accuracy": 0.09016393442622951,
+        "netHits": 3,
+        "candidateOnly": 6,
+        "baselineOnly": 3,
+        "pairBrier": 0.05229723242555581
+      },
+      "pool_all_25": {
+        "events": 122,
+        "hits": 8,
+        "baselineHits": 8,
+        "accuracy": 0.06557377049180328,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.05240551308666277
+      },
+      "pool_all_50": {
+        "events": 122,
+        "hits": 8,
+        "baselineHits": 8,
+        "accuracy": 0.06557377049180328,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.05233521772581729
+      },
+      "pool_all_75": {
+        "events": 122,
+        "hits": 11,
+        "baselineHits": 8,
+        "accuracy": 0.09016393442622951,
+        "netHits": 3,
+        "candidateOnly": 5,
+        "baselineOnly": 2,
+        "pairBrier": 0.05229451919979508
+      },
+      "sutta_25": {
+        "events": 122,
+        "hits": 8,
+        "baselineHits": 8,
+        "accuracy": 0.06557377049180328,
+        "netHits": 0,
+        "candidateOnly": 1,
+        "baselineOnly": 1,
+        "pairBrier": 0.05239725366821891
+      },
+      "sutta_50": {
+        "events": 122,
+        "hits": 11,
+        "baselineHits": 8,
+        "accuracy": 0.09016393442622951,
+        "netHits": 3,
+        "candidateOnly": 5,
+        "baselineOnly": 2,
+        "pairBrier": 0.05232325273201202
+      },
+      "ridge_context_100_25": {
+        "events": 122,
+        "hits": 8,
+        "baselineHits": 8,
+        "accuracy": 0.06557377049180328,
+        "netHits": 0,
+        "candidateOnly": 3,
+        "baselineOnly": 3,
+        "pairBrier": 0.05240888607304134
+      },
+      "ridge_context_100_50": {
+        "events": 122,
+        "hits": 10,
+        "baselineHits": 8,
+        "accuracy": 0.08196721311475409,
+        "netHits": 2,
+        "candidateOnly": 7,
+        "baselineOnly": 5,
+        "pairBrier": 0.052413646914943
+      },
+      "ridge_context_100_100": {
+        "events": 122,
+        "hits": 7,
+        "baselineHits": 8,
+        "accuracy": 0.05737704918032787,
+        "netHits": -1,
+        "candidateOnly": 6,
+        "baselineOnly": 7,
+        "pairBrier": 0.05272351364738473
+      },
+      "ridge_context_1000_25": {
+        "events": 122,
+        "hits": 7,
+        "baselineHits": 8,
+        "accuracy": 0.05737704918032787,
+        "netHits": -1,
+        "candidateOnly": 2,
+        "baselineOnly": 3,
+        "pairBrier": 0.0524171490991886
+      },
+      "ridge_context_1000_50": {
+        "events": 122,
+        "hits": 11,
+        "baselineHits": 8,
+        "accuracy": 0.09016393442622951,
+        "netHits": 3,
+        "candidateOnly": 7,
+        "baselineOnly": 4,
+        "pairBrier": 0.0524050144620044
+      },
+      "ridge_context_1000_100": {
+        "events": 122,
+        "hits": 6,
+        "baselineHits": 8,
+        "accuracy": 0.04918032786885246,
+        "netHits": -2,
+        "candidateOnly": 5,
+        "baselineOnly": 7,
+        "pairBrier": 0.05260871280784501
+      },
+      "ridge_context_10000_25": {
+        "events": 122,
+        "hits": 9,
+        "baselineHits": 8,
+        "accuracy": 0.07377049180327869,
+        "netHits": 1,
+        "candidateOnly": 1,
+        "baselineOnly": 0,
+        "pairBrier": 0.052454850900988885
+      },
+      "ridge_context_10000_50": {
+        "events": 122,
+        "hits": 8,
+        "baselineHits": 8,
+        "accuracy": 0.06557377049180328,
+        "netHits": 0,
+        "candidateOnly": 3,
+        "baselineOnly": 3,
+        "pairBrier": 0.05242846036468863
+      },
+      "ridge_context_10000_100": {
+        "events": 122,
+        "hits": 11,
+        "baselineHits": 8,
+        "accuracy": 0.09016393442622951,
+        "netHits": 3,
+        "candidateOnly": 7,
+        "baselineOnly": 4,
+        "pairBrier": 0.05244817082721528
+      },
+      "ridge_sequence_100_25": {
+        "events": 122,
+        "hits": 6,
+        "baselineHits": 8,
+        "accuracy": 0.04918032786885246,
+        "netHits": -2,
+        "candidateOnly": 3,
+        "baselineOnly": 5,
+        "pairBrier": 0.0524248280532593
+      },
+      "ridge_sequence_100_50": {
+        "events": 122,
+        "hits": 6,
+        "baselineHits": 8,
+        "accuracy": 0.04918032786885246,
+        "netHits": -2,
+        "candidateOnly": 5,
+        "baselineOnly": 7,
+        "pairBrier": 0.052467252197052325
+      },
+      "ridge_sequence_100_100": {
+        "events": 122,
+        "hits": 7,
+        "baselineHits": 8,
+        "accuracy": 0.05737704918032787,
+        "netHits": -1,
+        "candidateOnly": 5,
+        "baselineOnly": 6,
+        "pairBrier": 0.05290474998528079
+      },
+      "ridge_sequence_1000_25": {
+        "events": 122,
+        "hits": 7,
+        "baselineHits": 8,
+        "accuracy": 0.05737704918032787,
+        "netHits": -1,
+        "candidateOnly": 1,
+        "baselineOnly": 2,
+        "pairBrier": 0.052429060221834155
+      },
+      "ridge_sequence_1000_50": {
+        "events": 122,
+        "hits": 7,
+        "baselineHits": 8,
+        "accuracy": 0.05737704918032787,
+        "netHits": -1,
+        "candidateOnly": 5,
+        "baselineOnly": 6,
+        "pairBrier": 0.05244773680875326
+      },
+      "ridge_sequence_1000_100": {
+        "events": 122,
+        "hits": 7,
+        "baselineHits": 8,
+        "accuracy": 0.05737704918032787,
+        "netHits": -1,
+        "candidateOnly": 5,
+        "baselineOnly": 6,
+        "pairBrier": 0.05276857950436285
+      },
+      "ridge_sequence_10000_25": {
+        "events": 122,
+        "hits": 11,
+        "baselineHits": 8,
+        "accuracy": 0.09016393442622951,
+        "netHits": 3,
+        "candidateOnly": 3,
+        "baselineOnly": 0,
+        "pairBrier": 0.05245876010116474
+      },
+      "ridge_sequence_10000_50": {
+        "events": 122,
+        "hits": 6,
+        "baselineHits": 8,
+        "accuracy": 0.04918032786885246,
+        "netHits": -2,
+        "candidateOnly": 3,
+        "baselineOnly": 5,
+        "pairBrier": 0.05244497068490725
+      },
+      "ridge_sequence_10000_100": {
+        "events": 122,
+        "hits": 6,
+        "baselineHits": 8,
+        "accuracy": 0.04918032786885246,
+        "netHits": -2,
+        "candidateOnly": 5,
+        "baselineOnly": 7,
+        "pairBrier": 0.05251595522164109
+      }
+    },
+    "last30": {
+      "joint_180": {
+        "events": 596,
+        "hits": 44,
+        "baselineHits": 44,
+        "accuracy": 0.0738255033557047,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.0529518437733035
+      },
+      "pool_side_25": {
+        "events": 596,
+        "hits": 46,
+        "baselineHits": 44,
+        "accuracy": 0.07718120805369127,
+        "netHits": 2,
+        "candidateOnly": 5,
+        "baselineOnly": 3,
+        "pairBrier": 0.05285745900696788
+      },
+      "pool_side_50": {
+        "events": 596,
+        "hits": 44,
+        "baselineHits": 44,
+        "accuracy": 0.0738255033557047,
+        "netHits": 0,
+        "candidateOnly": 6,
+        "baselineOnly": 6,
+        "pairBrier": 0.05279242886096462
+      },
+      "pool_side_75": {
+        "events": 596,
+        "hits": 47,
+        "baselineHits": 44,
+        "accuracy": 0.07885906040268456,
+        "netHits": 3,
+        "candidateOnly": 22,
+        "baselineOnly": 19,
+        "pairBrier": 0.05275675333529371
+      },
+      "pool_all_25": {
+        "events": 596,
+        "hits": 42,
+        "baselineHits": 44,
+        "accuracy": 0.07046979865771812,
+        "netHits": -2,
+        "candidateOnly": 2,
+        "baselineOnly": 4,
+        "pairBrier": 0.05285517347127156
+      },
+      "pool_all_50": {
+        "events": 596,
+        "hits": 42,
+        "baselineHits": 44,
+        "accuracy": 0.07046979865771812,
+        "netHits": -2,
+        "candidateOnly": 3,
+        "baselineOnly": 5,
+        "pairBrier": 0.05278818338826108
+      },
+      "pool_all_75": {
+        "events": 596,
+        "hits": 44,
+        "baselineHits": 44,
+        "accuracy": 0.0738255033557047,
+        "netHits": 0,
+        "candidateOnly": 15,
+        "baselineOnly": 15,
+        "pairBrier": 0.052750873524272074
+      },
+      "sutta_25": {
+        "events": 596,
+        "hits": 40,
+        "baselineHits": 44,
+        "accuracy": 0.06711409395973154,
+        "netHits": -4,
+        "candidateOnly": 2,
+        "baselineOnly": 6,
+        "pairBrier": 0.052849795046653485
+      },
+      "sutta_50": {
+        "events": 596,
+        "hits": 44,
+        "baselineHits": 44,
+        "accuracy": 0.0738255033557047,
+        "netHits": 0,
+        "candidateOnly": 15,
+        "baselineOnly": 15,
+        "pairBrier": 0.052781938559076716
+      },
+      "ridge_context_100_25": {
+        "events": 596,
+        "hits": 35,
+        "baselineHits": 44,
+        "accuracy": 0.0587248322147651,
+        "netHits": -9,
+        "candidateOnly": 11,
+        "baselineOnly": 20,
+        "pairBrier": 0.05286595804427656
+      },
+      "ridge_context_100_50": {
+        "events": 596,
+        "hits": 40,
+        "baselineHits": 44,
+        "accuracy": 0.06711409395973154,
+        "netHits": -4,
+        "candidateOnly": 29,
+        "baselineOnly": 33,
+        "pairBrier": 0.05290035590017359
+      },
+      "ridge_context_100_100": {
+        "events": 596,
+        "hits": 38,
+        "baselineHits": 44,
+        "accuracy": 0.06375838926174497,
+        "netHits": -6,
+        "candidateOnly": 35,
+        "baselineOnly": 41,
+        "pairBrier": 0.05331114062412699
+      },
+      "ridge_context_1000_25": {
+        "events": 596,
+        "hits": 34,
+        "baselineHits": 44,
+        "accuracy": 0.05704697986577181,
+        "netHits": -10,
+        "candidateOnly": 9,
+        "baselineOnly": 19,
+        "pairBrier": 0.05286629314047478
+      },
+      "ridge_context_1000_50": {
+        "events": 596,
+        "hits": 39,
+        "baselineHits": 44,
+        "accuracy": 0.06543624161073826,
+        "netHits": -5,
+        "candidateOnly": 28,
+        "baselineOnly": 33,
+        "pairBrier": 0.05286953289317282
+      },
+      "ridge_context_1000_100": {
+        "events": 596,
+        "hits": 38,
+        "baselineHits": 44,
+        "accuracy": 0.06375838926174497,
+        "netHits": -6,
+        "candidateOnly": 33,
+        "baselineOnly": 39,
+        "pairBrier": 0.05313741477584525
+      },
+      "ridge_context_10000_25": {
+        "events": 596,
+        "hits": 42,
+        "baselineHits": 44,
+        "accuracy": 0.07046979865771812,
+        "netHits": -2,
+        "candidateOnly": 6,
+        "baselineOnly": 8,
+        "pairBrier": 0.05289122868650952
+      },
+      "ridge_context_10000_50": {
+        "events": 596,
+        "hits": 37,
+        "baselineHits": 44,
+        "accuracy": 0.06208053691275168,
+        "netHits": -7,
+        "candidateOnly": 11,
+        "baselineOnly": 18,
+        "pairBrier": 0.052857244933930334
+      },
+      "ridge_context_10000_100": {
+        "events": 596,
+        "hits": 38,
+        "baselineHits": 44,
+        "accuracy": 0.06375838926174497,
+        "netHits": -6,
+        "candidateOnly": 28,
+        "baselineOnly": 34,
+        "pairBrier": 0.05286917134405902
+      },
+      "ridge_sequence_100_25": {
+        "events": 596,
+        "hits": 38,
+        "baselineHits": 44,
+        "accuracy": 0.06375838926174497,
+        "netHits": -6,
+        "candidateOnly": 19,
+        "baselineOnly": 25,
+        "pairBrier": 0.052866311356068535
+      },
+      "ridge_sequence_100_50": {
+        "events": 596,
+        "hits": 39,
+        "baselineHits": 44,
+        "accuracy": 0.06543624161073826,
+        "netHits": -5,
+        "candidateOnly": 28,
+        "baselineOnly": 33,
+        "pairBrier": 0.052921312758963085
+      },
+      "ridge_sequence_100_100": {
+        "events": 596,
+        "hits": 38,
+        "baselineHits": 44,
+        "accuracy": 0.06375838926174497,
+        "netHits": -6,
+        "candidateOnly": 33,
+        "baselineOnly": 39,
+        "pairBrier": 0.05341761898885493
+      },
+      "ridge_sequence_1000_25": {
+        "events": 596,
+        "hits": 35,
+        "baselineHits": 44,
+        "accuracy": 0.0587248322147651,
+        "netHits": -9,
+        "candidateOnly": 11,
+        "baselineOnly": 20,
+        "pairBrier": 0.05286611900002068
+      },
+      "ridge_sequence_1000_50": {
+        "events": 596,
+        "hits": 35,
+        "baselineHits": 44,
+        "accuracy": 0.0587248322147651,
+        "netHits": -9,
+        "candidateOnly": 26,
+        "baselineOnly": 35,
+        "pairBrier": 0.052887059722334887
+      },
+      "ridge_sequence_1000_100": {
+        "events": 596,
+        "hits": 41,
+        "baselineHits": 44,
+        "accuracy": 0.06879194630872483,
+        "netHits": -3,
+        "candidateOnly": 36,
+        "baselineOnly": 39,
+        "pairBrier": 0.053234816230094406
+      },
+      "ridge_sequence_10000_25": {
+        "events": 596,
+        "hits": 44,
+        "baselineHits": 44,
+        "accuracy": 0.0738255033557047,
+        "netHits": 0,
+        "candidateOnly": 8,
+        "baselineOnly": 8,
+        "pairBrier": 0.052889343580003016
+      },
+      "ridge_sequence_10000_50": {
+        "events": 596,
+        "hits": 35,
+        "baselineHits": 44,
+        "accuracy": 0.0587248322147651,
+        "netHits": -9,
+        "candidateOnly": 16,
+        "baselineOnly": 25,
+        "pairBrier": 0.0528617680474984
+      },
+      "ridge_sequence_10000_100": {
+        "events": 596,
+        "hits": 39,
+        "baselineHits": 44,
+        "accuracy": 0.06543624161073826,
+        "netHits": -5,
+        "candidateOnly": 30,
+        "baselineOnly": 35,
+        "pairBrier": 0.05291137208631616
+      }
+    },
+    "last90": {
+      "joint_180": {
+        "events": 1820,
+        "hits": 101,
+        "baselineHits": 101,
+        "accuracy": 0.05549450549450549,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.0523835518925519
+      },
+      "pool_side_25": {
+        "events": 1820,
+        "hits": 96,
+        "baselineHits": 101,
+        "accuracy": 0.05274725274725275,
+        "netHits": -5,
+        "candidateOnly": 8,
+        "baselineOnly": 13,
+        "pairBrier": 0.05228209063445498
+      },
+      "pool_side_50": {
+        "events": 1820,
+        "hits": 96,
+        "baselineHits": 101,
+        "accuracy": 0.05274725274725275,
+        "netHits": -5,
+        "candidateOnly": 15,
+        "baselineOnly": 20,
+        "pairBrier": 0.052210398067047706
+      },
+      "pool_side_75": {
+        "events": 1820,
+        "hits": 101,
+        "baselineHits": 101,
+        "accuracy": 0.05549450549450549,
+        "netHits": 0,
+        "candidateOnly": 52,
+        "baselineOnly": 52,
+        "pairBrier": 0.052168474190330064
+      },
+      "pool_all_25": {
+        "events": 1820,
+        "hits": 94,
+        "baselineHits": 101,
+        "accuracy": 0.051648351648351645,
+        "netHits": -7,
+        "candidateOnly": 7,
+        "baselineOnly": 14,
+        "pairBrier": 0.05228101259730489
+      },
+      "pool_all_50": {
+        "events": 1820,
+        "hits": 96,
+        "baselineHits": 101,
+        "accuracy": 0.05274725274725275,
+        "netHits": -5,
+        "candidateOnly": 13,
+        "baselineOnly": 18,
+        "pairBrier": 0.05220857389607218
+      },
+      "pool_all_75": {
+        "events": 1820,
+        "hits": 102,
+        "baselineHits": 101,
+        "accuracy": 0.056043956043956046,
+        "netHits": 1,
+        "candidateOnly": 46,
+        "baselineOnly": 45,
+        "pairBrier": 0.05216623578885378
+      },
+      "sutta_25": {
+        "events": 1820,
+        "hits": 94,
+        "baselineHits": 101,
+        "accuracy": 0.051648351648351645,
+        "netHits": -7,
+        "candidateOnly": 9,
+        "baselineOnly": 16,
+        "pairBrier": 0.05228694590268431
+      },
+      "sutta_50": {
+        "events": 1820,
+        "hits": 99,
+        "baselineHits": 101,
+        "accuracy": 0.0543956043956044,
+        "netHits": -2,
+        "candidateOnly": 37,
+        "baselineOnly": 39,
+        "pairBrier": 0.05222531245152738
+      },
+      "ridge_context_100_25": {
+        "events": 1820,
+        "hits": 96,
+        "baselineHits": 101,
+        "accuracy": 0.05274725274725275,
+        "netHits": -5,
+        "candidateOnly": 41,
+        "baselineOnly": 46,
+        "pairBrier": 0.052283918121519696
+      },
+      "ridge_context_100_50": {
+        "events": 1820,
+        "hits": 116,
+        "baselineHits": 101,
+        "accuracy": 0.06373626373626373,
+        "netHits": 15,
+        "candidateOnly": 98,
+        "baselineOnly": 83,
+        "pairBrier": 0.052312937957665694
+      },
+      "ridge_context_100_100": {
+        "events": 1820,
+        "hits": 109,
+        "baselineHits": 101,
+        "accuracy": 0.05989010989010989,
+        "netHits": 8,
+        "candidateOnly": 103,
+        "baselineOnly": 95,
+        "pairBrier": 0.05273560656185038
+      },
+      "ridge_context_1000_25": {
+        "events": 1820,
+        "hits": 97,
+        "baselineHits": 101,
+        "accuracy": 0.053296703296703295,
+        "netHits": -4,
+        "candidateOnly": 35,
+        "baselineOnly": 39,
+        "pairBrier": 0.05228747228856044
+      },
+      "ridge_context_1000_50": {
+        "events": 1820,
+        "hits": 110,
+        "baselineHits": 101,
+        "accuracy": 0.06043956043956044,
+        "netHits": 9,
+        "candidateOnly": 86,
+        "baselineOnly": 77,
+        "pairBrier": 0.05228591357889946
+      },
+      "ridge_context_1000_100": {
+        "events": 1820,
+        "hits": 104,
+        "baselineHits": 101,
+        "accuracy": 0.05714285714285714,
+        "netHits": 3,
+        "candidateOnly": 97,
+        "baselineOnly": 94,
+        "pairBrier": 0.05256058808331283
+      },
+      "ridge_context_10000_25": {
+        "events": 1820,
+        "hits": 101,
+        "baselineHits": 101,
+        "accuracy": 0.05549450549450549,
+        "netHits": 0,
+        "candidateOnly": 23,
+        "baselineOnly": 23,
+        "pairBrier": 0.05231897186455833
+      },
+      "ridge_context_10000_50": {
+        "events": 1820,
+        "hits": 104,
+        "baselineHits": 101,
+        "accuracy": 0.05714285714285714,
+        "netHits": 3,
+        "candidateOnly": 41,
+        "baselineOnly": 38,
+        "pairBrier": 0.05228277212681737
+      },
+      "ridge_context_10000_100": {
+        "events": 1820,
+        "hits": 109,
+        "baselineHits": 101,
+        "accuracy": 0.05989010989010989,
+        "netHits": 8,
+        "candidateOnly": 89,
+        "baselineOnly": 81,
+        "pairBrier": 0.05229551039248557
+      },
+      "ridge_sequence_100_25": {
+        "events": 1820,
+        "hits": 101,
+        "baselineHits": 101,
+        "accuracy": 0.05549450549450549,
+        "netHits": 0,
+        "candidateOnly": 53,
+        "baselineOnly": 53,
+        "pairBrier": 0.05228913580616221
+      },
+      "ridge_sequence_100_50": {
+        "events": 1820,
+        "hits": 103,
+        "baselineHits": 101,
+        "accuracy": 0.056593406593406594,
+        "netHits": 2,
+        "candidateOnly": 87,
+        "baselineOnly": 85,
+        "pairBrier": 0.0523445190026729
+      },
+      "ridge_sequence_100_100": {
+        "events": 1820,
+        "hits": 102,
+        "baselineHits": 101,
+        "accuracy": 0.056043956043956046,
+        "netHits": 1,
+        "candidateOnly": 95,
+        "baselineOnly": 94,
+        "pairBrier": 0.05285894189018013
+      },
+      "ridge_sequence_1000_25": {
+        "events": 1820,
+        "hits": 99,
+        "baselineHits": 101,
+        "accuracy": 0.0543956043956044,
+        "netHits": -2,
+        "candidateOnly": 39,
+        "baselineOnly": 41,
+        "pairBrier": 0.05229166528641185
+      },
+      "ridge_sequence_1000_50": {
+        "events": 1820,
+        "hits": 99,
+        "baselineHits": 101,
+        "accuracy": 0.0543956043956044,
+        "netHits": -2,
+        "candidateOnly": 82,
+        "baselineOnly": 84,
+        "pairBrier": 0.0523130333156504
+      },
+      "ridge_sequence_1000_100": {
+        "events": 1820,
+        "hits": 101,
+        "baselineHits": 101,
+        "accuracy": 0.05549450549450549,
+        "netHits": 0,
+        "candidateOnly": 94,
+        "baselineOnly": 94,
+        "pairBrier": 0.05267894307895989
+      },
+      "ridge_sequence_10000_25": {
+        "events": 1820,
+        "hits": 109,
+        "baselineHits": 101,
+        "accuracy": 0.05989010989010989,
+        "netHits": 8,
+        "candidateOnly": 28,
+        "baselineOnly": 20,
+        "pairBrier": 0.05231932899395659
+      },
+      "ridge_sequence_10000_50": {
+        "events": 1820,
+        "hits": 100,
+        "baselineHits": 101,
+        "accuracy": 0.054945054945054944,
+        "netHits": -1,
+        "candidateOnly": 48,
+        "baselineOnly": 49,
+        "pairBrier": 0.05229207482897562
+      },
+      "ridge_sequence_10000_100": {
+        "events": 1820,
+        "hits": 99,
+        "baselineHits": 101,
+        "accuracy": 0.0543956043956044,
+        "netHits": -2,
+        "candidateOnly": 84,
+        "baselineOnly": 86,
+        "pairBrier": 0.05234834039535437
+      }
+    },
+    "last180": {
+      "joint_180": {
+        "events": 3660,
+        "hits": 221,
+        "baselineHits": 221,
+        "accuracy": 0.06038251366120219,
+        "netHits": 0,
+        "candidateOnly": 0,
+        "baselineOnly": 0,
+        "pairBrier": 0.052346065725561636
+      },
+      "pool_side_25": {
+        "events": 3660,
+        "hits": 215,
+        "baselineHits": 221,
+        "accuracy": 0.05874316939890711,
+        "netHits": -6,
+        "candidateOnly": 18,
+        "baselineOnly": 24,
+        "pairBrier": 0.05224938887506318
+      },
+      "pool_side_50": {
+        "events": 3660,
+        "hits": 216,
+        "baselineHits": 221,
+        "accuracy": 0.05901639344262295,
+        "netHits": -5,
+        "candidateOnly": 37,
+        "baselineOnly": 42,
+        "pairBrier": 0.052182360059388075
+      },
+      "pool_side_75": {
+        "events": 3660,
+        "hits": 219,
+        "baselineHits": 221,
+        "accuracy": 0.05983606557377049,
+        "netHits": -2,
+        "candidateOnly": 110,
+        "baselineOnly": 112,
+        "pairBrier": 0.05214497927853632
+      },
+      "pool_all_25": {
+        "events": 3660,
+        "hits": 213,
+        "baselineHits": 221,
+        "accuracy": 0.05819672131147541,
+        "netHits": -8,
+        "candidateOnly": 17,
+        "baselineOnly": 25,
+        "pairBrier": 0.05224797543470903
+      },
+      "pool_all_50": {
+        "events": 3660,
+        "hits": 212,
+        "baselineHits": 221,
+        "accuracy": 0.05792349726775956,
+        "netHits": -9,
+        "candidateOnly": 29,
+        "baselineOnly": 38,
+        "pairBrier": 0.05217992030091632
+      },
+      "pool_all_75": {
+        "events": 3660,
+        "hits": 208,
+        "baselineHits": 221,
+        "accuracy": 0.05683060109289618,
+        "netHits": -13,
+        "candidateOnly": 93,
+        "baselineOnly": 106,
+        "pairBrier": 0.052141900324183484
+      },
+      "sutta_25": {
+        "events": 3660,
+        "hits": 220,
+        "baselineHits": 221,
+        "accuracy": 0.060109289617486336,
+        "netHits": -1,
+        "candidateOnly": 31,
+        "baselineOnly": 32,
+        "pairBrier": 0.05225166504515632
+      },
+      "sutta_50": {
+        "events": 3660,
+        "hits": 213,
+        "baselineHits": 221,
+        "accuracy": 0.05819672131147541,
+        "netHits": -8,
+        "candidateOnly": 75,
+        "baselineOnly": 83,
+        "pairBrier": 0.05219231808073177
+      },
+      "ridge_context_100_25": {
+        "events": 3660,
+        "hits": 217,
+        "baselineHits": 221,
+        "accuracy": 0.0592896174863388,
+        "netHits": -4,
+        "candidateOnly": 95,
+        "baselineOnly": 99,
+        "pairBrier": 0.05226053636441974
+      },
+      "ridge_context_100_50": {
+        "events": 3660,
+        "hits": 204,
+        "baselineHits": 221,
+        "accuracy": 0.05573770491803279,
+        "netHits": -17,
+        "candidateOnly": 166,
+        "baselineOnly": 183,
+        "pairBrier": 0.0523010444609369
+      },
+      "ridge_context_100_100": {
+        "events": 3660,
+        "hits": 199,
+        "baselineHits": 221,
+        "accuracy": 0.05437158469945355,
+        "netHits": -22,
+        "candidateOnly": 188,
+        "baselineOnly": 210,
+        "pairBrier": 0.05274230088965163
+      },
+      "ridge_context_1000_25": {
+        "events": 3660,
+        "hits": 216,
+        "baselineHits": 221,
+        "accuracy": 0.05901639344262295,
+        "netHits": -5,
+        "candidateOnly": 77,
+        "baselineOnly": 82,
+        "pairBrier": 0.052259895900651554
+      },
+      "ridge_context_1000_50": {
+        "events": 3660,
+        "hits": 215,
+        "baselineHits": 221,
+        "accuracy": 0.05874316939890711,
+        "netHits": -6,
+        "candidateOnly": 160,
+        "baselineOnly": 166,
+        "pairBrier": 0.05226705398421535
+      },
+      "ridge_context_1000_100": {
+        "events": 3660,
+        "hits": 192,
+        "baselineHits": 221,
+        "accuracy": 0.05245901639344262,
+        "netHits": -29,
+        "candidateOnly": 180,
+        "baselineOnly": 209,
+        "pairBrier": 0.052556517371398964
+      },
+      "ridge_context_10000_25": {
+        "events": 3660,
+        "hits": 216,
+        "baselineHits": 221,
+        "accuracy": 0.05901639344262295,
+        "netHits": -5,
+        "candidateOnly": 40,
+        "baselineOnly": 45,
+        "pairBrier": 0.05228393714618124
+      },
+      "ridge_context_10000_50": {
+        "events": 3660,
+        "hits": 224,
+        "baselineHits": 221,
+        "accuracy": 0.06120218579234973,
+        "netHits": 3,
+        "candidateOnly": 88,
+        "baselineOnly": 85,
+        "pairBrier": 0.052250439641822834
+      },
+      "ridge_context_10000_100": {
+        "events": 3660,
+        "hits": 216,
+        "baselineHits": 221,
+        "accuracy": 0.05901639344262295,
+        "netHits": -5,
+        "candidateOnly": 173,
+        "baselineOnly": 178,
+        "pairBrier": 0.052269155643475215
+      },
+      "ridge_sequence_100_25": {
+        "events": 3660,
+        "hits": 217,
+        "baselineHits": 221,
+        "accuracy": 0.0592896174863388,
+        "netHits": -4,
+        "candidateOnly": 106,
+        "baselineOnly": 110,
+        "pairBrier": 0.052271371006424316
+      },
+      "ridge_sequence_100_50": {
+        "events": 3660,
+        "hits": 195,
+        "baselineHits": 221,
+        "accuracy": 0.05327868852459016,
+        "netHits": -26,
+        "candidateOnly": 162,
+        "baselineOnly": 188,
+        "pairBrier": 0.05234424611205914
+      },
+      "ridge_sequence_100_100": {
+        "events": 3660,
+        "hits": 190,
+        "baselineHits": 221,
+        "accuracy": 0.05191256830601093,
+        "netHits": -31,
+        "candidateOnly": 177,
+        "baselineOnly": 208,
+        "pairBrier": 0.052894338221902065
+      },
+      "ridge_sequence_1000_25": {
+        "events": 3660,
+        "hits": 215,
+        "baselineHits": 221,
+        "accuracy": 0.05874316939890711,
+        "netHits": -6,
+        "candidateOnly": 87,
+        "baselineOnly": 93,
+        "pairBrier": 0.05226930137947309
+      },
+      "ridge_sequence_1000_50": {
+        "events": 3660,
+        "hits": 198,
+        "baselineHits": 221,
+        "accuracy": 0.054098360655737705,
+        "netHits": -23,
+        "candidateOnly": 155,
+        "baselineOnly": 178,
+        "pairBrier": 0.05230484907267697
+      },
+      "ridge_sequence_1000_100": {
+        "events": 3660,
+        "hits": 196,
+        "baselineHits": 221,
+        "accuracy": 0.053551912568306013,
+        "netHits": -25,
+        "candidateOnly": 179,
+        "baselineOnly": 204,
+        "pairBrier": 0.05269908419706523
+      },
+      "ridge_sequence_10000_25": {
+        "events": 3660,
+        "hits": 224,
+        "baselineHits": 221,
+        "accuracy": 0.06120218579234973,
+        "netHits": 3,
+        "candidateOnly": 55,
+        "baselineOnly": 52,
+        "pairBrier": 0.05228799919496239
+      },
+      "ridge_sequence_10000_50": {
+        "events": 3660,
+        "hits": 213,
+        "baselineHits": 221,
+        "accuracy": 0.05819672131147541,
+        "netHits": -8,
+        "candidateOnly": 99,
+        "baselineOnly": 107,
+        "pairBrier": 0.052267230816841606
+      },
+      "ridge_sequence_10000_100": {
+        "events": 3660,
+        "hits": 198,
+        "baselineHits": 221,
+        "accuracy": 0.054098360655737705,
+        "netHits": -23,
+        "candidateOnly": 165,
+        "baselineOnly": 188,
+        "pairBrier": 0.05233719856843223
+      }
+    }
+  },
+  "weeklyBootstrap2025Onward": {
+    "weeks": 94,
+    "meanLift": 0.002353834472285497,
+    "interval95": [
+      -0.0019362324182917335,
+      0.00634279603390167
+    ]
+  },
+  "promotionGates": {
+    "developmentImproves": true,
+    "validationImproves": true,
+    "confirmationImproves": true,
+    "recentImproves": true,
+    "last30NonDegrading": true,
+    "last90NonDegrading": true,
+    "weeklyBootstrapPositive": false
+  },
+  "eligibleForProspectiveTrial": false,
+  "productionChanged": false,
+  "recentMarketSides": {
+    "Kalyan Night|close": {
+      "events": 202,
+      "hits": 12,
+      "baselineHits": 11,
+      "accuracy": 0.0594059405940594,
+      "netHits": 1,
+      "candidateOnly": 9,
+      "baselineOnly": 8,
+      "pairBrier": 0.054155436204796514
+    },
+    "Kalyan Night|open": {
+      "events": 202,
+      "hits": 13,
+      "baselineHits": 8,
+      "accuracy": 0.06435643564356436,
+      "netHits": 5,
+      "candidateOnly": 8,
+      "baselineOnly": 3,
+      "pairBrier": 0.05023001337784868
+    },
+    "Kalyan|close": {
+      "events": 245,
+      "hits": 18,
+      "baselineHits": 14,
+      "accuracy": 0.07346938775510205,
+      "netHits": 4,
+      "candidateOnly": 9,
+      "baselineOnly": 5,
+      "pairBrier": 0.05331989395428951
+    },
+    "Kalyan|open": {
+      "events": 245,
+      "hits": 17,
+      "baselineHits": 21,
+      "accuracy": 0.06938775510204082,
+      "netHits": -4,
+      "candidateOnly": 2,
+      "baselineOnly": 6,
+      "pairBrier": 0.052510878701359925
+    },
+    "Madhur Day|close": {
+      "events": 286,
+      "hits": 17,
+      "baselineHits": 15,
+      "accuracy": 0.05944055944055944,
+      "netHits": 2,
+      "candidateOnly": 13,
+      "baselineOnly": 11,
+      "pairBrier": 0.05324091279851773
+    },
+    "Madhur Day|open": {
+      "events": 286,
+      "hits": 15,
+      "baselineHits": 17,
+      "accuracy": 0.05244755244755245,
+      "netHits": -2,
+      "candidateOnly": 9,
+      "baselineOnly": 11,
+      "pairBrier": 0.049332952338700754
+    },
+    "Madhur Night|close": {
+      "events": 239,
+      "hits": 15,
+      "baselineHits": 12,
+      "accuracy": 0.06276150627615062,
+      "netHits": 3,
+      "candidateOnly": 7,
+      "baselineOnly": 4,
+      "pairBrier": 0.05207335621562933
+    },
+    "Madhur Night|open": {
+      "events": 239,
+      "hits": 20,
+      "baselineHits": 14,
+      "accuracy": 0.08368200836820083,
+      "netHits": 6,
+      "candidateOnly": 9,
+      "baselineOnly": 3,
+      "pairBrier": 0.051271666992333695
+    },
+    "Main Bazar|close": {
+      "events": 204,
+      "hits": 18,
+      "baselineHits": 19,
+      "accuracy": 0.08823529411764706,
+      "netHits": -1,
+      "candidateOnly": 1,
+      "baselineOnly": 2,
+      "pairBrier": 0.05274155139667346
+    },
+    "Main Bazar|open": {
+      "events": 204,
+      "hits": 10,
+      "baselineHits": 9,
+      "accuracy": 0.049019607843137254,
+      "netHits": 1,
+      "candidateOnly": 9,
+      "baselineOnly": 8,
+      "pairBrier": 0.051048131557299786
+    },
+    "Milan Day|close": {
+      "events": 244,
+      "hits": 11,
+      "baselineHits": 15,
+      "accuracy": 0.045081967213114756,
+      "netHits": -4,
+      "candidateOnly": 4,
+      "baselineOnly": 8,
+      "pairBrier": 0.04901293315677974
+    },
+    "Milan Day|open": {
+      "events": 244,
+      "hits": 9,
+      "baselineHits": 9,
+      "accuracy": 0.036885245901639344,
+      "netHits": 0,
+      "candidateOnly": 7,
+      "baselineOnly": 7,
+      "pairBrier": 0.05218941392325714
+    },
+    "Milan Night|close": {
+      "events": 243,
+      "hits": 14,
+      "baselineHits": 19,
+      "accuracy": 0.05761316872427984,
+      "netHits": -5,
+      "candidateOnly": 1,
+      "baselineOnly": 6,
+      "pairBrier": 0.0553687458425533
+    },
+    "Milan Night|open": {
+      "events": 243,
+      "hits": 12,
+      "baselineHits": 13,
+      "accuracy": 0.04938271604938271,
+      "netHits": -1,
+      "candidateOnly": 4,
+      "baselineOnly": 5,
+      "pairBrier": 0.05513453110336709
+    },
+    "Rajdhani Day|close": {
+      "events": 245,
+      "hits": 21,
+      "baselineHits": 16,
+      "accuracy": 0.08571428571428572,
+      "netHits": 5,
+      "candidateOnly": 13,
+      "baselineOnly": 8,
+      "pairBrier": 0.05277796208677434
+    },
+    "Rajdhani Day|open": {
+      "events": 245,
+      "hits": 16,
+      "baselineHits": 18,
+      "accuracy": 0.0653061224489796,
+      "netHits": -2,
+      "candidateOnly": 9,
+      "baselineOnly": 11,
+      "pairBrier": 0.051211137484194785
+    },
+    "Rajdhani Night|close": {
+      "events": 205,
+      "hits": 8,
+      "baselineHits": 9,
+      "accuracy": 0.03902439024390244,
+      "netHits": -1,
+      "candidateOnly": 5,
+      "baselineOnly": 6,
+      "pairBrier": 0.05290899248996962
+    },
+    "Rajdhani Night|open": {
+      "events": 205,
+      "hits": 13,
+      "baselineHits": 14,
+      "accuracy": 0.06341463414634146,
+      "netHits": -1,
+      "candidateOnly": 9,
+      "baselineOnly": 10,
+      "pairBrier": 0.050946183729536514
+    },
+    "Sridevi Night|close": {
+      "events": 286,
+      "hits": 11,
+      "baselineHits": 13,
+      "accuracy": 0.038461538461538464,
+      "netHits": -2,
+      "candidateOnly": 3,
+      "baselineOnly": 5,
+      "pairBrier": 0.05335147586181293
+    },
+    "Sridevi Night|open": {
+      "events": 286,
+      "hits": 17,
+      "baselineHits": 13,
+      "accuracy": 0.05944055944055944,
+      "netHits": 4,
+      "candidateOnly": 11,
+      "baselineOnly": 7,
+      "pairBrier": 0.05021768483906514
+    },
+    "Sridevi|close": {
+      "events": 287,
+      "hits": 15,
+      "baselineHits": 12,
+      "accuracy": 0.05226480836236934,
+      "netHits": 3,
+      "candidateOnly": 7,
+      "baselineOnly": 4,
+      "pairBrier": 0.05194204138622613
+    },
+    "Sridevi|open": {
+      "events": 287,
+      "hits": 21,
+      "baselineHits": 24,
+      "accuracy": 0.07317073170731707,
+      "netHits": -3,
+      "candidateOnly": 3,
+      "baselineOnly": 6,
+      "pairBrier": 0.05310019123468428
+    },
+    "Time Bazar|close": {
+      "events": 245,
+      "hits": 19,
+      "baselineHits": 15,
+      "accuracy": 0.07755102040816327,
+      "netHits": 4,
+      "candidateOnly": 11,
+      "baselineOnly": 7,
+      "pairBrier": 0.05268428979026126
+    },
+    "Time Bazar|open": {
+      "events": 245,
+      "hits": 17,
+      "baselineHits": 18,
+      "accuracy": 0.06938775510204082,
+      "netHits": -1,
+      "candidateOnly": 4,
+      "baselineOnly": 5,
+      "pairBrier": 0.05003684446547459
+    }
+  },
+  "sources": [
+    {
+      "path": "research/panel_top10_v1/chart_rows.csv",
+      "sha256": "39be0deda781d6a1a629850342196f53b2ca9fc7e3e8eefaf81e0b41549dfca8",
+      "rows": 23762
+    },
+    {
+      "path": "research/combined_prediction_v2/october_rows.csv",
+      "sha256": "a37eb791d3a605f3660c862e53230343a2a1aeecedbfb16974f41bb81e3150e6",
+      "rows": 152
+    },
+    {
+      "path": "research/combined_prediction_v3/fresh_rows.csv",
+      "sha256": "c8fc43cca3c770e1ad8abc0e326f9a1729fdb677c322fcadae3b31deb0574e96",
+      "rows": 14
+    }
+  ],
+  "protocolSHA256": "4591283880766feab04756d818d8af20b7952955acc8929eefb5d5d904f4a5d5",
+  "quarterlyFits": [
+    {
+      "quarter": "2021-01-01",
+      "trainingRows": 4306,
+      "earliestTrain": "2018-09-01",
+      "latestTrain": "2020-12-31",
+      "predictions": 574
+    },
+    {
+      "quarter": "2021-04-01",
+      "trainingRows": 4442,
+      "earliestTrain": "2018-12-01",
+      "latestTrain": "2021-03-31",
+      "predictions": 624
+    },
+    {
+      "quarter": "2021-07-01",
+      "trainingRows": 4628,
+      "earliestTrain": "2019-03-01",
+      "latestTrain": "2021-06-30",
+      "predictions": 1146
+    },
+    {
+      "quarter": "2021-10-01",
+      "trainingRows": 5290,
+      "earliestTrain": "2019-06-01",
+      "latestTrain": "2021-09-30",
+      "predictions": 1228
+    },
+    {
+      "quarter": "2022-01-01",
+      "trainingRows": 6026,
+      "earliestTrain": "2019-09-01",
+      "latestTrain": "2021-12-31",
+      "predictions": 1230
+    },
+    {
+      "quarter": "2022-04-01",
+      "trainingRows": 6814,
+      "earliestTrain": "2019-12-01",
+      "latestTrain": "2022-03-31",
+      "predictions": 1266
+    },
+    {
+      "quarter": "2022-07-01",
+      "trainingRows": 7590,
+      "earliestTrain": "2020-03-01",
+      "latestTrain": "2022-06-30",
+      "predictions": 1408
+    },
+    {
+      "quarter": "2022-10-01",
+      "trainingRows": 8590,
+      "earliestTrain": "2020-06-01",
+      "latestTrain": "2022-09-30",
+      "predictions": 1468
+    },
+    {
+      "quarter": "2023-01-01",
+      "trainingRows": 9568,
+      "earliestTrain": "2020-09-01",
+      "latestTrain": "2022-12-31",
+      "predictions": 1526
+    },
+    {
+      "quarter": "2023-04-01",
+      "trainingRows": 10640,
+      "earliestTrain": "2020-12-01",
+      "latestTrain": "2023-03-31",
+      "predictions": 1780
+    },
+    {
+      "quarter": "2023-07-01",
+      "trainingRows": 11882,
+      "earliestTrain": "2021-03-01",
+      "latestTrain": "2023-06-30",
+      "predictions": 1858
+    },
+    {
+      "quarter": "2023-10-01",
+      "trainingRows": 13118,
+      "earliestTrain": "2021-06-01",
+      "latestTrain": "2023-09-30",
+      "predictions": 1724
+    },
+    {
+      "quarter": "2024-01-01",
+      "trainingRows": 13904,
+      "earliestTrain": "2021-09-01",
+      "latestTrain": "2023-12-31",
+      "predictions": 1822
+    },
+    {
+      "quarter": "2024-04-01",
+      "trainingRows": 14530,
+      "earliestTrain": "2021-12-01",
+      "latestTrain": "2024-03-31",
+      "predictions": 1868
+    },
+    {
+      "quarter": "2024-07-01",
+      "trainingRows": 15144,
+      "earliestTrain": "2022-03-01",
+      "latestTrain": "2024-06-30",
+      "predictions": 1862
+    },
+    {
+      "quarter": "2024-10-01",
+      "trainingRows": 15740,
+      "earliestTrain": "2022-06-01",
+      "latestTrain": "2024-09-30",
+      "predictions": 1734
+    },
+    {
+      "quarter": "2025-01-01",
+      "trainingRows": 16152,
+      "earliestTrain": "2022-09-01",
+      "latestTrain": "2024-12-31",
+      "predictions": 1818
+    },
+    {
+      "quarter": "2025-04-01",
+      "trainingRows": 16522,
+      "earliestTrain": "2022-12-01",
+      "latestTrain": "2025-03-31",
+      "predictions": 1872
+    },
+    {
+      "quarter": "2025-07-01",
+      "trainingRows": 16880,
+      "earliestTrain": "2023-03-01",
+      "latestTrain": "2025-06-30",
+      "predictions": 1856
+    },
+    {
+      "quarter": "2025-10-01",
+      "trainingRows": 17038,
+      "earliestTrain": "2023-06-01",
+      "latestTrain": "2025-09-30",
+      "predictions": 1762
+    },
+    {
+      "quarter": "2026-01-01",
+      "trainingRows": 16936,
+      "earliestTrain": "2023-09-01",
+      "latestTrain": "2025-12-31",
+      "predictions": 1796
+    },
+    {
+      "quarter": "2026-04-01",
+      "trainingRows": 17014,
+      "earliestTrain": "2023-12-01",
+      "latestTrain": "2026-03-31",
+      "predictions": 1862
+    },
+    {
+      "quarter": "2026-07-01",
+      "trainingRows": 17030,
+      "earliestTrain": "2024-03-01",
+      "latestTrain": "2026-06-30",
+      "predictions": 1872
+    },
+    {
+      "quarter": "2026-10-01",
+      "trainingRows": 17032,
+      "earliestTrain": "2024-06-01",
+      "latestTrain": "2026-09-30",
+      "predictions": 332
+    }
+  ],
+  "auditSHA256": "801e400d8fe4a0d10071b721cd5f550254c199d1ae453c72412e5a61b174a169"
+}
