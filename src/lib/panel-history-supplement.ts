@@ -1,3 +1,5 @@
+import { indiaISODate } from "./india-time"
+
 const INDEPENDENT_CHART_API = 'https://api.cloudsoft.one/portal/charts'
 const INDEPENDENT_HOST = 'sattamatka.ai'
 const VALIDATION_WINDOW_DAYS = 90
@@ -54,7 +56,7 @@ function shiftISODate(isoDate: string, days: number): string {
 }
 
 function todayISO(): string {
-  return new Date().toISOString().slice(0, 10)
+  return indiaISODate()
 }
 
 function isISODate(value: string): boolean {
