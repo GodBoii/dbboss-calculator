@@ -1,4 +1,4 @@
-import type { PanelRecord } from './db'
+import { getRecordISODate as recordISODate, type PanelRecord } from './db'
 import {
   analyzeMarket,
   buildContextFromResult,
@@ -55,16 +55,6 @@ interface MutableBucket extends Omit<BacktestBucket, 'averageActualRank'> {
   rankSeen: number
 }
 
-const DAY_OFFSETS: Record<string, number> = {
-  Monday: 0,
-  Tuesday: 1,
-  Wednesday: 2,
-  Thursday: 3,
-  Friday: 4,
-  Saturday: 5,
-  Sunday: 6,
-}
-
 function emptyBucket(): MutableBucket {
   return {
     n: 0,
@@ -112,21 +102,6 @@ function finalizeBucket(bucket: MutableBucket): BacktestBucket {
   }
 }
 
-function parseDate(dateStr: string): Date | null {
-  const cleaned = dateStr.replace(/-/g, '/')
-  const parts = cleaned.split('/').map((part) => parseInt(part, 10))
-  if (parts.length !== 3 || parts.some((part) => Number.isNaN(part))) return null
-  const [day, month, rawYear] = parts
-  const year = rawYear < 100 ? rawYear + 2000 : rawYear
-  return new Date(Date.UTC(year, month - 1, day))
-}
-
-function addDays(date: Date, days: number): Date {
-  const next = new Date(date)
-  next.setUTCDate(next.getUTCDate() + days)
-  return next
-}
-
 function toISODate(date: Date): string {
   return date.toISOString().slice(0, 10)
 }
@@ -137,11 +112,7 @@ export function getBacktestWindowStart(endDate: string, days: number): string {
   return toISODate(startDate)
 }
 
-export function getRecordISODate(record: PanelRecord): string | null {
-  const start = parseDate(record.dateRangeStart)
-  if (!start) return null
-  return toISODate(addDays(start, DAY_OFFSETS[record.day] ?? 0))
-}
+export function getRecordISODate(record: PanelRecord): string | null { return recordISODate(record) }
 
 function evaluatePickSet(
   bucket: MutableBucket,
@@ -234,7 +205,7 @@ export function runMarketBacktest(
     priorAllMarkets[market] = prior
 
     // Close panels are scored after today's Open is declared, as the Close tab shows them.
-    const prediction = (options.predictor ?? analyzeMarket)(market, prior, priorAllMarkets, new Date(`${isoDate}T12:00:00`), {
+    const prediction = (options.predictor ?? analyzeMarket)(market, prior, priorAllMarkets, new Date(`${isoDate}T12:00:00+05:30`), {
       knownOpenPanel: record.openPanel || null,
     })
     if (!prediction) continue
@@ -378,7 +349,7 @@ export function runSuttaBacktest7d(
     }
     priorAllMarkets[market] = prior
 
-    const targetDate = new Date(`${isoDate}T12:00:00`)
+    const targetDate = new Date(`${isoDate}T12:00:00+05:30`)
     const prediction = analyzeMarket(market, prior, priorAllMarkets, targetDate)
     if (!prediction) continue
 
