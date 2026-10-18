@@ -1,6 +1,7 @@
 import type { PanelRecord } from "../db"
 import { rankStatisticalSuttas, digitRates, smoothedRate } from "./shared"
 import type { SuttaPick } from "./types"
+import { indiaDayIndex } from "../india-time"
 
 type AdjustedCloseTop6Model =
   | "recent-30-cold"
@@ -78,7 +79,7 @@ export function buildAdjustedCloseTop6Model(input: {
   const allValues = closeRecords.map((record) => record.closeSutta)
   const long = digitRates(allValues)
   const recent60 = digitRates(allValues.slice(-60))
-  const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][targetDate.getDay()]
+  const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][indiaDayIndex(targetDate)]
   const weekday = digitRates(
     closeRecords.filter((record) => record.day === dayName).map((record) => record.closeSutta),
     2.5,
