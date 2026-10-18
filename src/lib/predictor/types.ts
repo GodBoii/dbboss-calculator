@@ -1,6 +1,8 @@
 export interface PredictionResult {
   market: string;
   analysisDateISO: string;
+  /** Original request instant when a completed result advances the target. */
+  analysisAsOfISO?: string;
   analysisDayName: string;
   calibration: MarketCalibration;
   volumeTier: "High" | "Medium" | "Low";
