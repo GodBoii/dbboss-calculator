@@ -1,5 +1,6 @@
 import type { PanelRecord } from "../db";
 import { getRecordISODate } from "../db";
+import { indiaISODate, indiaDayIndex } from "../india-time";
 import type { DpKindContext, PanelKind, PanelKindPrediction } from "./types";
 import { getDoublePanelDigit, getPanelKind, isDoublePanel } from "./panel-utils";
 
@@ -117,10 +118,7 @@ const PRECISION_MODELS: Record<string, PrecisionModelConfig> = {
 };
 
 function toLocalISODate(date: Date): string {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+  return indiaISODate(date);
 }
 
 function previousDateISO(isoDate: string): string {
@@ -209,7 +207,7 @@ function buildPrecisionFeatures(
     "Thursday",
     "Friday",
     "Saturday",
-  ][analysisDate.getDay()]).reverse();
+  ][indiaDayIndex(analysisDate)]).reverse();
   addPanelFeatures(features, "sameWeek1.prev", sameWeek[0]?.record ?? null, side);
   addPanelFeatures(features, "sameWeek2.prev", sameWeek[1]?.record ?? null, side);
 
