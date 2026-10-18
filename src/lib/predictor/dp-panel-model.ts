@@ -12,6 +12,7 @@
  * already published it is used as an input.
  */
 import { getRecordISODate, type PanelRecord } from "../db";
+import { indiaISODate } from "../india-time";
 import { historicalCutoffISO } from "../prediction-contract";
 import type { DpDigitFocus, PanelPick } from "./types";
 import { DOUBLE_PANELS, calculateSutta, isSequential, isTriple } from "./panel-utils";
@@ -70,9 +71,7 @@ function mondayWeekday(iso: string): number {
 }
 
 function localISO(date: Date): string {
-  const m = String(date.getMonth() + 1).padStart(2, "0");
-  const d = String(date.getDate()).padStart(2, "0");
-  return `${date.getFullYear()}-${m}-${d}`;
+  return indiaISODate(date);
 }
 
 const validPanel = (p: string | undefined | null): p is string => Boolean(p && /^\d{3}$/.test(p));
