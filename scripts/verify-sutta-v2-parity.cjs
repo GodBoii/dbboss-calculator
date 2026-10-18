@@ -30,7 +30,9 @@ if (!cachePath) throw new Error("Missing scratch/sutta-research-records.json")
 if (SUTTA_MODEL_ENGINE !== "v2-recency") throw new Error(`SUTTA_MODEL_ENGINE is ${SUTTA_MODEL_ENGINE}, expected v2-recency`)
 const all = JSON.parse(fs.readFileSync(cachePath, "utf8"))
 
-// Independent re-implementation of the research rule (scratch/sutta-v2-final-eval.cjs).
+// Independent research rule, using panel-derived digits at the corrected data boundary.
+// Raw cached Jodi strings are retained in the cache and must not override panel sums.
+const digit = panel => [...panel].reduce((sum,d) => sum + Number(d),0) % 10
 function tieBreak(seed) {
   let h = 2166136261
   for (let i = 0; i < seed.length; i++) { h ^= seed.charCodeAt(i); h = Math.imul(h, 16777619) }
@@ -56,7 +58,7 @@ const rows = []
 for (const [market, records] of Object.entries(all)) {
   const dated = records
     .map((record) => ({ record, iso: getRecordISODate(record) }))
-    .filter((r) => r.iso && /^\d{3}$/.test(r.record.openPanel) && /^\d{3}$/.test(r.record.closePanel) && /^\d{2}$/.test(r.record.jodi))
+    .filter((r) => r.iso && /^\d{3}$/.test(r.record.openPanel) && /^\d{3}$/.test(r.record.closePanel))
     .sort((a, b) => a.iso.localeCompare(b.iso))
   const dedup = dated.filter((r, i) => i === 0 || dated[i - 1].iso !== r.iso)
   const anchor = dedup.at(-1)?.iso
@@ -68,13 +70,13 @@ for (const [market, records] of Object.entries(all)) {
     const targetDate = new Date(`${iso}T12:00:00Z`)
     const open = buildOpenSuttaSet([], {}, records, 6, market, targetDate, {}).map((p) => p.sutta)
     const close = buildCloseSuttaSet([], {}, records, 6, market, null, {}, targetDate).map((p) => p.sutta)
-    const hist = dedup.slice(0, i).map((r) => ({ o: Number(r.record.jodi[0]), c: Number(r.record.jodi[1]) }))
+    const hist = dedup.slice(0, i).map((r) => ({ o: digit(r.record.openPanel), c: digit(r.record.closePanel) }))
     const tb = tieBreak(`${market}|${iso}`)
     const ro = researchOpen(hist, tb).slice(0, 6), rc = researchClose(hist, tb).slice(0, 6)
     if (open.join() !== ro.join()) failures.push(`${market} ${iso} open ${open} vs research ${ro}`)
     if (close.join() !== rc.join()) failures.push(`${market} ${iso} close ${close} vs research ${rc}`)
     const jodis = buildJodis(open.map((s) => ({ sutta: s })), close.map((s) => ({ sutta: s })))
-    rows.push({ iso, anchor, o: Number(record.jodi[0]), c: Number(record.jodi[1]), jodi: record.jodi, open, close, jodis })
+    rows.push({ iso, anchor, o: digit(record.openPanel), c: digit(record.closePanel), jodi: `${digit(record.openPanel)}${digit(record.closePanel)}`, open, close, jodis })
   }
 }
 
