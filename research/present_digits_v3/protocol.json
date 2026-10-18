@@ -1,0 +1,43 @@
+{
+  "study": "present-digits-pooled-supervised-v3",
+  "target": "Both distinct selected digits appear in the same Open or Close panel.",
+  "baseline": "The live joint_180 model, on exactly the same eligible events.",
+  "hypotheses": [
+    "Pooling prior pair counts across markets reduces noisy local frequency estimates.",
+    "Prior-panel context predicts residual pair appearance after accounting for local frequency."
+  ],
+  "candidates": {
+    "pooled_prior": {"scopes": ["same-side", "all-sides"], "weights": [0.25, 0.5, 0.75]},
+    "pooled_previous_sutta": {"weights": [0.25, 0.5], "prior_strength": 100},
+    "residual_ridge": {
+      "features": ["context", "context-plus-three-panel-lags"],
+      "l2": [100, 1000, 10000],
+      "residual_weights": [0.25, 0.5, 1.0],
+      "refit": "At calendar-quarter boundaries, using only prior target outcomes within 28 calendar months."
+    }
+  },
+  "history": {
+    "minimum_own_results": 180,
+    "lookback_calendar_months": 28,
+    "cross_market_availability": "Strictly earlier calendar dates. All results for a date are predicted before any are learned.",
+    "close_information": "Pre-result Close only. Same-day Open is excluded."
+  },
+  "selection": "Choose one challenger by most strict hits during 2021-2023. Candidate-order ties. Never retune on later periods.",
+  "evaluation_periods": {
+    "development": ["2021-01-01", "2023-12-31"],
+    "validation": ["2024-01-01", "2024-12-31"],
+    "confirmation": ["2025-01-01", "2025-12-31"],
+    "recent": ["2026-01-01", "latest source date"]
+  },
+  "promotion_checks": [
+    "Strict improvement on development, validation, confirmation, and recent periods.",
+    "Non-negative net hits on the last 30 and 90 calendar days.",
+    "Positive 95% lower bound for mean net hits, resampling whole calendar weeks across 2025 onward, 4000 replicates, seed 20261018."
+  ],
+  "limitations": [
+    "These histories have been inspected in earlier studies. This is retrospective research, not pristine independent validation.",
+    "Both-digit accuracy remains the target; one-digit hits do not count as successes.",
+    "A failed round does not justify changing thresholds or selecting another candidate on the same confirmation data.",
+    "No production change is made by the research script. Passing checks would justify a prospective trial."
+  ]
+}
