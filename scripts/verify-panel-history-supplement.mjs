@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict'
-import {
-  supplementPanelHistory,
-} from '../src/lib/panel-history-supplement.ts'
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
+require('../research/dp_panel_v3/ts-loader.cjs')
+const { supplementPanelHistory } = require('../src/lib/panel-history-supplement.ts')
 
 const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
