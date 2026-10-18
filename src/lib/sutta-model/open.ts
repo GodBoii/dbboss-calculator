@@ -1,5 +1,6 @@
 import type { PanelRecord } from "../db"
 import { getRecordISODate } from "../db"
+import { indiaISODate, indiaDayOfMonth } from "../india-time"
 import { digitRates, rankStatisticalSuttas, smoothedRate } from "./shared"
 import type { SuttaPick } from "./types"
 
@@ -31,12 +32,12 @@ export function buildOpenTop6Model(input: {
   const openRecords = records.filter((record) => record.openPanel && record.openSutta >= 0)
   if (openRecords.length < 50) return null
 
-  const dayOfMonth = targetDate.getDate()
+  const dayOfMonth = indiaDayOfMonth(targetDate)
   const counts = Array(10).fill(0) as number[]
   let total = 0
   for (const record of openRecords) {
     const isoDate = getRecordISODate(record)
-    if (!isoDate || new Date(`${isoDate}T12:00:00`).getDate() !== dayOfMonth) continue
+    if (!isoDate || Number(isoDate.slice(8)) !== dayOfMonth) continue
     counts[record.openSutta]++
     total++
   }
@@ -45,7 +46,7 @@ export function buildOpenTop6Model(input: {
     score: smoothedRate(observed, total, 3),
   }))
   if (model === "calendar-date-sridevi-kind") {
-    const targetISO = targetDate.toISOString().slice(0, 10)
+    const targetISO = indiaISODate(targetDate)
     const source = (allMarketsRecords["Sridevi Night"] ?? []).find(
       (record) => getRecordISODate(record) === targetISO,
     )
