@@ -1,4 +1,5 @@
 import { getRecordISODate, type PanelRecord } from "./db"
+import { indiaISODate } from "./india-time"
 
 export const PRESENT_DIGITS_MODEL_ID = "present-digits-joint-coappearance-v1"
 export const PRESENT_DIGITS_MIN_HISTORY = 180
@@ -152,7 +153,7 @@ export function buildPresentDigitsPredictionFromPanels(
   records: PanelRecord[],
   targetDate = new Date(),
 ): PresentDigitsPrediction | null {
-  const targetISO = targetDate.toISOString().slice(0, 10)
+  const targetISO = indiaISODate(targetDate)
   const rows = records
     .map((record) => ({ record, isoDate: getRecordISODate(record) }))
     .filter(
