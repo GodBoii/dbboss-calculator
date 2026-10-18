@@ -105,19 +105,22 @@ async function run(label) {
   const result={label,through,start,sourceSHA256:hash(fs.readFileSync(snapshotPath)),timezone:'Asia/Kolkata',panelCount:10,suttaCount:6,
     notes:'Retrospective replay of existing fitted models; live Close receives only its own declared Open. Same frozen raw source and outcomes before/after. Windows use calendar days, not number of draws.',summaries,events:allEvents}
   fs.writeFileSync(path.join(dir,`${label}.json`),JSON.stringify(result))
-  if(label==='after'){
+  if(label==='after')writeComparison(result)
+}
+
+function writeComparison(result) {
+    const {summaries,events:allEvents} = result
     const before=JSON.parse(fs.readFileSync(path.join(dir,'before.json')))
     if(before.sourceSHA256!==result.sourceSHA256)throw new Error('Source changed between replays')
     const changes=summaries.map((row,i)=>({...row,deltaHits:Object.fromEntries(Object.keys(row.hits).map(k=>[k,row.hits[k]-before.summaries[i].hits[k]]))}))
     const changedLists=allEvents.filter((row,i)=>row.v1.listsHash!==before.events[i].v1.listsHash||row.v2.listsHash!==before.events[i].v2.listsHash).length
     fs.writeFileSync(path.join(dir,'comparison.json'),JSON.stringify({sourceSHA256:result.sourceSHA256,changedLists,changes},null,2))
-    const lines=['# Reliability repair accuracy comparison','',result.notes,'',`Through ${through} IST. Changed forecast sets: ${changedLists}.`,'','| Market | Model | Days | Draws | Open 10 | Close 10 | Live Close 10 | Open 6 | Close 6 | Jodi 36 |','|---|---|---:|---:|---:|---:|---:|---:|---:|---:|']
-    for(const row of changes)lines.push(`| ${row.market} | ${row.version} | ${row.days} | ${row.n} | ${['open10','close10','liveClose10','open6','close6','jodi36'].map(k=>`${row.hits[k]}/${row.n} (${row.deltaHits[k]>=0?'+':''}${row.deltaHits[k]})`).join(' | ')} |`)
+    const lines=['# Reliability repair accuracy comparison','',result.notes,'',`Through ${through} IST. Changed forecast sets: ${changedLists}. N/A means no completed source outcomes were available in that calendar window; it is not zero accuracy.`,'','| Market | Model | Days | Draws | Open 10 | Close 10 | Live Close 10 | Open 6 | Close 6 | Jodi 36 |','|---|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+    for(const row of changes)lines.push(`| ${row.market} | ${row.version} | ${row.days} | ${row.n} | ${['open10','close10','liveClose10','open6','close6','jodi36'].map(k=>row.n ? `${row.hits[k]}/${row.n} (${row.deltaHits[k]>=0?'+':''}${row.deltaHits[k]})` : 'N/A').join(' | ')} |`)
     fs.writeFileSync(path.join(dir,'comparison.md'),lines.join('\n')+'\n')
     console.log(`Comparison written: ${changedLists} changed forecast sets`)
-  }
 }
 
 const mode=process.argv[2]
 if(mode==='worker'){process.send(replay(process.argv[3]));process.disconnect()}
-else (mode==='freeze'?freeze():run(mode||'before')).catch(error=>{console.error(error);process.exitCode=1})
+else (mode==='report'?Promise.resolve().then(()=>writeComparison(JSON.parse(fs.readFileSync(path.join(dir,'after.json'))))):mode==='freeze'?freeze():run(mode||'before')).catch(error=>{console.error(error);process.exitCode=1})
