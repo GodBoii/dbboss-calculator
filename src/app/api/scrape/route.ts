@@ -5,6 +5,7 @@ import {
   type PanelHistoryRecord,
 } from '@/lib/panel-history-supplement'
 import { historicalCutoffISO } from '@/lib/prediction-contract'
+import { normalizeRecords, getRecordISODate } from '@/lib/db'
 
 export const runtime = 'nodejs'
 // No caching - always fetch fresh data
@@ -34,7 +35,7 @@ export async function GET(request: NextRequest) {
     return Response.json({ error: 'Invalid URL' }, { status: 400 })
   }
 
-  if (parsedUrl.hostname !== 'dpbossss.boston' && parsedUrl.hostname !== 'dpboss.tax') {
+  if (parsedUrl.protocol !== 'https:' || (parsedUrl.hostname !== 'dpbossss.boston' && parsedUrl.hostname !== 'dpboss.tax')) {
     return Response.json({ error: 'URL not allowed' }, { status: 403 })
   }
 
@@ -64,10 +65,11 @@ export async function GET(request: NextRequest) {
     }
 
     const html = await response.text()
-    const primaryPanels = parseHtmlForPanels(html, marketName)
+    // Old chart sections can overlap; validate the actual supported window only.
+    const primaryPanels = normalizeRecords(filterRecentPanels(parseHtmlForPanels(html, marketName)), marketName, Date.now())
     const independentRows = await independentRowsPromise
     const supplemented = supplementPanelHistory(primaryPanels, independentRows, marketName)
-    const panels = filterRecentPanels(supplemented.panels)
+    const panels = filterRecentPanels(normalizeRecords(supplemented.panels, marketName, Date.now()))
 
     return Response.json(
       {
@@ -218,30 +220,8 @@ function parseHtmlForPanels(html: string, market: string): ParsedPanel[] {
   return results
 }
 
-const DAY_OFFSETS: Record<string, number> = {
-  Monday: 0,
-  Tuesday: 1,
-  Wednesday: 2,
-  Thursday: 3,
-  Friday: 4,
-  Saturday: 5,
-  Sunday: 6,
-}
-
-function parsePanelDate(dateStr: string): Date | null {
-  const cleaned = dateStr.replace(/-/g, '/')
-  const parts = cleaned.split('/').map((part) => parseInt(part, 10))
-  if (parts.length !== 3 || parts.some((part) => Number.isNaN(part))) return null
-  const [day, month, rawYear] = parts
-  const year = rawYear < 100 ? rawYear + 2000 : rawYear
-  return new Date(Date.UTC(year, month - 1, day))
-}
-
 function panelISODate(panel: ParsedPanel): string | null {
-  const start = parsePanelDate(panel.dateRangeStart)
-  if (!start) return null
-  start.setUTCDate(start.getUTCDate() + (DAY_OFFSETS[panel.day] ?? 0))
-  return start.toISOString().slice(0, 10)
+  return getRecordISODate(panel)
 }
 
 function filterRecentPanels(panels: ParsedPanel[]): ParsedPanel[] {
