@@ -1,4 +1,4 @@
-import type { PanelRecord } from "../db";
+import { indiaDayOfMonth } from "../india-time";
 import type { FlatEntry } from "./data";
 import type { DpKindContext, OperatorContext, PanelPick } from "./types";
 import {
@@ -109,7 +109,7 @@ function buildOperatorContext({
   const recent12DpRate = recentDpRate(entries, 12);
   const recent24DpRate = recentDpRate(entries, 24);
   const dpGap = computeDpGapProfile(entries);
-  const date = analysisDate.getDate();
+  const date = indiaDayOfMonth(analysisDate);
 
   let generosityIndex = 50;
   if (recent12DpRate <= 0.12) generosityIndex += 10;
