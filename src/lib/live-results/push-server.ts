@@ -45,7 +45,7 @@ export async function sendTestPush(endpoint: string) {
       tag: "notification-test",
       url: "/#live-results",
     }),
-    { TTL: 300, urgency: "normal" },
+    { TTL: 300, urgency: "normal", timeout: 10_000 },
   );
 
   const updated = await supabase.from("push_subscriptions").update({
@@ -60,6 +60,7 @@ export async function sendResultPush(
   marketName: string,
   phase: ResultPhase,
   parsed: ParsedSourceResult,
+  delivery: { alreadySent?: ReadonlySet<string>; onDelivered?: (subscriptionId: string) => Promise<void> } = {},
 ) {
   if (!configureWebPush()) return { sent: 0, failed: 0, skipped: true };
 
@@ -85,7 +86,7 @@ export async function sendResultPush(
   let sent = 0;
   let failed = 0;
   await Promise.allSettled(
-    ((subscriptions.data ?? []) as StoredSubscription[]).map(async (subscription) => {
+    ((subscriptions.data ?? []) as StoredSubscription[]).filter(subscription => !delivery.alreadySent?.has(subscription.id)).map(async (subscription) => {
       const resultText = subscription.show_result_in_notification
         ? parsed.rawValue
         : "A new result is available.";
@@ -105,27 +106,33 @@ export async function sendResultPush(
             keys: { p256dh: subscription.p256dh, auth: subscription.auth },
           },
           payload,
-          { TTL: 3600, urgency: "high" },
+          { TTL: 3600, urgency: "high", timeout: 10_000 },
         );
+        await delivery.onDelivered?.(subscription.id);
         sent += 1;
-        await supabase.from("push_subscriptions").update({
+        const updated = await supabase.from("push_subscriptions").update({
           last_success_at: new Date().toISOString(),
           failure_count: 0,
         }).eq("id", subscription.id);
+        if (updated.error) throw updated.error;
       } catch (error) {
         failed += 1;
         const statusCode = typeof error === "object" && error && "statusCode" in error
           ? Number(error.statusCode)
           : 0;
         if (statusCode === 404 || statusCode === 410) {
-          await supabase.from("push_subscriptions").delete().eq("id", subscription.id);
+          const removed = await supabase.from("push_subscriptions").delete().eq("id", subscription.id);
+          if (removed.error) throw removed.error;
+          // An expired device is terminal, not a temporary delivery failure.
+          failed -= 1;
         } else {
           const failureCount = subscription.failure_count + 1;
-          await supabase.from("push_subscriptions").update({
+          const updated = await supabase.from("push_subscriptions").update({
             last_failure_at: new Date().toISOString(),
             failure_count: failureCount,
             enabled: failureCount < 10,
           }).eq("id", subscription.id);
+          if (updated.error) throw updated.error;
         }
       }
     }),
