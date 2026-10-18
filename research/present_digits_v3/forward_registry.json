@@ -1,0 +1,364 @@
+{
+  "model": "pool_all_75",
+  "observedThrough": "2026-10-17",
+  "target": "First subsequently observed complete panel row per market, strictly after observedThrough.",
+  "status": "RESEARCH_ONLY",
+  "calls": [
+    {
+      "market": "Kalyan",
+      "side": "open",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        5,
+        9
+      ],
+      "baselinePair": [
+        5,
+        9
+      ],
+      "candidateScore": 0.06782624633431085
+    },
+    {
+      "market": "Kalyan",
+      "side": "close",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        1,
+        6
+      ],
+      "baselinePair": [
+        0,
+        2
+      ],
+      "candidateScore": 0.0653592375366569
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "open",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        1,
+        6
+      ],
+      "baselinePair": [
+        6,
+        9
+      ],
+      "candidateScore": 0.0653592375366569
+    },
+    {
+      "market": "Kalyan Night",
+      "side": "close",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        0,
+        5
+      ],
+      "baselinePair": [
+        0,
+        5
+      ],
+      "candidateScore": 0.06637463343108504
+    },
+    {
+      "market": "Madhur Day",
+      "side": "open",
+      "historyEnds": "2026-10-17",
+      "candidatePair": [
+        1,
+        6
+      ],
+      "baselinePair": [
+        0,
+        3
+      ],
+      "candidateScore": 0.06910923753665689
+    },
+    {
+      "market": "Madhur Day",
+      "side": "close",
+      "historyEnds": "2026-10-17",
+      "candidatePair": [
+        5,
+        9
+      ],
+      "baselinePair": [
+        5,
+        9
+      ],
+      "candidateScore": 0.06907624633431085
+    },
+    {
+      "market": "Madhur Night",
+      "side": "open",
+      "historyEnds": "2026-10-10",
+      "candidatePair": [
+        5,
+        6
+      ],
+      "baselinePair": [
+        5,
+        6
+      ],
+      "candidateScore": 0.06564516129032258
+    },
+    {
+      "market": "Madhur Night",
+      "side": "close",
+      "historyEnds": "2026-10-10",
+      "candidatePair": [
+        0,
+        7
+      ],
+      "baselinePair": [
+        0,
+        7
+      ],
+      "candidateScore": 0.07175219941348973
+    },
+    {
+      "market": "Main Bazar",
+      "side": "open",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        1,
+        5
+      ],
+      "baselinePair": [
+        2,
+        3
+      ],
+      "candidateScore": 0.06587243401759531
+    },
+    {
+      "market": "Main Bazar",
+      "side": "close",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        3,
+        9
+      ],
+      "baselinePair": [
+        3,
+        9
+      ],
+      "candidateScore": 0.06630498533724341
+    },
+    {
+      "market": "Milan Day",
+      "side": "open",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        0,
+        4
+      ],
+      "baselinePair": [
+        0,
+        1
+      ],
+      "candidateScore": 0.06493035190615837
+    },
+    {
+      "market": "Milan Day",
+      "side": "close",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        0,
+        3
+      ],
+      "baselinePair": [
+        0,
+        3
+      ],
+      "candidateScore": 0.06369868035190616
+    },
+    {
+      "market": "Milan Night",
+      "side": "open",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        0,
+        4
+      ],
+      "baselinePair": [
+        0,
+        4
+      ],
+      "candidateScore": 0.06868035190615837
+    },
+    {
+      "market": "Milan Night",
+      "side": "close",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        1,
+        6
+      ],
+      "baselinePair": [
+        2,
+        4
+      ],
+      "candidateScore": 0.0641092375366569
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "open",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        0,
+        9
+      ],
+      "baselinePair": [
+        0,
+        9
+      ],
+      "candidateScore": 0.0685300586510264
+    },
+    {
+      "market": "Rajdhani Day",
+      "side": "close",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        0,
+        4
+      ],
+      "baselinePair": [
+        0,
+        4
+      ],
+      "candidateScore": 0.06868035190615837
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "open",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        0,
+        6
+      ],
+      "baselinePair": [
+        0,
+        6
+      ],
+      "candidateScore": 0.06956011730205278
+    },
+    {
+      "market": "Rajdhani Night",
+      "side": "close",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        2,
+        9
+      ],
+      "baselinePair": [
+        2,
+        9
+      ],
+      "candidateScore": 0.06623533724340176
+    },
+    {
+      "market": "Sridevi",
+      "side": "open",
+      "historyEnds": "2026-10-17",
+      "candidatePair": [
+        4,
+        9
+      ],
+      "baselinePair": [
+        2,
+        4
+      ],
+      "candidateScore": 0.064816715542522
+    },
+    {
+      "market": "Sridevi",
+      "side": "close",
+      "historyEnds": "2026-10-17",
+      "candidatePair": [
+        1,
+        7
+      ],
+      "baselinePair": [
+        1,
+        7
+      ],
+      "candidateScore": 0.06609237536656892
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "open",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        5,
+        7
+      ],
+      "baselinePair": [
+        5,
+        7
+      ],
+      "candidateScore": 0.06677052785923754
+    },
+    {
+      "market": "Sridevi Night",
+      "side": "close",
+      "historyEnds": "2026-10-16",
+      "candidatePair": [
+        0,
+        7
+      ],
+      "baselinePair": [
+        3,
+        7
+      ],
+      "candidateScore": 0.06300219941348974
+    },
+    {
+      "market": "Time Bazar",
+      "side": "open",
+      "historyEnds": "2026-10-17",
+      "candidatePair": [
+        0,
+        9
+      ],
+      "baselinePair": [
+        0,
+        9
+      ],
+      "candidateScore": 0.0685300586510264
+    },
+    {
+      "market": "Time Bazar",
+      "side": "close",
+      "historyEnds": "2026-10-17",
+      "candidatePair": [
+        0,
+        8
+      ],
+      "baselinePair": [
+        0,
+        8
+      ],
+      "candidateScore": 0.06786290322580645
+    }
+  ],
+  "frozenAtUTC": "2026-10-18T10:56:38.477149+00:00",
+  "sources": [
+    {
+      "path": "research/panel_top10_v1/chart_rows.csv",
+      "sha256": "39be0deda781d6a1a629850342196f53b2ca9fc7e3e8eefaf81e0b41549dfca8",
+      "rows": 23762
+    },
+    {
+      "path": "research/combined_prediction_v2/october_rows.csv",
+      "sha256": "a37eb791d3a605f3660c862e53230343a2a1aeecedbfb16974f41bb81e3150e6",
+      "rows": 152
+    },
+    {
+      "path": "research/combined_prediction_v3/fresh_rows.csv",
+      "sha256": "c8fc43cca3c770e1ad8abc0e326f9a1729fdb677c322fcadae3b31deb0574e96",
+      "rows": 14
+    }
+  ],
+  "studyResultsSHA256": "8bea794ca0a96191af20a01073cb501ee96f9de4cb44a4dd24155f6dda79b9e2",
+  "note": "Offline observation only. Promotion checks did not pass; production remains unchanged."
+}
