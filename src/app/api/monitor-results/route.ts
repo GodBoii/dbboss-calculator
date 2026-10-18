@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { sendResultPush } from "@/lib/live-results/push-server";
+import { deliverResultEvent, retryPendingResultEvents } from "@/lib/live-results/push-delivery";
 import { parseHomepageResults, sourceHash } from "@/lib/live-results/source-parser";
 import { getSupabaseAdmin } from "@/lib/live-results/supabase-server";
 import { activePhase, resultDateForMarket } from "@/lib/live-results/time";
@@ -47,82 +47,36 @@ async function confirmCandidate(
   if (candidate.error) throw candidate.error;
   if (count < 2) return false;
 
+  const existingQuery = await supabase.from("market_results").select("*")
+    .eq("market_id",market.id).eq("result_date",resultDate).maybeSingle();
+  if(existingQuery.error) throw existingQuery.error;
+  const existing = existingQuery.data;
+  if(phase === "open" && existing && existing.status !== "open") return false;
   let result: MarketResult;
-  if (phase === "open") {
-    const saved = await supabase.from("market_results").upsert({
-      market_id: market.id,
-      result_date: resultDate,
-      status: "open",
-      open_panel: parsed.openPanel,
-      open_digit: parsed.openDigit,
-      jodi: null,
-      close_panel: null,
-      close_digit: null,
-      raw_source_value: parsed.rawValue,
-      source_url: SOURCE_URL,
-      source_hash: hash,
-      first_detected_at: firstSeen,
-      confirmed_at: now,
-    }, { onConflict: "market_id,result_date", ignoreDuplicates: true }).select("*").maybeSingle();
-    if (saved.error) throw saved.error;
-    if (!saved.data) return false;
-    result = saved.data as MarketResult;
-  } else {
-    const existing = await supabase.from("market_results").select("*")
-      .eq("market_id", market.id).eq("result_date", resultDate).maybeSingle();
-    if (existing.error) throw existing.error;
-    if (existing.data && existing.data.status !== "open") return false;
-    if (
-      existing.data &&
-      (existing.data.open_panel !== parsed.openPanel || existing.data.open_digit !== parsed.openDigit)
-    ) return false;
-
-    const write = existing.data
-      ? supabase.from("market_results").update({
-          status: "closed",
-          jodi: parsed.jodi,
-          close_panel: parsed.closePanel,
-          close_digit: parsed.closeDigit,
-          raw_source_value: parsed.rawValue,
-          source_hash: hash,
-          confirmed_at: now,
-        }).eq("id", existing.data.id).eq("status", "open")
-      : supabase.from("market_results").insert({
-          market_id: market.id,
-          result_date: resultDate,
-          status: "closed",
-          open_panel: parsed.openPanel,
-          open_digit: parsed.openDigit,
-          jodi: parsed.jodi,
-          close_panel: parsed.closePanel,
-          close_digit: parsed.closeDigit,
-          raw_source_value: parsed.rawValue,
-          source_url: SOURCE_URL,
-          source_hash: hash,
-          first_detected_at: firstSeen,
-          confirmed_at: now,
-        });
+  if(existing && existing.source_hash === hash) result = existing as MarketResult;
+  else {
+    const corrected = Boolean(existing && existing.status !== "open");
+    const values = {status:phase === "open" ? "open" : corrected ? "corrected" : "closed",
+      open_panel:parsed.openPanel,open_digit:parsed.openDigit,jodi:parsed.jodi,close_panel:parsed.closePanel,close_digit:parsed.closeDigit,
+      raw_source_value:parsed.rawValue,source_hash:hash,confirmed_at:now,corrected_at:corrected ? now : null};
+    const write = existing
+      ? supabase.from("market_results").update(values).eq("id",existing.id).eq("source_hash",existing.source_hash)
+      : supabase.from("market_results").upsert({...values,market_id:market.id,result_date:resultDate,source_url:SOURCE_URL,first_detected_at:firstSeen},
+          {onConflict:"market_id,result_date",ignoreDuplicates:true});
     const saved = await write.select("*").maybeSingle();
-    if (saved.error) throw saved.error;
-    if (!saved.data) return false;
+    if(saved.error) throw saved.error;
+    if(!saved.data) return false;
     result = saved.data as MarketResult;
   }
-
-  const event = await supabase.from("result_events").upsert({
-    result_id: result.id,
-    phase,
-    source_hash: hash,
-    payload: parsed,
-    detected_at: firstSeen,
-    confirmed_at: now,
-  }, { onConflict: "result_id,phase,source_hash", ignoreDuplicates: true }).select("id").maybeSingle();
-  if (event.error) throw event.error;
-  if (!event.data) return false;
-
-  await supabase.from("result_events").update({ push_started_at: now }).eq("id", event.data.id);
-  await sendResultPush(market.id, market.display_name, phase, parsed);
-  await supabase.from("result_events").update({ push_completed_at: new Date().toISOString() }).eq("id", event.data.id);
-  return true;
+  // Re-create an event after a crash between saving the result and its event.
+  const event = await supabase.from("result_events").upsert({result_id:result.id,phase,source_hash:hash,payload:parsed,detected_at:firstSeen,confirmed_at:now},
+    {onConflict:"result_id,phase,source_hash",ignoreDuplicates:true}).select("id").maybeSingle();
+  if(event.error) throw event.error;
+  const found = event.data ? event : await supabase.from("result_events").select("id")
+    .eq("result_id",result.id).eq("phase",phase).eq("source_hash",hash).maybeSingle();
+  if(found.error) throw found.error;
+  if(found.data) await deliverResultEvent(found.data.id,market,phase,parsed);
+  return Boolean(event.data);
 }
 
 async function runMonitor(request: NextRequest) {
@@ -135,7 +89,9 @@ async function runMonitor(request: NextRequest) {
   try {
     const marketsQuery = await supabase.from("markets").select("*").eq("is_active", true).order("sort_order");
     if (marketsQuery.error) throw marketsQuery.error;
-    const active = ((marketsQuery.data ?? []) as Market[])
+    const markets = (marketsQuery.data ?? []) as Market[];
+    await retryPendingResultEvents(markets);
+    const active = markets
       .map((market) => ({ market, phase: activePhase(market) }))
       .filter((item): item is { market: Market; phase: ResultPhase } => item.phase !== null);
 
