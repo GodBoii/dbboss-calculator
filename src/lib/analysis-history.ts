@@ -2,6 +2,7 @@ import { getRecordsByMarket, normalizeRecords, replaceHistorySnapshot, type Pane
 import { isMarketHistoryFresh } from "./market-history-freshness"
 import { getRecordISODate } from "./db"
 import { historicalCutoffISO } from "./prediction-contract"
+import { indiaISODate } from "./india-time"
 
 export const MARKET_URLS: Readonly<Record<string,string>> = Object.fromEntries([
   "Sridevi", "Time Bazar", "Madhur Day", "Milan Day", "Rajdhani Day", "Kalyan",
@@ -57,5 +58,11 @@ export async function loadAnalysisHistory(forceRefresh: boolean, signal: AbortSi
   }
   await replaceHistorySnapshot(histories)
   signal.throwIfAborted()
-  return {histories,notice:""}
+  const oldHistory = Object.entries(histories).flatMap(([market,rows]) => {
+    const latest = rows.findLast(row => row.openPanel && row.closePanel)
+    const iso = latest ? getRecordISODate(latest) : null
+    const current = indiaISODate(new Date(rows[rows.length-1].savedAt))
+    return iso && Date.parse(current)-Date.parse(iso) >= 3*86400000 ? [`${market}: ${iso}`] : []
+  })
+  return {histories,notice:oldHistory.length ? `Latest completed history from the source: ${oldHistory.join("; ")}.` : ""}
 }
