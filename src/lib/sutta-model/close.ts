@@ -1,5 +1,6 @@
 import type { PanelRecord } from "../db"
 import { getRecordISODate } from "../db"
+import { indiaDayOfMonth } from "../india-time"
 import { rankStatisticalSuttas, smoothedRate } from "./shared"
 import type { SuttaPick } from "./types"
 
@@ -44,10 +45,10 @@ export function buildCloseTop6Model(input: {
   }
 
   if (model === "calendar-date") {
-    const dayOfMonth = targetDate.getDate()
+    const dayOfMonth = indiaDayOfMonth(targetDate)
     for (const record of closeRecords) {
       const isoDate = getRecordISODate(record)
-      if (!isoDate || new Date(`${isoDate}T12:00:00`).getDate() !== dayOfMonth) continue
+      if (!isoDate || Number(isoDate.slice(8)) !== dayOfMonth) continue
       counts[record.closeSutta]++
       total++
     }
