@@ -1,5 +1,6 @@
 import { getRecordISODate, type PanelRecord } from "@/lib/db"
 import type { SuttaPick } from "./types"
+import { indiaISODate } from "../india-time"
 
 /**
  * Sutta model v2 ("recency"), selected by the walk-forward research in
@@ -27,12 +28,7 @@ interface CompletedDraw {
 }
 
 export function toIstIsoDate(date: Date) {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Kolkata",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(date)
+  return indiaISODate(date)
 }
 
 function completedHistory(records: PanelRecord[], targetDate: Date): CompletedDraw[] {
@@ -41,11 +37,11 @@ function completedHistory(records: PanelRecord[], targetDate: Date): CompletedDr
   for (const record of records) {
     if (!/^\d{3}$/.test(record.openPanel ?? "")) continue
     if (!/^\d{3}$/.test(record.closePanel ?? "")) continue
-    if (!/^\d{2}$/.test(record.jodi ?? "")) continue
     const isoDate = getRecordISODate(record)
     if (!isoDate || isoDate >= targetIso) continue
     if (!byDate.has(isoDate)) {
-      byDate.set(isoDate, { isoDate, open: Number(record.jodi[0]), close: Number(record.jodi[1]) })
+      const sutta = (panel: string) => [...panel].reduce((sum,digit) => sum + Number(digit),0) % 10
+      byDate.set(isoDate, { isoDate, open: sutta(record.openPanel), close: sutta(record.closePanel) })
     }
   }
   return [...byDate.values()].sort((a, b) => a.isoDate.localeCompare(b.isoDate))
