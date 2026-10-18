@@ -1,4 +1,5 @@
 import { getRecordISODate, type PanelRecord } from "../db";
+import { indiaISODate, indiaDayOfMonth, indiaDayIndex, indiaNoon } from "../india-time";
 import type { PredictionResult } from "./types";
 import { PANEL_PREDICTION_COUNT } from "../prediction-contract";
 import { getMarketCalibration } from "./calibration";
@@ -55,7 +56,7 @@ function previousMainBazarPanels(
   allMarketsRecords: Record<string, PanelRecord[]>,
   analysisDate: Date,
 ): string[] {
-  const targetISO = analysisDate.toISOString().slice(0, 10);
+  const targetISO = indiaISODate(analysisDate);
   const previous = (allMarketsRecords["Main Bazar"] ?? [])
     .map((record) => ({ record, isoDate: getRecordISODate(record) }))
     .filter((item): item is { record: PanelRecord; isoDate: string } =>
@@ -84,6 +85,20 @@ export function analyzeMarket(
 ): PredictionResult | null {
   if (records.length === 0) return null;
 
+  const suppliedRecords = records;
+  const requestedISO = analysisDate.toISOString();
+  const currentISO = indiaISODate(analysisDate);
+  const declaredOpen = options.knownOpenPanel !== undefined ? options.knownOpenPanel : findDeclaredOpenPanel(records, analysisDate);
+  const completeToday = records.some(row => getRecordISODate(row) === currentISO && /^\d{3}$/.test(row.openPanel) && /^\d{3}$/.test(row.closePanel));
+  if (!declaredOpen && completeToday) {
+    const next = new Date(`${currentISO}T00:00:00Z`);
+    next.setUTCDate(next.getUTCDate() + 1);
+    analysisDate = indiaNoon(next.toISOString().slice(0,10));
+  }
+  const targetISO = indiaISODate(analysisDate);
+  records = records.filter(row => { const iso = getRecordISODate(row); return iso !== null && iso < targetISO });
+  if (records.length === 0) return null;
+
   const stats = computeStats(records);
   const calibration = getMarketCalibration(marketName);
   const allPanelEntries = flattenRecords(records);
@@ -102,7 +117,7 @@ export function analyzeMarket(
   const volMultiplier = VOL_MULTIPLIER[tier.toLowerCase()];
 
   // ── 2. Temporal Payday Cycle (FIXED DIRECTION) ────────────────────────────
-  const today = analysisDate.getDate();
+  const today = indiaDayOfMonth(analysisDate);
   let temporalMode: "Payday" | "Month-End" | "Normal";
   let temporalMultiplier: number;
 
@@ -183,7 +198,7 @@ export function analyzeMarket(
     "Thursday",
     "Friday",
     "Saturday",
-  ][analysisDate.getDay()];
+  ][indiaDayIndex(analysisDate)];
 
   const baseCtx = {
     honeyPotAlert,
@@ -321,9 +336,7 @@ export function analyzeMarket(
   // Open always uses the model. Close switches to it once today's Open is
   // declared; before that the legacy Close order is kept because the
   // pre-Open variant did not beat it in walk-forward testing.
-  const declaredOpenPanel = options.knownOpenPanel !== undefined
-    ? options.knownOpenPanel
-    : findDeclaredOpenPanel(records);
+  const declaredOpenPanel = declaredOpen;
   let closePanelModel: PredictionResult["closePanelModel"] = "legacy-pre-open";
   if (options.panelModel !== "legacy") {
     const openOrder = rankPanelsTop10Model(records, "open", todayDayName);
@@ -339,7 +352,8 @@ export function analyzeMarket(
 
   // DP panel lists come from the v3 conditional-logit model (research/dp_panel_v3).
   // The legacy heuristic scorer is kept only as a fallback.
-  const dpModel = predictDpPanels(marketName, records, allMarketsRecords, analysisDate);
+  const dpRecords = declaredOpenPanel ? [...records, ...suppliedRecords.filter(row => getRecordISODate(row) === targetISO && !row.closePanel)] : records;
+  const dpModel = predictDpPanels(marketName, dpRecords, allMarketsRecords, analysisDate);
   const openDpPicks = dpModel?.openPicks ?? boostDoublePanelFocusPicks(
     scoreDoublePanelsForPosition(
       openEntries,
@@ -401,6 +415,7 @@ export function analyzeMarket(
   return {
     market: marketName,
     analysisDateISO: analysisDate.toISOString(),
+    ...(requestedISO !== analysisDate.toISOString() ? {analysisAsOfISO:requestedISO} : {}),
     analysisDayName: todayDayName,
     calibration,
     volumeTier: tier,
