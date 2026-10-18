@@ -1,8 +1,7 @@
 "use client"
 
-import { useState, useCallback, useMemo, useRef } from "react"
+import { useState, useCallback, useMemo, useRef, useEffect } from "react"
 import {
-  HIGH_VOLUME_MARKETS,
   analyzeMarket,
   computeJodiAnalysis,
   buildContextFromResult,
@@ -18,263 +17,29 @@ import {
   buildPresentDigitsPredictionFromPanels,
   type PresentDigitSidePrediction,
 } from "@/lib/present-digits"
-import { runMarketBacktest, type BacktestReport } from "@/lib/backtest"
-import {
-  saveRecords,
-  getRecordsByMarket,
-  getRecordISODate,
-  clearMarket,
-  HISTORICAL_LOOKBACK_MONTHS,
-  type PanelRecord,
-} from "@/lib/db"
+import type { PanelRecord } from "@/lib/db"
 import {
   buildCloseSuttaRanking,
-  buildCloseSuttaSet,
   buildJodis,
   buildOpenSuttaRanking,
-  buildOpenSuttaSet,
-  getSuttaSourceMarketNames,
 } from "@/lib/sutta-model"
 import { AnalysisTabs } from "./analysis/AnalysisTabs"
 import { BetCopyDesk } from "./analysis/BetCopyDesk"
 import { ConfidenceBadge } from "./analysis/AnalysisWidgets"
 import { getVerifiedDpCalls } from "@/lib/verified-dp-call"
-import { isMarketHistoryFresh } from "@/lib/market-history-freshness"
+import { loadAnalysisHistory } from "@/lib/analysis-history"
+import { indiaHour } from "@/lib/india-time"
+import { useAnalysisMetrics } from "@/hooks/useAnalysisMetrics"
 import { SUTTA_MODEL_VERSION } from "@/lib/app-version"
 import { SUTTA_PREDICTION_COUNT } from "@/lib/prediction-contract"
 import { useCombinedAnalysis } from "@/hooks/useCombinedAnalysis"
 import type { AnalysisVersion } from "@/lib/combined-prediction"
 import { AnalysisVersionSelector } from "./analysis/AnalysisVersionSelector"
 
-// ── Market URL Config ───────────────────────────────────────────────────
-const MARKET_URLS: Record<string, string> = {
-  // Day session
-  'Sridevi':        'https://dpboss.tax/panel-chart-record/sridevi.php',
-  'Time Bazar':     'https://dpboss.tax/panel-chart-record/time-bazar.php',
-  'Madhur Day':     'https://dpboss.tax/panel-chart-record/madhur-day.php',
-  'Milan Day':      'https://dpboss.tax/panel-chart-record/milan-day.php',
-  'Rajdhani Day':   'https://dpboss.tax/panel-chart-record/rajdhani-day.php',
-  'Kalyan':         'https://dpboss.tax/panel-chart-record/kalyan.php',
-  // Night session
-  'Sridevi Night':  'https://dpboss.tax/panel-chart-record/sridevi-night.php',
-  'Kalyan Night':   'https://dpboss.tax/panel-chart-record/kalyan-night.php',
-  'Madhur Night':   'https://dpboss.tax/panel-chart-record/madhur-night.php',
-  'Milan Night':    'https://dpboss.tax/panel-chart-record/milan-night.php',
-  'Rajdhani Night': 'https://dpboss.tax/panel-chart-record/rajdhani-night.php',
-  'Main Bazar':     'https://dpboss.tax/panel-chart-record/main-bazar.php',
-}
-
 const DAY_MARKETS   = ['Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan']
 const NIGHT_MARKETS = ['Sridevi Night', 'Kalyan Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar']
 
-type ScrapedPanel = {
-  market: string
-  dateRangeStart: string
-  dateRangeEnd: string
-  day: string
-  openPanel: string
-  openSutta: number
-  jodi: string
-  closePanel: string
-  closeSutta: number
-}
-
-async function fetchMarketHistory(marketName: string) {
-  const url = MARKET_URLS[marketName]
-  if (!url) throw new Error(`No panel-chart URL configured for ${marketName}.`)
-  const apiUrl = `/api/scrape?url=${encodeURIComponent(url)}&market=${encodeURIComponent(marketName)}`
-  const response = await fetch(apiUrl)
-  if (!response.ok) {
-    const body = await response.json().catch(() => ({ error: response.statusText }))
-    throw new Error(body.error ?? `Unable to refresh ${marketName} (HTTP ${response.status}).`)
-  }
-  const body = await response.json()
-  const panels = body.panels as ScrapedPanel[]
-  if (!panels?.length) throw new Error(`No ${marketName} draws were parsed from the source site.`)
-  const savedAt = Date.now()
-  await saveRecords(panels.map((panel) => ({
-    id: `${panel.market}|${panel.dateRangeStart}|${panel.day}`,
-    ...panel,
-    savedAt,
-  })))
-  return getRecordsByMarket(marketName)
-}
-
-
-
 type LoadingState = "idle" | "fetching" | "analyzing" | "done" | "error"
-
-type SuttaAccuracyReport = {
-  drawsTested: number
-  startDate: string
-  endDate: string
-  open: { hits: number; accuracy: number; label: string }
-  close: { hits: number; accuracy: number; label: string }
-  adjustedClose: { hits: number; accuracy: number; label: string }
-  jodi: { hits: number; accuracy: number; label: string }
-  adjustedJodi: { hits: number; accuracy: number; label: string }
-}
-
-function buildPriorMarkets(
-  marketName: string,
-  priorRecords: PanelRecord[],
-  allMarketsRecords: Record<string, PanelRecord[]>,
-  isoDate: string,
-): Record<string, PanelRecord[]> {
-  const priorMarkets: Record<string, PanelRecord[]> = {}
-
-  Object.entries(allMarketsRecords).forEach(([name, marketRecords]) => {
-    priorMarkets[name] = marketRecords.filter((record) => {
-      const recordISO = getRecordISODate(record)
-      return recordISO !== null && recordISO < isoDate
-    })
-  })
-
-  priorMarkets[marketName] = priorRecords
-  return priorMarkets
-}
-
-function buildEventAwareSuttaMarkets(
-  marketName: string,
-  priorRecords: PanelRecord[],
-  allMarketsRecords: Record<string, PanelRecord[]>,
-  isoDate: string,
-): Record<string, PanelRecord[]> {
-  const eventAwareMarkets: Record<string, PanelRecord[]> = {}
-
-  Object.entries(allMarketsRecords).forEach(([name, marketRecords]) => {
-    eventAwareMarkets[name] = name === marketName
-      ? priorRecords
-      : marketRecords.filter((record) => {
-        const recordISO = getRecordISODate(record)
-        return recordISO !== null && recordISO <= isoDate
-      })
-  })
-
-  eventAwareMarkets[marketName] = priorRecords
-  return eventAwareMarkets
-}
-
-function accuracyMetric(correct: number, total: number) {
-  const accuracy = total ? (correct / total) * 100 : 0
-  return {
-    hits: correct,
-    accuracy,
-    label: `${accuracy.toFixed(1)}% (${correct}/${total})`,
-  }
-}
-
-export function buildSuttaAccuracyReport(
-  marketName: string,
-  records: PanelRecord[],
-  allMarketsRecords: Record<string, PanelRecord[]>,
-  copyCount: number,
-): SuttaAccuracyReport | null {
-  const datedRecords = records
-    .map((record) => ({ record, isoDate: getRecordISODate(record) }))
-    .filter((item): item is { record: PanelRecord; isoDate: string } => Boolean(item.isoDate))
-    .sort((a, b) => a.isoDate.localeCompare(b.isoDate))
-
-  if (datedRecords.length <= 50) return null
-
-  const endDate = datedRecords.at(-1)?.isoDate
-  if (!endDate) return null
-  const startDateValue = new Date(`${endDate}T00:00:00Z`)
-  startDateValue.setUTCDate(startDateValue.getUTCDate() - 6)
-  const startDate = startDateValue.toISOString().slice(0, 10)
-  const testRecords = datedRecords.filter((item) => item.isoDate >= startDate && item.isoDate <= endDate)
-  const totals = { open: 0, close: 0, adjustedClose: 0, jodi: 0, adjustedJodi: 0 }
-  const correct = { open: 0, close: 0, adjustedClose: 0, jodi: 0, adjustedJodi: 0 }
-  let drawsTested = 0
-
-  for (const { record, isoDate } of testRecords) {
-    const priorRecords = datedRecords
-      .filter((item) => item.isoDate < isoDate)
-      .map((item) => item.record)
-
-    if (priorRecords.length < 50) continue
-
-    const targetDate = new Date(`${isoDate}T12:00:00`)
-    const priorMarkets = buildPriorMarkets(marketName, priorRecords, allMarketsRecords, isoDate)
-    const eventAwareSuttaMarkets = buildEventAwareSuttaMarkets(marketName, priorRecords, allMarketsRecords, isoDate)
-    const prediction = analyzeMarket(marketName, priorRecords, priorMarkets, targetDate)
-    if (!prediction) continue
-    drawsTested++
-
-    const openSuttas = buildOpenSuttaSet(
-      prediction.openPicks,
-      prediction.openSuttaDroughts,
-      priorRecords,
-      copyCount,
-      marketName,
-      targetDate,
-      eventAwareSuttaMarkets,
-    )
-    const closeSuttas = buildCloseSuttaSet(
-      prediction.closePicks,
-      prediction.closeSuttaDroughts,
-      priorRecords,
-      copyCount,
-      marketName,
-      null,
-      eventAwareSuttaMarkets,
-      targetDate,
-    )
-
-    if (record.openPanel && record.openSutta >= 0) {
-      totals.open++
-      if (openSuttas.some((item) => item.sutta === record.openSutta)) correct.open++
-    }
-
-    if (record.closePanel && record.closeSutta >= 0) {
-      totals.close++
-      if (closeSuttas.some((item) => item.sutta === record.closeSutta)) correct.close++
-
-      if (record.openSutta >= 0) {
-        const jodiAnalysis = computeJodiAnalysis(
-          record.openSutta,
-          record.openPanel || null,
-          priorRecords,
-          buildContextFromResult(prediction),
-          prediction.closeDpKindContext,
-        )
-        const jodiAdjustedCloseSuttas = buildCloseSuttaSet(
-          jodiAnalysis.adjustedClosePicks,
-          prediction.closeSuttaDroughts,
-          priorRecords,
-          copyCount,
-          marketName,
-          record.openSutta,
-          eventAwareSuttaMarkets,
-          targetDate,
-        )
-
-        totals.adjustedClose++
-        if (jodiAdjustedCloseSuttas.some((item) => item.sutta === record.closeSutta)) {
-          correct.adjustedClose++
-        }
-        totals.adjustedJodi++
-        if (buildJodis(openSuttas, jodiAdjustedCloseSuttas).includes(record.jodi)) correct.adjustedJodi++
-      }
-    }
-
-    if (record.jodi) {
-      totals.jodi++
-      if (buildJodis(openSuttas, closeSuttas).includes(record.jodi)) correct.jodi++
-    }
-  }
-
-  return {
-    drawsTested,
-    startDate,
-    endDate,
-    open: accuracyMetric(correct.open, totals.open),
-    close: accuracyMetric(correct.close, totals.close),
-    adjustedClose: accuracyMetric(correct.adjustedClose, totals.adjustedClose),
-    jodi: accuracyMetric(correct.jodi, totals.jodi),
-    adjustedJodi: accuracyMetric(correct.adjustedJodi, totals.adjustedJodi),
-  }
-}
 
 function AvoidDigitColumn({
   label,
@@ -379,7 +144,7 @@ export default function AnalysisSection() {
   const verifiedDpCalls = getVerifiedDpCalls()
   // Auto-detect session: night if hour >= 18 (6pm IST)
   const defaultSession: Session = (() => {
-    const h = new Date().getHours()
+    const h = indiaHour()
     return h >= 18 || h < 6 ? "night" : "day"
   })()
 
@@ -401,7 +166,6 @@ export default function AnalysisSection() {
   const [openSuttaInput, setOpenSuttaInput] = useState<number | null>(null)
   const [openPanelInput, setOpenPanelInput] = useState("")
   const [baseJodiResult, setJodiResult] = useState<JodiAnalysis | null>(null)
-  const [v1BacktestReport, setBacktestReport] = useState<BacktestReport | null>(null)
   const [cachedRecords, setCachedRecords] = useState<PanelRecord[]>([])
   const [allMarketsRecords, setAllMarketsRecords] = useState<Record<string, PanelRecord[]>>({})
   const cachedRecordsRef = useRef<PanelRecord[]>([])
@@ -410,7 +174,11 @@ export default function AnalysisSection() {
     openSuttaInput, openPanelInput.length === 3 ? openPanelInput : null, copyCount)
   const combined = combinedState.analysis?.status === "ready" ? combinedState.analysis : null
   const result = analysisVersion === "v2" && combined ? combined.prediction : baseResult
-  const backtestReport = analysisVersion === "v2" ? combinedState.backtest : v1BacktestReport
+  const v1Metrics = useAnalysisMetrics(analysisVersion, baseResult, cachedRecords, allMarketsRecords, copyCount)
+  const backtestReport = analysisVersion === "v2" ? combinedState.backtest : v1Metrics.backtest
+  const requestRef = useRef<AbortController | null>(null)
+  const [historyNotice, setHistoryNotice] = useState("")
+  useEffect(() => () => requestRef.current?.abort(), [])
   const jodiResult = useMemo(() => analysisVersion === "v2" && combined && baseJodiResult ? {
     ...baseJodiResult, adjustedClosePicks: combined.close.rankedPanels, adjustedClosePanelPicks: combined.close.panelPicks,
     adjustedCloseDpPicks: combined.close.dpPicks, adjustedCloseDpDigitFocus: combined.prediction.closeDpDigitFocus,
@@ -440,11 +208,14 @@ export default function AnalysisSection() {
 
   const fetchAndAnalyze = useCallback(
     async (forceRefresh = false) => {
+      requestRef.current?.abort()
+      const controller = new AbortController()
+      requestRef.current = controller
+      setHistoryNotice("")
       setLoadingState("fetching")
       setErrorMsg("")
       setResult(null)
       setJodiResult(null)
-      setBacktestReport(null)
       setCachedRecords([])
       setAllMarketsRecords({})
       setActiveTab("picks")
@@ -453,100 +224,14 @@ export default function AnalysisSection() {
       setOpenPanelInput("")
 
       try {
-        let records: PanelRecord[]
-
-        // ── Step 1: Check IndexedDB cache ──────────────────────────────────
-        if (forceRefresh) {
-          setLoadingMessage("Clearing cache…")
-          await clearMarket(selectedMarket)
-        }
-
-        const cached = await getRecordsByMarket(selectedMarket)
-        const cacheIsFresh = isMarketHistoryFresh(cached, selectedMarket, new Date())
-
-        if (cached.length > 50 && cacheIsFresh && !forceRefresh) {
-          // We have enough cached data — skip scraping
-          setLoadingMessage(`Using ${cached.length} cached records (last ${HISTORICAL_LOOKBACK_MONTHS} months)…`)
-          records = cached
-        } else {
-          // ── Step 2: Fetch fresh data via proxy API ─────────────────────
-          setLoadingMessage("Fetching panel chart data…")
-          const url = MARKET_URLS[selectedMarket]
-          const apiUrl = `/api/scrape?url=${encodeURIComponent(url)}&market=${encodeURIComponent(selectedMarket)}`
-
-          const res = await fetch(apiUrl)
-          if (!res.ok) {
-            const body = await res.json().catch(() => ({ error: res.statusText }))
-            throw new Error(body.error ?? `HTTP ${res.status}`)
-          }
-
-          const json = await res.json()
-          const freshPanels = json.panels as Array<{
-            market: string
-            dateRangeStart: string
-            dateRangeEnd: string
-            day: string
-            openPanel: string
-            openSutta: number
-            jodi: string
-            closePanel: string
-            closeSutta: number
-          }>
-
-          if (!freshPanels || freshPanels.length === 0) {
-            throw new Error("No draws parsed from site. Site may be down or structure changed.")
-          }
-
-          // ── Step 3: Save to IndexedDB ──────────────────────────────────
-          setLoadingMessage(`Saving ${freshPanels.length} recent draws to local storage…`)
-          const now = Date.now()
-          const toSave: PanelRecord[] = freshPanels.map((p) => ({
-            id: `${p.market}|${p.dateRangeStart}|${p.day}`,
-            ...p,
-            savedAt: now,
-          }))
-          await saveRecords(toSave)
-
-          // Merge with any existing cached records (deduplicated by id via IndexedDB upsert)
-          const allRecords = await getRecordsByMarket(selectedMarket)
-          records = allRecords
-        }
-
-        // ── Step 4: Fetch data for liquidity source market ─────────────────
+        setLoadingMessage("Refreshing market histories…")
+        const snapshot = await loadAnalysisHistory(forceRefresh, controller.signal)
+        if (requestRef.current !== controller) return
+        const allMarketsRecords = snapshot.histories
+        const records = allMarketsRecords[selectedMarket]
+        setHistoryNotice(snapshot.notice)
         setLoadingState("analyzing")
-        setLoadingMessage("Running Game-Theory analysis…")
-
-        // Build allMarketsRecords map for liquidity correlation
-        const allMarketsRecords: Record<string, PanelRecord[]> = {}
-        allMarketsRecords[selectedMarket] = records
-
-        // Load source market from IndexedDB (if we have it cached)
-        for (const m of HIGH_VOLUME_MARKETS) {
-          if (m !== selectedMarket) {
-            const r = await getRecordsByMarket(m)
-            if (r.length > 0) allMarketsRecords[m] = r
-          }
-        }
-
-        // ── Step 5: Run predictor ──────────────────────────────────────────
-        const requiredSourceMarkets = getSuttaSourceMarketNames(selectedMarket)
-        if (requiredSourceMarkets.length > 0) {
-          setLoadingMessage(`Refreshing ${requiredSourceMarkets.length} required Sutta source markets…`)
-          const refreshedSources = await Promise.all(requiredSourceMarkets.map(async (marketName) => {
-            const cachedSource = allMarketsRecords[marketName] ?? []
-            const sourceRecords = isMarketHistoryFresh(cachedSource, marketName, new Date())
-              ? cachedSource
-              : await fetchMarketHistory(marketName)
-            if (sourceRecords.length <= 50) {
-              throw new Error(`${marketName} does not have enough history for the production Sutta model.`)
-            }
-            return [marketName, sourceRecords] as const
-          }))
-          for (const [marketName, sourceRecords] of refreshedSources) {
-            allMarketsRecords[marketName] = sourceRecords
-          }
-        }
-
+        setLoadingMessage("Generating predictions…")
         cachedRecordsRef.current = records
         allMarketsRecordsRef.current = allMarketsRecords
         setCachedRecords(records)
@@ -554,10 +239,10 @@ export default function AnalysisSection() {
         const prediction = analyzeMarket(selectedMarket, records, allMarketsRecords)
         if (!prediction) throw new Error("Not enough data to generate predictions.")
 
-        setBacktestReport(runMarketBacktest(selectedMarket, records, allMarketsRecords, { days: 30 }))
         setResult(prediction)
         setLoadingState("done")
       } catch (err) {
+        if (controller.signal.aborted || requestRef.current !== controller) return
         const msg = err instanceof Error ? err.message : "Unknown error"
         setErrorMsg(msg)
         setLoadingState("error")
@@ -594,11 +279,11 @@ export default function AnalysisSection() {
   }
 
   const switchSession = (s: Session) => {
+    requestRef.current?.abort()
     haptic()
     setSession(s)
     setSelectedMarket(s === "day" ? "Kalyan" : "Main Bazar")
     setResult(null)
-    setBacktestReport(null)
     setCachedRecords([])
     setJodiResult(null)
     setActiveTab("picks")
@@ -615,7 +300,7 @@ export default function AnalysisSection() {
           result.openSuttaDroughts,
           cachedRecords,
           selectedMarket,
-          new Date(),
+          new Date(result.analysisDateISO),
           allMarketsRecords,
         )
       : [],
@@ -630,6 +315,7 @@ export default function AnalysisSection() {
           selectedMarket,
           openSuttaInput,
           allMarketsRecords,
+          new Date(result.analysisDateISO),
         )
       : [],
     [analysisVersion, combined, result, jodiResult, cachedRecords, selectedMarket, openSuttaInput, allMarketsRecords],
@@ -658,13 +344,7 @@ export default function AnalysisSection() {
       : null,
     [analysisVersion, result, selectedMarket, cachedRecords],
   )
-  const v1SuttaAccuracyReport = useMemo(
-    () => analysisVersion === "v1" && result
-      ? buildSuttaAccuracyReport(selectedMarket, cachedRecords, allMarketsRecords, copyCount)
-      : null,
-    [analysisVersion, result, selectedMarket, cachedRecords, allMarketsRecords, copyCount],
-  )
-  const suttaAccuracyReport = analysisVersion === "v2" ? combinedState.accuracy : v1SuttaAccuracyReport
+  const suttaAccuracyReport = analysisVersion === "v2" ? combinedState.accuracy : v1Metrics.accuracy
   const displayedCloseAccuracy = openSuttaInput === null
     ? suttaAccuracyReport?.close
     : suttaAccuracyReport?.adjustedClose
@@ -743,10 +423,10 @@ export default function AnalysisSection() {
               className={`market-btn ${isNight ? "market-btn-night" : ""} ${selectedMarket === market ? "active" : ""}`}
               onClick={() => {
                 haptic()
+                requestRef.current?.abort()
                 setSelectedMarket(market)
                 setResult(null)
-                setBacktestReport(null)
-                setCachedRecords([])
+                          setCachedRecords([])
                 setJodiResult(null)
                 setActiveTab("picks")
                 setPicksSubTab("open")
@@ -807,6 +487,8 @@ export default function AnalysisSection() {
         </div>
       )}
 
+      {historyNotice && <p role="status">{historyNotice}</p>}
+      {analysisVersion === "v1" && v1Metrics.error && <p role="status">{v1Metrics.error}</p>}
       {/* ── Error State ──────────────────────────────────────────────────── */}
       {loadingState === "error" && (
         <div className="glass-panel error-panel">
@@ -853,9 +535,9 @@ export default function AnalysisSection() {
           </div>
 
           {analysisVersion === "v1" && <div className="confidence-strip glass-panel">
-            <ConfidenceBadge label="Open" model={result.calibration.open} liveSuttaAcc={suttaAccuracyReport?.open.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
-            <ConfidenceBadge label="Close" model={result.calibration.close} liveSuttaAcc={displayedCloseAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
-            <ConfidenceBadge label="Jodi" model={result.calibration.jodi} liveSuttaAcc={displayedJodiAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
+            <ConfidenceBadge label="Open" panelHits={backtestReport?.open.panelTop10} panelDraws={backtestReport?.open.n} liveSuttaAcc={suttaAccuracyReport?.open.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
+            <ConfidenceBadge label="Close" panelHits={backtestReport?.close.panelTop10} panelDraws={backtestReport?.close.n} panelLabel="Close after Open Top 10" liveSuttaAcc={displayedCloseAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
+            <ConfidenceBadge label="Jodi" panelHits={backtestReport?.jodi.panelTop10} panelDraws={backtestReport?.jodi.n} panelLabel="Close after Open Top 10" liveSuttaAcc={displayedJodiAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
           </div>}
           {analysisVersion === "v2" && combined && <p className="analysis-version-description" role="status">
             V2 combined · Target {combined.targetDate}{combinedState.pending ? " · Updating V2…" : !combinedState.accuracy && !combinedState.error ? " · Backtesting V2…" : ""}
