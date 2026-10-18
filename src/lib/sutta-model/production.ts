@@ -1,5 +1,6 @@
 import { LIQUIDITY_FLOW_MAP, type PanelPick } from "@/lib/predictor"
 import { getRecordISODate, type PanelRecord } from "@/lib/db"
+import { indiaISODate, indiaDayIndex, indiaDayOfMonth } from "../india-time"
 import { isMarketEventEarlier, type MarketSide } from "@/lib/market-schedule"
 import { buildAdjustedCloseTop6Model } from "./adjusted-close"
 import { buildCloseTop6Model } from "./close"
@@ -425,7 +426,7 @@ function buildRawTopSuttaSet(
 }
 
 function getDayNameForDate(date: Date) {
-  return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][date.getDay()]
+  return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][indiaDayIndex(date)]
 }
 
 function buildRankOnlySuttaSet(
@@ -608,7 +609,7 @@ function findSourceRecord(
   targetDate: Date,
   origin: SourceFormulaOrigin,
 ) {
-  const targetISO = targetDate.toISOString().slice(0, 10)
+  const targetISO = indiaISODate(targetDate)
   const dated = records
     .map((record) => ({ record, isoDate: getRecordISODate(record) }))
     .filter((item): item is { record: PanelRecord; isoDate: string } => typeof item.isoDate === "string")
@@ -737,7 +738,7 @@ function buildOpenSuttaSetCore(
   const total = openRecords.length
   let weekdayTotal = 0
   let sameDateTotal = 0
-  const dayOfMonth = targetDate.getDate()
+  const dayOfMonth = indiaDayOfMonth(targetDate)
 
   for (const record of openRecords) {
     if (record.day === todayDayName) {
@@ -756,7 +757,7 @@ function buildOpenSuttaSetCore(
 
   for (const record of openRecords) {
     const isoDate = getRecordISODate(record)
-    if (isoDate && new Date(`${isoDate}T12:00:00`).getDate() === dayOfMonth) {
+    if (isoDate && Number(isoDate.slice(8)) === dayOfMonth) {
       sameDate[record.openSutta]++
       sameDateOpposite[oppositeSutta(record.openSutta)]++
       sameDateTotal++
@@ -884,7 +885,7 @@ function buildCloseSuttaSetCore(
   const prevCloseDelta = Array(10).fill(0)
   const prevOpenDelta = Array(10).fill(0)
   const sourcePrevOpenCond = Array(10).fill(0)
-  const dayOfMonth = targetDate.getDate()
+  const dayOfMonth = indiaDayOfMonth(targetDate)
   let weekdayTotal = 0
   let sameDateTotal = 0
   let prevCloseCondTotal = 0
@@ -900,7 +901,7 @@ function buildCloseSuttaSetCore(
       weekdayTotal++
     }
     const isoDate = getRecordISODate(record)
-    if (isoDate && new Date(`${isoDate}T12:00:00`).getDate() === dayOfMonth) {
+    if (isoDate && Number(isoDate.slice(8)) === dayOfMonth) {
       sameDate[record.closeSutta]++
       sameDateOpposite[oppositeSutta(record.closeSutta)]++
       sameDateTotal++
