@@ -19,14 +19,19 @@ interface State {
 export function useCombinedAnalysis(version: AnalysisVersion, base: PredictionResult | null, records: PanelRecord[],
   allMarkets: Record<string, PanelRecord[]>, knownOpenSutta: number | null, knownOpenPanel: string | null, copyCount: number) {
   const request = useMemo<Request | null>(() => version === "v2" && base ? {
-    market: base.market, records, allMarkets, analysisDateISO: base.analysisDateISO, knownOpenSutta, knownOpenPanel,
+    market: base.market, records, allMarkets, analysisDateISO: base.analysisAsOfISO ?? base.analysisDateISO, knownOpenSutta, knownOpenPanel,
   } : null, [version, base, records, allMarkets, knownOpenSutta, knownOpenPanel])
   const [state, setState] = useState<State | null>(null)
   useEffect(() => {
     if (!request) return
     let active = true
-    const worker = new Worker(new URL("../lib/combined-analysis.worker.ts", import.meta.url))
+    let worker: Worker
     const initial = (): State => ({ request, analysis: null, backtest: null, accuracy: null, metricsCount: copyCount, error: null })
+    try { worker = new Worker(new URL("../lib/combined-analysis.worker.ts", import.meta.url)) }
+    catch {
+      queueMicrotask(() => { if (active) setState({ ...initial(),error:"V2 could not start on this browser. Select V1 or analyze again." }) })
+      return () => { active = false }
+    }
     worker.onmessage = (event: MessageEvent<CombinedResponse>) => {
       if (!active) return
       const response = event.data
@@ -40,7 +45,8 @@ export function useCombinedAnalysis(version: AnalysisVersion, base: PredictionRe
     worker.onerror = () => {
       if (active) setState((previous) => ({ ...(previous?.request === request ? previous : initial()), error: "V2 analysis could not finish. Select V1 or analyze again." }))
     }
-    worker.postMessage({ ...request, copyCount } satisfies CombinedRequest)
+    try { worker.postMessage({ ...request, copyCount } satisfies CombinedRequest) }
+    catch { queueMicrotask(() => { if(active) setState({...initial(),error:"V2 inputs could not be sent. Analyze again."}) }) }
     return () => { active = false; worker.terminate() }
   }, [request, copyCount])
   const compatible = request && state && state.request.market === request.market && state.request.records === request.records
