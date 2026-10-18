@@ -1,5 +1,7 @@
 # Current project map
 
+October 18 reliability update, app 1.0.27: [repair and verification](reliability-repair.md) supersedes the cache, fetch-dependency, time-boundary, metrics execution, confidence-label, and notification-delivery descriptions below. Histories now use canonical market/date identities and atomic snapshot replacement; the pooled model loads all twelve sources explicitly; every market calendar uses IST; metrics run in workers; push retries retain recipient acknowledgments. Model weights and prediction counts remain unchanged.
+
 Reviewed on October 13, 2026 against app 1.0.25. This map covers the production entry points, prediction paths, persistence, API routes, notification lifecycle, research comparisons, and release checks. Historical experiments are summarized by their decision reports; this is not a claim that every archived exploratory script or external service was independently validated.
 
 ## Product and deployment
