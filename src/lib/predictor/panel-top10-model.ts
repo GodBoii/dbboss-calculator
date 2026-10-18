@@ -1,4 +1,5 @@
 import { getRecordISODate, type PanelRecord } from "../db";
+import { indiaISODate } from "../india-time";
 import { ALL_PANELS, isSequential } from "./panel-utils";
 import type { PanelPick } from "./types";
 
@@ -138,12 +139,12 @@ function completeDraws(records: PanelRecord[]): Draw[] {
  * Today's Open panel when the latest record has a declared Open and no Close
  * yet (the chart publishes Open hours before Close).
  */
-export function findDeclaredOpenPanel(records: PanelRecord[]): string | null {
+export function findDeclaredOpenPanel(records: PanelRecord[], targetDate = new Date()): string | null {
   const dated = records
     .map((record, order) => ({ record, order, iso: getRecordISODate(record) ?? "" }))
     .sort((a, b) => a.iso.localeCompare(b.iso) || a.order - b.order);
   const latest = dated.at(-1);
-  if (!latest) return null;
+  if (!latest || latest.iso !== indiaISODate(targetDate)) return null;
   const { record } = latest;
   if (PANEL_INDEX.has(record.openPanel) && !PANEL_INDEX.has(record.closePanel)) {
     return record.openPanel;
