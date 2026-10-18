@@ -1,4 +1,4 @@
-const APP_VERSION = "1.0.26";
+const APP_VERSION = "1.0.27";
 const CACHE_PREFIX = "lakshmi-boss";
 const LEGACY_CACHE_PREFIXES = ["dbboss"];
 const SHELL_CACHE = `${CACHE_PREFIX}-shell-${APP_VERSION}`;
@@ -126,6 +126,7 @@ self.addEventListener("fetch", (event) => {
 
   if (url.pathname.startsWith("/api/")) {
     if (
+      url.pathname === "/api/scrape" ||
       url.pathname === "/api/live-results" ||
       url.pathname === "/api/live-results/refresh" ||
       url.pathname.startsWith("/api/push/") ||
