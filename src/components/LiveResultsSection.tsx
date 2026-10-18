@@ -229,7 +229,7 @@ export default function LiveResultsSection() {
                   <div className="live-pending"><span>***</span><b>**</b><span>***</span></div>
                 )}
                 <div className="live-market-bottom">
-                  <span className={result ? "live-status-ready" : ""}>{result ? (result.status === "open" ? "Open declared" : "Final declared") : "Waiting for result"}</span>
+                  <span className={result ? "live-status-ready" : ""}>{result && result.result_date !== data.date ? `${result.result_date} · ` : ""}{result ? (result.status === "open" ? "Open declared" : "Final declared") : "Waiting for result"}</span>
                   <a href={market.history_url} target="_blank" rel="noreferrer">History</a>
                 </div>
               </article>
