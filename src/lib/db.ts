@@ -11,7 +11,7 @@ import {
  */
 
 export interface PanelRecord {
-  id: string // `${market}|${dateRangeStart}|${day}`
+  id: string // `${market}|${ISO calendar date}`; legacy ids are normalized on read.
   market: string
   dateRangeStart: string
   dateRangeEnd: string
@@ -22,6 +22,7 @@ export interface PanelRecord {
   closePanel: string
   closeSutta: number
   savedAt: number // epoch ms
+  sourceJodi?: string // Retain a contradictory source value for diagnosis.
 }
 
 const DB_NAME = 'dbboss_v2'
@@ -50,8 +51,13 @@ function openDB(): Promise<IDBDatabase> {
       store.createIndex('savedAt', 'savedAt', { unique: false })
     }
 
-    request.onsuccess = (event) => resolve((event.target as IDBOpenDBRequest).result)
-    request.onerror = (event) => reject((event.target as IDBOpenDBRequest).error)
+    request.onsuccess = () => {
+      const db = request.result
+      db.onversionchange = () => { db.close(); dbPromise = null }
+      resolve(db)
+    }
+    request.onerror = () => { dbPromise = null; reject(request.error) }
+    request.onblocked = () => { dbPromise = null; reject(new Error('Close other app tabs and retry opening saved history.')) }
   })
 
   return dbPromise
@@ -80,21 +86,82 @@ function toISODate(date: Date): string {
 /** Parse DD/MM/YYYY into a UTC date. */
 export function parsePanelDate(dateStr: string): Date | null {
   // Handle formats: "DD/MM/YYYY", "DD-MM-YYYY", "DD/MM/YY"
-  const cleaned = dateStr.replace(/-/g, '/')
-  const parts = cleaned.split('/')
-  if (parts.length !== 3) return null
-  const day = parseInt(parts[0]) || 0
-  const month = parseInt(parts[1]) || 0
-  let year = parseInt(parts[2]) || 0
+  const match = /^(\d{1,2})[/-](\d{1,2})[/-](\d{2}|\d{4})$/.exec(dateStr)
+  if (!match) return null
+  const day = Number(match[1])
+  const month = Number(match[2])
+  let year = Number(match[3])
   if (year < 100) year += 2000
-  if (!day || !month || !year) return null
-  return new Date(Date.UTC(year, month - 1, day))
+  const date = new Date(Date.UTC(year, month - 1, day))
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day ? date : null
 }
 
 export function getRecordISODate(record: Pick<PanelRecord, 'dateRangeStart' | 'day'>): string | null {
   const start = parsePanelDate(record.dateRangeStart)
-  if (!start) return null
-  return toISODate(addDays(start, DAY_OFFSETS[record.day] ?? 0))
+  if (!start || !Object.hasOwn(DAY_OFFSETS, record.day)) return null
+  return toISODate(addDays(start, DAY_OFFSETS[record.day]))
+}
+
+export class HistoryValidationError extends Error {
+  constructor(public readonly market: string, message: string) { super(message); this.name = 'HistoryValidationError' }
+}
+
+/** Validate network/storage data, merge agreeing partials, and reject ambiguity. */
+export function normalizeRecords(input: unknown, market: string, fetchedAt?: number): PanelRecord[] {
+  const fail = (reason: string): never => { throw new HistoryValidationError(market, reason) }
+  if (!Array.isArray(input)) return fail(`Invalid ${market} history response.`)
+  const byDate = new Map<string, PanelRecord>()
+  const legal = (panel: string) => /^\d{3}$/.test(panel) && [...panel].every((d,i,a) => i === 0 || (Number(a[i-1]) || 10) <= (Number(d) || 10))
+  const sum = (panel: string) => panel ? [...panel].reduce((n,d) => n + Number(d),0) % 10 : -1
+  for (const row of input) {
+    if (!row || typeof row !== 'object' || row.market !== market) return fail(`Invalid market in ${market} history.`)
+    if (typeof row.dateRangeStart !== 'string' || typeof row.day !== 'string' || typeof row.openPanel !== 'string' || typeof row.closePanel !== 'string') return fail(`Malformed ${market} history row.`)
+    const iso = getRecordISODate(row)
+    if (!iso) return fail(`Invalid ${market} history date or weekday.`)
+    if ((!row.openPanel && !row.closePanel) || (row.openPanel && !legal(row.openPanel)) || (row.closePanel && !legal(row.closePanel))) return fail(`Invalid ${market} panel on ${iso}.`)
+    const previous = byDate.get(iso)
+    if (previous && ((previous.openPanel && row.openPanel && previous.openPanel !== row.openPanel) || (previous.closePanel && row.closePanel && previous.closePanel !== row.closePanel))) return fail(`Conflicting ${market} history on ${iso}`)
+    const openPanel = row.openPanel || previous?.openPanel || ''
+    const closePanel = row.closePanel || previous?.closePanel || ''
+    const openSutta = sum(openPanel), closeSutta = sum(closePanel)
+    const jodi = openPanel && closePanel ? `${openSutta}${closeSutta}` : ''
+    const savedAt = fetchedAt ?? row.savedAt
+    if (!Number.isFinite(savedAt) || savedAt < 0) return fail(`Invalid ${market} history timestamp.`)
+    const sourceJodi = typeof row.sourceJodi === 'string' ? row.sourceJodi
+      : typeof row.jodi === 'string' && row.jodi && row.jodi !== jodi ? row.jodi : previous?.sourceJodi
+    const record: PanelRecord = {id:`${market}|${iso}`,market,dateRangeStart:row.dateRangeStart,
+      dateRangeEnd:typeof row.dateRangeEnd === 'string' ? row.dateRangeEnd : row.dateRangeStart,
+      day:row.day,openPanel,closePanel,openSutta,closeSutta,jodi,savedAt}
+    if (sourceJodi) record.sourceJodi = sourceJodi
+    byDate.set(iso, record)
+  }
+  return [...byDate.entries()].sort(([a],[b]) => a.localeCompare(b)).map(([,row]) => row)
+}
+
+/** Validate the whole response before opening the atomic replacement transaction. */
+export async function replaceHistorySnapshot(histories: Record<string, PanelRecord[]>): Promise<void> {
+  const normalized = Object.entries(histories).map(([market,rows]) => {
+    const records = filterRecordsByRecentHistory(normalizeRecords(rows, market))
+    if (records.length === 0) throw new HistoryValidationError(market, `No ${market} history was returned. Saved data was kept.`)
+    return [market,records] as const
+  })
+  const db = await openDB()
+  return new Promise((resolve,reject) => {
+    const tx = db.transaction(STORE_NAME,'readwrite')
+    const store = tx.objectStore(STORE_NAME)
+    for (const [market,rows] of normalized) {
+      const request = store.index('market').openCursor(IDBKeyRange.only(market))
+      request.onsuccess = () => {
+        try {
+          const cursor = request.result
+          if (cursor) { cursor.delete(); cursor.continue() }
+          else for (const record of rows) store.put(record)
+        } catch (error) { tx.abort(); reject(error) }
+      }
+    }
+    tx.oncomplete = () => resolve()
+    tx.onerror = tx.onabort = () => reject(tx.error ?? new Error('History replacement failed. Previous data was kept.'))
+  })
 }
 
 export function filterRecordsByRecentHistory(
@@ -124,15 +191,16 @@ function dateToSortKey(dateStr: string): number {
 /** Store an array of panel records (upserts by id). */
 export async function saveRecords(records: PanelRecord[]): Promise<void> {
   const db = await openDB()
-  const recentRecords = filterRecordsByRecentHistory(records)
+  const markets = [...new Set(records.map(row => row.market))]
+  const recentRecords = markets.flatMap(market => filterRecordsByRecentHistory(normalizeRecords(records.filter(row => row.market === market), market)))
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_NAME, 'readwrite')
     const store = tx.objectStore(STORE_NAME)
-    for (const record of recentRecords) {
-      store.put(record)
-    }
+    try { for (const record of recentRecords) store.put(record) }
+    catch (error) { tx.abort(); reject(error) }
     tx.oncomplete = () => resolve()
     tx.onerror = (e) => reject((e.target as IDBTransaction).error)
+    tx.onabort = () => reject(tx.error ?? new Error('History write was aborted.'))
   })
 }
 
@@ -157,7 +225,8 @@ export async function getRecordsByMarket(market: string): Promise<PanelRecord[]>
         if (dateA !== dateB) return dateA - dateB
         return (dayOrder[a.day] ?? 9) - (dayOrder[b.day] ?? 9)
       })
-      resolve(filterRecordsByRecentHistory(records))
+      try { resolve(filterRecordsByRecentHistory(normalizeRecords(records, market))) }
+      catch (error) { reject(error) }
     }
     request.onerror = (e) => reject((e.target as IDBRequest).error)
   })
