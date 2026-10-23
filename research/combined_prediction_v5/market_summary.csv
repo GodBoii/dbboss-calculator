@@ -1,0 +1,703 @@
+channel,endpoint,market,candidate,block,n,baseline_hits,candidate_hits,lift_pp,wins,losses,paired_p,holm_p_117,validation_gain_reversed
+open,all10,ALL,production,development,435,37,37,0.0,0,0,1.0,,False
+open,all10,ALL,production,validation,228,23,23,0.0,0,0,1.0,,False
+open,all10,ALL,production,september_reused,237,13,13,0.0,0,0,1.0,,False
+open,all10,ALL,production,october_reused,152,18,18,0.0,0,0,1.0,,False
+open,all10,ALL,production,oct16_17_reused,14,0,0,0.0,0,0,1.0,,False
+open,all10,ALL,production,fresh,47,3,3,0.0,0,0,1.0,1.0,False
+open,all10,Kalyan,theory/digit_persistence/strength=-2,development,36,2,2,0.0,1,1,1.0,,False
+open,all10,Kalyan,theory/digit_persistence/strength=-2,validation,19,2,5,15.789473684210526,3,0,0.25,,False
+open,all10,Kalyan,theory/digit_persistence/strength=-2,september_reused,20,1,1,0.0,1,1,1.0,,False
+open,all10,Kalyan,theory/digit_persistence/strength=-2,october_reused,13,1,2,7.6923076923076925,1,0,1.0,,False
+open,all10,Kalyan,theory/digit_persistence/strength=-2,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,all10,Kalyan,theory/digit_persistence/strength=-2,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+open,all10,Kalyan Night,production,development,30,2,2,0.0,0,0,1.0,,False
+open,all10,Kalyan Night,production,validation,16,1,1,0.0,0,0,1.0,,False
+open,all10,Kalyan Night,production,september_reused,17,1,1,0.0,0,0,1.0,,False
+open,all10,Kalyan Night,production,october_reused,11,1,1,0.0,0,0,1.0,,False
+open,all10,Kalyan Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,all10,Kalyan Night,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+open,all10,Madhur Day,production,development,43,2,2,0.0,0,0,1.0,,False
+open,all10,Madhur Day,production,validation,22,4,4,0.0,0,0,1.0,,False
+open,all10,Madhur Day,production,september_reused,23,1,1,0.0,0,0,1.0,,False
+open,all10,Madhur Day,production,october_reused,15,0,0,0.0,0,0,1.0,,False
+open,all10,Madhur Day,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+open,all10,Madhur Day,production,fresh,5,0,0,0.0,0,0,1.0,1.0,False
+open,all10,Madhur Night,pattern/digit_pair_frequency/window=21,development,36,2,4,5.555555555555555,2,0,0.5,,False
+open,all10,Madhur Night,pattern/digit_pair_frequency/window=21,validation,19,1,3,10.526315789473685,3,1,0.625,,False
+open,all10,Madhur Night,pattern/digit_pair_frequency/window=21,september_reused,20,0,0,0.0,0,0,1.0,,False
+open,all10,Madhur Night,pattern/digit_pair_frequency/window=21,october_reused,9,2,1,-11.11111111111111,0,1,1.0,,True
+open,all10,Madhur Night,pattern/digit_pair_frequency/window=21,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,all10,Madhur Night,pattern/digit_pair_frequency/window=21,fresh,0,0,0,,0,0,1.0,1.0,False
+open,all10,Main Bazar,production,development,30,5,5,0.0,0,0,1.0,,False
+open,all10,Main Bazar,production,validation,16,3,3,0.0,0,0,1.0,,False
+open,all10,Main Bazar,production,september_reused,17,0,0,0.0,0,0,1.0,,False
+open,all10,Main Bazar,production,october_reused,11,0,0,0.0,0,0,1.0,,False
+open,all10,Main Bazar,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,all10,Main Bazar,production,fresh,4,1,1,0.0,0,0,1.0,1.0,False
+open,all10,Milan Day,formula_05_05,development,36,3,5,5.555555555555555,2,0,0.5,,False
+open,all10,Milan Day,formula_05_05,validation,19,1,3,10.526315789473685,2,0,0.5,,False
+open,all10,Milan Day,formula_05_05,september_reused,19,0,0,0.0,0,0,1.0,,False
+open,all10,Milan Day,formula_05_05,october_reused,13,2,2,0.0,0,0,1.0,,False
+open,all10,Milan Day,formula_05_05,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,all10,Milan Day,formula_05_05,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+open,all10,Milan Night,theory/digit_persistence/strength=-2,development,36,2,2,0.0,1,1,1.0,,False
+open,all10,Milan Night,theory/digit_persistence/strength=-2,validation,19,1,3,10.526315789473685,2,0,0.5,,False
+open,all10,Milan Night,theory/digit_persistence/strength=-2,september_reused,19,1,3,10.526315789473685,2,0,0.5,,False
+open,all10,Milan Night,theory/digit_persistence/strength=-2,october_reused,13,3,1,-15.384615384615385,0,2,0.5,,True
+open,all10,Milan Night,theory/digit_persistence/strength=-2,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,all10,Milan Night,theory/digit_persistence/strength=-2,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+open,all10,Rajdhani Day,production,development,36,1,1,0.0,0,0,1.0,,False
+open,all10,Rajdhani Day,production,validation,19,4,4,0.0,0,0,1.0,,False
+open,all10,Rajdhani Day,production,september_reused,20,1,1,0.0,0,0,1.0,,False
+open,all10,Rajdhani Day,production,october_reused,13,2,2,0.0,0,0,1.0,,False
+open,all10,Rajdhani Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,all10,Rajdhani Day,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+open,all10,Rajdhani Night,production,development,30,4,4,0.0,0,0,1.0,,False
+open,all10,Rajdhani Night,production,validation,16,2,2,0.0,0,0,1.0,,False
+open,all10,Rajdhani Night,production,september_reused,17,1,1,0.0,0,0,1.0,,False
+open,all10,Rajdhani Night,production,october_reused,11,1,1,0.0,0,0,1.0,,False
+open,all10,Rajdhani Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,all10,Rajdhani Night,production,fresh,4,2,2,0.0,0,0,1.0,1.0,False
+open,all10,Sridevi,production,development,43,5,5,0.0,0,0,1.0,,False
+open,all10,Sridevi,production,validation,22,3,3,0.0,0,0,1.0,,False
+open,all10,Sridevi,production,september_reused,23,4,4,0.0,0,0,1.0,,False
+open,all10,Sridevi,production,october_reused,15,1,1,0.0,0,0,1.0,,False
+open,all10,Sridevi,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+open,all10,Sridevi,production,fresh,5,0,0,0.0,0,0,1.0,1.0,False
+open,all10,Sridevi Night,production,development,43,6,6,0.0,0,0,1.0,,False
+open,all10,Sridevi Night,production,validation,22,1,1,0.0,0,0,1.0,,False
+open,all10,Sridevi Night,production,september_reused,23,0,0,0.0,0,0,1.0,,False
+open,all10,Sridevi Night,production,october_reused,15,4,4,0.0,0,0,1.0,,False
+open,all10,Sridevi Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,all10,Sridevi Night,production,fresh,5,0,0,0.0,0,0,1.0,1.0,False
+open,all10,Time Bazar,production,development,36,3,3,0.0,0,0,1.0,,False
+open,all10,Time Bazar,production,validation,19,0,0,0.0,0,0,1.0,,False
+open,all10,Time Bazar,production,september_reused,19,3,3,0.0,0,0,1.0,,False
+open,all10,Time Bazar,production,october_reused,13,1,1,0.0,0,0,1.0,,False
+open,all10,Time Bazar,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+open,all10,Time Bazar,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+open,sp30,ALL,production,development,331,119,119,0.0,0,0,1.0,,False
+open,sp30,ALL,production,validation,169,57,57,0.0,0,0,1.0,,False
+open,sp30,ALL,production,september_reused,170,43,43,0.0,0,0,1.0,,False
+open,sp30,ALL,production,october_reused,115,36,36,0.0,0,0,1.0,,False
+open,sp30,ALL,production,oct16_17_reused,10,0,0,0.0,0,0,1.0,,False
+open,sp30,ALL,production,fresh,36,6,6,0.0,0,0,1.0,1.0,False
+open,sp30,Kalyan,pattern/panel_overdue/window=14,development,22,8,8,0.0,0,0,1.0,,False
+open,sp30,Kalyan,pattern/panel_overdue/window=14,validation,14,3,5,14.285714285714286,2,0,0.5,,False
+open,sp30,Kalyan,pattern/panel_overdue/window=14,september_reused,15,8,6,-13.333333333333334,0,2,0.5,,True
+open,sp30,Kalyan,pattern/panel_overdue/window=14,october_reused,12,2,3,8.333333333333334,1,0,1.0,,False
+open,sp30,Kalyan,pattern/panel_overdue/window=14,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,sp30,Kalyan,pattern/panel_overdue/window=14,fresh,3,0,0,0.0,0,0,1.0,1.0,False
+open,sp30,Kalyan Night,production,development,25,10,10,0.0,0,0,1.0,,False
+open,sp30,Kalyan Night,production,validation,11,5,5,0.0,0,0,1.0,,False
+open,sp30,Kalyan Night,production,september_reused,11,3,3,0.0,0,0,1.0,,False
+open,sp30,Kalyan Night,production,october_reused,9,4,4,0.0,0,0,1.0,,False
+open,sp30,Kalyan Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,sp30,Kalyan Night,production,fresh,2,0,0,0.0,0,0,1.0,1.0,False
+open,sp30,Madhur Day,production,development,30,11,11,0.0,0,0,1.0,,False
+open,sp30,Madhur Day,production,validation,15,6,6,0.0,0,0,1.0,,False
+open,sp30,Madhur Day,production,september_reused,15,2,2,0.0,0,0,1.0,,False
+open,sp30,Madhur Day,production,october_reused,11,2,2,0.0,0,0,1.0,,False
+open,sp30,Madhur Day,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+open,sp30,Madhur Day,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+open,sp30,Madhur Night,method_digit_bernoulli_05,development,29,8,12,13.793103448275861,4,0,0.125,,False
+open,sp30,Madhur Night,method_digit_bernoulli_05,validation,15,6,8,13.333333333333334,2,0,0.5,,False
+open,sp30,Madhur Night,method_digit_bernoulli_05,september_reused,12,2,4,16.666666666666668,2,0,0.5,,False
+open,sp30,Madhur Night,method_digit_bernoulli_05,october_reused,5,3,3,0.0,1,1,1.0,,False
+open,sp30,Madhur Night,method_digit_bernoulli_05,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,sp30,Madhur Night,method_digit_bernoulli_05,fresh,0,0,0,,0,0,1.0,1.0,False
+open,sp30,Main Bazar,production,development,21,8,8,0.0,0,0,1.0,,False
+open,sp30,Main Bazar,production,validation,15,6,6,0.0,0,0,1.0,,False
+open,sp30,Main Bazar,production,september_reused,13,1,1,0.0,0,0,1.0,,False
+open,sp30,Main Bazar,production,october_reused,9,0,0,0.0,0,0,1.0,,False
+open,sp30,Main Bazar,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,sp30,Main Bazar,production,fresh,4,1,1,0.0,0,0,1.0,1.0,False
+open,sp30,Milan Day,theory/opposite_digits/strength=0.25,development,28,9,12,10.714285714285714,7,4,0.548828125,,False
+open,sp30,Milan Day,theory/opposite_digits/strength=0.25,validation,15,4,8,26.666666666666668,5,1,0.21875,,False
+open,sp30,Milan Day,theory/opposite_digits/strength=0.25,september_reused,14,2,2,0.0,1,1,1.0,,False
+open,sp30,Milan Day,theory/opposite_digits/strength=0.25,october_reused,9,3,2,-11.11111111111111,1,2,1.0,,True
+open,sp30,Milan Day,theory/opposite_digits/strength=0.25,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,sp30,Milan Day,theory/opposite_digits/strength=0.25,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+open,sp30,Milan Night,pattern/panel_overdue/window=30,development,33,13,13,0.0,0,0,1.0,,False
+open,sp30,Milan Night,pattern/panel_overdue/window=30,validation,17,2,4,11.764705882352942,2,0,0.5,,False
+open,sp30,Milan Night,pattern/panel_overdue/window=30,september_reused,16,2,3,6.25,1,0,1.0,,False
+open,sp30,Milan Night,pattern/panel_overdue/window=30,october_reused,12,6,5,-8.333333333333334,0,1,1.0,,True
+open,sp30,Milan Night,pattern/panel_overdue/window=30,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,sp30,Milan Night,pattern/panel_overdue/window=30,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+open,sp30,Rajdhani Day,production,development,25,8,8,0.0,0,0,1.0,,False
+open,sp30,Rajdhani Day,production,validation,14,6,6,0.0,0,0,1.0,,False
+open,sp30,Rajdhani Day,production,september_reused,16,5,5,0.0,0,0,1.0,,False
+open,sp30,Rajdhani Day,production,october_reused,8,1,1,0.0,0,0,1.0,,False
+open,sp30,Rajdhani Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,sp30,Rajdhani Day,production,fresh,4,1,1,0.0,0,0,1.0,1.0,False
+open,sp30,Rajdhani Night,method_sutta_hierarchy_06,development,22,8,9,4.545454545454546,2,1,1.0,,False
+open,sp30,Rajdhani Night,method_sutta_hierarchy_06,validation,11,4,6,18.181818181818183,3,1,0.625,,False
+open,sp30,Rajdhani Night,method_sutta_hierarchy_06,september_reused,9,4,3,-11.11111111111111,1,2,1.0,,True
+open,sp30,Rajdhani Night,method_sutta_hierarchy_06,october_reused,8,4,3,-12.5,1,2,1.0,,True
+open,sp30,Rajdhani Night,method_sutta_hierarchy_06,oct16_17_reused,1,0,1,100.0,1,0,1.0,,False
+open,sp30,Rajdhani Night,method_sutta_hierarchy_06,fresh,4,2,2,0.0,0,0,1.0,1.0,False
+open,sp30,Sridevi,pattern/sutta_transition/window=10,development,38,14,15,2.6315789473684212,2,1,1.0,,False
+open,sp30,Sridevi,pattern/sutta_transition/window=10,validation,13,4,6,15.384615384615385,3,1,0.625,,False
+open,sp30,Sridevi,pattern/sutta_transition/window=10,september_reused,20,7,8,5.0,2,1,1.0,,False
+open,sp30,Sridevi,pattern/sutta_transition/window=10,october_reused,13,2,1,-7.6923076923076925,0,1,1.0,,True
+open,sp30,Sridevi,pattern/sutta_transition/window=10,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,sp30,Sridevi,pattern/sutta_transition/window=10,fresh,5,0,0,0.0,0,0,1.0,1.0,False
+open,sp30,Sridevi Night,production,development,30,9,9,0.0,0,0,1.0,,False
+open,sp30,Sridevi Night,production,validation,16,8,8,0.0,0,0,1.0,,False
+open,sp30,Sridevi Night,production,september_reused,14,4,4,0.0,0,0,1.0,,False
+open,sp30,Sridevi Night,production,october_reused,12,7,7,0.0,0,0,1.0,,False
+open,sp30,Sridevi Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,sp30,Sridevi Night,production,fresh,3,1,1,0.0,0,0,1.0,1.0,False
+open,sp30,Time Bazar,production,development,28,13,13,0.0,0,0,1.0,,False
+open,sp30,Time Bazar,production,validation,13,3,3,0.0,0,0,1.0,,False
+open,sp30,Time Bazar,production,september_reused,15,3,3,0.0,0,0,1.0,,False
+open,sp30,Time Bazar,production,october_reused,7,2,2,0.0,0,0,1.0,,False
+open,sp30,Time Bazar,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,sp30,Time Bazar,production,fresh,2,1,1,0.0,0,0,1.0,1.0,False
+open,dp20,ALL,pattern/weekday_panel_frequency/window=14,development,103,33,33,0.0,0,0,1.0,,False
+open,dp20,ALL,pattern/weekday_panel_frequency/window=14,validation,58,16,18,3.4482758620689653,2,0,0.5,,False
+open,dp20,ALL,pattern/weekday_panel_frequency/window=14,september_reused,65,20,20,0.0,0,0,1.0,,False
+open,dp20,ALL,pattern/weekday_panel_frequency/window=14,october_reused,37,8,8,0.0,0,0,1.0,,False
+open,dp20,ALL,pattern/weekday_panel_frequency/window=14,oct16_17_reused,4,1,1,0.0,0,0,1.0,,False
+open,dp20,ALL,pattern/weekday_panel_frequency/window=14,fresh,11,3,3,0.0,0,0,1.0,1.0,False
+open,dp20,Kalyan,production,development,14,3,3,0.0,0,0,1.0,,False
+open,dp20,Kalyan,production,validation,5,1,1,0.0,0,0,1.0,,False
+open,dp20,Kalyan,production,september_reused,5,2,2,0.0,0,0,1.0,,False
+open,dp20,Kalyan,production,october_reused,1,0,0,0.0,0,0,1.0,,False
+open,dp20,Kalyan,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,dp20,Kalyan,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+open,dp20,Kalyan Night,production,development,5,0,0,0.0,0,0,1.0,,False
+open,dp20,Kalyan Night,production,validation,5,0,0,0.0,0,0,1.0,,False
+open,dp20,Kalyan Night,production,september_reused,6,3,3,0.0,0,0,1.0,,False
+open,dp20,Kalyan Night,production,october_reused,2,1,1,0.0,0,0,1.0,,False
+open,dp20,Kalyan Night,production,oct16_17_reused,1,1,1,0.0,0,0,1.0,,False
+open,dp20,Kalyan Night,production,fresh,2,0,0,0.0,0,0,1.0,1.0,False
+open,dp20,Madhur Day,production,development,13,4,4,0.0,0,0,1.0,,False
+open,dp20,Madhur Day,production,validation,6,2,2,0.0,0,0,1.0,,False
+open,dp20,Madhur Day,production,september_reused,7,3,3,0.0,0,0,1.0,,False
+open,dp20,Madhur Day,production,october_reused,4,1,1,0.0,0,0,1.0,,False
+open,dp20,Madhur Day,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,dp20,Madhur Day,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+open,dp20,Madhur Night,production,development,7,2,2,0.0,0,0,1.0,,False
+open,dp20,Madhur Night,production,validation,4,2,2,0.0,0,0,1.0,,False
+open,dp20,Madhur Night,production,september_reused,8,3,3,0.0,0,0,1.0,,False
+open,dp20,Madhur Night,production,october_reused,4,0,0,0.0,0,0,1.0,,False
+open,dp20,Madhur Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,dp20,Madhur Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+open,dp20,Main Bazar,production,development,8,3,3,0.0,0,0,1.0,,False
+open,dp20,Main Bazar,production,validation,1,0,0,0.0,0,0,1.0,,False
+open,dp20,Main Bazar,production,september_reused,4,0,0,0.0,0,0,1.0,,False
+open,dp20,Main Bazar,production,october_reused,2,1,1,0.0,0,0,1.0,,False
+open,dp20,Main Bazar,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,dp20,Main Bazar,production,fresh,0,0,0,,0,0,1.0,1.0,False
+open,dp20,Milan Day,production,development,8,3,3,0.0,0,0,1.0,,False
+open,dp20,Milan Day,production,validation,4,0,0,0.0,0,0,1.0,,False
+open,dp20,Milan Day,production,september_reused,4,1,1,0.0,0,0,1.0,,False
+open,dp20,Milan Day,production,october_reused,4,0,0,0.0,0,0,1.0,,False
+open,dp20,Milan Day,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,dp20,Milan Day,production,fresh,3,2,2,0.0,0,0,1.0,1.0,False
+open,dp20,Milan Night,production,development,3,1,1,0.0,0,0,1.0,,False
+open,dp20,Milan Night,production,validation,2,2,2,0.0,0,0,1.0,,False
+open,dp20,Milan Night,production,september_reused,3,1,1,0.0,0,0,1.0,,False
+open,dp20,Milan Night,production,october_reused,1,0,0,0.0,0,0,1.0,,False
+open,dp20,Milan Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,dp20,Milan Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+open,dp20,Rajdhani Day,production,development,11,5,5,0.0,0,0,1.0,,False
+open,dp20,Rajdhani Day,production,validation,5,0,0,0.0,0,0,1.0,,False
+open,dp20,Rajdhani Day,production,september_reused,4,1,1,0.0,0,0,1.0,,False
+open,dp20,Rajdhani Day,production,october_reused,5,0,0,0.0,0,0,1.0,,False
+open,dp20,Rajdhani Day,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,dp20,Rajdhani Day,production,fresh,0,0,0,,0,0,1.0,1.0,False
+open,dp20,Rajdhani Night,production,development,8,5,5,0.0,0,0,1.0,,False
+open,dp20,Rajdhani Night,production,validation,5,2,2,0.0,0,0,1.0,,False
+open,dp20,Rajdhani Night,production,september_reused,8,3,3,0.0,0,0,1.0,,False
+open,dp20,Rajdhani Night,production,october_reused,3,1,1,0.0,0,0,1.0,,False
+open,dp20,Rajdhani Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,dp20,Rajdhani Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+open,dp20,Sridevi,production,development,5,1,1,0.0,0,0,1.0,,False
+open,dp20,Sridevi,production,validation,9,4,4,0.0,0,0,1.0,,False
+open,dp20,Sridevi,production,september_reused,3,1,1,0.0,0,0,1.0,,False
+open,dp20,Sridevi,production,october_reused,2,1,1,0.0,0,0,1.0,,False
+open,dp20,Sridevi,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,dp20,Sridevi,production,fresh,0,0,0,,0,0,1.0,1.0,False
+open,dp20,Sridevi Night,production,development,13,4,4,0.0,0,0,1.0,,False
+open,dp20,Sridevi Night,production,validation,6,1,1,0.0,0,0,1.0,,False
+open,dp20,Sridevi Night,production,september_reused,9,0,0,0.0,0,0,1.0,,False
+open,dp20,Sridevi Night,production,october_reused,3,1,1,0.0,0,0,1.0,,False
+open,dp20,Sridevi Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+open,dp20,Sridevi Night,production,fresh,2,1,1,0.0,0,0,1.0,1.0,False
+open,dp20,Time Bazar,production,development,8,2,2,0.0,0,0,1.0,,False
+open,dp20,Time Bazar,production,validation,6,2,2,0.0,0,0,1.0,,False
+open,dp20,Time Bazar,production,september_reused,4,2,2,0.0,0,0,1.0,,False
+open,dp20,Time Bazar,production,october_reused,6,2,2,0.0,0,0,1.0,,False
+open,dp20,Time Bazar,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+open,dp20,Time Bazar,production,fresh,2,0,0,0.0,0,0,1.0,1.0,False
+close_pre,all10,ALL,theory/opposite_panel/strength=0.25,development,435,31,31,0.0,0,0,1.0,,False
+close_pre,all10,ALL,theory/opposite_panel/strength=0.25,validation,228,17,19,0.8771929824561403,2,0,0.5,,False
+close_pre,all10,ALL,theory/opposite_panel/strength=0.25,september_reused,237,14,13,-0.4219409282700422,0,1,1.0,,True
+close_pre,all10,ALL,theory/opposite_panel/strength=0.25,october_reused,152,11,11,0.0,0,0,1.0,,False
+close_pre,all10,ALL,theory/opposite_panel/strength=0.25,oct16_17_reused,14,0,0,0.0,0,0,1.0,,False
+close_pre,all10,ALL,theory/opposite_panel/strength=0.25,fresh,47,4,4,0.0,0,0,1.0,1.0,False
+close_pre,all10,Kalyan,production,development,36,3,3,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan,production,validation,19,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan,production,september_reused,20,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan,production,october_reused,13,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_pre,all10,Kalyan Night,production,development,30,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan Night,production,validation,16,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan Night,production,september_reused,17,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan Night,production,october_reused,11,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Kalyan Night,production,fresh,4,1,1,0.0,0,0,1.0,1.0,False
+close_pre,all10,Madhur Day,production,development,43,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Day,production,validation,22,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Day,production,september_reused,23,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Day,production,october_reused,15,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Day,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Day,production,fresh,5,1,1,0.0,0,0,1.0,1.0,False
+close_pre,all10,Madhur Night,production,development,36,7,7,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Night,production,validation,19,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Night,production,september_reused,20,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Night,production,october_reused,9,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Madhur Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,all10,Madhur Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_pre,all10,Main Bazar,production,development,30,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Main Bazar,production,validation,16,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Main Bazar,production,september_reused,17,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Main Bazar,production,october_reused,11,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Main Bazar,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Main Bazar,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_pre,all10,Milan Day,production,development,36,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Milan Day,production,validation,19,3,3,0.0,0,0,1.0,,False
+close_pre,all10,Milan Day,production,september_reused,19,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Milan Day,production,october_reused,13,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Milan Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Milan Day,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_pre,all10,Milan Night,method_decay30_05,development,36,2,4,5.555555555555555,4,2,0.6875,,False
+close_pre,all10,Milan Night,method_decay30_05,validation,19,0,2,10.526315789473685,2,0,0.5,,False
+close_pre,all10,Milan Night,method_decay30_05,september_reused,19,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Milan Night,method_decay30_05,october_reused,13,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Milan Night,method_decay30_05,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Milan Night,method_decay30_05,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_pre,all10,Rajdhani Day,production,development,36,4,4,0.0,0,0,1.0,,False
+close_pre,all10,Rajdhani Day,production,validation,19,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Rajdhani Day,production,september_reused,20,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Rajdhani Day,production,october_reused,13,3,3,0.0,0,0,1.0,,False
+close_pre,all10,Rajdhani Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Rajdhani Day,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_pre,all10,Rajdhani Night,method_panel_transition_01,development,30,1,2,3.3333333333333335,2,1,1.0,,False
+close_pre,all10,Rajdhani Night,method_panel_transition_01,validation,16,1,5,25.0,5,1,0.21875,,False
+close_pre,all10,Rajdhani Night,method_panel_transition_01,september_reused,17,1,2,5.882352941176471,2,1,1.0,,False
+close_pre,all10,Rajdhani Night,method_panel_transition_01,october_reused,11,1,0,-9.090909090909092,0,1,1.0,,True
+close_pre,all10,Rajdhani Night,method_panel_transition_01,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Rajdhani Night,method_panel_transition_01,fresh,4,0,1,25.0,1,0,1.0,1.0,False
+close_pre,all10,Sridevi,production,development,43,4,4,0.0,0,0,1.0,,False
+close_pre,all10,Sridevi,production,validation,22,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Sridevi,production,september_reused,23,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Sridevi,production,october_reused,15,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Sridevi,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Sridevi,production,fresh,5,1,1,0.0,0,0,1.0,1.0,False
+close_pre,all10,Sridevi Night,pattern/sutta_transition/window=30,development,43,2,3,2.3255813953488373,1,0,1.0,,False
+close_pre,all10,Sridevi Night,pattern/sutta_transition/window=30,validation,22,1,3,9.090909090909092,3,1,0.625,,False
+close_pre,all10,Sridevi Night,pattern/sutta_transition/window=30,september_reused,23,2,2,0.0,2,2,1.0,,False
+close_pre,all10,Sridevi Night,pattern/sutta_transition/window=30,october_reused,15,0,1,6.666666666666667,1,0,1.0,,False
+close_pre,all10,Sridevi Night,pattern/sutta_transition/window=30,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Sridevi Night,pattern/sutta_transition/window=30,fresh,5,1,1,0.0,0,0,1.0,1.0,False
+close_pre,all10,Time Bazar,production,development,36,3,3,0.0,0,0,1.0,,False
+close_pre,all10,Time Bazar,production,validation,19,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Time Bazar,production,september_reused,19,1,1,0.0,0,0,1.0,,False
+close_pre,all10,Time Bazar,production,october_reused,13,2,2,0.0,0,0,1.0,,False
+close_pre,all10,Time Bazar,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,all10,Time Bazar,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_pre,sp30,ALL,method_recent30_01,development,331,87,93,1.8126888217522659,68,62,0.6611696831388164,,False
+close_pre,sp30,ALL,method_recent30_01,validation,164,40,48,4.878048780487805,36,28,0.3817327947933377,,False
+close_pre,sp30,ALL,method_recent30_01,september_reused,186,47,39,-4.301075268817204,25,33,0.358143301806138,,True
+close_pre,sp30,ALL,method_recent30_01,october_reused,111,28,26,-1.8018018018018018,19,21,0.8746293123804207,,True
+close_pre,sp30,ALL,method_recent30_01,oct16_17_reused,12,3,1,-16.666666666666668,1,3,0.625,,True
+close_pre,sp30,ALL,method_recent30_01,fresh,34,10,9,-2.9411764705882355,4,5,1.0,1.0,True
+close_pre,sp30,Kalyan,production,development,28,7,7,0.0,0,0,1.0,,False
+close_pre,sp30,Kalyan,production,validation,16,4,4,0.0,0,0,1.0,,False
+close_pre,sp30,Kalyan,production,september_reused,12,2,2,0.0,0,0,1.0,,False
+close_pre,sp30,Kalyan,production,october_reused,9,1,1,0.0,0,0,1.0,,False
+close_pre,sp30,Kalyan,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,sp30,Kalyan,production,fresh,3,1,1,0.0,0,0,1.0,1.0,False
+close_pre,sp30,Kalyan Night,theory/opposite_digits/strength=2,development,25,5,10,20.0,6,1,0.125,,False
+close_pre,sp30,Kalyan Night,theory/opposite_digits/strength=2,validation,10,1,4,30.0,3,0,0.25,,False
+close_pre,sp30,Kalyan Night,theory/opposite_digits/strength=2,september_reused,13,5,2,-23.076923076923077,1,4,0.375,,True
+close_pre,sp30,Kalyan Night,theory/opposite_digits/strength=2,october_reused,9,2,5,33.333333333333336,3,0,0.25,,False
+close_pre,sp30,Kalyan Night,theory/opposite_digits/strength=2,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,sp30,Kalyan Night,theory/opposite_digits/strength=2,fresh,3,1,1,0.0,1,1,1.0,1.0,False
+close_pre,sp30,Madhur Day,production,development,34,13,13,0.0,0,0,1.0,,False
+close_pre,sp30,Madhur Day,production,validation,15,4,4,0.0,0,0,1.0,,False
+close_pre,sp30,Madhur Day,production,september_reused,19,4,4,0.0,0,0,1.0,,False
+close_pre,sp30,Madhur Day,production,october_reused,11,0,0,0.0,0,0,1.0,,False
+close_pre,sp30,Madhur Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,sp30,Madhur Day,production,fresh,4,2,2,0.0,0,0,1.0,1.0,False
+close_pre,sp30,Madhur Night,theory/digit_persistence/strength=1,development,25,12,14,8.0,3,1,0.625,,False
+close_pre,sp30,Madhur Night,theory/digit_persistence/strength=1,validation,14,3,7,28.571428571428573,5,1,0.21875,,False
+close_pre,sp30,Madhur Night,theory/digit_persistence/strength=1,september_reused,11,4,5,9.090909090909092,3,2,1.0,,False
+close_pre,sp30,Madhur Night,theory/digit_persistence/strength=1,october_reused,8,1,2,12.5,2,1,1.0,,False
+close_pre,sp30,Madhur Night,theory/digit_persistence/strength=1,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,sp30,Madhur Night,theory/digit_persistence/strength=1,fresh,0,0,0,,0,0,1.0,1.0,False
+close_pre,sp30,Main Bazar,theory/previous_opposite_side_digits/strength=1.5,development,23,6,6,0.0,2,2,1.0,,False
+close_pre,sp30,Main Bazar,theory/previous_opposite_side_digits/strength=1.5,validation,13,2,4,15.384615384615385,3,1,0.625,,False
+close_pre,sp30,Main Bazar,theory/previous_opposite_side_digits/strength=1.5,september_reused,14,1,5,28.571428571428573,4,0,0.125,,False
+close_pre,sp30,Main Bazar,theory/previous_opposite_side_digits/strength=1.5,october_reused,7,4,3,-14.285714285714286,0,1,1.0,,True
+close_pre,sp30,Main Bazar,theory/previous_opposite_side_digits/strength=1.5,oct16_17_reused,1,0,1,100.0,1,0,1.0,,False
+close_pre,sp30,Main Bazar,theory/previous_opposite_side_digits/strength=1.5,fresh,3,1,2,33.333333333333336,1,0,1.0,1.0,False
+close_pre,sp30,Milan Day,production,development,28,3,3,0.0,0,0,1.0,,False
+close_pre,sp30,Milan Day,production,validation,10,6,6,0.0,0,0,1.0,,False
+close_pre,sp30,Milan Day,production,september_reused,17,2,2,0.0,0,0,1.0,,False
+close_pre,sp30,Milan Day,production,october_reused,5,1,1,0.0,0,0,1.0,,False
+close_pre,sp30,Milan Day,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,sp30,Milan Day,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_pre,sp30,Milan Night,theory/previous_opposite_side_digits/strength=2,development,27,9,9,0.0,3,3,1.0,,False
+close_pre,sp30,Milan Night,theory/previous_opposite_side_digits/strength=2,validation,18,2,5,16.666666666666668,3,0,0.25,,False
+close_pre,sp30,Milan Night,theory/previous_opposite_side_digits/strength=2,september_reused,19,3,6,15.789473684210526,5,2,0.453125,,False
+close_pre,sp30,Milan Night,theory/previous_opposite_side_digits/strength=2,october_reused,8,1,1,0.0,0,0,1.0,,False
+close_pre,sp30,Milan Night,theory/previous_opposite_side_digits/strength=2,oct16_17_reused,1,1,0,-100.0,0,1,1.0,,True
+close_pre,sp30,Milan Night,theory/previous_opposite_side_digits/strength=2,fresh,3,0,1,33.333333333333336,1,0,1.0,1.0,False
+close_pre,sp30,Rajdhani Day,theory/digit_persistence/strength=2,development,26,8,15,26.923076923076923,7,0,0.015625,,False
+close_pre,sp30,Rajdhani Day,theory/digit_persistence/strength=2,validation,14,2,4,14.285714285714286,3,1,0.625,,False
+close_pre,sp30,Rajdhani Day,theory/digit_persistence/strength=2,september_reused,13,6,5,-7.6923076923076925,2,3,1.0,,True
+close_pre,sp30,Rajdhani Day,theory/digit_persistence/strength=2,october_reused,11,5,3,-18.181818181818183,1,3,0.625,,True
+close_pre,sp30,Rajdhani Day,theory/digit_persistence/strength=2,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,sp30,Rajdhani Day,theory/digit_persistence/strength=2,fresh,3,2,1,-33.333333333333336,0,1,1.0,1.0,True
+close_pre,sp30,Rajdhani Night,method_recent30_09,development,22,4,6,9.090909090909092,3,1,0.625,,False
+close_pre,sp30,Rajdhani Night,method_recent30_09,validation,11,1,6,45.45454545454545,6,1,0.125,,False
+close_pre,sp30,Rajdhani Night,method_recent30_09,september_reused,15,5,3,-13.333333333333334,3,5,0.7265625,,True
+close_pre,sp30,Rajdhani Night,method_recent30_09,october_reused,9,2,1,-11.11111111111111,1,2,1.0,,True
+close_pre,sp30,Rajdhani Night,method_recent30_09,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,sp30,Rajdhani Night,method_recent30_09,fresh,3,0,1,33.333333333333336,1,0,1.0,1.0,False
+close_pre,sp30,Sridevi,theory/parity_persistence/strength=1,development,30,6,9,10.0,6,3,0.5078125,,False
+close_pre,sp30,Sridevi,theory/parity_persistence/strength=1,validation,16,5,8,18.75,6,3,0.5078125,,False
+close_pre,sp30,Sridevi,theory/parity_persistence/strength=1,september_reused,19,3,4,5.2631578947368425,3,2,1.0,,False
+close_pre,sp30,Sridevi,theory/parity_persistence/strength=1,october_reused,12,3,5,16.666666666666668,2,0,0.5,,False
+close_pre,sp30,Sridevi,theory/parity_persistence/strength=1,oct16_17_reused,2,1,1,0.0,0,0,1.0,,False
+close_pre,sp30,Sridevi,theory/parity_persistence/strength=1,fresh,4,1,0,-25.0,0,1,1.0,1.0,True
+close_pre,sp30,Sridevi Night,production,development,34,8,8,0.0,0,0,1.0,,False
+close_pre,sp30,Sridevi Night,production,validation,15,5,5,0.0,0,0,1.0,,False
+close_pre,sp30,Sridevi Night,production,september_reused,18,7,7,0.0,0,0,1.0,,False
+close_pre,sp30,Sridevi Night,production,october_reused,10,3,3,0.0,0,0,1.0,,False
+close_pre,sp30,Sridevi Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,sp30,Sridevi Night,production,fresh,5,1,1,0.0,0,0,1.0,1.0,False
+close_pre,sp30,Time Bazar,production,development,29,6,6,0.0,0,0,1.0,,False
+close_pre,sp30,Time Bazar,production,validation,12,5,5,0.0,0,0,1.0,,False
+close_pre,sp30,Time Bazar,production,september_reused,16,5,5,0.0,0,0,1.0,,False
+close_pre,sp30,Time Bazar,production,october_reused,12,5,5,0.0,0,0,1.0,,False
+close_pre,sp30,Time Bazar,production,oct16_17_reused,2,1,1,0.0,0,0,1.0,,False
+close_pre,sp30,Time Bazar,production,fresh,3,1,1,0.0,0,0,1.0,1.0,False
+close_pre,dp20,ALL,production,development,103,21,21,0.0,0,0,1.0,,False
+close_pre,dp20,ALL,production,validation,63,17,17,0.0,0,0,1.0,,False
+close_pre,dp20,ALL,production,september_reused,51,12,12,0.0,0,0,1.0,,False
+close_pre,dp20,ALL,production,october_reused,41,10,10,0.0,0,0,1.0,,False
+close_pre,dp20,ALL,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,ALL,production,fresh,12,4,4,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Kalyan,production,development,8,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Kalyan,production,validation,3,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Kalyan,production,september_reused,8,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Kalyan,production,october_reused,4,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Kalyan,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Kalyan,production,fresh,1,1,1,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Kalyan Night,production,development,5,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Kalyan Night,production,validation,6,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Kalyan Night,production,september_reused,4,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Kalyan Night,production,october_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Kalyan Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Kalyan Night,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Madhur Day,production,development,8,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Day,production,validation,7,2,2,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Day,production,september_reused,4,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Day,production,october_reused,4,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Day,production,fresh,1,1,1,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Madhur Night,production,development,11,6,6,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Night,production,validation,5,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Night,production,september_reused,9,4,4,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Night,production,october_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Madhur Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Madhur Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_pre,dp20,Main Bazar,production,development,7,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Main Bazar,production,validation,3,2,2,0.0,0,0,1.0,,False
+close_pre,dp20,Main Bazar,production,september_reused,3,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Main Bazar,production,october_reused,4,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Main Bazar,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Main Bazar,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Milan Day,production,development,8,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Milan Day,production,validation,8,3,3,0.0,0,0,1.0,,False
+close_pre,dp20,Milan Day,production,september_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Milan Day,production,october_reused,8,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Milan Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Milan Day,production,fresh,4,1,1,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Milan Night,production,development,9,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Milan Night,production,validation,1,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Milan Night,production,september_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Milan Night,production,october_reused,5,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Milan Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Milan Night,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Rajdhani Day,production,development,10,3,3,0.0,0,0,1.0,,False
+close_pre,dp20,Rajdhani Day,production,validation,5,2,2,0.0,0,0,1.0,,False
+close_pre,dp20,Rajdhani Day,production,september_reused,7,3,3,0.0,0,0,1.0,,False
+close_pre,dp20,Rajdhani Day,production,october_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Rajdhani Day,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Rajdhani Day,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Rajdhani Night,production,development,8,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Rajdhani Night,production,validation,5,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Rajdhani Night,production,september_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Rajdhani Night,production,october_reused,2,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Rajdhani Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Rajdhani Night,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_pre,dp20,Sridevi,production,development,13,4,4,0.0,0,0,1.0,,False
+close_pre,dp20,Sridevi,production,validation,6,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Sridevi,production,september_reused,4,0,0,0.0,0,0,1.0,,False
+close_pre,dp20,Sridevi,production,october_reused,3,2,2,0.0,0,0,1.0,,False
+close_pre,dp20,Sridevi,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Sridevi,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_pre,dp20,Sridevi Night,production,development,9,3,3,0.0,0,0,1.0,,False
+close_pre,dp20,Sridevi Night,production,validation,7,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Sridevi Night,production,september_reused,5,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Sridevi Night,production,october_reused,5,3,3,0.0,0,0,1.0,,False
+close_pre,dp20,Sridevi Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Sridevi Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_pre,dp20,Time Bazar,production,development,7,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Time Bazar,production,validation,7,3,3,0.0,0,0,1.0,,False
+close_pre,dp20,Time Bazar,production,september_reused,3,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Time Bazar,production,october_reused,1,1,1,0.0,0,0,1.0,,False
+close_pre,dp20,Time Bazar,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_pre,dp20,Time Bazar,production,fresh,1,1,1,0.0,0,0,1.0,1.0,False
+close_known,all10,ALL,production,development,435,39,39,0.0,0,0,1.0,,False
+close_known,all10,ALL,production,validation,228,21,21,0.0,0,0,1.0,,False
+close_known,all10,ALL,production,september_reused,237,18,18,0.0,0,0,1.0,,False
+close_known,all10,ALL,production,october_reused,152,6,6,0.0,0,0,1.0,,False
+close_known,all10,ALL,production,oct16_17_reused,14,1,1,0.0,0,0,1.0,,False
+close_known,all10,ALL,production,fresh,47,6,6,0.0,0,0,1.0,1.0,False
+close_known,all10,Kalyan,production,development,36,3,3,0.0,0,0,1.0,,False
+close_known,all10,Kalyan,production,validation,19,2,2,0.0,0,0,1.0,,False
+close_known,all10,Kalyan,production,september_reused,20,0,0,0.0,0,0,1.0,,False
+close_known,all10,Kalyan,production,october_reused,13,0,0,0.0,0,0,1.0,,False
+close_known,all10,Kalyan,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,all10,Kalyan,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_known,all10,Kalyan Night,production,development,30,2,2,0.0,0,0,1.0,,False
+close_known,all10,Kalyan Night,production,validation,16,1,1,0.0,0,0,1.0,,False
+close_known,all10,Kalyan Night,production,september_reused,17,0,0,0.0,0,0,1.0,,False
+close_known,all10,Kalyan Night,production,october_reused,11,0,0,0.0,0,0,1.0,,False
+close_known,all10,Kalyan Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,all10,Kalyan Night,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_known,all10,Madhur Day,production,development,43,2,2,0.0,0,0,1.0,,False
+close_known,all10,Madhur Day,production,validation,22,1,1,0.0,0,0,1.0,,False
+close_known,all10,Madhur Day,production,september_reused,23,1,1,0.0,0,0,1.0,,False
+close_known,all10,Madhur Day,production,october_reused,15,1,1,0.0,0,0,1.0,,False
+close_known,all10,Madhur Day,production,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+close_known,all10,Madhur Day,production,fresh,5,0,0,0.0,0,0,1.0,1.0,False
+close_known,all10,Madhur Night,theory/panel_persistence/strength=0.25,development,36,4,4,0.0,0,0,1.0,,False
+close_known,all10,Madhur Night,theory/panel_persistence/strength=0.25,validation,19,3,5,10.526315789473685,2,0,0.5,,False
+close_known,all10,Madhur Night,theory/panel_persistence/strength=0.25,september_reused,20,2,2,0.0,0,0,1.0,,False
+close_known,all10,Madhur Night,theory/panel_persistence/strength=0.25,october_reused,9,0,1,11.11111111111111,1,0,1.0,,False
+close_known,all10,Madhur Night,theory/panel_persistence/strength=0.25,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,all10,Madhur Night,theory/panel_persistence/strength=0.25,fresh,0,0,0,,0,0,1.0,1.0,False
+close_known,all10,Main Bazar,production,development,30,7,7,0.0,0,0,1.0,,False
+close_known,all10,Main Bazar,production,validation,16,2,2,0.0,0,0,1.0,,False
+close_known,all10,Main Bazar,production,september_reused,17,0,0,0.0,0,0,1.0,,False
+close_known,all10,Main Bazar,production,october_reused,11,1,1,0.0,0,0,1.0,,False
+close_known,all10,Main Bazar,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,all10,Main Bazar,production,fresh,4,1,1,0.0,0,0,1.0,1.0,False
+close_known,all10,Milan Day,production,development,36,2,2,0.0,0,0,1.0,,False
+close_known,all10,Milan Day,production,validation,19,1,1,0.0,0,0,1.0,,False
+close_known,all10,Milan Day,production,september_reused,19,3,3,0.0,0,0,1.0,,False
+close_known,all10,Milan Day,production,october_reused,13,0,0,0.0,0,0,1.0,,False
+close_known,all10,Milan Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,all10,Milan Day,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_known,all10,Milan Night,production,development,36,3,3,0.0,0,0,1.0,,False
+close_known,all10,Milan Night,production,validation,19,2,2,0.0,0,0,1.0,,False
+close_known,all10,Milan Night,production,september_reused,19,1,1,0.0,0,0,1.0,,False
+close_known,all10,Milan Night,production,october_reused,13,2,2,0.0,0,0,1.0,,False
+close_known,all10,Milan Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,all10,Milan Night,production,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_known,all10,Rajdhani Day,theory/digit_persistence/strength=0.25,development,36,3,3,0.0,2,2,1.0,,False
+close_known,all10,Rajdhani Day,theory/digit_persistence/strength=0.25,validation,19,1,3,10.526315789473685,3,1,0.625,,False
+close_known,all10,Rajdhani Day,theory/digit_persistence/strength=0.25,september_reused,20,5,2,-15.0,1,4,0.375,,True
+close_known,all10,Rajdhani Day,theory/digit_persistence/strength=0.25,october_reused,13,0,1,7.6923076923076925,1,0,1.0,,False
+close_known,all10,Rajdhani Day,theory/digit_persistence/strength=0.25,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,all10,Rajdhani Day,theory/digit_persistence/strength=0.25,fresh,4,2,1,-25.0,0,1,1.0,1.0,True
+close_known,all10,Rajdhani Night,method_panel_transition_01,development,30,2,2,0.0,2,2,1.0,,False
+close_known,all10,Rajdhani Night,method_panel_transition_01,validation,16,1,5,25.0,5,1,0.21875,,False
+close_known,all10,Rajdhani Night,method_panel_transition_01,september_reused,17,3,2,-5.882352941176471,1,2,1.0,,True
+close_known,all10,Rajdhani Night,method_panel_transition_01,october_reused,11,0,0,0.0,0,0,1.0,,False
+close_known,all10,Rajdhani Night,method_panel_transition_01,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,all10,Rajdhani Night,method_panel_transition_01,fresh,4,1,1,0.0,1,1,1.0,1.0,False
+close_known,all10,Sridevi,production,development,43,7,7,0.0,0,0,1.0,,False
+close_known,all10,Sridevi,production,validation,22,2,2,0.0,0,0,1.0,,False
+close_known,all10,Sridevi,production,september_reused,23,2,2,0.0,0,0,1.0,,False
+close_known,all10,Sridevi,production,october_reused,15,0,0,0.0,0,0,1.0,,False
+close_known,all10,Sridevi,production,oct16_17_reused,2,1,1,0.0,0,0,1.0,,False
+close_known,all10,Sridevi,production,fresh,5,1,1,0.0,0,0,1.0,1.0,False
+close_known,all10,Sridevi Night,production,development,43,2,2,0.0,0,0,1.0,,False
+close_known,all10,Sridevi Night,production,validation,22,4,4,0.0,0,0,1.0,,False
+close_known,all10,Sridevi Night,production,september_reused,23,0,0,0.0,0,0,1.0,,False
+close_known,all10,Sridevi Night,production,october_reused,15,0,0,0.0,0,0,1.0,,False
+close_known,all10,Sridevi Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,all10,Sridevi Night,production,fresh,5,1,1,0.0,0,0,1.0,1.0,False
+close_known,all10,Time Bazar,pattern/weekday_panel_frequency/window=30,development,36,2,2,0.0,0,0,1.0,,False
+close_known,all10,Time Bazar,pattern/weekday_panel_frequency/window=30,validation,19,1,3,10.526315789473685,2,0,0.5,,False
+close_known,all10,Time Bazar,pattern/weekday_panel_frequency/window=30,september_reused,19,1,2,5.2631578947368425,1,0,1.0,,False
+close_known,all10,Time Bazar,pattern/weekday_panel_frequency/window=30,october_reused,13,2,1,-7.6923076923076925,1,2,1.0,,True
+close_known,all10,Time Bazar,pattern/weekday_panel_frequency/window=30,oct16_17_reused,2,0,0,0.0,0,0,1.0,,False
+close_known,all10,Time Bazar,pattern/weekday_panel_frequency/window=30,fresh,4,0,0,0.0,0,0,1.0,1.0,False
+close_known,sp30,ALL,production,development,331,99,99,0.0,0,0,1.0,,False
+close_known,sp30,ALL,production,validation,164,52,52,0.0,0,0,1.0,,False
+close_known,sp30,ALL,production,september_reused,186,59,59,0.0,0,0,1.0,,False
+close_known,sp30,ALL,production,october_reused,111,30,30,0.0,0,0,1.0,,False
+close_known,sp30,ALL,production,oct16_17_reused,12,5,5,0.0,0,0,1.0,,False
+close_known,sp30,ALL,production,fresh,34,10,10,0.0,0,0,1.0,1.0,False
+close_known,sp30,Kalyan,production,development,28,5,5,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan,production,validation,16,7,7,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan,production,september_reused,12,3,3,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan,production,october_reused,9,3,3,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan,production,fresh,3,0,0,0.0,0,0,1.0,1.0,False
+close_known,sp30,Kalyan Night,production,development,25,9,9,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan Night,production,validation,10,3,3,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan Night,production,september_reused,13,4,4,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan Night,production,october_reused,9,5,5,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,sp30,Kalyan Night,production,fresh,3,2,2,0.0,0,0,1.0,1.0,False
+close_known,sp30,Madhur Day,pattern/digit_frequency/window=60,development,34,12,13,2.9411764705882355,1,0,1.0,,False
+close_known,sp30,Madhur Day,pattern/digit_frequency/window=60,validation,15,6,9,20.0,3,0,0.25,,False
+close_known,sp30,Madhur Day,pattern/digit_frequency/window=60,september_reused,19,9,6,-15.789473684210526,1,4,0.375,,True
+close_known,sp30,Madhur Day,pattern/digit_frequency/window=60,october_reused,11,3,2,-9.090909090909092,0,1,1.0,,True
+close_known,sp30,Madhur Day,pattern/digit_frequency/window=60,oct16_17_reused,1,1,1,0.0,0,0,1.0,,False
+close_known,sp30,Madhur Day,pattern/digit_frequency/window=60,fresh,4,1,1,0.0,0,0,1.0,1.0,False
+close_known,sp30,Madhur Night,production,development,25,5,5,0.0,0,0,1.0,,False
+close_known,sp30,Madhur Night,production,validation,14,5,5,0.0,0,0,1.0,,False
+close_known,sp30,Madhur Night,production,september_reused,11,2,2,0.0,0,0,1.0,,False
+close_known,sp30,Madhur Night,production,october_reused,8,1,1,0.0,0,0,1.0,,False
+close_known,sp30,Madhur Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,sp30,Madhur Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_known,sp30,Main Bazar,production,development,23,10,10,0.0,0,0,1.0,,False
+close_known,sp30,Main Bazar,production,validation,13,5,5,0.0,0,0,1.0,,False
+close_known,sp30,Main Bazar,production,september_reused,14,5,5,0.0,0,0,1.0,,False
+close_known,sp30,Main Bazar,production,october_reused,7,1,1,0.0,0,0,1.0,,False
+close_known,sp30,Main Bazar,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,sp30,Main Bazar,production,fresh,3,1,1,0.0,0,0,1.0,1.0,False
+close_known,sp30,Milan Day,pattern/sutta_transition/window=21,development,28,8,9,3.5714285714285716,3,2,1.0,,False
+close_known,sp30,Milan Day,pattern/sutta_transition/window=21,validation,10,4,6,20.0,3,1,0.625,,False
+close_known,sp30,Milan Day,pattern/sutta_transition/window=21,september_reused,17,7,4,-17.647058823529413,2,5,0.453125,,True
+close_known,sp30,Milan Day,pattern/sutta_transition/window=21,october_reused,5,0,2,40.0,2,0,0.5,,False
+close_known,sp30,Milan Day,pattern/sutta_transition/window=21,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,sp30,Milan Day,pattern/sutta_transition/window=21,fresh,0,0,0,,0,0,1.0,1.0,False
+close_known,sp30,Milan Night,production,development,27,6,6,0.0,0,0,1.0,,False
+close_known,sp30,Milan Night,production,validation,18,4,4,0.0,0,0,1.0,,False
+close_known,sp30,Milan Night,production,september_reused,19,7,7,0.0,0,0,1.0,,False
+close_known,sp30,Milan Night,production,october_reused,8,3,3,0.0,0,0,1.0,,False
+close_known,sp30,Milan Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,sp30,Milan Night,production,fresh,3,1,1,0.0,0,0,1.0,1.0,False
+close_known,sp30,Rajdhani Day,method_pooled_dirichlet_01,development,26,6,8,7.6923076923076925,6,4,0.75390625,,False
+close_known,sp30,Rajdhani Day,method_pooled_dirichlet_01,validation,14,1,5,28.571428571428573,4,0,0.125,,False
+close_known,sp30,Rajdhani Day,method_pooled_dirichlet_01,september_reused,13,1,3,15.384615384615385,3,1,0.625,,False
+close_known,sp30,Rajdhani Day,method_pooled_dirichlet_01,october_reused,11,4,3,-9.090909090909092,2,3,1.0,,True
+close_known,sp30,Rajdhani Day,method_pooled_dirichlet_01,oct16_17_reused,1,1,0,-100.0,0,1,1.0,,True
+close_known,sp30,Rajdhani Day,method_pooled_dirichlet_01,fresh,3,1,0,-33.333333333333336,0,1,1.0,1.0,True
+close_known,sp30,Rajdhani Night,theory/digit_persistence/strength=0.25,development,22,8,9,4.545454545454546,5,4,1.0,,False
+close_known,sp30,Rajdhani Night,theory/digit_persistence/strength=0.25,validation,11,4,7,27.272727272727273,4,1,0.375,,False
+close_known,sp30,Rajdhani Night,theory/digit_persistence/strength=0.25,september_reused,15,2,2,0.0,1,1,1.0,,False
+close_known,sp30,Rajdhani Night,theory/digit_persistence/strength=0.25,october_reused,9,3,1,-22.22222222222222,0,2,0.5,,True
+close_known,sp30,Rajdhani Night,theory/digit_persistence/strength=0.25,oct16_17_reused,1,1,0,-100.0,0,1,1.0,,True
+close_known,sp30,Rajdhani Night,theory/digit_persistence/strength=0.25,fresh,3,1,0,-33.333333333333336,0,1,1.0,1.0,True
+close_known,sp30,Sridevi,pattern/panel_frequency/window=5,development,30,8,8,0.0,0,0,1.0,,False
+close_known,sp30,Sridevi,pattern/panel_frequency/window=5,validation,16,5,7,12.5,2,0,0.5,,False
+close_known,sp30,Sridevi,pattern/panel_frequency/window=5,september_reused,19,10,7,-15.789473684210526,0,3,0.25,,True
+close_known,sp30,Sridevi,pattern/panel_frequency/window=5,october_reused,12,4,4,0.0,0,0,1.0,,False
+close_known,sp30,Sridevi,pattern/panel_frequency/window=5,oct16_17_reused,2,1,1,0.0,0,0,1.0,,False
+close_known,sp30,Sridevi,pattern/panel_frequency/window=5,fresh,4,0,1,25.0,1,0,1.0,1.0,False
+close_known,sp30,Sridevi Night,production,development,34,12,12,0.0,0,0,1.0,,False
+close_known,sp30,Sridevi Night,production,validation,15,6,6,0.0,0,0,1.0,,False
+close_known,sp30,Sridevi Night,production,september_reused,18,4,4,0.0,0,0,1.0,,False
+close_known,sp30,Sridevi Night,production,october_reused,10,0,0,0.0,0,0,1.0,,False
+close_known,sp30,Sridevi Night,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,sp30,Sridevi Night,production,fresh,5,2,2,0.0,0,0,1.0,1.0,False
+close_known,sp30,Time Bazar,combination_01_07,development,29,10,10,0.0,2,2,1.0,,False
+close_known,sp30,Time Bazar,combination_01_07,validation,12,2,7,41.666666666666664,5,0,0.0625,,False
+close_known,sp30,Time Bazar,combination_01_07,september_reused,16,5,2,-18.75,2,5,0.453125,,True
+close_known,sp30,Time Bazar,combination_01_07,october_reused,12,3,2,-8.333333333333334,0,1,1.0,,True
+close_known,sp30,Time Bazar,combination_01_07,oct16_17_reused,2,1,0,-50.0,0,1,1.0,,True
+close_known,sp30,Time Bazar,combination_01_07,fresh,3,1,0,-33.333333333333336,0,1,1.0,1.0,True
+close_known,dp20,ALL,formula_00_01,development,103,24,24,0.0,1,1,1.0,,False
+close_known,dp20,ALL,formula_00_01,validation,63,22,24,3.1746031746031744,2,0,0.5,,False
+close_known,dp20,ALL,formula_00_01,september_reused,51,15,15,0.0,0,0,1.0,,False
+close_known,dp20,ALL,formula_00_01,october_reused,41,9,9,0.0,0,0,1.0,,False
+close_known,dp20,ALL,formula_00_01,oct16_17_reused,2,1,1,0.0,0,0,1.0,,False
+close_known,dp20,ALL,formula_00_01,fresh,12,2,2,0.0,0,0,1.0,1.0,False
+close_known,dp20,Kalyan,production,development,8,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Kalyan,production,validation,3,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Kalyan,production,september_reused,8,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Kalyan,production,october_reused,4,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Kalyan,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Kalyan,production,fresh,1,1,1,0.0,0,0,1.0,1.0,False
+close_known,dp20,Kalyan Night,production,development,5,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Kalyan Night,production,validation,6,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Kalyan Night,production,september_reused,4,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Kalyan Night,production,october_reused,2,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Kalyan Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Kalyan Night,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_known,dp20,Madhur Day,production,development,8,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Day,production,validation,7,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Day,production,september_reused,4,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Day,production,october_reused,4,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Day,production,oct16_17_reused,1,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Day,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_known,dp20,Madhur Night,production,development,11,5,5,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Night,production,validation,5,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Night,production,september_reused,9,3,3,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Night,production,october_reused,1,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Madhur Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Madhur Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_known,dp20,Main Bazar,production,development,7,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Main Bazar,production,validation,3,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Main Bazar,production,september_reused,3,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Main Bazar,production,october_reused,4,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Main Bazar,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Main Bazar,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_known,dp20,Milan Day,production,development,8,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Milan Day,production,validation,8,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Milan Day,production,september_reused,2,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Milan Day,production,october_reused,8,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Milan Day,production,oct16_17_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Milan Day,production,fresh,4,1,1,0.0,0,0,1.0,1.0,False
+close_known,dp20,Milan Night,production,development,9,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Milan Night,production,validation,1,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Milan Night,production,september_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Milan Night,production,october_reused,5,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Milan Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Milan Night,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_known,dp20,Rajdhani Day,production,development,10,4,4,0.0,0,0,1.0,,False
+close_known,dp20,Rajdhani Day,production,validation,5,3,3,0.0,0,0,1.0,,False
+close_known,dp20,Rajdhani Day,production,september_reused,7,4,4,0.0,0,0,1.0,,False
+close_known,dp20,Rajdhani Day,production,october_reused,2,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Rajdhani Day,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Rajdhani Day,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_known,dp20,Rajdhani Night,production,development,8,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Rajdhani Night,production,validation,5,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Rajdhani Night,production,september_reused,2,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Rajdhani Night,production,october_reused,2,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Rajdhani Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Rajdhani Night,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
+close_known,dp20,Sridevi,production,development,13,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Sridevi,production,validation,6,3,3,0.0,0,0,1.0,,False
+close_known,dp20,Sridevi,production,september_reused,4,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Sridevi,production,october_reused,3,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Sridevi,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Sridevi,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_known,dp20,Sridevi Night,production,development,9,3,3,0.0,0,0,1.0,,False
+close_known,dp20,Sridevi Night,production,validation,7,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Sridevi Night,production,september_reused,5,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Sridevi Night,production,october_reused,5,3,3,0.0,0,0,1.0,,False
+close_known,dp20,Sridevi Night,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Sridevi Night,production,fresh,0,0,0,,0,0,1.0,1.0,False
+close_known,dp20,Time Bazar,production,development,7,2,2,0.0,0,0,1.0,,False
+close_known,dp20,Time Bazar,production,validation,7,5,5,0.0,0,0,1.0,,False
+close_known,dp20,Time Bazar,production,september_reused,3,1,1,0.0,0,0,1.0,,False
+close_known,dp20,Time Bazar,production,october_reused,1,0,0,0.0,0,0,1.0,,False
+close_known,dp20,Time Bazar,production,oct16_17_reused,0,0,0,,0,0,1.0,,False
+close_known,dp20,Time Bazar,production,fresh,1,0,0,0.0,0,0,1.0,1.0,False
