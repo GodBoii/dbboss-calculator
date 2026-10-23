@@ -1,0 +1,6342 @@
+{
+  "rows": 1066,
+  "markets": [
+    "Kalyan",
+    "Kalyan Night",
+    "Madhur Day",
+    "Madhur Night",
+    "Main Bazar",
+    "Milan Day",
+    "Milan Night",
+    "Rajdhani Day",
+    "Rajdhani Night",
+    "Sridevi",
+    "Sridevi Night",
+    "Time Bazar"
+  ],
+  "date_range": [
+    "2026-07-04",
+    "2026-10-17"
+  ],
+  "selectionSHA256": "34c721f3019dc3b368702837d916328c6416b8a971638ce538fb48596b3e648f",
+  "summaries": [
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "ALL",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 435,
+          "baseline_hits": 37,
+          "candidate_hits": 37,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 228,
+          "baseline_hits": 23,
+          "candidate_hits": 23,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 237,
+          "baseline_hits": 13,
+          "candidate_hits": 13,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 152,
+          "baseline_hits": 18,
+          "candidate_hits": 18,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 14,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Kalyan",
+      "candidate": "theory/digit_persistence/strength=-2",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 1,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 2,
+          "candidate_hits": 5,
+          "lift_pp": 15.789473684210526,
+          "wins": 3,
+          "losses": 0,
+          "paired_p": 0.25
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 1,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 1,
+          "candidate_hits": 2,
+          "lift_pp": 7.6923076923076925,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Kalyan Night",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Madhur Day",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Madhur Night",
+      "candidate": "pattern/digit_pair_frequency/window=21",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 2,
+          "candidate_hits": 4,
+          "lift_pp": 5.555555555555555,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 3,
+          "lift_pp": 10.526315789473685,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 2,
+          "candidate_hits": 1,
+          "lift_pp": -11.11111111111111,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Main Bazar",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Milan Day",
+      "candidate": "formula_05_05",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 3,
+          "candidate_hits": 5,
+          "lift_pp": 5.555555555555555,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 3,
+          "lift_pp": 10.526315789473685,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Milan Night",
+      "candidate": "theory/digit_persistence/strength=-2",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 1,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 3,
+          "lift_pp": 10.526315789473685,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 3,
+          "lift_pp": 10.526315789473685,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 3,
+          "candidate_hits": 1,
+          "lift_pp": -15.384615384615385,
+          "wins": 0,
+          "losses": 2,
+          "paired_p": 0.5
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Rajdhani Day",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Rajdhani Night",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Sridevi",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Sridevi Night",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "all10",
+      "market": "Time Bazar",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "ALL",
+      "candidate": "production",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 331,
+          "baseline_hits": 119,
+          "candidate_hits": 119,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 169,
+          "baseline_hits": 57,
+          "candidate_hits": 57,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 170,
+          "baseline_hits": 43,
+          "candidate_hits": 43,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 115,
+          "baseline_hits": 36,
+          "candidate_hits": 36,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 10,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Kalyan",
+      "candidate": "pattern/panel_overdue/window=14",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 22,
+          "baseline_hits": 8,
+          "candidate_hits": 8,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 14,
+          "baseline_hits": 3,
+          "candidate_hits": 5,
+          "lift_pp": 14.285714285714286,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 15,
+          "baseline_hits": 8,
+          "candidate_hits": 6,
+          "lift_pp": -13.333333333333334,
+          "wins": 0,
+          "losses": 2,
+          "paired_p": 0.5
+        },
+        "october_reused": {
+          "n": 12,
+          "baseline_hits": 2,
+          "candidate_hits": 3,
+          "lift_pp": 8.333333333333334,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Kalyan Night",
+      "candidate": "production",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 25,
+          "baseline_hits": 10,
+          "candidate_hits": 10,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 11,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 11,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Madhur Day",
+      "candidate": "production",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 11,
+          "candidate_hits": 11,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 15,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 15,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Madhur Night",
+      "candidate": "method_digit_bernoulli_05",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 29,
+          "baseline_hits": 8,
+          "candidate_hits": 12,
+          "lift_pp": 13.793103448275861,
+          "wins": 4,
+          "losses": 0,
+          "paired_p": 0.125
+        },
+        "validation": {
+          "n": 15,
+          "baseline_hits": 6,
+          "candidate_hits": 8,
+          "lift_pp": 13.333333333333334,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 12,
+          "baseline_hits": 2,
+          "candidate_hits": 4,
+          "lift_pp": 16.666666666666668,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "october_reused": {
+          "n": 5,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 1,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Main Bazar",
+      "candidate": "production",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 21,
+          "baseline_hits": 8,
+          "candidate_hits": 8,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 15,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 13,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Milan Day",
+      "candidate": "theory/opposite_digits/strength=0.25",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 28,
+          "baseline_hits": 9,
+          "candidate_hits": 12,
+          "lift_pp": 10.714285714285714,
+          "wins": 7,
+          "losses": 4,
+          "paired_p": 0.548828125
+        },
+        "validation": {
+          "n": 15,
+          "baseline_hits": 4,
+          "candidate_hits": 8,
+          "lift_pp": 26.666666666666668,
+          "wins": 5,
+          "losses": 1,
+          "paired_p": 0.21875
+        },
+        "september_reused": {
+          "n": 14,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 1,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 3,
+          "candidate_hits": 2,
+          "lift_pp": -11.11111111111111,
+          "wins": 1,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Milan Night",
+      "candidate": "pattern/panel_overdue/window=30",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 33,
+          "baseline_hits": 13,
+          "candidate_hits": 13,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 17,
+          "baseline_hits": 2,
+          "candidate_hits": 4,
+          "lift_pp": 11.764705882352942,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 16,
+          "baseline_hits": 2,
+          "candidate_hits": 3,
+          "lift_pp": 6.25,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 12,
+          "baseline_hits": 6,
+          "candidate_hits": 5,
+          "lift_pp": -8.333333333333334,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Rajdhani Day",
+      "candidate": "production",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 25,
+          "baseline_hits": 8,
+          "candidate_hits": 8,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 14,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 16,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Rajdhani Night",
+      "candidate": "method_sutta_hierarchy_06",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 22,
+          "baseline_hits": 8,
+          "candidate_hits": 9,
+          "lift_pp": 4.545454545454546,
+          "wins": 2,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 11,
+          "baseline_hits": 4,
+          "candidate_hits": 6,
+          "lift_pp": 18.181818181818183,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "september_reused": {
+          "n": 9,
+          "baseline_hits": 4,
+          "candidate_hits": 3,
+          "lift_pp": -11.11111111111111,
+          "wins": 1,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 8,
+          "baseline_hits": 4,
+          "candidate_hits": 3,
+          "lift_pp": -12.5,
+          "wins": 1,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 1,
+          "lift_pp": 100.0,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Sridevi",
+      "candidate": "pattern/sutta_transition/window=10",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 38,
+          "baseline_hits": 14,
+          "candidate_hits": 15,
+          "lift_pp": 2.6315789473684212,
+          "wins": 2,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 13,
+          "baseline_hits": 4,
+          "candidate_hits": 6,
+          "lift_pp": 15.384615384615385,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 7,
+          "candidate_hits": 8,
+          "lift_pp": 5.0,
+          "wins": 2,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 2,
+          "candidate_hits": 1,
+          "lift_pp": -7.6923076923076925,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Sridevi Night",
+      "candidate": "production",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 9,
+          "candidate_hits": 9,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 8,
+          "candidate_hits": 8,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 14,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 12,
+          "baseline_hits": 7,
+          "candidate_hits": 7,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "sp30",
+      "market": "Time Bazar",
+      "candidate": "production",
+      "unique_distributions": 462,
+      "blocks": {
+        "development": {
+          "n": 28,
+          "baseline_hits": 13,
+          "candidate_hits": 13,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 13,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 15,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 7,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "ALL",
+      "candidate": "pattern/weekday_panel_frequency/window=14",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 103,
+          "baseline_hits": 33,
+          "candidate_hits": 33,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 58,
+          "baseline_hits": 16,
+          "candidate_hits": 18,
+          "lift_pp": 3.4482758620689653,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 65,
+          "baseline_hits": 20,
+          "candidate_hits": 20,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 37,
+          "baseline_hits": 8,
+          "candidate_hits": 8,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Kalyan",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 14,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 5,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Kalyan Night",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 5,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 6,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Madhur Day",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 13,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 6,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 7,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Madhur Night",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 7,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 4,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 8,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Main Bazar",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Milan Day",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 4,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Milan Night",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 3,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 2,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 3,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Rajdhani Day",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 11,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 5,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Rajdhani Night",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 8,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 3,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Sridevi",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 9,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 3,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Sridevi Night",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 13,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 6,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 9,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 3,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "open",
+      "endpoint": "dp20",
+      "market": "Time Bazar",
+      "candidate": "production",
+      "unique_distributions": 461,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 6,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 6,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "ALL",
+      "candidate": "theory/opposite_panel/strength=0.25",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 435,
+          "baseline_hits": 31,
+          "candidate_hits": 31,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 228,
+          "baseline_hits": 17,
+          "candidate_hits": 19,
+          "lift_pp": 0.8771929824561403,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 237,
+          "baseline_hits": 14,
+          "candidate_hits": 13,
+          "lift_pp": -0.4219409282700422,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 152,
+          "baseline_hits": 11,
+          "candidate_hits": 11,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 14,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Kalyan",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Kalyan Night",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Madhur Day",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Madhur Night",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 7,
+          "candidate_hits": 7,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Main Bazar",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Milan Day",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Milan Night",
+      "candidate": "method_decay30_05",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 2,
+          "candidate_hits": 4,
+          "lift_pp": 5.555555555555555,
+          "wins": 4,
+          "losses": 2,
+          "paired_p": 0.6875
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 0,
+          "candidate_hits": 2,
+          "lift_pp": 10.526315789473685,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Rajdhani Day",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Rajdhani Night",
+      "candidate": "method_panel_transition_01",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 1,
+          "candidate_hits": 2,
+          "lift_pp": 3.3333333333333335,
+          "wins": 2,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 1,
+          "candidate_hits": 5,
+          "lift_pp": 25.0,
+          "wins": 5,
+          "losses": 1,
+          "paired_p": 0.21875
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 1,
+          "candidate_hits": 2,
+          "lift_pp": 5.882352941176471,
+          "wins": 2,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 1,
+          "candidate_hits": 0,
+          "lift_pp": -9.090909090909092,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Sridevi",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Sridevi Night",
+      "candidate": "pattern/sutta_transition/window=30",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 2,
+          "candidate_hits": 3,
+          "lift_pp": 2.3255813953488373,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 1,
+          "candidate_hits": 3,
+          "lift_pp": 9.090909090909092,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 2,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 0,
+          "candidate_hits": 1,
+          "lift_pp": 6.666666666666667,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "all10",
+      "market": "Time Bazar",
+      "candidate": "production",
+      "unique_distributions": 495,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "ALL",
+      "candidate": "method_recent30_01",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 331,
+          "baseline_hits": 87,
+          "candidate_hits": 93,
+          "lift_pp": 1.8126888217522659,
+          "wins": 68,
+          "losses": 62,
+          "paired_p": 0.6611696831388164
+        },
+        "validation": {
+          "n": 164,
+          "baseline_hits": 40,
+          "candidate_hits": 48,
+          "lift_pp": 4.878048780487805,
+          "wins": 36,
+          "losses": 28,
+          "paired_p": 0.3817327947933377
+        },
+        "september_reused": {
+          "n": 186,
+          "baseline_hits": 47,
+          "candidate_hits": 39,
+          "lift_pp": -4.301075268817204,
+          "wins": 25,
+          "losses": 33,
+          "paired_p": 0.358143301806138
+        },
+        "october_reused": {
+          "n": 111,
+          "baseline_hits": 28,
+          "candidate_hits": 26,
+          "lift_pp": -1.8018018018018018,
+          "wins": 19,
+          "losses": 21,
+          "paired_p": 0.8746293123804207
+        },
+        "oct16_17_reused": {
+          "n": 12,
+          "baseline_hits": 3,
+          "candidate_hits": 1,
+          "lift_pp": -16.666666666666668,
+          "wins": 1,
+          "losses": 3,
+          "paired_p": 0.625
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Kalyan",
+      "candidate": "production",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 28,
+          "baseline_hits": 7,
+          "candidate_hits": 7,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 12,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Kalyan Night",
+      "candidate": "theory/opposite_digits/strength=2",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 25,
+          "baseline_hits": 5,
+          "candidate_hits": 10,
+          "lift_pp": 20.0,
+          "wins": 6,
+          "losses": 1,
+          "paired_p": 0.125
+        },
+        "validation": {
+          "n": 10,
+          "baseline_hits": 1,
+          "candidate_hits": 4,
+          "lift_pp": 30.0,
+          "wins": 3,
+          "losses": 0,
+          "paired_p": 0.25
+        },
+        "september_reused": {
+          "n": 13,
+          "baseline_hits": 5,
+          "candidate_hits": 2,
+          "lift_pp": -23.076923076923077,
+          "wins": 1,
+          "losses": 4,
+          "paired_p": 0.375
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 2,
+          "candidate_hits": 5,
+          "lift_pp": 33.333333333333336,
+          "wins": 3,
+          "losses": 0,
+          "paired_p": 0.25
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Madhur Day",
+      "candidate": "production",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 34,
+          "baseline_hits": 13,
+          "candidate_hits": 13,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 15,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Madhur Night",
+      "candidate": "theory/digit_persistence/strength=1",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 25,
+          "baseline_hits": 12,
+          "candidate_hits": 14,
+          "lift_pp": 8.0,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "validation": {
+          "n": 14,
+          "baseline_hits": 3,
+          "candidate_hits": 7,
+          "lift_pp": 28.571428571428573,
+          "wins": 5,
+          "losses": 1,
+          "paired_p": 0.21875
+        },
+        "september_reused": {
+          "n": 11,
+          "baseline_hits": 4,
+          "candidate_hits": 5,
+          "lift_pp": 9.090909090909092,
+          "wins": 3,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 2,
+          "lift_pp": 12.5,
+          "wins": 2,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Main Bazar",
+      "candidate": "theory/previous_opposite_side_digits/strength=1.5",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 23,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 2,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 13,
+          "baseline_hits": 2,
+          "candidate_hits": 4,
+          "lift_pp": 15.384615384615385,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "september_reused": {
+          "n": 14,
+          "baseline_hits": 1,
+          "candidate_hits": 5,
+          "lift_pp": 28.571428571428573,
+          "wins": 4,
+          "losses": 0,
+          "paired_p": 0.125
+        },
+        "october_reused": {
+          "n": 7,
+          "baseline_hits": 4,
+          "candidate_hits": 3,
+          "lift_pp": -14.285714285714286,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 1,
+          "lift_pp": 100.0,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Milan Day",
+      "candidate": "production",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 28,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 10,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Milan Night",
+      "candidate": "theory/previous_opposite_side_digits/strength=2",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 27,
+          "baseline_hits": 9,
+          "candidate_hits": 9,
+          "lift_pp": 0.0,
+          "wins": 3,
+          "losses": 3,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 18,
+          "baseline_hits": 2,
+          "candidate_hits": 5,
+          "lift_pp": 16.666666666666668,
+          "wins": 3,
+          "losses": 0,
+          "paired_p": 0.25
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 3,
+          "candidate_hits": 6,
+          "lift_pp": 15.789473684210526,
+          "wins": 5,
+          "losses": 2,
+          "paired_p": 0.453125
+        },
+        "october_reused": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 1,
+          "candidate_hits": 0,
+          "lift_pp": -100.0,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Rajdhani Day",
+      "candidate": "theory/digit_persistence/strength=2",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 26,
+          "baseline_hits": 8,
+          "candidate_hits": 15,
+          "lift_pp": 26.923076923076923,
+          "wins": 7,
+          "losses": 0,
+          "paired_p": 0.015625
+        },
+        "validation": {
+          "n": 14,
+          "baseline_hits": 2,
+          "candidate_hits": 4,
+          "lift_pp": 14.285714285714286,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "september_reused": {
+          "n": 13,
+          "baseline_hits": 6,
+          "candidate_hits": 5,
+          "lift_pp": -7.6923076923076925,
+          "wins": 2,
+          "losses": 3,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 5,
+          "candidate_hits": 3,
+          "lift_pp": -18.181818181818183,
+          "wins": 1,
+          "losses": 3,
+          "paired_p": 0.625
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Rajdhani Night",
+      "candidate": "method_recent30_09",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 22,
+          "baseline_hits": 4,
+          "candidate_hits": 6,
+          "lift_pp": 9.090909090909092,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "validation": {
+          "n": 11,
+          "baseline_hits": 1,
+          "candidate_hits": 6,
+          "lift_pp": 45.45454545454545,
+          "wins": 6,
+          "losses": 1,
+          "paired_p": 0.125
+        },
+        "september_reused": {
+          "n": 15,
+          "baseline_hits": 5,
+          "candidate_hits": 3,
+          "lift_pp": -13.333333333333334,
+          "wins": 3,
+          "losses": 5,
+          "paired_p": 0.7265625
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 2,
+          "candidate_hits": 1,
+          "lift_pp": -11.11111111111111,
+          "wins": 1,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Sridevi",
+      "candidate": "theory/parity_persistence/strength=1",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 6,
+          "candidate_hits": 9,
+          "lift_pp": 10.0,
+          "wins": 6,
+          "losses": 3,
+          "paired_p": 0.5078125
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 5,
+          "candidate_hits": 8,
+          "lift_pp": 18.75,
+          "wins": 6,
+          "losses": 3,
+          "paired_p": 0.5078125
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 3,
+          "candidate_hits": 4,
+          "lift_pp": 5.2631578947368425,
+          "wins": 3,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 12,
+          "baseline_hits": 3,
+          "candidate_hits": 5,
+          "lift_pp": 16.666666666666668,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Sridevi Night",
+      "candidate": "production",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 34,
+          "baseline_hits": 8,
+          "candidate_hits": 8,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 15,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 18,
+          "baseline_hits": 7,
+          "candidate_hits": 7,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 10,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "sp30",
+      "market": "Time Bazar",
+      "candidate": "production",
+      "unique_distributions": 494,
+      "blocks": {
+        "development": {
+          "n": 29,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 12,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 16,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 12,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "ALL",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 103,
+          "baseline_hits": 21,
+          "candidate_hits": 21,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 63,
+          "baseline_hits": 17,
+          "candidate_hits": 17,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 51,
+          "baseline_hits": 12,
+          "candidate_hits": 12,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 41,
+          "baseline_hits": 10,
+          "candidate_hits": 10,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Kalyan",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 3,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Kalyan Night",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 6,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Madhur Day",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 7,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Madhur Night",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 11,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 9,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Main Bazar",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 7,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 3,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 3,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Milan Day",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 8,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Milan Night",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 9,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Rajdhani Day",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 10,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 7,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Rajdhani Night",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Sridevi",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 13,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 6,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 3,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Sridevi Night",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 9,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 7,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 5,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "endpoint": "dp20",
+      "market": "Time Bazar",
+      "candidate": "production",
+      "unique_distributions": 500,
+      "blocks": {
+        "development": {
+          "n": 7,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 7,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 3,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 1,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "ALL",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 435,
+          "baseline_hits": 39,
+          "candidate_hits": 39,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 228,
+          "baseline_hits": 21,
+          "candidate_hits": 21,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 237,
+          "baseline_hits": 18,
+          "candidate_hits": 18,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 152,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 14,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Kalyan",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Kalyan Night",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Madhur Day",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Madhur Night",
+      "candidate": "theory/panel_persistence/strength=0.25",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 3,
+          "candidate_hits": 5,
+          "lift_pp": 10.526315789473685,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 0,
+          "candidate_hits": 1,
+          "lift_pp": 11.11111111111111,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Main Bazar",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 7,
+          "candidate_hits": 7,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Milan Day",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Milan Night",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Rajdhani Day",
+      "candidate": "theory/digit_persistence/strength=0.25",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 2,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 3,
+          "lift_pp": 10.526315789473685,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "september_reused": {
+          "n": 20,
+          "baseline_hits": 5,
+          "candidate_hits": 2,
+          "lift_pp": -15.0,
+          "wins": 1,
+          "losses": 4,
+          "paired_p": 0.375
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 0,
+          "candidate_hits": 1,
+          "lift_pp": 7.6923076923076925,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Rajdhani Night",
+      "candidate": "method_panel_transition_01",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 2,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 1,
+          "candidate_hits": 5,
+          "lift_pp": 25.0,
+          "wins": 5,
+          "losses": 1,
+          "paired_p": 0.21875
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 3,
+          "candidate_hits": 2,
+          "lift_pp": -5.882352941176471,
+          "wins": 1,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Sridevi",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 7,
+          "candidate_hits": 7,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Sridevi Night",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 22,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 23,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 15,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "all10",
+      "market": "Time Bazar",
+      "candidate": "pattern/weekday_panel_frequency/window=30",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 36,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 3,
+          "lift_pp": 10.526315789473685,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 1,
+          "candidate_hits": 2,
+          "lift_pp": 5.2631578947368425,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 13,
+          "baseline_hits": 2,
+          "candidate_hits": 1,
+          "lift_pp": -7.6923076923076925,
+          "wins": 1,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "ALL",
+      "candidate": "production",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 331,
+          "baseline_hits": 99,
+          "candidate_hits": 99,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 164,
+          "baseline_hits": 52,
+          "candidate_hits": 52,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 186,
+          "baseline_hits": 59,
+          "candidate_hits": 59,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 111,
+          "baseline_hits": 30,
+          "candidate_hits": 30,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 12,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Kalyan",
+      "candidate": "production",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 28,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 7,
+          "candidate_hits": 7,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 12,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Kalyan Night",
+      "candidate": "production",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 25,
+          "baseline_hits": 9,
+          "candidate_hits": 9,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 10,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 13,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Madhur Day",
+      "candidate": "pattern/digit_frequency/window=60",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 34,
+          "baseline_hits": 12,
+          "candidate_hits": 13,
+          "lift_pp": 2.9411764705882355,
+          "wins": 1,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 15,
+          "baseline_hits": 6,
+          "candidate_hits": 9,
+          "lift_pp": 20.0,
+          "wins": 3,
+          "losses": 0,
+          "paired_p": 0.25
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 9,
+          "candidate_hits": 6,
+          "lift_pp": -15.789473684210526,
+          "wins": 1,
+          "losses": 4,
+          "paired_p": 0.375
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 3,
+          "candidate_hits": 2,
+          "lift_pp": -9.090909090909092,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Madhur Night",
+      "candidate": "production",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 25,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 14,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 11,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Main Bazar",
+      "candidate": "production",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 23,
+          "baseline_hits": 10,
+          "candidate_hits": 10,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 13,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 14,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 7,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Milan Day",
+      "candidate": "pattern/sutta_transition/window=21",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 28,
+          "baseline_hits": 8,
+          "candidate_hits": 9,
+          "lift_pp": 3.5714285714285716,
+          "wins": 3,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 10,
+          "baseline_hits": 4,
+          "candidate_hits": 6,
+          "lift_pp": 20.0,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "september_reused": {
+          "n": 17,
+          "baseline_hits": 7,
+          "candidate_hits": 4,
+          "lift_pp": -17.647058823529413,
+          "wins": 2,
+          "losses": 5,
+          "paired_p": 0.453125
+        },
+        "october_reused": {
+          "n": 5,
+          "baseline_hits": 0,
+          "candidate_hits": 2,
+          "lift_pp": 40.0,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Milan Night",
+      "candidate": "production",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 27,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 18,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 7,
+          "candidate_hits": 7,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 8,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Rajdhani Day",
+      "candidate": "method_pooled_dirichlet_01",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 26,
+          "baseline_hits": 6,
+          "candidate_hits": 8,
+          "lift_pp": 7.6923076923076925,
+          "wins": 6,
+          "losses": 4,
+          "paired_p": 0.75390625
+        },
+        "validation": {
+          "n": 14,
+          "baseline_hits": 1,
+          "candidate_hits": 5,
+          "lift_pp": 28.571428571428573,
+          "wins": 4,
+          "losses": 0,
+          "paired_p": 0.125
+        },
+        "september_reused": {
+          "n": 13,
+          "baseline_hits": 1,
+          "candidate_hits": 3,
+          "lift_pp": 15.384615384615385,
+          "wins": 3,
+          "losses": 1,
+          "paired_p": 0.625
+        },
+        "october_reused": {
+          "n": 11,
+          "baseline_hits": 4,
+          "candidate_hits": 3,
+          "lift_pp": -9.090909090909092,
+          "wins": 2,
+          "losses": 3,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 1,
+          "candidate_hits": 0,
+          "lift_pp": -100.0,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Rajdhani Night",
+      "candidate": "theory/digit_persistence/strength=0.25",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 22,
+          "baseline_hits": 8,
+          "candidate_hits": 9,
+          "lift_pp": 4.545454545454546,
+          "wins": 5,
+          "losses": 4,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 11,
+          "baseline_hits": 4,
+          "candidate_hits": 7,
+          "lift_pp": 27.272727272727273,
+          "wins": 4,
+          "losses": 1,
+          "paired_p": 0.375
+        },
+        "september_reused": {
+          "n": 15,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 1,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 9,
+          "baseline_hits": 3,
+          "candidate_hits": 1,
+          "lift_pp": -22.22222222222222,
+          "wins": 0,
+          "losses": 2,
+          "paired_p": 0.5
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 1,
+          "candidate_hits": 0,
+          "lift_pp": -100.0,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Sridevi",
+      "candidate": "pattern/panel_frequency/window=5",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 30,
+          "baseline_hits": 8,
+          "candidate_hits": 8,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 16,
+          "baseline_hits": 5,
+          "candidate_hits": 7,
+          "lift_pp": 12.5,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 19,
+          "baseline_hits": 10,
+          "candidate_hits": 7,
+          "lift_pp": -15.789473684210526,
+          "wins": 0,
+          "losses": 3,
+          "paired_p": 0.25
+        },
+        "october_reused": {
+          "n": 12,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Sridevi Night",
+      "candidate": "production",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 34,
+          "baseline_hits": 12,
+          "candidate_hits": 12,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 15,
+          "baseline_hits": 6,
+          "candidate_hits": 6,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 18,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 10,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "sp30",
+      "market": "Time Bazar",
+      "candidate": "combination_01_07",
+      "unique_distributions": 491,
+      "blocks": {
+        "development": {
+          "n": 29,
+          "baseline_hits": 10,
+          "candidate_hits": 10,
+          "lift_pp": 0.0,
+          "wins": 2,
+          "losses": 2,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 12,
+          "baseline_hits": 2,
+          "candidate_hits": 7,
+          "lift_pp": 41.666666666666664,
+          "wins": 5,
+          "losses": 0,
+          "paired_p": 0.0625
+        },
+        "september_reused": {
+          "n": 16,
+          "baseline_hits": 5,
+          "candidate_hits": 2,
+          "lift_pp": -18.75,
+          "wins": 2,
+          "losses": 5,
+          "paired_p": 0.453125
+        },
+        "october_reused": {
+          "n": 12,
+          "baseline_hits": 3,
+          "candidate_hits": 2,
+          "lift_pp": -8.333333333333334,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 0,
+          "lift_pp": -50.0,
+          "wins": 0,
+          "losses": 1,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "ALL",
+      "candidate": "formula_00_01",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 103,
+          "baseline_hits": 24,
+          "candidate_hits": 24,
+          "lift_pp": 0.0,
+          "wins": 1,
+          "losses": 1,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 63,
+          "baseline_hits": 22,
+          "candidate_hits": 24,
+          "lift_pp": 3.1746031746031744,
+          "wins": 2,
+          "losses": 0,
+          "paired_p": 0.5
+        },
+        "september_reused": {
+          "n": 51,
+          "baseline_hits": 15,
+          "candidate_hits": 15,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 41,
+          "baseline_hits": 9,
+          "candidate_hits": 9,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 2,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Kalyan",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 3,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 8,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Kalyan Night",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 5,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 6,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Madhur Day",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 7,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Madhur Night",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 11,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 9,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 1,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Main Bazar",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 7,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 3,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 3,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 4,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Milan Day",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 8,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 8,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Milan Night",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 9,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 5,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Rajdhani Day",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 10,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 7,
+          "baseline_hits": 4,
+          "candidate_hits": 4,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Rajdhani Night",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 8,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 5,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 2,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Sridevi",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 13,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 6,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 4,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 3,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Sridevi Night",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 9,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 7,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 5,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 5,
+          "baseline_hits": 3,
+          "candidate_hits": 3,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    },
+    {
+      "channel": "close_known",
+      "endpoint": "dp20",
+      "market": "Time Bazar",
+      "candidate": "production",
+      "unique_distributions": 492,
+      "blocks": {
+        "development": {
+          "n": 7,
+          "baseline_hits": 2,
+          "candidate_hits": 2,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "validation": {
+          "n": 7,
+          "baseline_hits": 5,
+          "candidate_hits": 5,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "september_reused": {
+          "n": 3,
+          "baseline_hits": 1,
+          "candidate_hits": 1,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "october_reused": {
+          "n": 1,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        },
+        "oct16_17_reused": {
+          "n": 0,
+          "baseline_hits": 0,
+          "candidate_hits": 0,
+          "lift_pp": null,
+          "wins": 0,
+          "losses": 0,
+          "paired_p": 1.0
+        }
+      }
+    }
+  ]
+}
