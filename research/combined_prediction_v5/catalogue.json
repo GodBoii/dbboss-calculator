@@ -1,0 +1,3867 @@
+[
+  {
+    "id": "production",
+    "family": "baseline",
+    "mechanism": "Exact current production policy"
+  },
+  {
+    "id": "pattern/panel_frequency/window=3",
+    "family": "patterns",
+    "description": "panel_frequency, previous 3 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=5",
+    "family": "patterns",
+    "description": "panel_frequency, previous 5 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=7",
+    "family": "patterns",
+    "description": "panel_frequency, previous 7 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=10",
+    "family": "patterns",
+    "description": "panel_frequency, previous 10 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=14",
+    "family": "patterns",
+    "description": "panel_frequency, previous 14 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=21",
+    "family": "patterns",
+    "description": "panel_frequency, previous 21 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=30",
+    "family": "patterns",
+    "description": "panel_frequency, previous 30 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=45",
+    "family": "patterns",
+    "description": "panel_frequency, previous 45 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=60",
+    "family": "patterns",
+    "description": "panel_frequency, previous 60 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_frequency/window=90",
+    "family": "patterns",
+    "description": "panel_frequency, previous 90 market observations, strength 0.5",
+    "mechanism": "panel_frequency",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=3",
+    "family": "patterns",
+    "description": "panel_overdue, previous 3 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=5",
+    "family": "patterns",
+    "description": "panel_overdue, previous 5 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=7",
+    "family": "patterns",
+    "description": "panel_overdue, previous 7 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=10",
+    "family": "patterns",
+    "description": "panel_overdue, previous 10 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=14",
+    "family": "patterns",
+    "description": "panel_overdue, previous 14 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=21",
+    "family": "patterns",
+    "description": "panel_overdue, previous 21 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=30",
+    "family": "patterns",
+    "description": "panel_overdue, previous 30 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=45",
+    "family": "patterns",
+    "description": "panel_overdue, previous 45 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=60",
+    "family": "patterns",
+    "description": "panel_overdue, previous 60 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_overdue/window=90",
+    "family": "patterns",
+    "description": "panel_overdue, previous 90 market observations, strength 0.5",
+    "mechanism": "panel_overdue",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=3",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 3 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=5",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 5 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=7",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 7 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=10",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 10 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=14",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 14 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=21",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 21 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=30",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 30 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=45",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 45 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=60",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 60 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_frequency/window=90",
+    "family": "patterns",
+    "description": "sutta_frequency, previous 90 market observations, strength 0.5",
+    "mechanism": "sutta_frequency",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=3",
+    "family": "patterns",
+    "description": "digit_frequency, previous 3 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=5",
+    "family": "patterns",
+    "description": "digit_frequency, previous 5 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=7",
+    "family": "patterns",
+    "description": "digit_frequency, previous 7 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=10",
+    "family": "patterns",
+    "description": "digit_frequency, previous 10 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=14",
+    "family": "patterns",
+    "description": "digit_frequency, previous 14 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=21",
+    "family": "patterns",
+    "description": "digit_frequency, previous 21 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=30",
+    "family": "patterns",
+    "description": "digit_frequency, previous 30 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=45",
+    "family": "patterns",
+    "description": "digit_frequency, previous 45 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=60",
+    "family": "patterns",
+    "description": "digit_frequency, previous 60 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_frequency/window=90",
+    "family": "patterns",
+    "description": "digit_frequency, previous 90 market observations, strength 0.5",
+    "mechanism": "digit_frequency",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=3",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 3 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=5",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 5 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=7",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 7 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=10",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 10 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=14",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 14 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=21",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 21 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=30",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 30 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=45",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 45 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=60",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 60 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/digit_pair_frequency/window=90",
+    "family": "patterns",
+    "description": "digit_pair_frequency, previous 90 market observations, strength 0.5",
+    "mechanism": "digit_pair_frequency",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=3",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 3 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=5",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 5 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=7",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 7 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=10",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 10 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=14",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 14 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=21",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 21 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=30",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 30 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=45",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 45 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=60",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 60 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/panel_kind_frequency/window=90",
+    "family": "patterns",
+    "description": "panel_kind_frequency, previous 90 market observations, strength 0.5",
+    "mechanism": "panel_kind_frequency",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=3",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 3 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=5",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 5 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=7",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 7 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=10",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 10 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=14",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 14 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=21",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 21 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=30",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 30 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=45",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 45 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=60",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 60 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/weekday_panel_frequency/window=90",
+    "family": "patterns",
+    "description": "weekday_panel_frequency, previous 90 market observations, strength 0.5",
+    "mechanism": "weekday_panel_frequency",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=3",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 3 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=5",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 5 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=7",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 7 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=10",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 10 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=14",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 14 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=21",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 21 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=30",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 30 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=45",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 45 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=60",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 60 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/exponential_panel_frequency/window=90",
+    "family": "patterns",
+    "description": "exponential_panel_frequency, previous 90 market observations, strength 0.5",
+    "mechanism": "exponential_panel_frequency",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=3",
+    "family": "patterns",
+    "description": "sutta_transition, previous 3 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=5",
+    "family": "patterns",
+    "description": "sutta_transition, previous 5 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=7",
+    "family": "patterns",
+    "description": "sutta_transition, previous 7 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=10",
+    "family": "patterns",
+    "description": "sutta_transition, previous 10 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=14",
+    "family": "patterns",
+    "description": "sutta_transition, previous 14 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=21",
+    "family": "patterns",
+    "description": "sutta_transition, previous 21 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=30",
+    "family": "patterns",
+    "description": "sutta_transition, previous 30 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=45",
+    "family": "patterns",
+    "description": "sutta_transition, previous 45 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=60",
+    "family": "patterns",
+    "description": "sutta_transition, previous 60 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/sutta_transition/window=90",
+    "family": "patterns",
+    "description": "sutta_transition, previous 90 market observations, strength 0.5",
+    "mechanism": "sutta_transition",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=3",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 3 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 3,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=5",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 5 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 5,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=7",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 7 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 7,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=10",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 10 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 10,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=14",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 14 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 14,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=21",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 21 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 21,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=30",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 30 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 30,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=45",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 45 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 45,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=60",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 60 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 60,
+    "strength": 0.5
+  },
+  {
+    "id": "pattern/recent_frequency_shift/window=90",
+    "family": "patterns",
+    "description": "recent_frequency_shift, previous 90 market observations, strength 0.5",
+    "mechanism": "recent_frequency_shift",
+    "window": 90,
+    "strength": 0.5
+  },
+  {
+    "id": "theory/panel_persistence/strength=-2",
+    "family": "theories",
+    "description": "panel_persistence, signed strength -2",
+    "mechanism": "panel_persistence",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/panel_persistence/strength=-1.5",
+    "family": "theories",
+    "description": "panel_persistence, signed strength -1.5",
+    "mechanism": "panel_persistence",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/panel_persistence/strength=-1",
+    "family": "theories",
+    "description": "panel_persistence, signed strength -1",
+    "mechanism": "panel_persistence",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/panel_persistence/strength=-0.75",
+    "family": "theories",
+    "description": "panel_persistence, signed strength -0.75",
+    "mechanism": "panel_persistence",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/panel_persistence/strength=-0.25",
+    "family": "theories",
+    "description": "panel_persistence, signed strength -0.25",
+    "mechanism": "panel_persistence",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/panel_persistence/strength=0.25",
+    "family": "theories",
+    "description": "panel_persistence, signed strength 0.25",
+    "mechanism": "panel_persistence",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/panel_persistence/strength=0.75",
+    "family": "theories",
+    "description": "panel_persistence, signed strength 0.75",
+    "mechanism": "panel_persistence",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/panel_persistence/strength=1",
+    "family": "theories",
+    "description": "panel_persistence, signed strength 1",
+    "mechanism": "panel_persistence",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/panel_persistence/strength=1.5",
+    "family": "theories",
+    "description": "panel_persistence, signed strength 1.5",
+    "mechanism": "panel_persistence",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/panel_persistence/strength=2",
+    "family": "theories",
+    "description": "panel_persistence, signed strength 2",
+    "mechanism": "panel_persistence",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/opposite_panel/strength=-2",
+    "family": "theories",
+    "description": "opposite_panel, signed strength -2",
+    "mechanism": "opposite_panel",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/opposite_panel/strength=-1.5",
+    "family": "theories",
+    "description": "opposite_panel, signed strength -1.5",
+    "mechanism": "opposite_panel",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/opposite_panel/strength=-1",
+    "family": "theories",
+    "description": "opposite_panel, signed strength -1",
+    "mechanism": "opposite_panel",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/opposite_panel/strength=-0.75",
+    "family": "theories",
+    "description": "opposite_panel, signed strength -0.75",
+    "mechanism": "opposite_panel",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/opposite_panel/strength=-0.25",
+    "family": "theories",
+    "description": "opposite_panel, signed strength -0.25",
+    "mechanism": "opposite_panel",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/opposite_panel/strength=0.25",
+    "family": "theories",
+    "description": "opposite_panel, signed strength 0.25",
+    "mechanism": "opposite_panel",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/opposite_panel/strength=0.75",
+    "family": "theories",
+    "description": "opposite_panel, signed strength 0.75",
+    "mechanism": "opposite_panel",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/opposite_panel/strength=1",
+    "family": "theories",
+    "description": "opposite_panel, signed strength 1",
+    "mechanism": "opposite_panel",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/opposite_panel/strength=1.5",
+    "family": "theories",
+    "description": "opposite_panel, signed strength 1.5",
+    "mechanism": "opposite_panel",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/opposite_panel/strength=2",
+    "family": "theories",
+    "description": "opposite_panel, signed strength 2",
+    "mechanism": "opposite_panel",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/digit_persistence/strength=-2",
+    "family": "theories",
+    "description": "digit_persistence, signed strength -2",
+    "mechanism": "digit_persistence",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/digit_persistence/strength=-1.5",
+    "family": "theories",
+    "description": "digit_persistence, signed strength -1.5",
+    "mechanism": "digit_persistence",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/digit_persistence/strength=-1",
+    "family": "theories",
+    "description": "digit_persistence, signed strength -1",
+    "mechanism": "digit_persistence",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/digit_persistence/strength=-0.75",
+    "family": "theories",
+    "description": "digit_persistence, signed strength -0.75",
+    "mechanism": "digit_persistence",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/digit_persistence/strength=-0.25",
+    "family": "theories",
+    "description": "digit_persistence, signed strength -0.25",
+    "mechanism": "digit_persistence",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/digit_persistence/strength=0.25",
+    "family": "theories",
+    "description": "digit_persistence, signed strength 0.25",
+    "mechanism": "digit_persistence",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/digit_persistence/strength=0.75",
+    "family": "theories",
+    "description": "digit_persistence, signed strength 0.75",
+    "mechanism": "digit_persistence",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/digit_persistence/strength=1",
+    "family": "theories",
+    "description": "digit_persistence, signed strength 1",
+    "mechanism": "digit_persistence",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/digit_persistence/strength=1.5",
+    "family": "theories",
+    "description": "digit_persistence, signed strength 1.5",
+    "mechanism": "digit_persistence",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/digit_persistence/strength=2",
+    "family": "theories",
+    "description": "digit_persistence, signed strength 2",
+    "mechanism": "digit_persistence",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/opposite_digits/strength=-2",
+    "family": "theories",
+    "description": "opposite_digits, signed strength -2",
+    "mechanism": "opposite_digits",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/opposite_digits/strength=-1.5",
+    "family": "theories",
+    "description": "opposite_digits, signed strength -1.5",
+    "mechanism": "opposite_digits",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/opposite_digits/strength=-1",
+    "family": "theories",
+    "description": "opposite_digits, signed strength -1",
+    "mechanism": "opposite_digits",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/opposite_digits/strength=-0.75",
+    "family": "theories",
+    "description": "opposite_digits, signed strength -0.75",
+    "mechanism": "opposite_digits",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/opposite_digits/strength=-0.25",
+    "family": "theories",
+    "description": "opposite_digits, signed strength -0.25",
+    "mechanism": "opposite_digits",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/opposite_digits/strength=0.25",
+    "family": "theories",
+    "description": "opposite_digits, signed strength 0.25",
+    "mechanism": "opposite_digits",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/opposite_digits/strength=0.75",
+    "family": "theories",
+    "description": "opposite_digits, signed strength 0.75",
+    "mechanism": "opposite_digits",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/opposite_digits/strength=1",
+    "family": "theories",
+    "description": "opposite_digits, signed strength 1",
+    "mechanism": "opposite_digits",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/opposite_digits/strength=1.5",
+    "family": "theories",
+    "description": "opposite_digits, signed strength 1.5",
+    "mechanism": "opposite_digits",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/opposite_digits/strength=2",
+    "family": "theories",
+    "description": "opposite_digits, signed strength 2",
+    "mechanism": "opposite_digits",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/sutta_persistence/strength=-2",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength -2",
+    "mechanism": "sutta_persistence",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/sutta_persistence/strength=-1.5",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength -1.5",
+    "mechanism": "sutta_persistence",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/sutta_persistence/strength=-1",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength -1",
+    "mechanism": "sutta_persistence",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/sutta_persistence/strength=-0.75",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength -0.75",
+    "mechanism": "sutta_persistence",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/sutta_persistence/strength=-0.25",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength -0.25",
+    "mechanism": "sutta_persistence",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/sutta_persistence/strength=0.25",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength 0.25",
+    "mechanism": "sutta_persistence",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/sutta_persistence/strength=0.75",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength 0.75",
+    "mechanism": "sutta_persistence",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/sutta_persistence/strength=1",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength 1",
+    "mechanism": "sutta_persistence",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/sutta_persistence/strength=1.5",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength 1.5",
+    "mechanism": "sutta_persistence",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/sutta_persistence/strength=2",
+    "family": "theories",
+    "description": "sutta_persistence, signed strength 2",
+    "mechanism": "sutta_persistence",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/sutta_trend/strength=-2",
+    "family": "theories",
+    "description": "sutta_trend, signed strength -2",
+    "mechanism": "sutta_trend",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/sutta_trend/strength=-1.5",
+    "family": "theories",
+    "description": "sutta_trend, signed strength -1.5",
+    "mechanism": "sutta_trend",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/sutta_trend/strength=-1",
+    "family": "theories",
+    "description": "sutta_trend, signed strength -1",
+    "mechanism": "sutta_trend",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/sutta_trend/strength=-0.75",
+    "family": "theories",
+    "description": "sutta_trend, signed strength -0.75",
+    "mechanism": "sutta_trend",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/sutta_trend/strength=-0.25",
+    "family": "theories",
+    "description": "sutta_trend, signed strength -0.25",
+    "mechanism": "sutta_trend",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/sutta_trend/strength=0.25",
+    "family": "theories",
+    "description": "sutta_trend, signed strength 0.25",
+    "mechanism": "sutta_trend",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/sutta_trend/strength=0.75",
+    "family": "theories",
+    "description": "sutta_trend, signed strength 0.75",
+    "mechanism": "sutta_trend",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/sutta_trend/strength=1",
+    "family": "theories",
+    "description": "sutta_trend, signed strength 1",
+    "mechanism": "sutta_trend",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/sutta_trend/strength=1.5",
+    "family": "theories",
+    "description": "sutta_trend, signed strength 1.5",
+    "mechanism": "sutta_trend",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/sutta_trend/strength=2",
+    "family": "theories",
+    "description": "sutta_trend, signed strength 2",
+    "mechanism": "sutta_trend",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/sutta_reversal/strength=-2",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength -2",
+    "mechanism": "sutta_reversal",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/sutta_reversal/strength=-1.5",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength -1.5",
+    "mechanism": "sutta_reversal",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/sutta_reversal/strength=-1",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength -1",
+    "mechanism": "sutta_reversal",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/sutta_reversal/strength=-0.75",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength -0.75",
+    "mechanism": "sutta_reversal",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/sutta_reversal/strength=-0.25",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength -0.25",
+    "mechanism": "sutta_reversal",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/sutta_reversal/strength=0.25",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength 0.25",
+    "mechanism": "sutta_reversal",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/sutta_reversal/strength=0.75",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength 0.75",
+    "mechanism": "sutta_reversal",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/sutta_reversal/strength=1",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength 1",
+    "mechanism": "sutta_reversal",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/sutta_reversal/strength=1.5",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength 1.5",
+    "mechanism": "sutta_reversal",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/sutta_reversal/strength=2",
+    "family": "theories",
+    "description": "sutta_reversal, signed strength 2",
+    "mechanism": "sutta_reversal",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/kind_persistence/strength=-2",
+    "family": "theories",
+    "description": "kind_persistence, signed strength -2",
+    "mechanism": "kind_persistence",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/kind_persistence/strength=-1.5",
+    "family": "theories",
+    "description": "kind_persistence, signed strength -1.5",
+    "mechanism": "kind_persistence",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/kind_persistence/strength=-1",
+    "family": "theories",
+    "description": "kind_persistence, signed strength -1",
+    "mechanism": "kind_persistence",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/kind_persistence/strength=-0.75",
+    "family": "theories",
+    "description": "kind_persistence, signed strength -0.75",
+    "mechanism": "kind_persistence",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/kind_persistence/strength=-0.25",
+    "family": "theories",
+    "description": "kind_persistence, signed strength -0.25",
+    "mechanism": "kind_persistence",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/kind_persistence/strength=0.25",
+    "family": "theories",
+    "description": "kind_persistence, signed strength 0.25",
+    "mechanism": "kind_persistence",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/kind_persistence/strength=0.75",
+    "family": "theories",
+    "description": "kind_persistence, signed strength 0.75",
+    "mechanism": "kind_persistence",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/kind_persistence/strength=1",
+    "family": "theories",
+    "description": "kind_persistence, signed strength 1",
+    "mechanism": "kind_persistence",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/kind_persistence/strength=1.5",
+    "family": "theories",
+    "description": "kind_persistence, signed strength 1.5",
+    "mechanism": "kind_persistence",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/kind_persistence/strength=2",
+    "family": "theories",
+    "description": "kind_persistence, signed strength 2",
+    "mechanism": "kind_persistence",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/parity_persistence/strength=-2",
+    "family": "theories",
+    "description": "parity_persistence, signed strength -2",
+    "mechanism": "parity_persistence",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/parity_persistence/strength=-1.5",
+    "family": "theories",
+    "description": "parity_persistence, signed strength -1.5",
+    "mechanism": "parity_persistence",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/parity_persistence/strength=-1",
+    "family": "theories",
+    "description": "parity_persistence, signed strength -1",
+    "mechanism": "parity_persistence",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/parity_persistence/strength=-0.75",
+    "family": "theories",
+    "description": "parity_persistence, signed strength -0.75",
+    "mechanism": "parity_persistence",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/parity_persistence/strength=-0.25",
+    "family": "theories",
+    "description": "parity_persistence, signed strength -0.25",
+    "mechanism": "parity_persistence",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/parity_persistence/strength=0.25",
+    "family": "theories",
+    "description": "parity_persistence, signed strength 0.25",
+    "mechanism": "parity_persistence",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/parity_persistence/strength=0.75",
+    "family": "theories",
+    "description": "parity_persistence, signed strength 0.75",
+    "mechanism": "parity_persistence",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/parity_persistence/strength=1",
+    "family": "theories",
+    "description": "parity_persistence, signed strength 1",
+    "mechanism": "parity_persistence",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/parity_persistence/strength=1.5",
+    "family": "theories",
+    "description": "parity_persistence, signed strength 1.5",
+    "mechanism": "parity_persistence",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/parity_persistence/strength=2",
+    "family": "theories",
+    "description": "parity_persistence, signed strength 2",
+    "mechanism": "parity_persistence",
+    "strength": 2.0
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=-2",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength -2",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": -2.0
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=-1.5",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength -1.5",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": -1.5
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=-1",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength -1",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": -1.0
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=-0.75",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength -0.75",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": -0.75
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=-0.25",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength -0.25",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": -0.25
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=0.25",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength 0.25",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": 0.25
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=0.75",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength 0.75",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": 0.75
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=1",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength 1",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": 1.0
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=1.5",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength 1.5",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": 1.5
+  },
+  {
+    "id": "theory/previous_opposite_side_digits/strength=2",
+    "family": "theories",
+    "description": "previous_opposite_side_digits, signed strength 2",
+    "mechanism": "previous_opposite_side_digits",
+    "strength": 2.0
+  },
+  {
+    "id": "method_pooled_dirichlet_01",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_02",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_03",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_04",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_05",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_06",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_07",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_08",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_09",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_pooled_dirichlet_10",
+    "family": "methods",
+    "description": "Pooled earlier-date panel frequencies with uniform prior",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "pooled_dirichlet"
+  },
+  {
+    "id": "method_market_hierarchical_01",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_02",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_03",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_04",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_05",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_06",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_07",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_08",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_09",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_market_hierarchical_10",
+    "family": "methods",
+    "description": "Market panel frequencies shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "market_hierarchical"
+  },
+  {
+    "id": "method_recent30_01",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_02",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_03",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_04",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_05",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_06",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_07",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_08",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_09",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_recent30_10",
+    "family": "methods",
+    "description": "Last 30 market outcomes shrunk to earlier pooled frequencies",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "recent30"
+  },
+  {
+    "id": "method_decay30_01",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_02",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_03",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_04",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_05",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_06",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_07",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_08",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_09",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_decay30_10",
+    "family": "methods",
+    "description": "Market frequencies with 30-calendar-day half-life and pooled prior",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "decay30"
+  },
+  {
+    "id": "method_weekday_01",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_02",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_03",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_04",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_05",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_06",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_07",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_08",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_09",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_weekday_10",
+    "family": "methods",
+    "description": "Same-market same-weekday frequencies with pooled prior",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "weekday"
+  },
+  {
+    "id": "method_panel_transition_01",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_02",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_03",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_04",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_05",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_06",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_07",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_08",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_09",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_panel_transition_10",
+    "family": "methods",
+    "description": "Market previous-panel transition counts with pooled prior",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "panel_transition"
+  },
+  {
+    "id": "method_sutta_hierarchy_01",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_02",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_03",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_04",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_05",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_06",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_07",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_08",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_09",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_sutta_hierarchy_10",
+    "family": "methods",
+    "description": "Local Sutta frequencies; retain baseline ranking within each Sutta",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "sutta_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_01",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_02",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_03",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_04",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_05",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_06",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_07",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_08",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_09",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_kind_hierarchy_10",
+    "family": "methods",
+    "description": "Local SP/DP/TP frequencies; retain baseline ranking within kind",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "kind_hierarchy"
+  },
+  {
+    "id": "method_digit_bernoulli_01",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 1.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_02",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 2.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_03",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 5.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_04",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 10.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_05",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 20.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_06",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 50.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_07",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 100.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_08",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 200.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_09",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 500.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_digit_bernoulli_10",
+    "family": "methods",
+    "description": "Independent digit-presence likelihood blended geometrically with baseline",
+    "parameters": {
+      "prior_mass": 1000.0
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "digit_bernoulli"
+  },
+  {
+    "id": "method_online_logloss_01",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 0.01,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_02",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 0.025,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_03",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 0.05,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_04",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 0.1,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_05",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 0.2,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_06",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 0.3,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_07",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 0.5,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_08",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 0.75,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_09",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 1.0,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "method_online_logloss_10",
+    "family": "methods",
+    "description": "Market-local exponential expert weighting updated after the whole date",
+    "parameters": {
+      "learning_rate": 2.0,
+      "experts": [
+        "production",
+        "raw",
+        "pooled",
+        "local100"
+      ]
+    },
+    "category": "method",
+    "same_day_labels_excluded": true,
+    "mechanism_family": "online_logloss"
+  },
+  {
+    "id": "formula_00_00",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_00_01",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_00_02",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_00_03",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_00_04",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_00_05",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_00_06",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_00_07",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_00_08",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_00_09",
+    "family": "formulas",
+    "mechanism": "Arithmetic production/raw probability pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "formula_01_00",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_01_01",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_01_02",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_01_03",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_01_04",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_01_05",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_01_06",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_01_07",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_01_08",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_01_09",
+    "family": "formulas",
+    "mechanism": "Geometric production/raw probability pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "formula_02_00",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_02_01",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_02_02",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_02_03",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_02_04",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_02_05",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_02_06",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_02_07",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_02_08",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_02_09",
+    "family": "formulas",
+    "mechanism": "Harmonic production/raw probability pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "formula_03_00",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_03_01",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_03_02",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_03_03",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_03_04",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_03_05",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_03_06",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_03_07",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_03_08",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_03_09",
+    "family": "formulas",
+    "mechanism": "Square-root power probability pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "formula_04_00",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_04_01",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_04_02",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_04_03",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_04_04",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_04_05",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_04_06",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_04_07",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_04_08",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_04_09",
+    "family": "formulas",
+    "mechanism": "Quadratic power probability pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "formula_05_00",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_05_01",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_05_02",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_05_03",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_05_04",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_05_05",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_05_06",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_05_07",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_05_08",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_05_09",
+    "family": "formulas",
+    "mechanism": "Reciprocal rank fusion with offset 10",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "formula_06_00",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 2
+  },
+  {
+    "id": "formula_06_01",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 3
+  },
+  {
+    "id": "formula_06_02",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 4
+  },
+  {
+    "id": "formula_06_03",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 5
+  },
+  {
+    "id": "formula_06_04",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 6
+  },
+  {
+    "id": "formula_06_05",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 7
+  },
+  {
+    "id": "formula_06_06",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 8
+  },
+  {
+    "id": "formula_06_07",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 9
+  },
+  {
+    "id": "formula_06_08",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 10
+  },
+  {
+    "id": "formula_06_09",
+    "family": "formulas",
+    "mechanism": "Clipped raw likelihood-ratio correction",
+    "parameter": 11
+  },
+  {
+    "id": "formula_07_00",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_07_01",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_07_02",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_07_03",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_07_04",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_07_05",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_07_06",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_07_07",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_07_08",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_07_09",
+    "family": "formulas",
+    "mechanism": "Geometric shrinkage toward panel multiplicity",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "formula_08_00",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_08_01",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_08_02",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_08_03",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_08_04",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_08_05",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_08_06",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_08_07",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_08_08",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_08_09",
+    "family": "formulas",
+    "mechanism": "Winsorized production probabilities with raw tie resolution",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "formula_09_00",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "formula_09_01",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "formula_09_02",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "formula_09_03",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "formula_09_04",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "formula_09_05",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "formula_09_06",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "formula_09_07",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "formula_09_08",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "formula_09_09",
+    "family": "formulas",
+    "mechanism": "Contrast between absent-model and present-model soft digit scores",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_00_00",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_00_01",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_00_02",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_00_03",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_00_04",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_00_05",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_00_06",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_00_07",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_00_08",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_00_09",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/sutta arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_01_00",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_01_01",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_01_02",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_01_03",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_01_04",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_01_05",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_01_06",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_01_07",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_01_08",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_01_09",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/conditional arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_02_00",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_02_01",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_02_02",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_02_03",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_02_04",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_02_05",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_02_06",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_02_07",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_02_08",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_02_09",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/multiplicity arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_03_00",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_03_01",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_03_02",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_03_03",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_03_04",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_03_05",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_03_06",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_03_07",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_03_08",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_03_09",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/digit arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_04_00",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_04_01",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_04_02",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_04_03",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_04_04",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_04_05",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_04_06",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_04_07",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_04_08",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_04_09",
+    "family": "combinations",
+    "mechanism": "50% production plus raw/present arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_05_00",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_05_01",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_05_02",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_05_03",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_05_04",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_05_05",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_05_06",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_05_07",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_05_08",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_05_09",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/digit arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_06_00",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_06_01",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_06_02",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_06_03",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_06_04",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_06_05",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_06_06",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_06_07",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_06_08",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_06_09",
+    "family": "combinations",
+    "mechanism": "50% production plus sutta/present arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_07_00",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_07_01",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_07_02",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_07_03",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_07_04",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_07_05",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_07_06",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_07_07",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_07_08",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_07_09",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/digit arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_08_00",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_08_01",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_08_02",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_08_03",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_08_04",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_08_05",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_08_06",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_08_07",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_08_08",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_08_09",
+    "family": "combinations",
+    "mechanism": "50% production plus conditional/present arithmetic pool",
+    "parameter": 0.9090909090909091
+  },
+  {
+    "id": "combination_09_00",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.09090909090909091
+  },
+  {
+    "id": "combination_09_01",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.18181818181818182
+  },
+  {
+    "id": "combination_09_02",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.2727272727272727
+  },
+  {
+    "id": "combination_09_03",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.36363636363636365
+  },
+  {
+    "id": "combination_09_04",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.45454545454545453
+  },
+  {
+    "id": "combination_09_05",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.5454545454545454
+  },
+  {
+    "id": "combination_09_06",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.6363636363636364
+  },
+  {
+    "id": "combination_09_07",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.7272727272727273
+  },
+  {
+    "id": "combination_09_08",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.8181818181818182
+  },
+  {
+    "id": "combination_09_09",
+    "family": "combinations",
+    "mechanism": "50% production plus endpoint_mean/multiplicity arithmetic pool",
+    "parameter": 0.9090909090909091
+  }
+]
