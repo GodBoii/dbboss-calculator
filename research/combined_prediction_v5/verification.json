@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "historical_rows": 1066,
+  "total_rows": 1113,
+  "frozen_selections": 117,
+  "family_counts": {
+    "baseline": 1,
+    "patterns": 100,
+    "theories": 100,
+    "methods": 100,
+    "formulas": 100,
+    "combinations": 100
+  },
+  "distribution_reconstructions": 4509,
+  "causality_comparisons": 1503,
+  "causality_cutoff_inclusive": "2026-09-01",
+  "production_parity_lists": 108,
+  "summary_count_checks": 1287,
+  "fresh_verified": true,
+  "limitation": "Perturbation verifies new candidate logic with upstream replay features frozen; historical upstream selection bias remains.",
+  "fresh_verification_scope": "Frozen selections, source hashes, 108 production lists, all summaries and historical hit-prefix stability. Historical candidate distributions and causality were independently verified previously."
+}
