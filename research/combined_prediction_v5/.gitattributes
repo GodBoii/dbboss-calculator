@@ -1,6 +1,6 @@
 *.py text eol=lf
 *.cjs text eol=lf
-*.json text eol=lf
+*.json -text
 *.md text eol=lf
 *.csv -text
 *.gz -text
