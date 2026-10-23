@@ -1,0 +1,20 @@
+{
+  "study": "combined-prediction-v5-500-market-separated-variants",
+  "research_only": true,
+  "baseline": "Current combined-weighted-v1 production policy including market overrides",
+  "categories": {"patterns": 100, "methods": 100, "theories": 100, "formulas": 100, "combinations": 100},
+  "count_interpretation": "Parameterized hypotheses grouped by mechanism, not 500 independent algorithms or scientific theories. Numerical duplicate counts are reported separately.",
+  "channels": ["open", "close_pre", "close_known"],
+  "endpoints": {"all10": 10, "sp30": 30, "dp20": 20},
+  "development": ["2026-07-04", "2026-08-16"],
+  "validation": ["2026-08-17", "2026-09-07"],
+  "reused_diagnostic": ["2026-09-08", "2026-10-17"],
+  "fresh_request_after_selection_freeze": ["2026-10-18", "2026-10-22"],
+  "selection": "Separate pooled and per-market selections. Minimum 15 eligible development and 8 eligible validation events. Reject development hit regression; require positive validation gains in both Aug17-27 and Aug28-Sep7. Maximize validation hits, ties prefer production then development hits then catalogue order. No test-block routing.",
+  "updates": "Online candidates predict all markets on a date before adding any labels from that date. Histories for added features start at first replay date. Known-Close may use supplied target Open panel as the live contract permits.",
+  "metrics": ["fixed-budget hits with SP/DP conditional denominators", "all-panel log loss", "all-panel Brier", "Sutta6 and present2/absent2 from sp30 probabilities"],
+  "multiplicity_prior": "Unverified structural hypothesis only: SP/DP/TP canonical panel weights 6/3/1",
+  "confirmation": "Fresh results use frozen selectors. Report paired tests with Holm correction across 117 pooled/market/channel/endpoint selectors. Five days cannot establish stable per-market accuracy. Preserve production absent sufficient evidence.",
+  "limitations": ["All historical dates were previously examined", "Frozen upstream coefficients retain historical fitting and policy-selection bias", "Known-Close evaluates full Open-panel input, not Sutta-only input", "Draws/channels/endpoints are dependent", "This is not an exhaustive search of all possible predictive mechanisms"],
+  "sources": ["https://scikit-learn.org/stable/common_pitfalls.html", "https://otexts.com/fpp3/tscv.html", "https://otexts.com/fpp3/combinations.html"]
+}
