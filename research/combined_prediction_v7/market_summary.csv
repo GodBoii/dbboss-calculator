@@ -1,0 +1,1171 @@
+channel,market,candidate,index,metric,block,n,baseline_hits,specialist_hits,candidate_hits,lift_pp,wins,losses,paired_p,day_bootstrap95_pp,net_vs_production,net_vs_specialists,production_rate_pct,specialist_rate_pct,candidate_rate_pct
+open,ALL,production,0,top5,development,435,210,247,210,0.0,0,0,1.0,"[0.0, 0.0]",0,-37,48.275862068965516,56.7816091954023,48.275862068965516
+open,ALL,production,0,top5,validation,228,116,172,116,0.0,0,0,1.0,"[0.0, 0.0]",0,-56,50.87719298245614,75.43859649122807,50.87719298245614
+open,ALL,production,0,top5,weight_train,237,126,114,126,0.0,0,0,1.0,"[0.0, 0.0]",0,12,53.164556962025316,48.10126582278481,53.164556962025316
+open,ALL,production,0,top5,weight_validation,152,81,73,81,0.0,0,0,1.0,"[0.0, 0.0]",0,8,53.28947368421053,48.026315789473685,53.28947368421053
+open,ALL,production,0,top5,late_reused,61,32,28,32,0.0,0,0,1.0,"[0.0, 0.0]",0,4,52.459016393442624,45.90163934426229,52.459016393442624
+open,ALL,production,0,top5,november_reused,88,42,44,42,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,47.72727272727273,50.0,47.72727272727273
+open,ALL,production,0,avoid2,development,435,228,260,228,0.0,0,0,1.0,"[0.0, 0.0]",0,-32,52.41379310344828,59.770114942528735,52.41379310344828
+open,ALL,production,0,avoid2,validation,228,135,173,135,0.0,0,0,1.0,"[0.0, 0.0]",0,-38,59.21052631578947,75.87719298245614,59.21052631578947
+open,ALL,production,0,avoid2,weight_train,237,100,128,100,0.0,0,0,1.0,"[0.0, 0.0]",0,-28,42.19409282700422,54.0084388185654,42.19409282700422
+open,ALL,production,0,avoid2,weight_validation,152,74,81,74,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,48.68421052631579,53.28947368421053,48.68421052631579
+open,ALL,production,0,avoid2,late_reused,61,32,35,32,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,52.459016393442624,57.377049180327866,52.459016393442624
+open,ALL,production,0,avoid2,november_reused,88,52,52,52,0.0,0,0,1.0,"[0.0, 0.0]",0,0,59.09090909090909,59.09090909090909,59.09090909090909
+open,ALL,production,0,panel10,development,435,37,49,37,0.0,0,0,1.0,"[0.0, 0.0]",0,-12,8.505747126436782,11.264367816091953,8.505747126436782
+open,ALL,production,0,panel10,validation,228,23,43,23,0.0,0,0,1.0,"[0.0, 0.0]",0,-20,10.087719298245615,18.859649122807017,10.087719298245615
+open,ALL,production,0,panel10,weight_train,237,13,11,13,0.0,0,0,1.0,"[0.0, 0.0]",0,2,5.485232067510548,4.641350210970464,5.485232067510548
+open,ALL,production,0,panel10,weight_validation,152,18,12,18,0.0,0,0,1.0,"[0.0, 0.0]",0,6,11.842105263157896,7.894736842105263,11.842105263157896
+open,ALL,production,0,panel10,late_reused,61,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,4.918032786885246,4.918032786885246,4.918032786885246
+open,ALL,production,0,panel10,november_reused,88,3,5,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,3.409090909090909,5.681818181818182,3.409090909090909
+open,ALL,production,0,sp30,development,331,119,135,119,0.0,0,0,1.0,"[0.0, 0.0]",0,-16,35.95166163141994,40.78549848942598,35.95166163141994
+open,ALL,production,0,sp30,validation,169,57,81,57,0.0,0,0,1.0,"[0.0, 0.0]",0,-24,33.72781065088758,47.928994082840234,33.72781065088758
+open,ALL,production,0,sp30,weight_train,170,43,42,43,0.0,0,0,1.0,"[0.0, 0.0]",0,1,25.294117647058822,24.705882352941178,25.294117647058822
+open,ALL,production,0,sp30,weight_validation,115,36,32,36,0.0,0,0,1.0,"[0.0, 0.0]",0,4,31.304347826086957,27.82608695652174,31.304347826086957
+open,ALL,production,0,sp30,late_reused,46,6,11,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,13.043478260869565,23.91304347826087,13.043478260869565
+open,ALL,production,0,sp30,november_reused,64,18,16,18,0.0,0,0,1.0,"[0.0, 0.0]",0,2,28.125,25.0,28.125
+open,ALL,production,0,dp20,development,103,33,33,33,0.0,0,0,1.0,"[0.0, 0.0]",0,0,32.03883495145631,32.03883495145631,32.03883495145631
+open,ALL,production,0,dp20,validation,58,16,16,16,0.0,0,0,1.0,"[0.0, 0.0]",0,0,27.586206896551722,27.586206896551722,27.586206896551722
+open,ALL,production,0,dp20,weight_train,65,20,20,20,0.0,0,0,1.0,"[0.0, 0.0]",0,0,30.76923076923077,30.76923076923077,30.76923076923077
+open,ALL,production,0,dp20,weight_validation,37,8,8,8,0.0,0,0,1.0,"[0.0, 0.0]",0,0,21.62162162162162,21.62162162162162,21.62162162162162
+open,ALL,production,0,dp20,late_reused,15,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,26.666666666666668,26.666666666666668,26.666666666666668
+open,ALL,production,0,dp20,november_reused,24,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.833333333333332,20.833333333333332,20.833333333333332
+open,Kalyan,production,0,top5,development,36,15,21,15,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,41.666666666666664,58.333333333333336,41.666666666666664
+open,Kalyan,production,0,top5,validation,19,10,13,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,52.63157894736842,68.42105263157895,52.63157894736842
+open,Kalyan,production,0,top5,weight_train,20,10,10,10,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Kalyan,production,0,top5,weight_validation,13,7,9,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,53.84615384615385,69.23076923076923,53.84615384615385
+open,Kalyan,production,0,top5,late_reused,5,3,5,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,60.0,100.0,60.0
+open,Kalyan,production,0,top5,november_reused,8,5,3,5,0.0,0,0,1.0,"[0.0, 0.0]",0,2,62.5,37.5,62.5
+open,Kalyan,production,0,avoid2,development,36,21,23,21,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,58.333333333333336,63.888888888888886,58.333333333333336
+open,Kalyan,production,0,avoid2,validation,19,8,11,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,42.10526315789474,57.89473684210526,42.10526315789474
+open,Kalyan,production,0,avoid2,weight_train,20,7,12,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,35.0,60.0,35.0
+open,Kalyan,production,0,avoid2,weight_validation,13,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,30.76923076923077,38.46153846153846,30.76923076923077
+open,Kalyan,production,0,avoid2,late_reused,5,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2,40.0,0.0,40.0
+open,Kalyan,production,0,avoid2,november_reused,8,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,25.0,50.0,25.0
+open,Kalyan,production,0,panel10,development,36,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,5.555555555555555,11.11111111111111,5.555555555555555
+open,Kalyan,production,0,panel10,validation,19,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,10.526315789473685,21.05263157894737,10.526315789473685
+open,Kalyan,production,0,panel10,weight_train,20,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,5.0,5.0,5.0
+open,Kalyan,production,0,panel10,weight_validation,13,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,7.6923076923076925,0.0,7.6923076923076925
+open,Kalyan,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Kalyan,production,0,panel10,november_reused,8,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Kalyan,production,0,sp30,development,22,8,8,8,0.0,0,0,1.0,"[0.0, 0.0]",0,0,36.36363636363637,36.36363636363637,36.36363636363637
+open,Kalyan,production,0,sp30,validation,14,3,6,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,21.428571428571427,42.857142857142854,21.428571428571427
+open,Kalyan,production,0,sp30,weight_train,15,8,2,8,0.0,0,0,1.0,"[0.0, 0.0]",0,6,53.333333333333336,13.333333333333334,53.333333333333336
+open,Kalyan,production,0,sp30,weight_validation,12,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,16.666666666666668,25.0,16.666666666666668
+open,Kalyan,production,0,sp30,late_reused,3,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,33.333333333333336,0.0
+open,Kalyan,production,0,sp30,november_reused,7,3,0,3,0.0,0,0,1.0,"[0.0, 0.0]",0,3,42.857142857142854,0.0,42.857142857142854
+open,Kalyan,production,0,dp20,development,14,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,21.428571428571427,21.428571428571427,21.428571428571427
+open,Kalyan,production,0,dp20,validation,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+open,Kalyan,production,0,dp20,weight_train,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+open,Kalyan,production,0,dp20,weight_validation,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Kalyan,production,0,dp20,late_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Kalyan,production,0,dp20,november_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Kalyan Night,production,0,top5,development,30,16,18,16,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,53.333333333333336,60.0,53.333333333333336
+open,Kalyan Night,production,0,top5,validation,16,9,11,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,56.25,68.75,56.25
+open,Kalyan Night,production,0,top5,weight_train,17,9,5,9,0.0,0,0,1.0,"[0.0, 0.0]",0,4,52.94117647058823,29.41176470588235,52.94117647058823
+open,Kalyan Night,production,0,top5,weight_validation,11,6,7,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,54.54545454545455,63.63636363636363,54.54545454545455
+open,Kalyan Night,production,0,top5,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+open,Kalyan Night,production,0,top5,november_reused,6,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,83.33333333333333,83.33333333333333,83.33333333333333
+open,Kalyan Night,production,0,avoid2,development,30,13,13,13,0.0,0,0,1.0,"[0.0, 0.0]",0,0,43.333333333333336,43.333333333333336,43.333333333333336
+open,Kalyan Night,production,0,avoid2,validation,16,13,15,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,81.25,93.75,81.25
+open,Kalyan Night,production,0,avoid2,weight_train,17,10,11,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,58.8235294117647,64.70588235294117,58.8235294117647
+open,Kalyan Night,production,0,avoid2,weight_validation,11,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,45.45454545454545,36.36363636363637,45.45454545454545
+open,Kalyan Night,production,0,avoid2,late_reused,5,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,80.0,60.0,80.0
+open,Kalyan Night,production,0,avoid2,november_reused,6,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,83.33333333333333,83.33333333333333,83.33333333333333
+open,Kalyan Night,production,0,panel10,development,30,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,6.666666666666667,13.333333333333334,6.666666666666667
+open,Kalyan Night,production,0,panel10,validation,16,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,6.25,18.75,6.25
+open,Kalyan Night,production,0,panel10,weight_train,17,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,5.882352941176471,5.882352941176471,5.882352941176471
+open,Kalyan Night,production,0,panel10,weight_validation,11,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,9.090909090909092,9.090909090909092,9.090909090909092
+open,Kalyan Night,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Kalyan Night,production,0,panel10,november_reused,6,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,16.666666666666668,50.0,16.666666666666668
+open,Kalyan Night,production,0,sp30,development,25,10,13,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,40.0,52.0,40.0
+open,Kalyan Night,production,0,sp30,validation,11,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,45.45454545454545,54.54545454545455,45.45454545454545
+open,Kalyan Night,production,0,sp30,weight_train,11,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,27.272727272727273,18.181818181818183,27.272727272727273
+open,Kalyan Night,production,0,sp30,weight_validation,9,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,44.44444444444444,33.333333333333336,44.44444444444444
+open,Kalyan Night,production,0,sp30,late_reused,2,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,50.0,0.0
+open,Kalyan Night,production,0,sp30,november_reused,6,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,66.66666666666667,50.0,66.66666666666667
+open,Kalyan Night,production,0,dp20,development,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Kalyan Night,production,0,dp20,validation,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Kalyan Night,production,0,dp20,weight_train,6,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Kalyan Night,production,0,dp20,weight_validation,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Kalyan Night,production,0,dp20,late_reused,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Kalyan Night,production,0,dp20,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Day,production,0,top5,development,43,21,23,21,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,48.83720930232558,53.48837209302326,48.83720930232558
+open,Madhur Day,production,0,top5,validation,22,10,17,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,45.45454545454545,77.27272727272727,45.45454545454545
+open,Madhur Day,production,0,top5,weight_train,23,13,14,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,56.52173913043478,60.869565217391305,56.52173913043478
+open,Madhur Day,production,0,top5,weight_validation,15,7,8,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,46.666666666666664,53.333333333333336,46.666666666666664
+open,Madhur Day,production,0,top5,late_reused,7,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,42.857142857142854,28.571428571428573,42.857142857142854
+open,Madhur Day,production,0,top5,november_reused,10,4,6,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,40.0,60.0,40.0
+open,Madhur Day,production,0,avoid2,development,43,24,25,24,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,55.81395348837209,58.13953488372093,55.81395348837209
+open,Madhur Day,production,0,avoid2,validation,22,16,17,16,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,72.72727272727273,77.27272727272727,72.72727272727273
+open,Madhur Day,production,0,avoid2,weight_train,23,7,8,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,30.434782608695652,34.78260869565217,30.434782608695652
+open,Madhur Day,production,0,avoid2,weight_validation,15,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Madhur Day,production,0,avoid2,late_reused,7,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,71.42857142857143,71.42857142857143,71.42857142857143
+open,Madhur Day,production,0,avoid2,november_reused,10,8,7,8,0.0,0,0,1.0,"[0.0, 0.0]",0,1,80.0,70.0,80.0
+open,Madhur Day,production,0,panel10,development,43,2,5,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,4.651162790697675,11.627906976744185,4.651162790697675
+open,Madhur Day,production,0,panel10,validation,22,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,18.181818181818183,22.727272727272727,18.181818181818183
+open,Madhur Day,production,0,panel10,weight_train,23,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,4.3478260869565215,4.3478260869565215,4.3478260869565215
+open,Madhur Day,production,0,panel10,weight_validation,15,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Madhur Day,production,0,panel10,late_reused,7,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Madhur Day,production,0,panel10,november_reused,10,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Madhur Day,production,0,sp30,development,30,11,12,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,36.666666666666664,40.0,36.666666666666664
+open,Madhur Day,production,0,sp30,validation,15,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,40.0,53.333333333333336,40.0
+open,Madhur Day,production,0,sp30,weight_train,15,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,13.333333333333334,13.333333333333334,13.333333333333334
+open,Madhur Day,production,0,sp30,weight_validation,11,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,18.181818181818183,18.181818181818183,18.181818181818183
+open,Madhur Day,production,0,sp30,late_reused,6,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,16.666666666666668,0.0
+open,Madhur Day,production,0,sp30,november_reused,6,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,66.66666666666667,50.0
+open,Madhur Day,production,0,dp20,development,13,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,30.76923076923077,30.76923076923077,30.76923076923077
+open,Madhur Day,production,0,dp20,validation,6,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Madhur Day,production,0,dp20,weight_train,7,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,42.857142857142854,42.857142857142854,42.857142857142854
+open,Madhur Day,production,0,dp20,weight_validation,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+open,Madhur Day,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Madhur Day,production,0,dp20,november_reused,4,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Madhur Night,production,0,top5,development,36,17,19,17,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,47.22222222222222,52.77777777777778,47.22222222222222
+open,Madhur Night,production,0,top5,validation,19,11,14,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,57.89473684210526,73.6842105263158,57.89473684210526
+open,Madhur Night,production,0,top5,weight_train,20,9,8,9,0.0,0,0,1.0,"[0.0, 0.0]",0,1,45.0,40.0,45.0
+open,Madhur Night,production,0,top5,weight_validation,9,5,3,5,0.0,0,0,1.0,"[0.0, 0.0]",0,2,55.55555555555556,33.333333333333336,55.55555555555556
+open,Madhur Night,production,0,top5,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,top5,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,avoid2,development,36,19,20,19,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,52.77777777777778,55.55555555555556,52.77777777777778
+open,Madhur Night,production,0,avoid2,validation,19,8,14,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,42.10526315789474,73.6842105263158,42.10526315789474
+open,Madhur Night,production,0,avoid2,weight_train,20,11,11,11,0.0,0,0,1.0,"[0.0, 0.0]",0,0,55.0,55.0,55.0
+open,Madhur Night,production,0,avoid2,weight_validation,9,7,8,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,77.77777777777777,88.88888888888889,77.77777777777777
+open,Madhur Night,production,0,avoid2,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,avoid2,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,panel10,development,36,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,5.555555555555555,11.11111111111111,5.555555555555555
+open,Madhur Night,production,0,panel10,validation,19,1,4,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,5.2631578947368425,21.05263157894737,5.2631578947368425
+open,Madhur Night,production,0,panel10,weight_train,20,0,2,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,0.0,10.0,0.0
+open,Madhur Night,production,0,panel10,weight_validation,9,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,22.22222222222222,11.11111111111111,22.22222222222222
+open,Madhur Night,production,0,panel10,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,panel10,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,sp30,development,29,8,12,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,27.586206896551722,41.37931034482759,27.586206896551722
+open,Madhur Night,production,0,sp30,validation,15,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,40.0,53.333333333333336,40.0
+open,Madhur Night,production,0,sp30,weight_train,12,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,16.666666666666668,33.333333333333336,16.666666666666668
+open,Madhur Night,production,0,sp30,weight_validation,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+open,Madhur Night,production,0,sp30,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,sp30,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,dp20,development,7,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,28.571428571428573,28.571428571428573,28.571428571428573
+open,Madhur Night,production,0,dp20,validation,4,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Madhur Night,production,0,dp20,weight_train,8,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,37.5,37.5,37.5
+open,Madhur Night,production,0,dp20,weight_validation,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Madhur Night,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Madhur Night,production,0,dp20,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,top5,development,30,16,19,15,-3.3333333333333335,1,2,1.0,"[-13.333333333333334, 6.666666666666667]",-1,-4,53.333333333333336,63.333333333333336,50.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,top5,validation,16,12,14,11,-6.25,0,1,1.0,"[-18.75, 0.0]",-1,-3,75.0,87.5,68.75
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,top5,weight_train,17,10,6,10,0.0,0,0,1.0,"[0.0, 0.0]",0,4,58.8235294117647,35.294117647058826,58.8235294117647
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,top5,weight_validation,11,7,6,7,0.0,0,0,1.0,"[0.0, 0.0]",0,1,63.63636363636363,54.54545454545455,63.63636363636363
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,top5,late_reused,5,4,1,3,-20.0,0,1,1.0,"[-60.0, 0.0]",-1,2,80.0,20.0,60.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,top5,november_reused,6,2,3,1,-16.666666666666668,0,1,1.0,"[-50.0, 0.0]",-1,-2,33.333333333333336,50.0,16.666666666666668
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,avoid2,development,30,13,22,23,33.333333333333336,13,3,0.021270751953125,"[10.0, 56.666666666666664]",10,1,43.333333333333336,73.33333333333333,76.66666666666667
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,avoid2,validation,16,7,11,11,25.0,5,1,0.21875,"[0.0, 50.0]",4,0,43.75,68.75,68.75
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,avoid2,weight_train,17,3,8,8,29.41176470588235,8,3,0.2265625,"[-5.88235294117647, 58.97058823529332]",5,0,17.647058823529413,47.05882352941177,47.05882352941177
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,avoid2,weight_validation,11,2,7,7,45.45454545454545,6,1,0.125,"[9.090909090909092, 81.81818181818183]",5,0,18.181818181818183,63.63636363636363,63.63636363636363
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,avoid2,late_reused,5,2,4,4,40.0,3,1,0.625,"[-40.0, 100.0]",2,0,40.0,80.0,80.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,avoid2,november_reused,6,3,4,4,16.666666666666668,2,1,1.0,"[-33.74999999999997, 66.66666666666666]",1,0,50.0,66.66666666666667,66.66666666666667
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,panel10,development,30,5,5,5,0.0,4,4,1.0,"[-20.0, 20.0]",0,0,16.666666666666668,16.666666666666668,16.666666666666668
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,panel10,validation,16,3,3,0,-18.75,0,3,0.25,"[-37.5, 0.0]",-3,-3,18.75,18.75,0.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,panel10,weight_train,17,0,0,2,11.764705882352942,2,0,0.5,"[0.0, 29.411764705882355]",2,2,0.0,0.0,11.764705882352942
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,panel10,weight_validation,11,0,0,2,18.181818181818183,2,0,0.5,"[0.0, 45.45454545454545]",2,2,0.0,0.0,18.181818181818183
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,panel10,late_reused,5,1,1,1,0.0,1,1,1.0,"[-60.0, 60.0]",0,0,20.0,20.0,20.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,panel10,november_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,sp30,development,21,8,9,8,0.0,4,4,1.0,"[-28.57142857142857, 23.809523809523807]",0,-1,38.095238095238095,42.857142857142854,38.095238095238095
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,sp30,validation,15,6,8,8,13.333333333333334,5,3,0.7265625,"[-20.0, 46.666666666666664]",2,0,40.0,53.333333333333336,53.333333333333336
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,sp30,weight_train,13,1,5,6,38.46153846153846,5,0,0.0625,"[15.384615384615385, 69.23076923076923]",5,1,7.6923076923076925,38.46153846153846,46.15384615384615
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,sp30,weight_validation,9,0,2,4,44.44444444444444,4,0,0.125,"[11.11111111111111, 77.77777777777779]",4,2,0.0,22.22222222222222,44.44444444444444
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,sp30,late_reused,5,1,2,2,20.0,2,1,1.0,"[-40.0, 80.0]",1,0,20.0,40.0,40.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,sp30,november_reused,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,dp20,development,8,3,3,2,-12.5,1,2,1.0,"[-50.0, 25.0]",-1,-1,37.5,37.5,25.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,dp20,validation,1,0,0,1,100.0,1,0,1.0,"[100.0, 100.0]",1,1,0.0,0.0,100.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,dp20,weight_train,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,dp20,weight_validation,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Main Bazar,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0,159,dp20,november_reused,2,1,1,0,-50.0,0,1,1.0,"[-100.0, 0.0]",-1,-1,50.0,50.0,0.0
+open,Milan Day,production,0,top5,development,36,20,22,20,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,55.55555555555556,61.111111111111114,55.55555555555556
+open,Milan Day,production,0,top5,validation,19,11,14,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,57.89473684210526,73.6842105263158,57.89473684210526
+open,Milan Day,production,0,top5,weight_train,19,11,11,11,0.0,0,0,1.0,"[0.0, 0.0]",0,0,57.89473684210526,57.89473684210526,57.89473684210526
+open,Milan Day,production,0,top5,weight_validation,13,8,4,8,0.0,0,0,1.0,"[0.0, 0.0]",0,4,61.53846153846154,30.76923076923077,61.53846153846154
+open,Milan Day,production,0,top5,late_reused,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+open,Milan Day,production,0,top5,november_reused,8,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,37.5,50.0,37.5
+open,Milan Day,production,0,avoid2,development,36,21,22,21,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,58.333333333333336,61.111111111111114,58.333333333333336
+open,Milan Day,production,0,avoid2,validation,19,10,14,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,52.63157894736842,73.6842105263158,52.63157894736842
+open,Milan Day,production,0,avoid2,weight_train,19,9,11,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,47.36842105263158,57.89473684210526,47.36842105263158
+open,Milan Day,production,0,avoid2,weight_validation,13,9,7,9,0.0,0,0,1.0,"[0.0, 0.0]",0,2,69.23076923076923,53.84615384615385,69.23076923076923
+open,Milan Day,production,0,avoid2,late_reused,5,3,1,3,0.0,0,0,1.0,"[0.0, 0.0]",0,2,60.0,20.0,60.0
+open,Milan Day,production,0,avoid2,november_reused,8,5,2,5,0.0,0,0,1.0,"[0.0, 0.0]",0,3,62.5,25.0,62.5
+open,Milan Day,production,0,panel10,development,36,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,8.333333333333334,11.11111111111111,8.333333333333334
+open,Milan Day,production,0,panel10,validation,19,1,5,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,5.2631578947368425,26.31578947368421,5.2631578947368425
+open,Milan Day,production,0,panel10,weight_train,19,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Milan Day,production,0,panel10,weight_validation,13,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,15.384615384615385,7.6923076923076925,15.384615384615385
+open,Milan Day,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Milan Day,production,0,panel10,november_reused,8,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,12.5,0.0
+open,Milan Day,production,0,sp30,development,28,9,12,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,32.142857142857146,42.857142857142854,32.142857142857146
+open,Milan Day,production,0,sp30,validation,15,4,7,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,26.666666666666668,46.666666666666664,26.666666666666668
+open,Milan Day,production,0,sp30,weight_train,14,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,14.285714285714286,7.142857142857143,14.285714285714286
+open,Milan Day,production,0,sp30,weight_validation,9,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,33.333333333333336,22.22222222222222,33.333333333333336
+open,Milan Day,production,0,sp30,late_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Milan Day,production,0,sp30,november_reused,7,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,14.285714285714286,42.857142857142854,14.285714285714286
+open,Milan Day,production,0,dp20,development,8,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,37.5,37.5,37.5
+open,Milan Day,production,0,dp20,validation,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Milan Day,production,0,dp20,weight_train,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+open,Milan Day,production,0,dp20,weight_validation,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Milan Day,production,0,dp20,late_reused,3,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,66.66666666666667,66.66666666666667,66.66666666666667
+open,Milan Day,production,0,dp20,november_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Milan Night,production,0,top5,development,36,18,20,18,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,50.0,55.55555555555556,50.0
+open,Milan Night,production,0,top5,validation,19,3,14,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-11,15.789473684210526,73.6842105263158,15.789473684210526
+open,Milan Night,production,0,top5,weight_train,19,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,31.57894736842105,42.10526315789474,31.57894736842105
+open,Milan Night,production,0,top5,weight_validation,13,8,2,8,0.0,0,0,1.0,"[0.0, 0.0]",0,6,61.53846153846154,15.384615384615385,61.53846153846154
+open,Milan Night,production,0,top5,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+open,Milan Night,production,0,top5,november_reused,8,3,6,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,37.5,75.0,37.5
+open,Milan Night,production,0,avoid2,development,36,16,16,16,0.0,0,0,1.0,"[0.0, 0.0]",0,0,44.44444444444444,44.44444444444444,44.44444444444444
+open,Milan Night,production,0,avoid2,validation,19,11,14,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,57.89473684210526,73.6842105263158,57.89473684210526
+open,Milan Night,production,0,avoid2,weight_train,19,6,5,6,0.0,0,0,1.0,"[0.0, 0.0]",0,1,31.57894736842105,26.31578947368421,31.57894736842105
+open,Milan Night,production,0,avoid2,weight_validation,13,8,9,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,61.53846153846154,69.23076923076923,61.53846153846154
+open,Milan Night,production,0,avoid2,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+open,Milan Night,production,0,avoid2,november_reused,8,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,25.0,50.0,25.0
+open,Milan Night,production,0,panel10,development,36,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,5.555555555555555,11.11111111111111,5.555555555555555
+open,Milan Night,production,0,panel10,validation,19,1,4,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,5.2631578947368425,21.05263157894737,5.2631578947368425
+open,Milan Night,production,0,panel10,weight_train,19,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,5.2631578947368425,0.0,5.2631578947368425
+open,Milan Night,production,0,panel10,weight_validation,13,3,0,3,0.0,0,0,1.0,"[0.0, 0.0]",0,3,23.076923076923077,0.0,23.076923076923077
+open,Milan Night,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Milan Night,production,0,panel10,november_reused,8,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,12.5,0.0,12.5
+open,Milan Night,production,0,sp30,development,33,13,14,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,39.39393939393939,42.42424242424242,39.39393939393939
+open,Milan Night,production,0,sp30,validation,17,2,8,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,11.764705882352942,47.05882352941177,11.764705882352942
+open,Milan Night,production,0,sp30,weight_train,16,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+open,Milan Night,production,0,sp30,weight_validation,12,6,1,6,0.0,0,0,1.0,"[0.0, 0.0]",0,5,50.0,8.333333333333334,50.0
+open,Milan Night,production,0,sp30,late_reused,5,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,20.0,0.0
+open,Milan Night,production,0,sp30,november_reused,6,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,33.333333333333336,16.666666666666668,33.333333333333336
+open,Milan Night,production,0,dp20,development,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Milan Night,production,0,dp20,validation,2,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,100.0,100.0,100.0
+open,Milan Night,production,0,dp20,weight_train,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Milan Night,production,0,dp20,weight_validation,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Milan Night,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Milan Night,production,0,dp20,november_reused,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Rajdhani Day,production,0,top5,development,36,17,19,17,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,47.22222222222222,52.77777777777778,47.22222222222222
+open,Rajdhani Day,production,0,top5,validation,19,12,15,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,63.1578947368421,78.94736842105263,63.1578947368421
+open,Rajdhani Day,production,0,top5,weight_train,20,12,11,12,0.0,0,0,1.0,"[0.0, 0.0]",0,1,60.0,55.0,60.0
+open,Rajdhani Day,production,0,top5,weight_validation,13,7,7,7,0.0,0,0,1.0,"[0.0, 0.0]",0,0,53.84615384615385,53.84615384615385,53.84615384615385
+open,Rajdhani Day,production,0,top5,late_reused,5,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,40.0,20.0,40.0
+open,Rajdhani Day,production,0,top5,november_reused,8,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,37.5,50.0,37.5
+open,Rajdhani Day,production,0,avoid2,development,36,21,23,21,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,58.333333333333336,63.888888888888886,58.333333333333336
+open,Rajdhani Day,production,0,avoid2,validation,19,10,14,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,52.63157894736842,73.6842105263158,52.63157894736842
+open,Rajdhani Day,production,0,avoid2,weight_train,20,5,8,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,25.0,40.0,25.0
+open,Rajdhani Day,production,0,avoid2,weight_validation,13,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,38.46153846153846,46.15384615384615,38.46153846153846
+open,Rajdhani Day,production,0,avoid2,late_reused,5,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,40.0,60.0,40.0
+open,Rajdhani Day,production,0,avoid2,november_reused,8,6,5,6,0.0,0,0,1.0,"[0.0, 0.0]",0,1,75.0,62.5,75.0
+open,Rajdhani Day,production,0,panel10,development,36,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,2.7777777777777777,2.7777777777777777,2.7777777777777777
+open,Rajdhani Day,production,0,panel10,validation,19,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,21.05263157894737,21.05263157894737,21.05263157894737
+open,Rajdhani Day,production,0,panel10,weight_train,20,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,5.0,5.0,5.0
+open,Rajdhani Day,production,0,panel10,weight_validation,13,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,15.384615384615385,15.384615384615385,15.384615384615385
+open,Rajdhani Day,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Rajdhani Day,production,0,panel10,november_reused,8,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Rajdhani Day,production,0,sp30,development,25,8,9,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,32.0,36.0,32.0
+open,Rajdhani Day,production,0,sp30,validation,14,6,7,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,42.857142857142854,50.0,42.857142857142854
+open,Rajdhani Day,production,0,sp30,weight_train,16,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,31.25,25.0,31.25
+open,Rajdhani Day,production,0,sp30,weight_validation,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+open,Rajdhani Day,production,0,sp30,late_reused,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+open,Rajdhani Day,production,0,sp30,november_reused,6,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,16.666666666666668,33.333333333333336,16.666666666666668
+open,Rajdhani Day,production,0,dp20,development,11,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,45.45454545454545,45.45454545454545,45.45454545454545
+open,Rajdhani Day,production,0,dp20,validation,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Rajdhani Day,production,0,dp20,weight_train,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+open,Rajdhani Day,production,0,dp20,weight_validation,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Rajdhani Day,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Rajdhani Day,production,0,dp20,november_reused,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Rajdhani Night,production,0,top5,development,30,16,17,16,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,53.333333333333336,56.666666666666664,53.333333333333336
+open,Rajdhani Night,production,0,top5,validation,16,9,14,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,56.25,87.5,56.25
+open,Rajdhani Night,production,0,top5,weight_train,17,12,12,12,0.0,0,0,1.0,"[0.0, 0.0]",0,0,70.58823529411765,70.58823529411765,70.58823529411765
+open,Rajdhani Night,production,0,top5,weight_validation,11,3,6,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,27.272727272727273,54.54545454545455,27.272727272727273
+open,Rajdhani Night,production,0,top5,late_reused,5,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,60.0,40.0,60.0
+open,Rajdhani Night,production,0,top5,november_reused,6,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,33.333333333333336,50.0,33.333333333333336
+open,Rajdhani Night,production,0,avoid2,development,30,16,21,16,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,53.333333333333336,70.0,53.333333333333336
+open,Rajdhani Night,production,0,avoid2,validation,16,10,13,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,62.5,81.25,62.5
+open,Rajdhani Night,production,0,avoid2,weight_train,17,7,11,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,41.1764705882353,64.70588235294117,41.1764705882353
+open,Rajdhani Night,production,0,avoid2,weight_validation,11,7,6,7,0.0,0,0,1.0,"[0.0, 0.0]",0,1,63.63636363636363,54.54545454545455,63.63636363636363
+open,Rajdhani Night,production,0,avoid2,late_reused,5,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,60.0,80.0,60.0
+open,Rajdhani Night,production,0,avoid2,november_reused,6,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,33.333333333333336,66.66666666666667,33.333333333333336
+open,Rajdhani Night,production,0,panel10,development,30,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,13.333333333333334,13.333333333333334,13.333333333333334
+open,Rajdhani Night,production,0,panel10,validation,16,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+open,Rajdhani Night,production,0,panel10,weight_train,17,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,5.882352941176471,5.882352941176471,5.882352941176471
+open,Rajdhani Night,production,0,panel10,weight_validation,11,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,9.090909090909092,9.090909090909092,9.090909090909092
+open,Rajdhani Night,production,0,panel10,late_reused,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+open,Rajdhani Night,production,0,panel10,november_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Rajdhani Night,production,0,sp30,development,22,8,10,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,36.36363636363637,45.45454545454545,36.36363636363637
+open,Rajdhani Night,production,0,sp30,validation,11,4,6,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,36.36363636363637,54.54545454545455,36.36363636363637
+open,Rajdhani Night,production,0,sp30,weight_train,9,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,44.44444444444444,55.55555555555556,44.44444444444444
+open,Rajdhani Night,production,0,sp30,weight_validation,8,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,62.5,50.0
+open,Rajdhani Night,production,0,sp30,late_reused,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+open,Rajdhani Night,production,0,sp30,november_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Rajdhani Night,production,0,dp20,development,8,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,62.5,62.5,62.5
+open,Rajdhani Night,production,0,dp20,validation,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+open,Rajdhani Night,production,0,dp20,weight_train,8,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,37.5,37.5,37.5
+open,Rajdhani Night,production,0,dp20,weight_validation,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Rajdhani Night,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+open,Rajdhani Night,production,0,dp20,november_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Sridevi,production,0,top5,development,43,16,22,16,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,37.2093023255814,51.16279069767442,37.2093023255814
+open,Sridevi,production,0,top5,validation,22,12,17,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,54.54545454545455,77.27272727272727,54.54545454545455
+open,Sridevi,production,0,top5,weight_train,23,14,9,14,0.0,0,0,1.0,"[0.0, 0.0]",0,5,60.869565217391305,39.130434782608695,60.869565217391305
+open,Sridevi,production,0,top5,weight_validation,15,7,6,7,0.0,0,0,1.0,"[0.0, 0.0]",0,1,46.666666666666664,40.0,46.666666666666664
+open,Sridevi,production,0,top5,late_reused,7,3,6,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,42.857142857142854,85.71428571428571,42.857142857142854
+open,Sridevi,production,0,top5,november_reused,10,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,60.0,50.0
+open,Sridevi,production,0,avoid2,development,43,25,26,25,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,58.13953488372093,60.46511627906977,58.13953488372093
+open,Sridevi,production,0,avoid2,validation,22,16,18,16,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,72.72727272727273,81.81818181818181,72.72727272727273
+open,Sridevi,production,0,avoid2,weight_train,23,13,14,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,56.52173913043478,60.869565217391305,56.52173913043478
+open,Sridevi,production,0,avoid2,weight_validation,15,6,6,6,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+open,Sridevi,production,0,avoid2,late_reused,7,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,42.857142857142854,42.857142857142854,42.857142857142854
+open,Sridevi,production,0,avoid2,november_reused,10,7,6,7,0.0,0,0,1.0,"[0.0, 0.0]",0,1,70.0,60.0,70.0
+open,Sridevi,production,0,panel10,development,43,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,11.627906976744185,11.627906976744185,11.627906976744185
+open,Sridevi,production,0,panel10,validation,22,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,13.636363636363637,13.636363636363637,13.636363636363637
+open,Sridevi,production,0,panel10,weight_train,23,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,17.391304347826086,17.391304347826086,17.391304347826086
+open,Sridevi,production,0,panel10,weight_validation,15,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,6.666666666666667,6.666666666666667,6.666666666666667
+open,Sridevi,production,0,panel10,late_reused,7,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Sridevi,production,0,panel10,november_reused,10,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Sridevi,production,0,sp30,development,38,14,14,14,0.0,0,0,1.0,"[0.0, 0.0]",0,0,36.8421052631579,36.8421052631579,36.8421052631579
+open,Sridevi,production,0,sp30,validation,13,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,30.76923076923077,38.46153846153846,30.76923076923077
+open,Sridevi,production,0,sp30,weight_train,20,7,6,7,0.0,0,0,1.0,"[0.0, 0.0]",0,1,35.0,30.0,35.0
+open,Sridevi,production,0,sp30,weight_validation,13,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,15.384615384615385,15.384615384615385,15.384615384615385
+open,Sridevi,production,0,sp30,late_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Sridevi,production,0,sp30,november_reused,8,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,37.5,25.0,37.5
+open,Sridevi,production,0,dp20,development,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+open,Sridevi,production,0,dp20,validation,9,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,44.44444444444444,44.44444444444444,44.44444444444444
+open,Sridevi,production,0,dp20,weight_train,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Sridevi,production,0,dp20,weight_validation,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Sridevi,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Sridevi,production,0,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,top5,development,43,19,27,20,2.3255813953488373,3,2,1.0,"[-7.03488372093023, 11.627906976744185]",1,-7,44.18604651162791,62.7906976744186,46.51162790697674
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,top5,validation,22,8,15,11,13.636363636363637,4,1,0.375,"[-4.545454545454546, 31.818181818181817]",3,-4,36.36363636363637,68.18181818181819,50.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,top5,weight_train,23,10,11,11,4.3478260869565215,3,2,1.0,"[-13.043478260869565, 21.73913043478261]",1,0,43.47826086956522,47.82608695652174,47.82608695652174
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,top5,weight_validation,15,10,9,10,0.0,1,1,1.0,"[-20.0, 20.0]",0,1,66.66666666666667,60.0,66.66666666666667
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,top5,late_reused,6,4,2,3,-16.666666666666668,1,2,1.0,"[-66.66666666666666, 33.33333333333333]",-1,1,66.66666666666667,33.333333333333336,50.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,top5,november_reused,10,6,2,7,10.0,2,1,1.0,"[-20.0, 40.0]",1,5,60.0,20.0,70.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,avoid2,development,43,22,27,23,2.3255813953488373,8,7,1.0,"[-13.953488372093023, 20.930232558139537]",1,-4,51.16279069767442,62.7906976744186,53.48837209302326
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,avoid2,validation,22,16,19,17,4.545454545454546,1,0,1.0,"[0.0, 13.636363636363635]",1,-2,72.72727272727273,86.36363636363636,77.27272727272727
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,avoid2,weight_train,23,16,17,17,4.3478260869565215,1,0,1.0,"[0.0, 13.043478260869565]",1,0,69.56521739130434,73.91304347826087,73.91304347826087
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,avoid2,weight_validation,15,9,10,10,6.666666666666667,1,0,1.0,"[0.0, 20.0]",1,0,60.0,66.66666666666667,66.66666666666667
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,avoid2,late_reused,6,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,66.66666666666667,83.33333333333333,66.66666666666667
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,avoid2,november_reused,10,7,4,7,0.0,0,0,1.0,"[0.0, 0.0]",0,3,70.0,40.0,70.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,panel10,development,43,6,6,4,-4.651162790697675,1,3,0.625,"[-13.953488372093023, 4.651162790697675]",-2,-2,13.953488372093023,13.953488372093023,9.30232558139535
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,panel10,validation,22,1,3,2,4.545454545454546,2,1,1.0,"[-9.090909090909092, 22.727272727272727]",1,-1,4.545454545454546,13.636363636363637,9.090909090909092
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,panel10,weight_train,23,0,0,2,8.695652173913043,2,0,0.5,"[0.0, 21.73913043478261]",2,2,0.0,0.0,8.695652173913043
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,panel10,weight_validation,15,4,4,5,6.666666666666667,1,0,1.0,"[0.0, 20.0]",1,1,26.666666666666668,26.666666666666668,33.333333333333336
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,panel10,late_reused,6,0,0,1,16.666666666666668,1,0,1.0,"[0.0, 50.0]",1,1,0.0,0.0,16.666666666666668
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,panel10,november_reused,10,1,1,0,-10.0,0,1,1.0,"[-30.0, 0.0]",-1,-1,10.0,10.0,0.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,sp30,development,30,9,9,9,0.0,3,3,1.0,"[-16.666666666666664, 16.666666666666664]",0,0,30.0,30.0,30.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,sp30,validation,16,8,9,9,6.25,1,0,1.0,"[0.0, 18.75]",1,0,50.0,56.25,56.25
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,sp30,weight_train,14,4,6,6,14.285714285714286,2,0,0.5,"[0.0, 35.714285714285715]",2,0,28.571428571428573,42.857142857142854,42.857142857142854
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,sp30,weight_validation,12,7,6,7,0.0,0,0,1.0,"[0.0, 0.0]",0,1,58.333333333333336,50.0,58.333333333333336
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,sp30,late_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,sp30,november_reused,6,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,16.666666666666668,16.666666666666668,16.666666666666668
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,dp20,development,13,4,4,2,-15.384615384615385,0,2,0.5,"[-38.46153846153847, 0.0]",-2,-2,30.76923076923077,30.76923076923077,15.384615384615385
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,dp20,validation,6,1,1,2,16.666666666666668,1,0,1.0,"[0.0, 50.0]",1,1,16.666666666666668,16.666666666666668,33.333333333333336
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,dp20,weight_train,9,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,dp20,weight_validation,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,dp20,late_reused,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Sridevi Night,five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25,693,dp20,november_reused,4,0,0,2,50.0,2,0,0.5,"[0.0, 100.0]",2,2,0.0,0.0,50.0
+open,Time Bazar,production,0,top5,development,36,19,20,19,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,52.77777777777778,55.55555555555556,52.77777777777778
+open,Time Bazar,production,0,top5,validation,19,9,14,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,47.36842105263158,73.6842105263158,47.36842105263158
+open,Time Bazar,production,0,top5,weight_train,19,10,9,10,0.0,0,0,1.0,"[0.0, 0.0]",0,1,52.63157894736842,47.36842105263158,52.63157894736842
+open,Time Bazar,production,0,top5,weight_validation,13,6,6,6,0.0,0,0,1.0,"[0.0, 0.0]",0,0,46.15384615384615,46.15384615384615,46.15384615384615
+open,Time Bazar,production,0,top5,late_reused,6,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,33.333333333333336,16.666666666666668,33.333333333333336
+open,Time Bazar,production,0,top5,november_reused,8,4,2,4,0.0,0,0,1.0,"[0.0, 0.0]",0,2,50.0,25.0,50.0
+open,Time Bazar,production,0,avoid2,development,36,17,22,17,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,47.22222222222222,61.111111111111114,47.22222222222222
+open,Time Bazar,production,0,avoid2,validation,19,10,13,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,52.63157894736842,68.42105263157895,52.63157894736842
+open,Time Bazar,production,0,avoid2,weight_train,19,6,12,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,31.57894736842105,63.1578947368421,31.57894736842105
+open,Time Bazar,production,0,avoid2,weight_validation,13,7,8,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,53.84615384615385,61.53846153846154,53.84615384615385
+open,Time Bazar,production,0,avoid2,late_reused,6,1,4,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,16.666666666666668,66.66666666666667,16.666666666666668
+open,Time Bazar,production,0,avoid2,november_reused,8,5,7,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,62.5,87.5,62.5
+open,Time Bazar,production,0,panel10,development,36,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,8.333333333333334,8.333333333333334,8.333333333333334
+open,Time Bazar,production,0,panel10,validation,19,0,3,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,0.0,15.789473684210526,0.0
+open,Time Bazar,production,0,panel10,weight_train,19,3,0,3,0.0,0,0,1.0,"[0.0, 0.0]",0,3,15.789473684210526,0.0,15.789473684210526
+open,Time Bazar,production,0,panel10,weight_validation,13,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,7.6923076923076925,7.6923076923076925,7.6923076923076925
+open,Time Bazar,production,0,panel10,late_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Time Bazar,production,0,panel10,november_reused,8,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Time Bazar,production,0,sp30,development,28,13,13,13,0.0,0,0,1.0,"[0.0, 0.0]",0,0,46.42857142857143,46.42857142857143,46.42857142857143
+open,Time Bazar,production,0,sp30,validation,13,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,23.076923076923077,23.076923076923077,23.076923076923077
+open,Time Bazar,production,0,sp30,weight_train,15,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+open,Time Bazar,production,0,sp30,weight_validation,7,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,28.571428571428573,28.571428571428573,28.571428571428573
+open,Time Bazar,production,0,sp30,late_reused,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Time Bazar,production,0,sp30,november_reused,3,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Time Bazar,production,0,dp20,development,8,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+open,Time Bazar,production,0,dp20,validation,6,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Time Bazar,production,0,dp20,weight_train,4,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+open,Time Bazar,production,0,dp20,weight_validation,6,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+open,Time Bazar,production,0,dp20,late_reused,3,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+open,Time Bazar,production,0,dp20,november_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,ALL,production,0,top5,development,435,209,242,209,0.0,0,0,1.0,"[0.0, 0.0]",0,-33,48.04597701149425,55.632183908045974,48.04597701149425
+close_pre,ALL,production,0,top5,validation,228,119,171,119,0.0,0,0,1.0,"[0.0, 0.0]",0,-52,52.19298245614035,75.0,52.19298245614035
+close_pre,ALL,production,0,top5,weight_train,237,115,114,115,0.0,0,0,1.0,"[0.0, 0.0]",0,1,48.52320675105485,48.10126582278481,48.52320675105485
+close_pre,ALL,production,0,top5,weight_validation,152,69,68,69,0.0,0,0,1.0,"[0.0, 0.0]",0,1,45.39473684210526,44.73684210526316,45.39473684210526
+close_pre,ALL,production,0,top5,late_reused,61,29,31,29,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,47.540983606557376,50.81967213114754,47.540983606557376
+close_pre,ALL,production,0,top5,november_reused,88,45,41,45,0.0,0,0,1.0,"[0.0, 0.0]",0,4,51.13636363636363,46.59090909090909,51.13636363636363
+close_pre,ALL,production,0,avoid2,development,435,216,265,216,0.0,0,0,1.0,"[0.0, 0.0]",0,-49,49.6551724137931,60.91954022988506,49.6551724137931
+close_pre,ALL,production,0,avoid2,validation,228,108,171,108,0.0,0,0,1.0,"[0.0, 0.0]",0,-63,47.36842105263158,75.0,47.36842105263158
+close_pre,ALL,production,0,avoid2,weight_train,237,118,100,118,0.0,0,0,1.0,"[0.0, 0.0]",0,18,49.78902953586498,42.19409282700422,49.78902953586498
+close_pre,ALL,production,0,avoid2,weight_validation,152,77,77,77,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.6578947368421,50.6578947368421,50.6578947368421
+close_pre,ALL,production,0,avoid2,late_reused,61,37,35,37,0.0,0,0,1.0,"[0.0, 0.0]",0,2,60.65573770491803,57.377049180327866,60.65573770491803
+close_pre,ALL,production,0,avoid2,november_reused,88,43,52,43,0.0,0,0,1.0,"[0.0, 0.0]",0,-9,48.86363636363637,59.09090909090909,48.86363636363637
+close_pre,ALL,production,0,panel10,development,435,31,50,31,0.0,0,0,1.0,"[0.0, 0.0]",0,-19,7.126436781609195,11.494252873563218,7.126436781609195
+close_pre,ALL,production,0,panel10,validation,228,17,42,17,0.0,0,0,1.0,"[0.0, 0.0]",0,-25,7.456140350877193,18.42105263157895,7.456140350877193
+close_pre,ALL,production,0,panel10,weight_train,237,14,12,14,0.0,0,0,1.0,"[0.0, 0.0]",0,2,5.9071729957805905,5.063291139240507,5.9071729957805905
+close_pre,ALL,production,0,panel10,weight_validation,152,11,6,11,0.0,0,0,1.0,"[0.0, 0.0]",0,5,7.2368421052631575,3.9473684210526314,7.2368421052631575
+close_pre,ALL,production,0,panel10,late_reused,61,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,6.557377049180328,8.19672131147541,6.557377049180328
+close_pre,ALL,production,0,panel10,november_reused,88,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,5.681818181818182,5.681818181818182,5.681818181818182
+close_pre,ALL,production,0,sp30,development,331,87,115,87,0.0,0,0,1.0,"[0.0, 0.0]",0,-28,26.283987915407856,34.74320241691843,26.283987915407856
+close_pre,ALL,production,0,sp30,validation,164,40,76,40,0.0,0,0,1.0,"[0.0, 0.0]",0,-36,24.390243902439025,46.34146341463415,24.390243902439025
+close_pre,ALL,production,0,sp30,weight_train,186,47,48,47,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,25.268817204301076,25.806451612903224,25.268817204301076
+close_pre,ALL,production,0,sp30,weight_validation,111,28,26,28,0.0,0,0,1.0,"[0.0, 0.0]",0,2,25.225225225225227,23.423423423423422,25.225225225225227
+close_pre,ALL,production,0,sp30,late_reused,46,13,11,13,0.0,0,0,1.0,"[0.0, 0.0]",0,2,28.26086956521739,23.91304347826087,28.26086956521739
+close_pre,ALL,production,0,sp30,november_reused,66,14,23,14,0.0,0,0,1.0,"[0.0, 0.0]",0,-9,21.21212121212121,34.84848484848485,21.21212121212121
+close_pre,ALL,production,0,dp20,development,103,21,21,21,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.388349514563107,20.388349514563107,20.388349514563107
+close_pre,ALL,production,0,dp20,validation,63,17,17,17,0.0,0,0,1.0,"[0.0, 0.0]",0,0,26.984126984126984,26.984126984126984,26.984126984126984
+close_pre,ALL,production,0,dp20,weight_train,51,12,12,12,0.0,0,0,1.0,"[0.0, 0.0]",0,0,23.529411764705884,23.529411764705884,23.529411764705884
+close_pre,ALL,production,0,dp20,weight_validation,41,10,10,10,0.0,0,0,1.0,"[0.0, 0.0]",0,0,24.390243902439025,24.390243902439025,24.390243902439025
+close_pre,ALL,production,0,dp20,late_reused,14,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,28.571428571428573,28.571428571428573,28.571428571428573
+close_pre,ALL,production,0,dp20,november_reused,21,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,23.80952380952381,23.80952380952381,23.80952380952381
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,top5,development,36,19,21,17,-5.555555555555555,17,19,0.8679394004284404,"[-38.88888888888889, 27.77777777777778]",-2,-4,52.77777777777778,58.333333333333336,47.22222222222222
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,top5,validation,19,8,13,10,10.526315789473685,10,8,0.8145294189453125,"[-31.57894736842105, 52.63157894736842]",2,-3,42.10526315789474,68.42105263157895,52.63157894736842
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,top5,weight_train,20,9,11,11,10.0,10,8,0.8145294189453125,"[-35.0, 50.0]",2,0,45.0,55.0,55.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,top5,weight_validation,13,5,6,8,23.076923076923077,8,5,0.5810546875,"[-23.076923076923077, 69.23076923076923]",3,2,38.46153846153846,46.15384615384615,61.53846153846154
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,top5,late_reused,5,2,3,4,40.0,3,1,0.625,"[-40.0, 100.0]",2,1,40.0,60.0,80.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,top5,november_reused,8,5,5,3,-25.0,2,4,0.6875,"[-75.0, 37.5]",-2,-2,62.5,62.5,37.5
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,avoid2,development,36,22,22,18,-11.11111111111111,10,14,0.5412561893463135,"[-36.11111111111111, 13.88888888888889]",-4,-4,61.111111111111114,61.111111111111114,50.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,avoid2,validation,19,10,12,7,-15.789473684210526,5,8,0.5810546875,"[-52.63157894736842, 21.052631578947366]",-3,-5,52.63157894736842,63.1578947368421,36.8421052631579
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,avoid2,weight_train,20,11,11,11,0.0,7,7,1.0,"[-35.0, 40.0]",0,0,55.0,55.0,55.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,avoid2,weight_validation,13,3,4,10,53.84615384615385,7,0,0.015625,"[23.076923076923077, 76.92307692307693]",7,6,23.076923076923077,30.76923076923077,76.92307692307692
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,avoid2,late_reused,5,5,5,3,-40.0,0,2,0.5,"[-80.0, 0.0]",-2,-2,100.0,100.0,60.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,avoid2,november_reused,8,4,4,5,12.5,2,1,1.0,"[-25.0, 50.0]",1,1,50.0,50.0,62.5
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,panel10,development,36,3,3,1,-5.555555555555555,1,3,0.625,"[-16.666666666666664, 5.555555555555555]",-2,-2,8.333333333333334,8.333333333333334,2.7777777777777777
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,panel10,validation,19,2,3,0,-10.526315789473685,0,2,0.5,"[-26.31578947368421, 0.0]",-2,-3,10.526315789473685,15.789473684210526,0.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,panel10,weight_train,20,0,2,3,15.0,3,0,0.25,"[0.0, 30.0]",3,1,0.0,10.0,15.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,panel10,weight_validation,13,0,0,1,7.6923076923076925,1,0,1.0,"[0.0, 23.076923076923077]",1,1,0.0,0.0,7.6923076923076925
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,panel10,late_reused,5,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,20.0,0.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,panel10,november_reused,8,1,0,1,0.0,1,1,1.0,"[-37.5, 37.5]",0,1,12.5,0.0,12.5
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,sp30,development,28,7,11,11,14.285714285714286,5,1,0.21875,"[0.0, 28.57142857142857]",4,0,25.0,39.285714285714285,39.285714285714285
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,sp30,validation,16,4,6,6,12.5,3,1,0.625,"[-12.5, 37.5]",2,0,25.0,37.5,37.5
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,sp30,weight_train,12,2,6,6,33.333333333333336,4,0,0.125,"[8.333333333333332, 58.333333333333336]",4,0,16.666666666666668,50.0,50.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,sp30,weight_validation,9,1,1,1,0.0,1,1,1.0,"[-33.33333333333333, 33.33333333333333]",0,0,11.11111111111111,11.11111111111111,11.11111111111111
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,sp30,late_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,sp30,november_reused,7,2,2,2,0.0,1,1,1.0,"[-42.857142857142854, 42.857142857142854]",0,0,28.571428571428573,28.571428571428573,28.571428571428573
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,dp20,development,8,0,0,2,25.0,2,0,0.5,"[0.0, 50.0]",2,2,0.0,0.0,25.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,dp20,validation,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,dp20,weight_train,8,1,1,3,25.0,2,0,0.5,"[0.0, 62.5]",2,2,12.5,12.5,37.5
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,dp20,weight_validation,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,dp20,late_reused,1,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,100.0,100.0,100.0
+close_pre,Kalyan,five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0,191,dp20,november_reused,1,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,100.0,100.0,100.0
+close_pre,Kalyan Night,production,0,top5,development,30,13,16,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,43.333333333333336,53.333333333333336,43.333333333333336
+close_pre,Kalyan Night,production,0,top5,validation,16,8,13,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,50.0,81.25,50.0
+close_pre,Kalyan Night,production,0,top5,weight_train,17,10,5,10,0.0,0,0,1.0,"[0.0, 0.0]",0,5,58.8235294117647,29.41176470588235,58.8235294117647
+close_pre,Kalyan Night,production,0,top5,weight_validation,11,5,7,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,45.45454545454545,63.63636363636363,45.45454545454545
+close_pre,Kalyan Night,production,0,top5,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_pre,Kalyan Night,production,0,top5,november_reused,6,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_pre,Kalyan Night,production,0,avoid2,development,30,14,21,14,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,46.666666666666664,70.0,46.666666666666664
+close_pre,Kalyan Night,production,0,avoid2,validation,16,6,12,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,37.5,75.0,37.5
+close_pre,Kalyan Night,production,0,avoid2,weight_train,17,8,9,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,47.05882352941177,52.94117647058823,47.05882352941177
+close_pre,Kalyan Night,production,0,avoid2,weight_validation,11,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,27.272727272727273,36.36363636363637,27.272727272727273
+close_pre,Kalyan Night,production,0,avoid2,late_reused,5,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,80.0,60.0,80.0
+close_pre,Kalyan Night,production,0,avoid2,november_reused,6,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,33.333333333333336,66.66666666666667,33.333333333333336
+close_pre,Kalyan Night,production,0,panel10,development,30,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,6.666666666666667,10.0,6.666666666666667
+close_pre,Kalyan Night,production,0,panel10,validation,16,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,6.25,18.75,6.25
+close_pre,Kalyan Night,production,0,panel10,weight_train,17,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2,11.764705882352942,0.0,11.764705882352942
+close_pre,Kalyan Night,production,0,panel10,weight_validation,11,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,9.090909090909092,0.0,9.090909090909092
+close_pre,Kalyan Night,production,0,panel10,late_reused,5,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,20.0,0.0,20.0
+close_pre,Kalyan Night,production,0,panel10,november_reused,6,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,16.666666666666668,0.0,16.666666666666668
+close_pre,Kalyan Night,production,0,sp30,development,25,5,8,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,20.0,32.0,20.0
+close_pre,Kalyan Night,production,0,sp30,validation,10,1,4,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,10.0,40.0,10.0
+close_pre,Kalyan Night,production,0,sp30,weight_train,13,5,3,5,0.0,0,0,1.0,"[0.0, 0.0]",0,2,38.46153846153846,23.076923076923077,38.46153846153846
+close_pre,Kalyan Night,production,0,sp30,weight_validation,9,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,22.22222222222222,33.333333333333336,22.22222222222222
+close_pre,Kalyan Night,production,0,sp30,late_reused,4,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,25.0,0.0,25.0
+close_pre,Kalyan Night,production,0,sp30,november_reused,5,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,20.0,40.0,20.0
+close_pre,Kalyan Night,production,0,dp20,development,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_pre,Kalyan Night,production,0,dp20,validation,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Kalyan Night,production,0,dp20,weight_train,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Kalyan Night,production,0,dp20,weight_validation,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Kalyan Night,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Kalyan Night,production,0,dp20,november_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Madhur Day,production,0,top5,development,43,15,19,15,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,34.883720930232556,44.18604651162791,34.883720930232556
+close_pre,Madhur Day,production,0,top5,validation,22,10,17,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,45.45454545454545,77.27272727272727,45.45454545454545
+close_pre,Madhur Day,production,0,top5,weight_train,23,14,8,14,0.0,0,0,1.0,"[0.0, 0.0]",0,6,60.869565217391305,34.78260869565217,60.869565217391305
+close_pre,Madhur Day,production,0,top5,weight_validation,15,8,10,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,53.333333333333336,66.66666666666667,53.333333333333336
+close_pre,Madhur Day,production,0,top5,late_reused,7,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,28.571428571428573,28.571428571428573,28.571428571428573
+close_pre,Madhur Day,production,0,top5,november_reused,10,6,2,6,0.0,0,0,1.0,"[0.0, 0.0]",0,4,60.0,20.0,60.0
+close_pre,Madhur Day,production,0,avoid2,development,43,23,23,23,0.0,0,0,1.0,"[0.0, 0.0]",0,0,53.48837209302326,53.48837209302326,53.48837209302326
+close_pre,Madhur Day,production,0,avoid2,validation,22,8,18,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-10,36.36363636363637,81.81818181818181,36.36363636363637
+close_pre,Madhur Day,production,0,avoid2,weight_train,23,14,7,14,0.0,0,0,1.0,"[0.0, 0.0]",0,7,60.869565217391305,30.434782608695652,60.869565217391305
+close_pre,Madhur Day,production,0,avoid2,weight_validation,15,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,40.0,53.333333333333336,40.0
+close_pre,Madhur Day,production,0,avoid2,late_reused,7,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,57.142857142857146,57.142857142857146,57.142857142857146
+close_pre,Madhur Day,production,0,avoid2,november_reused,10,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,60.0,80.0,60.0
+close_pre,Madhur Day,production,0,panel10,development,43,2,5,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,4.651162790697675,11.627906976744185,4.651162790697675
+close_pre,Madhur Day,production,0,panel10,validation,22,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,9.090909090909092,13.636363636363637,9.090909090909092
+close_pre,Madhur Day,production,0,panel10,weight_train,23,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,4.3478260869565215,0.0,4.3478260869565215
+close_pre,Madhur Day,production,0,panel10,weight_validation,15,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Madhur Day,production,0,panel10,late_reused,7,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,14.285714285714286,0.0,14.285714285714286
+close_pre,Madhur Day,production,0,panel10,november_reused,10,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_pre,Madhur Day,production,0,sp30,development,34,13,13,13,0.0,0,0,1.0,"[0.0, 0.0]",0,0,38.23529411764706,38.23529411764706,38.23529411764706
+close_pre,Madhur Day,production,0,sp30,validation,15,4,6,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,26.666666666666668,40.0,26.666666666666668
+close_pre,Madhur Day,production,0,sp30,weight_train,19,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,21.05263157894737,21.05263157894737,21.05263157894737
+close_pre,Madhur Day,production,0,sp30,weight_validation,11,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Madhur Day,production,0,sp30,late_reused,5,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,40.0,20.0,40.0
+close_pre,Madhur Day,production,0,sp30,november_reused,8,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,37.5,50.0
+close_pre,Madhur Day,production,0,dp20,development,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_pre,Madhur Day,production,0,dp20,validation,7,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,28.571428571428573,28.571428571428573,28.571428571428573
+close_pre,Madhur Day,production,0,dp20,weight_train,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Madhur Day,production,0,dp20,weight_validation,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Madhur Day,production,0,dp20,late_reused,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_pre,Madhur Day,production,0,dp20,november_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Madhur Night,production,0,top5,development,36,20,20,20,0.0,0,0,1.0,"[0.0, 0.0]",0,0,55.55555555555556,55.55555555555556,55.55555555555556
+close_pre,Madhur Night,production,0,top5,validation,19,10,13,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,52.63157894736842,68.42105263157895,52.63157894736842
+close_pre,Madhur Night,production,0,top5,weight_train,20,8,12,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,40.0,60.0,40.0
+close_pre,Madhur Night,production,0,top5,weight_validation,9,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,33.333333333333336,44.44444444444444,33.333333333333336
+close_pre,Madhur Night,production,0,top5,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,top5,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,avoid2,development,36,22,26,22,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,61.111111111111114,72.22222222222223,61.111111111111114
+close_pre,Madhur Night,production,0,avoid2,validation,19,8,13,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,42.10526315789474,68.42105263157895,42.10526315789474
+close_pre,Madhur Night,production,0,avoid2,weight_train,20,15,13,15,0.0,0,0,1.0,"[0.0, 0.0]",0,2,75.0,65.0,75.0
+close_pre,Madhur Night,production,0,avoid2,weight_validation,9,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,44.44444444444444,44.44444444444444,44.44444444444444
+close_pre,Madhur Night,production,0,avoid2,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,avoid2,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,panel10,development,36,7,8,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,19.444444444444443,22.22222222222222,19.444444444444443
+close_pre,Madhur Night,production,0,panel10,validation,19,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,5.2631578947368425,10.526315789473685,5.2631578947368425
+close_pre,Madhur Night,production,0,panel10,weight_train,20,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,5.0,0.0,5.0
+close_pre,Madhur Night,production,0,panel10,weight_validation,9,0,4,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,0.0,44.44444444444444,0.0
+close_pre,Madhur Night,production,0,panel10,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,panel10,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,sp30,development,25,12,14,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,48.0,56.0,48.0
+close_pre,Madhur Night,production,0,sp30,validation,14,3,7,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,21.428571428571427,50.0,21.428571428571427
+close_pre,Madhur Night,production,0,sp30,weight_train,11,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,36.36363636363637,45.45454545454545,36.36363636363637
+close_pre,Madhur Night,production,0,sp30,weight_validation,8,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,12.5,25.0,12.5
+close_pre,Madhur Night,production,0,sp30,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,sp30,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,dp20,development,11,6,6,6,0.0,0,0,1.0,"[0.0, 0.0]",0,0,54.54545454545455,54.54545454545455,54.54545454545455
+close_pre,Madhur Night,production,0,dp20,validation,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_pre,Madhur Night,production,0,dp20,weight_train,9,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,44.44444444444444,44.44444444444444,44.44444444444444
+close_pre,Madhur Night,production,0,dp20,weight_validation,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Madhur Night,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Madhur Night,production,0,dp20,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Main Bazar,specialist_control/source=dp20,7,top5,development,30,9,17,8,-3.3333333333333335,1,2,1.0,"[-13.333333333333334, 6.666666666666667]",-1,-9,30.0,56.666666666666664,26.666666666666668
+close_pre,Main Bazar,specialist_control/source=dp20,7,top5,validation,16,8,12,9,6.25,1,0,1.0,"[0.0, 18.75]",1,-3,50.0,75.0,56.25
+close_pre,Main Bazar,specialist_control/source=dp20,7,top5,weight_train,17,7,6,7,0.0,0,0,1.0,"[0.0, 0.0]",0,1,41.1764705882353,35.294117647058826,41.1764705882353
+close_pre,Main Bazar,specialist_control/source=dp20,7,top5,weight_validation,11,5,6,6,9.090909090909092,2,1,1.0,"[-18.181818181818183, 36.36363636363637]",1,0,45.45454545454545,54.54545454545455,54.54545454545455
+close_pre,Main Bazar,specialist_control/source=dp20,7,top5,late_reused,5,4,3,3,-20.0,0,1,1.0,"[-60.0, 0.0]",-1,0,80.0,60.0,60.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,top5,november_reused,6,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,66.66666666666667,50.0,66.66666666666667
+close_pre,Main Bazar,specialist_control/source=dp20,7,avoid2,development,30,13,13,12,-3.3333333333333335,2,3,1.0,"[-16.666666666666664, 13.333333333333334]",-1,-1,43.333333333333336,43.333333333333336,40.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,avoid2,validation,16,6,12,7,6.25,2,1,1.0,"[-12.5, 31.25]",1,-5,37.5,75.0,43.75
+close_pre,Main Bazar,specialist_control/source=dp20,7,avoid2,weight_train,17,9,8,9,0.0,3,3,1.0,"[-29.411764705882355, 29.411764705882355]",0,1,52.94117647058823,47.05882352941177,52.94117647058823
+close_pre,Main Bazar,specialist_control/source=dp20,7,avoid2,weight_validation,11,7,5,8,9.090909090909092,3,2,1.0,"[-27.27272727272727, 45.45454545454545]",1,3,63.63636363636363,45.45454545454545,72.72727272727273
+close_pre,Main Bazar,specialist_control/source=dp20,7,avoid2,late_reused,5,4,2,2,-40.0,0,2,0.5,"[-80.0, 0.0]",-2,0,80.0,40.0,40.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,avoid2,november_reused,6,2,2,1,-16.666666666666668,0,1,1.0,"[-50.0, 0.0]",-1,-1,33.333333333333336,33.333333333333336,16.666666666666668
+close_pre,Main Bazar,specialist_control/source=dp20,7,panel10,development,30,1,9,2,3.3333333333333335,1,0,1.0,"[0.0, 10.0]",1,-7,3.3333333333333335,30.0,6.666666666666667
+close_pre,Main Bazar,specialist_control/source=dp20,7,panel10,validation,16,1,3,0,-6.25,0,1,1.0,"[-18.75, 0.0]",-1,-3,6.25,18.75,0.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,panel10,weight_train,17,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,panel10,weight_validation,11,2,0,2,0.0,1,1,1.0,"[-27.27272727272727, 27.27272727272727]",0,2,18.181818181818183,0.0,18.181818181818183
+close_pre,Main Bazar,specialist_control/source=dp20,7,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,panel10,november_reused,6,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,16.666666666666668,0.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,sp30,development,23,6,10,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,26.08695652173913,43.47826086956522,26.08695652173913
+close_pre,Main Bazar,specialist_control/source=dp20,7,sp30,validation,13,2,9,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,15.384615384615385,69.23076923076923,15.384615384615385
+close_pre,Main Bazar,specialist_control/source=dp20,7,sp30,weight_train,14,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,7.142857142857143,7.142857142857143,7.142857142857143
+close_pre,Main Bazar,specialist_control/source=dp20,7,sp30,weight_validation,7,4,2,5,14.285714285714286,1,0,1.0,"[0.0, 42.857142857142854]",1,3,57.142857142857146,28.571428571428573,71.42857142857143
+close_pre,Main Bazar,specialist_control/source=dp20,7,sp30,late_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,sp30,november_reused,6,1,3,2,16.666666666666668,1,0,1.0,"[0.0, 50.0]",1,-1,16.666666666666668,50.0,33.333333333333336
+close_pre,Main Bazar,specialist_control/source=dp20,7,dp20,development,7,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,14.285714285714286,14.285714285714286,14.285714285714286
+close_pre,Main Bazar,specialist_control/source=dp20,7,dp20,validation,3,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,66.66666666666667,66.66666666666667,66.66666666666667
+close_pre,Main Bazar,specialist_control/source=dp20,7,dp20,weight_train,3,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,dp20,weight_validation,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Main Bazar,specialist_control/source=dp20,7,dp20,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Milan Day,production,0,top5,development,36,18,19,18,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,52.77777777777778,50.0
+close_pre,Milan Day,production,0,top5,validation,19,11,15,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,57.89473684210526,78.94736842105263,57.89473684210526
+close_pre,Milan Day,production,0,top5,weight_train,19,6,9,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,31.57894736842105,47.36842105263158,31.57894736842105
+close_pre,Milan Day,production,0,top5,weight_validation,13,7,3,7,0.0,0,0,1.0,"[0.0, 0.0]",0,4,53.84615384615385,23.076923076923077,53.84615384615385
+close_pre,Milan Day,production,0,top5,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_pre,Milan Day,production,0,top5,november_reused,8,6,4,6,0.0,0,0,1.0,"[0.0, 0.0]",0,2,75.0,50.0,75.0
+close_pre,Milan Day,production,0,avoid2,development,36,17,22,17,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,47.22222222222222,61.111111111111114,47.22222222222222
+close_pre,Milan Day,production,0,avoid2,validation,19,13,16,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,68.42105263157895,84.21052631578948,68.42105263157895
+close_pre,Milan Day,production,0,avoid2,weight_train,19,6,2,6,0.0,0,0,1.0,"[0.0, 0.0]",0,4,31.57894736842105,10.526315789473685,31.57894736842105
+close_pre,Milan Day,production,0,avoid2,weight_validation,13,9,10,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,69.23076923076923,76.92307692307692,69.23076923076923
+close_pre,Milan Day,production,0,avoid2,late_reused,5,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,60.0,80.0,60.0
+close_pre,Milan Day,production,0,avoid2,november_reused,8,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,62.5,50.0
+close_pre,Milan Day,production,0,panel10,development,36,0,2,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,0.0,5.555555555555555,0.0
+close_pre,Milan Day,production,0,panel10,validation,19,3,5,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,15.789473684210526,26.31578947368421,15.789473684210526
+close_pre,Milan Day,production,0,panel10,weight_train,19,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,10.526315789473685,5.2631578947368425,10.526315789473685
+close_pre,Milan Day,production,0,panel10,weight_validation,13,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Milan Day,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Milan Day,production,0,panel10,november_reused,8,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,12.5,0.0,12.5
+close_pre,Milan Day,production,0,sp30,development,28,3,6,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,10.714285714285714,21.428571428571427,10.714285714285714
+close_pre,Milan Day,production,0,sp30,validation,10,6,7,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,60.0,70.0,60.0
+close_pre,Milan Day,production,0,sp30,weight_train,17,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,11.764705882352942,23.529411764705884,11.764705882352942
+close_pre,Milan Day,production,0,sp30,weight_validation,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_pre,Milan Day,production,0,sp30,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Milan Day,production,0,sp30,november_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Milan Day,production,0,dp20,development,8,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Milan Day,production,0,dp20,validation,8,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,37.5,37.5,37.5
+close_pre,Milan Day,production,0,dp20,weight_train,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Milan Day,production,0,dp20,weight_validation,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_pre,Milan Day,production,0,dp20,late_reused,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_pre,Milan Day,production,0,dp20,november_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Milan Night,production,0,top5,development,36,22,23,22,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,61.111111111111114,63.888888888888886,61.111111111111114
+close_pre,Milan Night,production,0,top5,validation,19,8,13,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,42.10526315789474,68.42105263157895,42.10526315789474
+close_pre,Milan Night,production,0,top5,weight_train,19,13,10,13,0.0,0,0,1.0,"[0.0, 0.0]",0,3,68.42105263157895,52.63157894736842,68.42105263157895
+close_pre,Milan Night,production,0,top5,weight_validation,13,7,4,7,0.0,0,0,1.0,"[0.0, 0.0]",0,3,53.84615384615385,30.76923076923077,53.84615384615385
+close_pre,Milan Night,production,0,top5,late_reused,5,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2,40.0,0.0,40.0
+close_pre,Milan Night,production,0,top5,november_reused,8,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,62.5,50.0
+close_pre,Milan Night,production,0,avoid2,development,36,15,21,15,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,41.666666666666664,58.333333333333336,41.666666666666664
+close_pre,Milan Night,production,0,avoid2,validation,19,9,14,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,47.36842105263158,73.6842105263158,47.36842105263158
+close_pre,Milan Night,production,0,avoid2,weight_train,19,9,7,9,0.0,0,0,1.0,"[0.0, 0.0]",0,2,47.36842105263158,36.8421052631579,47.36842105263158
+close_pre,Milan Night,production,0,avoid2,weight_validation,13,7,4,7,0.0,0,0,1.0,"[0.0, 0.0]",0,3,53.84615384615385,30.76923076923077,53.84615384615385
+close_pre,Milan Night,production,0,avoid2,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_pre,Milan Night,production,0,avoid2,november_reused,8,4,6,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,50.0,75.0,50.0
+close_pre,Milan Night,production,0,panel10,development,36,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,5.555555555555555,5.555555555555555,5.555555555555555
+close_pre,Milan Night,production,0,panel10,validation,19,0,4,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,0.0,21.05263157894737,0.0
+close_pre,Milan Night,production,0,panel10,weight_train,19,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,5.2631578947368425,0.0
+close_pre,Milan Night,production,0,panel10,weight_validation,13,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,7.6923076923076925,0.0
+close_pre,Milan Night,production,0,panel10,late_reused,5,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,20.0,0.0
+close_pre,Milan Night,production,0,panel10,november_reused,8,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Milan Night,production,0,sp30,development,27,9,13,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,33.333333333333336,48.148148148148145,33.333333333333336
+close_pre,Milan Night,production,0,sp30,validation,18,2,5,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,11.11111111111111,27.77777777777778,11.11111111111111
+close_pre,Milan Night,production,0,sp30,weight_train,19,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,15.789473684210526,21.05263157894737,15.789473684210526
+close_pre,Milan Night,production,0,sp30,weight_validation,8,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,12.5,25.0,12.5
+close_pre,Milan Night,production,0,sp30,late_reused,4,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,25.0,50.0,25.0
+close_pre,Milan Night,production,0,sp30,november_reused,6,1,4,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,16.666666666666668,66.66666666666667,16.666666666666668
+close_pre,Milan Night,production,0,dp20,development,9,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Milan Night,production,0,dp20,validation,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Milan Night,production,0,dp20,weight_train,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Milan Night,production,0,dp20,weight_validation,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_pre,Milan Night,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Milan Night,production,0,dp20,november_reused,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_pre,Rajdhani Day,production,0,top5,development,36,13,15,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,36.111111111111114,41.666666666666664,36.111111111111114
+close_pre,Rajdhani Day,production,0,top5,validation,19,9,13,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,47.36842105263158,68.42105263157895,47.36842105263158
+close_pre,Rajdhani Day,production,0,top5,weight_train,20,7,12,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,35.0,60.0,35.0
+close_pre,Rajdhani Day,production,0,top5,weight_validation,13,7,5,7,0.0,0,0,1.0,"[0.0, 0.0]",0,2,53.84615384615385,38.46153846153846,53.84615384615385
+close_pre,Rajdhani Day,production,0,top5,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_pre,Rajdhani Day,production,0,top5,november_reused,8,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,37.5,50.0
+close_pre,Rajdhani Day,production,0,avoid2,development,36,16,26,16,0.0,0,0,1.0,"[0.0, 0.0]",0,-10,44.44444444444444,72.22222222222223,44.44444444444444
+close_pre,Rajdhani Day,production,0,avoid2,validation,19,5,14,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-9,26.31578947368421,73.6842105263158,26.31578947368421
+close_pre,Rajdhani Day,production,0,avoid2,weight_train,20,10,11,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,55.0,50.0
+close_pre,Rajdhani Day,production,0,avoid2,weight_validation,13,7,7,7,0.0,0,0,1.0,"[0.0, 0.0]",0,0,53.84615384615385,53.84615384615385,53.84615384615385
+close_pre,Rajdhani Day,production,0,avoid2,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_pre,Rajdhani Day,production,0,avoid2,november_reused,8,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,62.5,62.5,62.5
+close_pre,Rajdhani Day,production,0,panel10,development,36,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,11.11111111111111,13.88888888888889,11.11111111111111
+close_pre,Rajdhani Day,production,0,panel10,validation,19,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,5.2631578947368425,15.789473684210526,5.2631578947368425
+close_pre,Rajdhani Day,production,0,panel10,weight_train,20,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,10.0,10.0,10.0
+close_pre,Rajdhani Day,production,0,panel10,weight_validation,13,3,1,3,0.0,0,0,1.0,"[0.0, 0.0]",0,2,23.076923076923077,7.6923076923076925,23.076923076923077
+close_pre,Rajdhani Day,production,0,panel10,late_reused,5,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,20.0,0.0
+close_pre,Rajdhani Day,production,0,panel10,november_reused,8,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,12.5,0.0
+close_pre,Rajdhani Day,production,0,sp30,development,26,8,9,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,30.76923076923077,34.61538461538461,30.76923076923077
+close_pre,Rajdhani Day,production,0,sp30,validation,14,2,6,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,14.285714285714286,42.857142857142854,14.285714285714286
+close_pre,Rajdhani Day,production,0,sp30,weight_train,13,6,5,6,0.0,0,0,1.0,"[0.0, 0.0]",0,1,46.15384615384615,38.46153846153846,46.15384615384615
+close_pre,Rajdhani Day,production,0,sp30,weight_validation,11,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,45.45454545454545,36.36363636363637,45.45454545454545
+close_pre,Rajdhani Day,production,0,sp30,late_reused,4,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2,50.0,0.0,50.0
+close_pre,Rajdhani Day,production,0,sp30,november_reused,6,0,4,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,0.0,66.66666666666667,0.0
+close_pre,Rajdhani Day,production,0,dp20,development,10,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,30.0,30.0,30.0
+close_pre,Rajdhani Day,production,0,dp20,validation,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+close_pre,Rajdhani Day,production,0,dp20,weight_train,7,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,42.857142857142854,42.857142857142854,42.857142857142854
+close_pre,Rajdhani Day,production,0,dp20,weight_validation,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Rajdhani Day,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Rajdhani Day,production,0,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Rajdhani Night,production,0,top5,development,30,14,15,14,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,46.666666666666664,50.0,46.666666666666664
+close_pre,Rajdhani Night,production,0,top5,validation,16,10,13,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,62.5,81.25,62.5
+close_pre,Rajdhani Night,production,0,top5,weight_train,17,12,10,12,0.0,0,0,1.0,"[0.0, 0.0]",0,2,70.58823529411765,58.8235294117647,70.58823529411765
+close_pre,Rajdhani Night,production,0,top5,weight_validation,11,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,18.181818181818183,27.272727272727273,18.181818181818183
+close_pre,Rajdhani Night,production,0,top5,late_reused,5,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,40.0,60.0,40.0
+close_pre,Rajdhani Night,production,0,top5,november_reused,6,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,33.333333333333336,16.666666666666668,33.333333333333336
+close_pre,Rajdhani Night,production,0,avoid2,development,30,16,19,16,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,53.333333333333336,63.333333333333336,53.333333333333336
+close_pre,Rajdhani Night,production,0,avoid2,validation,16,7,13,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,43.75,81.25,43.75
+close_pre,Rajdhani Night,production,0,avoid2,weight_train,17,8,6,8,0.0,0,0,1.0,"[0.0, 0.0]",0,2,47.05882352941177,35.294117647058826,47.05882352941177
+close_pre,Rajdhani Night,production,0,avoid2,weight_validation,11,8,6,8,0.0,0,0,1.0,"[0.0, 0.0]",0,2,72.72727272727273,54.54545454545455,72.72727272727273
+close_pre,Rajdhani Night,production,0,avoid2,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_pre,Rajdhani Night,production,0,avoid2,november_reused,6,0,2,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,0.0,33.333333333333336,0.0
+close_pre,Rajdhani Night,production,0,panel10,development,30,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,3.3333333333333335,6.666666666666667,3.3333333333333335
+close_pre,Rajdhani Night,production,0,panel10,validation,16,1,5,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,6.25,31.25,6.25
+close_pre,Rajdhani Night,production,0,panel10,weight_train,17,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,5.882352941176471,11.764705882352942,5.882352941176471
+close_pre,Rajdhani Night,production,0,panel10,weight_validation,11,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,9.090909090909092,0.0,9.090909090909092
+close_pre,Rajdhani Night,production,0,panel10,late_reused,5,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,20.0,0.0
+close_pre,Rajdhani Night,production,0,panel10,november_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Rajdhani Night,production,0,sp30,development,22,4,6,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,18.181818181818183,27.272727272727273,18.181818181818183
+close_pre,Rajdhani Night,production,0,sp30,validation,11,1,6,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,9.090909090909092,54.54545454545455,9.090909090909092
+close_pre,Rajdhani Night,production,0,sp30,weight_train,15,5,3,5,0.0,0,0,1.0,"[0.0, 0.0]",0,2,33.333333333333336,20.0,33.333333333333336
+close_pre,Rajdhani Night,production,0,sp30,weight_validation,9,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,22.22222222222222,11.11111111111111,22.22222222222222
+close_pre,Rajdhani Night,production,0,sp30,late_reused,4,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,25.0,0.0
+close_pre,Rajdhani Night,production,0,sp30,november_reused,4,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,25.0,0.0,25.0
+close_pre,Rajdhani Night,production,0,dp20,development,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_pre,Rajdhani Night,production,0,dp20,validation,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_pre,Rajdhani Night,production,0,dp20,weight_train,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Rajdhani Night,production,0,dp20,weight_validation,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Rajdhani Night,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Rajdhani Night,production,0,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Sridevi,production,0,top5,development,43,23,26,23,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,53.48837209302326,60.46511627906977,53.48837209302326
+close_pre,Sridevi,production,0,top5,validation,22,13,16,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,59.09090909090909,72.72727272727273,59.09090909090909
+close_pre,Sridevi,production,0,top5,weight_train,23,13,12,13,0.0,0,0,1.0,"[0.0, 0.0]",0,1,56.52173913043478,52.17391304347826,56.52173913043478
+close_pre,Sridevi,production,0,top5,weight_validation,15,6,3,6,0.0,0,0,1.0,"[0.0, 0.0]",0,3,40.0,20.0,40.0
+close_pre,Sridevi,production,0,top5,late_reused,7,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,42.857142857142854,57.142857142857146,42.857142857142854
+close_pre,Sridevi,production,0,top5,november_reused,10,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,40.0,50.0,40.0
+close_pre,Sridevi,production,0,avoid2,development,43,21,23,21,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,48.83720930232558,53.48837209302326,48.83720930232558
+close_pre,Sridevi,production,0,avoid2,validation,22,13,18,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,59.09090909090909,81.81818181818181,59.09090909090909
+close_pre,Sridevi,production,0,avoid2,weight_train,23,9,8,9,0.0,0,0,1.0,"[0.0, 0.0]",0,1,39.130434782608695,34.78260869565217,39.130434782608695
+close_pre,Sridevi,production,0,avoid2,weight_validation,15,6,9,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,40.0,60.0,40.0
+close_pre,Sridevi,production,0,avoid2,late_reused,7,5,2,5,0.0,0,0,1.0,"[0.0, 0.0]",0,3,71.42857142857143,28.571428571428573,71.42857142857143
+close_pre,Sridevi,production,0,avoid2,november_reused,10,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,40.0,50.0,40.0
+close_pre,Sridevi,production,0,panel10,development,43,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,9.30232558139535,11.627906976744185,9.30232558139535
+close_pre,Sridevi,production,0,panel10,validation,22,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,9.090909090909092,18.181818181818183,9.090909090909092
+close_pre,Sridevi,production,0,panel10,weight_train,23,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,8.695652173913043,4.3478260869565215,8.695652173913043
+close_pre,Sridevi,production,0,panel10,weight_validation,15,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2,13.333333333333334,0.0,13.333333333333334
+close_pre,Sridevi,production,0,panel10,late_reused,7,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,14.285714285714286,0.0,14.285714285714286
+close_pre,Sridevi,production,0,panel10,november_reused,10,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,10.0,0.0
+close_pre,Sridevi,production,0,sp30,development,30,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,20.0,26.666666666666668,20.0
+close_pre,Sridevi,production,0,sp30,validation,16,5,7,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,31.25,43.75,31.25
+close_pre,Sridevi,production,0,sp30,weight_train,19,3,5,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,15.789473684210526,26.31578947368421,15.789473684210526
+close_pre,Sridevi,production,0,sp30,weight_validation,12,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_pre,Sridevi,production,0,sp30,late_reused,6,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,33.333333333333336,50.0,33.333333333333336
+close_pre,Sridevi,production,0,sp30,november_reused,8,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,25.0,12.5,25.0
+close_pre,Sridevi,production,0,dp20,development,13,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,30.76923076923077,30.76923076923077,30.76923076923077
+close_pre,Sridevi,production,0,dp20,validation,6,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,16.666666666666668,16.666666666666668,16.666666666666668
+close_pre,Sridevi,production,0,dp20,weight_train,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Sridevi,production,0,dp20,weight_validation,3,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,66.66666666666667,66.66666666666667,66.66666666666667
+close_pre,Sridevi,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Sridevi,production,0,dp20,november_reused,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_pre,Sridevi Night,production,0,top5,development,43,21,28,21,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,48.83720930232558,65.11627906976744,48.83720930232558
+close_pre,Sridevi Night,production,0,top5,validation,22,12,17,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,54.54545454545455,77.27272727272727,54.54545454545455
+close_pre,Sridevi Night,production,0,top5,weight_train,23,10,8,10,0.0,0,0,1.0,"[0.0, 0.0]",0,2,43.47826086956522,34.78260869565217,43.47826086956522
+close_pre,Sridevi Night,production,0,top5,weight_validation,15,7,10,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,46.666666666666664,66.66666666666667,46.666666666666664
+close_pre,Sridevi Night,production,0,top5,late_reused,6,3,5,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,50.0,83.33333333333333,50.0
+close_pre,Sridevi Night,production,0,top5,november_reused,10,3,6,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,30.0,60.0,30.0
+close_pre,Sridevi Night,production,0,avoid2,development,43,25,29,25,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,58.13953488372093,67.44186046511628,58.13953488372093
+close_pre,Sridevi Night,production,0,avoid2,validation,22,15,16,15,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,68.18181818181819,72.72727272727273,68.18181818181819
+close_pre,Sridevi Night,production,0,avoid2,weight_train,23,10,11,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,43.47826086956522,47.82608695652174,43.47826086956522
+close_pre,Sridevi Night,production,0,avoid2,weight_validation,15,11,9,11,0.0,0,0,1.0,"[0.0, 0.0]",0,2,73.33333333333333,60.0,73.33333333333333
+close_pre,Sridevi Night,production,0,avoid2,late_reused,6,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,66.66666666666667,50.0
+close_pre,Sridevi Night,production,0,avoid2,november_reused,10,6,6,6,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_pre,Sridevi Night,production,0,panel10,development,43,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,4.651162790697675,6.976744186046512,4.651162790697675
+close_pre,Sridevi Night,production,0,panel10,validation,22,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,4.545454545454546,13.636363636363637,4.545454545454546
+close_pre,Sridevi Night,production,0,panel10,weight_train,23,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,8.695652173913043,4.3478260869565215,8.695652173913043
+close_pre,Sridevi Night,production,0,panel10,weight_validation,15,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Sridevi Night,production,0,panel10,late_reused,6,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,16.666666666666668,16.666666666666668,16.666666666666668
+close_pre,Sridevi Night,production,0,panel10,november_reused,10,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Sridevi Night,production,0,sp30,development,34,8,9,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,23.529411764705884,26.470588235294116,23.529411764705884
+close_pre,Sridevi Night,production,0,sp30,validation,15,5,7,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,33.333333333333336,46.666666666666664,33.333333333333336
+close_pre,Sridevi Night,production,0,sp30,weight_train,18,7,4,7,0.0,0,0,1.0,"[0.0, 0.0]",0,3,38.888888888888886,22.22222222222222,38.888888888888886
+close_pre,Sridevi Night,production,0,sp30,weight_validation,10,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,30.0,20.0,30.0
+close_pre,Sridevi Night,production,0,sp30,late_reused,6,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,16.666666666666668,16.666666666666668,16.666666666666668
+close_pre,Sridevi Night,production,0,sp30,november_reused,8,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,12.5,37.5,12.5
+close_pre,Sridevi Night,production,0,dp20,development,9,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_pre,Sridevi Night,production,0,dp20,validation,7,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,14.285714285714286,14.285714285714286,14.285714285714286
+close_pre,Sridevi Night,production,0,dp20,weight_train,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_pre,Sridevi Night,production,0,dp20,weight_validation,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_pre,Sridevi Night,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_pre,Sridevi Night,production,0,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Time Bazar,production,0,top5,development,36,22,23,22,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,61.111111111111114,63.888888888888886,61.111111111111114
+close_pre,Time Bazar,production,0,top5,validation,19,12,16,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,63.1578947368421,84.21052631578948,63.1578947368421
+close_pre,Time Bazar,production,0,top5,weight_train,19,6,11,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,31.57894736842105,57.89473684210526,31.57894736842105
+close_pre,Time Bazar,production,0,top5,weight_validation,13,7,7,7,0.0,0,0,1.0,"[0.0, 0.0]",0,0,53.84615384615385,53.84615384615385,53.84615384615385
+close_pre,Time Bazar,production,0,top5,late_reused,6,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_pre,Time Bazar,production,0,top5,november_reused,8,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_pre,Time Bazar,production,0,avoid2,development,36,12,20,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-8,33.333333333333336,55.55555555555556,33.333333333333336
+close_pre,Time Bazar,production,0,avoid2,validation,19,8,13,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,42.10526315789474,68.42105263157895,42.10526315789474
+close_pre,Time Bazar,production,0,avoid2,weight_train,19,9,7,9,0.0,0,0,1.0,"[0.0, 0.0]",0,2,47.36842105263158,36.8421052631579,47.36842105263158
+close_pre,Time Bazar,production,0,avoid2,weight_validation,13,6,7,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,46.15384615384615,53.84615384615385,46.15384615384615
+close_pre,Time Bazar,production,0,avoid2,late_reused,6,0,2,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,0.0,33.333333333333336,0.0
+close_pre,Time Bazar,production,0,avoid2,november_reused,8,6,5,6,0.0,0,0,1.0,"[0.0, 0.0]",0,1,75.0,62.5,75.0
+close_pre,Time Bazar,production,0,panel10,development,36,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,8.333333333333334,8.333333333333334,8.333333333333334
+close_pre,Time Bazar,production,0,panel10,validation,19,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,10.526315789473685,21.05263157894737,10.526315789473685
+close_pre,Time Bazar,production,0,panel10,weight_train,19,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,5.2631578947368425,10.526315789473685,5.2631578947368425
+close_pre,Time Bazar,production,0,panel10,weight_validation,13,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2,15.384615384615385,0.0,15.384615384615385
+close_pre,Time Bazar,production,0,panel10,late_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Time Bazar,production,0,panel10,november_reused,8,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Time Bazar,production,0,sp30,development,29,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,20.689655172413794,27.586206896551722,20.689655172413794
+close_pre,Time Bazar,production,0,sp30,validation,12,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,41.666666666666664,50.0,41.666666666666664
+close_pre,Time Bazar,production,0,sp30,weight_train,16,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,31.25,25.0,31.25
+close_pre,Time Bazar,production,0,sp30,weight_validation,12,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,41.666666666666664,41.666666666666664,41.666666666666664
+close_pre,Time Bazar,production,0,sp30,late_reused,5,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,40.0,20.0,40.0
+close_pre,Time Bazar,production,0,sp30,november_reused,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_pre,Time Bazar,production,0,dp20,development,7,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,14.285714285714286,14.285714285714286,14.285714285714286
+close_pre,Time Bazar,production,0,dp20,validation,7,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,42.857142857142854,42.857142857142854,42.857142857142854
+close_pre,Time Bazar,production,0,dp20,weight_train,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_pre,Time Bazar,production,0,dp20,weight_validation,1,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,100.0,100.0,100.0
+close_pre,Time Bazar,production,0,dp20,late_reused,1,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,100.0,100.0,100.0
+close_pre,Time Bazar,production,0,dp20,november_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,ALL,production,0,top5,development,435,215,229,215,0.0,0,0,1.0,"[0.0, 0.0]",0,-14,49.42528735632184,52.64367816091954,49.42528735632184
+close_known,ALL,production,0,top5,validation,228,119,175,119,0.0,0,0,1.0,"[0.0, 0.0]",0,-56,52.19298245614035,76.75438596491227,52.19298245614035
+close_known,ALL,production,0,top5,weight_train,237,119,119,119,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.21097046413502,50.21097046413502,50.21097046413502
+close_known,ALL,production,0,top5,weight_validation,152,80,79,80,0.0,0,0,1.0,"[0.0, 0.0]",0,1,52.63157894736842,51.973684210526315,52.63157894736842
+close_known,ALL,production,0,top5,late_reused,61,36,30,36,0.0,0,0,1.0,"[0.0, 0.0]",0,6,59.01639344262295,49.18032786885246,59.01639344262295
+close_known,ALL,production,0,top5,november_reused,88,44,47,44,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,50.0,53.40909090909091,50.0
+close_known,ALL,production,0,avoid2,development,435,211,259,211,0.0,0,0,1.0,"[0.0, 0.0]",0,-48,48.50574712643678,59.54022988505747,48.50574712643678
+close_known,ALL,production,0,avoid2,validation,228,131,173,131,0.0,0,0,1.0,"[0.0, 0.0]",0,-42,57.45614035087719,75.87719298245614,57.45614035087719
+close_known,ALL,production,0,avoid2,weight_train,237,127,118,127,0.0,0,0,1.0,"[0.0, 0.0]",0,9,53.586497890295355,49.78902953586498,53.586497890295355
+close_known,ALL,production,0,avoid2,weight_validation,152,83,79,83,0.0,0,0,1.0,"[0.0, 0.0]",0,4,54.60526315789474,51.973684210526315,54.60526315789474
+close_known,ALL,production,0,avoid2,late_reused,61,35,33,35,0.0,0,0,1.0,"[0.0, 0.0]",0,2,57.377049180327866,54.09836065573771,57.377049180327866
+close_known,ALL,production,0,avoid2,november_reused,88,49,46,49,0.0,0,0,1.0,"[0.0, 0.0]",0,3,55.68181818181818,52.27272727272727,55.68181818181818
+close_known,ALL,production,0,panel10,development,435,39,55,39,0.0,0,0,1.0,"[0.0, 0.0]",0,-16,8.96551724137931,12.64367816091954,8.96551724137931
+close_known,ALL,production,0,panel10,validation,228,21,43,21,0.0,0,0,1.0,"[0.0, 0.0]",0,-22,9.210526315789474,18.859649122807017,9.210526315789474
+close_known,ALL,production,0,panel10,weight_train,237,18,18,18,0.0,0,0,1.0,"[0.0, 0.0]",0,0,7.594936708860759,7.594936708860759,7.594936708860759
+close_known,ALL,production,0,panel10,weight_validation,152,6,11,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,3.9473684210526314,7.2368421052631575,3.9473684210526314
+close_known,ALL,production,0,panel10,late_reused,61,7,9,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,11.475409836065573,14.754098360655737,11.475409836065573
+close_known,ALL,production,0,panel10,november_reused,88,10,5,10,0.0,0,0,1.0,"[0.0, 0.0]",0,5,11.363636363636363,5.681818181818182,11.363636363636363
+close_known,ALL,production,0,sp30,development,331,99,119,99,0.0,0,0,1.0,"[0.0, 0.0]",0,-20,29.909365558912388,35.95166163141994,29.909365558912388
+close_known,ALL,production,0,sp30,validation,164,52,86,52,0.0,0,0,1.0,"[0.0, 0.0]",0,-34,31.70731707317073,52.4390243902439,31.70731707317073
+close_known,ALL,production,0,sp30,weight_train,186,59,50,59,0.0,0,0,1.0,"[0.0, 0.0]",0,9,31.72043010752688,26.881720430107528,31.72043010752688
+close_known,ALL,production,0,sp30,weight_validation,111,30,26,30,0.0,0,0,1.0,"[0.0, 0.0]",0,4,27.027027027027028,23.423423423423422,27.027027027027028
+close_known,ALL,production,0,sp30,late_reused,46,15,10,15,0.0,0,0,1.0,"[0.0, 0.0]",0,5,32.608695652173914,21.73913043478261,32.608695652173914
+close_known,ALL,production,0,sp30,november_reused,66,18,18,18,0.0,0,0,1.0,"[0.0, 0.0]",0,0,27.272727272727273,27.272727272727273,27.272727272727273
+close_known,ALL,production,0,dp20,development,103,24,24,24,0.0,0,0,1.0,"[0.0, 0.0]",0,0,23.300970873786408,23.300970873786408,23.300970873786408
+close_known,ALL,production,0,dp20,validation,63,22,22,22,0.0,0,0,1.0,"[0.0, 0.0]",0,0,34.92063492063492,34.92063492063492,34.92063492063492
+close_known,ALL,production,0,dp20,weight_train,51,15,15,15,0.0,0,0,1.0,"[0.0, 0.0]",0,0,29.41176470588235,29.41176470588235,29.41176470588235
+close_known,ALL,production,0,dp20,weight_validation,41,9,9,9,0.0,0,0,1.0,"[0.0, 0.0]",0,0,21.951219512195124,21.951219512195124,21.951219512195124
+close_known,ALL,production,0,dp20,late_reused,14,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,21.428571428571427,21.428571428571427,21.428571428571427
+close_known,ALL,production,0,dp20,november_reused,21,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,14.285714285714286,14.285714285714286,14.285714285714286
+close_known,Kalyan,production,0,top5,development,36,15,15,15,0.0,0,0,1.0,"[0.0, 0.0]",0,0,41.666666666666664,41.666666666666664,41.666666666666664
+close_known,Kalyan,production,0,top5,validation,19,12,16,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,63.1578947368421,84.21052631578948,63.1578947368421
+close_known,Kalyan,production,0,top5,weight_train,20,8,9,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,40.0,45.0,40.0
+close_known,Kalyan,production,0,top5,weight_validation,13,6,5,6,0.0,0,0,1.0,"[0.0, 0.0]",0,1,46.15384615384615,38.46153846153846,46.15384615384615
+close_known,Kalyan,production,0,top5,late_reused,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+close_known,Kalyan,production,0,top5,november_reused,8,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,62.5,62.5,62.5
+close_known,Kalyan,production,0,avoid2,development,36,19,19,19,0.0,0,0,1.0,"[0.0, 0.0]",0,0,52.77777777777778,52.77777777777778,52.77777777777778
+close_known,Kalyan,production,0,avoid2,validation,19,9,14,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,47.36842105263158,73.6842105263158,47.36842105263158
+close_known,Kalyan,production,0,avoid2,weight_train,20,9,14,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,45.0,70.0,45.0
+close_known,Kalyan,production,0,avoid2,weight_validation,13,10,9,10,0.0,0,0,1.0,"[0.0, 0.0]",0,1,76.92307692307692,69.23076923076923,76.92307692307692
+close_known,Kalyan,production,0,avoid2,late_reused,5,3,1,3,0.0,0,0,1.0,"[0.0, 0.0]",0,2,60.0,20.0,60.0
+close_known,Kalyan,production,0,avoid2,november_reused,8,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,37.5,50.0,37.5
+close_known,Kalyan,production,0,panel10,development,36,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,8.333333333333334,11.11111111111111,8.333333333333334
+close_known,Kalyan,production,0,panel10,validation,19,2,4,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,10.526315789473685,21.05263157894737,10.526315789473685
+close_known,Kalyan,production,0,panel10,weight_train,20,0,3,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,0.0,15.0,0.0
+close_known,Kalyan,production,0,panel10,weight_validation,13,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,7.6923076923076925,0.0
+close_known,Kalyan,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Kalyan,production,0,panel10,november_reused,8,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,25.0,12.5,25.0
+close_known,Kalyan,production,0,sp30,development,28,5,8,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,17.857142857142858,28.571428571428573,17.857142857142858
+close_known,Kalyan,production,0,sp30,validation,16,7,8,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,43.75,50.0,43.75
+close_known,Kalyan,production,0,sp30,weight_train,12,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Kalyan,production,0,sp30,weight_validation,9,3,1,3,0.0,0,0,1.0,"[0.0, 0.0]",0,2,33.333333333333336,11.11111111111111,33.333333333333336
+close_known,Kalyan,production,0,sp30,late_reused,4,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,25.0,0.0
+close_known,Kalyan,production,0,sp30,november_reused,7,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,14.285714285714286,42.857142857142854,14.285714285714286
+close_known,Kalyan,production,0,dp20,development,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_known,Kalyan,production,0,dp20,validation,3,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Kalyan,production,0,dp20,weight_train,8,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Kalyan,production,0,dp20,weight_validation,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Kalyan,production,0,dp20,late_reused,1,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,100.0,100.0,100.0
+close_known,Kalyan,production,0,dp20,november_reused,1,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,100.0,100.0,100.0
+close_known,Kalyan Night,production,0,top5,development,30,14,16,14,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,46.666666666666664,53.333333333333336,46.666666666666664
+close_known,Kalyan Night,production,0,top5,validation,16,11,13,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,68.75,81.25,68.75
+close_known,Kalyan Night,production,0,top5,weight_train,17,6,5,6,0.0,0,0,1.0,"[0.0, 0.0]",0,1,35.294117647058826,29.41176470588235,35.294117647058826
+close_known,Kalyan Night,production,0,top5,weight_validation,11,7,7,7,0.0,0,0,1.0,"[0.0, 0.0]",0,0,63.63636363636363,63.63636363636363,63.63636363636363
+close_known,Kalyan Night,production,0,top5,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_known,Kalyan Night,production,0,top5,november_reused,6,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,16.666666666666668,50.0,16.666666666666668
+close_known,Kalyan Night,production,0,avoid2,development,30,11,16,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,36.666666666666664,53.333333333333336,36.666666666666664
+close_known,Kalyan Night,production,0,avoid2,validation,16,12,14,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,75.0,87.5,75.0
+close_known,Kalyan Night,production,0,avoid2,weight_train,17,10,9,10,0.0,0,0,1.0,"[0.0, 0.0]",0,1,58.8235294117647,52.94117647058823,58.8235294117647
+close_known,Kalyan Night,production,0,avoid2,weight_validation,11,4,6,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,36.36363636363637,54.54545454545455,36.36363636363637
+close_known,Kalyan Night,production,0,avoid2,late_reused,5,3,5,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,60.0,100.0,60.0
+close_known,Kalyan Night,production,0,avoid2,november_reused,6,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_known,Kalyan Night,production,0,panel10,development,30,2,6,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,6.666666666666667,20.0,6.666666666666667
+close_known,Kalyan Night,production,0,panel10,validation,16,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,6.25,18.75,6.25
+close_known,Kalyan Night,production,0,panel10,weight_train,17,0,2,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,0.0,11.764705882352942,0.0
+close_known,Kalyan Night,production,0,panel10,weight_validation,11,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,9.090909090909092,0.0
+close_known,Kalyan Night,production,0,panel10,late_reused,5,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,20.0,0.0
+close_known,Kalyan Night,production,0,panel10,november_reused,6,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,16.666666666666668,0.0
+close_known,Kalyan Night,production,0,sp30,development,25,9,9,9,0.0,0,0,1.0,"[0.0, 0.0]",0,0,36.0,36.0,36.0
+close_known,Kalyan Night,production,0,sp30,validation,10,3,6,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,30.0,60.0,30.0
+close_known,Kalyan Night,production,0,sp30,weight_train,13,4,6,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,30.76923076923077,46.15384615384615,30.76923076923077
+close_known,Kalyan Night,production,0,sp30,weight_validation,9,5,2,5,0.0,0,0,1.0,"[0.0, 0.0]",0,3,55.55555555555556,22.22222222222222,55.55555555555556
+close_known,Kalyan Night,production,0,sp30,late_reused,4,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,25.0,50.0
+close_known,Kalyan Night,production,0,sp30,november_reused,5,3,0,3,0.0,0,0,1.0,"[0.0, 0.0]",0,3,60.0,0.0,60.0
+close_known,Kalyan Night,production,0,dp20,development,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_known,Kalyan Night,production,0,dp20,validation,6,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,16.666666666666668,16.666666666666668,16.666666666666668
+close_known,Kalyan Night,production,0,dp20,weight_train,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Kalyan Night,production,0,dp20,weight_validation,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Kalyan Night,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Kalyan Night,production,0,dp20,november_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Madhur Day,production,0,top5,development,43,19,20,19,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,44.18604651162791,46.51162790697674,44.18604651162791
+close_known,Madhur Day,production,0,top5,validation,22,12,17,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-5,54.54545454545455,77.27272727272727,54.54545454545455
+close_known,Madhur Day,production,0,top5,weight_train,23,9,13,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,39.130434782608695,56.52173913043478,39.130434782608695
+close_known,Madhur Day,production,0,top5,weight_validation,15,9,11,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,60.0,73.33333333333333,60.0
+close_known,Madhur Day,production,0,top5,late_reused,7,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,42.857142857142854,42.857142857142854,42.857142857142854
+close_known,Madhur Day,production,0,top5,november_reused,10,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,50.0,60.0,50.0
+close_known,Madhur Day,production,0,avoid2,development,43,20,23,20,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,46.51162790697674,53.48837209302326,46.51162790697674
+close_known,Madhur Day,production,0,avoid2,validation,22,9,18,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-9,40.90909090909091,81.81818181818181,40.90909090909091
+close_known,Madhur Day,production,0,avoid2,weight_train,23,16,7,16,0.0,0,0,1.0,"[0.0, 0.0]",0,9,69.56521739130434,30.434782608695652,69.56521739130434
+close_known,Madhur Day,production,0,avoid2,weight_validation,15,8,8,8,0.0,0,0,1.0,"[0.0, 0.0]",0,0,53.333333333333336,53.333333333333336,53.333333333333336
+close_known,Madhur Day,production,0,avoid2,late_reused,7,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,57.142857142857146,57.142857142857146,57.142857142857146
+close_known,Madhur Day,production,0,avoid2,november_reused,10,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,60.0,80.0,60.0
+close_known,Madhur Day,production,0,panel10,development,43,2,5,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,4.651162790697675,11.627906976744185,4.651162790697675
+close_known,Madhur Day,production,0,panel10,validation,22,1,5,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,4.545454545454546,22.727272727272727,4.545454545454546
+close_known,Madhur Day,production,0,panel10,weight_train,23,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,4.3478260869565215,8.695652173913043,4.3478260869565215
+close_known,Madhur Day,production,0,panel10,weight_validation,15,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,6.666666666666667,6.666666666666667,6.666666666666667
+close_known,Madhur Day,production,0,panel10,late_reused,7,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,14.285714285714286,0.0
+close_known,Madhur Day,production,0,panel10,november_reused,10,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,10.0,0.0,10.0
+close_known,Madhur Day,production,0,sp30,development,34,12,12,12,0.0,0,0,1.0,"[0.0, 0.0]",0,0,35.294117647058826,35.294117647058826,35.294117647058826
+close_known,Madhur Day,production,0,sp30,validation,15,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,40.0,53.333333333333336,40.0
+close_known,Madhur Day,production,0,sp30,weight_train,19,9,5,9,0.0,0,0,1.0,"[0.0, 0.0]",0,4,47.36842105263158,26.31578947368421,47.36842105263158
+close_known,Madhur Day,production,0,sp30,weight_validation,11,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,27.272727272727273,27.272727272727273,27.272727272727273
+close_known,Madhur Day,production,0,sp30,late_reused,5,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,40.0,60.0,40.0
+close_known,Madhur Day,production,0,sp30,november_reused,8,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,12.5,0.0,12.5
+close_known,Madhur Day,production,0,dp20,development,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_known,Madhur Day,production,0,dp20,validation,7,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,28.571428571428573,28.571428571428573,28.571428571428573
+close_known,Madhur Day,production,0,dp20,weight_train,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Madhur Day,production,0,dp20,weight_validation,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Madhur Day,production,0,dp20,late_reused,2,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_known,Madhur Day,production,0,dp20,november_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Madhur Night,production,0,top5,development,36,19,19,19,0.0,0,0,1.0,"[0.0, 0.0]",0,0,52.77777777777778,52.77777777777778,52.77777777777778
+close_known,Madhur Night,production,0,top5,validation,19,9,13,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,47.36842105263158,68.42105263157895,47.36842105263158
+close_known,Madhur Night,production,0,top5,weight_train,20,13,6,13,0.0,0,0,1.0,"[0.0, 0.0]",0,7,65.0,30.0,65.0
+close_known,Madhur Night,production,0,top5,weight_validation,9,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,44.44444444444444,55.55555555555556,44.44444444444444
+close_known,Madhur Night,production,0,top5,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,top5,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,avoid2,development,36,11,21,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-10,30.555555555555557,58.333333333333336,30.555555555555557
+close_known,Madhur Night,production,0,avoid2,validation,19,8,14,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,42.10526315789474,73.6842105263158,42.10526315789474
+close_known,Madhur Night,production,0,avoid2,weight_train,20,12,9,12,0.0,0,0,1.0,"[0.0, 0.0]",0,3,60.0,45.0,60.0
+close_known,Madhur Night,production,0,avoid2,weight_validation,9,5,2,5,0.0,0,0,1.0,"[0.0, 0.0]",0,3,55.55555555555556,22.22222222222222,55.55555555555556
+close_known,Madhur Night,production,0,avoid2,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,avoid2,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,panel10,development,36,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,11.11111111111111,11.11111111111111,11.11111111111111
+close_known,Madhur Night,production,0,panel10,validation,19,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,15.789473684210526,15.789473684210526,15.789473684210526
+close_known,Madhur Night,production,0,panel10,weight_train,20,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,10.0,10.0,10.0
+close_known,Madhur Night,production,0,panel10,weight_validation,9,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Madhur Night,production,0,panel10,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,panel10,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,sp30,development,25,5,9,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,20.0,36.0,20.0
+close_known,Madhur Night,production,0,sp30,validation,14,5,7,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,35.714285714285715,50.0,35.714285714285715
+close_known,Madhur Night,production,0,sp30,weight_train,11,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,18.181818181818183,18.181818181818183,18.181818181818183
+close_known,Madhur Night,production,0,sp30,weight_validation,8,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,12.5,37.5,12.5
+close_known,Madhur Night,production,0,sp30,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,sp30,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,dp20,development,11,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,45.45454545454545,45.45454545454545,45.45454545454545
+close_known,Madhur Night,production,0,dp20,validation,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+close_known,Madhur Night,production,0,dp20,weight_train,9,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_known,Madhur Night,production,0,dp20,weight_validation,1,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,100.0,100.0,100.0
+close_known,Madhur Night,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Madhur Night,production,0,dp20,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Main Bazar,production,0,top5,development,30,17,19,17,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,56.666666666666664,63.333333333333336,56.666666666666664
+close_known,Main Bazar,production,0,top5,validation,16,5,11,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,31.25,68.75,31.25
+close_known,Main Bazar,production,0,top5,weight_train,17,10,8,10,0.0,0,0,1.0,"[0.0, 0.0]",0,2,58.8235294117647,47.05882352941177,58.8235294117647
+close_known,Main Bazar,production,0,top5,weight_validation,11,6,3,6,0.0,0,0,1.0,"[0.0, 0.0]",0,3,54.54545454545455,27.272727272727273,54.54545454545455
+close_known,Main Bazar,production,0,top5,late_reused,5,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,20.0,40.0,20.0
+close_known,Main Bazar,production,0,top5,november_reused,6,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_known,Main Bazar,production,0,avoid2,development,30,20,20,20,0.0,0,0,1.0,"[0.0, 0.0]",0,0,66.66666666666667,66.66666666666667,66.66666666666667
+close_known,Main Bazar,production,0,avoid2,validation,16,9,10,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,56.25,62.5,56.25
+close_known,Main Bazar,production,0,avoid2,weight_train,17,9,10,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,52.94117647058823,58.8235294117647,52.94117647058823
+close_known,Main Bazar,production,0,avoid2,weight_validation,11,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,45.45454545454545,54.54545454545455,45.45454545454545
+close_known,Main Bazar,production,0,avoid2,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_known,Main Bazar,production,0,avoid2,november_reused,6,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_known,Main Bazar,production,0,panel10,development,30,7,7,7,0.0,0,0,1.0,"[0.0, 0.0]",0,0,23.333333333333332,23.333333333333332,23.333333333333332
+close_known,Main Bazar,production,0,panel10,validation,16,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_known,Main Bazar,production,0,panel10,weight_train,17,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Main Bazar,production,0,panel10,weight_validation,11,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,9.090909090909092,9.090909090909092,9.090909090909092
+close_known,Main Bazar,production,0,panel10,late_reused,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_known,Main Bazar,production,0,panel10,november_reused,6,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,16.666666666666668,16.666666666666668,16.666666666666668
+close_known,Main Bazar,production,0,sp30,development,23,10,11,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,43.47826086956522,47.82608695652174,43.47826086956522
+close_known,Main Bazar,production,0,sp30,validation,13,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,38.46153846153846,46.15384615384615,38.46153846153846
+close_known,Main Bazar,production,0,sp30,weight_train,14,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,35.714285714285715,42.857142857142854,35.714285714285715
+close_known,Main Bazar,production,0,sp30,weight_validation,7,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,14.285714285714286,14.285714285714286,14.285714285714286
+close_known,Main Bazar,production,0,sp30,late_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Main Bazar,production,0,sp30,november_reused,6,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_known,Main Bazar,production,0,dp20,development,7,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,14.285714285714286,14.285714285714286,14.285714285714286
+close_known,Main Bazar,production,0,dp20,validation,3,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,66.66666666666667,66.66666666666667,66.66666666666667
+close_known,Main Bazar,production,0,dp20,weight_train,3,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Main Bazar,production,0,dp20,weight_validation,4,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Main Bazar,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Main Bazar,production,0,dp20,november_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Milan Day,production,0,top5,development,36,20,22,20,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,55.55555555555556,61.111111111111114,55.55555555555556
+close_known,Milan Day,production,0,top5,validation,19,11,14,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,57.89473684210526,73.6842105263158,57.89473684210526
+close_known,Milan Day,production,0,top5,weight_train,19,10,11,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,52.63157894736842,57.89473684210526,52.63157894736842
+close_known,Milan Day,production,0,top5,weight_validation,13,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,30.76923076923077,38.46153846153846,30.76923076923077
+close_known,Milan Day,production,0,top5,late_reused,5,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,80.0,80.0,80.0
+close_known,Milan Day,production,0,top5,november_reused,8,6,6,6,0.0,0,0,1.0,"[0.0, 0.0]",0,0,75.0,75.0,75.0
+close_known,Milan Day,production,0,avoid2,development,36,19,20,19,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,52.77777777777778,55.55555555555556,52.77777777777778
+close_known,Milan Day,production,0,avoid2,validation,19,14,16,14,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,73.6842105263158,84.21052631578948,73.6842105263158
+close_known,Milan Day,production,0,avoid2,weight_train,19,9,10,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,47.36842105263158,52.63157894736842,47.36842105263158
+close_known,Milan Day,production,0,avoid2,weight_validation,13,8,10,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,61.53846153846154,76.92307692307692,61.53846153846154
+close_known,Milan Day,production,0,avoid2,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_known,Milan Day,production,0,avoid2,november_reused,8,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,37.5,50.0
+close_known,Milan Day,production,0,panel10,development,36,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,5.555555555555555,8.333333333333334,5.555555555555555
+close_known,Milan Day,production,0,panel10,validation,19,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,5.2631578947368425,15.789473684210526,5.2631578947368425
+close_known,Milan Day,production,0,panel10,weight_train,19,3,1,3,0.0,0,0,1.0,"[0.0, 0.0]",0,2,15.789473684210526,5.2631578947368425,15.789473684210526
+close_known,Milan Day,production,0,panel10,weight_validation,13,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Milan Day,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Milan Day,production,0,panel10,november_reused,8,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,12.5,0.0,12.5
+close_known,Milan Day,production,0,sp30,development,28,8,9,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,28.571428571428573,32.142857142857146,28.571428571428573
+close_known,Milan Day,production,0,sp30,validation,10,4,6,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,40.0,60.0,40.0
+close_known,Milan Day,production,0,sp30,weight_train,17,7,4,7,0.0,0,0,1.0,"[0.0, 0.0]",0,3,41.1764705882353,23.529411764705884,41.1764705882353
+close_known,Milan Day,production,0,sp30,weight_validation,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Milan Day,production,0,sp30,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Milan Day,production,0,sp30,november_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Milan Day,production,0,dp20,development,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_known,Milan Day,production,0,dp20,validation,8,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Milan Day,production,0,dp20,weight_train,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Milan Day,production,0,dp20,weight_validation,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_known,Milan Day,production,0,dp20,late_reused,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_known,Milan Day,production,0,dp20,november_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Milan Night,production,0,top5,development,36,15,17,15,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,41.666666666666664,47.22222222222222,41.666666666666664
+close_known,Milan Night,production,0,top5,validation,19,12,13,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,63.1578947368421,68.42105263157895,63.1578947368421
+close_known,Milan Night,production,0,top5,weight_train,19,13,14,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,68.42105263157895,73.6842105263158,68.42105263157895
+close_known,Milan Night,production,0,top5,weight_validation,13,8,8,8,0.0,0,0,1.0,"[0.0, 0.0]",0,0,61.53846153846154,61.53846153846154,61.53846153846154
+close_known,Milan Night,production,0,top5,late_reused,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_known,Milan Night,production,0,top5,november_reused,8,7,7,7,0.0,0,0,1.0,"[0.0, 0.0]",0,0,87.5,87.5,87.5
+close_known,Milan Night,production,0,avoid2,development,36,24,25,24,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,66.66666666666667,69.44444444444444,66.66666666666667
+close_known,Milan Night,production,0,avoid2,validation,19,9,11,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,47.36842105263158,57.89473684210526,47.36842105263158
+close_known,Milan Night,production,0,avoid2,weight_train,19,10,10,10,0.0,0,0,1.0,"[0.0, 0.0]",0,0,52.63157894736842,52.63157894736842,52.63157894736842
+close_known,Milan Night,production,0,avoid2,weight_validation,13,6,6,6,0.0,0,0,1.0,"[0.0, 0.0]",0,0,46.15384615384615,46.15384615384615,46.15384615384615
+close_known,Milan Night,production,0,avoid2,late_reused,5,4,2,4,0.0,0,0,1.0,"[0.0, 0.0]",0,2,80.0,40.0,80.0
+close_known,Milan Night,production,0,avoid2,november_reused,8,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,50.0,50.0,50.0
+close_known,Milan Night,production,0,panel10,development,36,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,8.333333333333334,11.11111111111111,8.333333333333334
+close_known,Milan Night,production,0,panel10,validation,19,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,10.526315789473685,15.789473684210526,10.526315789473685
+close_known,Milan Night,production,0,panel10,weight_train,19,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,5.2631578947368425,0.0,5.2631578947368425
+close_known,Milan Night,production,0,panel10,weight_validation,13,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,15.384615384615385,7.6923076923076925,15.384615384615385
+close_known,Milan Night,production,0,panel10,late_reused,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Milan Night,production,0,panel10,november_reused,8,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,12.5,0.0,12.5
+close_known,Milan Night,production,0,sp30,development,27,6,6,6,0.0,0,0,1.0,"[0.0, 0.0]",0,0,22.22222222222222,22.22222222222222,22.22222222222222
+close_known,Milan Night,production,0,sp30,validation,18,4,8,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,22.22222222222222,44.44444444444444,22.22222222222222
+close_known,Milan Night,production,0,sp30,weight_train,19,7,2,7,0.0,0,0,1.0,"[0.0, 0.0]",0,5,36.8421052631579,10.526315789473685,36.8421052631579
+close_known,Milan Night,production,0,sp30,weight_validation,8,3,1,3,0.0,0,0,1.0,"[0.0, 0.0]",0,2,37.5,12.5,37.5
+close_known,Milan Night,production,0,sp30,late_reused,4,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,25.0,0.0,25.0
+close_known,Milan Night,production,0,sp30,november_reused,6,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,16.666666666666668,0.0
+close_known,Milan Night,production,0,dp20,development,9,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,11.11111111111111,11.11111111111111,11.11111111111111
+close_known,Milan Night,production,0,dp20,validation,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Milan Night,production,0,dp20,weight_train,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Milan Night,production,0,dp20,weight_validation,5,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Milan Night,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Milan Night,production,0,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Day,production,0,top5,development,36,19,20,19,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,52.77777777777778,55.55555555555556,52.77777777777778
+close_known,Rajdhani Day,production,0,top5,validation,19,10,14,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,52.63157894736842,73.6842105263158,52.63157894736842
+close_known,Rajdhani Day,production,0,top5,weight_train,20,11,12,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,55.0,60.0,55.0
+close_known,Rajdhani Day,production,0,top5,weight_validation,13,8,6,8,0.0,0,0,1.0,"[0.0, 0.0]",0,2,61.53846153846154,46.15384615384615,61.53846153846154
+close_known,Rajdhani Day,production,0,top5,late_reused,5,5,0,5,0.0,0,0,1.0,"[0.0, 0.0]",0,5,100.0,0.0,100.0
+close_known,Rajdhani Day,production,0,top5,november_reused,8,1,5,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,12.5,62.5,12.5
+close_known,Rajdhani Day,production,0,avoid2,development,36,10,26,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-16,27.77777777777778,72.22222222222223,27.77777777777778
+close_known,Rajdhani Day,production,0,avoid2,validation,19,11,14,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,57.89473684210526,73.6842105263158,57.89473684210526
+close_known,Rajdhani Day,production,0,avoid2,weight_train,20,8,11,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,40.0,55.0,40.0
+close_known,Rajdhani Day,production,0,avoid2,weight_validation,13,7,7,7,0.0,0,0,1.0,"[0.0, 0.0]",0,0,53.84615384615385,53.84615384615385,53.84615384615385
+close_known,Rajdhani Day,production,0,avoid2,late_reused,5,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,60.0,40.0,60.0
+close_known,Rajdhani Day,production,0,avoid2,november_reused,8,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Rajdhani Day,production,0,panel10,development,36,3,5,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,8.333333333333334,13.88888888888889,8.333333333333334
+close_known,Rajdhani Day,production,0,panel10,validation,19,1,4,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,5.2631578947368425,21.05263157894737,5.2631578947368425
+close_known,Rajdhani Day,production,0,panel10,weight_train,20,5,1,5,0.0,0,0,1.0,"[0.0, 0.0]",0,4,25.0,5.0,25.0
+close_known,Rajdhani Day,production,0,panel10,weight_validation,13,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Day,production,0,panel10,late_reused,5,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,40.0,20.0,40.0
+close_known,Rajdhani Day,production,0,panel10,november_reused,8,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1,12.5,0.0,12.5
+close_known,Rajdhani Day,production,0,sp30,development,26,6,12,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,23.076923076923077,46.15384615384615,23.076923076923077
+close_known,Rajdhani Day,production,0,sp30,validation,14,1,7,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,7.142857142857143,50.0,7.142857142857143
+close_known,Rajdhani Day,production,0,sp30,weight_train,13,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,7.6923076923076925,23.076923076923077,7.6923076923076925
+close_known,Rajdhani Day,production,0,sp30,weight_validation,11,4,3,4,0.0,0,0,1.0,"[0.0, 0.0]",0,1,36.36363636363637,27.272727272727273,36.36363636363637
+close_known,Rajdhani Day,production,0,sp30,late_reused,4,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,25.0,50.0
+close_known,Rajdhani Day,production,0,sp30,november_reused,6,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,16.666666666666668,50.0,16.666666666666668
+close_known,Rajdhani Day,production,0,dp20,development,10,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+close_known,Rajdhani Day,production,0,dp20,validation,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_known,Rajdhani Day,production,0,dp20,weight_train,7,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,57.142857142857146,57.142857142857146,57.142857142857146
+close_known,Rajdhani Day,production,0,dp20,weight_validation,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Day,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Day,production,0,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Night,production,0,top5,development,30,15,17,15,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,50.0,56.666666666666664,50.0
+close_known,Rajdhani Night,production,0,top5,validation,16,8,14,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,50.0,87.5,50.0
+close_known,Rajdhani Night,production,0,top5,weight_train,17,7,8,7,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,41.1764705882353,47.05882352941177,41.1764705882353
+close_known,Rajdhani Night,production,0,top5,weight_validation,11,7,7,7,0.0,0,0,1.0,"[0.0, 0.0]",0,0,63.63636363636363,63.63636363636363,63.63636363636363
+close_known,Rajdhani Night,production,0,top5,late_reused,5,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,100.0,80.0,100.0
+close_known,Rajdhani Night,production,0,top5,november_reused,6,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_known,Rajdhani Night,production,0,avoid2,development,30,14,20,14,0.0,0,0,1.0,"[0.0, 0.0]",0,-6,46.666666666666664,66.66666666666667,46.666666666666664
+close_known,Rajdhani Night,production,0,avoid2,validation,16,11,14,11,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,68.75,87.5,68.75
+close_known,Rajdhani Night,production,0,avoid2,weight_train,17,10,9,10,0.0,0,0,1.0,"[0.0, 0.0]",0,1,58.8235294117647,52.94117647058823,58.8235294117647
+close_known,Rajdhani Night,production,0,avoid2,weight_validation,11,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,45.45454545454545,54.54545454545455,45.45454545454545
+close_known,Rajdhani Night,production,0,avoid2,late_reused,5,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,40.0,60.0,40.0
+close_known,Rajdhani Night,production,0,avoid2,november_reused,6,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,83.33333333333333,66.66666666666667,83.33333333333333
+close_known,Rajdhani Night,production,0,panel10,development,30,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,6.666666666666667,6.666666666666667,6.666666666666667
+close_known,Rajdhani Night,production,0,panel10,validation,16,1,5,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,6.25,31.25,6.25
+close_known,Rajdhani Night,production,0,panel10,weight_train,17,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,17.647058823529413,11.764705882352942,17.647058823529413
+close_known,Rajdhani Night,production,0,panel10,weight_validation,11,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Night,production,0,panel10,late_reused,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,20.0,20.0,20.0
+close_known,Rajdhani Night,production,0,panel10,november_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Night,production,0,sp30,development,22,8,10,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,36.36363636363637,45.45454545454545,36.36363636363637
+close_known,Rajdhani Night,production,0,sp30,validation,11,4,8,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,36.36363636363637,72.72727272727273,36.36363636363637
+close_known,Rajdhani Night,production,0,sp30,weight_train,15,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,13.333333333333334,6.666666666666667,13.333333333333334
+close_known,Rajdhani Night,production,0,sp30,weight_validation,9,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_known,Rajdhani Night,production,0,sp30,late_reused,4,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,25.0,50.0
+close_known,Rajdhani Night,production,0,sp30,november_reused,4,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,25.0,50.0
+close_known,Rajdhani Night,production,0,dp20,development,8,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Rajdhani Night,production,0,dp20,validation,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+close_known,Rajdhani Night,production,0,dp20,weight_train,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Night,production,0,dp20,weight_validation,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Night,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Rajdhani Night,production,0,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Sridevi,specialist_control/source=baseline,8,top5,development,43,25,25,25,0.0,0,0,1.0,"[0.0, 0.0]",0,0,58.13953488372093,58.13953488372093,58.13953488372093
+close_known,Sridevi,specialist_control/source=baseline,8,top5,validation,22,10,17,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,45.45454545454545,77.27272727272727,45.45454545454545
+close_known,Sridevi,specialist_control/source=baseline,8,top5,weight_train,23,10,9,10,0.0,0,0,1.0,"[0.0, 0.0]",0,1,43.47826086956522,39.130434782608695,43.47826086956522
+close_known,Sridevi,specialist_control/source=baseline,8,top5,weight_validation,15,9,8,9,0.0,0,0,1.0,"[0.0, 0.0]",0,1,60.0,53.333333333333336,60.0
+close_known,Sridevi,specialist_control/source=baseline,8,top5,late_reused,7,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,42.857142857142854,28.571428571428573,42.857142857142854
+close_known,Sridevi,specialist_control/source=baseline,8,top5,november_reused,10,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,40.0,50.0
+close_known,Sridevi,specialist_control/source=baseline,8,avoid2,development,43,20,24,20,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,46.51162790697674,55.81395348837209,46.51162790697674
+close_known,Sridevi,specialist_control/source=baseline,8,avoid2,validation,22,12,16,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,54.54545454545455,72.72727272727273,54.54545454545455
+close_known,Sridevi,specialist_control/source=baseline,8,avoid2,weight_train,23,11,10,11,0.0,0,0,1.0,"[0.0, 0.0]",0,1,47.82608695652174,43.47826086956522,47.82608695652174
+close_known,Sridevi,specialist_control/source=baseline,8,avoid2,weight_validation,15,8,6,8,0.0,0,0,1.0,"[0.0, 0.0]",0,2,53.333333333333336,40.0,53.333333333333336
+close_known,Sridevi,specialist_control/source=baseline,8,avoid2,late_reused,7,4,1,4,0.0,0,0,1.0,"[0.0, 0.0]",0,3,57.142857142857146,14.285714285714286,57.142857142857146
+close_known,Sridevi,specialist_control/source=baseline,8,avoid2,november_reused,10,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,40.0,50.0
+close_known,Sridevi,specialist_control/source=baseline,8,panel10,development,43,7,7,2,-11.627906976744185,1,6,0.125,"[-23.25581395348837, 0.0]",-5,-5,16.27906976744186,16.27906976744186,4.651162790697675
+close_known,Sridevi,specialist_control/source=baseline,8,panel10,validation,22,2,2,2,0.0,1,1,1.0,"[-13.636363636363635, 13.636363636363635]",0,0,9.090909090909092,9.090909090909092,9.090909090909092
+close_known,Sridevi,specialist_control/source=baseline,8,panel10,weight_train,23,2,2,4,8.695652173913043,4,2,0.6875,"[-13.043478260869565, 30.434782608695656]",2,2,8.695652173913043,8.695652173913043,17.391304347826086
+close_known,Sridevi,specialist_control/source=baseline,8,panel10,weight_validation,15,0,0,3,20.0,3,0,0.25,"[0.0, 40.0]",3,3,0.0,0.0,20.0
+close_known,Sridevi,specialist_control/source=baseline,8,panel10,late_reused,7,2,2,0,-28.571428571428573,0,2,0.5,"[-71.42857142857143, 0.0]",-2,-2,28.571428571428573,28.571428571428573,0.0
+close_known,Sridevi,specialist_control/source=baseline,8,panel10,november_reused,10,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Sridevi,specialist_control/source=baseline,8,sp30,development,30,8,10,8,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,26.666666666666668,33.333333333333336,26.666666666666668
+close_known,Sridevi,specialist_control/source=baseline,8,sp30,validation,16,5,8,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,31.25,50.0,31.25
+close_known,Sridevi,specialist_control/source=baseline,8,sp30,weight_train,19,10,9,10,0.0,0,0,1.0,"[0.0, 0.0]",0,1,52.63157894736842,47.36842105263158,52.63157894736842
+close_known,Sridevi,specialist_control/source=baseline,8,sp30,weight_validation,12,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_known,Sridevi,specialist_control/source=baseline,8,sp30,late_reused,6,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,16.666666666666668,33.333333333333336,16.666666666666668
+close_known,Sridevi,specialist_control/source=baseline,8,sp30,november_reused,8,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,12.5,12.5,12.5
+close_known,Sridevi,specialist_control/source=baseline,8,dp20,development,13,2,2,3,7.6923076923076925,1,0,1.0,"[0.0, 23.076923076923077]",1,1,15.384615384615385,15.384615384615385,23.076923076923077
+close_known,Sridevi,specialist_control/source=baseline,8,dp20,validation,6,3,3,2,-16.666666666666668,1,2,1.0,"[-66.66666666666666, 33.33333333333333]",-1,-1,50.0,50.0,33.333333333333336
+close_known,Sridevi,specialist_control/source=baseline,8,dp20,weight_train,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
+close_known,Sridevi,specialist_control/source=baseline,8,dp20,weight_validation,3,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,66.66666666666667,66.66666666666667,66.66666666666667
+close_known,Sridevi,specialist_control/source=baseline,8,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Sridevi,specialist_control/source=baseline,8,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Sridevi Night,production,0,top5,development,43,23,24,23,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,53.48837209302326,55.81395348837209,53.48837209302326
+close_known,Sridevi Night,production,0,top5,validation,22,10,17,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,45.45454545454545,77.27272727272727,45.45454545454545
+close_known,Sridevi Night,production,0,top5,weight_train,23,12,13,12,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,52.17391304347826,56.52173913043478,52.17391304347826
+close_known,Sridevi Night,production,0,top5,weight_validation,15,6,7,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,40.0,46.666666666666664,40.0
+close_known,Sridevi Night,production,0,top5,late_reused,6,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,33.333333333333336,50.0
+close_known,Sridevi Night,production,0,top5,november_reused,10,5,4,5,0.0,0,0,1.0,"[0.0, 0.0]",0,1,50.0,40.0,50.0
+close_known,Sridevi Night,production,0,avoid2,development,43,23,24,23,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,53.48837209302326,55.81395348837209,53.48837209302326
+close_known,Sridevi Night,production,0,avoid2,validation,22,13,16,13,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,59.09090909090909,72.72727272727273,59.09090909090909
+close_known,Sridevi Night,production,0,avoid2,weight_train,23,13,9,13,0.0,0,0,1.0,"[0.0, 0.0]",0,4,56.52173913043478,39.130434782608695,56.52173913043478
+close_known,Sridevi Night,production,0,avoid2,weight_validation,15,10,9,10,0.0,0,0,1.0,"[0.0, 0.0]",0,1,66.66666666666667,60.0,66.66666666666667
+close_known,Sridevi Night,production,0,avoid2,late_reused,6,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,16.666666666666668,50.0,16.666666666666668
+close_known,Sridevi Night,production,0,avoid2,november_reused,10,7,5,7,0.0,0,0,1.0,"[0.0, 0.0]",0,2,70.0,50.0,70.0
+close_known,Sridevi Night,production,0,panel10,development,43,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,4.651162790697675,6.976744186046512,4.651162790697675
+close_known,Sridevi Night,production,0,panel10,validation,22,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,18.181818181818183,22.727272727272727,18.181818181818183
+close_known,Sridevi Night,production,0,panel10,weight_train,23,0,2,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,0.0,8.695652173913043,0.0
+close_known,Sridevi Night,production,0,panel10,weight_validation,15,0,3,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,0.0,20.0,0.0
+close_known,Sridevi Night,production,0,panel10,late_reused,6,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,16.666666666666668,33.333333333333336,16.666666666666668
+close_known,Sridevi Night,production,0,panel10,november_reused,10,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,30.0,20.0,30.0
+close_known,Sridevi Night,production,0,sp30,development,34,12,12,12,0.0,0,0,1.0,"[0.0, 0.0]",0,0,35.294117647058826,35.294117647058826,35.294117647058826
+close_known,Sridevi Night,production,0,sp30,validation,15,6,8,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,40.0,53.333333333333336,40.0
+close_known,Sridevi Night,production,0,sp30,weight_train,18,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",0,0,22.22222222222222,22.22222222222222,22.22222222222222
+close_known,Sridevi Night,production,0,sp30,weight_validation,10,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,0.0,10.0,0.0
+close_known,Sridevi Night,production,0,sp30,late_reused,6,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2,33.333333333333336,0.0,33.333333333333336
+close_known,Sridevi Night,production,0,sp30,november_reused,8,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,37.5,50.0,37.5
+close_known,Sridevi Night,production,0,dp20,development,9,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_known,Sridevi Night,production,0,dp20,validation,7,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Sridevi Night,production,0,dp20,weight_train,5,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,40.0,40.0,40.0
+close_known,Sridevi Night,production,0,dp20,weight_validation,5,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",0,0,60.0,60.0,60.0
+close_known,Sridevi Night,production,0,dp20,late_reused,0,0,0,0,,0,0,1.0,,0,0,,,
+close_known,Sridevi Night,production,0,dp20,november_reused,2,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Time Bazar,production,0,top5,development,36,14,15,14,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,38.888888888888886,41.666666666666664,38.888888888888886
+close_known,Time Bazar,production,0,top5,validation,19,9,16,9,0.0,0,0,1.0,"[0.0, 0.0]",0,-7,47.36842105263158,84.21052631578948,47.36842105263158
+close_known,Time Bazar,production,0,top5,weight_train,19,10,11,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,52.63157894736842,57.89473684210526,52.63157894736842
+close_known,Time Bazar,production,0,top5,weight_validation,13,6,7,6,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,46.15384615384615,53.84615384615385,46.15384615384615
+close_known,Time Bazar,production,0,top5,late_reused,6,4,5,4,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,66.66666666666667,83.33333333333333,66.66666666666667
+close_known,Time Bazar,production,0,top5,november_reused,8,4,2,4,0.0,0,0,1.0,"[0.0, 0.0]",0,2,50.0,25.0,50.0
+close_known,Time Bazar,production,0,avoid2,development,36,20,21,20,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,55.55555555555556,58.333333333333336,55.55555555555556
+close_known,Time Bazar,production,0,avoid2,validation,19,14,16,14,0.0,0,0,1.0,"[0.0, 0.0]",0,-2,73.6842105263158,84.21052631578948,73.6842105263158
+close_known,Time Bazar,production,0,avoid2,weight_train,19,10,10,10,0.0,0,0,1.0,"[0.0, 0.0]",0,0,52.63157894736842,52.63157894736842,52.63157894736842
+close_known,Time Bazar,production,0,avoid2,weight_validation,13,7,4,7,0.0,0,0,1.0,"[0.0, 0.0]",0,3,53.84615384615385,30.76923076923077,53.84615384615385
+close_known,Time Bazar,production,0,avoid2,late_reused,6,5,6,5,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,83.33333333333333,100.0,83.33333333333333
+close_known,Time Bazar,production,0,avoid2,november_reused,8,7,6,7,0.0,0,0,1.0,"[0.0, 0.0]",0,1,87.5,75.0,87.5
+close_known,Time Bazar,production,0,panel10,development,36,2,5,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,5.555555555555555,13.88888888888889,5.555555555555555
+close_known,Time Bazar,production,0,panel10,validation,19,1,4,1,0.0,0,0,1.0,"[0.0, 0.0]",0,-3,5.2631578947368425,21.05263157894737,5.2631578947368425
+close_known,Time Bazar,production,0,panel10,weight_train,19,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,5.2631578947368425,5.2631578947368425,5.2631578947368425
+close_known,Time Bazar,production,0,panel10,weight_validation,13,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,15.384615384615385,23.076923076923077,15.384615384615385
+close_known,Time Bazar,production,0,panel10,late_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Time Bazar,production,0,panel10,november_reused,8,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Time Bazar,production,0,sp30,development,29,10,11,10,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,34.48275862068966,37.93103448275862,34.48275862068966
+close_known,Time Bazar,production,0,sp30,validation,12,2,6,2,0.0,0,0,1.0,"[0.0, 0.0]",0,-4,16.666666666666668,50.0,16.666666666666668
+close_known,Time Bazar,production,0,sp30,weight_train,16,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,31.25,31.25,31.25
+close_known,Time Bazar,production,0,sp30,weight_validation,12,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",0,-1,25.0,33.333333333333336,25.0
+close_known,Time Bazar,production,0,sp30,late_reused,5,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2,40.0,0.0,40.0
+close_known,Time Bazar,production,0,sp30,november_reused,4,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",0,1,75.0,50.0,75.0
+close_known,Time Bazar,production,0,dp20,development,7,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",0,0,28.571428571428573,28.571428571428573,28.571428571428573
+close_known,Time Bazar,production,0,dp20,validation,7,5,5,5,0.0,0,0,1.0,"[0.0, 0.0]",0,0,71.42857142857143,71.42857142857143,71.42857142857143
+close_known,Time Bazar,production,0,dp20,weight_train,3,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,33.333333333333336,33.333333333333336,33.333333333333336
+close_known,Time Bazar,production,0,dp20,weight_validation,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Time Bazar,production,0,dp20,late_reused,1,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0,0.0,0.0,0.0
+close_known,Time Bazar,production,0,dp20,november_reused,4,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,0,25.0,25.0,25.0
