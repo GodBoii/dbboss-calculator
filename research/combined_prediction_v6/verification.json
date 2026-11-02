@@ -1,0 +1,59 @@
+{
+  "status": "pass",
+  "historical_rows": 1113,
+  "total_rows": 1201,
+  "frozen_selections": 351,
+  "stage1_selections": 351,
+  "distribution_reconstructions": 2390,
+  "causality_comparisons": 1254,
+  "causality_cutoff_inclusive": "2026-09-01",
+  "production_parity_lists": 108,
+  "summary_count_checks": 18954,
+  "extension_verified": true,
+  "limitation": "New feature logic and frozen selectors audited; upstream historical fitting, outcome reuse and research selection bias remain.",
+  "control_tie_limitation": [
+    {
+      "channel": "close_pre",
+      "stage": "refined",
+      "candidate": "refine:probability_mixture/source=uniform_sutta/alpha=1.0:base=1.0",
+      "index": 228,
+      "metric": "top5",
+      "date": "2026-10-22",
+      "market": "Time Bazar",
+      "historical_hit": true,
+      "extension_replay_hit": false,
+      "max_panel_probability_difference": 1.734723475976807e-17,
+      "max_sutta_mass_difference": 2.7755575615628914e-17,
+      "historical_sutta_masses": [
+        0.1,
+        0.10000000000000002,
+        0.1,
+        0.1,
+        0.09999999999999999,
+        0.1,
+        0.1,
+        0.1,
+        0.10000000000000003,
+        0.10000000000000002
+      ],
+      "extension_sutta_masses": [
+        0.09999999999999999,
+        0.1,
+        0.1,
+        0.09999999999999998,
+        0.09999999999999998,
+        0.1,
+        0.09999999999999998,
+        0.09999999999999999,
+        0.10000000000000002,
+        0.10000000000000003
+      ],
+      "historical_fifth_sixth_gap": 0.0,
+      "extension_fifth_sixth_gap": 1.3877787807814457e-17,
+      "selected_by_any_scope": false,
+      "limitation": "Floating arithmetic changes a uniform-control tie. All selected predictions and every other historical hit remain identical; no frozen definition or selection was changed."
+    }
+  ],
+  "selected_historical_predictions_identical": true,
+  "extension_verification_scope": "Frozen files, selectors, all summary counts and strict selected historical prediction stability; one unselected numerical control tie is separately audited. Distribution reconstruction was historical only."
+}
