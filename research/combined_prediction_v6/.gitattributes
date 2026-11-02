@@ -1,5 +1,5 @@
-*.py text eol=lf
-*.cjs text eol=lf
+*.py -text
+*.cjs -text
 *.json -text
 *.csv -text
 *.gz -text
