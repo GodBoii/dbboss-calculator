@@ -1,0 +1,57 @@
+market,block,n,baseline_hits,specialist_hits,candidate_hits,lift_pp,wins,losses,paired_p,day_bootstrap95_pp,dedicated_jodi_specialist_hits,fused_net_vs_dedicated_jodi
+ALL,validation,228,68,129,68,0.0,0,0,1.0,"[0.0, 0.0]",135,-67
+ALL,weight_validation,152,38,36,38,0.0,0,0,1.0,"[0.0, 0.0]",37,1
+ALL,late_reused,61,13,16,13,0.0,0,0,1.0,"[0.0, 0.0]",15,-2
+ALL,november_reused,88,22,22,22,0.0,0,0,1.0,"[0.0, 0.0]",16,6
+Kalyan,validation,19,6,9,6,0.0,0,0,1.0,"[0.0, 0.0]",11,-5
+Kalyan,weight_validation,13,4,4,4,0.0,0,0,1.0,"[0.0, 0.0]",6,-2
+Kalyan,late_reused,5,1,3,1,0.0,0,0,1.0,"[0.0, 0.0]",3,-2
+Kalyan,november_reused,8,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",2,1
+Kalyan Night,validation,16,5,10,5,0.0,0,0,1.0,"[0.0, 0.0]",10,-5
+Kalyan Night,weight_validation,11,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",4,-1
+Kalyan Night,late_reused,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",1,0
+Kalyan Night,november_reused,6,3,2,3,0.0,0,0,1.0,"[0.0, 0.0]",1,2
+Madhur Day,validation,22,6,14,6,0.0,0,0,1.0,"[0.0, 0.0]",14,-8
+Madhur Day,weight_validation,15,3,6,3,0.0,0,0,1.0,"[0.0, 0.0]",6,-3
+Madhur Day,late_reused,7,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",1,0
+Madhur Day,november_reused,10,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",2,0
+Madhur Night,validation,19,5,10,5,0.0,0,0,1.0,"[0.0, 0.0]",10,-5
+Madhur Night,weight_validation,9,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",3,-1
+Madhur Night,late_reused,0,0,0,0,,0,0,1.0,,0,0
+Madhur Night,november_reused,0,0,0,0,,0,0,1.0,,0,0
+Main Bazar,validation,16,5,10,5,0.0,0,0,1.0,"[0.0, 0.0]",11,-6
+Main Bazar,weight_validation,11,2,2,2,0.0,0,0,1.0,"[0.0, 0.0]",4,-2
+Main Bazar,late_reused,5,3,1,3,0.0,0,0,1.0,"[0.0, 0.0]",1,2
+Main Bazar,november_reused,6,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",1,0
+Milan Day,validation,19,6,11,6,0.0,0,0,1.0,"[0.0, 0.0]",12,-6
+Milan Day,weight_validation,13,6,3,6,0.0,0,0,1.0,"[0.0, 0.0]",1,5
+Milan Day,late_reused,5,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",1,0
+Milan Day,november_reused,8,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",3,0
+Milan Night,validation,19,2,9,2,0.0,0,0,1.0,"[0.0, 0.0]",9,-7
+Milan Night,weight_validation,13,4,1,4,0.0,0,0,1.0,"[0.0, 0.0]",1,3
+Milan Night,late_reused,5,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",1,0
+Milan Night,november_reused,8,3,4,3,0.0,0,0,1.0,"[0.0, 0.0]",2,1
+Rajdhani Day,validation,19,5,10,5,0.0,0,0,1.0,"[0.0, 0.0]",10,-5
+Rajdhani Day,weight_validation,13,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",2,1
+Rajdhani Day,late_reused,5,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",1,0
+Rajdhani Day,november_reused,8,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",2,-1
+Rajdhani Night,validation,16,7,12,7,0.0,0,0,1.0,"[0.0, 0.0]",12,-5
+Rajdhani Night,weight_validation,11,0,1,0,0.0,0,0,1.0,"[0.0, 0.0]",3,-3
+Rajdhani Night,late_reused,5,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",3,-2
+Rajdhani Night,november_reused,6,2,1,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2
+Sridevi,validation,22,10,11,10,0.0,0,0,1.0,"[0.0, 0.0]",12,-2
+Sridevi,weight_validation,15,2,0,2,0.0,0,0,1.0,"[0.0, 0.0]",0,2
+Sridevi,late_reused,7,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",2,0
+Sridevi,november_reused,10,2,3,2,0.0,0,0,1.0,"[0.0, 0.0]",3,-1
+Sridevi Night,validation,22,6,11,6,0.0,0,0,1.0,"[0.0, 0.0]",12,-6
+Sridevi Night,weight_validation,15,6,6,6,0.0,0,0,1.0,"[0.0, 0.0]",4,2
+Sridevi Night,late_reused,6,1,2,1,0.0,0,0,1.0,"[0.0, 0.0]",1,0
+Sridevi Night,november_reused,10,1,1,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1
+Time Bazar,validation,19,5,12,5,0.0,0,0,1.0,"[0.0, 0.0]",12,-7
+Time Bazar,weight_validation,13,3,3,3,0.0,0,0,1.0,"[0.0, 0.0]",3,0
+Time Bazar,late_reused,6,0,0,0,0.0,0,0,1.0,"[0.0, 0.0]",0,0
+Time Bazar,november_reused,8,1,0,1,0.0,0,0,1.0,"[0.0, 0.0]",0,1
+ROUTED_MARKET_SUM,validation,228,68,129,68,,,,,,135,-67
+ROUTED_MARKET_SUM,weight_validation,152,38,36,38,,,,,,37,1
+ROUTED_MARKET_SUM,late_reused,61,13,16,13,,,,,,15,-2
+ROUTED_MARKET_SUM,november_reused,88,22,22,22,,,,,,16,6
