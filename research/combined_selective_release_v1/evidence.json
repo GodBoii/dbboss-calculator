@@ -1,0 +1,341 @@
+{
+  "selectionType": "new_posthoc_fixed_presets",
+  "freshConfirmation": false,
+  "supportedAnalysisStartDate": "2026-09-08",
+  "earlierAnalyses": "Production leaves earlier analysis dates unchanged; earlier evidence below describes the unguarded formula only.",
+  "historyStartDate": "2026-07-04",
+  "historyRule": "Only prior complete market draws; exclude the entire target date",
+  "rankingRule": "Round probabilities and pair masses to 12 decimals; stable original panel order and lexicographic digit pairs",
+  "sourceHashes": {
+    "research/combined_prediction_v8/hits.npz": "54edec02e52b8925859f6de6ffa5b0eb1a2c3e81cce3f05aa52885871627820f",
+    "research/combined_prediction_v8/catalogues.json": "34bdceddfaa593be40e097a597a8123d3bf01cb00fdf91162419be418aefbedb",
+    "research/combined_prediction_v8/audit_manifest.json": "bbbf67da3193c343ca1f54845bb33c05f8bfbb04aafa876d1d91e6bfeb94b134",
+    "research/combined_prediction_v7/hits.npz": "efc16b3a8f0482785196a8ad51a8204174a851cc8810e64e5d6aefa45c17b1c5",
+    "research/combined_prediction_v7/catalogues.json": "c043c7d90c6a5a63e20a323c337b996ce5d0e627041b40375fe25b40276bd63a",
+    "research/combined_prediction_v7/experts.py": "9a357d7d81df8f745ca0aa70162ac572634401b1ce4fc89802feb5006ae9b926",
+    "research/combined_prediction_v6/candidates.py": "9d23d3a07da2a2663535dde04b206d60a86ffdd8a9432d571c28dd982a1ab9ac",
+    "research/combined_prediction_v3/study.py": "2005cada7e11810f3b07e745ec51c04d3e56a7374ed14568f6cacc8f58f62903",
+    "research/combined_prediction_v1/replay.jsonl.gz": "2b37e4873b1ba168de36af8c245ea3fa0da7a9a0b16f5916fde7f18d3f6f555c",
+    "research/combined_prediction_v1/replay_metadata.json": "aa08862d57c4975a209ab997e267e12692d02b553c158a3207afcb2790794ba5",
+    "research/combined_prediction_v2/extension_replay.jsonl.gz": "4644227b85102db3f27e1e3516b3d029104c2096e3d52dc7a04f67c537b2dece",
+    "research/combined_prediction_v2/extension_replay_metadata.json": "cb67114b465d47dd3e3a077b34eff0b4c056cf167c9fff5f1c489681fcfac8a9",
+    "research/combined_prediction_v3/fresh_replay.jsonl.gz": "55c60e43a616abd29b5232558e22f6b2c350e5c4dcb5f760c92f6e1df20f1722",
+    "research/combined_prediction_v5/fresh_replay.jsonl.gz": "b0b2d7279026dad23f51ee91eb1f1af4962aa83c1e4e83baf60c7e1068cf2f25",
+    "research/combined_prediction_v6/extension_replay.jsonl.gz": "33fff51f2eb81ba9017cc8dbabcb4262c7433255f4ff3fb2f908843b45133944"
+  },
+  "recipes": [
+    {
+      "market": "Sridevi",
+      "channel": "open",
+      "field": "absent2",
+      "expertIndex": 255,
+      "id": "v6/causal_history/mechanism=recent_digits_90/strength=-0.5",
+      "parameters": {
+        "mechanism": "recent_digits_90",
+        "strength": -0.5
+      },
+      "v8SourceIndex": 255
+    },
+    {
+      "market": "Sridevi",
+      "channel": "open",
+      "field": "all10",
+      "expertIndex": 244,
+      "id": "v6/causal_history/mechanism=recent_digits_7/strength=0.25",
+      "parameters": {
+        "mechanism": "recent_digits_7",
+        "strength": 0.25
+      },
+      "v8SourceIndex": 244
+    },
+    {
+      "market": "Sridevi",
+      "channel": "open",
+      "field": "sp30",
+      "expertIndex": 255,
+      "id": "v6/causal_history/mechanism=recent_digits_90/strength=-0.5",
+      "parameters": {
+        "mechanism": "recent_digits_90",
+        "strength": -0.5
+      },
+      "v8SourceIndex": 255
+    },
+    {
+      "market": "Sridevi",
+      "channel": "open",
+      "field": "dp20",
+      "expertIndex": 255,
+      "id": "v6/causal_history/mechanism=recent_digits_90/strength=-0.5",
+      "parameters": {
+        "mechanism": "recent_digits_90",
+        "strength": -0.5
+      },
+      "v8SourceIndex": 255
+    },
+    {
+      "market": "Rajdhani Night",
+      "channel": "close_pre",
+      "field": "sp30",
+      "expertIndex": 266,
+      "id": "v6/causal_history/mechanism=recent_sutta_30/strength=-1.0",
+      "parameters": {
+        "mechanism": "recent_sutta_30",
+        "strength": -1.0
+      },
+      "v8SourceIndex": 266
+    }
+  ],
+  "evidence": [
+    {
+      "market": "Sridevi",
+      "channel": "open",
+      "field": "absent2",
+      "expertIndex": 255,
+      "id": "v6/causal_history/mechanism=recent_digits_90/strength=-0.5",
+      "parameters": {
+        "mechanism": "recent_digits_90",
+        "strength": -0.5
+      },
+      "v8SourceIndex": 255,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baselineHits": 25,
+          "candidateHits": 23,
+          "netHits": -2
+        },
+        "validation": {
+          "n": 22,
+          "baselineHits": 16,
+          "candidateHits": 14,
+          "netHits": -2
+        },
+        "weight_train": {
+          "n": 23,
+          "baselineHits": 13,
+          "candidateHits": 13,
+          "netHits": 0
+        },
+        "weight_validation": {
+          "n": 15,
+          "baselineHits": 6,
+          "candidateHits": 9,
+          "netHits": 3
+        },
+        "late_reused": {
+          "n": 7,
+          "baselineHits": 3,
+          "candidateHits": 4,
+          "netHits": 1
+        },
+        "november_reused": {
+          "n": 10,
+          "baselineHits": 7,
+          "candidateHits": 9,
+          "netHits": 2
+        }
+      }
+    },
+    {
+      "market": "Sridevi",
+      "channel": "open",
+      "field": "all10",
+      "expertIndex": 244,
+      "id": "v6/causal_history/mechanism=recent_digits_7/strength=0.25",
+      "parameters": {
+        "mechanism": "recent_digits_7",
+        "strength": 0.25
+      },
+      "v8SourceIndex": 244,
+      "blocks": {
+        "development": {
+          "n": 43,
+          "baselineHits": 5,
+          "candidateHits": 3,
+          "netHits": -2
+        },
+        "validation": {
+          "n": 22,
+          "baselineHits": 3,
+          "candidateHits": 1,
+          "netHits": -2
+        },
+        "weight_train": {
+          "n": 23,
+          "baselineHits": 4,
+          "candidateHits": 4,
+          "netHits": 0
+        },
+        "weight_validation": {
+          "n": 15,
+          "baselineHits": 1,
+          "candidateHits": 1,
+          "netHits": 0
+        },
+        "late_reused": {
+          "n": 7,
+          "baselineHits": 0,
+          "candidateHits": 0,
+          "netHits": 0
+        },
+        "november_reused": {
+          "n": 10,
+          "baselineHits": 0,
+          "candidateHits": 2,
+          "netHits": 2
+        }
+      }
+    },
+    {
+      "market": "Sridevi",
+      "channel": "open",
+      "field": "sp30",
+      "expertIndex": 255,
+      "id": "v6/causal_history/mechanism=recent_digits_90/strength=-0.5",
+      "parameters": {
+        "mechanism": "recent_digits_90",
+        "strength": -0.5
+      },
+      "v8SourceIndex": 255,
+      "blocks": {
+        "development": {
+          "n": 38,
+          "baselineHits": 14,
+          "candidateHits": 12,
+          "netHits": -2
+        },
+        "validation": {
+          "n": 13,
+          "baselineHits": 4,
+          "candidateHits": 3,
+          "netHits": -1
+        },
+        "weight_train": {
+          "n": 20,
+          "baselineHits": 7,
+          "candidateHits": 7,
+          "netHits": 0
+        },
+        "weight_validation": {
+          "n": 13,
+          "baselineHits": 2,
+          "candidateHits": 4,
+          "netHits": 2
+        },
+        "late_reused": {
+          "n": 6,
+          "baselineHits": 0,
+          "candidateHits": 2,
+          "netHits": 2
+        },
+        "november_reused": {
+          "n": 8,
+          "baselineHits": 3,
+          "candidateHits": 4,
+          "netHits": 1
+        }
+      }
+    },
+    {
+      "market": "Sridevi",
+      "channel": "open",
+      "field": "dp20",
+      "expertIndex": 255,
+      "id": "v6/causal_history/mechanism=recent_digits_90/strength=-0.5",
+      "parameters": {
+        "mechanism": "recent_digits_90",
+        "strength": -0.5
+      },
+      "v8SourceIndex": 255,
+      "blocks": {
+        "development": {
+          "n": 5,
+          "baselineHits": 1,
+          "candidateHits": 1,
+          "netHits": 0
+        },
+        "validation": {
+          "n": 9,
+          "baselineHits": 4,
+          "candidateHits": 5,
+          "netHits": 1
+        },
+        "weight_train": {
+          "n": 3,
+          "baselineHits": 1,
+          "candidateHits": 1,
+          "netHits": 0
+        },
+        "weight_validation": {
+          "n": 2,
+          "baselineHits": 1,
+          "candidateHits": 1,
+          "netHits": 0
+        },
+        "late_reused": {
+          "n": 1,
+          "baselineHits": 0,
+          "candidateHits": 1,
+          "netHits": 1
+        },
+        "november_reused": {
+          "n": 2,
+          "baselineHits": 0,
+          "candidateHits": 1,
+          "netHits": 1
+        }
+      }
+    },
+    {
+      "market": "Rajdhani Night",
+      "channel": "close_pre",
+      "field": "sp30",
+      "expertIndex": 266,
+      "id": "v6/causal_history/mechanism=recent_sutta_30/strength=-1.0",
+      "parameters": {
+        "mechanism": "recent_sutta_30",
+        "strength": -1.0
+      },
+      "v8SourceIndex": 266,
+      "blocks": {
+        "development": {
+          "n": 22,
+          "baselineHits": 4,
+          "candidateHits": 5,
+          "netHits": 1
+        },
+        "validation": {
+          "n": 11,
+          "baselineHits": 1,
+          "candidateHits": 1,
+          "netHits": 0
+        },
+        "weight_train": {
+          "n": 15,
+          "baselineHits": 5,
+          "candidateHits": 6,
+          "netHits": 1
+        },
+        "weight_validation": {
+          "n": 9,
+          "baselineHits": 2,
+          "candidateHits": 2,
+          "netHits": 0
+        },
+        "late_reused": {
+          "n": 4,
+          "baselineHits": 0,
+          "candidateHits": 1,
+          "netHits": 1
+        },
+        "november_reused": {
+          "n": 4,
+          "baselineHits": 1,
+          "candidateHits": 2,
+          "netHits": 1
+        }
+      }
+    }
+  ],
+  "fixtureCases": 94
+}
