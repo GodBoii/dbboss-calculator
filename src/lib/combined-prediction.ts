@@ -12,6 +12,7 @@ import type { SuttaPick } from "./sutta-model/types"
 import { buildAbsentDigitsPredictionFromPanels } from "./absent-digits"
 import { buildPresentDigitsPredictionFromPanels } from "./present-digits"
 import { COMBINED_POLICY, type CombinedChannel, type CombinedEndpoint, type CombinationWeights } from "./combined-policy"
+import { buildSelectiveCombinedOutputs } from "./combined-selective"
 
 export type AnalysisVersion = "v1" | "v2"
 const LEGAL = new Set(ALL_PANELS)
@@ -187,10 +188,10 @@ export function buildCombinedAnalysis(
           + weights.conditional_close * Math.log(conditioned[SUTTAS[i]] / suttaMass[SUTTAS[i]])
       }))
     }
-    function ranked(p: number[], kind?: "SP" | "DP") {
+    function ranked(p: number[], kind?: "SP" | "DP", selective = false) {
       return ALL_PANELS.map((panel, index) => ({ panel, index, probability: p[index] }))
         .filter(({ panel }) => !kind || new Set(panel).size === (kind === "SP" ? 3 : 2))
-        .sort((a, b) => b.probability - a.probability || a.index - b.index)
+        .sort((a, b) => (selective ? Math.round(b.probability * 1e12) - Math.round(a.probability * 1e12) : b.probability - a.probability) || a.index - b.index)
         .map(({ panel, probability }) => {
           const template = templates.get(panel)
           if (!template) throw new Error(`Missing combined panel template: ${panel}`)
@@ -198,19 +199,29 @@ export function buildCombinedAnalysis(
         })
     }
     const full = distribution("sp30")
+    const selective = buildSelectiveCombinedOutputs(market, channel, prior, full, target)
     const suttaMass = Array<number>(10).fill(0)
     full.forEach((p, i) => { suttaMass[SUTTAS[i]] += p })
     const suttas = suttaMass.map((p, sutta) => ({ sutta, probabilityPct: p * 100, score: p * 100, rank: 0 }))
       .sort((a, b) => b.score - a.score || a.sutta - b.sutta).map((pick, index) => ({ ...pick, rank: index + 1 }))
-    const pair = (absentPair: boolean) => {
+    const pair = (absentPair: boolean, values = full, rounded = false) => {
       let best = PAIRS[0], maximum = -1
       for (const candidate of PAIRS) {
-        const probability = full.reduce((sum, p, i) => sum + (candidate.every((d) => DIGITS[i].includes(d) !== absentPair) ? p : 0), 0)
+        const mass = values.reduce((sum, p, i) => sum + (candidate.every((d) => DIGITS[i].includes(d) !== absentPair) ? p : 0), 0)
+        const probability = rounded ? Math.round(mass * 1e12) / 1e12 : mass
         if (probability > maximum) { maximum = probability; best = candidate }
       }
       return [...best]
     }
-    return { panelPicks: ranked(distribution("all10")).slice(0, 10), spPicks: ranked(full, "SP").slice(0, 30), dpPicks: ranked(distribution("dp20"), "DP").slice(0, 20), rankedPanels: ranked(full), suttas, presentDigits: pair(false), absentDigits: pair(true) }
+    return {
+      panelPicks: selective?.kind === "sridevi-open" ? ranked(selective.panel, undefined, true).slice(0, 10) : ranked(distribution("all10")).slice(0, 10),
+      spPicks: selective ? ranked(selective.sp, "SP", true).slice(0, 30) : ranked(full, "SP").slice(0, 30),
+      dpPicks: selective?.kind === "sridevi-open" ? ranked(selective.dp, "DP", true).slice(0, 20) : ranked(distribution("dp20"), "DP").slice(0, 20),
+      rankedPanels: ranked(full),
+      suttas,
+      presentDigits: pair(false),
+      absentDigits: selective?.kind === "sridevi-open" ? pair(true, selective.absent, true) : pair(true),
+    }
   }
   const open = buildSide("open")
   const close = buildSide(declaredSutta === null ? "close_pre" : "close_known")
