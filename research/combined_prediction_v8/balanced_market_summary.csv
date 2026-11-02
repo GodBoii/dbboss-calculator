@@ -1,0 +1,721 @@
+market,channel,metric,approach,block,n,baseline_hits,candidate_hits,wins,losses,lift_pp,paired_p,day_bootstrap95_pp,trajectory
+Kalyan,open,top5,baseline,weight_train,20,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,top5,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,top5,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,top5,baseline,november_reused,8,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,avoid2,baseline,weight_train,20,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,avoid2,baseline,weight_validation,13,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,avoid2,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,avoid2,baseline,november_reused,8,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,panel10,baseline,weight_train,20,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,panel10,baseline,weight_validation,13,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,panel10,baseline,november_reused,8,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,sp30,baseline,weight_train,15,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,sp30,baseline,weight_validation,12,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,sp30,baseline,late_reused,3,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,sp30,baseline,november_reused,7,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,dp20,baseline,weight_train,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,dp20,baseline,weight_validation,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,dp20,baseline,late_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,open,dp20,baseline,november_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_pre,top5,local_calendar/days=30/min_support=5/penalty=0.05,weight_train,20,9,9,4,4,0.0,1.0,"[-30.0, 30.0]",validation gain reversed later
+Kalyan,close_pre,top5,local_calendar/days=30/min_support=5/penalty=0.05,weight_validation,13,5,7,6,4,15.384615384615385,0.75390625,"[-30.76923076923077, 61.53846153846154]",validation gain reversed later
+Kalyan,close_pre,top5,local_calendar/days=30/min_support=5/penalty=0.05,late_reused,5,2,3,2,1,20.0,1.0,"[-40.0, 80.0]",validation gain reversed later
+Kalyan,close_pre,top5,local_calendar/days=30/min_support=5/penalty=0.05,november_reused,8,5,4,1,2,-12.5,1.0,"[-50.0, 25.0]",validation gain reversed later
+Kalyan,close_pre,avoid2,local_calendar/days=30/min_support=5/penalty=0.05,weight_train,20,11,11,3,3,0.0,1.0,"[-25.0, 25.0]",validation gain reversed later
+Kalyan,close_pre,avoid2,local_calendar/days=30/min_support=5/penalty=0.05,weight_validation,13,3,8,6,1,38.46153846153846,0.125,"[0.0, 69.23076923076923]",validation gain reversed later
+Kalyan,close_pre,avoid2,local_calendar/days=30/min_support=5/penalty=0.05,late_reused,5,5,1,0,4,-80.0,0.125,"[-100.0, -40.0]",validation gain reversed later
+Kalyan,close_pre,avoid2,local_calendar/days=30/min_support=5/penalty=0.05,november_reused,8,4,5,3,2,12.5,1.0,"[-37.5, 62.5]",validation gain reversed later
+Kalyan,close_pre,panel10,local_calendar/days=30/min_support=5/penalty=0.05,weight_train,20,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain reversed later
+Kalyan,close_pre,panel10,local_calendar/days=30/min_support=5/penalty=0.05,weight_validation,13,0,1,1,0,7.6923076923076925,1.0,"[0.0, 23.076923076923077]",validation gain reversed later
+Kalyan,close_pre,panel10,local_calendar/days=30/min_support=5/penalty=0.05,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain reversed later
+Kalyan,close_pre,panel10,local_calendar/days=30/min_support=5/penalty=0.05,november_reused,8,1,0,0,1,-12.5,1.0,"[-37.5, 0.0]",validation gain reversed later
+Kalyan,close_pre,sp30,local_calendar/days=30/min_support=5/penalty=0.05,weight_train,12,2,3,2,1,8.333333333333334,1.0,"[-16.666666666666664, 33.33333333333333]",validation gain reversed later
+Kalyan,close_pre,sp30,local_calendar/days=30/min_support=5/penalty=0.05,weight_validation,9,1,2,2,1,11.11111111111111,1.0,"[-22.22222222222222, 44.44444444444444]",validation gain reversed later
+Kalyan,close_pre,sp30,local_calendar/days=30/min_support=5/penalty=0.05,late_reused,4,1,0,0,1,-25.0,1.0,"[-75.0, 0.0]",validation gain reversed later
+Kalyan,close_pre,sp30,local_calendar/days=30/min_support=5/penalty=0.05,november_reused,7,2,3,2,1,14.285714285714286,1.0,"[-28.57142857142857, 57.14285714285714]",validation gain reversed later
+Kalyan,close_pre,dp20,local_calendar/days=30/min_support=5/penalty=0.05,weight_train,8,1,2,2,1,12.5,1.0,"[-25.0, 50.0]",mixed or tied across blocks
+Kalyan,close_pre,dp20,local_calendar/days=30/min_support=5/penalty=0.05,weight_validation,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan,close_pre,dp20,local_calendar/days=30/min_support=5/penalty=0.05,late_reused,1,1,0,0,1,-100.0,1.0,"[-100.0, -100.0]",mixed or tied across blocks
+Kalyan,close_pre,dp20,local_calendar/days=30/min_support=5/penalty=0.05,november_reused,1,1,0,0,1,-100.0,1.0,"[-100.0, -100.0]",mixed or tied across blocks
+Kalyan,close_known,top5,baseline,weight_train,20,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,top5,baseline,weight_validation,13,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,top5,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,top5,baseline,november_reused,8,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,avoid2,baseline,weight_train,20,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,avoid2,baseline,weight_validation,13,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,avoid2,baseline,november_reused,8,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,panel10,baseline,weight_train,20,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,panel10,baseline,weight_validation,13,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,panel10,baseline,november_reused,8,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,sp30,baseline,weight_train,12,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,sp30,baseline,weight_validation,9,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,sp30,baseline,late_reused,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,sp30,baseline,november_reused,7,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,dp20,baseline,weight_train,8,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,dp20,baseline,weight_validation,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,dp20,baseline,late_reused,1,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan,close_known,dp20,baseline,november_reused,1,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,top5,baseline,weight_train,17,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,top5,baseline,weight_validation,11,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,top5,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,top5,baseline,november_reused,6,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,avoid2,baseline,weight_train,17,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,avoid2,baseline,weight_validation,11,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,avoid2,baseline,late_reused,5,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,avoid2,baseline,november_reused,6,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,panel10,baseline,weight_train,17,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,panel10,baseline,weight_validation,11,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,panel10,baseline,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,sp30,baseline,weight_train,11,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,sp30,baseline,weight_validation,9,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,sp30,baseline,late_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,sp30,baseline,november_reused,6,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,open,dp20,baseline,weight_train,6,3,3,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Kalyan Night,open,dp20,baseline,weight_validation,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Kalyan Night,open,dp20,baseline,late_reused,3,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Kalyan Night,open,dp20,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Kalyan Night,close_pre,top5,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_train,17,10,10,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,top5,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_validation,11,5,5,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,top5,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,late_reused,5,3,4,1,0,20.0,1.0,"[0.0, 60.0]",mixed or tied across blocks
+Kalyan Night,close_pre,top5,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,november_reused,6,3,2,0,1,-16.666666666666668,1.0,"[-50.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,avoid2,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_train,17,8,8,0,0,0.0,1.0,"[0.0, 0.0]",validation gain reversed later
+Kalyan Night,close_pre,avoid2,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_validation,11,3,5,2,0,18.181818181818183,0.5,"[0.0, 45.45454545454545]",validation gain reversed later
+Kalyan Night,close_pre,avoid2,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,late_reused,5,4,3,0,1,-20.0,1.0,"[-60.0, 0.0]",validation gain reversed later
+Kalyan Night,close_pre,avoid2,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,november_reused,6,2,1,0,1,-16.666666666666668,1.0,"[-50.0, 0.0]",validation gain reversed later
+Kalyan Night,close_pre,panel10,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_train,17,2,2,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,panel10,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_validation,11,1,1,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,panel10,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,late_reused,5,1,0,0,1,-20.0,1.0,"[-60.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,panel10,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,sp30,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_train,13,5,5,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,sp30,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_validation,9,2,2,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,sp30,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,late_reused,4,1,2,1,0,25.0,1.0,"[0.0, 75.0]",mixed or tied across blocks
+Kalyan Night,close_pre,sp30,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,november_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Kalyan Night,close_pre,dp20,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_train,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_pre,dp20,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,weight_validation,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_pre,dp20,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_pre,dp20,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,november_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,top5,baseline,weight_train,17,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,top5,baseline,weight_validation,11,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,top5,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,top5,baseline,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,avoid2,baseline,weight_train,17,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,avoid2,baseline,weight_validation,11,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,avoid2,baseline,november_reused,6,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,panel10,baseline,weight_train,17,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,panel10,baseline,weight_validation,11,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,panel10,baseline,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,sp30,baseline,weight_train,13,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,sp30,baseline,weight_validation,9,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,sp30,baseline,late_reused,4,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,sp30,baseline,november_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,dp20,baseline,weight_train,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,dp20,baseline,weight_validation,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,dp20,baseline,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Kalyan Night,close_known,dp20,baseline,november_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,open,top5,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,23,13,13,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,top5,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,15,7,8,1,0,6.666666666666667,1.0,"[0.0, 20.0]",validation gain persisted or tied later
+Madhur Day,open,top5,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,7,3,3,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,top5,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,10,4,4,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,avoid2,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,23,7,7,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,avoid2,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,15,5,6,2,1,6.666666666666667,1.0,"[-13.333333333333334, 26.666666666666668]",validation gain persisted or tied later
+Madhur Day,open,avoid2,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,7,5,5,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,avoid2,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,10,8,8,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,panel10,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,23,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,open,panel10,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,15,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,open,panel10,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,7,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,open,panel10,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,10,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,open,sp30,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,15,2,2,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,sp30,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,11,2,4,3,1,18.181818181818183,0.625,"[-18.181818181818183, 54.54545454545454]",validation gain persisted or tied later
+Madhur Day,open,sp30,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,sp30,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,6,3,3,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,dp20,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,7,3,3,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,dp20,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,4,1,2,1,0,25.0,1.0,"[0.0, 75.0]",validation gain persisted or tied later
+Madhur Day,open,dp20,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,open,dp20,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,4,2,2,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Madhur Day,close_pre,top5,baseline,weight_train,23,14,14,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,top5,baseline,weight_validation,15,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,top5,baseline,late_reused,7,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,top5,baseline,november_reused,10,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,avoid2,baseline,weight_train,23,14,14,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,avoid2,baseline,weight_validation,15,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,avoid2,baseline,late_reused,7,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,avoid2,baseline,november_reused,10,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,panel10,baseline,weight_train,23,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,panel10,baseline,weight_validation,15,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,panel10,baseline,late_reused,7,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,panel10,baseline,november_reused,10,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,sp30,baseline,weight_train,19,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,sp30,baseline,weight_validation,11,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,sp30,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,sp30,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,dp20,baseline,weight_train,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,dp20,baseline,weight_validation,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,dp20,baseline,late_reused,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_pre,dp20,baseline,november_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,top5,baseline,weight_train,23,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,top5,baseline,weight_validation,15,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,top5,baseline,late_reused,7,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,top5,baseline,november_reused,10,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,avoid2,baseline,weight_train,23,16,16,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,avoid2,baseline,weight_validation,15,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,avoid2,baseline,late_reused,7,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,avoid2,baseline,november_reused,10,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,panel10,baseline,weight_train,23,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,panel10,baseline,weight_validation,15,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,panel10,baseline,late_reused,7,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,panel10,baseline,november_reused,10,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,sp30,baseline,weight_train,19,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,sp30,baseline,weight_validation,11,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,sp30,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,sp30,baseline,november_reused,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,dp20,baseline,weight_train,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,dp20,baseline,weight_validation,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,dp20,baseline,late_reused,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Day,close_known,dp20,baseline,november_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Madhur Night,open,top5,baseline,weight_train,20,9,9,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,top5,baseline,weight_validation,9,5,5,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,top5,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,top5,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,avoid2,baseline,weight_train,20,11,11,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,avoid2,baseline,weight_validation,9,7,7,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,avoid2,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,avoid2,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,panel10,baseline,weight_train,20,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,panel10,baseline,weight_validation,9,2,2,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,panel10,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,panel10,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,sp30,baseline,weight_train,12,2,2,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,sp30,baseline,weight_validation,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,sp30,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,sp30,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,dp20,baseline,weight_train,8,3,3,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,dp20,baseline,weight_validation,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,open,dp20,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,open,dp20,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,top5,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,20,8,8,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_pre,top5,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,9,3,4,1,0,11.11111111111111,1.0,"[0.0, 33.33333333333333]",incomplete eligible history
+Madhur Night,close_pre,top5,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,top5,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,avoid2,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,20,15,15,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_pre,avoid2,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,9,4,4,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_pre,avoid2,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,avoid2,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,panel10,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,20,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_pre,panel10,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,9,0,1,1,0,11.11111111111111,1.0,"[0.0, 33.33333333333333]",incomplete eligible history
+Madhur Night,close_pre,panel10,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,panel10,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,sp30,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,11,4,4,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_pre,sp30,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,8,1,2,1,0,12.5,1.0,"[0.0, 37.5]",incomplete eligible history
+Madhur Night,close_pre,sp30,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,sp30,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,dp20,local_draws/draws=10/min_support=5/penalty=0.3,weight_train,9,4,4,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_pre,dp20,local_draws/draws=10/min_support=5/penalty=0.3,weight_validation,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_pre,dp20,local_draws/draws=10/min_support=5/penalty=0.3,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_pre,dp20,local_draws/draws=10/min_support=5/penalty=0.3,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,top5,baseline,weight_train,20,13,13,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,top5,baseline,weight_validation,9,4,4,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,top5,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,top5,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,avoid2,baseline,weight_train,20,12,12,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,avoid2,baseline,weight_validation,9,5,5,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,avoid2,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,avoid2,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,panel10,baseline,weight_train,20,2,2,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,panel10,baseline,weight_validation,9,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,panel10,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,panel10,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,sp30,baseline,weight_train,11,2,2,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,sp30,baseline,weight_validation,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,sp30,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,sp30,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,dp20,baseline,weight_train,9,3,3,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,dp20,baseline,weight_validation,1,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Madhur Night,close_known,dp20,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Madhur Night,close_known,dp20,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Main Bazar,open,top5,baseline,weight_train,17,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,top5,baseline,weight_validation,11,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,top5,baseline,late_reused,5,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,top5,baseline,november_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,avoid2,baseline,weight_train,17,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,avoid2,baseline,weight_validation,11,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,avoid2,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,avoid2,baseline,november_reused,6,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,panel10,baseline,weight_train,17,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,panel10,baseline,weight_validation,11,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,panel10,baseline,late_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,panel10,baseline,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,sp30,baseline,weight_train,13,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,sp30,baseline,weight_validation,9,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,sp30,baseline,late_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,sp30,baseline,november_reused,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,open,dp20,baseline,weight_train,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,open,dp20,baseline,weight_validation,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,open,dp20,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Main Bazar,open,dp20,baseline,november_reused,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,close_pre,top5,baseline,weight_train,17,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,top5,baseline,weight_validation,11,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,top5,baseline,late_reused,5,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,top5,baseline,november_reused,6,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,avoid2,baseline,weight_train,17,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,avoid2,baseline,weight_validation,11,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,avoid2,baseline,late_reused,5,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,avoid2,baseline,november_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,panel10,baseline,weight_train,17,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,panel10,baseline,weight_validation,11,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,panel10,baseline,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,sp30,baseline,weight_train,14,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,sp30,baseline,weight_validation,7,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,sp30,baseline,late_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,sp30,baseline,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_pre,dp20,baseline,weight_train,3,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,close_pre,dp20,baseline,weight_validation,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,close_pre,dp20,baseline,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,close_pre,dp20,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Main Bazar,close_known,top5,baseline,weight_train,17,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,top5,baseline,weight_validation,11,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,top5,baseline,late_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,top5,baseline,november_reused,6,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,avoid2,baseline,weight_train,17,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,avoid2,baseline,weight_validation,11,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,avoid2,baseline,november_reused,6,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,panel10,baseline,weight_train,17,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,panel10,baseline,weight_validation,11,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,panel10,baseline,late_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,panel10,baseline,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,sp30,baseline,weight_train,14,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,sp30,baseline,weight_validation,7,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,sp30,baseline,late_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,sp30,baseline,november_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Main Bazar,close_known,dp20,baseline,weight_train,3,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,close_known,dp20,baseline,weight_validation,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,close_known,dp20,baseline,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Main Bazar,close_known,dp20,baseline,november_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Milan Day,open,top5,baseline,weight_train,19,11,11,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,top5,baseline,weight_validation,13,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,top5,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,top5,baseline,november_reused,8,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,avoid2,baseline,weight_train,19,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,avoid2,baseline,weight_validation,13,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,avoid2,baseline,november_reused,8,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,panel10,baseline,weight_train,19,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,panel10,baseline,weight_validation,13,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,panel10,baseline,november_reused,8,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,sp30,baseline,weight_train,14,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,sp30,baseline,weight_validation,9,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,sp30,baseline,late_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,sp30,baseline,november_reused,7,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,dp20,baseline,weight_train,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,dp20,baseline,weight_validation,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,dp20,baseline,late_reused,3,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,open,dp20,baseline,november_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,top5,baseline,weight_train,19,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,top5,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,top5,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,top5,baseline,november_reused,8,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,avoid2,baseline,weight_train,19,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,avoid2,baseline,weight_validation,13,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,avoid2,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,panel10,baseline,weight_train,19,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,panel10,baseline,weight_validation,13,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,panel10,baseline,november_reused,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,sp30,baseline,weight_train,17,2,2,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Day,close_pre,sp30,baseline,weight_validation,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Day,close_pre,sp30,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Milan Day,close_pre,sp30,baseline,november_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Day,close_pre,dp20,baseline,weight_train,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,dp20,baseline,weight_validation,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,dp20,baseline,late_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_pre,dp20,baseline,november_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,top5,baseline,weight_train,19,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,top5,baseline,weight_validation,13,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,top5,baseline,late_reused,5,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,top5,baseline,november_reused,8,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,avoid2,baseline,weight_train,19,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,avoid2,baseline,weight_validation,13,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,avoid2,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,panel10,baseline,weight_train,19,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,panel10,baseline,weight_validation,13,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,panel10,baseline,november_reused,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,sp30,baseline,weight_train,17,7,7,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Day,close_known,sp30,baseline,weight_validation,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Day,close_known,sp30,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Milan Day,close_known,sp30,baseline,november_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Day,close_known,dp20,baseline,weight_train,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,dp20,baseline,weight_validation,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,dp20,baseline,late_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Day,close_known,dp20,baseline,november_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,top5,baseline,weight_train,19,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,top5,baseline,weight_validation,13,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,top5,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,top5,baseline,november_reused,8,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,avoid2,baseline,weight_train,19,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,avoid2,baseline,weight_validation,13,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,avoid2,baseline,november_reused,8,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,panel10,baseline,weight_train,19,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,panel10,baseline,weight_validation,13,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,panel10,baseline,november_reused,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,sp30,baseline,weight_train,16,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,sp30,baseline,weight_validation,12,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,sp30,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,sp30,baseline,november_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,open,dp20,baseline,weight_train,3,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Night,open,dp20,baseline,weight_validation,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Night,open,dp20,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Milan Night,open,dp20,baseline,november_reused,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Night,close_pre,top5,baseline,weight_train,19,13,13,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,top5,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,top5,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,top5,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,avoid2,baseline,weight_train,19,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,avoid2,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,avoid2,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,panel10,baseline,weight_train,19,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,panel10,baseline,weight_validation,13,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,panel10,baseline,november_reused,8,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,sp30,baseline,weight_train,19,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,sp30,baseline,weight_validation,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,sp30,baseline,late_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,sp30,baseline,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_pre,dp20,baseline,weight_train,0,0,0,0,0,,1.0,,incomplete eligible history
+Milan Night,close_pre,dp20,baseline,weight_validation,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Night,close_pre,dp20,baseline,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Night,close_pre,dp20,baseline,november_reused,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Night,close_known,top5,baseline,weight_train,19,13,13,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,top5,baseline,weight_validation,13,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,top5,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,top5,baseline,november_reused,8,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,avoid2,baseline,weight_train,19,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,avoid2,baseline,weight_validation,13,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,avoid2,baseline,late_reused,5,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,avoid2,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,panel10,baseline,weight_train,19,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,panel10,baseline,weight_validation,13,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,panel10,baseline,november_reused,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,sp30,baseline,weight_train,19,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,sp30,baseline,weight_validation,8,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,sp30,baseline,late_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,sp30,baseline,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Milan Night,close_known,dp20,baseline,weight_train,0,0,0,0,0,,1.0,,incomplete eligible history
+Milan Night,close_known,dp20,baseline,weight_validation,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Night,close_known,dp20,baseline,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Milan Night,close_known,dp20,baseline,november_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Rajdhani Day,open,top5,baseline,weight_train,20,12,12,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,top5,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,top5,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,top5,baseline,november_reused,8,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,avoid2,baseline,weight_train,20,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,avoid2,baseline,weight_validation,13,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,avoid2,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,avoid2,baseline,november_reused,8,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,panel10,baseline,weight_train,20,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,panel10,baseline,weight_validation,13,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,panel10,baseline,november_reused,8,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,sp30,baseline,weight_train,16,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,sp30,baseline,weight_validation,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,sp30,baseline,late_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,sp30,baseline,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,open,dp20,baseline,weight_train,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Rajdhani Day,open,dp20,baseline,weight_validation,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Rajdhani Day,open,dp20,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Rajdhani Day,open,dp20,baseline,november_reused,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Rajdhani Day,close_pre,top5,baseline,weight_train,20,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,top5,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,top5,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,top5,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,avoid2,baseline,weight_train,20,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,avoid2,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,avoid2,baseline,november_reused,8,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,panel10,baseline,weight_train,20,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,panel10,baseline,weight_validation,13,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,panel10,baseline,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,panel10,baseline,november_reused,8,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,sp30,baseline,weight_train,13,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,sp30,baseline,weight_validation,11,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,sp30,baseline,late_reused,4,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,sp30,baseline,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,dp20,baseline,weight_train,7,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,dp20,baseline,weight_validation,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,dp20,baseline,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_pre,dp20,baseline,november_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,top5,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_train,20,11,11,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Day,close_known,top5,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_validation,13,8,9,1,0,7.6923076923076925,1.0,"[0.0, 23.076923076923077]",validation gain persisted or tied later
+Rajdhani Day,close_known,top5,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,late_reused,5,5,5,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Day,close_known,top5,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,november_reused,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Day,close_known,avoid2,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_train,20,8,8,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,avoid2,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,avoid2,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,avoid2,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,november_reused,8,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,panel10,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_train,20,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,panel10,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_validation,13,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,panel10,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,panel10,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,november_reused,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,sp30,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_train,13,1,1,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Day,close_known,sp30,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_validation,11,4,5,1,0,9.090909090909092,1.0,"[0.0, 27.27272727272727]",validation gain persisted or tied later
+Rajdhani Day,close_known,sp30,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,late_reused,4,2,2,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Day,close_known,sp30,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Day,close_known,dp20,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_train,7,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,dp20,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,weight_validation,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,dp20,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Day,close_known,dp20,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,november_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,top5,baseline,weight_train,17,12,12,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,top5,baseline,weight_validation,11,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,top5,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,top5,baseline,november_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,avoid2,baseline,weight_train,17,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,avoid2,baseline,weight_validation,11,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,avoid2,baseline,late_reused,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,avoid2,baseline,november_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,panel10,baseline,weight_train,17,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,panel10,baseline,weight_validation,11,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,panel10,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,panel10,baseline,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,sp30,baseline,weight_train,9,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,sp30,baseline,weight_validation,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,sp30,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,sp30,baseline,november_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,open,dp20,baseline,weight_train,8,3,3,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Rajdhani Night,open,dp20,baseline,weight_validation,3,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Rajdhani Night,open,dp20,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Rajdhani Night,open,dp20,baseline,november_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Rajdhani Night,close_pre,top5,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_train,17,12,12,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,top5,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,11,2,4,2,0,18.181818181818183,0.5,"[0.0, 45.45454545454545]",validation gain persisted or tied later
+Rajdhani Night,close_pre,top5,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,late_reused,5,2,4,2,0,40.0,0.5,"[0.0, 80.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,top5,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,november_reused,6,2,5,4,1,50.0,0.375,"[-16.666666666666664, 100.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,avoid2,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_train,17,8,8,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,avoid2,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,11,8,9,1,0,9.090909090909092,1.0,"[0.0, 27.27272727272727]",validation gain persisted or tied later
+Rajdhani Night,close_pre,avoid2,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,late_reused,5,3,5,2,0,40.0,0.5,"[0.0, 80.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,avoid2,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,panel10,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_train,17,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_pre,panel10,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,11,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_pre,panel10,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,late_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_pre,panel10,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_pre,sp30,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_train,15,5,5,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Rajdhani Night,close_pre,sp30,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,9,2,2,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Rajdhani Night,close_pre,sp30,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,late_reused,4,0,1,1,0,25.0,1.0,"[0.0, 75.0]",mixed or tied across blocks
+Rajdhani Night,close_pre,sp30,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,november_reused,4,1,2,1,0,25.0,1.0,"[0.0, 75.0]",mixed or tied across blocks
+Rajdhani Night,close_pre,dp20,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_train,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,dp20,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,2,0,1,1,0,50.0,1.0,"[0.0, 100.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,dp20,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Night,close_pre,dp20,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,november_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Rajdhani Night,close_known,top5,baseline,weight_train,17,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,top5,baseline,weight_validation,11,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,top5,baseline,late_reused,5,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,top5,baseline,november_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,avoid2,baseline,weight_train,17,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,avoid2,baseline,weight_validation,11,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,avoid2,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,avoid2,baseline,november_reused,6,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,panel10,baseline,weight_train,17,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,panel10,baseline,weight_validation,11,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,panel10,baseline,late_reused,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,panel10,baseline,november_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,sp30,baseline,weight_train,15,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,sp30,baseline,weight_validation,9,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,sp30,baseline,late_reused,4,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,sp30,baseline,november_reused,4,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,dp20,baseline,weight_train,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,dp20,baseline,weight_validation,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,dp20,baseline,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Rajdhani Night,close_known,dp20,baseline,november_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,open,top5,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,23,14,14,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,open,top5,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,15,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,open,top5,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,7,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,open,top5,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,10,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,open,avoid2,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,23,13,13,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Sridevi,open,avoid2,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,15,6,7,1,0,6.666666666666667,1.0,"[0.0, 20.0]",validation gain persisted or tied later
+Sridevi,open,avoid2,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,7,3,3,1,1,0.0,1.0,"[-42.857142857142854, 42.857142857142854]",validation gain persisted or tied later
+Sridevi,open,avoid2,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,10,7,9,3,1,20.0,0.625,"[-20.0, 60.0]",validation gain persisted or tied later
+Sridevi,open,panel10,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,23,4,4,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,open,panel10,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,15,1,1,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,open,panel10,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,7,0,0,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,open,panel10,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,10,0,2,2,0,20.0,0.5,"[0.0, 50.0]",mixed or tied across blocks
+Sridevi,open,sp30,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,20,7,7,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,open,sp30,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,13,2,2,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,open,sp30,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,6,0,1,1,0,16.666666666666668,1.0,"[0.0, 50.0]",mixed or tied across blocks
+Sridevi,open,sp30,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,8,3,4,2,1,12.5,1.0,"[-25.0, 50.0]",mixed or tied across blocks
+Sridevi,open,dp20,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,3,1,1,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,open,dp20,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,open,dp20,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,1,0,1,1,0,100.0,1.0,"[100.0, 100.0]",mixed or tied across blocks
+Sridevi,open,dp20,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,2,0,1,1,0,50.0,1.0,"[0.0, 100.0]",mixed or tied across blocks
+Sridevi,close_pre,top5,baseline,weight_train,23,13,13,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,top5,baseline,weight_validation,15,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,top5,baseline,late_reused,7,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,top5,baseline,november_reused,10,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,avoid2,baseline,weight_train,23,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,avoid2,baseline,weight_validation,15,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,avoid2,baseline,late_reused,7,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,avoid2,baseline,november_reused,10,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,panel10,baseline,weight_train,23,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,panel10,baseline,weight_validation,15,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,panel10,baseline,late_reused,7,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,panel10,baseline,november_reused,10,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,sp30,baseline,weight_train,19,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,sp30,baseline,weight_validation,12,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,sp30,baseline,late_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,sp30,baseline,november_reused,8,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi,close_pre,dp20,baseline,weight_train,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi,close_pre,dp20,baseline,weight_validation,3,2,2,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi,close_pre,dp20,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Sridevi,close_pre,dp20,baseline,november_reused,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi,close_known,top5,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_train,23,10,11,1,0,4.3478260869565215,1.0,"[0.0, 13.043478260869565]",mixed or tied across blocks
+Sridevi,close_known,top5,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_validation,15,9,9,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,close_known,top5,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,late_reused,7,3,3,1,1,0.0,1.0,"[-42.857142857142854, 42.857142857142854]",mixed or tied across blocks
+Sridevi,close_known,top5,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,november_reused,10,5,4,0,1,-10.0,1.0,"[-30.0, 0.0]",mixed or tied across blocks
+Sridevi,close_known,avoid2,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_train,23,11,12,2,1,4.3478260869565215,1.0,"[-8.695652173913043, 17.391304347826086]",validation gain reversed later
+Sridevi,close_known,avoid2,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_validation,15,8,9,1,0,6.666666666666667,1.0,"[0.0, 20.0]",validation gain reversed later
+Sridevi,close_known,avoid2,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,late_reused,7,4,4,2,2,0.0,1.0,"[-57.14285714285714, 57.14285714285714]",validation gain reversed later
+Sridevi,close_known,avoid2,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,november_reused,10,5,3,0,2,-20.0,0.5,"[-50.0, 0.0]",validation gain reversed later
+Sridevi,close_known,panel10,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_train,23,2,3,1,0,4.3478260869565215,1.0,"[0.0, 13.043478260869565]",mixed or tied across blocks
+Sridevi,close_known,panel10,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_validation,15,0,0,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,close_known,panel10,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,late_reused,7,2,0,0,2,-28.571428571428573,0.5,"[-71.42857142857143, 0.0]",mixed or tied across blocks
+Sridevi,close_known,panel10,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,november_reused,10,0,0,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,close_known,sp30,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_train,19,10,10,1,1,0.0,1.0,"[-15.789473684210526, 15.789473684210526]",mixed or tied across blocks
+Sridevi,close_known,sp30,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_validation,12,4,4,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi,close_known,sp30,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,late_reused,6,1,1,1,1,0.0,1.0,"[-50.0, 50.0]",mixed or tied across blocks
+Sridevi,close_known,sp30,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,november_reused,8,1,0,0,1,-12.5,1.0,"[-37.5, 0.0]",mixed or tied across blocks
+Sridevi,close_known,dp20,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_train,4,1,2,2,1,25.0,1.0,"[-50.0, 100.0]",incomplete eligible history
+Sridevi,close_known,dp20,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,weight_validation,3,2,2,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi,close_known,dp20,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Sridevi,close_known,dp20,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,november_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi Night,open,top5,baseline,weight_train,23,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,top5,baseline,weight_validation,15,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,top5,baseline,late_reused,6,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,top5,baseline,november_reused,10,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,avoid2,baseline,weight_train,23,16,16,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,avoid2,baseline,weight_validation,15,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,avoid2,baseline,late_reused,6,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,avoid2,baseline,november_reused,10,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,panel10,baseline,weight_train,23,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,panel10,baseline,weight_validation,15,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,panel10,baseline,late_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,panel10,baseline,november_reused,10,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,sp30,baseline,weight_train,14,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,sp30,baseline,weight_validation,12,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,sp30,baseline,late_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,sp30,baseline,november_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,dp20,baseline,weight_train,9,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,dp20,baseline,weight_validation,3,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,dp20,baseline,late_reused,2,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,open,dp20,baseline,november_reused,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,top5,baseline,weight_train,23,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,top5,baseline,weight_validation,15,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,top5,baseline,late_reused,6,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,top5,baseline,november_reused,10,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,avoid2,baseline,weight_train,23,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,avoid2,baseline,weight_validation,15,11,11,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,avoid2,baseline,late_reused,6,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,avoid2,baseline,november_reused,10,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,panel10,baseline,weight_train,23,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,panel10,baseline,weight_validation,15,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,panel10,baseline,late_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,panel10,baseline,november_reused,10,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,sp30,baseline,weight_train,18,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,sp30,baseline,weight_validation,10,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,sp30,baseline,late_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,sp30,baseline,november_reused,8,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Sridevi Night,close_pre,dp20,baseline,weight_train,5,1,1,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi Night,close_pre,dp20,baseline,weight_validation,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi Night,close_pre,dp20,baseline,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Sridevi Night,close_pre,dp20,baseline,november_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi Night,close_known,top5,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,23,12,12,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi Night,close_known,top5,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,15,6,6,2,2,0.0,1.0,"[-26.666666666666668, 26.666666666666668]",mixed or tied across blocks
+Sridevi Night,close_known,top5,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,6,3,2,2,3,-16.666666666666668,1.0,"[-83.33333333333334, 66.66666666666666]",mixed or tied across blocks
+Sridevi Night,close_known,top5,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,10,5,5,2,2,0.0,1.0,"[-40.0, 40.0]",mixed or tied across blocks
+Sridevi Night,close_known,avoid2,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,23,13,13,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi Night,close_known,avoid2,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,15,10,10,0,0,0.0,1.0,"[0.0, 0.0]",mixed or tied across blocks
+Sridevi Night,close_known,avoid2,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,6,1,4,3,0,50.0,0.25,"[16.666666666666664, 83.33333333333334]",mixed or tied across blocks
+Sridevi Night,close_known,avoid2,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,10,7,5,1,3,-20.0,0.625,"[-60.0, 20.0]",mixed or tied across blocks
+Sridevi Night,close_known,panel10,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,23,0,0,0,0,0.0,1.0,"[0.0, 0.0]",validation gain reversed later
+Sridevi Night,close_known,panel10,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,15,0,1,1,0,6.666666666666667,1.0,"[0.0, 20.0]",validation gain reversed later
+Sridevi Night,close_known,panel10,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,6,1,2,2,1,16.666666666666668,1.0,"[-33.33333333333333, 66.66666666666666]",validation gain reversed later
+Sridevi Night,close_known,panel10,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,10,3,2,1,2,-10.0,1.0,"[-40.0, 20.0]",validation gain reversed later
+Sridevi Night,close_known,sp30,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,18,4,4,0,0,0.0,1.0,"[0.0, 0.0]",validation gain persisted or tied later
+Sridevi Night,close_known,sp30,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,10,0,2,2,0,20.0,0.5,"[0.0, 50.0]",validation gain persisted or tied later
+Sridevi Night,close_known,sp30,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,6,2,2,2,2,0.0,1.0,"[-66.66666666666666, 66.66666666666666]",validation gain persisted or tied later
+Sridevi Night,close_known,sp30,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,8,3,3,2,2,0.0,1.0,"[-50.0, 50.0]",validation gain persisted or tied later
+Sridevi Night,close_known,dp20,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_train,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi Night,close_known,dp20,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,weight_validation,5,3,3,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Sridevi Night,close_known,dp20,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,late_reused,0,0,0,0,0,,1.0,,incomplete eligible history
+Sridevi Night,close_known,dp20,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,november_reused,2,0,0,0,0,0.0,1.0,"[0.0, 0.0]",incomplete eligible history
+Time Bazar,open,top5,baseline,weight_train,19,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,top5,baseline,weight_validation,13,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,top5,baseline,late_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,top5,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,avoid2,baseline,weight_train,19,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,avoid2,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,avoid2,baseline,late_reused,6,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,avoid2,baseline,november_reused,8,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,panel10,baseline,weight_train,19,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,panel10,baseline,weight_validation,13,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,panel10,baseline,late_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,panel10,baseline,november_reused,8,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,sp30,baseline,weight_train,15,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,sp30,baseline,weight_validation,7,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,sp30,baseline,late_reused,3,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,sp30,baseline,november_reused,3,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,dp20,baseline,weight_train,4,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,dp20,baseline,weight_validation,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,dp20,baseline,late_reused,3,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,open,dp20,baseline,november_reused,5,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,top5,baseline,weight_train,19,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,top5,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,top5,baseline,late_reused,6,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,top5,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,avoid2,baseline,weight_train,19,9,9,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,avoid2,baseline,weight_validation,13,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,avoid2,baseline,late_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,avoid2,baseline,november_reused,8,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,panel10,baseline,weight_train,19,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,panel10,baseline,weight_validation,13,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,panel10,baseline,late_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,panel10,baseline,november_reused,8,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,sp30,baseline,weight_train,16,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,sp30,baseline,weight_validation,12,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,sp30,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,sp30,baseline,november_reused,4,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,dp20,baseline,weight_train,3,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,dp20,baseline,weight_validation,1,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,dp20,baseline,late_reused,1,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_pre,dp20,baseline,november_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,top5,baseline,weight_train,19,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,top5,baseline,weight_validation,13,6,6,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,top5,baseline,late_reused,6,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,top5,baseline,november_reused,8,4,4,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,avoid2,baseline,weight_train,19,10,10,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,avoid2,baseline,weight_validation,13,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,avoid2,baseline,late_reused,6,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,avoid2,baseline,november_reused,8,7,7,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,panel10,baseline,weight_train,19,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,panel10,baseline,weight_validation,13,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,panel10,baseline,late_reused,6,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,panel10,baseline,november_reused,8,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,sp30,baseline,weight_train,16,5,5,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,sp30,baseline,weight_validation,12,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,sp30,baseline,late_reused,5,2,2,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,sp30,baseline,november_reused,4,3,3,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,dp20,baseline,weight_train,3,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,dp20,baseline,weight_validation,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,dp20,baseline,late_reused,1,0,0,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
+Time Bazar,close_known,dp20,baseline,november_reused,4,1,1,0,0,0.0,1.0,"[0.0, 0.0]",unchanged throughout
