@@ -1,0 +1,44 @@
+{
+  "createdAtUTC": "2026-11-02T10:13:45.839685+00:00",
+  "status": "posthoc diagnostic, not newly untouched confirmation",
+  "disclosure": "This independent-output-routing design was conceived AFTER reading the main study extension scores. Source specialist choices were frozen before fetching extension outcomes; router combinations were not preregistered before that fetch.",
+  "sourceFreezeUTC": "2026-11-02T10:07:45.446048+00:00",
+  "sourceSHA256": {
+    "selection_manifest.json": "bd312c9af8fd8173933fd96f3e6c02027d71ab03eadc287d8821bf4c6da2d0b7",
+    "selection.json": "b6de27c246646c2c54c2f3e1b251258179db2489ba7f98baf0e860ebd212d42b",
+    "catalogues.json": "a6121a081a8a21f44b40907b5e9a134ebae4186ce2fc1af01e480b3e9635869a",
+    "hits.npz": "f6e333572803fe7e259becef90d276611c80895b2fd4372fa1dcb3c1f60d272d",
+    "extension_hits.npz": "6402f425d3b2beb07e5219f5b357176dd5caa96507f35e9c9e5f36678fd6da7b",
+    "extension_results.json": "d9503b92888ef16e93fba6a9063cd506ff99a1e4b71e0a22c944c8598fdd036b"
+  },
+  "scriptSHA256": "630402422167859d275ca89756426b10e8d6f714bac9e022fd903eed87151372",
+  "design": "3 channels x 13 scopes x 3 panel budgets x 2^3 production/specialist output choices = 936 configurations; all are logged including failures and duplicate choices.",
+  "componentOrder": [
+    "top5",
+    "avoid2",
+    "panel budget"
+  ],
+  "selection": "No extension outcomes enter router choice. Require >=15 eligible refine_train and >=8 eligible refine_validation rows; joint train delta>=0 and validation delta>0; top5, avoid2 and panel component deltas>=0 in both blocks, each on its own eligibility. Maximize validation joint hits then prefer production, then training joint hits, then lexicographic choice. Fall back to 000 if none pass.",
+  "interpretation": "Outputs are independently routed and need not come from one coherent panel probability distribution. Fixed budgets remain Top5Sutta, two avoid digits, and top10/SP30/DP20 panels. No model fitting or new probability model occurs.",
+  "historicalRescoreDifferences": [
+    {
+      "key": "close_pre__refined__top5",
+      "count": 1,
+      "indices": [
+        [
+          228,
+          1112
+        ]
+      ]
+    }
+  ],
+  "archivePolicy": "Use original hits.npz for all historical dates and extension_hits.npz only for extension dates. Historical dates, markets, eligibility and production hit prefixes match exactly. Any nonproduction rescore differences are disclosed; no frozen historical score is replaced by a later rescore.",
+  "checks": [
+    "manual Boolean routing fixture",
+    "frozen source manifest hashes",
+    "historical date/market/eligibility/production prefix equality",
+    "all frozen selected-specialist historical hit prefixes equal",
+    "catalogue index and candidate-ID consistency",
+    "baseline joint/component archive equality"
+  ]
+}
