@@ -1,0 +1,236 @@
+[
+  {
+    "channel": "open",
+    "market": "ALL",
+    "index": 24,
+    "selected": "local_draws/draws=10/min_support=10/penalty=0.3"
+  },
+  {
+    "channel": "open",
+    "market": "Kalyan",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Kalyan Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Madhur Day",
+    "index": 21,
+    "selected": "local_draws/draws=10/min_support=5/penalty=0.3"
+  },
+  {
+    "channel": "open",
+    "market": "Madhur Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Main Bazar",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Milan Day",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Milan Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Sridevi",
+    "index": 39,
+    "selected": "shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1"
+  },
+  {
+    "channel": "open",
+    "market": "Sridevi Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "open",
+    "market": "Time Bazar",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "ALL",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Kalyan",
+    "index": 7,
+    "selected": "local_calendar/days=30/min_support=5/penalty=0.05"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Kalyan Night",
+    "index": 41,
+    "selected": "shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Madhur Day",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Madhur Night",
+    "index": 21,
+    "selected": "local_draws/draws=10/min_support=5/penalty=0.3"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Main Bazar",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Milan Day",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Milan Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Rajdhani Night",
+    "index": 51,
+    "selected": "shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Sridevi",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Sridevi Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Time Bazar",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "ALL",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Kalyan",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Kalyan Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Madhur Day",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Madhur Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Main Bazar",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Milan Day",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Milan Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Rajdhani Day",
+    "index": 38,
+    "selected": "shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25"
+  },
+  {
+    "channel": "close_known",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "selected": "baseline"
+  },
+  {
+    "channel": "close_known",
+    "market": "Sridevi",
+    "index": 63,
+    "selected": "decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1"
+  },
+  {
+    "channel": "close_known",
+    "market": "Sridevi Night",
+    "index": 39,
+    "selected": "shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1"
+  },
+  {
+    "channel": "close_known",
+    "market": "Time Bazar",
+    "index": 0,
+    "selected": "baseline"
+  }
+]
