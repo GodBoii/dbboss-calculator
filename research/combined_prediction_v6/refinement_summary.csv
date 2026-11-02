@@ -1,0 +1,703 @@
+channel,objective,market,block,stage1_candidate,final_candidate,n,stage1_hits,final_hits,net_added_hits
+open,top5,ALL,refine_validation,digit_symmetry/transform=rotate3/alpha=0.5,cross:causal_history/mechanism=overdue_digits_7/strength=0.25:joint_likelihood/sutta=panel/digits=blend/strength=1.5:0.75,152,88,89,1
+open,top5,ALL,late_reused,digit_symmetry/transform=rotate3/alpha=0.5,cross:causal_history/mechanism=overdue_digits_7/strength=0.25:joint_likelihood/sutta=panel/digits=blend/strength=1.5:0.75,61,28,30,2
+open,top5,Kalyan,refine_validation,joint_likelihood/sutta=panel/digits=blend/strength=1.5,refine:bernoulli_digits/source=blend/strength=1.0:base=0.5,13,9,9,0
+open,top5,Kalyan,late_reused,joint_likelihood/sutta=panel/digits=blend/strength=1.5,refine:bernoulli_digits/source=blend/strength=1.0:base=0.5,5,5,3,-2
+open,top5,Kalyan Night,refine_validation,causal_history/mechanism=overdue_digits_7/strength=-0.5,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=0.75,11,7,9,2
+open,top5,Kalyan Night,late_reused,causal_history/mechanism=overdue_digits_7/strength=-0.5,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=0.75,5,3,2,-1
+open,top5,Madhur Day,refine_validation,digit_symmetry/transform=rotate3/alpha=0.25,cross:bernoulli_digits/source=blend/strength=-0.5:causal_history/mechanism=recent_sutta_30/strength=-0.5:0.75,15,7,12,5
+open,top5,Madhur Day,late_reused,digit_symmetry/transform=rotate3/alpha=0.25,cross:bernoulli_digits/source=blend/strength=-0.5:causal_history/mechanism=recent_sutta_30/strength=-0.5:0.75,7,3,4,1
+open,top5,Madhur Night,refine_validation,causal_history/mechanism=recent_digits_7/strength=1.0,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.5,9,7,8,1
+open,top5,Madhur Night,late_reused,causal_history/mechanism=recent_digits_7/strength=1.0,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.5,0,0,0,0
+open,top5,Main Bazar,refine_validation,causal_history/mechanism=recent_digits_30/strength=1.0,production,11,6,7,1
+open,top5,Main Bazar,late_reused,causal_history/mechanism=recent_digits_30/strength=1.0,production,5,1,4,3
+open,top5,Milan Day,refine_validation,digit_symmetry/transform=rotate3/alpha=0.25,cross:causal_history/mechanism=overdue_digits_7/strength=0.25:digit_symmetry/transform=rotate1/alpha=0.25:0.25,13,8,10,2
+open,top5,Milan Day,late_reused,digit_symmetry/transform=rotate3/alpha=0.25,cross:causal_history/mechanism=overdue_digits_7/strength=0.25:digit_symmetry/transform=rotate1/alpha=0.25:0.25,5,3,2,-1
+open,top5,Milan Night,refine_validation,causal_history/mechanism=overdue_sutta_7/strength=0.25,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=0.75,13,2,9,7
+open,top5,Milan Night,late_reused,causal_history/mechanism=overdue_sutta_7/strength=0.25,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=0.75,5,3,1,-2
+open,top5,Rajdhani Day,refine_validation,digit_symmetry/transform=mirror5/alpha=0.25,cross:causal_history/mechanism=recent_digits_7/strength=1.0:causal_history/mechanism=recent_sutta_30/strength=-0.5:0.75,13,4,11,7
+open,top5,Rajdhani Day,late_reused,digit_symmetry/transform=mirror5/alpha=0.25,cross:causal_history/mechanism=recent_digits_7/strength=1.0:causal_history/mechanism=recent_sutta_30/strength=-0.5:0.75,5,2,2,0
+open,top5,Rajdhani Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=0.25,refine:digit_symmetry/transform=multiply3/alpha=0.5:base=0.75,11,9,6,-3
+open,top5,Rajdhani Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=0.25,refine:digit_symmetry/transform=multiply3/alpha=0.5:base=0.75,5,4,4,0
+open,top5,Sridevi,refine_validation,digit_symmetry/transform=rotate1/alpha=1.0,refine:causal_history/mechanism=recent_sutta_30/strength=0.25:base=0.5,15,6,9,3
+open,top5,Sridevi,late_reused,digit_symmetry/transform=rotate1/alpha=1.0,refine:causal_history/mechanism=recent_sutta_30/strength=0.25:base=0.5,7,6,2,-4
+open,top5,Sridevi Night,refine_validation,digit_symmetry/transform=rotate3/alpha=1.0,refine:probability_mixture/source=joint_evidence/alpha=0.3:base=0.25,15,9,13,4
+open,top5,Sridevi Night,late_reused,digit_symmetry/transform=rotate3/alpha=1.0,refine:probability_mixture/source=joint_evidence/alpha=0.3:base=0.25,6,2,3,1
+open,top5,Time Bazar,refine_validation,joint_likelihood/sutta=panel/digits=blend/strength=1.5,cross:causal_history/mechanism=overdue_sutta_90/strength=2.0:causal_history/mechanism=recent_sutta_30/strength=-0.5:0.25,13,6,9,3
+open,top5,Time Bazar,late_reused,joint_likelihood/sutta=panel/digits=blend/strength=1.5,cross:causal_history/mechanism=overdue_sutta_90/strength=2.0:causal_history/mechanism=recent_sutta_30/strength=-0.5:0.25,6,1,2,1
+open,avoid2,ALL,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=1.0,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:0.5,152,77,91,14
+open,avoid2,ALL,late_reused,causal_history/mechanism=overdue_sutta_30/strength=1.0,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:0.5,61,35,31,-4
+open,avoid2,Kalyan,refine_validation,digit_symmetry/transform=rotate1/alpha=0.25,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:digit_symmetry/transform=mirror5/alpha=0.25:0.75,13,5,9,4
+open,avoid2,Kalyan,late_reused,digit_symmetry/transform=rotate1/alpha=0.25,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:digit_symmetry/transform=mirror5/alpha=0.25:0.75,5,0,3,3
+open,avoid2,Kalyan Night,refine_validation,source_fusion/source=raw/alpha=0.65/mode=arithmetic,cross:bernoulli_digits/source=blend/strength=-0.5:causal_history/mechanism=recent_digits_30/strength=1.0:0.25,11,4,8,4
+open,avoid2,Kalyan Night,late_reused,source_fusion/source=raw/alpha=0.65/mode=arithmetic,cross:bernoulli_digits/source=blend/strength=-0.5:causal_history/mechanism=recent_digits_30/strength=1.0:0.25,5,3,3,0
+open,avoid2,Madhur Day,refine_validation,causal_history/mechanism=recent_sutta_30/strength=1.0,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,15,5,10,5
+open,avoid2,Madhur Day,late_reused,causal_history/mechanism=recent_sutta_30/strength=1.0,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,7,5,1,-4
+open,avoid2,Madhur Night,refine_validation,bernoulli_digits/source=blend/strength=-0.5,cross:causal_history/mechanism=overdue_sutta_30/strength=1.0:digit_symmetry/transform=rotate3/alpha=0.5:0.25,9,8,9,1
+open,avoid2,Madhur Night,late_reused,bernoulli_digits/source=blend/strength=-0.5,cross:causal_history/mechanism=overdue_sutta_30/strength=1.0:digit_symmetry/transform=rotate3/alpha=0.5:0.25,0,0,0,0
+open,avoid2,Main Bazar,refine_validation,causal_history/mechanism=recent_digits_30/strength=-1.0,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,11,7,9,2
+open,avoid2,Main Bazar,late_reused,causal_history/mechanism=recent_digits_30/strength=-1.0,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,5,4,1,-3
+open,avoid2,Milan Day,refine_validation,digit_symmetry/transform=multiply3/alpha=0.5,refine:causal_history/mechanism=recent_digits_7/strength=-0.5:base=0.75,13,7,11,4
+open,avoid2,Milan Day,late_reused,digit_symmetry/transform=multiply3/alpha=0.5,refine:causal_history/mechanism=recent_digits_7/strength=-0.5:base=0.75,5,1,1,0
+open,avoid2,Milan Night,refine_validation,causal_history/mechanism=recent_digits_90/strength=0.5,refine:digit_symmetry/transform=rotate3/alpha=1.0:base=1.0,13,9,11,2
+open,avoid2,Milan Night,late_reused,causal_history/mechanism=recent_digits_90/strength=0.5,refine:digit_symmetry/transform=rotate3/alpha=1.0:base=1.0,5,3,3,0
+open,avoid2,Rajdhani Day,refine_validation,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:causal_history/mechanism=overdue_digits_7/strength=0.5:base=0.75,13,6,10,4
+open,avoid2,Rajdhani Day,late_reused,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:causal_history/mechanism=overdue_digits_7/strength=0.5:base=0.75,5,3,3,0
+open,avoid2,Rajdhani Night,refine_validation,causal_history/mechanism=recent_digits_7/strength=-0.5,refine:causal_history/mechanism=recent_digits_30/strength=-1.0:base=0.25,11,6,10,4
+open,avoid2,Rajdhani Night,late_reused,causal_history/mechanism=recent_digits_7/strength=-0.5,refine:causal_history/mechanism=recent_digits_30/strength=-1.0:base=0.25,5,4,3,-1
+open,avoid2,Sridevi,refine_validation,causal_history/mechanism=last_digits/strength=0.25,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=1.0,15,6,9,3
+open,avoid2,Sridevi,late_reused,causal_history/mechanism=last_digits/strength=0.25,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=1.0,7,3,1,-2
+open,avoid2,Sridevi Night,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=0.25,refine:causal_history/mechanism=recent_digits_30/strength=-0.5:base=1.0,15,9,12,3
+open,avoid2,Sridevi Night,late_reused,causal_history/mechanism=overdue_sutta_30/strength=0.25,refine:causal_history/mechanism=recent_digits_30/strength=-0.5:base=1.0,6,4,2,-2
+open,avoid2,Time Bazar,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=2.0,refine:causal_history/mechanism=recent_digits_30/strength=-1.0:base=1.0,13,8,12,4
+open,avoid2,Time Bazar,late_reused,causal_history/mechanism=overdue_sutta_30/strength=2.0,refine:causal_history/mechanism=recent_digits_30/strength=-1.0:base=1.0,6,4,3,-1
+open,panel10,ALL,refine_validation,probability_mixture/source=uniform_sutta/alpha=0.75,production,152,14,18,4
+open,panel10,ALL,late_reused,probability_mixture/source=uniform_sutta/alpha=0.75,production,61,5,3,-2
+open,panel10,Kalyan,refine_validation,causal_history/mechanism=overdue_digits_7/strength=0.25,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:0.75,13,0,3,3
+open,panel10,Kalyan,late_reused,causal_history/mechanism=overdue_digits_7/strength=0.25,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:0.75,5,0,0,0
+open,panel10,Kalyan Night,refine_validation,digit_symmetry/transform=complement9/alpha=0.25,refine:causal_history/mechanism=overdue_digits_7/strength=0.25:base=1.0,11,1,3,2
+open,panel10,Kalyan Night,late_reused,digit_symmetry/transform=complement9/alpha=0.25,refine:causal_history/mechanism=overdue_digits_7/strength=0.25:base=1.0,5,0,0,0
+open,panel10,Madhur Day,refine_validation,joint_ipf/sutta=panel/digits=present/damping=0.75/passes=3,refine:digit_symmetry/transform=rotate3/alpha=0.5:base=1.0,15,1,1,0
+open,panel10,Madhur Day,late_reused,joint_ipf/sutta=panel/digits=present/damping=0.75/passes=3,refine:digit_symmetry/transform=rotate3/alpha=0.5:base=1.0,7,1,0,-1
+open,panel10,Madhur Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=-0.5,production,9,1,2,1
+open,panel10,Madhur Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=-0.5,production,0,0,0,0
+open,panel10,Main Bazar,refine_validation,production,refine:causal_history/mechanism=overdue_digits_7/strength=0.5:base=1.0,11,0,2,2
+open,panel10,Main Bazar,late_reused,production,refine:causal_history/mechanism=overdue_digits_7/strength=0.5:base=1.0,5,1,1,0
+open,panel10,Milan Day,refine_validation,causal_history/mechanism=overdue_digits_7/strength=0.5,cross:digit_symmetry/transform=multiply3/alpha=0.5:digit_symmetry/transform=rotate3/alpha=0.25:0.5,13,1,3,2
+open,panel10,Milan Day,late_reused,causal_history/mechanism=overdue_digits_7/strength=0.5,cross:digit_symmetry/transform=multiply3/alpha=0.5:digit_symmetry/transform=rotate3/alpha=0.25:0.5,5,0,0,0
+open,panel10,Milan Night,refine_validation,causal_history/mechanism=recent_sutta_90/strength=-0.5,refine:digit_symmetry/transform=rotate1/alpha=0.25:base=0.75,13,0,5,5
+open,panel10,Milan Night,late_reused,causal_history/mechanism=recent_sutta_90/strength=-0.5,refine:digit_symmetry/transform=rotate1/alpha=0.25:base=0.75,5,0,0,0
+open,panel10,Rajdhani Day,refine_validation,production,cross:causal_history/mechanism=recent_digits_90/strength=0.5:causal_history/mechanism=recent_sutta_90/strength=-0.5:0.5,13,2,3,1
+open,panel10,Rajdhani Day,late_reused,production,cross:causal_history/mechanism=recent_digits_90/strength=0.5:causal_history/mechanism=recent_sutta_90/strength=-0.5:0.5,5,0,0,0
+open,panel10,Rajdhani Night,refine_validation,production,refine:causal_history/mechanism=overdue_digits_7/strength=0.25:base=0.5,11,1,3,2
+open,panel10,Rajdhani Night,late_reused,production,refine:causal_history/mechanism=overdue_digits_7/strength=0.25:base=0.5,5,2,2,0
+open,panel10,Sridevi,refine_validation,production,production,15,1,1,0
+open,panel10,Sridevi,late_reused,production,production,7,0,0,0
+open,panel10,Sridevi Night,refine_validation,production,refine:causal_history/mechanism=recent_sutta_30/strength=0.25:base=0.25,15,4,5,1
+open,panel10,Sridevi Night,late_reused,production,refine:causal_history/mechanism=recent_sutta_30/strength=0.25:base=0.25,6,0,0,0
+open,panel10,Time Bazar,refine_validation,bernoulli_digits/source=blend/strength=-0.5,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=0.25,13,1,2,1
+open,panel10,Time Bazar,late_reused,bernoulli_digits/source=blend/strength=-0.5,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=0.25,6,0,0,0
+open,sp30,ALL,refine_validation,production,refine:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:base=1.0,115,36,40,4
+open,sp30,ALL,late_reused,production,refine:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:base=1.0,46,6,8,2
+open,sp30,Kalyan,refine_validation,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=1.0/avoid_penalty=1.0,refine:causal_history/mechanism=recent_digits_30/strength=-1.0:base=0.5,12,3,5,2
+open,sp30,Kalyan,late_reused,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=1.0/avoid_penalty=1.0,refine:causal_history/mechanism=recent_digits_30/strength=-1.0:base=0.5,3,1,0,-1
+open,sp30,Kalyan Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=-1.0,production,9,3,4,1
+open,sp30,Kalyan Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=-1.0,production,2,1,0,-1
+open,sp30,Madhur Day,refine_validation,joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,refine:bernoulli_digits/source=appearance/strength=-1.0:base=1.0,11,2,7,5
+open,sp30,Madhur Day,late_reused,joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,refine:bernoulli_digits/source=appearance/strength=-1.0:base=1.0,6,1,1,0
+open,sp30,Madhur Night,refine_validation,causal_history/mechanism=recent_digits_90/strength=0.5,production,5,3,3,0
+open,sp30,Madhur Night,late_reused,causal_history/mechanism=recent_digits_90/strength=0.5,production,0,0,0,0
+open,sp30,Main Bazar,refine_validation,bernoulli_digits/source=appearance/strength=-1.0,production,9,2,0,-2
+open,sp30,Main Bazar,late_reused,bernoulli_digits/source=appearance/strength=-1.0,production,5,2,1,-1
+open,sp30,Milan Day,refine_validation,causal_history/mechanism=recent_digits_90/strength=1.0,production,9,3,3,0
+open,sp30,Milan Day,late_reused,causal_history/mechanism=recent_digits_90/strength=1.0,production,2,1,0,-1
+open,sp30,Milan Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=-1.0,refine:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:base=1.0,12,1,8,7
+open,sp30,Milan Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=-1.0,refine:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:base=1.0,5,1,0,-1
+open,sp30,Rajdhani Day,refine_validation,probability_mixture/source=uniform_sutta/alpha=0.5,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.5,8,1,4,3
+open,sp30,Rajdhani Day,late_reused,probability_mixture/source=uniform_sutta/alpha=0.5,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.5,5,1,1,0
+open,sp30,Rajdhani Night,refine_validation,digit_symmetry/transform=multiply3/alpha=0.25,production,8,5,4,-1
+open,sp30,Rajdhani Night,late_reused,digit_symmetry/transform=multiply3/alpha=0.25,production,5,2,2,0
+open,sp30,Sridevi,refine_validation,production,refine:causal_history/mechanism=overdue_sutta_90/strength=2.0:base=0.5,13,2,5,3
+open,sp30,Sridevi,late_reused,production,refine:causal_history/mechanism=overdue_sutta_90/strength=2.0:base=0.5,6,0,1,1
+open,sp30,Sridevi Night,refine_validation,production,production,12,7,7,0
+open,sp30,Sridevi Night,late_reused,production,production,4,1,1,0
+open,sp30,Time Bazar,refine_validation,production,production,7,2,2,0
+open,sp30,Time Bazar,late_reused,production,production,3,1,1,0
+open,dp20,ALL,refine_validation,production,refine:joint_ipf/sutta=panel/digits=present/damping=0.75/passes=3:base=0.75,37,8,13,5
+open,dp20,ALL,late_reused,production,refine:joint_ipf/sutta=panel/digits=present/damping=0.75/passes=3:base=0.75,15,4,3,-1
+open,dp20,Kalyan,refine_validation,production,production,1,0,0,0
+open,dp20,Kalyan,late_reused,production,production,2,0,0,0
+open,dp20,Kalyan Night,refine_validation,production,production,2,1,1,0
+open,dp20,Kalyan Night,late_reused,production,production,3,1,1,0
+open,dp20,Madhur Day,refine_validation,production,production,4,1,1,0
+open,dp20,Madhur Day,late_reused,production,production,1,0,0,0
+open,dp20,Madhur Night,refine_validation,production,production,4,0,0,0
+open,dp20,Madhur Night,late_reused,production,production,0,0,0,0
+open,dp20,Main Bazar,refine_validation,production,production,2,1,1,0
+open,dp20,Main Bazar,late_reused,production,production,0,0,0,0
+open,dp20,Milan Day,refine_validation,production,production,4,0,0,0
+open,dp20,Milan Day,late_reused,production,production,3,2,2,0
+open,dp20,Milan Night,refine_validation,production,production,1,0,0,0
+open,dp20,Milan Night,late_reused,production,production,0,0,0,0
+open,dp20,Rajdhani Day,refine_validation,production,production,5,0,0,0
+open,dp20,Rajdhani Day,late_reused,production,production,0,0,0,0
+open,dp20,Rajdhani Night,refine_validation,production,production,3,1,1,0
+open,dp20,Rajdhani Night,late_reused,production,production,0,0,0,0
+open,dp20,Sridevi,refine_validation,production,production,2,1,1,0
+open,dp20,Sridevi,late_reused,production,production,1,0,0,0
+open,dp20,Sridevi Night,refine_validation,production,production,3,1,1,0
+open,dp20,Sridevi Night,late_reused,production,production,2,1,1,0
+open,dp20,Time Bazar,refine_validation,production,production,6,2,2,0
+open,dp20,Time Bazar,late_reused,production,production,3,0,0,0
+open,sutta_avoid,ALL,refine_validation,sutta_marginal/source=native/strength=-0.5,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:digit_symmetry/transform=mirror5/alpha=0.25:0.5,152,39,53,14
+open,sutta_avoid,ALL,late_reused,sutta_marginal/source=native/strength=-0.5,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:digit_symmetry/transform=mirror5/alpha=0.25:0.5,61,15,15,0
+open,sutta_avoid,Kalyan,refine_validation,probability_mixture/source=joint_evidence/alpha=0.3,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:0.25,13,3,8,5
+open,sutta_avoid,Kalyan,late_reused,probability_mixture/source=joint_evidence/alpha=0.3,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:0.25,5,2,1,-1
+open,sutta_avoid,Kalyan Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=-0.5,refine:causal_history/mechanism=recent_digits_30/strength=1.0:base=1.0,11,5,5,0
+open,sutta_avoid,Kalyan Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=-0.5,refine:causal_history/mechanism=recent_digits_30/strength=1.0:base=1.0,5,1,2,1
+open,sutta_avoid,Madhur Day,refine_validation,digit_symmetry/transform=rotate3/alpha=0.1,refine:causal_history/mechanism=recent_digits_30/strength=-0.5:base=1.0,15,2,5,3
+open,sutta_avoid,Madhur Day,late_reused,digit_symmetry/transform=rotate3/alpha=0.1,refine:causal_history/mechanism=recent_digits_30/strength=-0.5:base=1.0,7,2,1,-1
+open,sutta_avoid,Madhur Night,refine_validation,bernoulli_digits/source=blend/strength=-0.5,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.5,9,4,6,2
+open,sutta_avoid,Madhur Night,late_reused,bernoulli_digits/source=blend/strength=-0.5,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.5,0,0,0,0
+open,sutta_avoid,Main Bazar,refine_validation,causal_history/mechanism=recent_digits_30/strength=-1.0,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.75,11,3,5,2
+open,sutta_avoid,Main Bazar,late_reused,causal_history/mechanism=recent_digits_30/strength=-1.0,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.75,5,1,2,1
+open,sutta_avoid,Milan Day,refine_validation,bernoulli_digits/source=blend/strength=1.0,production,13,3,6,3
+open,sutta_avoid,Milan Day,late_reused,bernoulli_digits/source=blend/strength=1.0,production,5,1,1,0
+open,sutta_avoid,Milan Night,refine_validation,causal_history/mechanism=overdue_sutta_90/strength=2.0,refine:bernoulli_digits/source=blend/strength=1.0:base=0.25,13,3,7,4
+open,sutta_avoid,Milan Night,late_reused,causal_history/mechanism=overdue_sutta_90/strength=2.0,refine:bernoulli_digits/source=blend/strength=1.0:base=0.25,5,1,1,0
+open,sutta_avoid,Rajdhani Day,refine_validation,causal_history/mechanism=recent_digits_30/strength=-0.5,cross:bernoulli_digits/source=blend/strength=1.0:sutta_marginal/source=native/strength=-0.5:0.25,13,2,7,5
+open,sutta_avoid,Rajdhani Day,late_reused,causal_history/mechanism=recent_digits_30/strength=-0.5,cross:bernoulli_digits/source=blend/strength=1.0:sutta_marginal/source=native/strength=-0.5:0.25,5,0,1,1
+open,sutta_avoid,Rajdhani Night,refine_validation,bernoulli_digits/source=present/strength=0.5,cross:digit_symmetry/transform=multiply3/alpha=0.5:digit_symmetry/transform=rotate3/alpha=0.25:0.5,11,2,4,2
+open,sutta_avoid,Rajdhani Night,late_reused,bernoulli_digits/source=present/strength=0.5,cross:digit_symmetry/transform=multiply3/alpha=0.5:digit_symmetry/transform=rotate3/alpha=0.25:0.5,5,1,2,1
+open,sutta_avoid,Sridevi,refine_validation,avoid2_gate/source=native_avoid/penalty=0.65,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.5,15,1,5,4
+open,sutta_avoid,Sridevi,late_reused,avoid2_gate/source=native_avoid/penalty=0.65,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.5,7,3,1,-2
+open,sutta_avoid,Sridevi Night,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=0.25,cross:causal_history/mechanism=overdue_digits_7/strength=0.25:joint_likelihood/sutta=panel/digits=blend/strength=1.5:0.5,15,2,8,6
+open,sutta_avoid,Sridevi Night,late_reused,causal_history/mechanism=overdue_sutta_30/strength=0.25,cross:causal_history/mechanism=overdue_digits_7/strength=0.25:joint_likelihood/sutta=panel/digits=blend/strength=1.5:0.5,6,2,1,-1
+open,sutta_avoid,Time Bazar,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=2.0,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:digit_symmetry/transform=mirror5/alpha=0.25:0.25,13,5,7,2
+open,sutta_avoid,Time Bazar,late_reused,causal_history/mechanism=overdue_sutta_30/strength=2.0,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:digit_symmetry/transform=mirror5/alpha=0.25:0.25,6,1,1,0
+open,joint10,ALL,refine_validation,production,production,152,14,14,0
+open,joint10,ALL,late_reused,production,production,61,2,2,0
+open,joint10,Kalyan,refine_validation,production,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:0.75,13,1,3,2
+open,joint10,Kalyan,late_reused,production,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:source_fusion/source=dp20/alpha=0.65/mode=arithmetic:0.75,5,0,0,0
+open,joint10,Kalyan Night,refine_validation,causal_history/mechanism=overdue_sutta_7/strength=0.25,cross:causal_history/mechanism=overdue_digits_7/strength=0.25:joint_likelihood/sutta=panel/digits=blend/strength=1.5:0.75,11,2,3,1
+open,joint10,Kalyan Night,late_reused,causal_history/mechanism=overdue_sutta_7/strength=0.25,cross:causal_history/mechanism=overdue_digits_7/strength=0.25:joint_likelihood/sutta=panel/digits=blend/strength=1.5:0.75,5,0,0,0
+open,joint10,Madhur Day,refine_validation,production,refine:avoid2_gate/source=native_avoid/penalty=0.65:base=0.25,15,0,1,1
+open,joint10,Madhur Day,late_reused,production,refine:avoid2_gate/source=native_avoid/penalty=0.65:base=0.25,7,0,0,0
+open,joint10,Madhur Night,refine_validation,causal_history/mechanism=recent_digits_30/strength=1.0,production,9,0,2,2
+open,joint10,Madhur Night,late_reused,causal_history/mechanism=recent_digits_30/strength=1.0,production,0,0,0,0
+open,joint10,Main Bazar,refine_validation,production,refine:causal_history/mechanism=recent_digits_30/strength=-0.5:base=1.0,11,0,2,2
+open,joint10,Main Bazar,late_reused,production,refine:causal_history/mechanism=recent_digits_30/strength=-0.5:base=1.0,5,1,0,-1
+open,joint10,Milan Day,refine_validation,sutta_marginal/source=native/strength=-0.5,production,13,1,2,1
+open,joint10,Milan Day,late_reused,sutta_marginal/source=native/strength=-0.5,production,5,0,0,0
+open,joint10,Milan Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=-0.5,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.25,13,1,4,3
+open,joint10,Milan Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=-0.5,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.25,5,0,0,0
+open,joint10,Rajdhani Day,refine_validation,source_fusion/source=dp20/alpha=0.65/mode=arithmetic,production,13,1,0,-1
+open,joint10,Rajdhani Day,late_reused,source_fusion/source=dp20/alpha=0.65/mode=arithmetic,production,5,1,0,-1
+open,joint10,Rajdhani Night,refine_validation,production,refine:causal_history/mechanism=overdue_digits_7/strength=-0.5:base=0.75,11,0,1,1
+open,joint10,Rajdhani Night,late_reused,production,refine:causal_history/mechanism=overdue_digits_7/strength=-0.5:base=0.75,5,1,0,-1
+open,joint10,Sridevi,refine_validation,production,production,15,1,1,0
+open,joint10,Sridevi,late_reused,production,production,7,0,0,0
+open,joint10,Sridevi Night,refine_validation,production,production,15,4,4,0
+open,joint10,Sridevi Night,late_reused,production,production,6,0,0,0
+open,joint10,Time Bazar,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=0.5,production,13,1,0,-1
+open,joint10,Time Bazar,late_reused,causal_history/mechanism=overdue_sutta_30/strength=0.5,production,6,0,0,0
+open,joint_sp30,ALL,refine_validation,production,refine:joint_gates/sutta=panel/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=0.25,115,21,24,3
+open,joint_sp30,ALL,late_reused,production,refine:joint_gates/sutta=panel/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=0.25,46,4,5,1
+open,joint_sp30,Kalyan,refine_validation,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=1.0/avoid_penalty=1.0,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:digit_symmetry/transform=mirror5/alpha=0.25:0.75,12,3,4,1
+open,joint_sp30,Kalyan,late_reused,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=1.0/avoid_penalty=1.0,cross:causal_history/mechanism=recent_digits_30/strength=-0.5:digit_symmetry/transform=mirror5/alpha=0.25:0.75,3,1,0,-1
+open,joint_sp30,Kalyan Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=-0.5,production,9,3,2,-1
+open,joint_sp30,Kalyan Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=-0.5,production,2,1,0,-1
+open,joint_sp30,Madhur Day,refine_validation,production,refine:causal_history/mechanism=recent_digits_30/strength=-0.5:base=1.0,11,2,3,1
+open,joint_sp30,Madhur Day,late_reused,production,refine:causal_history/mechanism=recent_digits_30/strength=-0.5:base=1.0,6,0,1,1
+open,joint_sp30,Madhur Night,refine_validation,joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,5,3,3,0
+open,joint_sp30,Madhur Night,late_reused,joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,0,0,0,0
+open,joint_sp30,Main Bazar,refine_validation,joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,9,1,0,-1
+open,joint_sp30,Main Bazar,late_reused,joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,5,2,1,-1
+open,joint_sp30,Milan Day,refine_validation,joint_gates/sutta=panel/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,9,4,3,-1
+open,joint_sp30,Milan Day,late_reused,joint_gates/sutta=panel/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,2,0,0,0
+open,joint_sp30,Milan Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=-0.5,production,12,2,5,3
+open,joint_sp30,Milan Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=-0.5,production,5,1,0,-1
+open,joint_sp30,Rajdhani Day,refine_validation,source_fusion/source=all10/alpha=0.15/mode=arithmetic,cross:causal_history/mechanism=recent_digits_7/strength=1.0:causal_history/mechanism=recent_sutta_30/strength=-0.5:0.5,8,1,2,1
+open,joint_sp30,Rajdhani Day,late_reused,source_fusion/source=all10/alpha=0.15/mode=arithmetic,cross:causal_history/mechanism=recent_digits_7/strength=1.0:causal_history/mechanism=recent_sutta_30/strength=-0.5:0.5,5,1,0,-1
+open,joint_sp30,Rajdhani Night,refine_validation,causal_history/mechanism=recent_sutta_30/strength=0.25,production,8,2,0,-2
+open,joint_sp30,Rajdhani Night,late_reused,causal_history/mechanism=recent_sutta_30/strength=0.25,production,5,2,1,-1
+open,joint_sp30,Sridevi,refine_validation,production,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.5,13,1,3,2
+open,joint_sp30,Sridevi,late_reused,production,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.5,6,0,0,0
+open,joint_sp30,Sridevi Night,refine_validation,production,production,12,4,4,0
+open,joint_sp30,Sridevi Night,late_reused,production,production,4,1,1,0
+open,joint_sp30,Time Bazar,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=1.0,production,7,1,0,-1
+open,joint_sp30,Time Bazar,late_reused,causal_history/mechanism=overdue_sutta_30/strength=1.0,production,3,0,0,0
+open,joint_dp20,ALL,refine_validation,production,production,37,3,3,0
+open,joint_dp20,ALL,late_reused,production,production,15,0,0,0
+open,joint_dp20,Kalyan,refine_validation,production,production,1,0,0,0
+open,joint_dp20,Kalyan,late_reused,production,production,2,0,0,0
+open,joint_dp20,Kalyan Night,refine_validation,production,production,2,0,0,0
+open,joint_dp20,Kalyan Night,late_reused,production,production,3,0,0,0
+open,joint_dp20,Madhur Day,refine_validation,production,production,4,0,0,0
+open,joint_dp20,Madhur Day,late_reused,production,production,1,0,0,0
+open,joint_dp20,Madhur Night,refine_validation,production,production,4,0,0,0
+open,joint_dp20,Madhur Night,late_reused,production,production,0,0,0,0
+open,joint_dp20,Main Bazar,refine_validation,production,production,2,1,1,0
+open,joint_dp20,Main Bazar,late_reused,production,production,0,0,0,0
+open,joint_dp20,Milan Day,refine_validation,production,production,4,0,0,0
+open,joint_dp20,Milan Day,late_reused,production,production,3,0,0,0
+open,joint_dp20,Milan Night,refine_validation,production,production,1,0,0,0
+open,joint_dp20,Milan Night,late_reused,production,production,0,0,0,0
+open,joint_dp20,Rajdhani Day,refine_validation,production,production,5,0,0,0
+open,joint_dp20,Rajdhani Day,late_reused,production,production,0,0,0,0
+open,joint_dp20,Rajdhani Night,refine_validation,production,production,3,0,0,0
+open,joint_dp20,Rajdhani Night,late_reused,production,production,0,0,0,0
+open,joint_dp20,Sridevi,refine_validation,production,production,2,1,1,0
+open,joint_dp20,Sridevi,late_reused,production,production,1,0,0,0
+open,joint_dp20,Sridevi Night,refine_validation,production,production,3,1,1,0
+open,joint_dp20,Sridevi Night,late_reused,production,production,2,0,0,0
+open,joint_dp20,Time Bazar,refine_validation,production,production,6,0,0,0
+open,joint_dp20,Time Bazar,late_reused,production,production,3,0,0,0
+close_pre,top5,ALL,refine_validation,avoid2_gate/source=native_avoid/penalty=12.0,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,152,77,91,14
+close_pre,top5,ALL,late_reused,avoid2_gate/source=native_avoid/penalty=12.0,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,61,25,31,6
+close_pre,top5,Kalyan,refine_validation,avoid2_gate/source=native_avoid/penalty=12.0,cross:digit_symmetry/transform=rotate1/alpha=1.0:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:0.75,13,6,11,5
+close_pre,top5,Kalyan,late_reused,avoid2_gate/source=native_avoid/penalty=12.0,cross:digit_symmetry/transform=rotate1/alpha=1.0:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:0.75,5,3,3,0
+close_pre,top5,Kalyan Night,refine_validation,digit_symmetry/transform=rotate3/alpha=1.0,cross:avoid2_gate/source=native_avoid/penalty=12.0:causal_history/mechanism=last_sutta/strength=0.5:0.75,11,4,8,4
+close_pre,top5,Kalyan Night,late_reused,digit_symmetry/transform=rotate3/alpha=1.0,cross:avoid2_gate/source=native_avoid/penalty=12.0:causal_history/mechanism=last_sutta/strength=0.5:0.75,5,1,4,3
+close_pre,top5,Madhur Day,refine_validation,digit_symmetry/transform=mirror5/alpha=0.75,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,15,10,10,0
+close_pre,top5,Madhur Day,late_reused,digit_symmetry/transform=mirror5/alpha=0.75,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,7,2,2,0
+close_pre,top5,Madhur Night,refine_validation,joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=3.0,refine:sutta_marginal/source=panel/strength=2.0:base=1.0,9,4,7,3
+close_pre,top5,Madhur Night,late_reused,joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=3.0,refine:sutta_marginal/source=panel/strength=2.0:base=1.0,0,0,0,0
+close_pre,top5,Main Bazar,refine_validation,causal_history/mechanism=last_digits/strength=1.0,refine:sutta_marginal/source=panel/strength=2.0:base=1.0,11,6,10,4
+close_pre,top5,Main Bazar,late_reused,causal_history/mechanism=last_digits/strength=1.0,refine:sutta_marginal/source=panel/strength=2.0:base=1.0,5,3,4,1
+close_pre,top5,Milan Day,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=0.5,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,13,4,10,6
+close_pre,top5,Milan Day,late_reused,causal_history/mechanism=overdue_sutta_30/strength=0.5,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,5,4,2,-2
+close_pre,top5,Milan Night,refine_validation,temperature_control/temperature=0.4,refine:causal_history/mechanism=last_digits/strength=2.0:base=1.0,13,4,9,5
+close_pre,top5,Milan Night,late_reused,temperature_control/temperature=0.4,refine:causal_history/mechanism=last_digits/strength=2.0:base=1.0,5,0,3,3
+close_pre,top5,Rajdhani Day,refine_validation,probability_mixture/source=uniform_sutta/alpha=1.0,cross:causal_history/mechanism=overdue_digits_7/strength=0.5:digit_symmetry/transform=rotate1/alpha=1.0:0.5,13,6,10,4
+close_pre,top5,Rajdhani Day,late_reused,probability_mixture/source=uniform_sutta/alpha=1.0,cross:causal_history/mechanism=overdue_digits_7/strength=0.5:digit_symmetry/transform=rotate1/alpha=1.0:0.5,5,2,2,0
+close_pre,top5,Rajdhani Night,refine_validation,avoid2_gate/source=native_avoid/penalty=12.0,refine:causal_history/mechanism=recent_digits_7/strength=2.0:base=0.5,11,3,7,4
+close_pre,top5,Rajdhani Night,late_reused,avoid2_gate/source=native_avoid/penalty=12.0,refine:causal_history/mechanism=recent_digits_7/strength=2.0:base=0.5,5,3,4,1
+close_pre,top5,Sridevi,refine_validation,joint_ipf/sutta=native/digits=appearance/damping=0.75/passes=1,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.5,15,7,11,4
+close_pre,top5,Sridevi,late_reused,joint_ipf/sutta=native/digits=appearance/damping=0.75/passes=1,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.5,7,3,3,0
+close_pre,top5,Sridevi Night,refine_validation,joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1,cross:causal_history/mechanism=last_digits/strength=1.0:joint_ipf/sutta=native/digits=appearance/damping=1.0/passes=1:0.5,15,10,9,-1
+close_pre,top5,Sridevi Night,late_reused,joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1,cross:causal_history/mechanism=last_digits/strength=1.0:joint_ipf/sutta=native/digits=appearance/damping=1.0/passes=1:0.5,6,5,6,1
+close_pre,top5,Time Bazar,refine_validation,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.75,13,8,10,2
+close_pre,top5,Time Bazar,late_reused,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.75,6,2,3,1
+close_pre,avoid2,ALL,refine_validation,digit_symmetry/transform=multiply3/alpha=0.5,refine:causal_history/mechanism=recent_digits_7/strength=2.0:base=1.0,152,83,89,6
+close_pre,avoid2,ALL,late_reused,digit_symmetry/transform=multiply3/alpha=0.5,refine:causal_history/mechanism=recent_digits_7/strength=2.0:base=1.0,61,37,31,-6
+close_pre,avoid2,Kalyan,refine_validation,digit_symmetry/transform=rotate1/alpha=0.1,refine:digit_symmetry/transform=mirror5/alpha=1.0:base=1.0,13,4,10,6
+close_pre,avoid2,Kalyan,late_reused,digit_symmetry/transform=rotate1/alpha=0.1,refine:digit_symmetry/transform=mirror5/alpha=1.0:base=1.0,5,5,1,-4
+close_pre,avoid2,Kalyan Night,refine_validation,top5_sutta_gate/source=sutta_conditional/penalty=3.0,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=0.75,11,5,7,2
+close_pre,avoid2,Kalyan Night,late_reused,top5_sutta_gate/source=sutta_conditional/penalty=3.0,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=0.75,5,4,4,0
+close_pre,avoid2,Madhur Day,refine_validation,bernoulli_digits/source=present/strength=-1.0,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=1.0,15,7,10,3
+close_pre,avoid2,Madhur Day,late_reused,bernoulli_digits/source=present/strength=-1.0,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=1.0,7,3,5,2
+close_pre,avoid2,Madhur Night,refine_validation,causal_history/mechanism=overdue_sutta_7/strength=-0.5,cross:causal_history/mechanism=last_digits/strength=-0.5:digit_symmetry/transform=multiply3/alpha=1.0:0.25,9,4,8,4
+close_pre,avoid2,Madhur Night,late_reused,causal_history/mechanism=overdue_sutta_7/strength=-0.5,cross:causal_history/mechanism=last_digits/strength=-0.5:digit_symmetry/transform=multiply3/alpha=1.0:0.25,0,0,0,0
+close_pre,avoid2,Main Bazar,refine_validation,causal_history/mechanism=last_digits/strength=-0.5,cross:causal_history/mechanism=overdue_sutta_30/strength=2.0:joint_ipf/sutta=native/digits=appearance/damping=0.75/passes=1:0.25,11,5,8,3
+close_pre,avoid2,Main Bazar,late_reused,causal_history/mechanism=last_digits/strength=-0.5,cross:causal_history/mechanism=overdue_sutta_30/strength=2.0:joint_ipf/sutta=native/digits=appearance/damping=0.75/passes=1:0.25,5,2,4,2
+close_pre,avoid2,Milan Day,refine_validation,digit_symmetry/transform=rotate1/alpha=0.5,refine:joint_ipf/sutta=native/digits=appearance/damping=0.75/passes=1:base=1.0,13,10,11,1
+close_pre,avoid2,Milan Day,late_reused,digit_symmetry/transform=rotate1/alpha=0.5,refine:joint_ipf/sutta=native/digits=appearance/damping=0.75/passes=1:base=1.0,5,4,3,-1
+close_pre,avoid2,Milan Night,refine_validation,bernoulli_digits/source=appearance/strength=2.0,cross:digit_symmetry/transform=complement9/alpha=0.75:source_fusion/source=all10/alpha=0.35/mode=arithmetic:0.75,13,9,10,1
+close_pre,avoid2,Milan Night,late_reused,bernoulli_digits/source=appearance/strength=2.0,cross:digit_symmetry/transform=complement9/alpha=0.75:source_fusion/source=all10/alpha=0.35/mode=arithmetic:0.75,5,2,2,0
+close_pre,avoid2,Rajdhani Day,refine_validation,causal_history/mechanism=last_sutta/strength=2.0,cross:causal_history/mechanism=last_digits/strength=1.0:joint_ipf/sutta=native/digits=appearance/damping=1.0/passes=1:0.75,13,7,10,3
+close_pre,avoid2,Rajdhani Day,late_reused,causal_history/mechanism=last_sutta/strength=2.0,cross:causal_history/mechanism=last_digits/strength=1.0:joint_ipf/sutta=native/digits=appearance/damping=1.0/passes=1:0.75,5,3,4,1
+close_pre,avoid2,Rajdhani Night,refine_validation,causal_history/mechanism=last_digits/strength=2.0,refine:causal_history/mechanism=recent_digits_90/strength=-0.5:base=0.75,11,6,11,5
+close_pre,avoid2,Rajdhani Night,late_reused,causal_history/mechanism=last_digits/strength=2.0,refine:causal_history/mechanism=recent_digits_90/strength=-0.5:base=0.75,5,3,3,0
+close_pre,avoid2,Sridevi,refine_validation,causal_history/mechanism=recent_digits_30/strength=-1.0,refine:digit_symmetry/transform=complement9/alpha=0.75:base=1.0,15,9,14,5
+close_pre,avoid2,Sridevi,late_reused,causal_history/mechanism=recent_digits_30/strength=-1.0,refine:digit_symmetry/transform=complement9/alpha=0.75:base=1.0,7,2,3,1
+close_pre,avoid2,Sridevi Night,refine_validation,temperature_control/temperature=1.6,cross:causal_history/mechanism=last_sutta/strength=2.0:probability_mixture/source=uniform_sutta/alpha=1.0:0.25,15,9,12,3
+close_pre,avoid2,Sridevi Night,late_reused,temperature_control/temperature=1.6,cross:causal_history/mechanism=last_sutta/strength=2.0:probability_mixture/source=uniform_sutta/alpha=1.0:0.25,6,4,4,0
+close_pre,avoid2,Time Bazar,refine_validation,digit_symmetry/transform=rotate1/alpha=1.0,refine:joint_likelihood/sutta=native/digits=present/strength=1.5:base=1.0,13,4,10,6
+close_pre,avoid2,Time Bazar,late_reused,digit_symmetry/transform=rotate1/alpha=1.0,refine:joint_likelihood/sutta=native/digits=present/strength=1.5:base=1.0,6,4,4,0
+close_pre,panel10,ALL,refine_validation,production,cross:causal_history/mechanism=last_digits/strength=1.0:causal_history/mechanism=last_sutta/strength=2.0:0.75,152,11,18,7
+close_pre,panel10,ALL,late_reused,production,cross:causal_history/mechanism=last_digits/strength=1.0:causal_history/mechanism=last_sutta/strength=2.0:0.75,61,4,6,2
+close_pre,panel10,Kalyan,refine_validation,causal_history/mechanism=last_sutta/strength=0.5,refine:digit_symmetry/transform=mirror5/alpha=1.0:base=1.0,13,0,2,2
+close_pre,panel10,Kalyan,late_reused,causal_history/mechanism=last_sutta/strength=0.5,refine:digit_symmetry/transform=mirror5/alpha=1.0:base=1.0,5,1,0,-1
+close_pre,panel10,Kalyan Night,refine_validation,sutta_marginal/source=panel/strength=2.0,production,11,0,1,1
+close_pre,panel10,Kalyan Night,late_reused,sutta_marginal/source=panel/strength=2.0,production,5,0,1,1
+close_pre,panel10,Madhur Day,refine_validation,sutta_marginal/source=conditional/strength=1.0,production,15,0,0,0
+close_pre,panel10,Madhur Day,late_reused,sutta_marginal/source=conditional/strength=1.0,production,7,0,1,1
+close_pre,panel10,Madhur Night,refine_validation,digit_symmetry/transform=rotate3/alpha=0.75,refine:joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=3.0/avoid_penalty=3.0:base=0.5,9,4,2,-2
+close_pre,panel10,Madhur Night,late_reused,digit_symmetry/transform=rotate3/alpha=0.75,refine:joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=3.0/avoid_penalty=3.0:base=0.5,0,0,0,0
+close_pre,panel10,Main Bazar,refine_validation,digit_symmetry/transform=multiply3/alpha=1.0,refine:causal_history/mechanism=last_digits/strength=1.0:base=0.5,11,0,3,3
+close_pre,panel10,Main Bazar,late_reused,digit_symmetry/transform=multiply3/alpha=1.0,refine:causal_history/mechanism=last_digits/strength=1.0:base=0.5,5,0,0,0
+close_pre,panel10,Milan Day,refine_validation,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=1.0/avoid_penalty=1.0,cross:bernoulli_digits/source=appearance/strength=2.0:digit_symmetry/transform=mirror5/alpha=1.0:0.5,13,1,2,1
+close_pre,panel10,Milan Day,late_reused,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=1.0/avoid_penalty=1.0,cross:bernoulli_digits/source=appearance/strength=2.0:digit_symmetry/transform=mirror5/alpha=1.0:0.5,5,0,1,1
+close_pre,panel10,Milan Night,refine_validation,digit_symmetry/transform=mirror5/alpha=1.0,cross:causal_history/mechanism=overdue_sutta_30/strength=2.0:causal_history/mechanism=recent_digits_30/strength=-1.0:0.5,13,1,2,1
+close_pre,panel10,Milan Night,late_reused,digit_symmetry/transform=mirror5/alpha=1.0,cross:causal_history/mechanism=overdue_sutta_30/strength=2.0:causal_history/mechanism=recent_digits_30/strength=-1.0:0.5,5,1,0,-1
+close_pre,panel10,Rajdhani Day,refine_validation,causal_history/mechanism=last_digits/strength=1.0,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.75,13,1,4,3
+close_pre,panel10,Rajdhani Day,late_reused,causal_history/mechanism=last_digits/strength=1.0,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.75,5,1,0,-1
+close_pre,panel10,Rajdhani Night,refine_validation,causal_history/mechanism=last_digits/strength=2.0,refine:causal_history/mechanism=last_digits/strength=-0.5:base=0.25,11,0,2,2
+close_pre,panel10,Rajdhani Night,late_reused,causal_history/mechanism=last_digits/strength=2.0,refine:causal_history/mechanism=last_digits/strength=-0.5:base=0.25,5,0,0,0
+close_pre,panel10,Sridevi,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=2.0,refine:causal_history/mechanism=last_digits/strength=0.25:base=0.75,15,0,3,3
+close_pre,panel10,Sridevi,late_reused,causal_history/mechanism=overdue_sutta_30/strength=2.0,refine:causal_history/mechanism=last_digits/strength=0.25:base=0.75,7,0,0,0
+close_pre,panel10,Sridevi Night,refine_validation,causal_history/mechanism=recent_digits_90/strength=-0.5,cross:avoid2_gate/source=native_avoid/penalty=12.0:causal_history/mechanism=last_sutta/strength=0.5:0.25,15,0,3,3
+close_pre,panel10,Sridevi Night,late_reused,causal_history/mechanism=recent_digits_90/strength=-0.5,cross:avoid2_gate/source=native_avoid/penalty=12.0:causal_history/mechanism=last_sutta/strength=0.5:0.25,6,1,2,1
+close_pre,panel10,Time Bazar,refine_validation,causal_history/mechanism=overdue_digits_7/strength=0.5,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=0.75,13,0,5,5
+close_pre,panel10,Time Bazar,late_reused,causal_history/mechanism=overdue_digits_7/strength=0.5,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=0.75,6,0,1,1
+close_pre,sp30,ALL,refine_validation,digit_symmetry/transform=mirror5/alpha=1.0,refine:causal_history/mechanism=recent_digits_7/strength=2.0:base=1.0,111,31,34,3
+close_pre,sp30,ALL,late_reused,digit_symmetry/transform=mirror5/alpha=1.0,refine:causal_history/mechanism=recent_digits_7/strength=2.0:base=1.0,46,11,14,3
+close_pre,sp30,Kalyan,refine_validation,joint_gates/sutta=conditional/avoid=panel_avoid/restriction=hard,production,9,1,1,0
+close_pre,sp30,Kalyan,late_reused,joint_gates/sutta=conditional/avoid=panel_avoid/restriction=hard,production,4,1,1,0
+close_pre,sp30,Kalyan Night,refine_validation,digit_symmetry/transform=multiply3/alpha=1.0,production,9,3,2,-1
+close_pre,sp30,Kalyan Night,late_reused,digit_symmetry/transform=multiply3/alpha=1.0,production,4,0,1,1
+close_pre,sp30,Madhur Day,refine_validation,causal_history/mechanism=recent_sutta_90/strength=-0.5,cross:causal_history/mechanism=last_digits/strength=1.0:digit_symmetry/transform=multiply3/alpha=1.0:0.25,11,0,5,5
+close_pre,sp30,Madhur Day,late_reused,causal_history/mechanism=recent_sutta_90/strength=-0.5,cross:causal_history/mechanism=last_digits/strength=1.0:digit_symmetry/transform=multiply3/alpha=1.0:0.25,5,1,1,0
+close_pre,sp30,Madhur Night,refine_validation,causal_history/mechanism=last_digits/strength=1.0,production,8,2,1,-1
+close_pre,sp30,Madhur Night,late_reused,causal_history/mechanism=last_digits/strength=1.0,production,0,0,0,0
+close_pre,sp30,Main Bazar,refine_validation,digit_symmetry/transform=multiply3/alpha=0.75,production,7,2,4,2
+close_pre,sp30,Main Bazar,late_reused,digit_symmetry/transform=multiply3/alpha=0.75,production,4,1,1,0
+close_pre,sp30,Milan Day,refine_validation,production,production,5,1,1,0
+close_pre,sp30,Milan Day,late_reused,production,production,0,0,0,0
+close_pre,sp30,Milan Night,refine_validation,joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=3.0/avoid_penalty=3.0,refine:digit_symmetry/transform=rotate3/alpha=1.0:base=1.0,8,2,3,1
+close_pre,sp30,Milan Night,late_reused,joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=3.0/avoid_penalty=3.0,refine:digit_symmetry/transform=rotate3/alpha=1.0:base=1.0,4,3,1,-2
+close_pre,sp30,Rajdhani Day,refine_validation,causal_history/mechanism=recent_digits_7/strength=2.0,production,11,4,5,1
+close_pre,sp30,Rajdhani Day,late_reused,causal_history/mechanism=recent_digits_7/strength=2.0,production,4,0,2,2
+close_pre,sp30,Rajdhani Night,refine_validation,causal_history/mechanism=last_digits/strength=2.0,refine:digit_symmetry/transform=rotate1/alpha=0.5:base=1.0,9,1,4,3
+close_pre,sp30,Rajdhani Night,late_reused,causal_history/mechanism=last_digits/strength=2.0,refine:digit_symmetry/transform=rotate1/alpha=0.5:base=1.0,4,0,1,1
+close_pre,sp30,Sridevi,refine_validation,joint_likelihood/sutta=native/digits=present/strength=1.5,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,12,3,7,4
+close_pre,sp30,Sridevi,late_reused,joint_likelihood/sutta=native/digits=present/strength=1.5,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,6,3,3,0
+close_pre,sp30,Sridevi Night,refine_validation,joint_gates/sutta=conditional/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35,cross:causal_history/mechanism=last_digits/strength=1.0:joint_ipf/sutta=native/digits=appearance/damping=1.0/passes=1:0.5,10,4,5,1
+close_pre,sp30,Sridevi Night,late_reused,joint_gates/sutta=conditional/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35,cross:causal_history/mechanism=last_digits/strength=1.0:joint_ipf/sutta=native/digits=appearance/damping=1.0/passes=1:0.5,6,1,2,1
+close_pre,sp30,Time Bazar,refine_validation,causal_history/mechanism=recent_sutta_30/strength=1.0,refine:causal_history/mechanism=last_digits/strength=0.25:base=0.25,12,5,6,1
+close_pre,sp30,Time Bazar,late_reused,causal_history/mechanism=recent_sutta_30/strength=1.0,refine:causal_history/mechanism=last_digits/strength=0.25:base=0.25,5,1,2,1
+close_pre,dp20,ALL,refine_validation,digit_symmetry/transform=rotate1/alpha=0.5,refine:causal_history/mechanism=overdue_sutta_30/strength=2.0:base=0.75,41,13,18,5
+close_pre,dp20,ALL,late_reused,digit_symmetry/transform=rotate1/alpha=0.5,refine:causal_history/mechanism=overdue_sutta_30/strength=2.0:base=0.75,14,3,4,1
+close_pre,dp20,Kalyan,refine_validation,production,production,4,1,1,0
+close_pre,dp20,Kalyan,late_reused,production,production,1,1,1,0
+close_pre,dp20,Kalyan Night,refine_validation,production,production,2,0,0,0
+close_pre,dp20,Kalyan Night,late_reused,production,production,1,0,0,0
+close_pre,dp20,Madhur Day,refine_validation,production,production,4,1,1,0
+close_pre,dp20,Madhur Day,late_reused,production,production,2,1,1,0
+close_pre,dp20,Madhur Night,refine_validation,production,production,1,0,0,0
+close_pre,dp20,Madhur Night,late_reused,production,production,0,0,0,0
+close_pre,dp20,Main Bazar,refine_validation,production,production,4,0,0,0
+close_pre,dp20,Main Bazar,late_reused,production,production,1,0,0,0
+close_pre,dp20,Milan Day,refine_validation,production,production,8,1,1,0
+close_pre,dp20,Milan Day,late_reused,production,production,5,1,1,0
+close_pre,dp20,Milan Night,refine_validation,production,production,5,1,1,0
+close_pre,dp20,Milan Night,late_reused,production,production,1,0,0,0
+close_pre,dp20,Rajdhani Day,refine_validation,production,production,2,0,0,0
+close_pre,dp20,Rajdhani Day,late_reused,production,production,1,0,0,0
+close_pre,dp20,Rajdhani Night,refine_validation,production,production,2,0,0,0
+close_pre,dp20,Rajdhani Night,late_reused,production,production,1,0,0,0
+close_pre,dp20,Sridevi,refine_validation,production,production,3,2,2,0
+close_pre,dp20,Sridevi,late_reused,production,production,0,0,0,0
+close_pre,dp20,Sridevi Night,refine_validation,production,production,5,3,3,0
+close_pre,dp20,Sridevi Night,late_reused,production,production,0,0,0,0
+close_pre,dp20,Time Bazar,refine_validation,production,production,1,1,1,0
+close_pre,dp20,Time Bazar,late_reused,production,production,1,1,1,0
+close_pre,sutta_avoid,ALL,refine_validation,causal_history/mechanism=last_digits/strength=0.25,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.75,152,38,53,15
+close_pre,sutta_avoid,ALL,late_reused,causal_history/mechanism=last_digits/strength=0.25,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.75,61,18,21,3
+close_pre,sutta_avoid,Kalyan,refine_validation,causal_history/mechanism=last_sutta/strength=0.25,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,13,1,7,6
+close_pre,sutta_avoid,Kalyan,late_reused,causal_history/mechanism=last_sutta/strength=0.25,refine:digit_symmetry/transform=rotate1/alpha=1.0:base=1.0,5,2,2,0
+close_pre,sutta_avoid,Kalyan Night,refine_validation,digit_symmetry/transform=complement9/alpha=0.75,refine:digit_symmetry/transform=complement9/alpha=0.75:base=0.75,11,3,5,2
+close_pre,sutta_avoid,Kalyan Night,late_reused,digit_symmetry/transform=complement9/alpha=0.75,refine:digit_symmetry/transform=complement9/alpha=0.75:base=0.75,5,1,1,0
+close_pre,sutta_avoid,Madhur Day,refine_validation,bernoulli_digits/source=present/strength=-1.0,refine:causal_history/mechanism=last_sutta/strength=0.25:base=0.25,15,4,6,2
+close_pre,sutta_avoid,Madhur Day,late_reused,bernoulli_digits/source=present/strength=-1.0,refine:causal_history/mechanism=last_sutta/strength=0.25:base=0.25,7,0,0,0
+close_pre,sutta_avoid,Madhur Night,refine_validation,joint_ipf/sutta=conditional/digits=present/damping=1.0/passes=3,cross:digit_symmetry/transform=rotate3/alpha=0.75:joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=3.0:0.75,9,2,5,3
+close_pre,sutta_avoid,Madhur Night,late_reused,joint_ipf/sutta=conditional/digits=present/damping=1.0/passes=3,cross:digit_symmetry/transform=rotate3/alpha=0.75:joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=3.0:0.75,0,0,0,0
+close_pre,sutta_avoid,Main Bazar,refine_validation,digit_symmetry/transform=multiply3/alpha=0.75,cross:causal_history/mechanism=overdue_sutta_30/strength=2.0:joint_ipf/sutta=native/digits=appearance/damping=0.75/passes=1:0.25,11,5,7,2
+close_pre,sutta_avoid,Main Bazar,late_reused,digit_symmetry/transform=multiply3/alpha=0.75,cross:causal_history/mechanism=overdue_sutta_30/strength=2.0:joint_ipf/sutta=native/digits=appearance/damping=0.75/passes=1:0.25,5,1,2,1
+close_pre,sutta_avoid,Milan Day,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=0.5,refine:digit_symmetry/transform=mirror5/alpha=0.75:base=0.75,13,3,7,4
+close_pre,sutta_avoid,Milan Day,late_reused,causal_history/mechanism=overdue_sutta_30/strength=0.5,refine:digit_symmetry/transform=mirror5/alpha=0.75:base=0.75,5,3,0,-3
+close_pre,sutta_avoid,Milan Night,refine_validation,joint_gates/sutta=panel/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=3.0,refine:causal_history/mechanism=last_digits/strength=0.5:base=1.0,13,5,6,1
+close_pre,sutta_avoid,Milan Night,late_reused,joint_gates/sutta=panel/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=3.0,refine:causal_history/mechanism=last_digits/strength=0.5:base=1.0,5,2,1,-1
+close_pre,sutta_avoid,Rajdhani Day,refine_validation,joint_ipf/sutta=native/digits=appearance/damping=1.0/passes=1,cross:causal_history/mechanism=last_digits/strength=-0.5:digit_symmetry/transform=multiply3/alpha=1.0:0.5,13,4,7,3
+close_pre,sutta_avoid,Rajdhani Day,late_reused,joint_ipf/sutta=native/digits=appearance/damping=1.0/passes=1,cross:causal_history/mechanism=last_digits/strength=-0.5:digit_symmetry/transform=multiply3/alpha=1.0:0.5,5,4,1,-3
+close_pre,sutta_avoid,Rajdhani Night,refine_validation,causal_history/mechanism=recent_digits_7/strength=1.0,cross:causal_history/mechanism=recent_digits_90/strength=-0.5:joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1:0.5,11,5,4,-1
+close_pre,sutta_avoid,Rajdhani Night,late_reused,causal_history/mechanism=recent_digits_7/strength=1.0,cross:causal_history/mechanism=recent_digits_90/strength=-0.5:joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1:0.5,5,2,1,-1
+close_pre,sutta_avoid,Sridevi,refine_validation,causal_history/mechanism=overdue_digits_7/strength=0.25,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.75,15,1,7,6
+close_pre,sutta_avoid,Sridevi,late_reused,causal_history/mechanism=overdue_digits_7/strength=0.25,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=0.75,7,2,4,2
+close_pre,sutta_avoid,Sridevi Night,refine_validation,joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1,cross:causal_history/mechanism=overdue_sutta_7/strength=-0.5:joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=3.0:0.25,15,6,7,1
+close_pre,sutta_avoid,Sridevi Night,late_reused,joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1,cross:causal_history/mechanism=overdue_sutta_7/strength=-0.5:joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=3.0:0.25,6,3,2,-1
+close_pre,sutta_avoid,Time Bazar,refine_validation,causal_history/mechanism=recent_sutta_30/strength=1.0,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=1.0,13,1,7,6
+close_pre,sutta_avoid,Time Bazar,late_reused,causal_history/mechanism=recent_sutta_30/strength=1.0,refine:causal_history/mechanism=recent_sutta_90/strength=-0.5:base=1.0,6,0,2,2
+close_pre,joint10,ALL,refine_validation,production,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=0.5,152,7,12,5
+close_pre,joint10,ALL,late_reused,production,refine:causal_history/mechanism=recent_digits_7/strength=1.0:base=0.5,61,2,2,0
+close_pre,joint10,Kalyan,refine_validation,production,refine:digit_symmetry/transform=mirror5/alpha=1.0:base=1.0,13,0,2,2
+close_pre,joint10,Kalyan,late_reused,production,refine:digit_symmetry/transform=mirror5/alpha=1.0:base=1.0,5,0,0,0
+close_pre,joint10,Kalyan Night,refine_validation,source_fusion/source=all10/alpha=0.35/mode=arithmetic,production,11,0,1,1
+close_pre,joint10,Kalyan Night,late_reused,source_fusion/source=all10/alpha=0.35/mode=arithmetic,production,5,1,1,0
+close_pre,joint10,Madhur Day,refine_validation,digit_symmetry/transform=multiply3/alpha=0.25,production,15,0,0,0
+close_pre,joint10,Madhur Day,late_reused,digit_symmetry/transform=multiply3/alpha=0.25,production,7,0,0,0
+close_pre,joint10,Madhur Night,refine_validation,production,production,9,0,0,0
+close_pre,joint10,Madhur Night,late_reused,production,production,0,0,0,0
+close_pre,joint10,Main Bazar,refine_validation,digit_symmetry/transform=multiply3/alpha=0.75,refine:causal_history/mechanism=last_sutta/strength=0.5:base=0.25,11,0,3,3
+close_pre,joint10,Main Bazar,late_reused,digit_symmetry/transform=multiply3/alpha=0.75,refine:causal_history/mechanism=last_sutta/strength=0.5:base=0.25,5,0,0,0
+close_pre,joint10,Milan Day,refine_validation,production,production,13,0,0,0
+close_pre,joint10,Milan Day,late_reused,production,production,5,0,0,0
+close_pre,joint10,Milan Night,refine_validation,joint_gates/sutta=panel/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=1.0,refine:digit_symmetry/transform=complement9/alpha=0.75:base=0.5,13,0,1,1
+close_pre,joint10,Milan Night,late_reused,joint_gates/sutta=panel/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=1.0,refine:digit_symmetry/transform=complement9/alpha=0.75:base=0.5,5,0,0,0
+close_pre,joint10,Rajdhani Day,refine_validation,causal_history/mechanism=last_digits/strength=1.0,production,13,1,2,1
+close_pre,joint10,Rajdhani Day,late_reused,causal_history/mechanism=last_digits/strength=1.0,production,5,1,0,-1
+close_pre,joint10,Rajdhani Night,refine_validation,production,production,11,1,1,0
+close_pre,joint10,Rajdhani Night,late_reused,production,production,5,0,0,0
+close_pre,joint10,Sridevi,refine_validation,causal_history/mechanism=overdue_digits_7/strength=0.5,refine:causal_history/mechanism=last_digits/strength=2.0:base=0.25,15,0,2,2
+close_pre,joint10,Sridevi,late_reused,causal_history/mechanism=overdue_digits_7/strength=0.5,refine:causal_history/mechanism=last_digits/strength=2.0:base=0.25,7,0,0,0
+close_pre,joint10,Sridevi Night,refine_validation,avoid2_gate/source=panel_avoid/penalty=3.0,refine:avoid2_gate/source=panel_avoid/penalty=12.0:base=0.5,15,1,2,1
+close_pre,joint10,Sridevi Night,late_reused,avoid2_gate/source=panel_avoid/penalty=3.0,refine:avoid2_gate/source=panel_avoid/penalty=12.0:base=0.5,6,0,0,0
+close_pre,joint10,Time Bazar,refine_validation,causal_history/mechanism=overdue_digits_7/strength=0.5,refine:causal_history/mechanism=last_digits/strength=2.0:base=1.0,13,0,4,4
+close_pre,joint10,Time Bazar,late_reused,causal_history/mechanism=overdue_digits_7/strength=0.5,refine:causal_history/mechanism=last_digits/strength=2.0:base=1.0,6,0,0,0
+close_pre,joint_sp30,ALL,refine_validation,temperature_control/temperature=0.6,refine:joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0:base=1.0,111,14,24,10
+close_pre,joint_sp30,ALL,late_reused,temperature_control/temperature=0.6,refine:joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0:base=1.0,46,5,16,11
+close_pre,joint_sp30,Kalyan,refine_validation,joint_gates/sutta=conditional/avoid=panel_avoid/sutta_penalty=3.0/avoid_penalty=3.0,production,9,1,0,-1
+close_pre,joint_sp30,Kalyan,late_reused,joint_gates/sutta=conditional/avoid=panel_avoid/sutta_penalty=3.0/avoid_penalty=3.0,production,4,1,1,0
+close_pre,joint_sp30,Kalyan Night,refine_validation,joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0,production,9,3,1,-2
+close_pre,joint_sp30,Kalyan Night,late_reused,joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0,production,4,3,1,-2
+close_pre,joint_sp30,Madhur Day,refine_validation,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=3.0/avoid_penalty=12.0,refine:joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0:base=1.0,11,3,4,1
+close_pre,joint_sp30,Madhur Day,late_reused,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=3.0/avoid_penalty=12.0,refine:joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0:base=1.0,5,1,1,0
+close_pre,joint_sp30,Madhur Night,refine_validation,digit_symmetry/transform=rotate3/alpha=0.25,production,8,1,1,0
+close_pre,joint_sp30,Madhur Night,late_reused,digit_symmetry/transform=rotate3/alpha=0.25,production,0,0,0,0
+close_pre,joint_sp30,Main Bazar,refine_validation,digit_symmetry/transform=multiply3/alpha=0.75,production,7,1,1,0
+close_pre,joint_sp30,Main Bazar,late_reused,digit_symmetry/transform=multiply3/alpha=0.75,production,4,0,1,1
+close_pre,joint_sp30,Milan Day,refine_validation,production,production,5,1,1,0
+close_pre,joint_sp30,Milan Day,late_reused,production,production,0,0,0,0
+close_pre,joint_sp30,Milan Night,refine_validation,production,refine:joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0:base=1.0,8,1,3,2
+close_pre,joint_sp30,Milan Night,late_reused,production,refine:joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0:base=1.0,4,0,2,2
+close_pre,joint_sp30,Rajdhani Day,refine_validation,causal_history/mechanism=last_digits/strength=0.5,production,11,2,3,1
+close_pre,joint_sp30,Rajdhani Day,late_reused,causal_history/mechanism=last_digits/strength=0.5,production,4,0,0,0
+close_pre,joint_sp30,Rajdhani Night,refine_validation,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0,refine:digit_symmetry/transform=rotate1/alpha=0.5:base=1.0,9,1,2,1
+close_pre,joint_sp30,Rajdhani Night,late_reused,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0,refine:digit_symmetry/transform=rotate1/alpha=0.5:base=1.0,4,1,1,0
+close_pre,joint_sp30,Sridevi,refine_validation,production,refine:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=3.0/avoid_penalty=12.0:base=1.0,12,0,3,3
+close_pre,joint_sp30,Sridevi,late_reused,production,refine:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=3.0/avoid_penalty=12.0:base=1.0,6,1,2,1
+close_pre,joint_sp30,Sridevi Night,refine_validation,avoid2_gate/source=panel_avoid/penalty=12.0,production,10,3,2,-1
+close_pre,joint_sp30,Sridevi Night,late_reused,avoid2_gate/source=panel_avoid/penalty=12.0,production,6,2,1,-1
+close_pre,joint_sp30,Time Bazar,refine_validation,causal_history/mechanism=overdue_digits_7/strength=1.0,refine:causal_history/mechanism=last_digits/strength=2.0:base=1.0,12,1,5,4
+close_pre,joint_sp30,Time Bazar,late_reused,causal_history/mechanism=overdue_digits_7/strength=1.0,refine:causal_history/mechanism=last_digits/strength=2.0:base=1.0,5,0,0,0
+close_pre,joint_dp20,ALL,refine_validation,joint_gates/sutta=conditional/avoid=panel_avoid/sutta_penalty=3.0/avoid_penalty=1.0,refine:joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0:base=1.0,41,7,11,4
+close_pre,joint_dp20,ALL,late_reused,joint_gates/sutta=conditional/avoid=panel_avoid/sutta_penalty=3.0/avoid_penalty=1.0,refine:joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=12.0/avoid_penalty=12.0:base=1.0,14,0,2,2
+close_pre,joint_dp20,Kalyan,refine_validation,production,production,4,0,0,0
+close_pre,joint_dp20,Kalyan,late_reused,production,production,1,0,0,0
+close_pre,joint_dp20,Kalyan Night,refine_validation,production,production,2,0,0,0
+close_pre,joint_dp20,Kalyan Night,late_reused,production,production,1,0,0,0
+close_pre,joint_dp20,Madhur Day,refine_validation,production,production,4,1,1,0
+close_pre,joint_dp20,Madhur Day,late_reused,production,production,2,0,0,0
+close_pre,joint_dp20,Madhur Night,refine_validation,production,production,1,0,0,0
+close_pre,joint_dp20,Madhur Night,late_reused,production,production,0,0,0,0
+close_pre,joint_dp20,Main Bazar,refine_validation,production,production,4,0,0,0
+close_pre,joint_dp20,Main Bazar,late_reused,production,production,1,0,0,0
+close_pre,joint_dp20,Milan Day,refine_validation,production,production,8,1,1,0
+close_pre,joint_dp20,Milan Day,late_reused,production,production,5,1,1,0
+close_pre,joint_dp20,Milan Night,refine_validation,production,production,5,0,0,0
+close_pre,joint_dp20,Milan Night,late_reused,production,production,1,0,0,0
+close_pre,joint_dp20,Rajdhani Day,refine_validation,production,production,2,0,0,0
+close_pre,joint_dp20,Rajdhani Day,late_reused,production,production,1,0,0,0
+close_pre,joint_dp20,Rajdhani Night,refine_validation,production,production,2,0,0,0
+close_pre,joint_dp20,Rajdhani Night,late_reused,production,production,1,0,0,0
+close_pre,joint_dp20,Sridevi,refine_validation,production,production,3,0,0,0
+close_pre,joint_dp20,Sridevi,late_reused,production,production,0,0,0,0
+close_pre,joint_dp20,Sridevi Night,refine_validation,production,production,5,0,0,0
+close_pre,joint_dp20,Sridevi Night,late_reused,production,production,0,0,0,0
+close_pre,joint_dp20,Time Bazar,refine_validation,production,production,1,0,0,0
+close_pre,joint_dp20,Time Bazar,late_reused,production,production,1,0,0,0
+close_known,top5,ALL,refine_validation,joint_likelihood/sutta=panel/digits=appearance/strength=1.5,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,152,70,85,15
+close_known,top5,ALL,late_reused,joint_likelihood/sutta=panel/digits=appearance/strength=1.5,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,61,31,36,5
+close_known,top5,Kalyan,refine_validation,causal_history/mechanism=overdue_digits_7/strength=0.5,refine:joint_likelihood/sutta=panel/digits=present/strength=1.5:base=1.0,13,5,10,5
+close_known,top5,Kalyan,late_reused,causal_history/mechanism=overdue_digits_7/strength=0.5,refine:joint_likelihood/sutta=panel/digits=present/strength=1.5:base=1.0,5,2,3,1
+close_known,top5,Kalyan Night,refine_validation,source_fusion/source=all10/alpha=0.65/mode=arithmetic,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=1.0,11,5,8,3
+close_known,top5,Kalyan Night,late_reused,source_fusion/source=all10/alpha=0.65/mode=arithmetic,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=1.0,5,4,2,-2
+close_known,top5,Madhur Day,refine_validation,causal_history/mechanism=recent_digits_90/strength=-1.0,refine:causal_history/mechanism=recent_digits_90/strength=-1.0:base=1.0,15,11,11,0
+close_known,top5,Madhur Day,late_reused,causal_history/mechanism=recent_digits_90/strength=-1.0,refine:causal_history/mechanism=recent_digits_90/strength=-1.0:base=1.0,7,3,3,0
+close_known,top5,Madhur Night,refine_validation,joint_likelihood/sutta=panel/digits=appearance/strength=1.5,refine:digit_symmetry/transform=rotate3/alpha=0.75:base=1.0,9,5,8,3
+close_known,top5,Madhur Night,late_reused,joint_likelihood/sutta=panel/digits=appearance/strength=1.5,refine:digit_symmetry/transform=rotate3/alpha=0.75:base=1.0,0,0,0,0
+close_known,top5,Main Bazar,refine_validation,causal_history/mechanism=recent_digits_7/strength=2.0,refine:avoid2_gate/source=native_avoid/penalty=3.0:base=0.75,11,2,8,6
+close_known,top5,Main Bazar,late_reused,causal_history/mechanism=recent_digits_7/strength=2.0,refine:avoid2_gate/source=native_avoid/penalty=3.0:base=0.75,5,3,1,-2
+close_known,top5,Milan Day,refine_validation,digit_symmetry/transform=multiply3/alpha=0.25,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=1.0,13,5,9,4
+close_known,top5,Milan Day,late_reused,digit_symmetry/transform=multiply3/alpha=0.25,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=1.0,5,4,3,-1
+close_known,top5,Milan Night,refine_validation,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,13,8,10,2
+close_known,top5,Milan Night,late_reused,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,5,3,3,0
+close_known,top5,Rajdhani Day,refine_validation,digit_symmetry/transform=multiply3/alpha=1.0,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,13,6,9,3
+close_known,top5,Rajdhani Day,late_reused,digit_symmetry/transform=multiply3/alpha=1.0,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,5,0,5,5
+close_known,top5,Rajdhani Night,refine_validation,probability_mixture/source=bernoulli/alpha=0.5,refine:bernoulli_digits/source=appearance/strength=-1.0:base=1.0,11,7,9,2
+close_known,top5,Rajdhani Night,late_reused,probability_mixture/source=bernoulli/alpha=0.5,refine:bernoulli_digits/source=appearance/strength=-1.0:base=1.0,5,4,5,1
+close_known,top5,Sridevi,refine_validation,bernoulli_digits/source=blend/strength=2.0,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=0.75,15,8,11,3
+close_known,top5,Sridevi,late_reused,bernoulli_digits/source=blend/strength=2.0,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=0.75,7,2,4,2
+close_known,top5,Sridevi Night,refine_validation,top5_sutta_gate/source=sutta_conditional/penalty=0.15,refine:digit_symmetry/transform=rotate3/alpha=0.75:base=0.75,15,7,9,2
+close_known,top5,Sridevi Night,late_reused,top5_sutta_gate/source=sutta_conditional/penalty=0.15,refine:digit_symmetry/transform=rotate3/alpha=0.75:base=0.75,6,2,6,4
+close_known,top5,Time Bazar,refine_validation,joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1,cross:causal_history/mechanism=overdue_sutta_7/strength=0.5:joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1:0.25,13,7,9,2
+close_known,top5,Time Bazar,late_reused,joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1,cross:causal_history/mechanism=overdue_sutta_7/strength=0.5:joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1:0.25,6,1,5,4
+close_known,avoid2,ALL,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=0.5,cross:causal_history/mechanism=overdue_sutta_30/strength=0.25:digit_symmetry/transform=multiply3/alpha=0.25:0.5,152,84,86,2
+close_known,avoid2,ALL,late_reused,causal_history/mechanism=overdue_sutta_30/strength=0.5,cross:causal_history/mechanism=overdue_sutta_30/strength=0.25:digit_symmetry/transform=multiply3/alpha=0.25:0.5,61,36,33,-3
+close_known,avoid2,Kalyan,refine_validation,digit_symmetry/transform=multiply3/alpha=0.5,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=1.0,13,9,12,3
+close_known,avoid2,Kalyan,late_reused,digit_symmetry/transform=multiply3/alpha=0.5,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=1.0,5,1,1,0
+close_known,avoid2,Kalyan Night,refine_validation,top5_sutta_gate/source=sutta_conditional/penalty=1.5,refine:causal_history/mechanism=overdue_digits_7/strength=-1.0:base=0.25,11,6,8,2
+close_known,avoid2,Kalyan Night,late_reused,top5_sutta_gate/source=sutta_conditional/penalty=1.5,refine:causal_history/mechanism=overdue_digits_7/strength=-1.0:base=0.25,5,5,3,-2
+close_known,avoid2,Madhur Day,refine_validation,bernoulli_digits/source=blend/strength=-1.0,refine:causal_history/mechanism=overdue_sutta_30/strength=0.25:base=0.5,15,8,9,1
+close_known,avoid2,Madhur Day,late_reused,bernoulli_digits/source=blend/strength=-1.0,refine:causal_history/mechanism=overdue_sutta_30/strength=0.25:base=0.5,7,3,4,1
+close_known,avoid2,Madhur Night,refine_validation,causal_history/mechanism=recent_digits_90/strength=0.5,refine:joint_likelihood/sutta=conditional/digits=blend/strength=0.75:base=1.0,9,6,8,2
+close_known,avoid2,Madhur Night,late_reused,causal_history/mechanism=recent_digits_90/strength=0.5,refine:joint_likelihood/sutta=conditional/digits=blend/strength=0.75:base=1.0,0,0,0,0
+close_known,avoid2,Main Bazar,refine_validation,causal_history/mechanism=last_sutta/strength=-1.0,cross:bernoulli_digits/source=present/strength=-1.0:causal_history/mechanism=overdue_digits_7/strength=0.5:0.5,11,6,8,2
+close_known,avoid2,Main Bazar,late_reused,causal_history/mechanism=last_sutta/strength=-1.0,cross:bernoulli_digits/source=present/strength=-1.0:causal_history/mechanism=overdue_digits_7/strength=0.5:0.5,5,3,2,-1
+close_known,avoid2,Milan Day,refine_validation,causal_history/mechanism=overdue_sutta_30/strength=0.25,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.5,13,7,11,4
+close_known,avoid2,Milan Day,late_reused,causal_history/mechanism=overdue_sutta_30/strength=0.25,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.5,5,3,3,0
+close_known,avoid2,Milan Night,refine_validation,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:joint_likelihood/sutta=panel/digits=appearance/strength=1.5:base=0.5,13,6,10,4
+close_known,avoid2,Milan Night,late_reused,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:joint_likelihood/sutta=panel/digits=appearance/strength=1.5:base=0.5,5,2,4,2
+close_known,avoid2,Rajdhani Day,refine_validation,digit_symmetry/transform=rotate1/alpha=1.0,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.5,13,7,11,4
+close_known,avoid2,Rajdhani Day,late_reused,digit_symmetry/transform=rotate1/alpha=1.0,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.5,5,2,3,1
+close_known,avoid2,Rajdhani Night,refine_validation,causal_history/mechanism=last_digits/strength=1.0,cross:causal_history/mechanism=recent_digits_90/strength=-1.0:joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1:0.25,11,6,8,2
+close_known,avoid2,Rajdhani Night,late_reused,causal_history/mechanism=last_digits/strength=1.0,cross:causal_history/mechanism=recent_digits_90/strength=-1.0:joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1:0.25,5,3,3,0
+close_known,avoid2,Sridevi,refine_validation,digit_symmetry/transform=rotate1/alpha=0.75,refine:causal_history/mechanism=overdue_digits_7/strength=-1.0:base=0.5,15,6,12,6
+close_known,avoid2,Sridevi,late_reused,digit_symmetry/transform=rotate1/alpha=0.75,refine:causal_history/mechanism=overdue_digits_7/strength=-1.0:base=0.5,7,1,5,4
+close_known,avoid2,Sridevi Night,refine_validation,digit_symmetry/transform=multiply3/alpha=0.25,refine:causal_history/mechanism=recent_digits_90/strength=0.5:base=0.75,15,9,11,2
+close_known,avoid2,Sridevi Night,late_reused,digit_symmetry/transform=multiply3/alpha=0.25,refine:causal_history/mechanism=recent_digits_90/strength=0.5:base=0.75,6,3,4,1
+close_known,avoid2,Time Bazar,refine_validation,causal_history/mechanism=overdue_sutta_7/strength=0.5,cross:digit_symmetry/transform=multiply3/alpha=1.0:source_fusion/source=all10/alpha=0.65/mode=arithmetic:0.25,13,4,10,6
+close_known,avoid2,Time Bazar,late_reused,causal_history/mechanism=overdue_sutta_7/strength=0.5,cross:digit_symmetry/transform=multiply3/alpha=1.0:source_fusion/source=all10/alpha=0.65/mode=arithmetic:0.25,6,6,2,-4
+close_known,panel10,ALL,refine_validation,production,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.75,152,6,12,6
+close_known,panel10,ALL,late_reused,production,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.75,61,7,8,1
+close_known,panel10,Kalyan,refine_validation,bernoulli_digits/source=present/strength=-1.0,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.25,13,1,2,1
+close_known,panel10,Kalyan,late_reused,bernoulli_digits/source=present/strength=-1.0,refine:bernoulli_digits/source=appearance/strength=-1.0:base=0.25,5,0,0,0
+close_known,panel10,Kalyan Night,refine_validation,digit_symmetry/transform=multiply3/alpha=1.0,cross:digit_symmetry/transform=multiply3/alpha=0.25:top5_sutta_gate/source=sutta_conditional/penalty=0.15:0.25,11,1,2,1
+close_known,panel10,Kalyan Night,late_reused,digit_symmetry/transform=multiply3/alpha=1.0,cross:digit_symmetry/transform=multiply3/alpha=0.25:top5_sutta_gate/source=sutta_conditional/penalty=0.15:0.25,5,1,1,0
+close_known,panel10,Madhur Day,refine_validation,joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1,refine:digit_symmetry/transform=rotate1/alpha=0.75:base=0.5,15,1,3,2
+close_known,panel10,Madhur Day,late_reused,joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1,refine:digit_symmetry/transform=rotate1/alpha=0.75:base=0.5,7,1,0,-1
+close_known,panel10,Madhur Night,refine_validation,production,refine:causal_history/mechanism=last_digits/strength=0.5:base=0.25,9,0,1,1
+close_known,panel10,Madhur Night,late_reused,production,refine:causal_history/mechanism=last_digits/strength=0.5:base=0.25,0,0,0,0
+close_known,panel10,Main Bazar,refine_validation,production,refine:bernoulli_digits/source=present/strength=1.0:base=0.75,11,1,3,2
+close_known,panel10,Main Bazar,late_reused,production,refine:bernoulli_digits/source=present/strength=1.0:base=0.75,5,1,0,-1
+close_known,panel10,Milan Day,refine_validation,digit_symmetry/transform=rotate3/alpha=0.75,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.75,13,0,1,1
+close_known,panel10,Milan Day,late_reused,digit_symmetry/transform=rotate3/alpha=0.75,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.75,5,0,0,0
+close_known,panel10,Milan Night,refine_validation,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:avoid2_gate/source=native_avoid/penalty=0.15:base=0.75,13,1,3,2
+close_known,panel10,Milan Night,late_reused,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:avoid2_gate/source=native_avoid/penalty=0.15:base=0.75,5,0,1,1
+close_known,panel10,Rajdhani Day,refine_validation,causal_history/mechanism=recent_digits_30/strength=0.5,production,13,1,0,-1
+close_known,panel10,Rajdhani Day,late_reused,causal_history/mechanism=recent_digits_30/strength=0.5,production,5,1,2,1
+close_known,panel10,Rajdhani Night,refine_validation,bernoulli_digits/source=blend/strength=-1.0,production,11,0,0,0
+close_known,panel10,Rajdhani Night,late_reused,bernoulli_digits/source=blend/strength=-1.0,production,5,1,1,0
+close_known,panel10,Sridevi,refine_validation,production,refine:joint_likelihood/sutta=conditional/digits=blend/strength=0.25:base=0.5,15,0,5,5
+close_known,panel10,Sridevi,late_reused,production,refine:joint_likelihood/sutta=conditional/digits=blend/strength=0.25:base=0.5,7,2,1,-1
+close_known,panel10,Sridevi Night,refine_validation,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,cross:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1:0.25,15,3,4,1
+close_known,panel10,Sridevi Night,late_reused,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,cross:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1:0.25,6,2,1,-1
+close_known,panel10,Time Bazar,refine_validation,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,cross:digit_symmetry/transform=multiply3/alpha=1.0:top5_sutta_gate/source=sutta_conditional/penalty=1.5:0.75,13,3,5,2
+close_known,panel10,Time Bazar,late_reused,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35,cross:digit_symmetry/transform=multiply3/alpha=1.0:top5_sutta_gate/source=sutta_conditional/penalty=1.5:0.75,6,0,1,1
+close_known,sp30,ALL,refine_validation,digit_symmetry/transform=rotate1/alpha=0.1,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.25,111,30,34,4
+close_known,sp30,ALL,late_reused,digit_symmetry/transform=rotate1/alpha=0.1,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.25,46,13,16,3
+close_known,sp30,Kalyan,refine_validation,joint_ipf/sutta=native/digits=present/damping=0.35/passes=1,production,9,1,3,2
+close_known,sp30,Kalyan,late_reused,joint_ipf/sutta=native/digits=present/damping=0.35/passes=1,production,4,1,0,-1
+close_known,sp30,Kalyan Night,refine_validation,joint_likelihood/sutta=conditional/digits=blend/strength=0.75,production,9,2,5,3
+close_known,sp30,Kalyan Night,late_reused,joint_likelihood/sutta=conditional/digits=blend/strength=0.75,production,4,1,2,1
+close_known,sp30,Madhur Day,refine_validation,joint_ipf/sutta=panel/digits=present/damping=0.35/passes=1,refine:avoid2_gate/source=panel_avoid/penalty=0.15:base=1.0,11,3,5,2
+close_known,sp30,Madhur Day,late_reused,joint_ipf/sutta=panel/digits=present/damping=0.35/passes=1,refine:avoid2_gate/source=panel_avoid/penalty=0.15:base=1.0,5,3,2,-1
+close_known,sp30,Madhur Night,refine_validation,digit_symmetry/transform=multiply3/alpha=1.0,production,8,3,1,-2
+close_known,sp30,Madhur Night,late_reused,digit_symmetry/transform=multiply3/alpha=1.0,production,0,0,0,0
+close_known,sp30,Main Bazar,refine_validation,digit_symmetry/transform=rotate1/alpha=0.1,production,7,1,1,0
+close_known,sp30,Main Bazar,late_reused,digit_symmetry/transform=rotate1/alpha=0.1,production,4,1,1,0
+close_known,sp30,Milan Day,refine_validation,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,5,0,0,0
+close_known,sp30,Milan Day,late_reused,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,0,0,0,0
+close_known,sp30,Milan Night,refine_validation,digit_symmetry/transform=rotate1/alpha=1.0,refine:avoid2_gate/source=native_avoid/penalty=0.15:base=0.5,8,1,4,3
+close_known,sp30,Milan Night,late_reused,digit_symmetry/transform=rotate1/alpha=1.0,refine:avoid2_gate/source=native_avoid/penalty=0.15:base=0.5,4,0,2,2
+close_known,sp30,Rajdhani Day,refine_validation,causal_history/mechanism=overdue_digits_7/strength=-1.0,production,11,3,4,1
+close_known,sp30,Rajdhani Day,late_reused,causal_history/mechanism=overdue_digits_7/strength=-1.0,production,4,1,2,1
+close_known,sp30,Rajdhani Night,refine_validation,causal_history/mechanism=overdue_digits_7/strength=-1.0,refine:digit_symmetry/transform=rotate1/alpha=0.75:base=0.75,9,3,5,2
+close_known,sp30,Rajdhani Night,late_reused,causal_history/mechanism=overdue_digits_7/strength=-1.0,refine:digit_symmetry/transform=rotate1/alpha=0.75:base=0.75,4,1,2,1
+close_known,sp30,Sridevi,refine_validation,joint_likelihood/sutta=native/digits=appearance/strength=0.25,refine:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=1.0/avoid_penalty=0.35:base=0.25,12,4,8,4
+close_known,sp30,Sridevi,late_reused,joint_likelihood/sutta=native/digits=appearance/strength=0.25,refine:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=1.0/avoid_penalty=0.35:base=0.25,6,2,1,-1
+close_known,sp30,Sridevi Night,refine_validation,avoid2_gate/source=panel_avoid/penalty=0.15,refine:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=1.0,10,1,6,5
+close_known,sp30,Sridevi Night,late_reused,avoid2_gate/source=panel_avoid/penalty=0.15,refine:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=1.0,6,0,2,2
+close_known,sp30,Time Bazar,refine_validation,top5_sutta_gate/source=sutta_conditional/penalty=0.15,cross:causal_history/mechanism=recent_digits_30/strength=0.5:digit_symmetry/transform=rotate1/alpha=1.0:0.5,12,4,8,4
+close_known,sp30,Time Bazar,late_reused,top5_sutta_gate/source=sutta_conditional/penalty=0.15,cross:causal_history/mechanism=recent_digits_30/strength=0.5:digit_symmetry/transform=rotate1/alpha=1.0:0.5,5,0,0,0
+close_known,dp20,ALL,refine_validation,production,refine:sutta_marginal/source=conditional/strength=-1.0:base=1.0,41,9,16,7
+close_known,dp20,ALL,late_reused,production,refine:sutta_marginal/source=conditional/strength=-1.0:base=1.0,14,3,3,0
+close_known,dp20,Kalyan,refine_validation,production,production,4,1,1,0
+close_known,dp20,Kalyan,late_reused,production,production,1,1,1,0
+close_known,dp20,Kalyan Night,refine_validation,production,production,2,0,0,0
+close_known,dp20,Kalyan Night,late_reused,production,production,1,0,0,0
+close_known,dp20,Madhur Day,refine_validation,production,production,4,1,1,0
+close_known,dp20,Madhur Day,late_reused,production,production,2,1,1,0
+close_known,dp20,Madhur Night,refine_validation,production,production,1,1,1,0
+close_known,dp20,Madhur Night,late_reused,production,production,0,0,0,0
+close_known,dp20,Main Bazar,refine_validation,production,production,4,0,0,0
+close_known,dp20,Main Bazar,late_reused,production,production,1,0,0,0
+close_known,dp20,Milan Day,refine_validation,production,production,8,1,1,0
+close_known,dp20,Milan Day,late_reused,production,production,5,1,1,0
+close_known,dp20,Milan Night,refine_validation,production,production,5,0,0,0
+close_known,dp20,Milan Night,late_reused,production,production,1,0,0,0
+close_known,dp20,Rajdhani Day,refine_validation,production,production,2,0,0,0
+close_known,dp20,Rajdhani Day,late_reused,production,production,1,0,0,0
+close_known,dp20,Rajdhani Night,refine_validation,production,production,2,0,0,0
+close_known,dp20,Rajdhani Night,late_reused,production,production,1,0,0,0
+close_known,dp20,Sridevi,refine_validation,production,production,3,2,2,0
+close_known,dp20,Sridevi,late_reused,production,production,0,0,0,0
+close_known,dp20,Sridevi Night,refine_validation,production,production,5,3,3,0
+close_known,dp20,Sridevi Night,late_reused,production,production,0,0,0,0
+close_known,dp20,Time Bazar,refine_validation,production,production,1,0,0,0
+close_known,dp20,Time Bazar,late_reused,production,production,1,0,0,0
+close_known,sutta_avoid,ALL,refine_validation,top5_sutta_gate/source=sutta_panel/penalty=12.0,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.5,152,42,44,2
+close_known,sutta_avoid,ALL,late_reused,top5_sutta_gate/source=sutta_panel/penalty=12.0,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.5,61,19,24,5
+close_known,sutta_avoid,Kalyan,refine_validation,causal_history/mechanism=recent_sutta_7/strength=-1.0,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=1.0,13,4,8,4
+close_known,sutta_avoid,Kalyan,late_reused,causal_history/mechanism=recent_sutta_7/strength=-1.0,refine:digit_symmetry/transform=multiply3/alpha=1.0:base=1.0,5,1,0,-1
+close_known,sutta_avoid,Kalyan Night,refine_validation,temperature_control/temperature=1.6,refine:joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1:base=0.5,11,3,5,2
+close_known,sutta_avoid,Kalyan Night,late_reused,temperature_control/temperature=1.6,refine:joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1:base=0.5,5,3,2,-1
+close_known,sutta_avoid,Madhur Day,refine_validation,joint_likelihood/sutta=panel/digits=present/strength=1.5,refine:causal_history/mechanism=overdue_sutta_30/strength=0.25:base=1.0,15,3,6,3
+close_known,sutta_avoid,Madhur Day,late_reused,joint_likelihood/sutta=panel/digits=present/strength=1.5,refine:causal_history/mechanism=overdue_sutta_30/strength=0.25:base=1.0,7,2,0,-2
+close_known,sutta_avoid,Madhur Night,refine_validation,joint_likelihood/sutta=panel/digits=blend/strength=0.75,refine:causal_history/mechanism=overdue_sutta_7/strength=0.5:base=1.0,9,2,3,1
+close_known,sutta_avoid,Madhur Night,late_reused,joint_likelihood/sutta=panel/digits=blend/strength=0.75,refine:causal_history/mechanism=overdue_sutta_7/strength=0.5:base=1.0,0,0,0,0
+close_known,sutta_avoid,Main Bazar,refine_validation,production,refine:joint_likelihood/sutta=native/digits=appearance/strength=0.25:base=0.25,11,2,5,3
+close_known,sutta_avoid,Main Bazar,late_reused,production,refine:joint_likelihood/sutta=native/digits=appearance/strength=0.25:base=0.25,5,0,1,1
+close_known,sutta_avoid,Milan Day,refine_validation,sutta_marginal/source=conditional/strength=-1.0,refine:probability_mixture/source=bernoulli/alpha=0.5:base=1.0,13,1,6,5
+close_known,sutta_avoid,Milan Day,late_reused,sutta_marginal/source=conditional/strength=-1.0,refine:probability_mixture/source=bernoulli/alpha=0.5:base=1.0,5,2,3,1
+close_known,sutta_avoid,Milan Night,refine_validation,avoid2_gate/source=native_avoid/penalty=0.15,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,13,5,6,1
+close_known,sutta_avoid,Milan Night,late_reused,avoid2_gate/source=native_avoid/penalty=0.15,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,5,3,3,0
+close_known,sutta_avoid,Rajdhani Day,refine_validation,digit_symmetry/transform=multiply3/alpha=1.0,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.75,13,4,6,2
+close_known,sutta_avoid,Rajdhani Day,late_reused,digit_symmetry/transform=multiply3/alpha=1.0,refine:joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3:base=0.75,5,0,4,4
+close_known,sutta_avoid,Rajdhani Night,refine_validation,causal_history/mechanism=recent_digits_30/strength=-1.0,cross:causal_history/mechanism=recent_digits_90/strength=-1.0:joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1:0.25,11,2,5,3
+close_known,sutta_avoid,Rajdhani Night,late_reused,causal_history/mechanism=recent_digits_30/strength=-1.0,cross:causal_history/mechanism=recent_digits_90/strength=-1.0:joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1:0.25,5,2,2,0
+close_known,sutta_avoid,Sridevi,refine_validation,bernoulli_digits/source=present/strength=1.0,refine:causal_history/mechanism=overdue_digits_7/strength=-1.0:base=0.75,15,7,8,1
+close_known,sutta_avoid,Sridevi,late_reused,bernoulli_digits/source=present/strength=1.0,refine:causal_history/mechanism=overdue_digits_7/strength=-1.0:base=0.75,7,2,2,0
+close_known,sutta_avoid,Sridevi Night,refine_validation,digit_symmetry/transform=rotate3/alpha=0.5,refine:top5_sutta_gate/source=sutta_conditional/penalty=0.15:base=0.75,15,4,6,2
+close_known,sutta_avoid,Sridevi Night,late_reused,digit_symmetry/transform=rotate3/alpha=0.5,refine:top5_sutta_gate/source=sutta_conditional/penalty=0.15:base=0.75,6,3,1,-2
+close_known,sutta_avoid,Time Bazar,refine_validation,causal_history/mechanism=overdue_sutta_7/strength=0.5,cross:causal_history/mechanism=recent_digits_30/strength=0.5:digit_symmetry/transform=rotate1/alpha=1.0:0.5,13,3,7,4
+close_known,sutta_avoid,Time Bazar,late_reused,causal_history/mechanism=overdue_sutta_7/strength=0.5,cross:causal_history/mechanism=recent_digits_30/strength=0.5:digit_symmetry/transform=rotate1/alpha=1.0:0.5,6,4,1,-3
+close_known,joint10,ALL,refine_validation,production,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.5,152,2,10,8
+close_known,joint10,ALL,late_reused,production,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.5,61,0,6,6
+close_known,joint10,Kalyan,refine_validation,avoid2_gate/source=native_avoid/penalty=3.0,refine:causal_history/mechanism=overdue_sutta_7/strength=0.5:base=0.25,13,0,1,1
+close_known,joint10,Kalyan,late_reused,avoid2_gate/source=native_avoid/penalty=3.0,refine:causal_history/mechanism=overdue_sutta_7/strength=0.5:base=0.25,5,0,0,0
+close_known,joint10,Kalyan Night,refine_validation,production,refine:joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1:base=0.5,11,0,2,2
+close_known,joint10,Kalyan Night,late_reused,production,refine:joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1:base=0.5,5,0,1,1
+close_known,joint10,Madhur Day,refine_validation,sutta_marginal/source=conditional/strength=1.0,refine:causal_history/mechanism=overdue_sutta_30/strength=0.25:base=0.75,15,2,2,0
+close_known,joint10,Madhur Day,late_reused,sutta_marginal/source=conditional/strength=1.0,refine:causal_history/mechanism=overdue_sutta_30/strength=0.25:base=0.75,7,0,0,0
+close_known,joint10,Madhur Night,refine_validation,joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3,production,9,0,0,0
+close_known,joint10,Madhur Night,late_reused,joint_ipf/sutta=panel/digits=appearance/damping=0.35/passes=3,production,0,0,0,0
+close_known,joint10,Main Bazar,refine_validation,production,refine:causal_history/mechanism=overdue_digits_7/strength=-1.0:base=0.25,11,0,1,1
+close_known,joint10,Main Bazar,late_reused,production,refine:causal_history/mechanism=overdue_digits_7/strength=-1.0:base=0.25,5,0,0,0
+close_known,joint10,Milan Day,refine_validation,sutta_marginal/source=native/strength=0.25,production,13,0,0,0
+close_known,joint10,Milan Day,late_reused,sutta_marginal/source=native/strength=0.25,production,5,0,0,0
+close_known,joint10,Milan Night,refine_validation,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=0.25,13,1,2,1
+close_known,joint10,Milan Night,late_reused,causal_history/mechanism=recent_digits_30/strength=-0.5,refine:joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=0.25,5,0,0,0
+close_known,joint10,Rajdhani Day,refine_validation,causal_history/mechanism=recent_digits_7/strength=1.0,production,13,1,0,-1
+close_known,joint10,Rajdhani Day,late_reused,causal_history/mechanism=recent_digits_7/strength=1.0,production,5,0,0,0
+close_known,joint10,Rajdhani Night,refine_validation,causal_history/mechanism=last_digits/strength=0.5,production,11,0,0,0
+close_known,joint10,Rajdhani Night,late_reused,causal_history/mechanism=last_digits/strength=0.5,production,5,0,0,0
+close_known,joint10,Sridevi,refine_validation,production,cross:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:top5_sutta_gate/source=sutta_conditional/penalty=0.15:0.25,15,0,4,4
+close_known,joint10,Sridevi,late_reused,production,cross:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:top5_sutta_gate/source=sutta_conditional/penalty=0.15:0.25,7,0,1,1
+close_known,joint10,Sridevi Night,refine_validation,production,production,15,0,0,0
+close_known,joint10,Sridevi Night,late_reused,production,production,6,0,0,0
+close_known,joint10,Time Bazar,refine_validation,causal_history/mechanism=overdue_digits_7/strength=0.25,refine:joint_ipf/sutta=native/digits=present/damping=0.75/passes=1:base=1.0,13,0,2,2
+close_known,joint10,Time Bazar,late_reused,causal_history/mechanism=overdue_digits_7/strength=0.25,refine:joint_ipf/sutta=native/digits=present/damping=0.75/passes=1:base=1.0,6,0,0,0
+close_known,joint_sp30,ALL,refine_validation,production,refine:avoid2_gate/source=panel_avoid/penalty=0.15:base=0.25,111,18,20,2
+close_known,joint_sp30,ALL,late_reused,production,refine:avoid2_gate/source=panel_avoid/penalty=0.15:base=0.25,46,11,11,0
+close_known,joint_sp30,Kalyan,refine_validation,bernoulli_digits/source=appearance/strength=-1.0,production,9,2,2,0
+close_known,joint_sp30,Kalyan,late_reused,bernoulli_digits/source=appearance/strength=-1.0,production,4,0,0,0
+close_known,joint_sp30,Kalyan Night,refine_validation,bernoulli_digits/source=present/strength=0.25,production,9,2,2,0
+close_known,joint_sp30,Kalyan Night,late_reused,bernoulli_digits/source=present/strength=0.25,production,4,1,2,1
+close_known,joint_sp30,Madhur Day,refine_validation,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=1.0/avoid_penalty=0.35,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.25,11,1,4,3
+close_known,joint_sp30,Madhur Day,late_reused,joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=1.0/avoid_penalty=0.35,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.25,5,0,1,1
+close_known,joint_sp30,Madhur Night,refine_validation,joint_likelihood/sutta=conditional/digits=blend/strength=0.25,production,8,0,0,0
+close_known,joint_sp30,Madhur Night,late_reused,joint_likelihood/sutta=conditional/digits=blend/strength=0.25,production,0,0,0,0
+close_known,joint_sp30,Main Bazar,refine_validation,digit_symmetry/transform=rotate1/alpha=0.1,production,7,0,0,0
+close_known,joint_sp30,Main Bazar,late_reused,digit_symmetry/transform=rotate1/alpha=0.1,production,4,0,0,0
+close_known,joint_sp30,Milan Day,refine_validation,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,5,0,0,0
+close_known,joint_sp30,Milan Day,late_reused,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35,production,0,0,0,0
+close_known,joint_sp30,Milan Night,refine_validation,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,8,2,3,1
+close_known,joint_sp30,Milan Night,late_reused,joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35,refine:avoid2_gate/source=panel_avoid/penalty=3.0:base=0.75,4,3,1,-2
+close_known,joint_sp30,Rajdhani Day,refine_validation,digit_symmetry/transform=multiply3/alpha=1.0,production,11,1,2,1
+close_known,joint_sp30,Rajdhani Day,late_reused,digit_symmetry/transform=multiply3/alpha=1.0,production,4,0,2,2
+close_known,joint_sp30,Rajdhani Night,refine_validation,causal_history/mechanism=last_digits/strength=0.5,refine:probability_mixture/source=bernoulli/alpha=0.5:base=0.5,9,1,3,2
+close_known,joint_sp30,Rajdhani Night,late_reused,causal_history/mechanism=last_digits/strength=0.5,refine:probability_mixture/source=bernoulli/alpha=0.5:base=0.5,4,0,2,2
+close_known,joint_sp30,Sridevi,refine_validation,joint_ipf/sutta=native/digits=present/damping=0.75/passes=1,refine:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=0.5,12,3,6,3
+close_known,joint_sp30,Sridevi,late_reused,joint_ipf/sutta=native/digits=present/damping=0.75/passes=1,refine:joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=0.5,6,1,1,0
+close_known,joint_sp30,Sridevi Night,refine_validation,avoid2_gate/source=panel_avoid/penalty=3.0,refine:joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=0.5,10,0,1,1
+close_known,joint_sp30,Sridevi Night,late_reused,avoid2_gate/source=panel_avoid/penalty=3.0,refine:joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35:base=0.5,6,0,0,0
+close_known,joint_sp30,Time Bazar,refine_validation,top5_sutta_gate/source=sutta_conditional/penalty=0.35,cross:causal_history/mechanism=recent_digits_30/strength=0.5:digit_symmetry/transform=rotate1/alpha=1.0:0.5,12,4,7,3
+close_known,joint_sp30,Time Bazar,late_reused,top5_sutta_gate/source=sutta_conditional/penalty=0.35,cross:causal_history/mechanism=recent_digits_30/strength=0.5:digit_symmetry/transform=rotate1/alpha=1.0:0.5,5,1,0,-1
+close_known,joint_dp20,ALL,refine_validation,production,refine:avoid2_gate/source=panel_avoid/penalty=0.15:base=0.5,41,4,11,7
+close_known,joint_dp20,ALL,late_reused,production,refine:avoid2_gate/source=panel_avoid/penalty=0.15:base=0.5,14,2,2,0
+close_known,joint_dp20,Kalyan,refine_validation,production,production,4,0,0,0
+close_known,joint_dp20,Kalyan,late_reused,production,production,1,0,0,0
+close_known,joint_dp20,Kalyan Night,refine_validation,production,production,2,0,0,0
+close_known,joint_dp20,Kalyan Night,late_reused,production,production,1,0,0,0
+close_known,joint_dp20,Madhur Day,refine_validation,production,production,4,0,0,0
+close_known,joint_dp20,Madhur Day,late_reused,production,production,2,1,1,0
+close_known,joint_dp20,Madhur Night,refine_validation,production,production,1,0,0,0
+close_known,joint_dp20,Madhur Night,late_reused,production,production,0,0,0,0
+close_known,joint_dp20,Main Bazar,refine_validation,production,production,4,0,0,0
+close_known,joint_dp20,Main Bazar,late_reused,production,production,1,0,0,0
+close_known,joint_dp20,Milan Day,refine_validation,production,production,8,0,0,0
+close_known,joint_dp20,Milan Day,late_reused,production,production,5,1,1,0
+close_known,joint_dp20,Milan Night,refine_validation,production,production,5,0,0,0
+close_known,joint_dp20,Milan Night,late_reused,production,production,1,0,0,0
+close_known,joint_dp20,Rajdhani Day,refine_validation,production,production,2,0,0,0
+close_known,joint_dp20,Rajdhani Day,late_reused,production,production,1,0,0,0
+close_known,joint_dp20,Rajdhani Night,refine_validation,production,production,2,0,0,0
+close_known,joint_dp20,Rajdhani Night,late_reused,production,production,1,0,0,0
+close_known,joint_dp20,Sridevi,refine_validation,production,production,3,2,2,0
+close_known,joint_dp20,Sridevi,late_reused,production,production,0,0,0,0
+close_known,joint_dp20,Sridevi Night,refine_validation,production,production,5,2,2,0
+close_known,joint_dp20,Sridevi Night,late_reused,production,production,0,0,0,0
+close_known,joint_dp20,Time Bazar,refine_validation,production,production,1,0,0,0
+close_known,joint_dp20,Time Bazar,late_reused,production,production,1,0,0,0
