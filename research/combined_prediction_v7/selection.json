@@ -1,0 +1,275 @@
+[
+  {
+    "channel": "open",
+    "market": "ALL",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Kalyan",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Kalyan Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Madhur Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Madhur Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Main Bazar",
+    "index": 159,
+    "candidate": "five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.25/avoid2_weight=1.0",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Milan Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Milan Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Sridevi",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Sridevi Night",
+    "index": 693,
+    "candidate": "five_component_fusion/panel10_weight=0.2/sp30_mixture_weight=0.2/dp20_mixture_weight=0.6/sp30_conditional_weight=1.0/dp20_conditional_weight=0.5/top5_weight=0.0/avoid2_weight=0.25",
+    "kind": "balanced"
+  },
+  {
+    "channel": "open",
+    "market": "Time Bazar",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "ALL",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Kalyan",
+    "index": 191,
+    "candidate": "five_component_fusion/panel10_weight=1.0/sp30_mixture_weight=0.0/dp20_mixture_weight=0.0/sp30_conditional_weight=1.0/dp20_conditional_weight=1.0/top5_weight=2.0/avoid2_weight=1.0",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Kalyan Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Madhur Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Madhur Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Main Bazar",
+    "index": 7,
+    "candidate": "specialist_control/source=dp20",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Milan Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Milan Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Sridevi",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Sridevi Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_pre",
+    "market": "Time Bazar",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "ALL",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Kalyan",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Kalyan Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Madhur Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Madhur Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Main Bazar",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Milan Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Milan Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Sridevi",
+    "index": 8,
+    "candidate": "specialist_control/source=baseline",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Sridevi Night",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  },
+  {
+    "channel": "close_known",
+    "market": "Time Bazar",
+    "index": 0,
+    "candidate": "production",
+    "kind": "balanced"
+  }
+]
