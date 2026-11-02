@@ -1,0 +1,563 @@
+{
+  "status": "Posthoc priorities for prospective evaluation only; no production promotion.",
+  "identified_after_reused_audit": true,
+  "source_policies_were_selected_on_declared_fitting_blocks": true,
+  "candidates": [
+    {
+      "channel": "open",
+      "market": "Sridevi",
+      "index": 39,
+      "selected": "shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1",
+      "metrics": {
+        "top5": {
+          "weight_train": {
+            "n": 23,
+            "baseline_hits": 14,
+            "candidate_hits": 14,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 15,
+            "baseline_hits": 7,
+            "candidate_hits": 7,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "late_reused": {
+            "n": 7,
+            "baseline_hits": 3,
+            "candidate_hits": 3,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "november_reused": {
+            "n": 10,
+            "baseline_hits": 5,
+            "candidate_hits": 5,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "avoid2": {
+          "weight_train": {
+            "n": 23,
+            "baseline_hits": 13,
+            "candidate_hits": 13,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 15,
+            "baseline_hits": 6,
+            "candidate_hits": 7,
+            "wins": 1,
+            "losses": 0,
+            "lift_pp": 6.666666666666667,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              20.0
+            ]
+          },
+          "late_reused": {
+            "n": 7,
+            "baseline_hits": 3,
+            "candidate_hits": 3,
+            "wins": 1,
+            "losses": 1,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              -42.857142857142854,
+              42.857142857142854
+            ]
+          },
+          "november_reused": {
+            "n": 10,
+            "baseline_hits": 7,
+            "candidate_hits": 9,
+            "wins": 3,
+            "losses": 1,
+            "lift_pp": 20.0,
+            "paired_p": 0.625,
+            "day_bootstrap95_pp": [
+              -20.0,
+              60.0
+            ]
+          }
+        },
+        "panel10": {
+          "weight_train": {
+            "n": 23,
+            "baseline_hits": 4,
+            "candidate_hits": 4,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 15,
+            "baseline_hits": 1,
+            "candidate_hits": 1,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "late_reused": {
+            "n": 7,
+            "baseline_hits": 0,
+            "candidate_hits": 0,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "november_reused": {
+            "n": 10,
+            "baseline_hits": 0,
+            "candidate_hits": 2,
+            "wins": 2,
+            "losses": 0,
+            "lift_pp": 20.0,
+            "paired_p": 0.5,
+            "day_bootstrap95_pp": [
+              0.0,
+              50.0
+            ]
+          }
+        },
+        "sp30": {
+          "weight_train": {
+            "n": 20,
+            "baseline_hits": 7,
+            "candidate_hits": 7,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 13,
+            "baseline_hits": 2,
+            "candidate_hits": 2,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "late_reused": {
+            "n": 6,
+            "baseline_hits": 0,
+            "candidate_hits": 1,
+            "wins": 1,
+            "losses": 0,
+            "lift_pp": 16.666666666666668,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              50.0
+            ]
+          },
+          "november_reused": {
+            "n": 8,
+            "baseline_hits": 3,
+            "candidate_hits": 4,
+            "wins": 2,
+            "losses": 1,
+            "lift_pp": 12.5,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              -25.0,
+              50.0
+            ]
+          }
+        },
+        "dp20": {
+          "weight_train": {
+            "n": 3,
+            "baseline_hits": 1,
+            "candidate_hits": 1,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 2,
+            "baseline_hits": 1,
+            "candidate_hits": 1,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "late_reused": {
+            "n": 1,
+            "baseline_hits": 0,
+            "candidate_hits": 1,
+            "wins": 1,
+            "losses": 0,
+            "lift_pp": 100.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              100.0,
+              100.0
+            ]
+          },
+          "november_reused": {
+            "n": 2,
+            "baseline_hits": 0,
+            "candidate_hits": 1,
+            "wins": 1,
+            "losses": 0,
+            "lift_pp": 50.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              100.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "channel": "close_pre",
+      "market": "Rajdhani Night",
+      "index": 51,
+      "selected": "shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1",
+      "metrics": {
+        "top5": {
+          "weight_train": {
+            "n": 17,
+            "baseline_hits": 12,
+            "candidate_hits": 12,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 11,
+            "baseline_hits": 2,
+            "candidate_hits": 4,
+            "wins": 2,
+            "losses": 0,
+            "lift_pp": 18.181818181818183,
+            "paired_p": 0.5,
+            "day_bootstrap95_pp": [
+              0.0,
+              45.45454545454545
+            ]
+          },
+          "late_reused": {
+            "n": 5,
+            "baseline_hits": 2,
+            "candidate_hits": 4,
+            "wins": 2,
+            "losses": 0,
+            "lift_pp": 40.0,
+            "paired_p": 0.5,
+            "day_bootstrap95_pp": [
+              0.0,
+              80.0
+            ]
+          },
+          "november_reused": {
+            "n": 6,
+            "baseline_hits": 2,
+            "candidate_hits": 5,
+            "wins": 4,
+            "losses": 1,
+            "lift_pp": 50.0,
+            "paired_p": 0.375,
+            "day_bootstrap95_pp": [
+              -16.666666666666664,
+              100.0
+            ]
+          }
+        },
+        "avoid2": {
+          "weight_train": {
+            "n": 17,
+            "baseline_hits": 8,
+            "candidate_hits": 8,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 11,
+            "baseline_hits": 8,
+            "candidate_hits": 9,
+            "wins": 1,
+            "losses": 0,
+            "lift_pp": 9.090909090909092,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              27.27272727272727
+            ]
+          },
+          "late_reused": {
+            "n": 5,
+            "baseline_hits": 3,
+            "candidate_hits": 5,
+            "wins": 2,
+            "losses": 0,
+            "lift_pp": 40.0,
+            "paired_p": 0.5,
+            "day_bootstrap95_pp": [
+              0.0,
+              80.0
+            ]
+          },
+          "november_reused": {
+            "n": 6,
+            "baseline_hits": 0,
+            "candidate_hits": 0,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "panel10": {
+          "weight_train": {
+            "n": 17,
+            "baseline_hits": 1,
+            "candidate_hits": 1,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 11,
+            "baseline_hits": 1,
+            "candidate_hits": 1,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "late_reused": {
+            "n": 5,
+            "baseline_hits": 0,
+            "candidate_hits": 0,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "november_reused": {
+            "n": 6,
+            "baseline_hits": 0,
+            "candidate_hits": 0,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "sp30": {
+          "weight_train": {
+            "n": 15,
+            "baseline_hits": 5,
+            "candidate_hits": 5,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 9,
+            "baseline_hits": 2,
+            "candidate_hits": 2,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "late_reused": {
+            "n": 4,
+            "baseline_hits": 0,
+            "candidate_hits": 1,
+            "wins": 1,
+            "losses": 0,
+            "lift_pp": 25.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              75.0
+            ]
+          },
+          "november_reused": {
+            "n": 4,
+            "baseline_hits": 1,
+            "candidate_hits": 2,
+            "wins": 1,
+            "losses": 0,
+            "lift_pp": 25.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              75.0
+            ]
+          }
+        },
+        "dp20": {
+          "weight_train": {
+            "n": 2,
+            "baseline_hits": 0,
+            "candidate_hits": 0,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "weight_validation": {
+            "n": 2,
+            "baseline_hits": 0,
+            "candidate_hits": 1,
+            "wins": 1,
+            "losses": 0,
+            "lift_pp": 50.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              100.0
+            ]
+          },
+          "late_reused": {
+            "n": 1,
+            "baseline_hits": 0,
+            "candidate_hits": 0,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          },
+          "november_reused": {
+            "n": 2,
+            "baseline_hits": 0,
+            "candidate_hits": 0,
+            "wins": 0,
+            "losses": 0,
+            "lift_pp": 0.0,
+            "paired_p": 1.0,
+            "day_bootstrap95_pp": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
