@@ -1,0 +1,1189 @@
+market,strategy,channel,metric,period,policy,n,production_hits,candidate_hits,extra_hits,production_pct,candidate_pct,lift_pp
+Kalyan,coherent_combined,open,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan,coherent_combined,open,top5,oct23_nov1,baseline,8,5,5,0,62.5,62.5,0.0
+Kalyan,coherent_combined,open,top5,oct16_nov1,baseline,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Kalyan,coherent_combined,open,avoid2,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Kalyan,coherent_combined,open,avoid2,oct23_nov1,baseline,8,2,2,0,25.0,25.0,0.0
+Kalyan,coherent_combined,open,avoid2,oct16_nov1,baseline,13,4,4,0,30.76923076923077,30.76923076923077,0.0
+Kalyan,coherent_combined,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,open,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,open,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,open,sp30,oct16_22,baseline,3,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,open,sp30,oct23_nov1,baseline,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Kalyan,coherent_combined,open,sp30,oct16_nov1,baseline,10,3,3,0,30.0,30.0,0.0
+Kalyan,coherent_combined,open,dp20,oct16_22,baseline,2,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,open,dp20,oct23_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,open,dp20,oct16_nov1,baseline,3,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,close_pre,top5,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,5,2,3,1,40.0,60.0,20.0
+Kalyan,coherent_combined,close_pre,top5,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,8,5,4,-1,62.5,50.0,-12.5
+Kalyan,coherent_combined,close_pre,top5,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,13,7,7,0,53.84615384615385,53.84615384615385,0.0
+Kalyan,coherent_combined,close_pre,avoid2,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,5,5,1,-4,100.0,20.0,-80.0
+Kalyan,coherent_combined,close_pre,avoid2,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,8,4,5,1,50.0,62.5,12.5
+Kalyan,coherent_combined,close_pre,avoid2,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,13,9,6,-3,69.23076923076923,46.15384615384615,-23.076923076923077
+Kalyan,coherent_combined,close_pre,panel10,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,5,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,close_pre,panel10,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,8,1,0,-1,12.5,0.0,-12.5
+Kalyan,coherent_combined,close_pre,panel10,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,13,1,0,-1,7.6923076923076925,0.0,-7.6923076923076925
+Kalyan,coherent_combined,close_pre,sp30,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,4,1,0,-1,25.0,0.0,-25.0
+Kalyan,coherent_combined,close_pre,sp30,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,7,2,3,1,28.571428571428573,42.857142857142854,14.285714285714286
+Kalyan,coherent_combined,close_pre,sp30,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,11,3,3,0,27.272727272727273,27.272727272727273,0.0
+Kalyan,coherent_combined,close_pre,dp20,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,1,1,0,-1,100.0,0.0,-100.0
+Kalyan,coherent_combined,close_pre,dp20,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,1,1,0,-1,100.0,0.0,-100.0
+Kalyan,coherent_combined,close_pre,dp20,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,2,2,0,-2,100.0,0.0,-100.0
+Kalyan,coherent_combined,close_known,top5,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Kalyan,coherent_combined,close_known,top5,oct23_nov1,baseline,8,5,5,0,62.5,62.5,0.0
+Kalyan,coherent_combined,close_known,top5,oct16_nov1,baseline,13,7,7,0,53.84615384615385,53.84615384615385,0.0
+Kalyan,coherent_combined,close_known,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan,coherent_combined,close_known,avoid2,oct23_nov1,baseline,8,3,3,0,37.5,37.5,0.0
+Kalyan,coherent_combined,close_known,avoid2,oct16_nov1,baseline,13,6,6,0,46.15384615384615,46.15384615384615,0.0
+Kalyan,coherent_combined,close_known,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,close_known,panel10,oct23_nov1,baseline,8,2,2,0,25.0,25.0,0.0
+Kalyan,coherent_combined,close_known,panel10,oct16_nov1,baseline,13,2,2,0,15.384615384615385,15.384615384615385,0.0
+Kalyan,coherent_combined,close_known,sp30,oct16_22,baseline,4,0,0,0,0.0,0.0,0.0
+Kalyan,coherent_combined,close_known,sp30,oct23_nov1,baseline,7,1,1,0,14.285714285714286,14.285714285714286,0.0
+Kalyan,coherent_combined,close_known,sp30,oct16_nov1,baseline,11,1,1,0,9.090909090909092,9.090909090909092,0.0
+Kalyan,coherent_combined,close_known,dp20,oct16_22,baseline,1,1,1,0,100.0,100.0,0.0
+Kalyan,coherent_combined,close_known,dp20,oct23_nov1,baseline,1,1,1,0,100.0,100.0,0.0
+Kalyan,coherent_combined,close_known,dp20,oct16_nov1,baseline,2,2,2,0,100.0,100.0,0.0
+Kalyan,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=7,5,1,1,0,20.0,20.0,0.0
+Kalyan,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=7,8,3,1,-2,37.5,12.5,-25.0
+Kalyan,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=7,13,4,2,-2,30.76923076923077,15.384615384615385,-15.384615384615385
+Kalyan,endpoint_specific,open,top5,oct16_22,static/v7_local_specialists,5,3,5,2,60.0,100.0,40.0
+Kalyan,endpoint_specific,open,top5,oct23_nov1,static/v7_local_specialists,8,5,3,-2,62.5,37.5,-25.0
+Kalyan,endpoint_specific,open,top5,oct16_nov1,static/v7_local_specialists,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Kalyan,endpoint_specific,open,avoid2,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,5,2,2,0,40.0,40.0,0.0
+Kalyan,endpoint_specific,open,avoid2,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,8,2,4,2,25.0,50.0,25.0
+Kalyan,endpoint_specific,open,avoid2,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,13,4,6,2,30.76923076923077,46.15384615384615,15.384615384615385
+Kalyan,endpoint_specific,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Kalyan,endpoint_specific,open,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Kalyan,endpoint_specific,open,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Kalyan,endpoint_specific,open,sp30,oct16_22,local_calendar/days=14/min_support=5/penalty=0.15,3,0,1,1,0.0,33.333333333333336,33.333333333333336
+Kalyan,endpoint_specific,open,sp30,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.15,7,3,2,-1,42.857142857142854,28.571428571428573,-14.285714285714286
+Kalyan,endpoint_specific,open,sp30,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.15,10,3,3,0,30.0,30.0,0.0
+Kalyan,endpoint_specific,open,dp20,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,2,0,1,1,0.0,50.0,50.0
+Kalyan,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,1,0,0,0,0.0,0.0,0.0
+Kalyan,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,3,0,1,1,0.0,33.333333333333336,33.333333333333336
+Kalyan,endpoint_specific,close_pre,top5,oct16_22,shrinkage/prior=pool/days=60/strength=3/min_support=5/penalty=0.1,5,2,3,1,40.0,60.0,20.0
+Kalyan,endpoint_specific,close_pre,top5,oct23_nov1,shrinkage/prior=pool/days=60/strength=3/min_support=5/penalty=0.1,8,5,4,-1,62.5,50.0,-12.5
+Kalyan,endpoint_specific,close_pre,top5,oct16_nov1,shrinkage/prior=pool/days=60/strength=3/min_support=5/penalty=0.1,13,7,7,0,53.84615384615385,53.84615384615385,0.0
+Kalyan,endpoint_specific,close_pre,avoid2,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,5,5,3,-2,100.0,60.0,-40.0
+Kalyan,endpoint_specific,close_pre,avoid2,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,8,4,4,0,50.0,50.0,0.0
+Kalyan,endpoint_specific,close_pre,avoid2,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,13,9,7,-2,69.23076923076923,53.84615384615385,-15.384615384615385
+Kalyan,endpoint_specific,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Kalyan,endpoint_specific,close_pre,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Kalyan,endpoint_specific,close_pre,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Kalyan,endpoint_specific,close_pre,sp30,oct16_22,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,4,1,2,1,25.0,50.0,25.0
+Kalyan,endpoint_specific,close_pre,sp30,oct23_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,7,2,3,1,28.571428571428573,42.857142857142854,14.285714285714286
+Kalyan,endpoint_specific,close_pre,sp30,oct16_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,11,3,5,2,27.272727272727273,45.45454545454545,18.181818181818183
+Kalyan,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,1,1,1,0,100.0,100.0,0.0
+Kalyan,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,1,1,1,0,100.0,100.0,0.0
+Kalyan,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,2,2,2,0,100.0,100.0,0.0
+Kalyan,endpoint_specific,close_known,top5,oct16_22,local_calendar/days=60/min_support=5/penalty=0.05,5,2,2,0,40.0,40.0,0.0
+Kalyan,endpoint_specific,close_known,top5,oct23_nov1,local_calendar/days=60/min_support=5/penalty=0.05,8,5,3,-2,62.5,37.5,-25.0
+Kalyan,endpoint_specific,close_known,top5,oct16_nov1,local_calendar/days=60/min_support=5/penalty=0.05,13,7,5,-2,53.84615384615385,38.46153846153846,-15.384615384615385
+Kalyan,endpoint_specific,close_known,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan,endpoint_specific,close_known,avoid2,oct23_nov1,baseline,8,3,3,0,37.5,37.5,0.0
+Kalyan,endpoint_specific,close_known,avoid2,oct16_nov1,baseline,13,6,6,0,46.15384615384615,46.15384615384615,0.0
+Kalyan,endpoint_specific,close_known,panel10,oct16_22,static/v7_local_specialists,5,0,0,0,0.0,0.0,0.0
+Kalyan,endpoint_specific,close_known,panel10,oct23_nov1,static/v7_local_specialists,8,2,1,-1,25.0,12.5,-12.5
+Kalyan,endpoint_specific,close_known,panel10,oct16_nov1,static/v7_local_specialists,13,2,1,-1,15.384615384615385,7.6923076923076925,-7.6923076923076925
+Kalyan,endpoint_specific,close_known,sp30,oct16_22,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,4,0,0,0,0.0,0.0,0.0
+Kalyan,endpoint_specific,close_known,sp30,oct23_nov1,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,7,1,3,2,14.285714285714286,42.857142857142854,28.571428571428573
+Kalyan,endpoint_specific,close_known,sp30,oct16_nov1,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,11,1,3,2,9.090909090909092,27.272727272727273,18.181818181818183
+Kalyan,endpoint_specific,close_known,dp20,oct16_22,baseline,1,1,1,0,100.0,100.0,0.0
+Kalyan,endpoint_specific,close_known,dp20,oct23_nov1,baseline,1,1,1,0,100.0,100.0,0.0
+Kalyan,endpoint_specific,close_known,dp20,oct16_nov1,baseline,2,2,2,0,100.0,100.0,0.0
+Kalyan,endpoint_specific,jodi_pre,jodi25,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,5,1,1,0,20.0,20.0,0.0
+Kalyan,endpoint_specific,jodi_pre,jodi25,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,8,3,2,-1,37.5,25.0,-12.5
+Kalyan,endpoint_specific,jodi_pre,jodi25,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,13,4,3,-1,30.76923076923077,23.076923076923077,-7.6923076923076925
+Kalyan,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=103; Close-pre endpoint=43,5,1,3,2,20.0,60.0,40.0
+Kalyan,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=103; Close-pre endpoint=43,8,3,2,-1,37.5,25.0,-12.5
+Kalyan,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=103; Close-pre endpoint=43,13,4,5,1,30.76923076923077,38.46153846153846,7.6923076923076925
+Kalyan Night,coherent_combined,open,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan Night,coherent_combined,open,top5,oct23_nov1,baseline,6,5,5,0,83.33333333333333,83.33333333333333,0.0
+Kalyan Night,coherent_combined,open,top5,oct16_nov1,baseline,11,8,8,0,72.72727272727273,72.72727272727273,0.0
+Kalyan Night,coherent_combined,open,avoid2,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Kalyan Night,coherent_combined,open,avoid2,oct23_nov1,baseline,6,5,5,0,83.33333333333333,83.33333333333333,0.0
+Kalyan Night,coherent_combined,open,avoid2,oct16_nov1,baseline,11,9,9,0,81.81818181818181,81.81818181818181,0.0
+Kalyan Night,coherent_combined,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,open,panel10,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Kalyan Night,coherent_combined,open,panel10,oct16_nov1,baseline,11,1,1,0,9.090909090909092,9.090909090909092,0.0
+Kalyan Night,coherent_combined,open,sp30,oct16_22,baseline,2,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,open,sp30,oct23_nov1,baseline,6,4,4,0,66.66666666666667,66.66666666666667,0.0
+Kalyan Night,coherent_combined,open,sp30,oct16_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Kalyan Night,coherent_combined,open,dp20,oct16_22,baseline,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Kalyan Night,coherent_combined,open,dp20,oct23_nov1,baseline,0,0,0,0,,,
+Kalyan Night,coherent_combined,open,dp20,oct16_nov1,baseline,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Kalyan Night,coherent_combined,close_pre,top5,oct16_22,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,5,3,4,1,60.0,80.0,20.0
+Kalyan Night,coherent_combined,close_pre,top5,oct23_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,6,3,2,-1,50.0,33.333333333333336,-16.666666666666668
+Kalyan Night,coherent_combined,close_pre,top5,oct16_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,11,6,6,0,54.54545454545455,54.54545454545455,0.0
+Kalyan Night,coherent_combined,close_pre,avoid2,oct16_22,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,5,4,3,-1,80.0,60.0,-20.0
+Kalyan Night,coherent_combined,close_pre,avoid2,oct23_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,6,2,1,-1,33.333333333333336,16.666666666666668,-16.666666666666668
+Kalyan Night,coherent_combined,close_pre,avoid2,oct16_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,11,6,4,-2,54.54545454545455,36.36363636363637,-18.181818181818183
+Kalyan Night,coherent_combined,close_pre,panel10,oct16_22,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,5,1,0,-1,20.0,0.0,-20.0
+Kalyan Night,coherent_combined,close_pre,panel10,oct23_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Kalyan Night,coherent_combined,close_pre,panel10,oct16_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,11,2,1,-1,18.181818181818183,9.090909090909092,-9.090909090909092
+Kalyan Night,coherent_combined,close_pre,sp30,oct16_22,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,4,1,2,1,25.0,50.0,25.0
+Kalyan Night,coherent_combined,close_pre,sp30,oct23_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,5,1,1,0,20.0,20.0,0.0
+Kalyan Night,coherent_combined,close_pre,sp30,oct16_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,9,2,3,1,22.22222222222222,33.333333333333336,11.11111111111111
+Kalyan Night,coherent_combined,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,1,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,1,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,2,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,close_known,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan Night,coherent_combined,close_known,top5,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Kalyan Night,coherent_combined,close_known,top5,oct16_nov1,baseline,11,4,4,0,36.36363636363637,36.36363636363637,0.0
+Kalyan Night,coherent_combined,close_known,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan Night,coherent_combined,close_known,avoid2,oct23_nov1,baseline,6,3,3,0,50.0,50.0,0.0
+Kalyan Night,coherent_combined,close_known,avoid2,oct16_nov1,baseline,11,6,6,0,54.54545454545455,54.54545454545455,0.0
+Kalyan Night,coherent_combined,close_known,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,close_known,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,close_known,panel10,oct16_nov1,baseline,11,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,close_known,sp30,oct16_22,baseline,4,2,2,0,50.0,50.0,0.0
+Kalyan Night,coherent_combined,close_known,sp30,oct23_nov1,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan Night,coherent_combined,close_known,sp30,oct16_nov1,baseline,9,5,5,0,55.55555555555556,55.55555555555556,0.0
+Kalyan Night,coherent_combined,close_known,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,close_known,dp20,oct23_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,close_known,dp20,oct16_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Kalyan Night,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=41,5,1,2,1,20.0,40.0,20.0
+Kalyan Night,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=41,6,3,2,-1,50.0,33.333333333333336,-16.666666666666668
+Kalyan Night,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=41,11,4,4,0,36.36363636363637,36.36363636363637,0.0
+Kalyan Night,endpoint_specific,open,top5,oct16_22,shrinkage/prior=pool/days=60/strength=3/min_support=5/penalty=0.25,5,3,2,-1,60.0,40.0,-20.0
+Kalyan Night,endpoint_specific,open,top5,oct23_nov1,shrinkage/prior=pool/days=60/strength=3/min_support=5/penalty=0.25,6,5,6,1,83.33333333333333,100.0,16.666666666666668
+Kalyan Night,endpoint_specific,open,top5,oct16_nov1,shrinkage/prior=pool/days=60/strength=3/min_support=5/penalty=0.25,11,8,8,0,72.72727272727273,72.72727272727273,0.0
+Kalyan Night,endpoint_specific,open,avoid2,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Kalyan Night,endpoint_specific,open,avoid2,oct23_nov1,baseline,6,5,5,0,83.33333333333333,83.33333333333333,0.0
+Kalyan Night,endpoint_specific,open,avoid2,oct16_nov1,baseline,11,9,9,0,81.81818181818181,81.81818181818181,0.0
+Kalyan Night,endpoint_specific,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,open,panel10,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Kalyan Night,endpoint_specific,open,panel10,oct16_nov1,baseline,11,1,1,0,9.090909090909092,9.090909090909092,0.0
+Kalyan Night,endpoint_specific,open,sp30,oct16_22,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,2,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,open,sp30,oct23_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,6,4,4,0,66.66666666666667,66.66666666666667,0.0
+Kalyan Night,endpoint_specific,open,sp30,oct16_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,8,4,4,0,50.0,50.0,0.0
+Kalyan Night,endpoint_specific,open,dp20,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Kalyan Night,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,0,0,0,0,,,
+Kalyan Night,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Kalyan Night,endpoint_specific,close_pre,top5,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,5,3,1,-2,60.0,20.0,-40.0
+Kalyan Night,endpoint_specific,close_pre,top5,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,6,3,3,0,50.0,50.0,0.0
+Kalyan Night,endpoint_specific,close_pre,top5,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,11,6,4,-2,54.54545454545455,36.36363636363637,-18.181818181818183
+Kalyan Night,endpoint_specific,close_pre,avoid2,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.1,5,4,3,-1,80.0,60.0,-20.0
+Kalyan Night,endpoint_specific,close_pre,avoid2,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.1,6,2,3,1,33.333333333333336,50.0,16.666666666666668
+Kalyan Night,endpoint_specific,close_pre,avoid2,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.1,11,6,6,0,54.54545454545455,54.54545454545455,0.0
+Kalyan Night,endpoint_specific,close_pre,panel10,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Kalyan Night,endpoint_specific,close_pre,panel10,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Kalyan Night,endpoint_specific,close_pre,panel10,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Kalyan Night,endpoint_specific,close_pre,sp30,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,4,1,1,0,25.0,25.0,0.0
+Kalyan Night,endpoint_specific,close_pre,sp30,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,5,1,1,0,20.0,20.0,0.0
+Kalyan Night,endpoint_specific,close_pre,sp30,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,9,2,2,0,22.22222222222222,22.22222222222222,0.0
+Kalyan Night,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,2,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,close_known,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan Night,endpoint_specific,close_known,top5,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Kalyan Night,endpoint_specific,close_known,top5,oct16_nov1,baseline,11,4,4,0,36.36363636363637,36.36363636363637,0.0
+Kalyan Night,endpoint_specific,close_known,avoid2,oct16_22,static/new_local_mixture,5,3,3,0,60.0,60.0,0.0
+Kalyan Night,endpoint_specific,close_known,avoid2,oct23_nov1,static/new_local_mixture,6,3,1,-2,50.0,16.666666666666668,-33.333333333333336
+Kalyan Night,endpoint_specific,close_known,avoid2,oct16_nov1,static/new_local_mixture,11,6,4,-2,54.54545454545455,36.36363636363637,-18.181818181818183
+Kalyan Night,endpoint_specific,close_known,panel10,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,5,0,1,1,0.0,20.0,20.0
+Kalyan Night,endpoint_specific,close_known,panel10,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,6,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,close_known,panel10,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,11,0,1,1,0.0,9.090909090909092,9.090909090909092
+Kalyan Night,endpoint_specific,close_known,sp30,oct16_22,baseline,4,2,2,0,50.0,50.0,0.0
+Kalyan Night,endpoint_specific,close_known,sp30,oct23_nov1,baseline,5,3,3,0,60.0,60.0,0.0
+Kalyan Night,endpoint_specific,close_known,sp30,oct16_nov1,baseline,9,5,5,0,55.55555555555556,55.55555555555556,0.0
+Kalyan Night,endpoint_specific,close_known,dp20,oct16_22,static/new_local_mixture,1,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,close_known,dp20,oct23_nov1,static/new_local_mixture,1,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,close_known,dp20,oct16_nov1,static/new_local_mixture,2,0,0,0,0.0,0.0,0.0
+Kalyan Night,endpoint_specific,jodi_pre,jodi25,oct16_22,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,5,1,1,0,20.0,20.0,0.0
+Kalyan Night,endpoint_specific,jodi_pre,jodi25,oct23_nov1,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,6,3,1,-2,50.0,16.666666666666668,-33.333333333333336
+Kalyan Night,endpoint_specific,jodi_pre,jodi25,oct16_nov1,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,11,4,2,-2,36.36363636363637,18.181818181818183,-18.181818181818183
+Kalyan Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=44; Close-pre endpoint=1,5,1,0,-1,20.0,0.0,-20.0
+Kalyan Night,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=44; Close-pre endpoint=1,6,3,3,0,50.0,50.0,0.0
+Kalyan Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=44; Close-pre endpoint=1,11,4,3,-1,36.36363636363637,27.272727272727273,-9.090909090909092
+Madhur Day,coherent_combined,open,top5,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Madhur Day,coherent_combined,open,top5,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,10,4,4,0,40.0,40.0,0.0
+Madhur Day,coherent_combined,open,top5,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,17,7,7,0,41.1764705882353,41.1764705882353,0.0
+Madhur Day,coherent_combined,open,avoid2,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,7,5,5,0,71.42857142857143,71.42857142857143,0.0
+Madhur Day,coherent_combined,open,avoid2,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,10,8,8,0,80.0,80.0,0.0
+Madhur Day,coherent_combined,open,avoid2,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,17,13,13,0,76.47058823529412,76.47058823529412,0.0
+Madhur Day,coherent_combined,open,panel10,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,7,0,0,0,0.0,0.0,0.0
+Madhur Day,coherent_combined,open,panel10,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,10,0,0,0,0.0,0.0,0.0
+Madhur Day,coherent_combined,open,panel10,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,17,0,0,0,0.0,0.0,0.0
+Madhur Day,coherent_combined,open,sp30,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,6,0,0,0,0.0,0.0,0.0
+Madhur Day,coherent_combined,open,sp30,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,6,3,3,0,50.0,50.0,0.0
+Madhur Day,coherent_combined,open,sp30,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,12,3,3,0,25.0,25.0,0.0
+Madhur Day,coherent_combined,open,dp20,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,1,0,0,0,0.0,0.0,0.0
+Madhur Day,coherent_combined,open,dp20,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,4,2,2,0,50.0,50.0,0.0
+Madhur Day,coherent_combined,open,dp20,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,5,2,2,0,40.0,40.0,0.0
+Madhur Day,coherent_combined,close_pre,top5,oct16_22,baseline,7,2,2,0,28.571428571428573,28.571428571428573,0.0
+Madhur Day,coherent_combined,close_pre,top5,oct23_nov1,baseline,10,6,6,0,60.0,60.0,0.0
+Madhur Day,coherent_combined,close_pre,top5,oct16_nov1,baseline,17,8,8,0,47.05882352941177,47.05882352941177,0.0
+Madhur Day,coherent_combined,close_pre,avoid2,oct16_22,baseline,7,4,4,0,57.142857142857146,57.142857142857146,0.0
+Madhur Day,coherent_combined,close_pre,avoid2,oct23_nov1,baseline,10,6,6,0,60.0,60.0,0.0
+Madhur Day,coherent_combined,close_pre,avoid2,oct16_nov1,baseline,17,10,10,0,58.8235294117647,58.8235294117647,0.0
+Madhur Day,coherent_combined,close_pre,panel10,oct16_22,baseline,7,1,1,0,14.285714285714286,14.285714285714286,0.0
+Madhur Day,coherent_combined,close_pre,panel10,oct23_nov1,baseline,10,2,2,0,20.0,20.0,0.0
+Madhur Day,coherent_combined,close_pre,panel10,oct16_nov1,baseline,17,3,3,0,17.647058823529413,17.647058823529413,0.0
+Madhur Day,coherent_combined,close_pre,sp30,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Madhur Day,coherent_combined,close_pre,sp30,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Madhur Day,coherent_combined,close_pre,sp30,oct16_nov1,baseline,13,6,6,0,46.15384615384615,46.15384615384615,0.0
+Madhur Day,coherent_combined,close_pre,dp20,oct16_22,baseline,2,1,1,0,50.0,50.0,0.0
+Madhur Day,coherent_combined,close_pre,dp20,oct23_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Madhur Day,coherent_combined,close_pre,dp20,oct16_nov1,baseline,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Madhur Day,coherent_combined,close_known,top5,oct16_22,baseline,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Madhur Day,coherent_combined,close_known,top5,oct23_nov1,baseline,10,5,5,0,50.0,50.0,0.0
+Madhur Day,coherent_combined,close_known,top5,oct16_nov1,baseline,17,8,8,0,47.05882352941177,47.05882352941177,0.0
+Madhur Day,coherent_combined,close_known,avoid2,oct16_22,baseline,7,4,4,0,57.142857142857146,57.142857142857146,0.0
+Madhur Day,coherent_combined,close_known,avoid2,oct23_nov1,baseline,10,6,6,0,60.0,60.0,0.0
+Madhur Day,coherent_combined,close_known,avoid2,oct16_nov1,baseline,17,10,10,0,58.8235294117647,58.8235294117647,0.0
+Madhur Day,coherent_combined,close_known,panel10,oct16_22,baseline,7,0,0,0,0.0,0.0,0.0
+Madhur Day,coherent_combined,close_known,panel10,oct23_nov1,baseline,10,1,1,0,10.0,10.0,0.0
+Madhur Day,coherent_combined,close_known,panel10,oct16_nov1,baseline,17,1,1,0,5.882352941176471,5.882352941176471,0.0
+Madhur Day,coherent_combined,close_known,sp30,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Madhur Day,coherent_combined,close_known,sp30,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Madhur Day,coherent_combined,close_known,sp30,oct16_nov1,baseline,13,3,3,0,23.076923076923077,23.076923076923077,0.0
+Madhur Day,coherent_combined,close_known,dp20,oct16_22,baseline,2,1,1,0,50.0,50.0,0.0
+Madhur Day,coherent_combined,close_known,dp20,oct23_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Madhur Day,coherent_combined,close_known,dp20,oct16_nov1,baseline,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Madhur Day,coherent_combined,jodi_pre,jodi25,oct16_22,Open=21; Close-pre=0,7,1,1,0,14.285714285714286,14.285714285714286,0.0
+Madhur Day,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=21; Close-pre=0,10,2,2,0,20.0,20.0,0.0
+Madhur Day,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=21; Close-pre=0,17,3,3,0,17.647058823529413,17.647058823529413,0.0
+Madhur Day,endpoint_specific,open,top5,oct16_22,local_calendar/days=30/min_support=10/penalty=0.05,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Madhur Day,endpoint_specific,open,top5,oct23_nov1,local_calendar/days=30/min_support=10/penalty=0.05,10,4,9,5,40.0,90.0,50.0
+Madhur Day,endpoint_specific,open,top5,oct16_nov1,local_calendar/days=30/min_support=10/penalty=0.05,17,7,12,5,41.1764705882353,70.58823529411765,29.41176470588235
+Madhur Day,endpoint_specific,open,avoid2,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,7,5,3,-2,71.42857142857143,42.857142857142854,-28.571428571428573
+Madhur Day,endpoint_specific,open,avoid2,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,10,8,8,0,80.0,80.0,0.0
+Madhur Day,endpoint_specific,open,avoid2,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,17,13,11,-2,76.47058823529412,64.70588235294117,-11.764705882352942
+Madhur Day,endpoint_specific,open,panel10,oct16_22,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,7,0,0,0,0.0,0.0,0.0
+Madhur Day,endpoint_specific,open,panel10,oct23_nov1,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,10,0,0,0,0.0,0.0,0.0
+Madhur Day,endpoint_specific,open,panel10,oct16_nov1,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,17,0,0,0,0.0,0.0,0.0
+Madhur Day,endpoint_specific,open,sp30,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,6,0,1,1,0.0,16.666666666666668,16.666666666666668
+Madhur Day,endpoint_specific,open,sp30,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,6,3,1,-2,50.0,16.666666666666668,-33.333333333333336
+Madhur Day,endpoint_specific,open,sp30,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,12,3,2,-1,25.0,16.666666666666668,-8.333333333333334
+Madhur Day,endpoint_specific,open,dp20,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,1,0,0,0,0.0,0.0,0.0
+Madhur Day,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,4,2,2,0,50.0,50.0,0.0
+Madhur Day,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,5,2,2,0,40.0,40.0,0.0
+Madhur Day,endpoint_specific,close_pre,top5,oct16_22,baseline,7,2,2,0,28.571428571428573,28.571428571428573,0.0
+Madhur Day,endpoint_specific,close_pre,top5,oct23_nov1,baseline,10,6,6,0,60.0,60.0,0.0
+Madhur Day,endpoint_specific,close_pre,top5,oct16_nov1,baseline,17,8,8,0,47.05882352941177,47.05882352941177,0.0
+Madhur Day,endpoint_specific,close_pre,avoid2,oct16_22,baseline,7,4,4,0,57.142857142857146,57.142857142857146,0.0
+Madhur Day,endpoint_specific,close_pre,avoid2,oct23_nov1,baseline,10,6,6,0,60.0,60.0,0.0
+Madhur Day,endpoint_specific,close_pre,avoid2,oct16_nov1,baseline,17,10,10,0,58.8235294117647,58.8235294117647,0.0
+Madhur Day,endpoint_specific,close_pre,panel10,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,7,1,0,-1,14.285714285714286,0.0,-14.285714285714286
+Madhur Day,endpoint_specific,close_pre,panel10,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,10,2,2,0,20.0,20.0,0.0
+Madhur Day,endpoint_specific,close_pre,panel10,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,17,3,2,-1,17.647058823529413,11.764705882352942,-5.882352941176471
+Madhur Day,endpoint_specific,close_pre,sp30,oct16_22,local_draws/draws=20/min_support=10/penalty=0.05,5,2,0,-2,40.0,0.0,-40.0
+Madhur Day,endpoint_specific,close_pre,sp30,oct23_nov1,local_draws/draws=20/min_support=10/penalty=0.05,8,4,2,-2,50.0,25.0,-25.0
+Madhur Day,endpoint_specific,close_pre,sp30,oct16_nov1,local_draws/draws=20/min_support=10/penalty=0.05,13,6,2,-4,46.15384615384615,15.384615384615385,-30.76923076923077
+Madhur Day,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,2,1,0,-1,50.0,0.0,-50.0
+Madhur Day,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,0,0,0,0.0,0.0,0.0
+Madhur Day,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,3,1,0,-1,33.333333333333336,0.0,-33.333333333333336
+Madhur Day,endpoint_specific,close_known,top5,oct16_22,static/v7_local_specialists,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Madhur Day,endpoint_specific,close_known,top5,oct23_nov1,static/v7_local_specialists,10,5,6,1,50.0,60.0,10.0
+Madhur Day,endpoint_specific,close_known,top5,oct16_nov1,static/v7_local_specialists,17,8,9,1,47.05882352941177,52.94117647058823,5.882352941176471
+Madhur Day,endpoint_specific,close_known,avoid2,oct16_22,local_calendar/days=14/min_support=5/penalty=0.3,7,4,4,0,57.142857142857146,57.142857142857146,0.0
+Madhur Day,endpoint_specific,close_known,avoid2,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.3,10,6,6,0,60.0,60.0,0.0
+Madhur Day,endpoint_specific,close_known,avoid2,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.3,17,10,10,0,58.8235294117647,58.8235294117647,0.0
+Madhur Day,endpoint_specific,close_known,panel10,oct16_22,static/new_local_mixture,7,0,0,0,0.0,0.0,0.0
+Madhur Day,endpoint_specific,close_known,panel10,oct23_nov1,static/new_local_mixture,10,1,1,0,10.0,10.0,0.0
+Madhur Day,endpoint_specific,close_known,panel10,oct16_nov1,static/new_local_mixture,17,1,1,0,5.882352941176471,5.882352941176471,0.0
+Madhur Day,endpoint_specific,close_known,sp30,oct16_22,local_calendar/days=60/min_support=5/penalty=0.05,5,2,2,0,40.0,40.0,0.0
+Madhur Day,endpoint_specific,close_known,sp30,oct23_nov1,local_calendar/days=60/min_support=5/penalty=0.05,8,1,2,1,12.5,25.0,12.5
+Madhur Day,endpoint_specific,close_known,sp30,oct16_nov1,local_calendar/days=60/min_support=5/penalty=0.05,13,3,4,1,23.076923076923077,30.76923076923077,7.6923076923076925
+Madhur Day,endpoint_specific,close_known,dp20,oct16_22,static/new_local_mixture,2,1,1,0,50.0,50.0,0.0
+Madhur Day,endpoint_specific,close_known,dp20,oct23_nov1,static/new_local_mixture,1,0,1,1,0.0,100.0,100.0
+Madhur Day,endpoint_specific,close_known,dp20,oct16_nov1,static/new_local_mixture,3,1,2,1,33.333333333333336,66.66666666666667,33.333333333333336
+Madhur Day,endpoint_specific,jodi_pre,jodi25,oct16_22,decay/half_life=30/prior=pool/strength=8/min_support=5/penalty=0.1,7,1,2,1,14.285714285714286,28.571428571428573,14.285714285714286
+Madhur Day,endpoint_specific,jodi_pre,jodi25,oct23_nov1,decay/half_life=30/prior=pool/strength=8/min_support=5/penalty=0.1,10,2,1,-1,20.0,10.0,-10.0
+Madhur Day,endpoint_specific,jodi_pre,jodi25,oct16_nov1,decay/half_life=30/prior=pool/strength=8/min_support=5/penalty=0.1,17,3,3,0,17.647058823529413,17.647058823529413,0.0
+Madhur Day,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=10; Close-pre endpoint=0,7,1,1,0,14.285714285714286,14.285714285714286,0.0
+Madhur Day,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=10; Close-pre endpoint=0,10,2,6,4,20.0,60.0,40.0
+Madhur Day,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=10; Close-pre endpoint=0,17,3,7,4,17.647058823529413,41.1764705882353,23.529411764705884
+Madhur Night,coherent_combined,open,top5,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,top5,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,top5,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,avoid2,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,avoid2,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,avoid2,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,panel10,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,panel10,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,panel10,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,sp30,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,sp30,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,sp30,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,dp20,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,dp20,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,open,dp20,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,top5,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,top5,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,top5,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,avoid2,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,avoid2,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,avoid2,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,panel10,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,panel10,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,panel10,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,sp30,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,sp30,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,sp30,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,dp20,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,dp20,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_pre,dp20,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,top5,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,top5,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,top5,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,avoid2,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,avoid2,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,avoid2,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,panel10,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,panel10,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,panel10,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,sp30,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,sp30,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,sp30,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,dp20,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,dp20,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,close_known,dp20,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=21,0,0,0,0,,,
+Madhur Night,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=21,0,0,0,0,,,
+Madhur Night,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=21,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,top5,oct16_22,local_draws/draws=10/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,top5,oct23_nov1,local_draws/draws=10/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,top5,oct16_nov1,local_draws/draws=10/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,avoid2,oct16_22,static/v7_local_specialists,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,avoid2,oct23_nov1,static/v7_local_specialists,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,avoid2,oct16_nov1,static/v7_local_specialists,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,panel10,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,panel10,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,panel10,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,sp30,oct16_22,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,sp30,oct23_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,sp30,oct16_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,dp20,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,dp20,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,open,dp20,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,top5,oct16_22,local_calendar/days=14/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,top5,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,top5,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,avoid2,oct16_22,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,avoid2,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,avoid2,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.3,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,panel10,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.1,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,panel10,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.1,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,panel10,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.1,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,sp30,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,sp30,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,sp30,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,top5,oct16_22,empirical_bernstein/days=30/min_support=15/penalty=0.1,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,top5,oct23_nov1,empirical_bernstein/days=30/min_support=15/penalty=0.1,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,top5,oct16_nov1,empirical_bernstein/days=30/min_support=15/penalty=0.1,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,avoid2,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,avoid2,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,avoid2,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,panel10,oct16_22,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,panel10,oct23_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,panel10,oct16_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,sp30,oct16_22,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,sp30,oct23_nov1,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,sp30,oct16_nov1,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,dp20,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,dp20,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,close_known,dp20,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,jodi_pre,jodi25,oct16_22,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,jodi_pre,jodi25,oct23_nov1,baseline,0,0,0,0,,,
+Madhur Night,endpoint_specific,jodi_pre,jodi25,oct16_nov1,baseline,0,0,0,0,,,
+Madhur Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=22; Close-pre endpoint=3,0,0,0,0,,,
+Madhur Night,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=22; Close-pre endpoint=3,0,0,0,0,,,
+Madhur Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=22; Close-pre endpoint=3,0,0,0,0,,,
+Main Bazar,coherent_combined,open,top5,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Main Bazar,coherent_combined,open,top5,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Main Bazar,coherent_combined,open,top5,oct16_nov1,baseline,11,6,6,0,54.54545454545455,54.54545454545455,0.0
+Main Bazar,coherent_combined,open,avoid2,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Main Bazar,coherent_combined,open,avoid2,oct23_nov1,baseline,6,3,3,0,50.0,50.0,0.0
+Main Bazar,coherent_combined,open,avoid2,oct16_nov1,baseline,11,5,5,0,45.45454545454545,45.45454545454545,0.0
+Main Bazar,coherent_combined,open,panel10,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Main Bazar,coherent_combined,open,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,open,panel10,oct16_nov1,baseline,11,1,1,0,9.090909090909092,9.090909090909092,0.0
+Main Bazar,coherent_combined,open,sp30,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Main Bazar,coherent_combined,open,sp30,oct23_nov1,baseline,4,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,open,sp30,oct16_nov1,baseline,9,1,1,0,11.11111111111111,11.11111111111111,0.0
+Main Bazar,coherent_combined,open,dp20,oct16_22,baseline,0,0,0,0,,,
+Main Bazar,coherent_combined,open,dp20,oct23_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Main Bazar,coherent_combined,open,dp20,oct16_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Main Bazar,coherent_combined,close_pre,top5,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Main Bazar,coherent_combined,close_pre,top5,oct23_nov1,baseline,6,4,4,0,66.66666666666667,66.66666666666667,0.0
+Main Bazar,coherent_combined,close_pre,top5,oct16_nov1,baseline,11,8,8,0,72.72727272727273,72.72727272727273,0.0
+Main Bazar,coherent_combined,close_pre,avoid2,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Main Bazar,coherent_combined,close_pre,avoid2,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Main Bazar,coherent_combined,close_pre,avoid2,oct16_nov1,baseline,11,6,6,0,54.54545454545455,54.54545454545455,0.0
+Main Bazar,coherent_combined,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,close_pre,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,close_pre,panel10,oct16_nov1,baseline,11,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,close_pre,sp30,oct16_22,baseline,4,1,1,0,25.0,25.0,0.0
+Main Bazar,coherent_combined,close_pre,sp30,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Main Bazar,coherent_combined,close_pre,sp30,oct16_nov1,baseline,10,2,2,0,20.0,20.0,0.0
+Main Bazar,coherent_combined,close_pre,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,close_pre,dp20,oct23_nov1,baseline,0,0,0,0,,,
+Main Bazar,coherent_combined,close_pre,dp20,oct16_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,close_known,top5,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Main Bazar,coherent_combined,close_known,top5,oct23_nov1,baseline,6,3,3,0,50.0,50.0,0.0
+Main Bazar,coherent_combined,close_known,top5,oct16_nov1,baseline,11,4,4,0,36.36363636363637,36.36363636363637,0.0
+Main Bazar,coherent_combined,close_known,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Main Bazar,coherent_combined,close_known,avoid2,oct23_nov1,baseline,6,3,3,0,50.0,50.0,0.0
+Main Bazar,coherent_combined,close_known,avoid2,oct16_nov1,baseline,11,6,6,0,54.54545454545455,54.54545454545455,0.0
+Main Bazar,coherent_combined,close_known,panel10,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Main Bazar,coherent_combined,close_known,panel10,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Main Bazar,coherent_combined,close_known,panel10,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Main Bazar,coherent_combined,close_known,sp30,oct16_22,baseline,4,1,1,0,25.0,25.0,0.0
+Main Bazar,coherent_combined,close_known,sp30,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Main Bazar,coherent_combined,close_known,sp30,oct16_nov1,baseline,10,3,3,0,30.0,30.0,0.0
+Main Bazar,coherent_combined,close_known,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,close_known,dp20,oct23_nov1,baseline,0,0,0,0,,,
+Main Bazar,coherent_combined,close_known,dp20,oct16_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Main Bazar,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=0,5,3,3,0,60.0,60.0,0.0
+Main Bazar,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=0,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Main Bazar,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=0,11,4,4,0,36.36363636363637,36.36363636363637,0.0
+Main Bazar,endpoint_specific,open,top5,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Main Bazar,endpoint_specific,open,top5,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Main Bazar,endpoint_specific,open,top5,oct16_nov1,baseline,11,6,6,0,54.54545454545455,54.54545454545455,0.0
+Main Bazar,endpoint_specific,open,avoid2,oct16_22,static/v7_local_specialists,5,2,4,2,40.0,80.0,40.0
+Main Bazar,endpoint_specific,open,avoid2,oct23_nov1,static/v7_local_specialists,6,3,4,1,50.0,66.66666666666667,16.666666666666668
+Main Bazar,endpoint_specific,open,avoid2,oct16_nov1,static/v7_local_specialists,11,5,8,3,45.45454545454545,72.72727272727273,27.272727272727273
+Main Bazar,endpoint_specific,open,panel10,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,5,1,1,0,20.0,20.0,0.0
+Main Bazar,endpoint_specific,open,panel10,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,6,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,open,panel10,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,11,1,1,0,9.090909090909092,9.090909090909092,0.0
+Main Bazar,endpoint_specific,open,sp30,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Main Bazar,endpoint_specific,open,sp30,oct23_nov1,baseline,4,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,open,sp30,oct16_nov1,baseline,9,1,1,0,11.11111111111111,11.11111111111111,0.0
+Main Bazar,endpoint_specific,open,dp20,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,0,0,0,0,,,
+Main Bazar,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,2,1,1,0,50.0,50.0,0.0
+Main Bazar,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,2,1,1,0,50.0,50.0,0.0
+Main Bazar,endpoint_specific,close_pre,top5,oct16_22,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,5,4,2,-2,80.0,40.0,-40.0
+Main Bazar,endpoint_specific,close_pre,top5,oct23_nov1,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,6,4,3,-1,66.66666666666667,50.0,-16.666666666666668
+Main Bazar,endpoint_specific,close_pre,top5,oct16_nov1,decay/half_life=14/prior=none/strength=8/min_support=5/penalty=0.1,11,8,5,-3,72.72727272727273,45.45454545454545,-27.272727272727273
+Main Bazar,endpoint_specific,close_pre,avoid2,oct16_22,decay/half_life=30/prior=cluster/strength=8/min_support=5/penalty=0.1,5,4,4,0,80.0,80.0,0.0
+Main Bazar,endpoint_specific,close_pre,avoid2,oct23_nov1,decay/half_life=30/prior=cluster/strength=8/min_support=5/penalty=0.1,6,2,4,2,33.333333333333336,66.66666666666667,33.333333333333336
+Main Bazar,endpoint_specific,close_pre,avoid2,oct16_nov1,decay/half_life=30/prior=cluster/strength=8/min_support=5/penalty=0.1,11,6,8,2,54.54545454545455,72.72727272727273,18.181818181818183
+Main Bazar,endpoint_specific,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,close_pre,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,close_pre,panel10,oct16_nov1,baseline,11,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,close_pre,sp30,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,4,1,1,0,25.0,25.0,0.0
+Main Bazar,endpoint_specific,close_pre,sp30,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Main Bazar,endpoint_specific,close_pre,sp30,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,10,2,2,0,20.0,20.0,0.0
+Main Bazar,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,0,0,0,0,,,
+Main Bazar,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,close_known,top5,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Main Bazar,endpoint_specific,close_known,top5,oct23_nov1,baseline,6,3,3,0,50.0,50.0,0.0
+Main Bazar,endpoint_specific,close_known,top5,oct16_nov1,baseline,11,4,4,0,36.36363636363637,36.36363636363637,0.0
+Main Bazar,endpoint_specific,close_known,avoid2,oct16_22,static/v7_local_specialists,5,3,3,0,60.0,60.0,0.0
+Main Bazar,endpoint_specific,close_known,avoid2,oct23_nov1,static/v7_local_specialists,6,3,3,0,50.0,50.0,0.0
+Main Bazar,endpoint_specific,close_known,avoid2,oct16_nov1,static/v7_local_specialists,11,6,6,0,54.54545454545455,54.54545454545455,0.0
+Main Bazar,endpoint_specific,close_known,panel10,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Main Bazar,endpoint_specific,close_known,panel10,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Main Bazar,endpoint_specific,close_known,panel10,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Main Bazar,endpoint_specific,close_known,sp30,oct16_22,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,4,1,1,0,25.0,25.0,0.0
+Main Bazar,endpoint_specific,close_known,sp30,oct23_nov1,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Main Bazar,endpoint_specific,close_known,sp30,oct16_nov1,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,10,3,3,0,30.0,30.0,0.0
+Main Bazar,endpoint_specific,close_known,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,close_known,dp20,oct23_nov1,baseline,0,0,0,0,,,
+Main Bazar,endpoint_specific,close_known,dp20,oct16_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Main Bazar,endpoint_specific,jodi_pre,jodi25,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,5,3,1,-2,60.0,20.0,-40.0
+Main Bazar,endpoint_specific,jodi_pre,jodi25,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Main Bazar,endpoint_specific,jodi_pre,jodi25,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,11,4,2,-2,36.36363636363637,18.181818181818183,-18.181818181818183
+Main Bazar,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=0; Close-pre endpoint=67,5,3,2,-1,60.0,40.0,-20.0
+Main Bazar,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=0; Close-pre endpoint=67,6,1,0,-1,16.666666666666668,0.0,-16.666666666666668
+Main Bazar,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=0; Close-pre endpoint=67,11,4,2,-2,36.36363636363637,18.181818181818183,-18.181818181818183
+Milan Day,coherent_combined,open,top5,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Milan Day,coherent_combined,open,top5,oct23_nov1,baseline,8,3,3,0,37.5,37.5,0.0
+Milan Day,coherent_combined,open,top5,oct16_nov1,baseline,13,5,5,0,38.46153846153846,38.46153846153846,0.0
+Milan Day,coherent_combined,open,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Day,coherent_combined,open,avoid2,oct23_nov1,baseline,8,5,5,0,62.5,62.5,0.0
+Milan Day,coherent_combined,open,avoid2,oct16_nov1,baseline,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Milan Day,coherent_combined,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Day,coherent_combined,open,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Milan Day,coherent_combined,open,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Milan Day,coherent_combined,open,sp30,oct16_22,baseline,2,0,0,0,0.0,0.0,0.0
+Milan Day,coherent_combined,open,sp30,oct23_nov1,baseline,7,1,1,0,14.285714285714286,14.285714285714286,0.0
+Milan Day,coherent_combined,open,sp30,oct16_nov1,baseline,9,1,1,0,11.11111111111111,11.11111111111111,0.0
+Milan Day,coherent_combined,open,dp20,oct16_22,baseline,3,2,2,0,66.66666666666667,66.66666666666667,0.0
+Milan Day,coherent_combined,open,dp20,oct23_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Milan Day,coherent_combined,open,dp20,oct16_nov1,baseline,4,2,2,0,50.0,50.0,0.0
+Milan Day,coherent_combined,close_pre,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Day,coherent_combined,close_pre,top5,oct23_nov1,baseline,8,6,6,0,75.0,75.0,0.0
+Milan Day,coherent_combined,close_pre,top5,oct16_nov1,baseline,13,9,9,0,69.23076923076923,69.23076923076923,0.0
+Milan Day,coherent_combined,close_pre,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Day,coherent_combined,close_pre,avoid2,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Milan Day,coherent_combined,close_pre,avoid2,oct16_nov1,baseline,13,7,7,0,53.84615384615385,53.84615384615385,0.0
+Milan Day,coherent_combined,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Day,coherent_combined,close_pre,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Milan Day,coherent_combined,close_pre,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Milan Day,coherent_combined,close_pre,sp30,oct16_22,baseline,0,0,0,0,,,
+Milan Day,coherent_combined,close_pre,sp30,oct23_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Day,coherent_combined,close_pre,sp30,oct16_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Day,coherent_combined,close_pre,dp20,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Milan Day,coherent_combined,close_pre,dp20,oct23_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Day,coherent_combined,close_pre,dp20,oct16_nov1,baseline,9,2,2,0,22.22222222222222,22.22222222222222,0.0
+Milan Day,coherent_combined,close_known,top5,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Milan Day,coherent_combined,close_known,top5,oct23_nov1,baseline,8,6,6,0,75.0,75.0,0.0
+Milan Day,coherent_combined,close_known,top5,oct16_nov1,baseline,13,10,10,0,76.92307692307692,76.92307692307692,0.0
+Milan Day,coherent_combined,close_known,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Day,coherent_combined,close_known,avoid2,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Milan Day,coherent_combined,close_known,avoid2,oct16_nov1,baseline,13,7,7,0,53.84615384615385,53.84615384615385,0.0
+Milan Day,coherent_combined,close_known,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Day,coherent_combined,close_known,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Milan Day,coherent_combined,close_known,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Milan Day,coherent_combined,close_known,sp30,oct16_22,baseline,0,0,0,0,,,
+Milan Day,coherent_combined,close_known,sp30,oct23_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Day,coherent_combined,close_known,sp30,oct16_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Day,coherent_combined,close_known,dp20,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Milan Day,coherent_combined,close_known,dp20,oct23_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Day,coherent_combined,close_known,dp20,oct16_nov1,baseline,9,2,2,0,22.22222222222222,22.22222222222222,0.0
+Milan Day,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=0,5,1,1,0,20.0,20.0,0.0
+Milan Day,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=0,8,3,3,0,37.5,37.5,0.0
+Milan Day,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=0,13,4,4,0,30.76923076923077,30.76923076923077,0.0
+Milan Day,endpoint_specific,open,top5,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,5,2,2,0,40.0,40.0,0.0
+Milan Day,endpoint_specific,open,top5,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,8,3,3,0,37.5,37.5,0.0
+Milan Day,endpoint_specific,open,top5,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,13,5,5,0,38.46153846153846,38.46153846153846,0.0
+Milan Day,endpoint_specific,open,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Day,endpoint_specific,open,avoid2,oct23_nov1,baseline,8,5,5,0,62.5,62.5,0.0
+Milan Day,endpoint_specific,open,avoid2,oct16_nov1,baseline,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Milan Day,endpoint_specific,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Day,endpoint_specific,open,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Milan Day,endpoint_specific,open,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Milan Day,endpoint_specific,open,sp30,oct16_22,shrinkage/prior=cluster/days=30/strength=16/min_support=5/penalty=0.25,2,0,0,0,0.0,0.0,0.0
+Milan Day,endpoint_specific,open,sp30,oct23_nov1,shrinkage/prior=cluster/days=30/strength=16/min_support=5/penalty=0.25,7,1,1,0,14.285714285714286,14.285714285714286,0.0
+Milan Day,endpoint_specific,open,sp30,oct16_nov1,shrinkage/prior=cluster/days=30/strength=16/min_support=5/penalty=0.25,9,1,1,0,11.11111111111111,11.11111111111111,0.0
+Milan Day,endpoint_specific,open,dp20,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,3,2,0,-2,66.66666666666667,0.0,-66.66666666666667
+Milan Day,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,1,0,0,0,0.0,0.0,0.0
+Milan Day,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,4,2,0,-2,50.0,0.0,-50.0
+Milan Day,endpoint_specific,close_pre,top5,oct16_22,local_calendar/days=60/min_support=5/penalty=0.05,5,3,2,-1,60.0,40.0,-20.0
+Milan Day,endpoint_specific,close_pre,top5,oct23_nov1,local_calendar/days=60/min_support=5/penalty=0.05,8,6,6,0,75.0,75.0,0.0
+Milan Day,endpoint_specific,close_pre,top5,oct16_nov1,local_calendar/days=60/min_support=5/penalty=0.05,13,9,8,-1,69.23076923076923,61.53846153846154,-7.6923076923076925
+Milan Day,endpoint_specific,close_pre,avoid2,oct16_22,static/new_local_mixture,5,3,3,0,60.0,60.0,0.0
+Milan Day,endpoint_specific,close_pre,avoid2,oct23_nov1,static/new_local_mixture,8,4,5,1,50.0,62.5,12.5
+Milan Day,endpoint_specific,close_pre,avoid2,oct16_nov1,static/new_local_mixture,13,7,8,1,53.84615384615385,61.53846153846154,7.6923076923076925
+Milan Day,endpoint_specific,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Day,endpoint_specific,close_pre,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Milan Day,endpoint_specific,close_pre,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Milan Day,endpoint_specific,close_pre,sp30,oct16_22,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,0,0,0,0,,,
+Milan Day,endpoint_specific,close_pre,sp30,oct23_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,4,1,0,-1,25.0,0.0,-25.0
+Milan Day,endpoint_specific,close_pre,sp30,oct16_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,4,1,0,-1,25.0,0.0,-25.0
+Milan Day,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,5,1,2,1,20.0,40.0,20.0
+Milan Day,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,4,1,0,-1,25.0,0.0,-25.0
+Milan Day,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,9,2,2,0,22.22222222222222,22.22222222222222,0.0
+Milan Day,endpoint_specific,close_known,top5,oct16_22,static/v7_local_specialists,5,4,4,0,80.0,80.0,0.0
+Milan Day,endpoint_specific,close_known,top5,oct23_nov1,static/v7_local_specialists,8,6,6,0,75.0,75.0,0.0
+Milan Day,endpoint_specific,close_known,top5,oct16_nov1,static/v7_local_specialists,13,10,10,0,76.92307692307692,76.92307692307692,0.0
+Milan Day,endpoint_specific,close_known,avoid2,oct16_22,static/v7_local_specialists,5,3,3,0,60.0,60.0,0.0
+Milan Day,endpoint_specific,close_known,avoid2,oct23_nov1,static/v7_local_specialists,8,4,3,-1,50.0,37.5,-12.5
+Milan Day,endpoint_specific,close_known,avoid2,oct16_nov1,static/v7_local_specialists,13,7,6,-1,53.84615384615385,46.15384615384615,-7.6923076923076925
+Milan Day,endpoint_specific,close_known,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Day,endpoint_specific,close_known,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Milan Day,endpoint_specific,close_known,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Milan Day,endpoint_specific,close_known,sp30,oct16_22,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Milan Day,endpoint_specific,close_known,sp30,oct23_nov1,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,4,1,1,0,25.0,25.0,0.0
+Milan Day,endpoint_specific,close_known,sp30,oct16_nov1,shrinkage/prior=cluster/days=60/strength=8/min_support=5/penalty=0.25,4,1,1,0,25.0,25.0,0.0
+Milan Day,endpoint_specific,close_known,dp20,oct16_22,static/new_local_mixture,5,1,0,-1,20.0,0.0,-20.0
+Milan Day,endpoint_specific,close_known,dp20,oct23_nov1,static/new_local_mixture,4,1,0,-1,25.0,0.0,-25.0
+Milan Day,endpoint_specific,close_known,dp20,oct16_nov1,static/new_local_mixture,9,2,0,-2,22.22222222222222,0.0,-22.22222222222222
+Milan Day,endpoint_specific,jodi_pre,jodi25,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Milan Day,endpoint_specific,jodi_pre,jodi25,oct23_nov1,baseline,8,3,3,0,37.5,37.5,0.0
+Milan Day,endpoint_specific,jodi_pre,jodi25,oct16_nov1,baseline,13,4,4,0,30.76923076923077,30.76923076923077,0.0
+Milan Day,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=63; Close-pre endpoint=13,5,1,1,0,20.0,20.0,0.0
+Milan Day,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=63; Close-pre endpoint=13,8,3,3,0,37.5,37.5,0.0
+Milan Day,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=63; Close-pre endpoint=13,13,4,4,0,30.76923076923077,30.76923076923077,0.0
+Milan Night,coherent_combined,open,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Night,coherent_combined,open,top5,oct23_nov1,baseline,8,3,3,0,37.5,37.5,0.0
+Milan Night,coherent_combined,open,top5,oct16_nov1,baseline,13,6,6,0,46.15384615384615,46.15384615384615,0.0
+Milan Night,coherent_combined,open,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Night,coherent_combined,open,avoid2,oct23_nov1,baseline,8,2,2,0,25.0,25.0,0.0
+Milan Night,coherent_combined,open,avoid2,oct16_nov1,baseline,13,5,5,0,38.46153846153846,38.46153846153846,0.0
+Milan Night,coherent_combined,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,open,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Milan Night,coherent_combined,open,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Milan Night,coherent_combined,open,sp30,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,open,sp30,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Milan Night,coherent_combined,open,sp30,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Milan Night,coherent_combined,open,dp20,oct16_22,baseline,0,0,0,0,,,
+Milan Night,coherent_combined,open,dp20,oct23_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Milan Night,coherent_combined,open,dp20,oct16_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Milan Night,coherent_combined,close_pre,top5,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Milan Night,coherent_combined,close_pre,top5,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Milan Night,coherent_combined,close_pre,top5,oct16_nov1,baseline,13,6,6,0,46.15384615384615,46.15384615384615,0.0
+Milan Night,coherent_combined,close_pre,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Night,coherent_combined,close_pre,avoid2,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Milan Night,coherent_combined,close_pre,avoid2,oct16_nov1,baseline,13,7,7,0,53.84615384615385,53.84615384615385,0.0
+Milan Night,coherent_combined,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,close_pre,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,close_pre,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,close_pre,sp30,oct16_22,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Night,coherent_combined,close_pre,sp30,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Milan Night,coherent_combined,close_pre,sp30,oct16_nov1,baseline,10,2,2,0,20.0,20.0,0.0
+Milan Night,coherent_combined,close_pre,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,close_pre,dp20,oct23_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Milan Night,coherent_combined,close_pre,dp20,oct16_nov1,baseline,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Milan Night,coherent_combined,close_known,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Night,coherent_combined,close_known,top5,oct23_nov1,baseline,8,7,7,0,87.5,87.5,0.0
+Milan Night,coherent_combined,close_known,top5,oct16_nov1,baseline,13,10,10,0,76.92307692307692,76.92307692307692,0.0
+Milan Night,coherent_combined,close_known,avoid2,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Milan Night,coherent_combined,close_known,avoid2,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Milan Night,coherent_combined,close_known,avoid2,oct16_nov1,baseline,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Milan Night,coherent_combined,close_known,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,close_known,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Milan Night,coherent_combined,close_known,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Milan Night,coherent_combined,close_known,sp30,oct16_22,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Night,coherent_combined,close_known,sp30,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,close_known,sp30,oct16_nov1,baseline,10,1,1,0,10.0,10.0,0.0
+Milan Night,coherent_combined,close_known,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,close_known,dp20,oct23_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,close_known,dp20,oct16_nov1,baseline,3,0,0,0,0.0,0.0,0.0
+Milan Night,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=0,5,1,1,0,20.0,20.0,0.0
+Milan Night,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=0,8,3,3,0,37.5,37.5,0.0
+Milan Night,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=0,13,4,4,0,30.76923076923077,30.76923076923077,0.0
+Milan Night,endpoint_specific,open,top5,oct16_22,empirical_bernstein/days=30/min_support=15/penalty=0.1,5,3,4,1,60.0,80.0,20.0
+Milan Night,endpoint_specific,open,top5,oct23_nov1,empirical_bernstein/days=30/min_support=15/penalty=0.1,8,3,4,1,37.5,50.0,12.5
+Milan Night,endpoint_specific,open,top5,oct16_nov1,empirical_bernstein/days=30/min_support=15/penalty=0.1,13,6,8,2,46.15384615384615,61.53846153846154,15.384615384615385
+Milan Night,endpoint_specific,open,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Night,endpoint_specific,open,avoid2,oct23_nov1,baseline,8,2,2,0,25.0,25.0,0.0
+Milan Night,endpoint_specific,open,avoid2,oct16_nov1,baseline,13,5,5,0,38.46153846153846,38.46153846153846,0.0
+Milan Night,endpoint_specific,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Night,endpoint_specific,open,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Milan Night,endpoint_specific,open,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Milan Night,endpoint_specific,open,sp30,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Night,endpoint_specific,open,sp30,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Milan Night,endpoint_specific,open,sp30,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Milan Night,endpoint_specific,open,dp20,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,0,0,0,0,,,
+Milan Night,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,2,1,1,0,50.0,50.0,0.0
+Milan Night,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,2,1,1,0,50.0,50.0,0.0
+Milan Night,endpoint_specific,close_pre,top5,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Milan Night,endpoint_specific,close_pre,top5,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Milan Night,endpoint_specific,close_pre,top5,oct16_nov1,baseline,13,6,6,0,46.15384615384615,46.15384615384615,0.0
+Milan Night,endpoint_specific,close_pre,avoid2,oct16_22,shrinkage/prior=cluster/days=30/strength=16/min_support=5/penalty=0.25,5,3,2,-1,60.0,40.0,-20.0
+Milan Night,endpoint_specific,close_pre,avoid2,oct23_nov1,shrinkage/prior=cluster/days=30/strength=16/min_support=5/penalty=0.25,8,4,5,1,50.0,62.5,12.5
+Milan Night,endpoint_specific,close_pre,avoid2,oct16_nov1,shrinkage/prior=cluster/days=30/strength=16/min_support=5/penalty=0.25,13,7,7,0,53.84615384615385,53.84615384615385,0.0
+Milan Night,endpoint_specific,close_pre,panel10,oct16_22,static/v7_local_specialists,5,0,1,1,0.0,20.0,20.0
+Milan Night,endpoint_specific,close_pre,panel10,oct23_nov1,static/v7_local_specialists,8,0,0,0,0.0,0.0,0.0
+Milan Night,endpoint_specific,close_pre,panel10,oct16_nov1,static/v7_local_specialists,13,0,1,1,0.0,7.6923076923076925,7.6923076923076925
+Milan Night,endpoint_specific,close_pre,sp30,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,4,1,1,0,25.0,25.0,0.0
+Milan Night,endpoint_specific,close_pre,sp30,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,6,1,2,1,16.666666666666668,33.333333333333336,16.666666666666668
+Milan Night,endpoint_specific,close_pre,sp30,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,10,2,3,1,20.0,30.0,10.0
+Milan Night,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,0,0,0,0.0,0.0,0.0
+Milan Night,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,2,1,1,0,50.0,50.0,0.0
+Milan Night,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Milan Night,endpoint_specific,close_known,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Milan Night,endpoint_specific,close_known,top5,oct23_nov1,baseline,8,7,7,0,87.5,87.5,0.0
+Milan Night,endpoint_specific,close_known,top5,oct16_nov1,baseline,13,10,10,0,76.92307692307692,76.92307692307692,0.0
+Milan Night,endpoint_specific,close_known,avoid2,oct16_22,baseline,5,4,4,0,80.0,80.0,0.0
+Milan Night,endpoint_specific,close_known,avoid2,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Milan Night,endpoint_specific,close_known,avoid2,oct16_nov1,baseline,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Milan Night,endpoint_specific,close_known,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Milan Night,endpoint_specific,close_known,panel10,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Milan Night,endpoint_specific,close_known,panel10,oct16_nov1,baseline,13,1,1,0,7.6923076923076925,7.6923076923076925,0.0
+Milan Night,endpoint_specific,close_known,sp30,oct16_22,baseline,4,1,1,0,25.0,25.0,0.0
+Milan Night,endpoint_specific,close_known,sp30,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Milan Night,endpoint_specific,close_known,sp30,oct16_nov1,baseline,10,1,1,0,10.0,10.0,0.0
+Milan Night,endpoint_specific,close_known,dp20,oct16_22,static/new_local_mixture,1,0,1,1,0.0,100.0,100.0
+Milan Night,endpoint_specific,close_known,dp20,oct23_nov1,static/new_local_mixture,2,0,0,0,0.0,0.0,0.0
+Milan Night,endpoint_specific,close_known,dp20,oct16_nov1,static/new_local_mixture,3,0,1,1,0.0,33.333333333333336,33.333333333333336
+Milan Night,endpoint_specific,jodi_pre,jodi25,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Milan Night,endpoint_specific,jodi_pre,jodi25,oct23_nov1,baseline,8,3,3,0,37.5,37.5,0.0
+Milan Night,endpoint_specific,jodi_pre,jodi25,oct16_nov1,baseline,13,4,4,0,30.76923076923077,30.76923076923077,0.0
+Milan Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=81; Close-pre endpoint=0,5,1,1,0,20.0,20.0,0.0
+Milan Night,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=81; Close-pre endpoint=0,8,3,3,0,37.5,37.5,0.0
+Milan Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=81; Close-pre endpoint=0,13,4,4,0,30.76923076923077,30.76923076923077,0.0
+Rajdhani Day,coherent_combined,open,top5,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Rajdhani Day,coherent_combined,open,top5,oct23_nov1,baseline,8,3,3,0,37.5,37.5,0.0
+Rajdhani Day,coherent_combined,open,top5,oct16_nov1,baseline,13,5,5,0,38.46153846153846,38.46153846153846,0.0
+Rajdhani Day,coherent_combined,open,avoid2,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Rajdhani Day,coherent_combined,open,avoid2,oct23_nov1,baseline,8,6,6,0,75.0,75.0,0.0
+Rajdhani Day,coherent_combined,open,avoid2,oct16_nov1,baseline,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Rajdhani Day,coherent_combined,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,open,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,open,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,open,sp30,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Rajdhani Day,coherent_combined,open,sp30,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Rajdhani Day,coherent_combined,open,sp30,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Rajdhani Day,coherent_combined,open,dp20,oct16_22,baseline,0,0,0,0,,,
+Rajdhani Day,coherent_combined,open,dp20,oct23_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Rajdhani Day,coherent_combined,open,dp20,oct16_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Rajdhani Day,coherent_combined,close_pre,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Rajdhani Day,coherent_combined,close_pre,top5,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Rajdhani Day,coherent_combined,close_pre,top5,oct16_nov1,baseline,13,7,7,0,53.84615384615385,53.84615384615385,0.0
+Rajdhani Day,coherent_combined,close_pre,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Rajdhani Day,coherent_combined,close_pre,avoid2,oct23_nov1,baseline,8,5,5,0,62.5,62.5,0.0
+Rajdhani Day,coherent_combined,close_pre,avoid2,oct16_nov1,baseline,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Rajdhani Day,coherent_combined,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_pre,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_pre,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_pre,sp30,oct16_22,baseline,4,2,2,0,50.0,50.0,0.0
+Rajdhani Day,coherent_combined,close_pre,sp30,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_pre,sp30,oct16_nov1,baseline,10,2,2,0,20.0,20.0,0.0
+Rajdhani Day,coherent_combined,close_pre,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_pre,dp20,oct23_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_pre,dp20,oct16_nov1,baseline,3,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_known,top5,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,5,5,5,0,100.0,100.0,0.0
+Rajdhani Day,coherent_combined,close_known,top5,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,8,1,1,0,12.5,12.5,0.0
+Rajdhani Day,coherent_combined,close_known,top5,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,13,6,6,0,46.15384615384615,46.15384615384615,0.0
+Rajdhani Day,coherent_combined,close_known,avoid2,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,5,3,3,0,60.0,60.0,0.0
+Rajdhani Day,coherent_combined,close_known,avoid2,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,8,2,2,0,25.0,25.0,0.0
+Rajdhani Day,coherent_combined,close_known,avoid2,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,13,5,5,0,38.46153846153846,38.46153846153846,0.0
+Rajdhani Day,coherent_combined,close_known,panel10,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,5,2,2,0,40.0,40.0,0.0
+Rajdhani Day,coherent_combined,close_known,panel10,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,8,1,1,0,12.5,12.5,0.0
+Rajdhani Day,coherent_combined,close_known,panel10,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,13,3,3,0,23.076923076923077,23.076923076923077,0.0
+Rajdhani Day,coherent_combined,close_known,sp30,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,4,2,2,0,50.0,50.0,0.0
+Rajdhani Day,coherent_combined,close_known,sp30,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Rajdhani Day,coherent_combined,close_known,sp30,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,10,3,3,0,30.0,30.0,0.0
+Rajdhani Day,coherent_combined,close_known,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_known,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,2,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,close_known,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,3,0,0,0,0.0,0.0,0.0
+Rajdhani Day,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=0,5,1,1,0,20.0,20.0,0.0
+Rajdhani Day,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=0,8,1,1,0,12.5,12.5,0.0
+Rajdhani Day,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=0,13,2,2,0,15.384615384615385,15.384615384615385,0.0
+Rajdhani Day,endpoint_specific,open,top5,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Rajdhani Day,endpoint_specific,open,top5,oct23_nov1,baseline,8,3,3,0,37.5,37.5,0.0
+Rajdhani Day,endpoint_specific,open,top5,oct16_nov1,baseline,13,5,5,0,38.46153846153846,38.46153846153846,0.0
+Rajdhani Day,endpoint_specific,open,avoid2,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,5,2,3,1,40.0,60.0,20.0
+Rajdhani Day,endpoint_specific,open,avoid2,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,8,6,4,-2,75.0,50.0,-25.0
+Rajdhani Day,endpoint_specific,open,avoid2,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,13,8,7,-1,61.53846153846154,53.84615384615385,-7.6923076923076925
+Rajdhani Day,endpoint_specific,open,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Rajdhani Day,endpoint_specific,open,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Rajdhani Day,endpoint_specific,open,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Rajdhani Day,endpoint_specific,open,sp30,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Rajdhani Day,endpoint_specific,open,sp30,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Rajdhani Day,endpoint_specific,open,sp30,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Rajdhani Day,endpoint_specific,open,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,0,0,0,0,,,
+Rajdhani Day,endpoint_specific,open,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,2,1,0,-1,50.0,0.0,-50.0
+Rajdhani Day,endpoint_specific,open,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,2,1,0,-1,50.0,0.0,-50.0
+Rajdhani Day,endpoint_specific,close_pre,top5,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.25,5,3,3,0,60.0,60.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,top5,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.25,8,4,3,-1,50.0,37.5,-12.5
+Rajdhani Day,endpoint_specific,close_pre,top5,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.25,13,7,6,-1,53.84615384615385,46.15384615384615,-7.6923076923076925
+Rajdhani Day,endpoint_specific,close_pre,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,avoid2,oct23_nov1,baseline,8,5,5,0,62.5,62.5,0.0
+Rajdhani Day,endpoint_specific,close_pre,avoid2,oct16_nov1,baseline,13,8,8,0,61.53846153846154,61.53846153846154,0.0
+Rajdhani Day,endpoint_specific,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,panel10,oct16_nov1,baseline,13,0,0,0,0.0,0.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,sp30,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,4,2,2,0,50.0,50.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,sp30,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,6,0,0,0,0.0,0.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,sp30,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,10,2,2,0,20.0,20.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,1,0,1,1,0.0,100.0,100.0
+Rajdhani Day,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,2,0,0,0,0.0,0.0,0.0
+Rajdhani Day,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,3,0,1,1,0.0,33.333333333333336,33.333333333333336
+Rajdhani Day,endpoint_specific,close_known,top5,oct16_22,baseline,5,5,5,0,100.0,100.0,0.0
+Rajdhani Day,endpoint_specific,close_known,top5,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Rajdhani Day,endpoint_specific,close_known,top5,oct16_nov1,baseline,13,6,6,0,46.15384615384615,46.15384615384615,0.0
+Rajdhani Day,endpoint_specific,close_known,avoid2,oct16_22,decay/half_life=7/prior=cluster/strength=8/min_support=5/penalty=0.1,5,3,2,-1,60.0,40.0,-20.0
+Rajdhani Day,endpoint_specific,close_known,avoid2,oct23_nov1,decay/half_life=7/prior=cluster/strength=8/min_support=5/penalty=0.1,8,2,5,3,25.0,62.5,37.5
+Rajdhani Day,endpoint_specific,close_known,avoid2,oct16_nov1,decay/half_life=7/prior=cluster/strength=8/min_support=5/penalty=0.1,13,5,7,2,38.46153846153846,53.84615384615385,15.384615384615385
+Rajdhani Day,endpoint_specific,close_known,panel10,oct16_22,decay/half_life=7/prior=cluster/strength=8/min_support=5/penalty=0.1,5,2,0,-2,40.0,0.0,-40.0
+Rajdhani Day,endpoint_specific,close_known,panel10,oct23_nov1,decay/half_life=7/prior=cluster/strength=8/min_support=5/penalty=0.1,8,1,1,0,12.5,12.5,0.0
+Rajdhani Day,endpoint_specific,close_known,panel10,oct16_nov1,decay/half_life=7/prior=cluster/strength=8/min_support=5/penalty=0.1,13,3,1,-2,23.076923076923077,7.6923076923076925,-15.384615384615385
+Rajdhani Day,endpoint_specific,close_known,sp30,oct16_22,baseline,4,2,2,0,50.0,50.0,0.0
+Rajdhani Day,endpoint_specific,close_known,sp30,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Rajdhani Day,endpoint_specific,close_known,sp30,oct16_nov1,baseline,10,3,3,0,30.0,30.0,0.0
+Rajdhani Day,endpoint_specific,close_known,dp20,oct16_22,static/new_local_mixture,1,0,1,1,0.0,100.0,100.0
+Rajdhani Day,endpoint_specific,close_known,dp20,oct23_nov1,static/new_local_mixture,2,0,1,1,0.0,50.0,50.0
+Rajdhani Day,endpoint_specific,close_known,dp20,oct16_nov1,static/new_local_mixture,3,0,2,2,0.0,66.66666666666667,66.66666666666667
+Rajdhani Day,endpoint_specific,jodi_pre,jodi25,oct16_22,local_draws/draws=20/min_support=10/penalty=0.05,5,1,0,-1,20.0,0.0,-20.0
+Rajdhani Day,endpoint_specific,jodi_pre,jodi25,oct23_nov1,local_draws/draws=20/min_support=10/penalty=0.05,8,1,3,2,12.5,37.5,25.0
+Rajdhani Day,endpoint_specific,jodi_pre,jodi25,oct16_nov1,local_draws/draws=20/min_support=10/penalty=0.05,13,2,3,1,15.384615384615385,23.076923076923077,7.6923076923076925
+Rajdhani Day,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=0; Close-pre endpoint=64,5,1,1,0,20.0,20.0,0.0
+Rajdhani Day,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=0; Close-pre endpoint=64,8,1,1,0,12.5,12.5,0.0
+Rajdhani Day,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=0; Close-pre endpoint=64,13,2,2,0,15.384615384615385,15.384615384615385,0.0
+Rajdhani Night,coherent_combined,open,top5,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Rajdhani Night,coherent_combined,open,top5,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Rajdhani Night,coherent_combined,open,top5,oct16_nov1,baseline,11,5,5,0,45.45454545454545,45.45454545454545,0.0
+Rajdhani Night,coherent_combined,open,avoid2,oct16_22,baseline,5,3,3,0,60.0,60.0,0.0
+Rajdhani Night,coherent_combined,open,avoid2,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Rajdhani Night,coherent_combined,open,avoid2,oct16_nov1,baseline,11,5,5,0,45.45454545454545,45.45454545454545,0.0
+Rajdhani Night,coherent_combined,open,panel10,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Rajdhani Night,coherent_combined,open,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,open,panel10,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Rajdhani Night,coherent_combined,open,sp30,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Rajdhani Night,coherent_combined,open,sp30,oct23_nov1,baseline,5,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,open,sp30,oct16_nov1,baseline,10,2,2,0,20.0,20.0,0.0
+Rajdhani Night,coherent_combined,open,dp20,oct16_22,baseline,0,0,0,0,,,
+Rajdhani Night,coherent_combined,open,dp20,oct23_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,open,dp20,oct16_nov1,baseline,1,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_pre,top5,oct16_22,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,5,2,4,2,40.0,80.0,40.0
+Rajdhani Night,coherent_combined,close_pre,top5,oct23_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,6,2,5,3,33.333333333333336,83.33333333333333,50.0
+Rajdhani Night,coherent_combined,close_pre,top5,oct16_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,11,4,9,5,36.36363636363637,81.81818181818181,45.45454545454545
+Rajdhani Night,coherent_combined,close_pre,avoid2,oct16_22,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,5,3,5,2,60.0,100.0,40.0
+Rajdhani Night,coherent_combined,close_pre,avoid2,oct23_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,6,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_pre,avoid2,oct16_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,11,3,5,2,27.272727272727273,45.45454545454545,18.181818181818183
+Rajdhani Night,coherent_combined,close_pre,panel10,oct16_22,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,5,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_pre,panel10,oct23_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,6,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_pre,panel10,oct16_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,11,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_pre,sp30,oct16_22,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,4,0,1,1,0.0,25.0,25.0
+Rajdhani Night,coherent_combined,close_pre,sp30,oct23_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,4,1,2,1,25.0,50.0,25.0
+Rajdhani Night,coherent_combined,close_pre,sp30,oct16_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,8,1,3,2,12.5,37.5,25.0
+Rajdhani Night,coherent_combined,close_pre,dp20,oct16_22,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,1,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_pre,dp20,oct23_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,2,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_pre,dp20,oct16_nov1,shrinkage/prior=cluster/days=30/strength=8/min_support=5/penalty=0.1,3,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_known,top5,oct16_22,baseline,5,5,5,0,100.0,100.0,0.0
+Rajdhani Night,coherent_combined,close_known,top5,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Rajdhani Night,coherent_combined,close_known,top5,oct16_nov1,baseline,11,7,7,0,63.63636363636363,63.63636363636363,0.0
+Rajdhani Night,coherent_combined,close_known,avoid2,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Rajdhani Night,coherent_combined,close_known,avoid2,oct23_nov1,baseline,6,5,5,0,83.33333333333333,83.33333333333333,0.0
+Rajdhani Night,coherent_combined,close_known,avoid2,oct16_nov1,baseline,11,7,7,0,63.63636363636363,63.63636363636363,0.0
+Rajdhani Night,coherent_combined,close_known,panel10,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Rajdhani Night,coherent_combined,close_known,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_known,panel10,oct16_nov1,baseline,11,1,1,0,9.090909090909092,9.090909090909092,0.0
+Rajdhani Night,coherent_combined,close_known,sp30,oct16_22,baseline,4,2,2,0,50.0,50.0,0.0
+Rajdhani Night,coherent_combined,close_known,sp30,oct23_nov1,baseline,4,2,2,0,50.0,50.0,0.0
+Rajdhani Night,coherent_combined,close_known,sp30,oct16_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Rajdhani Night,coherent_combined,close_known,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_known,dp20,oct23_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,close_known,dp20,oct16_nov1,baseline,3,0,0,0,0.0,0.0,0.0
+Rajdhani Night,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=51,5,1,2,1,20.0,40.0,20.0
+Rajdhani Night,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=51,6,2,1,-1,33.333333333333336,16.666666666666668,-16.666666666666668
+Rajdhani Night,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=51,11,3,3,0,27.272727272727273,27.272727272727273,0.0
+Rajdhani Night,endpoint_specific,open,top5,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,5,3,2,-1,60.0,40.0,-20.0
+Rajdhani Night,endpoint_specific,open,top5,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,6,2,3,1,33.333333333333336,50.0,16.666666666666668
+Rajdhani Night,endpoint_specific,open,top5,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,11,5,5,0,45.45454545454545,45.45454545454545,0.0
+Rajdhani Night,endpoint_specific,open,avoid2,oct16_22,static/new_local_mixture,5,3,3,0,60.0,60.0,0.0
+Rajdhani Night,endpoint_specific,open,avoid2,oct23_nov1,static/new_local_mixture,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Rajdhani Night,endpoint_specific,open,avoid2,oct16_nov1,static/new_local_mixture,11,5,5,0,45.45454545454545,45.45454545454545,0.0
+Rajdhani Night,endpoint_specific,open,panel10,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Rajdhani Night,endpoint_specific,open,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,open,panel10,oct16_nov1,baseline,11,2,2,0,18.181818181818183,18.181818181818183,0.0
+Rajdhani Night,endpoint_specific,open,sp30,oct16_22,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,5,2,2,0,40.0,40.0,0.0
+Rajdhani Night,endpoint_specific,open,sp30,oct23_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,5,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,open,sp30,oct16_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,10,2,2,0,20.0,20.0,0.0
+Rajdhani Night,endpoint_specific,open,dp20,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,0,0,0,0,,,
+Rajdhani Night,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,1,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,1,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_pre,top5,oct16_22,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,5,2,4,2,40.0,80.0,40.0
+Rajdhani Night,endpoint_specific,close_pre,top5,oct23_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,6,2,5,3,33.333333333333336,83.33333333333333,50.0
+Rajdhani Night,endpoint_specific,close_pre,top5,oct16_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,11,4,9,5,36.36363636363637,81.81818181818181,45.45454545454545
+Rajdhani Night,endpoint_specific,close_pre,avoid2,oct16_22,empirical_bernstein/days=60/min_support=8/penalty=0.1,5,3,4,1,60.0,80.0,20.0
+Rajdhani Night,endpoint_specific,close_pre,avoid2,oct23_nov1,empirical_bernstein/days=60/min_support=8/penalty=0.1,6,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_pre,avoid2,oct16_nov1,empirical_bernstein/days=60/min_support=8/penalty=0.1,11,3,4,1,27.272727272727273,36.36363636363637,9.090909090909092
+Rajdhani Night,endpoint_specific,close_pre,panel10,oct16_22,baseline,5,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_pre,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_pre,panel10,oct16_nov1,baseline,11,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_pre,sp30,oct16_22,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,4,0,2,2,0.0,50.0,50.0
+Rajdhani Night,endpoint_specific,close_pre,sp30,oct23_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,4,1,0,-1,25.0,0.0,-25.0
+Rajdhani Night,endpoint_specific,close_pre,sp30,oct16_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.1,8,1,2,1,12.5,25.0,12.5
+Rajdhani Night,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,2,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,3,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_known,top5,oct16_22,baseline,5,5,5,0,100.0,100.0,0.0
+Rajdhani Night,endpoint_specific,close_known,top5,oct23_nov1,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Rajdhani Night,endpoint_specific,close_known,top5,oct16_nov1,baseline,11,7,7,0,63.63636363636363,63.63636363636363,0.0
+Rajdhani Night,endpoint_specific,close_known,avoid2,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,5,2,0,-2,40.0,0.0,-40.0
+Rajdhani Night,endpoint_specific,close_known,avoid2,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,6,5,4,-1,83.33333333333333,66.66666666666667,-16.666666666666668
+Rajdhani Night,endpoint_specific,close_known,avoid2,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,11,7,4,-3,63.63636363636363,36.36363636363637,-27.272727272727273
+Rajdhani Night,endpoint_specific,close_known,panel10,oct16_22,baseline,5,1,1,0,20.0,20.0,0.0
+Rajdhani Night,endpoint_specific,close_known,panel10,oct23_nov1,baseline,6,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_known,panel10,oct16_nov1,baseline,11,1,1,0,9.090909090909092,9.090909090909092,0.0
+Rajdhani Night,endpoint_specific,close_known,sp30,oct16_22,baseline,4,2,2,0,50.0,50.0,0.0
+Rajdhani Night,endpoint_specific,close_known,sp30,oct23_nov1,baseline,4,2,2,0,50.0,50.0,0.0
+Rajdhani Night,endpoint_specific,close_known,sp30,oct16_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Rajdhani Night,endpoint_specific,close_known,dp20,oct16_22,static/new_local_mixture,1,0,0,0,0.0,0.0,0.0
+Rajdhani Night,endpoint_specific,close_known,dp20,oct23_nov1,static/new_local_mixture,2,0,1,1,0.0,50.0,50.0
+Rajdhani Night,endpoint_specific,close_known,dp20,oct16_nov1,static/new_local_mixture,3,0,1,1,0.0,33.333333333333336,33.333333333333336
+Rajdhani Night,endpoint_specific,jodi_pre,jodi25,oct16_22,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.25,5,1,0,-1,20.0,0.0,-20.0
+Rajdhani Night,endpoint_specific,jodi_pre,jodi25,oct23_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.25,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Rajdhani Night,endpoint_specific,jodi_pre,jodi25,oct16_nov1,decay/half_life=7/prior=none/strength=8/min_support=5/penalty=0.25,11,3,2,-1,27.272727272727273,18.181818181818183,-9.090909090909092
+Rajdhani Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=1; Close-pre endpoint=41,5,1,2,1,20.0,40.0,20.0
+Rajdhani Night,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=1; Close-pre endpoint=41,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Rajdhani Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=1; Close-pre endpoint=41,11,3,4,1,27.272727272727273,36.36363636363637,9.090909090909092
+Sridevi,coherent_combined,open,top5,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Sridevi,coherent_combined,open,top5,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,10,5,5,0,50.0,50.0,0.0
+Sridevi,coherent_combined,open,top5,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,17,8,8,0,47.05882352941177,47.05882352941177,0.0
+Sridevi,coherent_combined,open,avoid2,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Sridevi,coherent_combined,open,avoid2,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,10,7,9,2,70.0,90.0,20.0
+Sridevi,coherent_combined,open,avoid2,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,17,10,12,2,58.8235294117647,70.58823529411765,11.764705882352942
+Sridevi,coherent_combined,open,panel10,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,7,0,0,0,0.0,0.0,0.0
+Sridevi,coherent_combined,open,panel10,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,10,0,2,2,0.0,20.0,20.0
+Sridevi,coherent_combined,open,panel10,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,17,0,2,2,0.0,11.764705882352942,11.764705882352942
+Sridevi,coherent_combined,open,sp30,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,6,0,1,1,0.0,16.666666666666668,16.666666666666668
+Sridevi,coherent_combined,open,sp30,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,8,3,4,1,37.5,50.0,12.5
+Sridevi,coherent_combined,open,sp30,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,14,3,5,2,21.428571428571427,35.714285714285715,14.285714285714286
+Sridevi,coherent_combined,open,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,1,0,1,1,0.0,100.0,100.0
+Sridevi,coherent_combined,open,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,2,0,1,1,0.0,50.0,50.0
+Sridevi,coherent_combined,open,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,3,0,2,2,0.0,66.66666666666667,66.66666666666667
+Sridevi,coherent_combined,close_pre,top5,oct16_22,baseline,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Sridevi,coherent_combined,close_pre,top5,oct23_nov1,baseline,10,4,4,0,40.0,40.0,0.0
+Sridevi,coherent_combined,close_pre,top5,oct16_nov1,baseline,17,7,7,0,41.1764705882353,41.1764705882353,0.0
+Sridevi,coherent_combined,close_pre,avoid2,oct16_22,baseline,7,5,5,0,71.42857142857143,71.42857142857143,0.0
+Sridevi,coherent_combined,close_pre,avoid2,oct23_nov1,baseline,10,4,4,0,40.0,40.0,0.0
+Sridevi,coherent_combined,close_pre,avoid2,oct16_nov1,baseline,17,9,9,0,52.94117647058823,52.94117647058823,0.0
+Sridevi,coherent_combined,close_pre,panel10,oct16_22,baseline,7,1,1,0,14.285714285714286,14.285714285714286,0.0
+Sridevi,coherent_combined,close_pre,panel10,oct23_nov1,baseline,10,0,0,0,0.0,0.0,0.0
+Sridevi,coherent_combined,close_pre,panel10,oct16_nov1,baseline,17,1,1,0,5.882352941176471,5.882352941176471,0.0
+Sridevi,coherent_combined,close_pre,sp30,oct16_22,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Sridevi,coherent_combined,close_pre,sp30,oct23_nov1,baseline,8,2,2,0,25.0,25.0,0.0
+Sridevi,coherent_combined,close_pre,sp30,oct16_nov1,baseline,14,4,4,0,28.571428571428573,28.571428571428573,0.0
+Sridevi,coherent_combined,close_pre,dp20,oct16_22,baseline,0,0,0,0,,,
+Sridevi,coherent_combined,close_pre,dp20,oct23_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Sridevi,coherent_combined,close_pre,dp20,oct16_nov1,baseline,2,1,1,0,50.0,50.0,0.0
+Sridevi,coherent_combined,close_known,top5,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Sridevi,coherent_combined,close_known,top5,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,10,5,4,-1,50.0,40.0,-10.0
+Sridevi,coherent_combined,close_known,top5,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,17,8,7,-1,47.05882352941177,41.1764705882353,-5.882352941176471
+Sridevi,coherent_combined,close_known,avoid2,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,7,4,4,0,57.142857142857146,57.142857142857146,0.0
+Sridevi,coherent_combined,close_known,avoid2,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,10,5,3,-2,50.0,30.0,-20.0
+Sridevi,coherent_combined,close_known,avoid2,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,17,9,7,-2,52.94117647058823,41.1764705882353,-11.764705882352942
+Sridevi,coherent_combined,close_known,panel10,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,7,2,0,-2,28.571428571428573,0.0,-28.571428571428573
+Sridevi,coherent_combined,close_known,panel10,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,10,0,0,0,0.0,0.0,0.0
+Sridevi,coherent_combined,close_known,panel10,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,17,2,0,-2,11.764705882352942,0.0,-11.764705882352942
+Sridevi,coherent_combined,close_known,sp30,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi,coherent_combined,close_known,sp30,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,8,1,0,-1,12.5,0.0,-12.5
+Sridevi,coherent_combined,close_known,sp30,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,14,2,1,-1,14.285714285714286,7.142857142857143,-7.142857142857143
+Sridevi,coherent_combined,close_known,dp20,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,0,0,0,0,,,
+Sridevi,coherent_combined,close_known,dp20,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,2,0,0,0,0.0,0.0,0.0
+Sridevi,coherent_combined,close_known,dp20,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,2,0,0,0,0.0,0.0,0.0
+Sridevi,coherent_combined,jodi_pre,jodi25,oct16_22,Open=39; Close-pre=0,7,2,2,0,28.571428571428573,28.571428571428573,0.0
+Sridevi,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=39; Close-pre=0,10,2,2,0,20.0,20.0,0.0
+Sridevi,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=39; Close-pre=0,17,4,4,0,23.529411764705884,23.529411764705884,0.0
+Sridevi,endpoint_specific,open,top5,oct16_22,local_calendar/days=30/min_support=5/penalty=0.05,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Sridevi,endpoint_specific,open,top5,oct23_nov1,local_calendar/days=30/min_support=5/penalty=0.05,10,5,4,-1,50.0,40.0,-10.0
+Sridevi,endpoint_specific,open,top5,oct16_nov1,local_calendar/days=30/min_support=5/penalty=0.05,17,8,7,-1,47.05882352941177,41.1764705882353,-5.882352941176471
+Sridevi,endpoint_specific,open,avoid2,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Sridevi,endpoint_specific,open,avoid2,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,10,7,8,1,70.0,80.0,10.0
+Sridevi,endpoint_specific,open,avoid2,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,17,10,11,1,58.8235294117647,64.70588235294117,5.882352941176471
+Sridevi,endpoint_specific,open,panel10,oct16_22,baseline,7,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,open,panel10,oct23_nov1,baseline,10,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,open,panel10,oct16_nov1,baseline,17,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,open,sp30,oct16_22,shrinkage/prior=cluster/days=30/strength=3/min_support=5/penalty=0.1,6,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,open,sp30,oct23_nov1,shrinkage/prior=cluster/days=30/strength=3/min_support=5/penalty=0.1,8,3,2,-1,37.5,25.0,-12.5
+Sridevi,endpoint_specific,open,sp30,oct16_nov1,shrinkage/prior=cluster/days=30/strength=3/min_support=5/penalty=0.1,14,3,2,-1,21.428571428571427,14.285714285714286,-7.142857142857143
+Sridevi,endpoint_specific,open,dp20,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,1,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,2,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,3,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,close_pre,top5,oct16_22,local_draws/draws=10/min_support=10/penalty=0.05,7,3,1,-2,42.857142857142854,14.285714285714286,-28.571428571428573
+Sridevi,endpoint_specific,close_pre,top5,oct23_nov1,local_draws/draws=10/min_support=10/penalty=0.05,10,4,6,2,40.0,60.0,20.0
+Sridevi,endpoint_specific,close_pre,top5,oct16_nov1,local_draws/draws=10/min_support=10/penalty=0.05,17,7,7,0,41.1764705882353,41.1764705882353,0.0
+Sridevi,endpoint_specific,close_pre,avoid2,oct16_22,local_draws/draws=20/min_support=5/penalty=0.05,7,5,3,-2,71.42857142857143,42.857142857142854,-28.571428571428573
+Sridevi,endpoint_specific,close_pre,avoid2,oct23_nov1,local_draws/draws=20/min_support=5/penalty=0.05,10,4,3,-1,40.0,30.0,-10.0
+Sridevi,endpoint_specific,close_pre,avoid2,oct16_nov1,local_draws/draws=20/min_support=5/penalty=0.05,17,9,6,-3,52.94117647058823,35.294117647058826,-17.647058823529413
+Sridevi,endpoint_specific,close_pre,panel10,oct16_22,baseline,7,1,1,0,14.285714285714286,14.285714285714286,0.0
+Sridevi,endpoint_specific,close_pre,panel10,oct23_nov1,baseline,10,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,close_pre,panel10,oct16_nov1,baseline,17,1,1,0,5.882352941176471,5.882352941176471,0.0
+Sridevi,endpoint_specific,close_pre,sp30,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,6,2,4,2,33.333333333333336,66.66666666666667,33.333333333333336
+Sridevi,endpoint_specific,close_pre,sp30,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,8,2,0,-2,25.0,0.0,-25.0
+Sridevi,endpoint_specific,close_pre,sp30,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,14,4,4,0,28.571428571428573,28.571428571428573,0.0
+Sridevi,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,0,0,0,0,,,
+Sridevi,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,2,1,1,0,50.0,50.0,0.0
+Sridevi,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=60/strength=8/min_support=5/penalty=0.25,2,1,1,0,50.0,50.0,0.0
+Sridevi,endpoint_specific,close_known,top5,oct16_22,baseline,7,3,3,0,42.857142857142854,42.857142857142854,0.0
+Sridevi,endpoint_specific,close_known,top5,oct23_nov1,baseline,10,5,5,0,50.0,50.0,0.0
+Sridevi,endpoint_specific,close_known,top5,oct16_nov1,baseline,17,8,8,0,47.05882352941177,47.05882352941177,0.0
+Sridevi,endpoint_specific,close_known,avoid2,oct16_22,counter_regression/days=60/recent=5/tolerance=0.0/prior=pool/strength=8/min_support=8/penalty=0.15,7,4,4,0,57.142857142857146,57.142857142857146,0.0
+Sridevi,endpoint_specific,close_known,avoid2,oct23_nov1,counter_regression/days=60/recent=5/tolerance=0.0/prior=pool/strength=8/min_support=8/penalty=0.15,10,5,4,-1,50.0,40.0,-10.0
+Sridevi,endpoint_specific,close_known,avoid2,oct16_nov1,counter_regression/days=60/recent=5/tolerance=0.0/prior=pool/strength=8/min_support=8/penalty=0.15,17,9,8,-1,52.94117647058823,47.05882352941177,-5.882352941176471
+Sridevi,endpoint_specific,close_known,panel10,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,7,2,0,-2,28.571428571428573,0.0,-28.571428571428573
+Sridevi,endpoint_specific,close_known,panel10,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,10,0,1,1,0.0,10.0,10.0
+Sridevi,endpoint_specific,close_known,panel10,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,17,2,1,-1,11.764705882352942,5.882352941176471,-5.882352941176471
+Sridevi,endpoint_specific,close_known,sp30,oct16_22,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi,endpoint_specific,close_known,sp30,oct23_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,8,1,0,-1,12.5,0.0,-12.5
+Sridevi,endpoint_specific,close_known,sp30,oct16_nov1,shrinkage/prior=pool/days=30/strength=16/min_support=5/penalty=0.1,14,2,1,-1,14.285714285714286,7.142857142857143,-7.142857142857143
+Sridevi,endpoint_specific,close_known,dp20,oct16_22,baseline,0,0,0,0,,,
+Sridevi,endpoint_specific,close_known,dp20,oct23_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,close_known,dp20,oct16_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Sridevi,endpoint_specific,jodi_pre,jodi25,oct16_22,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,7,2,3,1,28.571428571428573,42.857142857142854,14.285714285714286
+Sridevi,endpoint_specific,jodi_pre,jodi25,oct23_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,10,2,3,1,20.0,30.0,10.0
+Sridevi,endpoint_specific,jodi_pre,jodi25,oct16_nov1,decay/half_life=7/prior=pool/strength=8/min_support=5/penalty=0.1,17,4,6,2,23.529411764705884,35.294117647058826,11.764705882352942
+Sridevi,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=7; Close-pre endpoint=22,7,2,1,-1,28.571428571428573,14.285714285714286,-14.285714285714286
+Sridevi,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=7; Close-pre endpoint=22,10,2,2,0,20.0,20.0,0.0
+Sridevi,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=7; Close-pre endpoint=22,17,4,3,-1,23.529411764705884,17.647058823529413,-5.882352941176471
+Sridevi Night,coherent_combined,open,top5,oct16_22,baseline,6,4,4,0,66.66666666666667,66.66666666666667,0.0
+Sridevi Night,coherent_combined,open,top5,oct23_nov1,baseline,10,6,6,0,60.0,60.0,0.0
+Sridevi Night,coherent_combined,open,top5,oct16_nov1,baseline,16,10,10,0,62.5,62.5,0.0
+Sridevi Night,coherent_combined,open,avoid2,oct16_22,baseline,6,4,4,0,66.66666666666667,66.66666666666667,0.0
+Sridevi Night,coherent_combined,open,avoid2,oct23_nov1,baseline,10,7,7,0,70.0,70.0,0.0
+Sridevi Night,coherent_combined,open,avoid2,oct16_nov1,baseline,16,11,11,0,68.75,68.75,0.0
+Sridevi Night,coherent_combined,open,panel10,oct16_22,baseline,6,0,0,0,0.0,0.0,0.0
+Sridevi Night,coherent_combined,open,panel10,oct23_nov1,baseline,10,1,1,0,10.0,10.0,0.0
+Sridevi Night,coherent_combined,open,panel10,oct16_nov1,baseline,16,1,1,0,6.25,6.25,0.0
+Sridevi Night,coherent_combined,open,sp30,oct16_22,baseline,4,1,1,0,25.0,25.0,0.0
+Sridevi Night,coherent_combined,open,sp30,oct23_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,coherent_combined,open,sp30,oct16_nov1,baseline,10,2,2,0,20.0,20.0,0.0
+Sridevi Night,coherent_combined,open,dp20,oct16_22,baseline,2,1,1,0,50.0,50.0,0.0
+Sridevi Night,coherent_combined,open,dp20,oct23_nov1,baseline,4,0,0,0,0.0,0.0,0.0
+Sridevi Night,coherent_combined,open,dp20,oct16_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,coherent_combined,close_pre,top5,oct16_22,baseline,6,3,3,0,50.0,50.0,0.0
+Sridevi Night,coherent_combined,close_pre,top5,oct23_nov1,baseline,10,3,3,0,30.0,30.0,0.0
+Sridevi Night,coherent_combined,close_pre,top5,oct16_nov1,baseline,16,6,6,0,37.5,37.5,0.0
+Sridevi Night,coherent_combined,close_pre,avoid2,oct16_22,baseline,6,3,3,0,50.0,50.0,0.0
+Sridevi Night,coherent_combined,close_pre,avoid2,oct23_nov1,baseline,10,6,6,0,60.0,60.0,0.0
+Sridevi Night,coherent_combined,close_pre,avoid2,oct16_nov1,baseline,16,9,9,0,56.25,56.25,0.0
+Sridevi Night,coherent_combined,close_pre,panel10,oct16_22,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,coherent_combined,close_pre,panel10,oct23_nov1,baseline,10,0,0,0,0.0,0.0,0.0
+Sridevi Night,coherent_combined,close_pre,panel10,oct16_nov1,baseline,16,1,1,0,6.25,6.25,0.0
+Sridevi Night,coherent_combined,close_pre,sp30,oct16_22,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,coherent_combined,close_pre,sp30,oct23_nov1,baseline,8,1,1,0,12.5,12.5,0.0
+Sridevi Night,coherent_combined,close_pre,sp30,oct16_nov1,baseline,14,2,2,0,14.285714285714286,14.285714285714286,0.0
+Sridevi Night,coherent_combined,close_pre,dp20,oct16_22,baseline,0,0,0,0,,,
+Sridevi Night,coherent_combined,close_pre,dp20,oct23_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Sridevi Night,coherent_combined,close_pre,dp20,oct16_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Sridevi Night,coherent_combined,close_known,top5,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,6,3,2,-1,50.0,33.333333333333336,-16.666666666666668
+Sridevi Night,coherent_combined,close_known,top5,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,10,5,5,0,50.0,50.0,0.0
+Sridevi Night,coherent_combined,close_known,top5,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,16,8,7,-1,50.0,43.75,-6.25
+Sridevi Night,coherent_combined,close_known,avoid2,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,6,1,4,3,16.666666666666668,66.66666666666667,50.0
+Sridevi Night,coherent_combined,close_known,avoid2,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,10,7,5,-2,70.0,50.0,-20.0
+Sridevi Night,coherent_combined,close_known,avoid2,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,16,8,9,1,50.0,56.25,6.25
+Sridevi Night,coherent_combined,close_known,panel10,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,6,1,2,1,16.666666666666668,33.333333333333336,16.666666666666668
+Sridevi Night,coherent_combined,close_known,panel10,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,10,3,2,-1,30.0,20.0,-10.0
+Sridevi Night,coherent_combined,close_known,panel10,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,16,4,4,0,25.0,25.0,0.0
+Sridevi Night,coherent_combined,close_known,sp30,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Sridevi Night,coherent_combined,close_known,sp30,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,8,3,3,0,37.5,37.5,0.0
+Sridevi Night,coherent_combined,close_known,sp30,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,14,5,5,0,35.714285714285715,35.714285714285715,0.0
+Sridevi Night,coherent_combined,close_known,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,0,0,0,0,,,
+Sridevi Night,coherent_combined,close_known,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,2,0,0,0,0.0,0.0,0.0
+Sridevi Night,coherent_combined,close_known,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=8/min_support=5/penalty=0.1,2,0,0,0,0.0,0.0,0.0
+Sridevi Night,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=0,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=0,10,1,1,0,10.0,10.0,0.0
+Sridevi Night,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=0,16,2,2,0,12.5,12.5,0.0
+Sridevi Night,endpoint_specific,open,top5,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,6,4,3,-1,66.66666666666667,50.0,-16.666666666666668
+Sridevi Night,endpoint_specific,open,top5,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,10,6,6,0,60.0,60.0,0.0
+Sridevi Night,endpoint_specific,open,top5,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,16,10,9,-1,62.5,56.25,-6.25
+Sridevi Night,endpoint_specific,open,avoid2,oct16_22,static/v7_local_specialists,6,4,5,1,66.66666666666667,83.33333333333333,16.666666666666668
+Sridevi Night,endpoint_specific,open,avoid2,oct23_nov1,static/v7_local_specialists,10,7,4,-3,70.0,40.0,-30.0
+Sridevi Night,endpoint_specific,open,avoid2,oct16_nov1,static/v7_local_specialists,16,11,9,-2,68.75,56.25,-12.5
+Sridevi Night,endpoint_specific,open,panel10,oct16_22,baseline,6,0,0,0,0.0,0.0,0.0
+Sridevi Night,endpoint_specific,open,panel10,oct23_nov1,baseline,10,1,1,0,10.0,10.0,0.0
+Sridevi Night,endpoint_specific,open,panel10,oct16_nov1,baseline,16,1,1,0,6.25,6.25,0.0
+Sridevi Night,endpoint_specific,open,sp30,oct16_22,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,4,1,1,0,25.0,25.0,0.0
+Sridevi Night,endpoint_specific,open,sp30,oct23_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,endpoint_specific,open,sp30,oct16_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,10,2,2,0,20.0,20.0,0.0
+Sridevi Night,endpoint_specific,open,dp20,oct16_22,counter_regression/days=30/recent=5/tolerance=0.0/prior=none/strength=8/min_support=8/penalty=0.15,2,1,1,0,50.0,50.0,0.0
+Sridevi Night,endpoint_specific,open,dp20,oct23_nov1,counter_regression/days=30/recent=5/tolerance=0.0/prior=none/strength=8/min_support=8/penalty=0.15,4,0,0,0,0.0,0.0,0.0
+Sridevi Night,endpoint_specific,open,dp20,oct16_nov1,counter_regression/days=30/recent=5/tolerance=0.0/prior=none/strength=8/min_support=8/penalty=0.15,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,endpoint_specific,close_pre,top5,oct16_22,local_draws/draws=10/min_support=5/penalty=0.05,6,3,5,2,50.0,83.33333333333333,33.333333333333336
+Sridevi Night,endpoint_specific,close_pre,top5,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.05,10,3,5,2,30.0,50.0,20.0
+Sridevi Night,endpoint_specific,close_pre,top5,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.05,16,6,10,4,37.5,62.5,25.0
+Sridevi Night,endpoint_specific,close_pre,avoid2,oct16_22,baseline,6,3,3,0,50.0,50.0,0.0
+Sridevi Night,endpoint_specific,close_pre,avoid2,oct23_nov1,baseline,10,6,6,0,60.0,60.0,0.0
+Sridevi Night,endpoint_specific,close_pre,avoid2,oct16_nov1,baseline,16,9,9,0,56.25,56.25,0.0
+Sridevi Night,endpoint_specific,close_pre,panel10,oct16_22,local_draws/draws=10/min_support=5/penalty=0.05,6,1,0,-1,16.666666666666668,0.0,-16.666666666666668
+Sridevi Night,endpoint_specific,close_pre,panel10,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.05,10,0,1,1,0.0,10.0,10.0
+Sridevi Night,endpoint_specific,close_pre,panel10,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.05,16,1,1,0,6.25,6.25,0.0
+Sridevi Night,endpoint_specific,close_pre,sp30,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,endpoint_specific,close_pre,sp30,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,8,1,3,2,12.5,37.5,25.0
+Sridevi Night,endpoint_specific,close_pre,sp30,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,14,2,4,2,14.285714285714286,28.571428571428573,14.285714285714286
+Sridevi Night,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,0,0,0,0,,,
+Sridevi Night,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,2,0,0,0,0.0,0.0,0.0
+Sridevi Night,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,2,0,0,0,0.0,0.0,0.0
+Sridevi Night,endpoint_specific,close_known,top5,oct16_22,static/new_local_mixture,6,3,4,1,50.0,66.66666666666667,16.666666666666668
+Sridevi Night,endpoint_specific,close_known,top5,oct23_nov1,static/new_local_mixture,10,5,4,-1,50.0,40.0,-10.0
+Sridevi Night,endpoint_specific,close_known,top5,oct16_nov1,static/new_local_mixture,16,8,8,0,50.0,50.0,0.0
+Sridevi Night,endpoint_specific,close_known,avoid2,oct16_22,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,endpoint_specific,close_known,avoid2,oct23_nov1,baseline,10,7,7,0,70.0,70.0,0.0
+Sridevi Night,endpoint_specific,close_known,avoid2,oct16_nov1,baseline,16,8,8,0,50.0,50.0,0.0
+Sridevi Night,endpoint_specific,close_known,panel10,oct16_22,static/v7_local_specialists,6,1,2,1,16.666666666666668,33.333333333333336,16.666666666666668
+Sridevi Night,endpoint_specific,close_known,panel10,oct23_nov1,static/v7_local_specialists,10,3,2,-1,30.0,20.0,-10.0
+Sridevi Night,endpoint_specific,close_known,panel10,oct16_nov1,static/v7_local_specialists,16,4,4,0,25.0,25.0,0.0
+Sridevi Night,endpoint_specific,close_known,sp30,oct16_22,local_calendar/days=14/min_support=10/penalty=0.3,6,2,1,-1,33.333333333333336,16.666666666666668,-16.666666666666668
+Sridevi Night,endpoint_specific,close_known,sp30,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.3,8,3,2,-1,37.5,25.0,-12.5
+Sridevi Night,endpoint_specific,close_known,sp30,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.3,14,5,3,-2,35.714285714285715,21.428571428571427,-14.285714285714286
+Sridevi Night,endpoint_specific,close_known,dp20,oct16_22,baseline,0,0,0,0,,,
+Sridevi Night,endpoint_specific,close_known,dp20,oct23_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Sridevi Night,endpoint_specific,close_known,dp20,oct16_nov1,baseline,2,0,0,0,0.0,0.0,0.0
+Sridevi Night,endpoint_specific,jodi_pre,jodi25,oct16_22,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Sridevi Night,endpoint_specific,jodi_pre,jodi25,oct23_nov1,baseline,10,1,1,0,10.0,10.0,0.0
+Sridevi Night,endpoint_specific,jodi_pre,jodi25,oct16_nov1,baseline,16,2,2,0,12.5,12.5,0.0
+Sridevi Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=4; Close-pre endpoint=19,6,1,3,2,16.666666666666668,50.0,33.333333333333336
+Sridevi Night,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=4; Close-pre endpoint=19,10,1,2,1,10.0,20.0,10.0
+Sridevi Night,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=4; Close-pre endpoint=19,16,2,5,3,12.5,31.25,18.75
+Time Bazar,coherent_combined,open,top5,oct16_22,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Time Bazar,coherent_combined,open,top5,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Time Bazar,coherent_combined,open,top5,oct16_nov1,baseline,14,6,6,0,42.857142857142854,42.857142857142854,0.0
+Time Bazar,coherent_combined,open,avoid2,oct16_22,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Time Bazar,coherent_combined,open,avoid2,oct23_nov1,baseline,8,5,5,0,62.5,62.5,0.0
+Time Bazar,coherent_combined,open,avoid2,oct16_nov1,baseline,14,6,6,0,42.857142857142854,42.857142857142854,0.0
+Time Bazar,coherent_combined,open,panel10,oct16_22,baseline,6,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,open,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,open,panel10,oct16_nov1,baseline,14,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,open,sp30,oct16_22,baseline,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Time Bazar,coherent_combined,open,sp30,oct23_nov1,baseline,3,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,open,sp30,oct16_nov1,baseline,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Time Bazar,coherent_combined,open,dp20,oct16_22,baseline,3,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,open,dp20,oct23_nov1,baseline,5,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,open,dp20,oct16_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_pre,top5,oct16_22,baseline,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Time Bazar,coherent_combined,close_pre,top5,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Time Bazar,coherent_combined,close_pre,top5,oct16_nov1,baseline,14,6,6,0,42.857142857142854,42.857142857142854,0.0
+Time Bazar,coherent_combined,close_pre,avoid2,oct16_22,baseline,6,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_pre,avoid2,oct23_nov1,baseline,8,6,6,0,75.0,75.0,0.0
+Time Bazar,coherent_combined,close_pre,avoid2,oct16_nov1,baseline,14,6,6,0,42.857142857142854,42.857142857142854,0.0
+Time Bazar,coherent_combined,close_pre,panel10,oct16_22,baseline,6,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_pre,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_pre,panel10,oct16_nov1,baseline,14,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_pre,sp30,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Time Bazar,coherent_combined,close_pre,sp30,oct23_nov1,baseline,4,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_pre,sp30,oct16_nov1,baseline,9,2,2,0,22.22222222222222,22.22222222222222,0.0
+Time Bazar,coherent_combined,close_pre,dp20,oct16_22,baseline,1,1,1,0,100.0,100.0,0.0
+Time Bazar,coherent_combined,close_pre,dp20,oct23_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Time Bazar,coherent_combined,close_pre,dp20,oct16_nov1,baseline,5,2,2,0,40.0,40.0,0.0
+Time Bazar,coherent_combined,close_known,top5,oct16_22,baseline,6,4,4,0,66.66666666666667,66.66666666666667,0.0
+Time Bazar,coherent_combined,close_known,top5,oct23_nov1,baseline,8,4,4,0,50.0,50.0,0.0
+Time Bazar,coherent_combined,close_known,top5,oct16_nov1,baseline,14,8,8,0,57.142857142857146,57.142857142857146,0.0
+Time Bazar,coherent_combined,close_known,avoid2,oct16_22,baseline,6,5,5,0,83.33333333333333,83.33333333333333,0.0
+Time Bazar,coherent_combined,close_known,avoid2,oct23_nov1,baseline,8,7,7,0,87.5,87.5,0.0
+Time Bazar,coherent_combined,close_known,avoid2,oct16_nov1,baseline,14,12,12,0,85.71428571428571,85.71428571428571,0.0
+Time Bazar,coherent_combined,close_known,panel10,oct16_22,baseline,6,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_known,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_known,panel10,oct16_nov1,baseline,14,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_known,sp30,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Time Bazar,coherent_combined,close_known,sp30,oct23_nov1,baseline,4,3,3,0,75.0,75.0,0.0
+Time Bazar,coherent_combined,close_known,sp30,oct16_nov1,baseline,9,5,5,0,55.55555555555556,55.55555555555556,0.0
+Time Bazar,coherent_combined,close_known,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,close_known,dp20,oct23_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Time Bazar,coherent_combined,close_known,dp20,oct16_nov1,baseline,5,1,1,0,20.0,20.0,0.0
+Time Bazar,coherent_combined,jodi_pre,jodi25,oct16_22,Open=0; Close-pre=0,6,0,0,0,0.0,0.0,0.0
+Time Bazar,coherent_combined,jodi_pre,jodi25,oct23_nov1,Open=0; Close-pre=0,8,1,1,0,12.5,12.5,0.0
+Time Bazar,coherent_combined,jodi_pre,jodi25,oct16_nov1,Open=0; Close-pre=0,14,1,1,0,7.142857142857143,7.142857142857143,0.0
+Time Bazar,endpoint_specific,open,top5,oct16_22,local_calendar/days=14/min_support=10/penalty=0.3,6,2,2,0,33.333333333333336,33.333333333333336,0.0
+Time Bazar,endpoint_specific,open,top5,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.3,8,4,2,-2,50.0,25.0,-25.0
+Time Bazar,endpoint_specific,open,top5,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.3,14,6,4,-2,42.857142857142854,28.571428571428573,-14.285714285714286
+Time Bazar,endpoint_specific,open,avoid2,oct16_22,static/v7_local_specialists,6,1,4,3,16.666666666666668,66.66666666666667,50.0
+Time Bazar,endpoint_specific,open,avoid2,oct23_nov1,static/v7_local_specialists,8,5,7,2,62.5,87.5,25.0
+Time Bazar,endpoint_specific,open,avoid2,oct16_nov1,static/v7_local_specialists,14,6,11,5,42.857142857142854,78.57142857142857,35.714285714285715
+Time Bazar,endpoint_specific,open,panel10,oct16_22,baseline,6,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,open,panel10,oct23_nov1,baseline,8,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,open,panel10,oct16_nov1,baseline,14,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,open,sp30,oct16_22,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,3,1,1,0,33.333333333333336,33.333333333333336,0.0
+Time Bazar,endpoint_specific,open,sp30,oct23_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,3,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,open,sp30,oct16_nov1,decay/half_life=14/prior=pool/strength=8/min_support=5/penalty=0.25,6,1,1,0,16.666666666666668,16.666666666666668,0.0
+Time Bazar,endpoint_specific,open,dp20,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,3,0,2,2,0.0,66.66666666666667,66.66666666666667
+Time Bazar,endpoint_specific,open,dp20,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,5,0,1,1,0.0,20.0,20.0
+Time Bazar,endpoint_specific,open,dp20,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,8,0,3,3,0.0,37.5,37.5
+Time Bazar,endpoint_specific,close_pre,top5,oct16_22,local_draws/draws=20/min_support=10/penalty=0.05,6,2,1,-1,33.333333333333336,16.666666666666668,-16.666666666666668
+Time Bazar,endpoint_specific,close_pre,top5,oct23_nov1,local_draws/draws=20/min_support=10/penalty=0.05,8,4,4,0,50.0,50.0,0.0
+Time Bazar,endpoint_specific,close_pre,top5,oct16_nov1,local_draws/draws=20/min_support=10/penalty=0.05,14,6,5,-1,42.857142857142854,35.714285714285715,-7.142857142857143
+Time Bazar,endpoint_specific,close_pre,avoid2,oct16_22,local_draws/draws=10/min_support=5/penalty=0.05,6,0,2,2,0.0,33.333333333333336,33.333333333333336
+Time Bazar,endpoint_specific,close_pre,avoid2,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.05,8,6,3,-3,75.0,37.5,-37.5
+Time Bazar,endpoint_specific,close_pre,avoid2,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.05,14,6,5,-1,42.857142857142854,35.714285714285715,-7.142857142857143
+Time Bazar,endpoint_specific,close_pre,panel10,oct16_22,local_draws/draws=10/min_support=5/penalty=0.05,6,0,1,1,0.0,16.666666666666668,16.666666666666668
+Time Bazar,endpoint_specific,close_pre,panel10,oct23_nov1,local_draws/draws=10/min_support=5/penalty=0.05,8,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,close_pre,panel10,oct16_nov1,local_draws/draws=10/min_support=5/penalty=0.05,14,0,1,1,0.0,7.142857142857143,7.142857142857143
+Time Bazar,endpoint_specific,close_pre,sp30,oct16_22,baseline,5,2,2,0,40.0,40.0,0.0
+Time Bazar,endpoint_specific,close_pre,sp30,oct23_nov1,baseline,4,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,close_pre,sp30,oct16_nov1,baseline,9,2,2,0,22.22222222222222,22.22222222222222,0.0
+Time Bazar,endpoint_specific,close_pre,dp20,oct16_22,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,1,1,1,0,100.0,100.0,0.0
+Time Bazar,endpoint_specific,close_pre,dp20,oct23_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,4,1,0,-1,25.0,0.0,-25.0
+Time Bazar,endpoint_specific,close_pre,dp20,oct16_nov1,shrinkage/prior=pool/days=30/strength=3/min_support=5/penalty=0.25,5,2,1,-1,40.0,20.0,-20.0
+Time Bazar,endpoint_specific,close_known,top5,oct16_22,local_draws/draws=20/min_support=10/penalty=0.05,6,4,4,0,66.66666666666667,66.66666666666667,0.0
+Time Bazar,endpoint_specific,close_known,top5,oct23_nov1,local_draws/draws=20/min_support=10/penalty=0.05,8,4,3,-1,50.0,37.5,-12.5
+Time Bazar,endpoint_specific,close_known,top5,oct16_nov1,local_draws/draws=20/min_support=10/penalty=0.05,14,8,7,-1,57.142857142857146,50.0,-7.142857142857143
+Time Bazar,endpoint_specific,close_known,avoid2,oct16_22,local_calendar/days=14/min_support=10/penalty=0.05,6,5,2,-3,83.33333333333333,33.333333333333336,-50.0
+Time Bazar,endpoint_specific,close_known,avoid2,oct23_nov1,local_calendar/days=14/min_support=10/penalty=0.05,8,7,5,-2,87.5,62.5,-25.0
+Time Bazar,endpoint_specific,close_known,avoid2,oct16_nov1,local_calendar/days=14/min_support=10/penalty=0.05,14,12,7,-5,85.71428571428571,50.0,-35.714285714285715
+Time Bazar,endpoint_specific,close_known,panel10,oct16_22,static/v7_local_specialists,6,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,close_known,panel10,oct23_nov1,static/v7_local_specialists,8,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,close_known,panel10,oct16_nov1,static/v7_local_specialists,14,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,close_known,sp30,oct16_22,empirical_bernstein/days=60/min_support=8/penalty=0.1,5,2,1,-1,40.0,20.0,-20.0
+Time Bazar,endpoint_specific,close_known,sp30,oct23_nov1,empirical_bernstein/days=60/min_support=8/penalty=0.1,4,3,2,-1,75.0,50.0,-25.0
+Time Bazar,endpoint_specific,close_known,sp30,oct16_nov1,empirical_bernstein/days=60/min_support=8/penalty=0.1,9,5,3,-2,55.55555555555556,33.333333333333336,-22.22222222222222
+Time Bazar,endpoint_specific,close_known,dp20,oct16_22,baseline,1,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,close_known,dp20,oct23_nov1,baseline,4,1,1,0,25.0,25.0,0.0
+Time Bazar,endpoint_specific,close_known,dp20,oct16_nov1,baseline,5,1,1,0,20.0,20.0,0.0
+Time Bazar,endpoint_specific,jodi_pre,jodi25,oct16_22,local_calendar/days=14/min_support=5/penalty=0.05,6,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_specific,jodi_pre,jodi25,oct23_nov1,local_calendar/days=14/min_support=5/penalty=0.05,8,1,2,1,12.5,25.0,12.5
+Time Bazar,endpoint_specific,jodi_pre,jodi25,oct16_nov1,local_calendar/days=14/min_support=5/penalty=0.05,14,1,2,1,7.142857142857143,14.285714285714286,7.142857142857143
+Time Bazar,endpoint_top5_jodi,jodi_pre,jodi25,oct16_22,Open endpoint=6; Close-pre endpoint=28,6,0,0,0,0.0,0.0,0.0
+Time Bazar,endpoint_top5_jodi,jodi_pre,jodi25,oct23_nov1,Open endpoint=6; Close-pre endpoint=28,8,1,1,0,12.5,12.5,0.0
+Time Bazar,endpoint_top5_jodi,jodi_pre,jodi25,oct16_nov1,Open endpoint=6; Close-pre endpoint=28,14,1,1,0,7.142857142857143,7.142857142857143,0.0
