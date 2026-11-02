@@ -1,0 +1,32 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    ".gitignore": "fd3014f67f9aad4c6b233a96dc315be95a2e990f57e32d16c2cc4b48f77e137e",
+    "MARKET_DECISIONS.md": "df739429bac25a5e31dd97ee056cb8ffcd287cf53990d2b2e1b82c30d802f0fc",
+    "REPORT.md": "79cda708fe57fbd5f4f12d7be02abb36dbfb804e8dec975fc3cc0ce525b22458",
+    "RESULTS.md": "b9b2732825b1df33b904b5154601a4dc58adf751798be53db51ad99eacb91cba",
+    "approach_metrics.csv.gz": "5fae9e119efe80019cedb1e5f873fd3681fc9dcebc0ab65ea6bf5542aa8ba369",
+    "audit_manifest.json": "bbbf67da3193c343ca1f54845bb33c05f8bfbb04aafa876d1d91e6bfeb94b134",
+    "balanced_market_summary.csv": "b22916f6c2eb65016d6c76b2cff0a20fef6027761ba7a193e14de48f02129d2f",
+    "balanced_selection.json": "2ca51de945e9cb0bf070b6aca2db1046dcbb97b135681aad90175fe5758a9399",
+    "catalogues.json": "34bdceddfaa593be40e097a597a8123d3bf01cb00fdf91162419be418aefbedb",
+    "last_observed_source_choices.csv": "a9215bebf3dd23dd2ada66c5b902a531076ac938694ef02d979e0dab36b7840d",
+    "market_approach_directions.csv": "d10ca88f265322cfcd2b6f9550edfc8e47ff4fd619be063962864ef34591e2eb",
+    "market_approach_summary.csv.gz": "45cf0b09d4b0b710475c4eac2ed9a0d70e2ac1b03392d986698d77da2f6ee8b5",
+    "policies.py": "57e382a690abe1739ef88ce84f68bd14bf96bac6372a9ede63974f6d828e24e7",
+    "prospective_priority.json": "04f8fbada5e262273fe382e034d5ee73b5055919f68de43caabd22216e64ee5e",
+    "prospective_protocol.json": "69ba0031a3e0fc970ba2f3ec181c86051f6f2c668f1ebd3f459ea3540be34b1b",
+    "protocol.json": "be27884eeadca15c9bdcba455420ed905453b4870ea6d2a4950dee73f3894c6a",
+    "report_study.py": "e6f0ab9495f53031da9741c7e9b08aa7e128f3829873f52fc2143a30fb592480",
+    "results.json": "1e6550af2b91a9bf82ec4cd0b0bbd44ebe1cbdb12a6357bc78369b19aa66857f",
+    "run_study.py": "34a56f208281efe69332fceb8677760e1787483898981d95f98a6b316bd6ccc2",
+    "selected_source_usage.csv": "93f171f39b11a2929501222888af67b5efb1ea2a413f273ca121aaa80e717b7c",
+    "selection.json": "2f3cb59ccfb920ac62ffb68d612f48b58001173ffd50b7aba2fa936e6ef1aca3",
+    "selection_counts.csv": "f0d0e256229f1209ff431c1f05171b42f8643619fedad76b2dd8717c6bddf198",
+    "selection_manifest.json": "cf2ca4f903b2927f813d6e41e05ac614e283b28a9d91f7c46b465e95fa137cfd",
+    "static_sources.py": "9ca623fbb47daafb58a1c329ecf409629b21313eab43c176c93aea8b254cd8ac",
+    "verification.json": "dc3e08e55a0b6bb5260c9b674eee9d101540502dea326f4df9e53a0f8868e99a",
+    "verify_study.py": "5ebdde702007eb7a0cfb62c4a4451a48e02f487ea01ac47c3421b7cc7ce45ef4"
+  },
+  "scope": "Final market-routing artifacts; unrelated workspace changes excluded."
+}
