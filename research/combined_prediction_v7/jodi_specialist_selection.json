@@ -1,0 +1,93 @@
+[
+  {
+    "market": "ALL",
+    "open_index": 453,
+    "close_index": 356,
+    "open_candidate": "v5/method_decay30_05",
+    "close_candidate": "v6/joint_ipf/sutta=conditional/digits=appearance/damping=1.0/passes=3"
+  },
+  {
+    "market": "Kalyan",
+    "open_index": 598,
+    "close_index": 617,
+    "open_candidate": "empirical_pair_absence/history=last7/prior_mass=10.0/mode=likelihood_tilt",
+    "close_candidate": "empirical_pair_absence/history=last30/prior_mass=10.0/mode=independent"
+  },
+  {
+    "market": "Kalyan Night",
+    "open_index": 42,
+    "close_index": 585,
+    "open_candidate": "v6/sutta_marginal/source=panel/strength=2.0",
+    "close_candidate": "empirical_pair_absence/history=local/prior_mass=100.0/mode=independent"
+  },
+  {
+    "market": "Madhur Day",
+    "open_index": 593,
+    "close_index": 317,
+    "open_candidate": "empirical_pair_absence/history=last7/prior_mass=2.0/mode=independent",
+    "close_candidate": "v6/digit_symmetry/transform=mirror5/alpha=0.75"
+  },
+  {
+    "market": "Madhur Night",
+    "open_index": 554,
+    "close_index": 120,
+    "open_candidate": "empirical_pair_absence/history=pooled/prior_mass=2.0/mode=likelihood_tilt",
+    "close_candidate": "v6/joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=3.0"
+  },
+  {
+    "market": "Main Bazar",
+    "open_index": 252,
+    "close_index": 272,
+    "open_candidate": "v6/causal_history/mechanism=recent_digits_30/strength=1.0",
+    "close_candidate": "v6/causal_history/mechanism=recent_sutta_90/strength=-1.0"
+  },
+  {
+    "market": "Milan Day",
+    "open_index": 606,
+    "close_index": 234,
+    "open_candidate": "empirical_pair_absence/history=last7/prior_mass=100.0/mode=likelihood_tilt",
+    "close_candidate": "v6/causal_history/mechanism=last_digits/strength=1.0"
+  },
+  {
+    "market": "Milan Night",
+    "open_index": 272,
+    "close_index": 456,
+    "open_candidate": "v6/causal_history/mechanism=recent_sutta_90/strength=-1.0",
+    "close_candidate": "v5/method_decay30_08"
+  },
+  {
+    "market": "Rajdhani Day",
+    "open_index": 454,
+    "close_index": 601,
+    "open_candidate": "v5/method_decay30_06",
+    "close_candidate": "empirical_pair_absence/history=last7/prior_mass=30.0/mode=independent"
+  },
+  {
+    "market": "Rajdhani Night",
+    "open_index": 268,
+    "close_index": 67,
+    "open_candidate": "v6/causal_history/mechanism=recent_sutta_30/strength=0.25",
+    "close_candidate": "v6/avoid2_gate/source=native_avoid/penalty=12.0"
+  },
+  {
+    "market": "Sridevi",
+    "open_index": 328,
+    "close_index": 321,
+    "open_candidate": "v6/digit_symmetry/transform=rotate1/alpha=1.0",
+    "close_candidate": "v6/digit_symmetry/transform=complement9/alpha=0.5"
+  },
+  {
+    "market": "Sridevi Night",
+    "open_index": 333,
+    "close_index": 436,
+    "open_candidate": "v6/digit_symmetry/transform=rotate3/alpha=1.0",
+    "close_candidate": "v5/method_market_hierarchical_08"
+  },
+  {
+    "market": "Time Bazar",
+    "open_index": 229,
+    "close_index": 575,
+    "open_candidate": "v6/joint_likelihood/sutta=panel/digits=blend/strength=1.5",
+    "close_candidate": "empirical_pair_absence/history=local/prior_mass=2.0/mode=winning_pair_soft"
+  }
+]
