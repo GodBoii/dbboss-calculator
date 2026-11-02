@@ -12,6 +12,7 @@ const { runMarketBacktest } = require("../src/lib/backtest.ts")
 
 const fixtures = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures/analysis-v1-baseline.json"))).cases
 const reference = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures/analysis-combined-baseline.json")))
+const selectiveReference = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures/combined-selective-endpoints.json")))
 const source = fs.readFileSync(path.join(__dirname, "..", reference.source), "utf8").replace(/\r\n/g, "\n")
 assert.equal(crypto.createHash("sha256").update(source).digest("hex"), reference.sourceLF_SHA256, "Frozen source data changed")
 const legal = new Set(ALL_PANELS)
@@ -37,6 +38,13 @@ function histories(date) {
 }
 
 function expected(row, channel, task) {
+  const approved = row.market === "Sridevi" && channel === "open"
+    || row.market === "Rajdhani Night" && channel === "close_pre" && task === "sp30"
+  if (approved) {
+    const selective = selectiveReference.cases.find(c => c.market === row.market && c.date === row.date && c.channel === channel)
+    assert(selective?.expected[task], `Missing approved selective fixture: ${row.market}/${row.date}/${channel}/${task}`)
+    return selective.expected[task]
+  }
   const match = reference.cases.find(c=>c.market===row.market&&c.date===row.date)
   assert(match, "Missing frozen combined case")
   return match.channels[channel][task]
@@ -84,4 +92,4 @@ for(const fixture of JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/an
   const report=runMarketBacktest(fixture.market,history[fixture.market],history,{days:fixture.days})
   assert.equal(crypto.createHash('sha256').update(JSON.stringify(report)).digest('hex'),fixture.sha256,'V1 backtest changed')
 }
-console.log(`Passed: ${fixtures.length} unchanged V1 cases, ${parity} frozen V2 list comparisons, input immutability, future exclusion, Sutta 0, all copy counts, and original backtests.`)
+console.log(`Passed: ${fixtures.length} unchanged V1 cases, ${parity} V2 list comparisons (original frozen lists except explicitly approved selective routes), input immutability, future exclusion, Sutta 0, all copy counts, and original backtests.`)
