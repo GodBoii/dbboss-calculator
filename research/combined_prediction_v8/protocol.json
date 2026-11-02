@@ -1,0 +1,16 @@
+{
+  "study": "v8-market-specific-routing-and-shrinkage",
+  "source_choices_available_after": "2026-09-07",
+  "online_evidence_start": "2026-09-08",
+  "selection": {"train": ["2026-09-08", "2026-09-30"], "validation": ["2026-10-01", "2026-10-15"]},
+  "reused_audits": {"late_reused": ["2026-10-16", "2026-10-22"], "november_reused": ["2026-10-23", "2026-11-01"]},
+  "models": "AuditedV7experts and outcome-freeweightgrid, plus158global/localcoherent probabilityblends. Learned component choices useearlyhistoryonly; inherited upstream fitting bias persists.",
+  "controllers": "103predeclared variants. Everytargetprediction chooses asource index usingSTRICTLYEARLIERdates only, withlocal,poolleave-market-out,fixeddaynightcluster,rolling,decay,regressionguards. Currenttargeteligibility neverconditionsrouting.",
+  "endpoint_selection": "Min15localtrain/8localval: trainnonregvalstrictgain. Otherwise guardlocaltrainvalnonreg +othermarkettrainnonreg and>=2othermarketvalhitsgain, ranklocalnetval+10local-equivalent observations fromleave-market-outval. Tiepreferbaseline thentrainhits thenindex. Actualsupportalwaysreported.",
+  "coherent_balanced": "One model index per draw produces all5outputs. Controllerutility is meanperdrawcorrectoutputcount, explicitlyNOTanoverallaccuracyrate. Exclude independentlyroutedsourcecontrols byzerobaselineexcess. Finalmarketcontroller mustnonregall5metrics onbothfitblocks andimproveatleastonevalmetric; chooselexicographicpanel10,avoid2,top5,SP,DP. Elseproductionfallback.",
+  "static_references": "V7localspecialistsavailableafterSep7. V7marketweightchoiceonlyenabledafterOct15; unavailablebeforethen andcannotwinvalidation. Equal-localprobabilityblendprespecifiedwithoutauditselection.",
+  "Jodi25": "Open5xClosepre5; same-source schemes plus49cross-familycontrollers. No actualtargetOpenused. Then strictprior-dateJodicontrollers and marketpolicyselection. Fixed25budget.",
+  "metrics": ["top5", "avoid2", "panel10", "sp30", "dp20", "jodi25"],
+  "limits": ["Everydatehasalreadybeenexamined", "No fresh confirmation", "No guarantee anymarketimproves", "ConditionalSP/DPdenominators remainseparate", "Positivecounts canreverse andmustnotbediscarded", "Noautomaticproductionchange fromretrospectivewinner"],
+  "sources": ["https://scikit-learn.org/stable/common_pitfalls.html", "https://otexts.com/fpp3/tscv.html", "https://otexts.com/fpp3/combinations.html"]
+}
