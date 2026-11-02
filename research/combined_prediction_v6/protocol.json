@@ -1,0 +1,19 @@
+{
+  "study": "combined-v6-joint-top5-avoid2-panels",
+  "research_only": true,
+  "channels": ["open", "close_pre", "close_known"],
+  "metrics": ["top5", "avoid2", "panel10", "sp30", "dp20", "sutta_avoid", "joint10", "joint_sp30", "joint_dp20"],
+  "baseline": "Actual combined-weighted-v1 dedicated panel endpoints; derived Top5 and avoidpair from production sp30 distribution",
+  "candidate_output": "One coherent positive 220-panel distribution. Derive exactly5Suttas,2distinct avoiddigits,10panels,30SP,20DP. Fixed stable panel/Sutta index and pair order ties.",
+  "coarse_selection": {"train": ["2026-07-04", "2026-08-16"], "validation": ["2026-08-17", "2026-09-07"]},
+  "refine_selection": {"train": ["2026-09-08", "2026-09-30"], "validation": ["2026-10-01", "2026-10-15"]},
+  "late_reused": ["2026-10-16", "2026-10-22"],
+  "extension_after_freeze": ["2026-10-23", "2026-11-01"],
+  "choice": "Per objective/channel/market and pooled. Minimum15train/8validation eligible. Reject trainhit loss, require validationhit gain. Joint objectives require all components nonregressing on both blocks. Max validationhits; ties prefer production, trainhits, catalogue order.",
+  "refinement": "Discard unselected coarse variants. Mix selected parents with production at fractions.25,.5,.75,1. Cross objective winners top5/avoid2/panel10/sutta_avoid/joint10 at.25,.5,.75. Freeze whole lineage before extension fetch.",
+  "eligibility": "SP/DP metrics and corresponding joints condition on actual kind; allother metrics count allcomplete draws. Bothavoid digits must be absent, not just one. joint means allnamed components correct on same draw.",
+  "uncertainty": "Day-cluster bootstrap2000 seeded20261102; paired exact tests exploratory; Holm across351frozen objective selectors on extension. No claim that retrospective retrieved outcomes are prospective pre-event forecasts.",
+  "promotion": "No automatic production change from small retrospective gains. Require corrected positive evidence, positive daycluster interval, sufficient market support and no required-output regression. Failed hypotheses remain in audit ledger, excluded from selection.",
+  "limitations": ["All dates throughOct22 previously inspected", "Frozen upstream coefficients retain fitting bias", "No finite search covers every possible combination", "Added causal history starts at replay start and omits missing raw-only context draws", "FullOpenpanel knownClose regime only, not Sutta-only", "Different objectives overlap and are dependent"],
+  "sources": ["https://scikit-learn.org/stable/common_pitfalls.html", "https://otexts.com/fpp3/tscv.html", "https://otexts.com/fpp3/combinations.html"]
+}
