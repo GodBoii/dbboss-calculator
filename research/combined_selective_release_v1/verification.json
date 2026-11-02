@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "selective_public_replay_cases": 94,
+  "unchanged_v1_cases": 21,
+  "v2_list_comparisons": 189,
+  "market_mode_coverage": "All12markets; preOpen, Sutta-only0, fullOpenpanel; partial/completedcurrentday rollover; future, duplicate, reversed, conflicting and short histories.",
+  "unchanged_outputs": "Sutta probability rankings, Jodi sets for1/4/5/6/10 copy counts, full panel rankings, presentdigits, allothermarket/channel/endpointoutputs; earlier unsupported analyses.",
+  "build": "npm run build passed, including TypeScript and PWA asset validation",
+  "typecheck": "npx tsc --noEmit passed",
+  "lint": "npm run lint passed with0errors and6pre-existing warnings in unchangedfiles",
+  "observational_limit": "Retrospectivefixedrecipe evidence is not a guarantee of futureaccuracy.",
+  "logical_source_lf_sha256": {
+    "src/lib/combined-selective.ts": "79fb740b58c32f9d7f98c8d8eabbacda9275829d7546dbe7c6f340ac1437b0c7",
+    "src/lib/combined-prediction.ts": "bde90c13738d2aa6af1b75c3a842923e7151b1f2dca5129666eb2e644d463434",
+    "scripts/verify-combined-selective.cjs": "7f9d8d02a0fc2291c2fc1cc523ee11fd095efbb70cd50c0705508672f9318fe3",
+    "scripts/verify-analysis-versions.cjs": "52476bd0e2a1aa8bb138b7337e1d9b4ceedb949cda51185bc89c6716b9285f6a",
+    "scripts/fixtures/combined-before-selective.json": "65f8009644ab39e9fd7d3c361de87facebed3e4a75ea29cff1fa32d56ab507f6",
+    "scripts/fixtures/combined-selective-endpoints.json": "70ece78502c231c38bc822fa366f294f32d6f95d4bc64c7b21b37c1d964360c3"
+  }
+}
