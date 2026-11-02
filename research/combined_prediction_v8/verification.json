@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "rows": 1201,
+  "markets": 12,
+  "static_probability_reconstructions": 474,
+  "controller_route_reconstructions": 1957,
+  "summary_count_checks": 88816,
+  "selected_real_controller_causality_checks": 106,
+  "all_policy_synthetic_checks": {
+    "policies": 103,
+    "label_perturbations": 103,
+    "eligibility_perturbations": 103,
+    "prefix_checks": 103,
+    "permutation_checks": 103
+  },
+  "selection_manifest_hash_checks": 7,
+  "upstream_lineage_hash_checks": 29,
+  "fresh_confirmation": false,
+  "scope": "Independent source mixtures, exact budgets/hits, imported V7 hit identity, route decisions, same-day/future label and eligibility isolation, row ordering, strict/sparse selectors and paired summaries.",
+  "report_source_usage_checks": {
+    "source_usage_rows": 2349,
+    "last_observed_choices": 208
+  }
+}
