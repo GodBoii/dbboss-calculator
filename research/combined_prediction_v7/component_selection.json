@@ -1,0 +1,1367 @@
+[
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "ALL",
+    "index": 453,
+    "candidate": "v5/method_decay30_05"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Kalyan",
+    "index": 229,
+    "candidate": "v6/joint_likelihood/sutta=panel/digits=blend/strength=1.5"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Kalyan Night",
+    "index": 279,
+    "candidate": "v6/causal_history/mechanism=overdue_digits_7/strength=-0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Madhur Day",
+    "index": 593,
+    "candidate": "empirical_pair_absence/history=last7/prior_mass=2.0/mode=independent"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Madhur Night",
+    "index": 617,
+    "candidate": "empirical_pair_absence/history=last30/prior_mass=10.0/mode=independent"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Main Bazar",
+    "index": 252,
+    "candidate": "v6/causal_history/mechanism=recent_digits_30/strength=1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Milan Day",
+    "index": 606,
+    "candidate": "empirical_pair_absence/history=last7/prior_mass=100.0/mode=likelihood_tilt"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Milan Night",
+    "index": 298,
+    "candidate": "v6/causal_history/mechanism=overdue_sutta_7/strength=0.25"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Rajdhani Day",
+    "index": 670,
+    "candidate": "sp_conditional_shrinkage/source=sp30/alpha=0.6"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Rajdhani Night",
+    "index": 672,
+    "candidate": "sp_conditional_shrinkage/source=sp30/alpha=1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Sridevi",
+    "index": 328,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Sridevi Night",
+    "index": 333,
+    "candidate": "v6/digit_symmetry/transform=rotate3/alpha=1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "top5",
+    "market": "Time Bazar",
+    "index": 229,
+    "candidate": "v6/joint_likelihood/sutta=panel/digits=blend/strength=1.5"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "ALL",
+    "index": 306,
+    "candidate": "v6/causal_history/mechanism=overdue_sutta_30/strength=1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Kalyan",
+    "index": 325,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=0.25"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Kalyan Night",
+    "index": 21,
+    "candidate": "v6/source_fusion/source=raw/alpha=0.65/mode=arithmetic"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Madhur Day",
+    "index": 270,
+    "candidate": "v6/causal_history/mechanism=recent_sutta_30/strength=1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Madhur Night",
+    "index": 56,
+    "candidate": "v6/bernoulli_digits/source=blend/strength=-0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Main Bazar",
+    "index": 248,
+    "candidate": "v6/causal_history/mechanism=recent_digits_30/strength=-1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Milan Day",
+    "index": 336,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Milan Night",
+    "index": 257,
+    "candidate": "v6/causal_history/mechanism=recent_digits_90/strength=0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Rajdhani Day",
+    "index": 249,
+    "candidate": "v6/causal_history/mechanism=recent_digits_30/strength=-0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Rajdhani Night",
+    "index": 243,
+    "candidate": "v6/causal_history/mechanism=recent_digits_7/strength=-0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Sridevi",
+    "index": 232,
+    "candidate": "v6/causal_history/mechanism=last_digits/strength=0.25"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Sridevi Night",
+    "index": 419,
+    "candidate": "v5/method_pooled_dirichlet_01"
+  },
+  {
+    "channel": "open",
+    "metric": "avoid2",
+    "market": "Time Bazar",
+    "index": 307,
+    "candidate": "v6/causal_history/mechanism=overdue_sutta_30/strength=2.0"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "ALL",
+    "index": 385,
+    "candidate": "v6/probability_mixture/source=uniform_sutta/alpha=0.75"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Kalyan",
+    "index": 280,
+    "candidate": "v6/causal_history/mechanism=overdue_digits_7/strength=0.25"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Kalyan Night",
+    "index": 320,
+    "candidate": "v6/digit_symmetry/transform=complement9/alpha=0.25"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Madhur Day",
+    "index": 663,
+    "candidate": "antidigit_trend/window=90/strength=0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Madhur Night",
+    "index": 267,
+    "candidate": "v6/causal_history/mechanism=recent_sutta_30/strength=-0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Main Bazar",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Milan Day",
+    "index": 281,
+    "candidate": "v6/causal_history/mechanism=overdue_digits_7/strength=0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Milan Night",
+    "index": 273,
+    "candidate": "v6/causal_history/mechanism=recent_sutta_90/strength=-0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Sridevi",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Sridevi Night",
+    "index": 515,
+    "candidate": "v5/method_online_logloss_07"
+  },
+  {
+    "channel": "open",
+    "metric": "panel10",
+    "market": "Time Bazar",
+    "index": 56,
+    "candidate": "v6/bernoulli_digits/source=blend/strength=-0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "ALL",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Kalyan",
+    "index": 191,
+    "candidate": "v6/joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=1.0/avoid_penalty=1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Kalyan Night",
+    "index": 266,
+    "candidate": "v6/causal_history/mechanism=recent_sutta_30/strength=-1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Madhur Day",
+    "index": 101,
+    "candidate": "v6/joint_gates/sutta=native/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Madhur Night",
+    "index": 503,
+    "candidate": "v5/method_digit_bernoulli_05"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Main Bazar",
+    "index": 43,
+    "candidate": "v6/bernoulli_digits/source=appearance/strength=-1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Milan Day",
+    "index": 555,
+    "candidate": "empirical_pair_absence/history=pooled/prior_mass=2.0/mode=winning_pair_soft"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Milan Night",
+    "index": 266,
+    "candidate": "v6/causal_history/mechanism=recent_sutta_30/strength=-1.0"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Rajdhani Day",
+    "index": 384,
+    "candidate": "v6/probability_mixture/source=uniform_sutta/alpha=0.5"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Rajdhani Night",
+    "index": 335,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=0.25"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Sridevi",
+    "index": 486,
+    "candidate": "v5/method_sutta_hierarchy_08"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Sridevi Night",
+    "index": 507,
+    "candidate": "v5/method_digit_bernoulli_09"
+  },
+  {
+    "channel": "open",
+    "metric": "sp30",
+    "market": "Time Bazar",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "ALL",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Kalyan",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Kalyan Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Madhur Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Madhur Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Main Bazar",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Milan Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Milan Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Sridevi",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Sridevi Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "open",
+    "metric": "dp20",
+    "market": "Time Bazar",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "ALL",
+    "index": 625,
+    "candidate": "empirical_pair_absence/history=last30/prior_mass=100.0/mode=independent"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Kalyan",
+    "index": 67,
+    "candidate": "v6/avoid2_gate/source=native_avoid/penalty=12.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Kalyan Night",
+    "index": 585,
+    "candidate": "empirical_pair_absence/history=local/prior_mass=100.0/mode=independent"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Madhur Day",
+    "index": 317,
+    "candidate": "v6/digit_symmetry/transform=mirror5/alpha=0.75"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Madhur Night",
+    "index": 120,
+    "candidate": "v6/joint_gates/sutta=native/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=3.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Main Bazar",
+    "index": 234,
+    "candidate": "v6/causal_history/mechanism=last_digits/strength=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Milan Day",
+    "index": 621,
+    "candidate": "empirical_pair_absence/history=last30/prior_mass=30.0/mode=independent"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Milan Night",
+    "index": 411,
+    "candidate": "v6/temperature_control/temperature=0.4"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Rajdhani Day",
+    "index": 553,
+    "candidate": "empirical_pair_absence/history=pooled/prior_mass=2.0/mode=independent"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Rajdhani Night",
+    "index": 67,
+    "candidate": "v6/avoid2_gate/source=native_avoid/penalty=12.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Sridevi",
+    "index": 566,
+    "candidate": "empirical_pair_absence/history=pooled/prior_mass=100.0/mode=likelihood_tilt"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Sridevi Night",
+    "index": 359,
+    "candidate": "v6/joint_ipf/sutta=conditional/digits=present/damping=0.75/passes=1"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "top5",
+    "market": "Time Bazar",
+    "index": 575,
+    "candidate": "empirical_pair_absence/history=local/prior_mass=2.0/mode=winning_pair_soft"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "ALL",
+    "index": 338,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Kalyan",
+    "index": 324,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=0.1"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Kalyan Night",
+    "index": 528,
+    "candidate": "native_sutta_full/source=dp20/target=conditional"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Madhur Day",
+    "index": 595,
+    "candidate": "empirical_pair_absence/history=last7/prior_mass=2.0/mode=winning_pair_soft"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Madhur Night",
+    "index": 297,
+    "candidate": "v6/causal_history/mechanism=overdue_sutta_7/strength=-0.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Main Bazar",
+    "index": 231,
+    "candidate": "v6/causal_history/mechanism=last_digits/strength=-0.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Milan Day",
+    "index": 326,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=0.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Milan Night",
+    "index": 602,
+    "candidate": "empirical_pair_absence/history=last7/prior_mass=30.0/mode=likelihood_tilt"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Rajdhani Day",
+    "index": 241,
+    "candidate": "v6/causal_history/mechanism=last_sutta/strength=2.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Rajdhani Night",
+    "index": 235,
+    "candidate": "v6/causal_history/mechanism=last_digits/strength=2.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Sridevi",
+    "index": 248,
+    "candidate": "v6/causal_history/mechanism=recent_digits_30/strength=-1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Sridevi Night",
+    "index": 417,
+    "candidate": "v6/temperature_control/temperature=1.6"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "avoid2",
+    "market": "Time Bazar",
+    "index": 459,
+    "candidate": "v5/method_weekday_01"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "ALL",
+    "index": 469,
+    "candidate": "v5/method_panel_transition_01"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Kalyan",
+    "index": 239,
+    "candidate": "v6/causal_history/mechanism=last_sutta/strength=0.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Kalyan Night",
+    "index": 467,
+    "candidate": "v5/method_weekday_09"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Madhur Day",
+    "index": 35,
+    "candidate": "v6/sutta_marginal/source=conditional/strength=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Madhur Night",
+    "index": 332,
+    "candidate": "v6/digit_symmetry/transform=rotate3/alpha=0.75"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Main Bazar",
+    "index": 338,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Milan Day",
+    "index": 554,
+    "candidate": "empirical_pair_absence/history=pooled/prior_mass=2.0/mode=likelihood_tilt"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Milan Night",
+    "index": 318,
+    "candidate": "v6/digit_symmetry/transform=mirror5/alpha=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Rajdhani Day",
+    "index": 234,
+    "candidate": "v6/causal_history/mechanism=last_digits/strength=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Rajdhani Night",
+    "index": 469,
+    "candidate": "v5/method_panel_transition_01"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Sridevi",
+    "index": 307,
+    "candidate": "v6/causal_history/mechanism=overdue_sutta_30/strength=2.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Sridevi Night",
+    "index": 255,
+    "candidate": "v6/causal_history/mechanism=recent_digits_90/strength=-0.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "panel10",
+    "market": "Time Bazar",
+    "index": 281,
+    "candidate": "v6/causal_history/mechanism=overdue_digits_7/strength=0.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "ALL",
+    "index": 569,
+    "candidate": "empirical_pair_absence/history=pooled/prior_mass=300.0/mode=independent"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Kalyan",
+    "index": 168,
+    "candidate": "v6/joint_gates/sutta=conditional/avoid=panel_avoid/restriction=hard"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Kalyan Night",
+    "index": 338,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Madhur Day",
+    "index": 273,
+    "candidate": "v6/causal_history/mechanism=recent_sutta_90/strength=-0.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Madhur Night",
+    "index": 234,
+    "candidate": "v6/causal_history/mechanism=last_digits/strength=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Main Bazar",
+    "index": 337,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=0.75"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Milan Day",
+    "index": 554,
+    "candidate": "empirical_pair_absence/history=pooled/prior_mass=2.0/mode=likelihood_tilt"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Milan Night",
+    "index": 593,
+    "candidate": "empirical_pair_absence/history=last7/prior_mass=2.0/mode=independent"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Rajdhani Day",
+    "index": 593,
+    "candidate": "empirical_pair_absence/history=last7/prior_mass=2.0/mode=independent"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Rajdhani Night",
+    "index": 447,
+    "candidate": "v5/method_recent30_09"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Sridevi",
+    "index": 208,
+    "candidate": "v6/joint_likelihood/sutta=native/digits=present/strength=1.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Sridevi Night",
+    "index": 554,
+    "candidate": "empirical_pair_absence/history=pooled/prior_mass=2.0/mode=likelihood_tilt"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "sp30",
+    "market": "Time Bazar",
+    "index": 270,
+    "candidate": "v6/causal_history/mechanism=recent_sutta_30/strength=1.0"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "ALL",
+    "index": 326,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=0.5"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Kalyan",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Kalyan Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Madhur Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Madhur Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Main Bazar",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Milan Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Milan Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Sridevi",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Sridevi Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_pre",
+    "metric": "dp20",
+    "market": "Time Bazar",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "ALL",
+    "index": 625,
+    "candidate": "empirical_pair_absence/history=last30/prior_mass=100.0/mode=independent"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Kalyan",
+    "index": 499,
+    "candidate": "v5/method_digit_bernoulli_01"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Kalyan Night",
+    "index": 585,
+    "candidate": "empirical_pair_absence/history=local/prior_mass=100.0/mode=independent"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Madhur Day",
+    "index": 254,
+    "candidate": "v6/causal_history/mechanism=recent_digits_90/strength=-1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Madhur Night",
+    "index": 438,
+    "candidate": "v5/method_market_hierarchical_10"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Main Bazar",
+    "index": 656,
+    "candidate": "antidigit_trend/window=7/strength=1.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Milan Day",
+    "index": 335,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=0.25"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Milan Night",
+    "index": 249,
+    "candidate": "v6/causal_history/mechanism=recent_digits_30/strength=-0.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Rajdhani Day",
+    "index": 338,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Rajdhani Night",
+    "index": 396,
+    "candidate": "v6/probability_mixture/source=bernoulli/alpha=0.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Sridevi",
+    "index": 60,
+    "candidate": "v6/bernoulli_digits/source=blend/strength=2.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Sridevi Night",
+    "index": 85,
+    "candidate": "v6/top5_sutta_gate/source=sutta_conditional/penalty=0.15"
+  },
+  {
+    "channel": "close_known",
+    "metric": "top5",
+    "market": "Time Bazar",
+    "index": 655,
+    "candidate": "antidigit_trend/window=7/strength=0.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "ALL",
+    "index": 305,
+    "candidate": "v6/causal_history/mechanism=overdue_sutta_30/strength=0.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Kalyan",
+    "index": 336,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=0.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Kalyan Night",
+    "index": 89,
+    "candidate": "v6/top5_sutta_gate/source=sutta_conditional/penalty=1.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Madhur Day",
+    "index": 595,
+    "candidate": "empirical_pair_absence/history=last7/prior_mass=2.0/mode=winning_pair_soft"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Madhur Night",
+    "index": 392,
+    "candidate": "v6/probability_mixture/source=native_sutta/alpha=1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Main Bazar",
+    "index": 236,
+    "candidate": "v6/causal_history/mechanism=last_sutta/strength=-1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Milan Day",
+    "index": 669,
+    "candidate": "sp_conditional_shrinkage/source=raw/alpha=0.6"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Milan Night",
+    "index": 249,
+    "candidate": "v6/causal_history/mechanism=recent_digits_30/strength=-0.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Rajdhani Day",
+    "index": 328,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Rajdhani Night",
+    "index": 234,
+    "candidate": "v6/causal_history/mechanism=last_digits/strength=1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Sridevi",
+    "index": 327,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=0.75"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Sridevi Night",
+    "index": 335,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=0.25"
+  },
+  {
+    "channel": "close_known",
+    "metric": "avoid2",
+    "market": "Time Bazar",
+    "index": 299,
+    "candidate": "v6/causal_history/mechanism=overdue_sutta_7/strength=0.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "ALL",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Kalyan",
+    "index": 49,
+    "candidate": "v6/bernoulli_digits/source=present/strength=-1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Kalyan Night",
+    "index": 338,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Madhur Day",
+    "index": 357,
+    "candidate": "v6/joint_ipf/sutta=conditional/digits=present/damping=0.35/passes=1"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Madhur Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Main Bazar",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Milan Day",
+    "index": 554,
+    "candidate": "empirical_pair_absence/history=pooled/prior_mass=2.0/mode=likelihood_tilt"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Milan Night",
+    "index": 249,
+    "candidate": "v6/causal_history/mechanism=recent_digits_30/strength=-0.5"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Rajdhani Day",
+    "index": 671,
+    "candidate": "sp_conditional_shrinkage/source=raw/alpha=1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Rajdhani Night",
+    "index": 469,
+    "candidate": "v5/method_panel_transition_01"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Sridevi",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Sridevi Night",
+    "index": 135,
+    "candidate": "v6/joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35"
+  },
+  {
+    "channel": "close_known",
+    "metric": "panel10",
+    "market": "Time Bazar",
+    "index": 135,
+    "candidate": "v6/joint_gates/sutta=conditional/avoid=native_avoid/sutta_penalty=0.35/avoid_penalty=0.35"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "ALL",
+    "index": 324,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=0.1"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Kalyan",
+    "index": 345,
+    "candidate": "v6/joint_ipf/sutta=native/digits=present/damping=0.35/passes=1"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Kalyan Night",
+    "index": 219,
+    "candidate": "v6/joint_likelihood/sutta=conditional/digits=blend/strength=0.75"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Madhur Day",
+    "index": 369,
+    "candidate": "v6/joint_ipf/sutta=panel/digits=present/damping=0.35/passes=1"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Madhur Night",
+    "index": 338,
+    "candidate": "v6/digit_symmetry/transform=multiply3/alpha=1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Main Bazar",
+    "index": 324,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=0.1"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Milan Day",
+    "index": 186,
+    "candidate": "v6/joint_gates/sutta=panel/avoid=panel_avoid/sutta_penalty=0.35/avoid_penalty=0.35"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Milan Night",
+    "index": 328,
+    "candidate": "v6/digit_symmetry/transform=rotate1/alpha=1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Rajdhani Day",
+    "index": 278,
+    "candidate": "v6/causal_history/mechanism=overdue_digits_7/strength=-1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Rajdhani Night",
+    "index": 278,
+    "candidate": "v6/causal_history/mechanism=overdue_digits_7/strength=-1.0"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Sridevi",
+    "index": 203,
+    "candidate": "v6/joint_likelihood/sutta=native/digits=appearance/strength=0.25"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Sridevi Night",
+    "index": 69,
+    "candidate": "v6/avoid2_gate/source=panel_avoid/penalty=0.15"
+  },
+  {
+    "channel": "close_known",
+    "metric": "sp30",
+    "market": "Time Bazar",
+    "index": 85,
+    "candidate": "v6/top5_sutta_gate/source=sutta_conditional/penalty=0.15"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "ALL",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Kalyan",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Kalyan Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Madhur Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Madhur Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Main Bazar",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Milan Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Milan Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Rajdhani Day",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Rajdhani Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Sridevi",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Sridevi Night",
+    "index": 0,
+    "candidate": "production"
+  },
+  {
+    "channel": "close_known",
+    "metric": "dp20",
+    "market": "Time Bazar",
+    "index": 0,
+    "candidate": "production"
+  }
+]
