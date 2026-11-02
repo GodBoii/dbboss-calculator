@@ -1,0 +1,15 @@
+{
+  "study": "v7-component-first-then-fusion",
+  "metrics": ["top5", "avoid2", "panel10", "sp30", "dp20"],
+  "jodi": "Exactly25 Cartesian pairs of independently predicted Open5 x Close-before-Open5. Actual Open never conditions preopen Jodi predictions. KnownClose not included.",
+  "scope": "12 markets individually, pooled evaluations, Open/Closepre/Closeknown regimes separately",
+  "component_selection": "TrainJul4-Aug16,valAug17-Sep7. Min15/8 eligible events, trainnonreg,strictvalgain,tiespreferproduction thentrainhits thenindex. Percomponent permarket. Freeze beforeweightfitting.",
+  "jodi_specialists": "Top8 nonregressing Top5 experts plusproduction eachside,exhaustivepairjointsearch onearlytrainval withmarginalguards. Jodipreset is separate from independently selected Top5 specialists.",
+  "weight_selection": "FitSep8-30,valOct1-15. Everycandidate must nonregress ALL5components against BOTHproduction and independent specialists onBOTHfitblocks. Atleastonevalidationmetric strictgain. Lexicographic panel10,avoid2,top5,sp30,dp20. Elseproductionfallback. No averaging conditional rates.",
+  "jodi_weights": "Top12 allcomponentguarded weightcandidates eachside plusproduction, evaluatedpairwise. Bothsides allcomponentguards,trainJodi nonreg,valJodi strictgain vsproductionANDspecialists. Elseproductionfallback.",
+  "audit": {"late_reused": ["2026-10-16", "2026-10-22"], "november_reused": ["2026-10-23", "2026-11-01"]},
+  "rank_ties": "Roundranking scores12decimal places beforestable sorting. Exact5Sutta,2distinctavoid,10panel,30SP,20DP budgets. SP/DP denominatorsconditiononactualkind.",
+  "limitations": ["All dates have already been examined, no fresh confirmation", "Frozen upstream models retain historical fitting bias", "Addedcounts use sparse replay and omit5raw-only context records", "No guarantee all outputs improve", "No finite search covers every possible formula"],
+  "promotion": "Researchonly unless durable independently confirmedall-output improvement. Pooledtotalhits acrossdifferentdenominators are not overallaccuracy.",
+  "sources": ["https://scikit-learn.org/stable/common_pitfalls.html", "https://otexts.com/fpp3/tscv.html", "https://otexts.com/fpp3/combinations.html"]
+}
