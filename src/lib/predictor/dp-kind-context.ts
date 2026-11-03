@@ -212,6 +212,9 @@ function computeDpKindContext(
   if (!NIGHT_MARKET_NAMES.has(marketName)) {
     let prevNightOpenDpCount = 0;
     for (const nm of NIGHT_MARKET_NAMES) {
+      // Classification may include new markets; the fitted cross-market signal
+      // must continue to use only the original source set.
+      if (!HIGH_VOLUME_MARKETS.includes(nm)) continue;
       const nmRecs = allMarketsRecords[nm];
       if (!nmRecs || nmRecs.length === 0) continue;
       const lastNm = nmRecs[nmRecs.length - 1];
