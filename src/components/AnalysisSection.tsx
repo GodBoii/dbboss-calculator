@@ -28,6 +28,7 @@ import { BetCopyDesk } from "./analysis/BetCopyDesk"
 import { ConfidenceBadge } from "./analysis/AnalysisWidgets"
 import { getVerifiedDpCalls } from "@/lib/verified-dp-call"
 import { loadAnalysisHistory } from "@/lib/analysis-history"
+import { DAY_MARKETS, NIGHT_MARKETS, POOLED_ANALYSIS_MARKETS, getAnalysisMarketIssue } from "@/lib/analysis-markets"
 import { indiaHour } from "@/lib/india-time"
 import { useAnalysisMetrics } from "@/hooks/useAnalysisMetrics"
 import { SUTTA_MODEL_VERSION } from "@/lib/app-version"
@@ -35,9 +36,6 @@ import { SUTTA_PREDICTION_COUNT } from "@/lib/prediction-contract"
 import { useCombinedAnalysis } from "@/hooks/useCombinedAnalysis"
 import type { AnalysisVersion } from "@/lib/combined-prediction"
 import { AnalysisVersionSelector } from "./analysis/AnalysisVersionSelector"
-
-const DAY_MARKETS   = ['Sridevi', 'Time Bazar', 'Madhur Day', 'Milan Day', 'Rajdhani Day', 'Kalyan']
-const NIGHT_MARKETS = ['Sridevi Night', 'Kalyan Night', 'Madhur Night', 'Milan Night', 'Rajdhani Night', 'Main Bazar']
 
 type LoadingState = "idle" | "fetching" | "analyzing" | "done" | "error"
 
@@ -225,7 +223,7 @@ export default function AnalysisSection() {
 
       try {
         setLoadingMessage("Refreshing market histories…")
-        const snapshot = await loadAnalysisHistory(forceRefresh, controller.signal)
+        const snapshot = await loadAnalysisHistory(forceRefresh, controller.signal, selectedMarket)
         if (requestRef.current !== controller) return
         const allMarketsRecords = snapshot.histories
         const records = allMarketsRecords[selectedMarket]
@@ -282,6 +280,7 @@ export default function AnalysisSection() {
     requestRef.current?.abort()
     haptic()
     setSession(s)
+    setHistoryNotice("")
     setSelectedMarket(s === "day" ? "Kalyan" : "Main Bazar")
     setResult(null)
     setCachedRecords([])
@@ -293,6 +292,8 @@ export default function AnalysisSection() {
 
   const activeMarkets = session === "day" ? DAY_MARKETS : NIGHT_MARKETS
   const isNight = session === "night"
+  const marketIssue = getAnalysisMarketIssue(selectedMarket)
+  const usesSharedDefaults = !POOLED_ANALYSIS_MARKETS.includes(selectedMarket)
   const openSuttaRanking = useMemo(
     () => analysisVersion === "v2" ? combined?.open.suttas ?? [] : result
       ? buildOpenSuttaRanking(
@@ -425,6 +426,7 @@ export default function AnalysisSection() {
                 haptic()
                 requestRef.current?.abort()
                 setSelectedMarket(market)
+                setHistoryNotice("")
                 setResult(null)
                           setCachedRecords([])
                 setJodiResult(null)
@@ -439,6 +441,12 @@ export default function AnalysisSection() {
         </div>
       </div>
 
+      {marketIssue && (
+        <div className="glass-panel" id="market-history-issue" role="status">
+          <h3 className="section-title">History verification pending</h3>
+          <p>{marketIssue}</p>
+        </div>
+      )}
 
       {/* ── Action Buttons ────────────────────────────────────────────────── */}
       <div className="action-row">
@@ -446,7 +454,8 @@ export default function AnalysisSection() {
           id="btn-analyze"
           className="analyze-btn"
           onClick={() => fetchAndAnalyze(false)}
-          disabled={loadingState === "fetching" || loadingState === "analyzing"}
+          disabled={Boolean(marketIssue) || loadingState === "fetching" || loadingState === "analyzing"}
+          aria-describedby={marketIssue ? "market-history-issue" : undefined}
         >
           {loadingState === "fetching" || loadingState === "analyzing" ? (
             <span className="btn-loading">
@@ -518,7 +527,7 @@ export default function AnalysisSection() {
             <div className="status-divider" />
             <div className="status-item">
               <span className="status-label">Volume</span>
-              <span className="status-value volume-high">{result.volumeTier}</span>
+              <span className="status-value volume-high">{usesSharedDefaults ? "Unrated" : result.volumeTier}</span>
             </div>
             <div className="status-divider" />
             <div className="status-item">
@@ -949,7 +958,7 @@ export default function AnalysisSection() {
       )}
 
           {/* ── Empty State ──────────────────────────────────────────────────── */}
-      {loadingState === "idle" && (
+      {loadingState === "idle" && !marketIssue && (
         <div className="empty-state glass-panel">
           <span className="empty-icon">🔮</span>
           <h3 className="empty-title">Select a market above</h3>
