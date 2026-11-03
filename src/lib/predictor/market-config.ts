@@ -15,6 +15,7 @@ export const HIGH_VOLUME_MARKETS = [
 
 // Night markets set — used for weekday and cross-session DP signals
 const NIGHT_MARKET_NAMES = new Set([
+  "Supreme Night",
   "Sridevi Night",
   "Kalyan Night",
   "Madhur Night",
