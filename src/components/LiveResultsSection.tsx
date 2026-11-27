@@ -167,9 +167,8 @@ export default function LiveResultsSection() {
     <section className="live-page" id="live-results" aria-labelledby="live-results-title">
       <div className="live-heading">
         <div>
-          <span className="live-eyebrow">{formattedDate} · IST</span>
-          <h1 id="live-results-title">Market Results</h1>
-          <p>Verified open and close results for your 12 markets.</p>
+          <h1 id="live-results-title">Market results</h1>
+          {data && <p className="live-date">{formattedDate}</p>}
         </div>
         <button className="live-refresh" onClick={() => void refresh(true)} disabled={loading || refreshing} aria-label="Scrape and refresh results">
           <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 6V2m0 0h-4m4 0-3 3a6 6 0 1 0 1.2 8.4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
