@@ -151,7 +151,7 @@ export default function AnalysisSection() {
     defaultSession === "night" ? "Main Bazar" : "Kalyan"
   )
   const [loadingState, setLoadingState] = useState<LoadingState>("idle")
-  const [loadingMessage, setLoadingMessage] = useState("")
+  const [marketPickerExpanded, setMarketPickerExpanded] = useState(true)
   const [baseResult, setResult] = useState<PredictionResult | null>(null)
   const [analysisVersion, setAnalysisVersion] = useState<AnalysisVersion>("v1")
   const [errorMsg, setErrorMsg] = useState("")
@@ -222,14 +222,12 @@ export default function AnalysisSection() {
       setOpenPanelInput("")
 
       try {
-        setLoadingMessage("Refreshing market histories…")
         const snapshot = await loadAnalysisHistory(forceRefresh, controller.signal, selectedMarket)
         if (requestRef.current !== controller) return
         const allMarketsRecords = snapshot.histories
         const records = allMarketsRecords[selectedMarket]
         setHistoryNotice(snapshot.notice)
         setLoadingState("analyzing")
-        setLoadingMessage("Generating predictions…")
         cachedRecordsRef.current = records
         allMarketsRecordsRef.current = allMarketsRecords
         setCachedRecords(records)
@@ -238,6 +236,7 @@ export default function AnalysisSection() {
         if (!prediction) throw new Error("Not enough data to generate predictions.")
 
         setResult(prediction)
+        setMarketPickerExpanded(false)
         setLoadingState("done")
       } catch (err) {
         if (controller.signal.aborted || requestRef.current !== controller) return
@@ -292,6 +291,7 @@ export default function AnalysisSection() {
 
   const activeMarkets = session === "day" ? DAY_MARKETS : NIGHT_MARKETS
   const isNight = session === "night"
+  const isBusy = loadingState === "fetching" || loadingState === "analyzing"
   const marketIssue = getAnalysisMarketIssue(selectedMarket)
   const usesSharedDefaults = !POOLED_ANALYSIS_MARKETS.includes(selectedMarket)
   const openSuttaRanking = useMemo(
@@ -357,155 +357,136 @@ export default function AnalysisSection() {
     label: string,
     ranking: typeof openSuttaRanking,
   ) => (
-    <div className="sutta-signal-panel">
-      <div className="sutta-signal-panel-head">
-        <span className="sutta-signal-panel-title">{label}</span>
-        <span className="sutta-signal-panel-subtitle">highest model score first</span>
-      </div>
-      <div className="sutta-signal-list">
-        {ranking.map((prediction) => {
-          const width = Math.max(8, Math.min(100, prediction.score))
-          return (
-            <div key={`${label}-${prediction.sutta}`} className="sutta-signal-row">
-              <span className="sutta-signal-rank">#{prediction.rank}</span>
-              <span className="sutta-signal-digit">{prediction.sutta}</span>
-              <div className="sutta-signal-bar-track">
-                <div
-                  className="sutta-signal-bar-fill"
-                  style={{ width: `${width}%` }}
-                />
-              </div>
-              <span className="sutta-signal-model">
-                Score {prediction.score.toFixed(1)}
-              </span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
+    <ol className="sutta-ranking" role="list" aria-label={label}>
+      {ranking.map((prediction) => (
+        <li key={prediction.sutta}>
+          <span className="sr-only">Rank {prediction.rank}, digit </span>
+          <strong>{prediction.sutta}</strong>
+          <span className="sutta-ranking-score">
+            <span className="sr-only">Score </span>{prediction.score.toFixed(1)}
+          </span>
+        </li>
+      ))}
+    </ol>
   )
 
   return (
     <section className="analysis-section">
-      {/* ── Market Selector ─────────────────────────────────────────── */}
-      <div className="glass-panel">
-        <div className="section-header">
-          <span className="section-icon">🎯</span>
-          <div>
-            <h2 className="section-title">Select Market</h2>
-            <p className="section-subtitle">Choose session, then pick your market</p>
-          </div>
-        </div>
-
-        <AnalysisVersionSelector version={analysisVersion} onChange={(version) => { setCopyingKey(null); setAnalysisVersion(version) }} disabled={loadingState === "fetching" || loadingState === "analyzing"} />
-
-        {/* Session Toggle */}
-        <div className="session-toggle">
-          <button
-            className={`session-toggle-btn session-toggle-btn--day ${!isNight ? "session-toggle-btn--active" : ""}`}
-            onClick={() => switchSession("day")}
-          >
-            ☀️ Day
-          </button>
-          <button
-            className={`session-toggle-btn session-toggle-btn--night ${isNight ? "session-toggle-btn--active" : ""}`}
-            onClick={() => switchSession("night")}
-          >
-            🌙 Night
-          </button>
-        </div>
-
-        {/* Filtered Market List */}
-        <div className="market-grid">
-          {activeMarkets.map((market) => (
-            <button
-              key={market}
-              id={`market-${market.replace(/\s+/g, "-").toLowerCase()}`}
-              className={`market-btn ${isNight ? "market-btn-night" : ""} ${selectedMarket === market ? "active" : ""}`}
-              onClick={() => {
-                haptic()
-                requestRef.current?.abort()
-                setSelectedMarket(market)
-                setHistoryNotice("")
-                setResult(null)
-                          setCachedRecords([])
-                setJodiResult(null)
-                setActiveTab("picks")
-                setPicksSubTab("open")
-                setLoadingState("idle")
-              }}
-            >
-              {market}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {marketIssue && (
-        <div className="glass-panel" id="market-history-issue" role="status">
-          <h3 className="section-title">History verification pending</h3>
-          <p>{marketIssue}</p>
-        </div>
-      )}
-
-      {/* ── Action Buttons ────────────────────────────────────────────────── */}
-      <div className="action-row">
-        <button
-          id="btn-analyze"
-          className="analyze-btn"
-          onClick={() => fetchAndAnalyze(false)}
-          disabled={Boolean(marketIssue) || loadingState === "fetching" || loadingState === "analyzing"}
-          aria-describedby={marketIssue ? "market-history-issue" : undefined}
-        >
-          {loadingState === "fetching" || loadingState === "analyzing" ? (
-            <span className="btn-loading">
-              <span className="spinner" />
-              Analyzing…
-            </span>
-          ) : (
-            <>🔮 Analyze {selectedMarket}</>
+      <div className="glass-panel analysis-market-panel">
+        <div className="analysis-market-heading">
+          <h2 className="section-title">{marketPickerExpanded ? "Market" : selectedMarket}</h2>
+          {marketPickerExpanded && (
+            <div className="session-toggle" role="group" aria-label="Market session">
+              <button className="session-toggle-btn" aria-pressed={!isNight} onClick={() => switchSession("day")}>
+                Day
+              </button>
+              <button className="session-toggle-btn" aria-pressed={isNight} onClick={() => switchSession("night")}>
+                Night
+              </button>
+            </div>
           )}
-        </button>
+          {loadingState !== "idle" && (
+            <button
+              type="button"
+              className="analysis-market-change"
+              aria-expanded={marketPickerExpanded}
+              aria-controls="analysis-market-options"
+              onClick={() => setMarketPickerExpanded((expanded) => !expanded)}
+            >
+              {marketPickerExpanded ? "Hide markets" : "Change market"}
+            </button>
+          )}
+        </div>
 
-        {result && (
-          <button
-            id="btn-refresh"
-            className="refresh-btn"
-            onClick={() => fetchAndAnalyze(true)}
-            disabled={loadingState === "fetching" || loadingState === "analyzing"}
-          >
-            🔄 Fresh Data
-          </button>
+        <div id="analysis-market-options" hidden={!marketPickerExpanded}>
+          <div className="market-grid" role="group" aria-label="Market">
+            {activeMarkets.map((market) => (
+              <button
+                key={market}
+                id={`market-${market.replace(/\s+/g, "-").toLowerCase()}`}
+                className="market-btn"
+                aria-pressed={selectedMarket === market}
+                onClick={() => {
+                  haptic()
+                  requestRef.current?.abort()
+                  setSelectedMarket(market)
+                  setHistoryNotice("")
+                  setResult(null)
+                  setCachedRecords([])
+                  setJodiResult(null)
+                  setActiveTab("picks")
+                  setPicksSubTab("open")
+                  setLoadingState("idle")
+                }}
+              >
+                {market}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {marketIssue && (
+          <div className="analysis-market-issue" id="market-history-issue" role="status">
+            {marketIssue}
+          </div>
         )}
+
+        <div className="action-row">
+          <button
+            id="btn-analyze"
+            className="analyze-btn"
+            onClick={() => fetchAndAnalyze(false)}
+            disabled={Boolean(marketIssue) || isBusy}
+            aria-describedby={marketIssue ? "market-history-issue" : undefined}
+          >
+            {isBusy ? (
+              <span className="btn-loading">
+                <span className="spinner" />
+                Analyzing…
+              </span>
+            ) : (
+              marketPickerExpanded ? `Analyze ${selectedMarket}` : "Analyze again"
+            )}
+          </button>
+
+          {result && (
+            <button
+              id="btn-refresh"
+              className="refresh-btn"
+              onClick={() => fetchAndAnalyze(true)}
+              disabled={isBusy}
+            >
+              Refresh
+            </button>
+          )}
+        </div>
+
+        <details className="analysis-disclosure analysis-settings">
+          <summary>Analysis model <span>{analysisVersion === "v1" ? "V1" : "V2 · Experimental"}</span></summary>
+          <AnalysisVersionSelector version={analysisVersion} onChange={(version) => { setCopyingKey(null); setAnalysisVersion(version) }} disabled={isBusy} />
+        </details>
       </div>
 
-      {/* ── Loading State ─────────────────────────────────────────────────── */}
-      {(loadingState === "fetching" || loadingState === "analyzing") && (
-        <div className="glass-panel loading-panel">
-          <div className="loading-steps">
-            <div className={`loading-step ${loadingState === "fetching" ? "active" : "done"}`}>
-              <span className="step-icon">{loadingState === "analyzing" ? "✓" : "⏳"}</span>
-              <span>Fetching panel chart data</span>
-            </div>
-            <div className={`loading-step ${loadingState === "analyzing" ? "active" : ""}`}>
-              <span className="step-icon">{loadingState === "analyzing" ? "⏳" : "○"}</span>
-              <span>Running Game-Theory Engine</span>
-            </div>
-          </div>
-          <p className="loading-msg">{loadingMessage}</p>
-        </div>
+      {isBusy && (
+        <p className="analysis-status" role="status">
+          {loadingState === "fetching" ? "Loading market history…" : "Preparing predictions…"}
+        </p>
       )}
 
-      {historyNotice && <p role="status">{historyNotice}</p>}
-      {analysisVersion === "v1" && v1Metrics.error && <p role="status">{v1Metrics.error}</p>}
+      {historyNotice && (
+        <details className="analysis-disclosure analysis-history">
+          <summary><span role="status">Market history notice</span></summary>
+          <p>{historyNotice}</p>
+        </details>
+      )}
+
       {/* ── Error State ──────────────────────────────────────────────────── */}
       {loadingState === "error" && (
-        <div className="glass-panel error-panel">
-          <p className="error-icon">⚠️</p>
-          <p className="error-title">Analysis Failed</p>
+        <div className="glass-panel error-panel" role="alert">
+          <p className="error-title">Couldn’t run analysis</p>
           <p className="error-msg">{errorMsg}</p>
           <button className="retry-btn" onClick={() => fetchAndAnalyze(false)}>
-            Try Again
+            Try again
           </button>
         </div>
       )}
@@ -513,46 +494,11 @@ export default function AnalysisSection() {
       {/* ── Results ──────────────────────────────────────────────────────── */}
       {analysisVersion === "v2" && baseResult && loadingState === "done" && !combined && (
         <div className="glass-panel" role="status">
-          {combinedState.error ?? (combinedState.analysis?.status === "unavailable" ? combinedState.analysis.reason : "Combining V2 predictions…")}
+          {combinedState.error ?? (combinedState.analysis?.status === "unavailable" ? combinedState.analysis.reason : "Preparing V2 predictions…")}
         </div>
       )}
       {result && loadingState === "done" && (analysisVersion === "v1" || combined) && (
         <>
-          {/* ── Status Bar ───────────────────────────────────────────────── */}
-          <div className="status-bar glass-panel">
-            <div className="status-item">
-              <span className="status-label">2yr Draws</span>
-              <span className="status-value">{result.totalDraws.toLocaleString()}</span>
-            </div>
-            <div className="status-divider" />
-            <div className="status-item">
-              <span className="status-label">Volume</span>
-              <span className="status-value volume-high">{usesSharedDefaults ? "Unrated" : result.volumeTier}</span>
-            </div>
-            <div className="status-divider" />
-            <div className="status-item">
-              <span className="status-label">Mode</span>
-              <span className={`status-value ${getTemporalBadgeColor(result.temporalMode)}`}>
-                {result.temporalMode}
-              </span>
-            </div>
-            <div className="status-divider" />
-            <div className="status-item">
-              <span className="status-label">Seq Rate</span>
-              <span className="status-value">{result.stats.sequenceRate.toFixed(2)}%</span>
-            </div>
-          </div>
-
-          {analysisVersion === "v1" && <div className="confidence-strip glass-panel">
-            <ConfidenceBadge label="Open" panelHits={backtestReport?.open.panelTop10} panelDraws={backtestReport?.open.n} liveSuttaAcc={suttaAccuracyReport?.open.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
-            <ConfidenceBadge label="Close" panelHits={backtestReport?.close.panelTop10} panelDraws={backtestReport?.close.n} panelLabel="Close after Open Top 10" liveSuttaAcc={displayedCloseAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
-            <ConfidenceBadge label="Jodi" panelHits={backtestReport?.jodi.panelTop10} panelDraws={backtestReport?.jodi.n} panelLabel="Close after Open Top 10" liveSuttaAcc={displayedJodiAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
-          </div>}
-          {analysisVersion === "v2" && combined && <p className="analysis-version-description" role="status">
-            V2 combined · Target {combined.targetDate}{combinedState.pending ? " · Updating V2…" : !combinedState.accuracy && !combinedState.error ? " · Backtesting V2…" : ""}
-            {combinedState.error ? ` · ${combinedState.error}` : ""}
-          </p>}
-
           {(verifiedDpCalls.open || verifiedDpCalls.close) && (
             <div className="confidence-strip kind-forecast-strip glass-panel">
               {verifiedDpCalls.open && (
@@ -580,7 +526,7 @@ export default function AnalysisSection() {
               <div className="honeypot-header">
                 <span className="honeypot-icon">🍯</span>
                 <div>
-                  <h3 className="honeypot-title">HONEY-POT TRAP ALERT</h3>
+                  <h3 className="honeypot-title">Sequence watch</h3>
                   <p className="honeypot-subtitle">
                     {result.recordsSinceLastSequence} draws without a sequence
                     (avg: {result.averageDroughtLength})
@@ -588,9 +534,7 @@ export default function AnalysisSection() {
                 </div>
               </div>
               <p className="honeypot-desc">
-                The drought has significantly exceeded the historical average. Per Game-Theory,
-                the operator is mathematically due to spring a sequence trap to retain addicted bettors.
-                Sequential panels have been given a <strong>BONUS score</strong> this session.
+                The model gives these sequence panels extra weight.
               </p>
               <div className="honeypot-picks">
                 {result.topPicks
@@ -603,144 +547,222 @@ export default function AnalysisSection() {
             </div>
           )}
 
-          {/* ── Intelligence Cards ───────────────────────────────────────── */}
-          <div className="intel-grid">
-            <div className="intel-compact-panel glass-panel">
-              <div className="intel-compact-header">
-                <h3 className="intel-card-title">Market Intelligence</h3>
-                <span className="intel-compact-count">3 signals</span>
-              </div>
-
-              <details className="intel-detail">
-                <summary className="intel-summary-row">
-                  <span className="intel-summary-title">
-                    <span className="intel-icon">📅</span>
-                    Temporal Signal
-                  </span>
-                  <span className={`intel-badge intel-badge--compact ${getTemporalBadgeColor(result.temporalMode)}`}>
-                    {result.temporalMode}
-                  </span>
-                </summary>
-                <p className="intel-desc intel-detail-copy">
-                  {result.temporalMode === "Payday" &&
-                    "Public has fresh salary. Operator drops popular 'honey-pot' sequences as bait to hook new players. Penalties REDUCED. Multiplier: 0.7×"}
-                  {result.temporalMode === "Month-End" &&
-                    "Public is broke. Operator squeezes remaining bettors with hard, unpopular numbers. Penalties INCREASED. Multiplier: 1.3×"}
-                  {result.temporalMode === "Normal" &&
-                    "Mid-month cycle. Standard liability-minimization mode. Multiplier: 1.0×"}
-                </p>
-              </details>
-
-              <details className="intel-detail">
-                <summary className="intel-summary-row">
-                  <span className="intel-summary-title">
-                    <span className="intel-icon">💧</span>
-                    Liquidity Flow
-                  </span>
-                  <span className={`intel-badge intel-badge--compact ${result.liquiditySourceHadPopular ? "intel-danger" : "intel-safe"}`}>
-                    {result.liquiditySourceMarket
-                      ? result.liquiditySourceHadPopular ? "Popular source" : "Hard source"
-                      : "No source"}
-                  </span>
-                </summary>
-                {result.liquiditySourceMarket ? (
-                  <>
-                    <div className="liquidity-flow liquidity-flow--compact">
-                      <span className="liquidity-source">{result.liquiditySourceMarket}</span>
-                      <span className="liquidity-arrow">→</span>
-                      <span className="liquidity-target">{result.market}</span>
-                    </div>
-                    <p className="intel-desc intel-detail-copy">
-                      {result.liquiditySourceHadPopular
-                        ? `${result.liquiditySourceMarket} just dropped a sequence. Public won big and will chase here. House will brutally wipe popular numbers. Multiplier: 1.5×`
-                        : `${result.liquiditySourceMarket} had a hard result. Public is cautious. House is slightly more relaxed. Multiplier: 0.9×`}
-                    </p>
-                  </>
-                ) : (
-                  <p className="intel-desc intel-detail-copy intel-muted">No source market tracked for {result.market}.</p>
-                )}
-              </details>
-
-              <details className="intel-detail">
-                <summary className="intel-summary-row intel-summary-row--drought">
-                  <span className="intel-summary-title">
-                    <span className="intel-icon">🌵</span>
-                    Sequence
-                  </span>
-                  <span className="drought-summary">
-                    <span className="drought-summary-text">{result.recordsSinceLastSequence} / avg {result.averageDroughtLength}</span>
-                    <span className="drought-bar-container drought-bar-container--compact">
-                      <span
-                        className="drought-bar-fill"
-                        style={{
-                          width: `${Math.min(100, (result.recordsSinceLastSequence / Math.max(result.averageDroughtLength * 2, 1)) * 100)}%`,
-                          background: result.honeyPotAlert
-                            ? "linear-gradient(90deg, #f97316, #ef4444)"
-                            : "linear-gradient(90deg, #22c55e, #facc15)",
-                        }}
-                      />
-                    </span>
-                  </span>
-                </summary>
-                <div className="drought-stats drought-stats--compact">
-                  <span className="drought-current">{result.recordsSinceLastSequence} draws</span>
-                  <span className="drought-avg">avg: {result.averageDroughtLength}</span>
-                </div>
-                <p className="intel-desc intel-detail-copy">
-                  {result.honeyPotAlert
-                    ? "⚠️ Critical drought. Trap is mathematically imminent."
-                    : result.recordsSinceLastSequence > result.averageDroughtLength
-                    ? "Getting hot — above average drought length."
-                    : "Within normal drought range."}
-                </p>
-              </details>
-            </div>
-          </div>
-
           {/* ── Sutta Saturation Map ──────────────────────────────────────── */}
           <div className="analysis-signal-safety-stack">
-          <div className="glass-panel">
-            <div className="section-header">
-              <span className="section-icon">🎰</span>
-              <div>
-                <h3 className="section-title">Sutta Signal Map</h3>
-                <p className="section-subtitle">
-                  Open and Close are ranked separately by model score.
-                </p>
+            <div className="glass-panel">
+              <h3 className="section-title analysis-sutta-title">Sutta rankings</h3>
+
+              <div className="sutta-signal-switch" role="group" aria-label="Sutta ranking">
+                <button
+                  type="button"
+                  className="sutta-signal-switch-btn"
+                  aria-pressed={suttaSignalView === "open"}
+                  onClick={() => {
+                    haptic()
+                    setSuttaSignalView("open")
+                  }}
+                >
+                  Open
+                </button>
+                <button
+                  type="button"
+                  className="sutta-signal-switch-btn"
+                  aria-pressed={suttaSignalView === "close"}
+                  onClick={() => {
+                    haptic()
+                    setSuttaSignalView("close")
+                  }}
+                >
+                  Close
+                </button>
               </div>
-            </div>
 
-            <div className="sutta-signal-switch" aria-label="Sutta signal position">
-              <button
-                type="button"
-                className={`sutta-signal-switch-btn ${suttaSignalView === "open" ? "sutta-signal-switch-btn--active" : ""}`}
-                onClick={() => {
-                  haptic()
-                  setSuttaSignalView("open")
-                }}
-              >
-                Open
-              </button>
-              <button
-                type="button"
-                className={`sutta-signal-switch-btn ${suttaSignalView === "close" ? "sutta-signal-switch-btn--active" : ""}`}
-                onClick={() => {
-                  haptic()
-                  setSuttaSignalView("close")
-                }}
-              >
-                Close
-              </button>
-            </div>
-
-            <div className="sutta-signal-layout">
               {suttaSignalView === "open"
                 ? renderSuttaSignalList("Open Sutta", openSuttaRanking)
                 : renderSuttaSignalList(
                     openSuttaInput === null ? "Close Sutta" : "Adjusted Close Sutta",
                     closeSuttaRanking,
                   )}
+
+              <button
+                type="button"
+                className="sutta-map-tools-toggle"
+                onClick={() => {
+                  haptic()
+                  setSuttaCopyExpanded((value) => !value)
+                }}
+                aria-expanded={suttaCopyExpanded}
+              >
+                <span>Copy Sutta / Jodi</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  style={{ transform: suttaCopyExpanded ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}
+                >
+                  <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+
+              {suttaCopyExpanded && (
+                <div className="sutta-map-tools" inert={analysisVersion === "v2" && combinedState.pending ? true : undefined}>
+                  <BetCopyDesk
+                    copyCount={copyCount}
+                    onCopyCountChange={setCopyCount}
+                    openSuttas={openCopySuttas}
+                    closeSuttas={closeCopySuttas}
+                    jodis={generatedJodis}
+                    copyingKey={copyingKey}
+                    handleCopy={handleCopy}
+                  />
+                </div>
+              )}
             </div>
+
+            <div className={`glass-panel avoid-digit-panel digit-panel ${digitPanelMode === "present" ? "present-digit-panel" : ""}`}>
+              <div className="digit-panel-toolbar">
+                <h3 className="section-title">2-digit picks</h3>
+
+                <select
+                  className="digit-panel-select"
+                  aria-label="Choose two-digit prediction"
+                  value={digitPanelMode}
+                  onChange={(event) => {
+                    haptic()
+                    setDigitPanelMode(event.target.value === "absent" ? "absent" : "present")
+                  }}
+                >
+                  <option value="present">May appear</option>
+                  <option value="absent">May be absent</option>
+                </select>
+              </div>
+
+              <div className="avoid-digit-grid">
+                {analysisVersion === "v2" && combined ? (
+                  <>{(["open", "close"] as const).map((side) => <div className="avoid-digit-column" key={side}>
+                    <div className="avoid-digit-column-head"><span className="avoid-digit-label">{side === "open" ? "Open" : "Close"}</span></div>
+                    <div className="avoid-digit-row">{(digitPanelMode === "present" ? combined[side].presentDigits : combined[side].absentDigits).map((digit) => <div key={digit} className="avoid-digit-chip"><span className="avoid-digit-number">{digit}</span></div>)}</div>
+
+                  </div>)}</>
+                ) : digitPanelMode === "present" ? (
+                  <>
+                    <PresentDigitColumn label="Open" prediction={presentDigitsPrediction?.open ?? null} />
+                    <PresentDigitColumn label="Close" prediction={presentDigitsPrediction?.close ?? null} />
+                  </>
+                ) : (
+                  <>
+                    <AvoidDigitColumn label="Open" prediction={absentDigitsPrediction?.open ?? null} />
+                    <AvoidDigitColumn label="Close" prediction={absentDigitsPrediction?.close ?? null} />
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <details className="glass-panel analysis-disclosure analysis-open-result">
+            <summary>Enter Open result{openSuttaInput !== null && <span> Sutta {openSuttaInput}</span>}</summary>
+
+            <div style={{ marginBottom: "12px" }}>
+              <label htmlFor="analysis-open-panel" className="text-sm" style={{ color: "rgba(255,255,255,0.6)", display: "block", marginBottom: "6px" }}>
+                Open panel (3 digits)
+              </label>
+              <input
+                id="analysis-open-panel"
+                type="tel"
+                className="glass-input"
+                placeholder="e.g. 368"
+                maxLength={3}
+                value={openPanelInput}
+                onChange={(e) => {
+                  const val = e.target.value.replace(/\D/g, "").slice(0, 3)
+                  setOpenPanelInput(val)
+                  if (val.length === 3) {
+                    const sutta = calculateSutta(val)
+                    setOpenSuttaInput(sutta)
+                    runJodiModel(sutta, val)
+                  } else {
+                    setOpenSuttaInput(null)
+                    setJodiResult(null)
+                  }
+                }}
+              />
+            </div>
+
+            <p id="analysis-open-sutta-label" className="text-sm" style={{ color: "rgba(255,255,255,0.6)", display: "block", marginBottom: "6px" }}>
+              Or select Open Sutta
+            </p>
+            <div className="sutta-grid" role="group" aria-labelledby="analysis-open-sutta-label">
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => (
+                <button
+                  key={s}
+                  aria-pressed={openSuttaInput === s}
+                  className={`sutta-cell ${openSuttaInput === s ? "sutta-saturated" : ""}`}
+                  style={{
+                    borderColor: openSuttaInput === s ? "#f59e0b" : "rgba(255,255,255,0.15)",
+                    cursor: "pointer",
+                    background: openSuttaInput === s ? "rgba(245,158,11,0.2)" : "transparent",
+                  }}
+                  onClick={() => {
+                    if (openSuttaInput === s) {
+                      setOpenSuttaInput(null)
+                      setJodiResult(null)
+                      setOpenPanelInput("")
+                    } else {
+                      setOpenSuttaInput(s)
+                      setOpenPanelInput("")
+                      runJodiModel(s, null)
+                    }
+                  }}
+                >
+                  <span className="sutta-number">{s}</span>
+                </button>
+              ))}
+            </div>
+
+            {openSuttaInput !== null && (
+              <p style={{ color: "#f59e0b", fontSize: "13px", marginTop: "10px", textAlign: "center" }}>
+                Close and Jodi predictions updated
+              </p>
+            )}
+          </details>
+
+          <details className="analysis-disclosure analysis-method">
+            <summary>Model details</summary>
+            {/* ── Status Bar ───────────────────────────────────────────────── */}
+            <div className="status-bar glass-panel">
+              <div className="status-item">
+                <span className="status-label">2yr Draws</span>
+                <span className="status-value">{result.totalDraws.toLocaleString()}</span>
+              </div>
+              <div className="status-divider" />
+              <div className="status-item">
+                <span className="status-label">Volume</span>
+                <span className="status-value volume-high">{usesSharedDefaults ? "Unrated" : result.volumeTier}</span>
+              </div>
+              <div className="status-divider" />
+              <div className="status-item">
+                <span className="status-label">Mode</span>
+                <span className={`status-value ${getTemporalBadgeColor(result.temporalMode)}`}>
+                  {result.temporalMode}
+                </span>
+              </div>
+              <div className="status-divider" />
+              <div className="status-item">
+                <span className="status-label">Seq Rate</span>
+                <span className="status-value">{result.stats.sequenceRate.toFixed(2)}%</span>
+              </div>
+            </div>
+
+            {analysisVersion === "v1" && <div className="confidence-strip glass-panel">
+              <ConfidenceBadge label="Open" panelHits={backtestReport?.open.panelTop10} panelDraws={backtestReport?.open.n} liveSuttaAcc={suttaAccuracyReport?.open.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
+              <ConfidenceBadge label="Close" panelHits={backtestReport?.close.panelTop10} panelDraws={backtestReport?.close.n} panelLabel="Close after Open Top 10" liveSuttaAcc={displayedCloseAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
+              <ConfidenceBadge label="Jodi" panelHits={backtestReport?.jodi.panelTop10} panelDraws={backtestReport?.jodi.n} panelLabel="Close after Open Top 10" liveSuttaAcc={displayedJodiAccuracy?.accuracy} liveSuttaLabel={`7d Top ${copyCount}`} />
+            </div>}
+            {analysisVersion === "v2" && combined && <p className="analysis-version-description" role="status">
+              Target date {combined.targetDate}{combinedState.pending ? " · Updating V2…" : !combinedState.accuracy && !combinedState.error ? " · Backtesting V2…" : ""}
+              {combinedState.error ? ` · ${combinedState.error}` : ""}
+            </p>}
 
             {suttaAccuracyReport && (
               <div className="confidence-strip glass-panel" style={{ marginTop: "12px" }}>
@@ -773,166 +795,86 @@ export default function AnalysisSection() {
               </div>
             )}
 
-            <button
-              type="button"
-              className="sutta-map-tools-toggle"
-              onClick={() => {
-                haptic()
-                setSuttaCopyExpanded((value) => !value)
-              }}
-              aria-expanded={suttaCopyExpanded}
-            >
-              <span>Copy Sutta / Jodi</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                style={{ transform: suttaCopyExpanded ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}
-              >
-                <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
+          {/* ── Intelligence Cards ───────────────────────────────────────── */}
+          <div className="intel-grid">
+            <div className="intel-compact-panel">
 
-            {suttaCopyExpanded && (
-              <div className="sutta-map-tools" inert={analysisVersion === "v2" && combinedState.pending ? true : undefined}>
-                <BetCopyDesk
-                  copyCount={copyCount}
-                  onCopyCountChange={setCopyCount}
-                  openSuttas={openCopySuttas}
-                  closeSuttas={closeCopySuttas}
-                  jodis={generatedJodis}
-                  copyingKey={copyingKey}
-                  handleCopy={handleCopy}
-                />
-              </div>
-            )}
-          </div>
+              <details className="intel-detail">
+                <summary className="intel-summary-row">
+                  <span className="intel-summary-title">
+                    <span className="intel-icon">📅</span>
+                    Time of month
+                  </span>
+                  <span className={`intel-badge intel-badge--compact ${getTemporalBadgeColor(result.temporalMode)}`}>
+                    {result.temporalMode}
+                  </span>
+                </summary>
+                <p className="intel-desc intel-detail-copy">
+                  {result.temporalMode === "Payday" &&
+                    "The model reduces its penalty for popular panels to 0.7×."}
+                  {result.temporalMode === "Month-End" &&
+                    "The model increases its penalty for popular panels to 1.3×."}
+                  {result.temporalMode === "Normal" &&
+                    "The model uses its standard penalty for popular panels."}
+                </p>
+              </details>
 
-          <div className={`glass-panel avoid-digit-panel digit-panel ${digitPanelMode === "present" ? "present-digit-panel" : ""}`}>
-            <div className="digit-panel-toolbar">
-              <div className="section-header digit-panel-heading">
-                <span className="section-icon" aria-hidden="true">
-                  {digitPanelMode === "present" ? "✓" : "−"}
-                </span>
-                <div>
-                  <h3 className="section-title">2-Digit Panel</h3>
-                  <p className="section-subtitle">
-                    {digitPanelMode === "present"
-                      ? "Both digits may appear"
-                      : "Both digits may stay absent"}
-                  </p>
+              <details className="intel-detail">
+                <summary className="intel-summary-row">
+                  <span className="intel-summary-title">
+                    <span className="intel-icon">💧</span>
+                    Source market
+                  </span>
+                  <span className={`intel-badge intel-badge--compact ${result.liquiditySourceHadPopular ? "intel-danger" : "intel-safe"}`}>
+                    {result.liquiditySourceMarket
+                      ? result.liquiditySourceHadPopular ? "Popular source" : "Hard source"
+                      : "No source"}
+                  </span>
+                </summary>
+                {result.liquiditySourceMarket ? (
+                  <>
+                    <div className="liquidity-flow liquidity-flow--compact">
+                      <span className="liquidity-source">{result.liquiditySourceMarket}</span>
+                      <span className="liquidity-arrow">→</span>
+                      <span className="liquidity-target">{result.market}</span>
+                    </div>
+                    <p className="intel-desc intel-detail-copy">
+                      {result.liquiditySourceHadPopular
+                        ? `The source market drew a sequence. Model multiplier 1.5×.`
+                        : `The source market drew a non-sequence result. Model multiplier 0.9×.`}
+                    </p>
+                  </>
+                ) : (
+                  <p className="intel-desc intel-detail-copy intel-muted">No source market tracked for {result.market}.</p>
+                )}
+              </details>
+
+              <details className="intel-detail">
+                <summary className="intel-summary-row">
+                  <span className="intel-summary-title">
+                    <span className="intel-icon">🌵</span>
+                    Sequence
+                  </span>
+                  <span className="drought-summary-text">{result.recordsSinceLastSequence} draws</span>
+                </summary>
+                <div className="drought-stats drought-stats--compact">
+                  <span className="drought-current">{result.recordsSinceLastSequence} draws</span>
+                  <span className="drought-avg">avg: {result.averageDroughtLength}</span>
                 </div>
-              </div>
-
-              <select
-                className="digit-panel-select"
-                aria-label="Choose two-digit prediction"
-                value={digitPanelMode}
-                onChange={(event) => {
-                  haptic()
-                  setDigitPanelMode(event.target.value as DigitPanelMode)
-                }}
-              >
-                <option value="present">2 digits that will come</option>
-                <option value="absent">2 digits that will not come</option>
-              </select>
-            </div>
-
-            <div className="avoid-digit-grid">
-              {analysisVersion === "v2" && combined ? (
-                <>{(["open", "close"] as const).map((side) => <div className="avoid-digit-column" key={side}>
-                  <div className="avoid-digit-column-head"><span className="avoid-digit-label">{side === "open" ? "Open" : "Close"}</span><span className="avoid-digit-meta">V2 experimental</span></div>
-                  <div className="avoid-digit-row">{(digitPanelMode === "present" ? combined[side].presentDigits : combined[side].absentDigits).map((digit) => <div key={digit} className="avoid-digit-chip"><span className="avoid-digit-number">{digit}</span></div>)}</div>
-                  <p className="digit-panel-summary">Combined panel ranking</p>
-                </div>)}</>
-              ) : digitPanelMode === "present" ? (
-                <>
-                  <PresentDigitColumn label="Open" prediction={presentDigitsPrediction?.open ?? null} />
-                  <PresentDigitColumn label="Close" prediction={presentDigitsPrediction?.close ?? null} />
-                </>
-              ) : (
-                <>
-                  <AvoidDigitColumn label="Open" prediction={absentDigitsPrediction?.open ?? null} />
-                  <AvoidDigitColumn label="Close" prediction={absentDigitsPrediction?.close ?? null} />
-                </>
-              )}
+                <p className="intel-desc intel-detail-copy">
+                  {result.honeyPotAlert
+                    ? "The model gives sequence panels extra weight."
+                    : result.recordsSinceLastSequence > result.averageDroughtLength
+                    ? "More draws than usual since the last sequence."
+                    : "Within the usual range."}
+                </p>
+              </details>
             </div>
           </div>
-          </div>
-
-          <div className="glass-panel">
-            <div className="section-header">
-              <span className="section-icon">🎯</span>
-              <div>
-                <h3 className="section-title">Jodi Model — Real-Time Close Prediction</h3>
-                <p className="section-subtitle">Enter today&apos;s Open result to unlock dynamic Close predictions</p>
-              </div>
-            </div>
-
-            <div style={{ marginBottom: "12px" }}>
-              <label className="text-sm" style={{ color: "rgba(255,255,255,0.6)", display: "block", marginBottom: "6px" }}>
-                Open Panel (3 digits) — auto-computes Sutta
-              </label>
-              <input
-                type="tel"
-                className="glass-input"
-                placeholder="e.g. 368"
-                maxLength={3}
-                value={openPanelInput}
-                onChange={(e) => {
-                  const val = e.target.value.replace(/\D/g, "").slice(0, 3)
-                  setOpenPanelInput(val)
-                  if (val.length === 3) {
-                    const sutta = calculateSutta(val)
-                    setOpenSuttaInput(sutta)
-                    runJodiModel(sutta, val)
-                  } else {
-                    setOpenSuttaInput(null)
-                    setJodiResult(null)
-                  }
-                }}
-              />
-            </div>
-
-            <label className="text-sm" style={{ color: "rgba(255,255,255,0.6)", display: "block", marginBottom: "6px" }}>
-              Or select Open Sutta directly
-            </label>
-            <div className="sutta-grid">
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => (
-                <button
-                  key={s}
-                  className={`sutta-cell ${openSuttaInput === s ? "sutta-saturated" : ""}`}
-                  style={{
-                    borderColor: openSuttaInput === s ? "#f59e0b" : "rgba(255,255,255,0.15)",
-                    cursor: "pointer",
-                    background: openSuttaInput === s ? "rgba(245,158,11,0.2)" : "transparent",
-                  }}
-                  onClick={() => {
-                    if (openSuttaInput === s) {
-                      setOpenSuttaInput(null)
-                      setJodiResult(null)
-                      setOpenPanelInput("")
-                    } else {
-                      setOpenSuttaInput(s)
-                      setOpenPanelInput("")
-                      runJodiModel(s, null)
-                    }
-                  }}
-                >
-                  <span className="sutta-number">{s}</span>
-                </button>
-              ))}
-            </div>
-
-            {openSuttaInput !== null && (
-              <p style={{ color: "#f59e0b", fontSize: "13px", marginTop: "10px", textAlign: "center" }}>
-                ✅ Open Sutta = <strong>{openSuttaInput}</strong>
-                {openPanelInput.length === 3 && <> (Panel: <strong>{openPanelInput}</strong>)</>}
-                {" "}— Jodi Close predictions active
-              </p>
+            {analysisVersion === "v1" && v1Metrics.error && (
+              <p className="analysis-version-description">{v1Metrics.error}</p>
             )}
-          </div>
+          </details>
 
           {/* ── Tab Navigation ───────────────────────────────────────────── */}
           <AnalysisTabs
@@ -953,35 +895,9 @@ export default function AnalysisSection() {
             pct={pct}
             dpPrecision={dpPrecision}
           />
-
         </>
       )}
 
-          {/* ── Empty State ──────────────────────────────────────────────────── */}
-      {loadingState === "idle" && !marketIssue && (
-        <div className="empty-state glass-panel">
-          <span className="empty-icon">🔮</span>
-          <h3 className="empty-title">Select a market above</h3>
-          <p className="empty-desc">
-            The engine will scrape live panel data, store it in your device, and run the
-            6-factor Game-Theory analysis to generate intelligent picks.
-          </p>
-          <div className="empty-facts">
-            <div className="fact-item">
-              <span className="fact-num">0.23%</span>
-              <span className="fact-label">Actual Triple rate (vs 4.5% random)</span>
-            </div>
-            <div className="fact-item">
-              <span className="fact-num">21</span>
-              <span className="fact-label">Avg draws between sequences in Kalyan</span>
-            </div>
-            <div className="fact-item">
-              <span className="fact-num">1.5×</span>
-              <span className="fact-label">Penalty multiplier after source market popular hit</span>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   )
 }
