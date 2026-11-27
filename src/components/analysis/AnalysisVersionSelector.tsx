@@ -12,6 +12,6 @@ export function AnalysisVersionSelector({ version, onChange, disabled }: {
         <strong>V2</strong><span>Combined predictions</span>
       </button>
     </div>
-    <p className="analysis-version-description">{version === "v1" ? "Current prediction models." : "Experimental weighted combination. Accuracy gains are not confirmed."}</p>
+    {version === "v2" && <p className="analysis-version-description">V2 is experimental. Its accuracy is still being evaluated.</p>}
   </div>
 }
