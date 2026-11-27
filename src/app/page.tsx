@@ -2,14 +2,15 @@
 
 import { useEffect, useState, useMemo } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import ProfilePanel from "@/components/ProfilePanel";
 
 const AnalysisSection = dynamic(() => import("@/components/AnalysisSection"), {
   ssr: false,
   loading: () => (
-    <div className="loading-placeholder">
+    <div className="loading-placeholder" role="status">
       <div className="loading-placeholder-spinner" />
-      <span>Loading Analysis Engine…</span>
+      <span>Loading analysis…</span>
     </div>
   ),
 });
@@ -17,9 +18,9 @@ const AnalysisSection = dynamic(() => import("@/components/AnalysisSection"), {
 const LiveResultsSection = dynamic(() => import("@/components/LiveResultsSection"), {
   ssr: false,
   loading: () => (
-    <div className="loading-placeholder">
+    <div className="loading-placeholder" role="status">
       <div className="loading-placeholder-spinner" />
-      <span>Loading Market Results…</span>
+      <span>Loading results…</span>
     </div>
   ),
 });
@@ -95,7 +96,7 @@ export default function LakshmiBossApp() {
       {/* ── Fixed Top Header ──────────────────────────────────────── */}
       <header className="app-header">
         <div className="app-brand">
-          <img src="/lakshmi-boss.png" alt="Lakshmi Boss logo" className="app-brand-mark" style={{ padding: 0, objectFit: "cover", background: "none", border: "none" }} />
+          <Image src="/lakshmi-boss-192.png" alt="" width={34} height={34} className="app-brand-mark" unoptimized />
           <span className="app-brand-name">Lakshmi Boss</span>
         </div>
 
@@ -112,14 +113,20 @@ export default function LakshmiBossApp() {
         </button>
       </header>
 
-      {/* ── Sticky Tab Bar ─────────────────────────────────────────── */}
-      <nav className="app-tab-bar">
+      <main key={activeTab} className="app-content">
+        {activeTab === "calculator" && <CalculatorSection />}
+        {activeTab === "analysis" && <AnalysisSection />}
+        {activeTab === "live-results" && <LiveResultsSection />}
+      </main>
+
+      <nav className="app-tab-bar" aria-label="Main navigation">
         <button
           id="tab-calculator"
+          aria-current={activeTab === "calculator" ? "page" : undefined}
           className={`app-tab-btn ${activeTab === "calculator" ? "app-tab-btn--active" : ""}`}
           onClick={() => { haptic(); setActiveTab("calculator"); }}
         >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="app-tab-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="app-tab-icon" aria-hidden="true">
             <rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="1.4"/>
             <path d="M5 6h2M5 9h2M5 12h2M9 6h2M9 9h2M9 12h2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
             <rect x="4.5" y="3.5" width="7" height="2" rx="0.5" fill="currentColor" opacity="0.4"/>
@@ -128,10 +135,11 @@ export default function LakshmiBossApp() {
         </button>
         <button
           id="tab-analysis"
+          aria-current={activeTab === "analysis" ? "page" : undefined}
           className={`app-tab-btn ${activeTab === "analysis" ? "app-tab-btn--active" : ""}`}
           onClick={() => { haptic(); setActiveTab("analysis"); }}
         >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="app-tab-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="app-tab-icon" aria-hidden="true">
             <circle cx="8" cy="8" r="5.5" stroke="currentColor" strokeWidth="1.4"/>
             <path d="M8 4v4l3 2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M2 8h1M13 8h1M8 2v1M8 13v1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
@@ -140,23 +148,17 @@ export default function LakshmiBossApp() {
         </button>
         <button
           id="tab-live-results"
+          aria-current={activeTab === "live-results" ? "page" : undefined}
           className={`app-tab-btn ${activeTab === "live-results" ? "app-tab-btn--active" : ""}`}
           onClick={() => { haptic(); setActiveTab("live-results"); }}
         >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="app-tab-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="app-tab-icon" aria-hidden="true">
             <path d="M2 4.5h12M2 8h12M2 11.5h12" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
             <circle cx="5" cy="4.5" r="1.4" fill="currentColor"/><circle cx="10.5" cy="8" r="1.4" fill="currentColor"/><circle cx="7" cy="11.5" r="1.4" fill="currentColor"/>
           </svg>
           Results
         </button>
       </nav>
-
-      {/* ── Scrollable Content ──────────────────────────────────────── */}
-      <main className="app-content">
-        {activeTab === "calculator" && <CalculatorSection />}
-        {activeTab === "analysis" && <AnalysisSection />}
-        {activeTab === "live-results" && <LiveResultsSection />}
-      </main>
 
       {/* ── Profile Side Panel ──────────────────────────────────────── */}
       <ProfilePanel isOpen={profileOpen} onClose={() => setProfileOpen(false)} />
@@ -266,6 +268,7 @@ function CalculatorSection() {
             <button
               key={m}
               id={`mode-${m.toLowerCase()}`}
+              aria-pressed={mode === m}
               className={`calc-mode-btn ${mode === m ? "calc-mode-btn--active" : ""}`}
               onClick={() => { haptic(); setMode(m); }}
             >
@@ -273,8 +276,6 @@ function CalculatorSection() {
             </button>
           ))}
         </div>
-
-        <div className="calc-divider" />
 
         {/* Sutta grid */}
         <div className="calc-section-row">
@@ -290,6 +291,7 @@ function CalculatorSection() {
             <button
               key={n}
               className={`calc-sutta-btn ${selectedNumbers.includes(n) ? "calc-sutta-btn--active" : ""}`}
+              aria-pressed={selectedNumbers.includes(n)}
               onClick={() => toggleNumber(n)}
             >
               {n}
@@ -299,8 +301,6 @@ function CalculatorSection() {
 
         {multiPanelMode && (
           <>
-            <div className="calc-divider" />
-
             <div className="calc-section-row">
               <span className="calc-section-label" style={{ margin: 0 }}>{mode}</span>
               {selectedPanelDigits.length > 0 && (
@@ -314,6 +314,7 @@ function CalculatorSection() {
                 <button
                   key={n}
                   className={`calc-sutta-btn ${selectedPanelDigits.includes(n) ? "calc-sutta-btn--active" : ""}`}
+                  aria-pressed={selectedPanelDigits.includes(n)}
                   onClick={() => togglePanelDigit(n)}
                 >
                   {n}
@@ -323,11 +324,10 @@ function CalculatorSection() {
           </>
         )}
 
-        <div className="calc-divider" />
-
-        {/* Common Filters — collapsible */}
+        {/* Common filters — collapsible */}
         <button
           className="calc-filters-toggle"
+          aria-expanded={filtersExpanded}
           onClick={() => { haptic(); setFiltersExpanded((v) => !v); }}
         >
           <span className="calc-section-label" style={{ margin: 0 }}>
@@ -347,8 +347,9 @@ function CalculatorSection() {
         {filtersExpanded && (
           <div className="calc-filters-body">
             <div className="calc-input-group">
-              <label className="calc-input-label">Common 1</label>
+              <label htmlFor="common-1" className="calc-input-label">Common 1</label>
               <input
+                id="common-1"
                 type="text"
                 inputMode="numeric"
                 className="calc-input"
@@ -358,8 +359,9 @@ function CalculatorSection() {
               />
             </div>
             <div className="calc-input-group">
-              <label className="calc-input-label">Common 2</label>
+              <label htmlFor="common-2" className="calc-input-label">Common 2</label>
               <input
+                id="common-2"
                 type="text"
                 inputMode="numeric"
                 className="calc-input"
@@ -398,12 +400,12 @@ function CalculatorSection() {
             {isCopied ? (
               <>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#34D399" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                Copied!
+                Copied
               </>
             ) : (
               <>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="1" width="9" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><path d="M1 4.5v7A1.5 1.5 0 002.5 13h7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
-                Copy All
+                Copy all
               </>
             )}
           </button>
@@ -418,51 +420,42 @@ function CalculatorSection() {
         ) : (
           <div className="calc-results-empty">
             <span>∅</span>
-            <p>No panels match the selected criteria</p>
+            <p>No panels match these filters.</p>
           </div>
         )}
       </div>
 
-      <div className="card calc-results-card calc-skipped-card">
-        <div className="calc-results-header">
-          <div className="calc-results-title-row">
-            <h2 className="calc-results-title">Skipped Results</h2>
-            <div className="calc-results-count-badge calc-results-count-badge--muted">
-              {skippedResults.length}
+      {skippedResults.length > 0 && (
+        <details className="card calc-results-card calc-skipped-card">
+          <summary className="calc-skipped-summary">
+            <span>Skipped panels</span>
+            <span className="calc-results-count-badge calc-results-count-badge--muted">{skippedResults.length}</span>
+          </summary>
+          <div className="calc-skipped-body">
+            <button
+              className={`calc-copy-btn ${isSkippedCopied ? "calc-copy-btn--done" : ""}`}
+              onClick={handleCopySkipped}
+            >
+              {isSkippedCopied ? (
+                <>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#34D399" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  Copied
+                </>
+              ) : (
+                <>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="1" width="9" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><path d="M1 4.5v7A1.5 1.5 0 002.5 13h7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                  Copy all
+                </>
+              )}
+            </button>
+            <div className="calc-results-grid calc-results-grid--skipped">
+              {skippedResults.map((r) => (
+                <span key={r} className="calc-result-chip calc-result-chip--skipped">{r}</span>
+              ))}
             </div>
           </div>
-          <button
-            className={`calc-copy-btn ${isSkippedCopied ? "calc-copy-btn--done" : ""} ${!skippedResults.length ? "calc-copy-btn--disabled" : ""}`}
-            onClick={handleCopySkipped}
-            disabled={!skippedResults.length}
-          >
-            {isSkippedCopied ? (
-              <>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#34D399" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                Copied!
-              </>
-            ) : (
-              <>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="1" width="9" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><path d="M1 4.5v7A1.5 1.5 0 002.5 13h7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
-                Copy All
-              </>
-            )}
-          </button>
-        </div>
-
-        {skippedResults.length > 0 ? (
-          <div className="calc-results-grid calc-results-grid--skipped">
-            {skippedResults.map((r) => (
-              <span key={r} className="calc-result-chip calc-result-chip--skipped">{r}</span>
-            ))}
-          </div>
-        ) : (
-          <div className="calc-results-empty">
-            <span>0</span>
-            <p>No skipped panels for the current criteria</p>
-          </div>
-        )}
-      </div>
+        </details>
+      )}
     </div>
   );
 }
