@@ -2,11 +2,9 @@
 .calc-page { display: flex; flex-direction: column; }
 
 .calc-section-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--app-muted);
   margin-bottom: 10px;
 }
 .calc-section-row {
@@ -27,7 +25,7 @@
   border-radius: 13px;
   border: 1px solid rgba(255,255,255,0.1);
   background: rgba(255,255,255,0.04);
-  color: rgba(255,255,255,0.5);
+  color: var(--app-muted);
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -45,10 +43,33 @@
 }
 .calc-mode-btn:active { transform: scale(0.95); }
 
-.calc-divider {
-  height: 1px;
-  background: rgba(255,255,255,0.06);
-  margin: 16px -20px;
+.calc-mode-strip,
+.calc-sutta-grid {
+  margin-bottom: 14px;
+}
+
+.calc-skipped-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  cursor: pointer;
+  list-style: none;
+  font: 600 15px "Outfit", sans-serif;
+}
+
+.calc-skipped-summary::-webkit-details-marker {
+  display: none;
+}
+
+.calc-skipped-body {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+}
+
+.calc-skipped-body .calc-results-grid {
+  width: 100%;
 }
 
 .calc-sutta-grid {
@@ -96,6 +117,7 @@
 .calc-clear-btn:active { background: rgba(255,255,255,0.1); }
 
 .calc-filters-toggle {
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -227,42 +249,3 @@
   font-size: 13px;
 }
 .calc-results-empty span { font-size: 32px; }
-
-/* ─── Session Toggle (Analysis) ──────────────────────────────────────── */
-.session-toggle {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-.session-toggle-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px 12px;
-  border-radius: 15px;
-  border: 1.5px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.04);
-  color: rgba(255,255,255,0.45);
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all 0.2s var(--ease-spring);
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-.session-toggle-btn:active { transform: scale(0.96); }
-.session-toggle-btn--day.session-toggle-btn--active {
-  background: var(--gold-dim);
-  border-color: var(--gold-border);
-  color: var(--gold);
-  box-shadow: 0 0 20px rgba(232,160,32,0.08);
-}
-.session-toggle-btn--night.session-toggle-btn--active {
-  background: var(--night-dim);
-  border-color: var(--night-border);
-  color: var(--night-color);
-  box-shadow: 0 0 20px rgba(129,140,248,0.1);
-}
