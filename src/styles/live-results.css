@@ -1,9 +1,8 @@
 .live-page { padding-bottom: 18px; }
-.live-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin: 4px 2px 18px; }
+.live-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 4px 2px 18px; }
 .live-heading h1 { margin: 3px 0 3px; color: #fff; font-family: "Outfit", sans-serif; font-size: 25px; line-height: 1.1; }
-.live-heading p { margin: 0; color: rgba(255, 255, 255, 0.48); font-size: 12px; }
-.live-eyebrow { color: var(--gold); font-family: "Outfit", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-.live-refresh { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; background: rgba(255, 255, 255, 0.05); color: rgba(255, 255, 255, 0.7); }
+.live-date { color: var(--app-muted); font-size: 13px; }
+.live-refresh { display: grid; width: 44px; height: 44px; flex: 0 0 auto; place-items: center; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; background: rgba(255, 255, 255, 0.05); color: rgba(255, 255, 255, 0.7); }
 .live-refresh svg { width: 18px; height: 18px; }
 .live-refresh:active { transform: scale(0.94); }
 .live-refresh:disabled { opacity: 0.45; }
