@@ -32,10 +32,6 @@
 
 body {
   background-color: var(--color-bg-primary);
-  background-image: 
-    radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.04), transparent 40%),
-    radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.02), transparent 45%);
-  background-attachment: fixed;
   color: var(--color-text);
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
